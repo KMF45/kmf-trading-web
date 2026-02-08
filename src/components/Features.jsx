@@ -162,23 +162,24 @@ const Features = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 1, duration: 0.8 }}
-          className="text-center mt-16"
-        >
-          <p className="text-kmf-text-secondary text-lg mb-6">
-            Ready to take your trading to the next level?
-          </p>
-          
-            href="#download"
-            className="inline-block px-8 py-4 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright 
-                     text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-hover 
-                     transition-all duration-300 hover:scale-105"
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="text-center mt-16"
           >
-            Get Started Now
-          </a>
-        </motion.div>
+            <p className="text-kmf-text-secondary text-lg mb-6">
+              Ready to take your trading to the next level?
+            </p>
+            
+              href="#download"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright 
+                       text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-hover 
+                       transition-all duration-300 hover:scale-105"
+            >
+              Get Started Now
+            </a>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
