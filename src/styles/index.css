@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply bg-kmf-bg text-kmf-text-primary antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-kmf-panel;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-kmf-accent rounded-full;
+    box-shadow: 0 0 10px rgba(79,195,247,0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-kmf-accent-bright;
+    box-shadow: 0 0 20px rgba(79,195,247,0.8);
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-kmf-accent to-kmf-accent-bright bg-clip-text text-transparent;
+  }
+  
+  .glass {
+    background: rgba(26, 29, 36, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(79, 195, 247, 0.1);
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-glow-hover;
+  }
+  
+  .orb {
+    @apply absolute rounded-full blur-3xl opacity-20 animate-float;
+    background: radial-gradient(circle, rgba(79,195,247,0.6) 0%, transparent 70%);
+  }
+  
+  ::selection {
+    @apply bg-kmf-accent text-kmf-bg;
+  }
+  
+  :focus-visible {
+    @apply outline-none ring-2 ring-kmf-accent ring-offset-2 ring-offset-kmf-bg;
+  }
+}
