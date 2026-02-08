@@ -98,7 +98,7 @@ const Hero = () => {
             analyze performance, and continuously improve your strategy with real-time insights.
           </motion.p>
 
-          <motion.div
+          <<motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8 }}
