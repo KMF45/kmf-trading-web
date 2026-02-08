@@ -95,7 +95,7 @@ const Hero = () => {
             className="text-lg sm:text-xl text-kmf-text-tertiary max-w-3xl mx-auto mb-12"
           >
             Professional trading journal for serious traders. Track your trades, 
-            analyze performance, and continuously improve your strategy with real-time insights.
+            analyze performance, and continuously improve your strategy.
           </motion.p>
 
           <motion.div
@@ -106,9 +106,7 @@ const Hero = () => {
           >
             
               href="#download"
-              className="group relative px-8 py-4 bg-kmf-accent-bright text-white text-lg font-semibold rounded-lg 
-                       shadow-glow hover:shadow-glow-hover transition-all duration-300 
-                       hover:scale-105 flex items-center gap-3 w-full sm:w-auto justify-center"
+              className="group relative px-8 py-4 bg-kmf-accent-bright text-white text-lg font-semibold rounded-lg shadow-glow hover:shadow-glow-hover transition-all duration-300 hover:scale-105 flex items-center gap-3 w-full sm:w-auto justify-center"
             >
               <FaDownload className="text-xl group-hover:animate-bounce" />
               Download App
@@ -116,10 +114,7 @@ const Hero = () => {
             
             <button
               onClick={scrollToFeatures}
-              className="group px-8 py-4 bg-transparent text-kmf-accent text-lg font-semibold rounded-lg 
-                       border-2 border-kmf-accent hover:bg-kmf-accent hover:text-white 
-                       transition-all duration-300 flex items-center gap-3 w-full sm:w-auto justify-center
-                       hover:scale-105 hover:shadow-glow"
+              className="group px-8 py-4 bg-transparent text-kmf-accent text-lg font-semibold rounded-lg border-2 border-kmf-accent hover:bg-kmf-accent hover:text-white transition-all duration-300 flex items-center gap-3 w-full sm:w-auto justify-center hover:scale-105 hover:shadow-glow"
             >
               <HiSparkles className="text-xl group-hover:rotate-12 transition-transform" />
               Explore Features
@@ -168,7 +163,7 @@ const Hero = () => {
               </svg>
             </motion.button>
           </motion.div>
-         </div>
+        </div>
       </div>
     </section>
   );
