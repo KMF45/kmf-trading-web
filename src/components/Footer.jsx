@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { FaHeart, FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
@@ -24,8 +23,8 @@ const Footer = () => {
               Professional trading journal for serious traders. Track, analyze, and improve your trading performance.
             </p>
             <div className="flex gap-4">
-              
-                href="https://github.com"
+              <a
+                href="https://github.com/KMF45"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
@@ -33,7 +32,7 @@ const Footer = () => {
               >
                 <FaGithub className="text-2xl" />
               </a>
-              
+              <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -42,7 +41,7 @@ const Footer = () => {
               >
                 <FaTwitter className="text-2xl" />
               </a>
-              
+              <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,8 +50,8 @@ const Footer = () => {
               >
                 <FaLinkedin className="text-2xl" />
               </a>
-              
-                href="mailto:contact@kmf-trading.com"
+              <a
+                href="mailto:contact@kmfjournal.com"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
                 aria-label="Email"
               >
@@ -64,11 +63,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['Features', 'Download', 'About', 'Contact'].map((link) => (
+              {['Features', 'Download'].map((link) => (
                 <li key={link}>
-                  
+                  <a
                     href={`#${link.toLowerCase()}`}
-                    className="text-kmf-text-secondary hover:text-kmf-accent transition-colors 
+                    className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                              inline-block hover:translate-x-1 duration-200"
                   >
                     {link}
@@ -81,17 +80,28 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">Legal</h4>
             <ul className="space-y-2">
-              {['Privacy Policy', 'Terms of Service', 'Disclaimer'].map((link) => (
-                <li key={link}>
-                  
-                    href="#"
-                    className="text-kmf-text-secondary hover:text-kmf-accent transition-colors 
-                             inline-block hover:translate-x-1 duration-200"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="https://kmfjournal.com/privacy-policy.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://kmfjournal.com/terms-of-service.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200"
+                >
+                  Terms of Service
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -102,19 +112,11 @@ const Footer = () => {
               © {currentYear} K.M.F. Trading Journal. All rights reserved.
             </p>
 
-            <motion.p
-              className="text-kmf-text-tertiary text-sm flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              Made with 
-              <motion.span
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <FaHeart className="text-kmf-loss" />
-              </motion.span>
+            <p className="text-kmf-text-tertiary text-sm flex items-center gap-2">
+              Made with
+              <FaHeart className="text-kmf-loss animate-pulse" />
               for traders
-            </motion.p>
+            </p>
           </div>
         </div>
 
