@@ -10,21 +10,17 @@ const Hero = () => {
             KMF
           </div>
         </div>
-
         <h1 className="text-6xl font-bold mb-6">
           <span className="gradient-text">K.M.F.</span>
           <br />
           <span className="text-kmf-text-primary">Trading Journal</span>
         </h1>
-
         <div className="text-3xl font-semibold text-kmf-text-secondary mb-4">
           KEEP MOVING FORWARD
         </div>
-
         <p className="text-xl text-kmf-text-tertiary max-w-3xl mx-auto mb-12">
           Professional trading journal for serious traders. Track your trades and improve your strategy.
         </p>
-
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#download" className="px-8 py-4 bg-kmf-accent-bright text-white text-lg font-semibold rounded-lg flex items-center gap-3">
             <FaDownload />
