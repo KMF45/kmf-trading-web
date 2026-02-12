@@ -1,46 +1,55 @@
-import { useEffect, useState } from 'react';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Download from './components/Download';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
+
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/auth/LoginPage';
+import RegisterPage from './pages/auth/RegisterPage';
+import ForgotPasswordPage from './pages/auth/ForgotPasswordPage';
+
+import AppLayout from './components/layout/AppLayout';
+import ProtectedRoute from './components/common/ProtectedRoute';
+import DashboardPage from './pages/DashboardPage';
+import AddTradePage from './pages/AddTradePage';
+import HistoryPage from './pages/HistoryPage';
+import StatisticsPage from './pages/StatisticsPage';
+import WeeklyReviewPage from './pages/WeeklyReviewPage';
+import LotCalculatorPage from './pages/LotCalculatorPage';
+import SettingsPage from './pages/SettingsPage';
+
+const AuthRedirect = ({ children }) => {
+  const { user, loading } = useAuth();
+  if (loading) return null;
+  if (user) return <Navigate to="/app" replace />;
+  return children;
+};
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <>
-      {isLoading && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-kmf-bg animate-fadeIn">
-          <div className="text-center">
-            <div className="mb-8">
-              <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-kmf-accent to-kmf-accent-bright animate-pulse"></div>
-            </div>
-            <h2 className="text-2xl font-bold gradient-text">
-              K.M.F. Trading Journal
-            </h2>
-            <div className="mt-6 w-64 h-1 bg-kmf-panel rounded-full overflow-hidden mx-auto">
-              <div className="h-full bg-gradient-to-r from-kmf-accent to-kmf-accent-bright loading-bar"></div>
-            </div>
-          </div>
-        </div>
-      )}
+    <Router>
+      <AuthProvider>
+        <Routes>
+          {/* Public routes */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<AuthRedirect><LoginPage /></AuthRedirect>} />
+          <Route path="/register" element={<AuthRedirect><RegisterPage /></AuthRedirect>} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
 
-      <div className={`min-h-screen transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <main>
-          <Hero />
-          <Features />
-          <Download />
-        </main>
-        <Footer />
-      </div>
-    </>
+          {/* Protected app routes */}
+          <Route path="/app" element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
+            <Route index element={<DashboardPage />} />
+            <Route path="add-trade" element={<AddTradePage />} />
+            <Route path="history" element={<HistoryPage />} />
+            <Route path="statistics" element={<StatisticsPage />} />
+            <Route path="weekly-review" element={<WeeklyReviewPage />} />
+            <Route path="calculator" element={<LotCalculatorPage />} />
+            <Route path="settings" element={<SettingsPage />} />
+          </Route>
+
+          {/* Catch all */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </AuthProvider>
+    </Router>
   );
 }
 
