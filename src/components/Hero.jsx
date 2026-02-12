@@ -3,7 +3,7 @@ import { HiSparkles } from 'react-icons/hi2';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-kmf-bg">
+    <section className="relative min-h-screen flex items-center justify-center bg-kmf-bg pt-20">
       <div className="container mx-auto px-4 text-center">
         <div className="mb-8">
           <img
