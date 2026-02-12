@@ -1,1 +1,8 @@
-
+{
+  "rewrites": [
+    {
+      "source": "/((?!assets|logo\\.png|favicon\\.png|terms-of-service\\.html|privacy-policy\\.html).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
