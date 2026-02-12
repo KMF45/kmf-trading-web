@@ -1,8 +1,6 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { 
-  FaHome, FaPlus, FaHistory, FaChartLine, FaClipboardCheck, 
-  FaTasks, FaCalculator, FaBell, FaDatabase, FaGlobe 
+import {
+  FaHome, FaPlus, FaHistory, FaChartLine, FaClipboardCheck,
+  FaTasks, FaCalculator, FaBell, FaDatabase, FaGlobe
 } from 'react-icons/fa';
 
 const features = [
@@ -69,25 +67,17 @@ const features = [
 ];
 
 const FeatureCard = ({ feature, index }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-
   const Icon = feature.icon;
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay: index * 0.1, duration: 0.6 }}
-      className="group relative"
+    <div
+      className="group relative animate-slideUp"
+      style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
     >
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright rounded-2xl opacity-0 
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright rounded-2xl opacity-0
                     group-hover:opacity-100 blur transition duration-500 group-hover:duration-200"></div>
-      
-      <div className="relative bg-kmf-panel rounded-2xl p-6 border border-kmf-accent/30 
+
+      <div className="relative bg-kmf-panel rounded-2xl p-6 border border-kmf-accent/30
                     hover:border-kmf-accent transition-all duration-300 hover-lift h-full">
         <div className="relative mb-4 inline-block">
           <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} blur-xl opacity-50 rounded-full`}></div>
@@ -104,7 +94,7 @@ const FeatureCard = ({ feature, index }) => {
           {feature.description}
         </p>
 
-        <div className="mt-4 flex items-center text-kmf-accent opacity-0 group-hover:opacity-100 
+        <div className="mt-4 flex items-center text-kmf-accent opacity-0 group-hover:opacity-100
                       transform translate-x-0 group-hover:translate-x-2 transition-all duration-300">
           <span className="text-sm font-semibold mr-2">Learn more</span>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,39 +102,23 @@ const FeatureCard = ({ feature, index }) => {
           </svg>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Features = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
   return (
     <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-kmf-accent/5 to-transparent"></div>
 
       <div className="container mx-auto relative z-10">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={inView ? { scale: 1 } : {}}
-            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-            className="inline-block mb-4"
-          >
-            <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold 
+        <div className="text-center mb-16 animate-fadeIn">
+          <div className="inline-block mb-4">
+            <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold
                          border border-kmf-accent/30">
               ✨ Powerful Features
             </span>
-          </motion.div>
+          </div>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
             <span className="gradient-text">Everything You Need</span>
@@ -153,7 +127,7 @@ const Features = () => {
           <p className="text-lg sm:text-xl text-kmf-text-tertiary max-w-3xl mx-auto">
             Track, analyze, and improve your trading performance with our comprehensive suite of professional tools
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => (
@@ -161,24 +135,18 @@ const Features = () => {
           ))}
         </div>
 
-        <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="text-center mt-16"
+        <div className="text-center mt-16 animate-fadeIn">
+          <p className="text-kmf-text-secondary text-lg mb-6">
+            Ready to take your trading to the next level?
+          </p>
+          <a
+            href="#download"
+            className="inline-block px-8 py-4 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright
+                     text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-hover
+                     transition-all duration-300 hover:scale-105"
           >
-            <p className="text-kmf-text-secondary text-lg mb-6">
-              Ready to take your trading to the next level?
-            </p>
-            
-              href="#download"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright 
-                       text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-hover 
-                       transition-all duration-300 hover:scale-105"
-            >
-              Get Started Now
-            </a>
-          </motion.div>
+            Get Started Now
+          </a>
         </div>
       </div>
     </section>
