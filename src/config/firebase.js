@@ -3,7 +3,7 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCvwcJ8QrzKb_k1iDwZLcudVmRGj9zjgs8",
+  apiKey: "AIzaSyCvwcJ8QzzKb_k11DwZLcudVmRGj9zjgs8",
   authDomain: "kmf-trading-journal.firebaseapp.com",
   databaseURL: "https://kmf-trading-journal-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "kmf-trading-journal",
