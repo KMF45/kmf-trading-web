@@ -11,9 +11,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-kmf-accent to-kmf-accent-bright flex items-center justify-center text-xl font-bold text-white">
-                KMF
-              </div>
+              <img
+                src="/logo.png"
+                alt="K.M.F. Logo"
+                className="w-12 h-12 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)]"
+              />
               <div>
                 <h3 className="text-xl font-bold gradient-text">K.M.F. Trading Journal</h3>
                 <p className="text-sm text-kmf-text-tertiary">Keep Moving Forward</p>
@@ -82,9 +84,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://kmfjournal.com/privacy-policy.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/privacy-policy.html"
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                            inline-block hover:translate-x-1 duration-200"
                 >
@@ -93,9 +93,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://kmfjournal.com/terms-of-service.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/terms-of-service.html"
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                            inline-block hover:translate-x-1 duration-200"
                 >
