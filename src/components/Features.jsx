@@ -61,7 +61,7 @@ const features = [
   {
     icon: FaGlobe,
     title: 'Multilingual',
-    description: 'Full support for 7 languages: EN, RO, RU, JA, FR, DE, ZH for global traders',
+    description: 'Full support for 8 languages: EN, EN(US), RO, RU, JA, FR, DE, ZH for global traders',
     color: 'from-violet-500 to-purple-500',
   },
 ];
