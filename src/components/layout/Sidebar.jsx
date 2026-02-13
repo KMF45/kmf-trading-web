@@ -40,7 +40,7 @@ const Sidebar = ({ isOpen, onClose, collapsed, onToggleCollapse }) => {
           {!collapsed && (
             <div className="flex items-center gap-3">
               <img src="/logo.png" alt="KMF" className="w-9 h-9 drop-shadow-[0_0_6px_rgba(79,195,247,0.4)]" />
-              <span className="text-base font-bold gradient-text">K.M.F.</span>
+              <span className="text-base font-bold logo-text">K.M.F.</span>
             </div>
           )}
           {collapsed && (
