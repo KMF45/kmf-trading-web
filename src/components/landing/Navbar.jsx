@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <Link to="/" className="flex items-center gap-3 group">
             <img src="/logo.png" alt="KMF" className="w-10 h-10 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)] group-hover:drop-shadow-[0_0_12px_rgba(79,195,247,0.6)] transition-all" />
-            <span className="text-lg font-bold gradient-text hidden sm:block">K.M.F.</span>
+            <span className="text-lg font-bold logo-text hidden sm:block">K.M.F.</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
