@@ -26,7 +26,7 @@ const AppLayout = () => {
           </button>
           <div className="flex items-center gap-2 ml-3">
             <img src="/logo.png" alt="KMF" className="w-7 h-7" />
-            <span className="text-sm font-bold gradient-text">K.M.F.</span>
+            <span className="text-sm font-bold logo-text">K.M.F.</span>
           </div>
         </header>
 
