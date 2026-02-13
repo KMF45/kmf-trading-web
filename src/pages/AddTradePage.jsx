@@ -1,108 +1,86 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTrades } from '../contexts/TradesContext';
-import { FaPlus, FaSave, FaTimes, FaStar } from 'react-icons/fa';
+import { FaPlus, FaSave, FaTimes, FaStar, FaCheck } from 'react-icons/fa';
 
-const STRATEGIES = ['Scalping', 'Day Trading', 'Swing Trading', 'Position Trading', 'Breakout', 'Pullback', 'Reversal', 'Trend Following', 'Range Trading', 'News Trading', 'Other'];
-const EMOTIONS = ['Calm', 'Confident', 'Anxious', 'Greedy', 'Fearful', 'Frustrated', 'Excited', 'Bored', 'Revenge', 'FOMO'];
-
-const InputField = ({ label, required, children }) => (
-  <div>
-    <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">
-      {label} {required && <span className="text-kmf-loss">*</span>}
-    </label>
-    {children}
-  </div>
-);
+const DEFAULT_CHECKLIST = [
+  'Analyzed chart on multiple timeframes',
+  'Identified support/resistance zones',
+  'Set Stop Loss correctly',
+  'Calculated Risk/Reward ratio (min 1:2)',
+  'Checked economic calendar',
+  'Am calm and focused',
+  'Verified lot size',
+  'Defined clear exit plan',
+];
 
 const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-kmf-text-primary text-sm placeholder:text-kmf-text-tertiary/50 focus:outline-none focus:border-kmf-accent focus:ring-1 focus:ring-kmf-accent/30 transition-all";
 
-const DisciplineStars = ({ value, onChange }) => (
-  <div className="flex gap-1">
-    {[1, 2, 3, 4, 5].map((star) => (
-      <button
-        key={star}
-        type="button"
-        onClick={() => onChange(star)}
-        className={`p-1 transition-all ${star <= value ? 'text-kmf-star scale-110' : 'text-kmf-text-tertiary/30 hover:text-kmf-star/50'}`}
-      >
-        <FaStar size={22} />
-      </button>
-    ))}
-  </div>
-);
-
 const AddTradePage = () => {
   const navigate = useNavigate();
-  const { addTrade, settings } = useTrades();
+  const { addTrade } = useTrades();
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
 
+  const now = new Date();
   const [form, setForm] = useState({
-    symbol: '',
+    instrument: '',
     type: 'BUY',
-    status: 'CLOSED',
     entryPrice: '',
-    exitPrice: '',
-    lotSize: settings.defaultLotSize?.toString() || '0.01',
     stopLoss: '',
     takeProfit: '',
-    profitLoss: '',
-    openDate: new Date().toISOString().slice(0, 16),
-    closeDate: new Date().toISOString().slice(0, 16),
-    strategy: '',
-    rMultiple: '',
-    discipline: 3,
-    emotions: '',
+    lotSize: '0.10',
+    actualPnL: '',
+    result: 'PROFIT',
+    rating: 3,
     notes: '',
+    completedTasks: [],
   });
+
+  const [dateStr] = useState(`${now.getDate()} ${now.toLocaleDateString('en', { month: 'short' })} ${now.getFullYear()}`);
+  const [timeStr] = useState(`${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`);
 
   const updateField = (field, value) => {
     setForm(prev => ({ ...prev, [field]: value }));
     setError('');
   };
 
-  const calculatePL = () => {
-    const entry = parseFloat(form.entryPrice);
-    const exit = parseFloat(form.exitPrice);
-    const lots = parseFloat(form.lotSize);
-    if (!entry || !exit || !lots) return;
-    const pips = form.type === 'BUY' ? exit - entry : entry - exit;
-    const symbol = form.symbol.toUpperCase();
-    let pipValue = 10;
-    if (symbol.includes('JPY')) pipValue = 1000;
-    const pl = pips * pipValue * lots;
-    updateField('profitLoss', pl.toFixed(2));
+  const toggleChecklistItem = (idx) => {
+    setForm(prev => {
+      const tasks = [...prev.completedTasks];
+      const i = tasks.indexOf(idx);
+      if (i >= 0) tasks.splice(i, 1);
+      else tasks.push(idx);
+      return { ...prev, completedTasks: tasks };
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.symbol.trim()) { setError('Symbol is required'); return; }
+    if (!form.instrument.trim()) { setError('Instrument is required'); return; }
     if (!form.entryPrice) { setError('Entry price is required'); return; }
-    if (form.status === 'CLOSED' && !form.profitLoss && !form.exitPrice) {
-      setError('Exit price or P&L is required for closed trades');
-      return;
-    }
 
     setSaving(true);
     try {
+      const ts = Date.now();
       await addTrade({
-        symbol: form.symbol.toUpperCase().trim(),
+        instrument: form.instrument.toUpperCase().trim(),
         type: form.type,
-        status: form.status,
         entryPrice: parseFloat(form.entryPrice) || 0,
-        exitPrice: form.exitPrice ? parseFloat(form.exitPrice) : null,
-        lotSize: parseFloat(form.lotSize) || 0.01,
         stopLoss: form.stopLoss ? parseFloat(form.stopLoss) : null,
         takeProfit: form.takeProfit ? parseFloat(form.takeProfit) : null,
-        profitLoss: form.profitLoss ? parseFloat(form.profitLoss) : 0,
-        openDate: form.openDate,
-        closeDate: form.status === 'CLOSED' ? form.closeDate : null,
-        strategy: form.strategy,
-        rMultiple: form.rMultiple ? parseFloat(form.rMultiple) : null,
-        discipline: form.discipline,
-        emotions: form.emotions,
+        lotSize: parseFloat(form.lotSize) || 0.1,
+        pnlAmount: form.actualPnL ? parseFloat(form.actualPnL) : null,
+        actualPnL: form.actualPnL ? parseFloat(form.actualPnL) : null,
+        result: form.result,
+        rating: form.rating,
         notes: form.notes,
+        completedTasks: form.completedTasks,
+        timestamp: ts,
+        tradeDateTime: ts,
+        followedPlan: form.completedTasks.length >= 4,
+        rMultiple: 0,
+        photoUri: null,
       });
       navigate('/app/history');
     } catch (err) {
@@ -113,176 +91,146 @@ const AddTradePage = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto animate-fadeIn">
-      {/* Header */}
+    <div className="max-w-3xl mx-auto animate-fadeIn">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 rounded-lg bg-kmf-accent/15 flex items-center justify-center">
           <FaPlus className="text-kmf-accent text-lg" />
         </div>
-        <div>
-          <h1 className="text-2xl font-bold text-kmf-text-primary">Add Trade</h1>
-          <p className="text-sm text-kmf-text-tertiary">Log your trade with detailed entry and exit information</p>
-        </div>
+        <h1 className="text-2xl font-bold text-kmf-text-primary">Add Trade</h1>
       </div>
 
       {error && (
-        <div className="mb-4 p-3 rounded-lg bg-kmf-loss/10 border border-kmf-loss/30 text-kmf-loss text-sm">
-          {error}
-        </div>
+        <div className="mb-4 p-3 rounded-lg bg-kmf-loss/10 border border-kmf-loss/30 text-kmf-loss text-sm">{error}</div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Row 1: Symbol + Type + Status */}
-        <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-4">
-          <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Trade Info</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <InputField label="Symbol / Pair" required>
-              <input
-                type="text"
-                className={inputClass}
-                placeholder="EURUSD, BTCUSD..."
-                value={form.symbol}
-                onChange={(e) => updateField('symbol', e.target.value)}
-              />
-            </InputField>
-            <InputField label="Direction" required>
-              <div className="flex gap-2">
-                {['BUY', 'SELL'].map((t) => (
-                  <button
-                    key={t}
-                    type="button"
-                    onClick={() => updateField('type', t)}
-                    className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                      form.type === t
-                        ? t === 'BUY'
-                          ? 'bg-kmf-profit/20 text-kmf-profit border border-kmf-profit/50'
-                          : 'bg-kmf-loss/20 text-kmf-loss border border-kmf-loss/50'
-                        : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary hover:border-kmf-accent/30'
-                    }`}
-                  >
-                    {t}
-                  </button>
-                ))}
-              </div>
-            </InputField>
-            <InputField label="Status">
-              <div className="flex gap-2">
-                {['OPEN', 'CLOSED'].map((s) => (
-                  <button
-                    key={s}
-                    type="button"
-                    onClick={() => updateField('status', s)}
-                    className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all ${
-                      form.status === s
-                        ? s === 'OPEN'
-                          ? 'bg-kmf-pending/20 text-kmf-pending border border-kmf-pending/50'
-                          : 'bg-kmf-accent/15 text-kmf-accent border border-kmf-accent/50'
-                        : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary hover:border-kmf-accent/30'
-                    }`}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
-            </InputField>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Date & Time */}
+        <div className="grid grid-cols-2 gap-3">
+          <div className="bg-kmf-panel rounded-lg p-3 border border-kmf-accent/10 text-center">
+            <p className="text-xs text-kmf-text-tertiary">📅</p>
+            <p className="text-sm font-medium text-kmf-text-primary">{dateStr}</p>
+          </div>
+          <div className="bg-kmf-panel rounded-lg p-3 border border-kmf-accent/10 text-center">
+            <p className="text-xs text-kmf-text-tertiary">🕐</p>
+            <p className="text-sm font-medium text-kmf-text-primary">{timeStr}</p>
           </div>
         </div>
 
-        {/* Row 2: Prices */}
-        <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-4">
-          <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Prices</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <InputField label="Entry Price" required>
-              <input type="number" step="any" className={inputClass} placeholder="0.00000" value={form.entryPrice} onChange={(e) => updateField('entryPrice', e.target.value)} />
-            </InputField>
-            <InputField label="Exit Price">
-              <input type="number" step="any" className={inputClass} placeholder="0.00000" value={form.exitPrice}
-                onChange={(e) => updateField('exitPrice', e.target.value)}
-                onBlur={calculatePL}
-              />
-            </InputField>
-            <InputField label="Stop Loss">
-              <input type="number" step="any" className={inputClass} placeholder="0.00000" value={form.stopLoss} onChange={(e) => updateField('stopLoss', e.target.value)} />
-            </InputField>
-            <InputField label="Take Profit">
-              <input type="number" step="any" className={inputClass} placeholder="0.00000" value={form.takeProfit} onChange={(e) => updateField('takeProfit', e.target.value)} />
-            </InputField>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <InputField label="Lot Size">
-              <input type="number" step="0.01" min="0.01" className={inputClass} value={form.lotSize} onChange={(e) => updateField('lotSize', e.target.value)} />
-            </InputField>
-            <InputField label="Profit / Loss">
-              <input type="number" step="any" className={inputClass} placeholder="0.00" value={form.profitLoss} onChange={(e) => updateField('profitLoss', e.target.value)} />
-            </InputField>
-            <InputField label="R-Multiple">
-              <input type="number" step="0.01" className={inputClass} placeholder="e.g. 2.5" value={form.rMultiple} onChange={(e) => updateField('rMultiple', e.target.value)} />
-            </InputField>
+        {/* Trade Type */}
+        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+          <p className="text-sm font-semibold text-kmf-text-primary mb-3">Trade Type</p>
+          <div className="grid grid-cols-2 gap-3">
+            {['BUY', 'SELL'].map((t) => (
+              <button key={t} type="button" onClick={() => updateField('type', t)}
+                className={`py-3 rounded-lg text-sm font-bold transition-all ${
+                  form.type === t
+                    ? t === 'BUY' ? 'bg-kmf-profit/20 text-kmf-profit border-2 border-kmf-profit/50' : 'bg-kmf-loss/20 text-kmf-loss border-2 border-kmf-loss/50'
+                    : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary'
+                }`}>
+                {t === 'BUY' ? '✅ ' : '📊 '}{t === 'BUY' ? 'Buy' : 'Sell'}
+              </button>
+            ))}
           </div>
         </div>
 
-        {/* Row 3: Dates */}
-        <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-4">
-          <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Timing</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <InputField label="Open Date">
-              <input type="datetime-local" className={inputClass} value={form.openDate} onChange={(e) => updateField('openDate', e.target.value)} />
-            </InputField>
-            {form.status === 'CLOSED' && (
-              <InputField label="Close Date">
-                <input type="datetime-local" className={inputClass} value={form.closeDate} onChange={(e) => updateField('closeDate', e.target.value)} />
-              </InputField>
-            )}
+        {/* Trade Details */}
+        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 space-y-3">
+          <p className="text-sm font-semibold text-kmf-text-primary">📋 Trade Details</p>
+          <div>
+            <label className="text-xs text-kmf-accent font-medium">Instrument</label>
+            <input type="text" className={inputClass} placeholder="EUR/USD, XAU/USD, NAS100..." value={form.instrument} onChange={(e) => updateField('instrument', e.target.value)} />
+          </div>
+          <div>
+            <label className="text-xs text-kmf-accent font-medium">Entry Price</label>
+            <input type="number" step="any" className={inputClass} placeholder="1.0850" value={form.entryPrice} onChange={(e) => updateField('entryPrice', e.target.value)} />
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="text-xs text-kmf-accent font-medium">SL</label>
+              <input type="number" step="any" className={inputClass} placeholder="< Entry" value={form.stopLoss} onChange={(e) => updateField('stopLoss', e.target.value)} />
+            </div>
+            <div>
+              <label className="text-xs text-kmf-accent font-medium">TP</label>
+              <input type="number" step="any" className={inputClass} placeholder="> Entry" value={form.takeProfit} onChange={(e) => updateField('takeProfit', e.target.value)} />
+            </div>
+          </div>
+          <div>
+            <label className="text-xs text-kmf-accent font-medium">Lot Size</label>
+            <input type="number" step="0.01" min="0.01" className={inputClass} value={form.lotSize} onChange={(e) => updateField('lotSize', e.target.value)} />
+          </div>
+          <div>
+            <label className="text-xs text-kmf-accent font-medium">💰 Actual P/L</label>
+            <input type="number" step="any" className={inputClass} placeholder="+245.50 or -120.30" value={form.actualPnL} onChange={(e) => updateField('actualPnL', e.target.value)} />
           </div>
         </div>
 
-        {/* Row 4: Analysis */}
-        <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-4">
-          <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Analysis</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <InputField label="Strategy">
-              <select className={inputClass} value={form.strategy} onChange={(e) => updateField('strategy', e.target.value)}>
-                <option value="">Select strategy...</option>
-                {STRATEGIES.map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
-            </InputField>
-            <InputField label="Emotions">
-              <select className={inputClass} value={form.emotions} onChange={(e) => updateField('emotions', e.target.value)}>
-                <option value="">How did you feel?</option>
-                {EMOTIONS.map(e => <option key={e} value={e}>{e}</option>)}
-              </select>
-            </InputField>
+        {/* Pre-Trade Checklist */}
+        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-sm font-semibold text-kmf-text-primary">✅ Pre-Trade Checklist</p>
+            <span className="text-xs text-kmf-accent font-medium">{form.completedTasks.length}/{DEFAULT_CHECKLIST.length}</span>
           </div>
-          <InputField label="Discipline Rating">
-            <DisciplineStars value={form.discipline} onChange={(v) => updateField('discipline', v)} />
-          </InputField>
-          <InputField label="Notes">
-            <textarea
-              className={`${inputClass} min-h-[80px] resize-y`}
-              placeholder="What did you learn from this trade?"
-              value={form.notes}
-              onChange={(e) => updateField('notes', e.target.value)}
-              rows={3}
-            />
-          </InputField>
+          <div className="space-y-2">
+            {DEFAULT_CHECKLIST.map((item, idx) => (
+              <button key={idx} type="button" onClick={() => toggleChecklistItem(idx)}
+                className={`w-full flex items-center gap-3 p-2.5 rounded-lg text-left transition-all ${
+                  form.completedTasks.includes(idx) ? 'bg-kmf-profit/10 border border-kmf-profit/30' : 'bg-kmf-surface/50 border border-transparent hover:border-kmf-accent/20'
+                }`}>
+                <div className={`w-5 h-5 rounded flex-shrink-0 flex items-center justify-center ${
+                  form.completedTasks.includes(idx) ? 'bg-kmf-profit text-white' : 'border border-kmf-text-tertiary/30'
+                }`}>
+                  {form.completedTasks.includes(idx) && <FaCheck size={10} />}
+                </div>
+                <span className={`text-sm ${form.completedTasks.includes(idx) ? 'text-kmf-text-primary' : 'text-kmf-text-tertiary'}`}>{item}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Result */}
+        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+          <p className="text-sm font-semibold text-kmf-text-primary mb-3">Result</p>
+          <div className="grid grid-cols-3 gap-2">
+            {[
+              { val: 'PROFIT', label: '✅ PROFIT', cls: 'bg-kmf-profit/20 text-kmf-profit border-kmf-profit/50' },
+              { val: 'LOSS', label: '❌ LOSS', cls: 'bg-kmf-loss/20 text-kmf-loss border-kmf-loss/50' },
+              { val: 'PENDING', label: '⏳ Pending', cls: 'bg-kmf-pending/20 text-kmf-pending border-kmf-pending/50' },
+            ].map((r) => (
+              <button key={r.val} type="button" onClick={() => updateField('result', r.val)}
+                className={`py-2.5 rounded-lg text-xs font-bold transition-all ${
+                  form.result === r.val ? `${r.cls} border-2` : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary'
+                }`}>
+                {r.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Rating */}
+          <div className="mt-4">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm text-kmf-text-primary flex items-center gap-1"><FaStar className="text-kmf-star" /> Rating:</span>
+              <span className="text-sm font-bold text-kmf-star">{form.rating}/5</span>
+            </div>
+            <input type="range" min="1" max="5" step="1" value={form.rating} onChange={(e) => updateField('rating', parseInt(e.target.value))}
+              className="w-full accent-kmf-accent h-2 rounded-lg appearance-none bg-kmf-surface cursor-pointer" />
+          </div>
+        </div>
+
+        {/* Notes */}
+        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+          <p className="text-sm font-semibold text-kmf-text-primary mb-2">📝 Notes</p>
+          <textarea className={`${inputClass} min-h-[80px] resize-y`} placeholder="Add your notes here..." value={form.notes} onChange={(e) => updateField('notes', e.target.value)} rows={3} />
         </div>
 
         {/* Actions */}
-        <div className="flex gap-3 justify-end">
-          <button
-            type="button"
-            onClick={() => navigate('/app')}
-            className="px-6 py-2.5 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary hover:text-kmf-text-primary hover:border-kmf-accent/40 transition-all text-sm font-medium"
-          >
-            <FaTimes className="inline mr-2" />Cancel
+        <div className="flex gap-3">
+          <button type="button" onClick={() => navigate('/app')}
+            className="flex-1 py-3 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary text-sm font-medium hover:text-kmf-text-primary hover:border-kmf-accent/40 transition-all">
+            Cancel
           </button>
-          <button
-            type="submit"
-            disabled={saving}
-            className="px-8 py-2.5 rounded-lg bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white font-semibold text-sm hover:shadow-glow transition-all disabled:opacity-50"
-          >
-            <FaSave className="inline mr-2" />{saving ? 'Saving...' : 'Save Trade'}
+          <button type="submit" disabled={saving}
+            className="flex-1 py-3 rounded-lg bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white font-bold text-sm hover:shadow-glow transition-all disabled:opacity-50">
+            💾 {saving ? 'Saving...' : 'Save Trade'}
           </button>
         </div>
       </form>
