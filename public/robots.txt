@@ -1,0 +1,15 @@
+# K.M.F. Trading Journal - robots.txt
+# https://kmfjournal.com
+
+User-agent: *
+Allow: /
+Disallow: /app/
+
+# Allow CSS/JS for proper rendering
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://kmfjournal.com/sitemap.xml
+
+# Crawl delay (be gentle)
+Crawl-delay: 1
