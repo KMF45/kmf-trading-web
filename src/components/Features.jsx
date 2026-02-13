@@ -108,7 +108,7 @@ const FeatureCard = ({ feature, index }) => {
 
 const Features = () => {
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-label="Trading Journal Features">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-kmf-accent/5 to-transparent"></div>
 
       <div className="container mx-auto relative z-10">
@@ -121,11 +121,11 @@ const Features = () => {
           </div>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Everything You Need</span>
+            <span className="gradient-text">Everything You Need to Track and Improve Your Trading</span>
           </h2>
 
           <p className="text-lg sm:text-xl text-kmf-text-tertiary max-w-3xl mx-auto">
-            Track, analyze, and improve your trading performance with our comprehensive suite of professional tools
+            Comprehensive suite of professional tools for forex, stock, and crypto traders – from trade tracking to advanced analytics and risk management
           </p>
         </div>
 
