@@ -25,6 +25,8 @@ export default {
           pending: '#FFD740',
           breakeven: '#78909C',
           star: '#FFD740',
+          logo: '#D4C9B0',
+          'logo-light': '#E8E0D0',
         }
       },
       boxShadow: {
