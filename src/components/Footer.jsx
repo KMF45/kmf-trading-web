@@ -12,9 +12,12 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/logo.png"
-                alt="K.M.F. Logo"
+                src="/logo-80.webp"
+                alt="K.M.F. Trading Journal logo"
                 className="w-12 h-12 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)]"
+                width="48"
+                height="48"
+                loading="lazy"
               />
               <div>
                 <h3 className="text-xl font-bold logo-text">K.M.F. Trading Journal</h3>
