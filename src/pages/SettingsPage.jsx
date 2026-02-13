@@ -1,198 +1,161 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useTrades } from '../contexts/TradesContext';
-import { FaCog, FaSave, FaCheck, FaUser, FaShieldAlt, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCog, FaSignOutAlt, FaChevronRight, FaCheck, FaSave } from 'react-icons/fa';
 
-const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-kmf-text-primary text-sm placeholder:text-kmf-text-tertiary/50 focus:outline-none focus:border-kmf-accent focus:ring-1 focus:ring-kmf-accent/30 transition-all";
-
-const CURRENCIES = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'CAD', 'AUD', 'NZD', 'RON'];
+const CURRENCIES = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'AUD', 'NZD', 'CAD', 'CNY'];
 const LANGUAGES = [
-  { code: 'en', label: 'English' },
-  { code: 'ro', label: 'Română' },
-  { code: 'ru', label: 'Русский' },
-  { code: 'ja', label: '日本語' },
-  { code: 'fr', label: 'Français' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'zh', label: '中文' },
+  { code: 'en', label: 'English', flag: '🇬🇧' },
+  { code: 'en-us', label: 'English (US)', flag: '🇺🇸' },
+  { code: 'ro', label: 'Română', flag: '🇷🇴' },
+  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
+  { code: 'ja', label: '日本語', flag: '🇯🇵' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
+  { code: 'zh', label: '中文', flag: '🇨🇳' },
 ];
 
 const SettingsPage = () => {
-  const { user } = useAuth();
-  const { settings, saveSettings, syncing } = useTrades();
+  const { user, logout } = useAuth();
+  const { settings, saveSettings, trades, syncing } = useTrades();
+
+  const [balance, setBalance] = useState(settings.accountBalance?.toString() || '10000');
+  const [currency, setCurrency] = useState(settings.currency || 'USD');
+  const [language, setLanguage] = useState(settings.language || 'en');
   const [saved, setSaved] = useState(false);
-
-  const [form, setForm] = useState({
-    accountBalance: settings.accountBalance?.toString() || '10000',
-    currency: settings.currency || 'USD',
-    language: settings.language || 'en',
-    riskPerTrade: settings.riskPerTrade?.toString() || '1',
-    defaultLotSize: settings.defaultLotSize?.toString() || '0.01',
-  });
-
-  useEffect(() => {
-    setForm({
-      accountBalance: settings.accountBalance?.toString() || '10000',
-      currency: settings.currency || 'USD',
-      language: settings.language || 'en',
-      riskPerTrade: settings.riskPerTrade?.toString() || '1',
-      defaultLotSize: settings.defaultLotSize?.toString() || '0.01',
-    });
-  }, [settings]);
 
   const handleSave = async () => {
     await saveSettings({
-      accountBalance: parseFloat(form.accountBalance) || 10000,
-      currency: form.currency,
-      language: form.language,
-      riskPerTrade: parseFloat(form.riskPerTrade) || 1,
-      defaultLotSize: parseFloat(form.defaultLotSize) || 0.01,
+      accountBalance: parseFloat(balance) || 10000,
+      currency,
+      language,
     });
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
   };
 
+  const handleLogout = async () => {
+    try { await logout(); } catch (e) { console.error('Logout error:', e); }
+  };
+
+  const handleExportJSON = () => {
+    const data = JSON.stringify({ trades, settings, exportDate: new Date().toISOString() }, null, 2);
+    const blob = new Blob([data], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `kmf_backup_${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleExportCSV = () => {
+    if (trades.length === 0) return;
+    const headers = ['Instrument', 'Type', 'Entry Price', 'Stop Loss', 'Take Profit', 'Lot Size', 'P&L', 'Result', 'Rating', 'Date', 'Notes'];
+    const rows = trades.map(t => [
+      t.instrument, t.type, t.entryPrice, t.stopLoss || '', t.takeProfit || '', t.lotSize,
+      t.actualPnL ?? t.pnlAmount ?? 0, t.result, t.rating,
+      new Date(t.tradeDateTime || t.timestamp).toISOString(), `"${(t.notes || '').replace(/"/g, '""')}"`
+    ]);
+    const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `kmf_trades_${new Date().toISOString().split('T')[0]}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const SectionHeader = ({ title }) => (
+    <p className="text-xs font-semibold text-kmf-text-tertiary uppercase tracking-wider px-1 pt-4 pb-1">{title}</p>
+  );
+
+  const SettingRow = ({ icon, label, sublabel, onClick, right }) => (
+    <button onClick={onClick} className="w-full bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 flex items-center gap-3 hover:border-kmf-accent/20 transition-all text-left">
+      <span className="text-lg">{icon}</span>
+      <div className="flex-1 min-w-0">
+        <p className="text-sm font-medium text-kmf-text-primary">{label}</p>
+        {sublabel && <p className="text-xs text-kmf-text-tertiary truncate">{sublabel}</p>}
+      </div>
+      {right || <FaChevronRight className="text-kmf-text-tertiary text-xs" />}
+    </button>
+  );
+
   return (
-    <div className="max-w-3xl mx-auto animate-fadeIn">
-      {/* Header */}
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-lg bg-kmf-accent/15 flex items-center justify-center">
-          <FaCog className="text-kmf-accent text-lg" />
+    <div className="max-w-3xl mx-auto space-y-1 animate-fadeIn">
+      <div className="flex items-center gap-3 mb-4">
+        <FaCog className="text-kmf-accent text-xl" />
+        <h1 className="text-2xl font-bold text-kmf-text-primary">Settings</h1>
+      </div>
+
+      {/* Account */}
+      <SectionHeader title="Account" />
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 flex items-center gap-3">
+        <div className="w-10 h-10 rounded-full bg-kmf-accent/20 flex items-center justify-center text-kmf-accent font-bold">{user?.email?.[0]?.toUpperCase() || '?'}</div>
+        <div>
+          <p className="text-sm text-kmf-text-primary">Logged in as</p>
+          <p className="text-xs text-kmf-accent">{user?.email || 'Unknown'}</p>
+        </div>
+      </div>
+      <SettingRow icon="🚪" label="Logout" sublabel="Sign out from your account" onClick={handleLogout} />
+
+      {/* Account Settings */}
+      <SectionHeader title="Account Settings" />
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 space-y-3">
+        <div>
+          <label className="text-xs text-kmf-text-tertiary mb-1 block">💰 Balance</label>
+          <div className="flex items-center gap-2">
+            <input type="number" step="any" value={balance} onChange={(e) => setBalance(e.target.value)}
+              className="flex-1 bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-sm text-kmf-text-primary focus:outline-none focus:border-kmf-accent" />
+            <span className="text-xs text-kmf-text-tertiary">{currency}</span>
+          </div>
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-kmf-text-primary">Settings</h1>
-          <p className="text-sm text-kmf-text-tertiary">Manage your account and preferences</p>
+          <label className="text-xs text-kmf-text-tertiary mb-1 block">💲 Currency</label>
+          <select value={currency} onChange={(e) => setCurrency(e.target.value)}
+            className="w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-sm text-kmf-text-primary focus:outline-none focus:border-kmf-accent">
+            {CURRENCIES.map(c => <option key={c} value={c}>{c}</option>)}
+          </select>
         </div>
       </div>
 
-      <div className="space-y-6">
-        {/* Account Info */}
-        <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-4">
-          <div className="flex items-center gap-2 mb-2">
-            <FaUser className="text-kmf-accent text-sm" />
-            <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Account</h3>
-          </div>
-          <div className="flex items-center gap-4 p-4 bg-kmf-surface/50 rounded-lg">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-r from-kmf-accent to-kmf-accent-bright flex items-center justify-center text-white text-lg font-bold flex-shrink-0">
-              {user?.email?.charAt(0).toUpperCase() || 'U'}
-            </div>
-            <div>
-              <p className="text-sm font-medium text-kmf-text-primary">{user?.displayName || 'Trader'}</p>
-              <p className="text-xs text-kmf-text-tertiary">{user?.email}</p>
-              <p className="text-xs text-kmf-text-tertiary/60 mt-0.5">
-                {user?.emailVerified ? 'Email verified' : 'Email not verified'}
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Language */}
+      <SectionHeader title="Appearance" />
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <label className="text-xs text-kmf-text-tertiary mb-1 block">🌍 Language</label>
+        <select value={language} onChange={(e) => setLanguage(e.target.value)}
+          className="w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-sm text-kmf-text-primary focus:outline-none focus:border-kmf-accent">
+          {LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.flag} {l.label}</option>)}
+        </select>
+      </div>
 
-        {/* Trading Settings */}
-        <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-5">
-          <div className="flex items-center gap-2 mb-2">
-            <FaCog className="text-kmf-accent text-sm" />
-            <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Trading</h3>
-          </div>
+      {/* Save Button */}
+      <button onClick={handleSave} disabled={syncing}
+        className="w-full py-3 rounded-xl bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white font-bold text-sm hover:shadow-glow transition-all disabled:opacity-50 flex items-center justify-center gap-2">
+        {saved ? <><FaCheck /> Saved!</> : syncing ? 'Saving...' : <><FaSave /> Save Settings</>}
+      </button>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Account Balance</label>
-              <input
-                type="number"
-                step="any"
-                className={inputClass}
-                value={form.accountBalance}
-                onChange={(e) => setForm(p => ({ ...p, accountBalance: e.target.value }))}
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Currency</label>
-              <select
-                className={inputClass}
-                value={form.currency}
-                onChange={(e) => setForm(p => ({ ...p, currency: e.target.value }))}
-              >
-                {CURRENCIES.map(c => <option key={c} value={c}>{c}</option>)}
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Default Risk (%)</label>
-              <input
-                type="number"
-                step="0.1"
-                min="0.1"
-                max="100"
-                className={inputClass}
-                value={form.riskPerTrade}
-                onChange={(e) => setForm(p => ({ ...p, riskPerTrade: e.target.value }))}
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Default Lot Size</label>
-              <input
-                type="number"
-                step="0.01"
-                min="0.01"
-                className={inputClass}
-                value={form.defaultLotSize}
-                onChange={(e) => setForm(p => ({ ...p, defaultLotSize: e.target.value }))}
-              />
-            </div>
-          </div>
+      {/* Legal */}
+      <SectionHeader title="Legal" />
+      <SettingRow icon="📋" label="Privacy Policy" sublabel="Read our privacy policy" onClick={() => window.open('/privacy-policy.html', '_blank')} />
+      <SettingRow icon="📄" label="Terms of Service" sublabel="Read our terms and conditions" onClick={() => window.open('/terms-of-service.html', '_blank')} />
 
-          <div>
-            <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Language</label>
-            <select
-              className={inputClass}
-              value={form.language}
-              onChange={(e) => setForm(p => ({ ...p, language: e.target.value }))}
-            >
-              {LANGUAGES.map(l => <option key={l.code} value={l.code}>{l.label}</option>)}
-            </select>
-          </div>
+      {/* Support */}
+      <SectionHeader title="Support" />
+      <SettingRow icon="🐛" label="Report a Bug" sublabel="Help us improve the app" onClick={() => window.open('mailto:kmf45.ai@gmail.com?subject=Bug Report', '_blank')} />
+      <SettingRow icon="💡" label="Request a Feature" sublabel="Suggest new features" onClick={() => window.open('mailto:kmf45.ai@gmail.com?subject=Feature Request', '_blank')} />
 
-          <button
-            onClick={handleSave}
-            disabled={syncing}
-            className={`w-full py-3 rounded-lg font-semibold text-sm transition-all flex items-center justify-center gap-2 ${
-              saved
-                ? 'bg-kmf-profit/20 text-kmf-profit border border-kmf-profit/30'
-                : 'bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white hover:shadow-glow'
-            } disabled:opacity-50`}
-          >
-            {saved ? <><FaCheck /> Saved!</> : syncing ? 'Saving...' : <><FaSave /> Save Settings</>}
-          </button>
-        </div>
+      {/* Data */}
+      <SectionHeader title="Data" />
+      <SettingRow icon="📥" label="Export JSON" sublabel="Export all trades to JSON file" onClick={handleExportJSON} />
+      <SettingRow icon="📊" label="Export CSV" sublabel="Export all trades to CSV file" onClick={handleExportCSV} />
 
-        {/* Legal */}
-        <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-3">
-          <div className="flex items-center gap-2 mb-2">
-            <FaShieldAlt className="text-kmf-accent text-sm" />
-            <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Legal</h3>
-          </div>
-          <a
-            href="/privacy-policy.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-between p-3 rounded-lg bg-kmf-surface/50 hover:bg-kmf-surface transition-colors group"
-          >
-            <span className="text-sm text-kmf-text-secondary group-hover:text-kmf-text-primary">Privacy Policy</span>
-            <FaExternalLinkAlt className="text-xs text-kmf-text-tertiary" />
-          </a>
-          <a
-            href="/terms-of-service.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-between p-3 rounded-lg bg-kmf-surface/50 hover:bg-kmf-surface transition-colors group"
-          >
-            <span className="text-sm text-kmf-text-secondary group-hover:text-kmf-text-primary">Terms of Service</span>
-            <FaExternalLinkAlt className="text-xs text-kmf-text-tertiary" />
-          </a>
-        </div>
-
-        {/* App Info */}
-        <div className="text-center py-4">
-          <p className="text-xs text-kmf-text-tertiary">K.M.F. Trading Journal v2.0.0</p>
-          <p className="text-xs text-kmf-text-tertiary/50 mt-1">Keep Moving Forward</p>
-        </div>
+      {/* Version */}
+      <div className="text-center py-4">
+        <span className="text-xs text-kmf-text-tertiary px-3 py-1 bg-kmf-panel rounded-full border border-kmf-accent/10">
+          v2.0.0 • Web App
+        </span>
       </div>
     </div>
   );
