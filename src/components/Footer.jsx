@@ -1,4 +1,4 @@
-import { FaHeart, FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,7 +17,7 @@ const Footer = () => {
                 className="w-12 h-12 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)]"
               />
               <div>
-                <h3 className="text-xl font-bold gradient-text">K.M.F. Trading Journal</h3>
+                <h3 className="text-xl font-bold logo-text">K.M.F. Trading Journal</h3>
                 <p className="text-sm text-kmf-text-tertiary">Keep Moving Forward</p>
               </div>
             </div>
@@ -108,12 +108,6 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-kmf-text-tertiary text-sm text-center sm:text-left">
               © {currentYear} K.M.F. Trading Journal. All rights reserved.
-            </p>
-
-            <p className="text-kmf-text-tertiary text-sm flex items-center gap-2">
-              Made with
-              <FaHeart className="text-kmf-loss animate-pulse" />
-              for traders
             </p>
           </div>
         </div>
