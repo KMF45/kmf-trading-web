@@ -16,6 +16,7 @@ import StatisticsPage from './pages/StatisticsPage';
 import WeeklyReviewPage from './pages/WeeklyReviewPage';
 import LotCalculatorPage from './pages/LotCalculatorPage';
 import SettingsPage from './pages/SettingsPage';
+import ChecklistPage from './pages/ChecklistPage';
 
 const AuthRedirect = ({ children }) => {
   const { user, loading } = useAuth();
@@ -48,6 +49,7 @@ function App() {
             <Route path="history" element={<HistoryPage />} />
             <Route path="statistics" element={<StatisticsPage />} />
             <Route path="weekly-review" element={<WeeklyReviewPage />} />
+            <Route path="checklist" element={<ChecklistPage />} />
             <Route path="calculator" element={<LotCalculatorPage />} />
             <Route path="settings" element={<SettingsPage />} />
           </Route>
