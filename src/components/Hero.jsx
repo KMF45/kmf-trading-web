@@ -13,7 +13,7 @@ const Hero = () => {
           />
         </div>
         <h1 className="text-6xl font-bold mb-6">
-          <span className="gradient-text">K.M.F.</span>
+          <span className="logo-text">K.M.F.</span>
           <br />
           <span className="text-kmf-text-primary">Trading Journal</span>
         </h1>
