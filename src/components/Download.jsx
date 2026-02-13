@@ -69,8 +69,8 @@ const Download = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 {[
-                  'Free to download and use',
-                  'No ads or subscriptions',
+                  'Free to download',
+                  'Premium features with subscription',
                   'Offline functionality',
                   'Regular updates',
                   'Secure data storage',
@@ -88,20 +88,20 @@ const Download = () => {
 
               <div className="mt-12 text-center">
                 <p className="text-sm text-kmf-text-tertiary mb-4">
-                  Trusted by traders worldwide • Privacy-focused • Open source friendly
+                  Privacy-focused • Cloud synced • Professional tools
                 </p>
                 <div className="flex justify-center gap-8 flex-wrap">
                   <div className="flex items-center gap-2 text-kmf-text-tertiary">
-                    <span className="text-2xl">⭐</span>
-                    <span>4.8/5 Rating</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-kmf-text-tertiary">
-                    <span className="text-2xl">📥</span>
-                    <span>1K+ Downloads</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-kmf-text-tertiary">
                     <span className="text-2xl">🔒</span>
                     <span>100% Secure</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-kmf-text-tertiary">
+                    <span className="text-2xl">🌍</span>
+                    <span>8 Languages</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-kmf-text-tertiary">
+                    <span className="text-2xl">☁️</span>
+                    <span>Cloud Sync</span>
                   </div>
                 </div>
               </div>
