@@ -2,12 +2,219 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="K.M.F. Trading Journal - Professional trading journal for serious traders. Track, analyze, and improve your trading performance." />
-  <title>K.M.F. Trading Journal - Keep Moving Forward</title>
+
+  <!-- Primary Meta Tags (unique, descriptive title with long-tail keywords) -->
+  <title>K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy</title>
+  <meta name="description" content="K.M.F. Trading Journal is a professional trading journal app for forex, stocks & crypto traders. Track trades with advanced statistics, risk management tools, weekly reviews, and pre-trade checklists. Available on Android & Web. Free download with premium features." />
+  <meta name="author" content="K.M.F. Dev Team" />
+  <meta name="theme-color" content="#0F1115" />
+  <link rel="canonical" href="https://kmfjournal.com/" />
+
+  <!-- Favicon & Icons -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+
+  <!-- hreflang for multilingual support -->
+  <link rel="alternate" hreflang="en" href="https://kmfjournal.com/" />
+  <link rel="alternate" hreflang="en-US" href="https://kmfjournal.com/" />
+  <link rel="alternate" hreflang="ro" href="https://kmfjournal.com/" />
+  <link rel="alternate" hreflang="ru" href="https://kmfjournal.com/" />
+  <link rel="alternate" hreflang="ja" href="https://kmfjournal.com/" />
+  <link rel="alternate" hreflang="fr" href="https://kmfjournal.com/" />
+  <link rel="alternate" hreflang="de" href="https://kmfjournal.com/" />
+  <link rel="alternate" hreflang="zh" href="https://kmfjournal.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/" />
+
+  <!-- Performance preconnects -->
+  <link rel="preconnect" href="https://firestore.googleapis.com" />
+  <link rel="preconnect" href="https://www.googleapis.com" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kmfjournal.com/" />
+  <meta property="og:title" content="K.M.F. Trading Journal – Professional Trade Tracking & Analysis" />
+  <meta property="og:description" content="Track your trades, analyze performance with advanced statistics, manage risk with a lot calculator, and improve your trading discipline. Free for Android & Web." />
+  <meta property="og:image" content="https://kmfjournal.com/logo.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="K.M.F. Trading Journal logo" />
+  <meta property="og:site_name" content="K.M.F. Trading Journal" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://kmfjournal.com/" />
+  <meta name="twitter:title" content="K.M.F. Trading Journal – Keep Moving Forward" />
+  <meta name="twitter:description" content="Professional trading journal for forex, stocks & crypto. Track, analyze and improve your trading performance." />
+  <meta name="twitter:image" content="https://kmfjournal.com/logo.png" />
+  <meta name="twitter:image:alt" content="K.M.F. Trading Journal logo" />
+
+  <!-- Robots & Indexing -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+  <!-- PWA & Mobile -->
+  <meta name="application-name" content="K.M.F. Trading Journal" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="K.M.F. Trading Journal" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "K.M.F. Trading Journal",
+    "alternateName": ["KMF Trading Journal", "Keep Moving Forward Trading Journal", "KMF Journal"],
+    "description": "Professional trading journal for forex, stocks and crypto traders. Track trades, analyze performance with advanced statistics, manage risk with lot calculator, and improve discipline with weekly reviews.",
+    "url": "https://kmfjournal.com",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Android 8.0+, Web",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "9.99",
+      "priceCurrency": "USD",
+      "offerCount": "2"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "K.M.F. Dev Team",
+      "url": "https://kmfjournal.com"
+    },
+    "softwareVersion": "1.0.0",
+    "inLanguage": ["en", "en-US", "ro", "ru", "ja", "fr", "de", "zh"],
+    "featureList": [
+      "Trade tracking with screenshots and notes",
+      "Advanced statistics: win rate, profit factor, expectancy, R-multiple",
+      "Professional lot size and risk calculator",
+      "Weekly self-evaluation and performance reviews",
+      "Pre-trade discipline checklists",
+      "Balance evolution charts",
+      "Multi-language support (8 languages)",
+      "Cloud sync between Android and Web",
+      "JSON and CSV data export",
+      "Max drawdown analysis",
+      "Top pairs performance breakdown"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "K.M.F. Trading Journal",
+    "alternateName": "KMF Journal",
+    "url": "https://kmfjournal.com",
+    "logo": "https://kmfjournal.com/logo.png",
+    "sameAs": ["https://github.com/KMF45"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "kmf45.ai@gmail.com",
+      "contactType": "customer support"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "K.M.F. Trading Journal",
+    "alternateName": ["KMF Journal", "KMF Trading"],
+    "url": "https://kmfjournal.com"
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage (enables FAQ rich results in Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is K.M.F. Trading Journal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "K.M.F. Trading Journal is a professional trading journal application for forex, stocks, and crypto traders. It helps you track trades, analyze performance with advanced statistics like win rate, profit factor, and expectancy, manage risk with a lot size calculator, and improve discipline with weekly reviews and pre-trade checklists."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is K.M.F. Trading Journal free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "K.M.F. Trading Journal is free to download with core features. A premium subscription is available for advanced analytics, cloud sync, and additional premium features."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What platforms does K.M.F. Trading Journal support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "K.M.F. Trading Journal is available on Android devices (Android 8.0+) and as a web application at kmfjournal.com, with cloud sync between both platforms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What languages are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The app supports 8 languages: English, English (US), Romanian, Russian, Japanese, French, German, and Chinese."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export my trading data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can export your trade data to JSON and CSV formats, as well as PDF reports for comprehensive record-keeping."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kmfjournal.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Features", "item": "https://kmfjournal.com/#features"},
+      {"@type": "ListItem", "position": 3, "name": "Download", "item": "https://kmfjournal.com/#download"}
+    ]
+  }
+  </script>
 </head>
 <body>
+  <!-- noscript fallback for JavaScript SEO (Google guide: JS SEO basics) -->
+  <noscript>
+    <div style="padding:2rem;text-align:center;font-family:sans-serif;background:#0F1115;color:#E0E0E0;min-height:100vh">
+      <h1>K.M.F. Trading Journal – Professional Trading Journal App</h1>
+      <p>Track your forex, stock and crypto trades with advanced statistics and risk management tools.</p>
+      <h2>Features</h2>
+      <ul style="text-align:left;max-width:600px;margin:0 auto">
+        <li>Dashboard with real-time balance and P/L tracking</li>
+        <li>Advanced statistics: win rate, profit factor, expectancy, R-multiple</li>
+        <li>Professional lot size and risk calculator</li>
+        <li>Weekly reviews with self-evaluation and goal setting</li>
+        <li>Pre-trade checklists for discipline</li>
+        <li>Cloud sync between Android and Web</li>
+        <li>8 languages supported</li>
+        <li>Export to JSON, CSV, and PDF</li>
+      </ul>
+      <p>Visit <a href="https://kmfjournal.com" style="color:#4FC3F7">kmfjournal.com</a> with JavaScript enabled for the full experience.</p>
+    </div>
+  </noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
