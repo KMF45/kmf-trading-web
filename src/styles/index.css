@@ -41,6 +41,13 @@
   .gradient-text {
     @apply bg-gradient-to-r from-kmf-accent to-kmf-accent-bright bg-clip-text text-transparent;
   }
+
+  .logo-text {
+    background: linear-gradient(135deg, #E8E0D0 0%, #D4C9B0 40%, #BEB5A0 70%, #D4C9B0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
   
   .glass {
     background: rgba(26, 29, 36, 0.6);
