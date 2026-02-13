@@ -1,167 +1,200 @@
 import { useState, useMemo } from 'react';
 import { useTrades } from '../contexts/TradesContext';
-import { FaCalculator, FaInfoCircle } from 'react-icons/fa';
+import { FaCalculator, FaSync, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-kmf-text-primary text-sm placeholder:text-kmf-text-tertiary/50 focus:outline-none focus:border-kmf-accent focus:ring-1 focus:ring-kmf-accent/30 transition-all";
+const CURRENCIES = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'AUD', 'NZD', 'CAD'];
+const LEVERAGES = ['1:10', '1:20', '1:30', '1:50', '1:100', '1:200', '1:500', '1:1000'];
+const INSTRUMENTS = [
+  'EUR/USD', 'GBP/USD', 'USD/JPY', 'USD/CHF', 'AUD/USD', 'NZD/USD', 'USD/CAD',
+  'EUR/GBP', 'EUR/JPY', 'GBP/JPY', 'AUD/CAD', 'EUR/AUD', 'EUR/CHF',
+  'XAU/USD', 'XAG/USD', 'NAS100', 'US30', 'SP500', 'GER40', 'UK100',
+  'BTC/USD', 'ETH/USD',
+];
+
+const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-3 text-kmf-text-primary text-sm placeholder:text-kmf-text-tertiary/50 focus:outline-none focus:border-kmf-accent focus:ring-1 focus:ring-kmf-accent/30 transition-all";
 
 const LotCalculatorPage = () => {
   const { settings } = useTrades();
-  const [accountBalance, setAccountBalance] = useState(settings.accountBalance?.toString() || '10000');
-  const [riskPercent, setRiskPercent] = useState(settings.riskPerTrade?.toString() || '1');
+
+  const [balance, setBalance] = useState(settings.accountBalance?.toString() || '10000');
+  const [currency, setCurrency] = useState('USD');
+  const [instrument, setInstrument] = useState('');
+  const [leverage, setLeverage] = useState('1:100');
   const [entryPrice, setEntryPrice] = useState('');
-  const [stopLossPrice, setStopLossPrice] = useState('');
-  const [pair, setPair] = useState('EURUSD');
+  const [stopLoss, setStopLoss] = useState('');
+  const [riskPercent, setRiskPercent] = useState(1);
+  const [showAdvanced, setShowAdvanced] = useState(false);
 
-  const result = useMemo(() => {
-    const balance = parseFloat(accountBalance);
-    const risk = parseFloat(riskPercent);
-    const entry = parseFloat(entryPrice);
-    const sl = parseFloat(stopLossPrice);
+  const riskLabel = riskPercent <= 2 ? { text: '✅ Safe and conservative risk', color: 'text-kmf-profit' }
+    : riskPercent <= 5 ? { text: '⚠️ Moderate risk', color: 'text-yellow-400' }
+    : { text: '🔴 Dangerous risk level', color: 'text-kmf-loss' };
 
-    if (!balance || !risk || !entry || !sl || entry === sl) {
-      return null;
-    }
+  const sliderColor = riskPercent <= 2 ? 'accent-green-500' : riskPercent <= 5 ? 'accent-yellow-500' : 'accent-red-500';
 
-    const riskAmount = balance * (risk / 100);
-    const pipDiff = Math.abs(entry - sl);
-    const isJPY = pair.toUpperCase().includes('JPY');
-    const pipsDistance = isJPY ? pipDiff * 100 : pipDiff * 10000;
-    const pipValue = isJPY ? 1000 : 10;
-    const lotSize = pipsDistance > 0 ? riskAmount / (pipsDistance * pipValue) : 0;
+  const results = useMemo(() => {
+    const bal = parseFloat(balance) || 0;
+    const entry = parseFloat(entryPrice) || 0;
+    const sl = parseFloat(stopLoss) || 0;
+    if (!bal || !entry || !sl || entry === sl) return null;
 
-    // Round to nearest standard lot sizes
-    const standardLot = Math.floor(lotSize * 100) / 100;
-    const miniLot = Math.floor(lotSize * 10) / 10;
+    const riskAmount = bal * (riskPercent / 100);
+    const pipDistance = Math.abs(entry - sl);
+    const isJPY = instrument.includes('JPY');
+    const pipValue = isJPY ? 0.01 : 0.0001;
+    const pipsCount = pipDistance / pipValue;
+
+    if (pipsCount <= 0) return null;
+
+    // Standard lot = 100,000 units; pip value for 1 standard lot
+    const standardPipValue = isJPY ? (100000 * 0.01) / entry : 10;
+    const lotSize = riskAmount / (pipsCount * standardPipValue);
+
+    const leverageNum = parseInt(leverage.split(':')[1]) || 100;
+    const marginRequired = (lotSize * 100000 * entry) / leverageNum;
 
     return {
       riskAmount: riskAmount.toFixed(2),
-      pipsDistance: pipsDistance.toFixed(1),
+      pipDistance: pipsCount.toFixed(1),
       lotSize: lotSize.toFixed(4),
-      standardLot: standardLot.toFixed(2),
-      miniLot: miniLot.toFixed(1),
-      microLot: Math.floor(lotSize * 100).toString(),
-      potentialLoss: riskAmount.toFixed(2),
+      standardLots: Math.floor(lotSize * 100) / 100,
+      miniLots: Math.floor(lotSize * 10),
+      microLots: Math.floor(lotSize * 100),
+      marginRequired: marginRequired.toFixed(2),
+      maxLoss: riskAmount.toFixed(2),
     };
-  }, [accountBalance, riskPercent, entryPrice, stopLossPrice, pair]);
+  }, [balance, entryPrice, stopLoss, riskPercent, instrument, leverage]);
+
+  const handleReset = () => {
+    setBalance(settings.accountBalance?.toString() || '10000');
+    setCurrency('USD');
+    setInstrument('');
+    setLeverage('1:100');
+    setEntryPrice('');
+    setStopLoss('');
+    setRiskPercent(1);
+  };
 
   return (
-    <div className="max-w-4xl mx-auto animate-fadeIn">
+    <div className="max-w-3xl mx-auto space-y-4 animate-fadeIn">
       {/* Header */}
-      <div className="flex items-center gap-3 mb-6">
-        <div className="w-10 h-10 rounded-lg bg-kmf-accent/15 flex items-center justify-center">
-          <FaCalculator className="text-kmf-accent text-lg" />
-        </div>
-        <div>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-lg bg-kmf-accent/15 flex items-center justify-center">
+            <FaCalculator className="text-kmf-accent text-lg" />
+          </div>
           <h1 className="text-2xl font-bold text-kmf-text-primary">Lot Calculator</h1>
-          <p className="text-sm text-kmf-text-tertiary">Calculate optimal position size based on your risk management</p>
+        </div>
+        <button onClick={handleReset} className="p-2 rounded-lg text-kmf-text-tertiary hover:text-kmf-accent hover:bg-kmf-accent/10 transition-all"><FaSync size={14} /></button>
+      </div>
+
+      {/* Account Balance */}
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <label className="text-xs text-kmf-accent font-medium mb-1 block">💰 Account Balance</label>
+        <div className="flex items-center gap-2">
+          <input type="number" step="any" className={`${inputClass} flex-1`} placeholder="10000" value={balance} onChange={(e) => setBalance(e.target.value)} />
+          <span className="text-sm font-bold text-kmf-text-tertiary w-12 text-right">{currency}</span>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Input Panel */}
-        <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-5">
-          <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Parameters</h3>
+      {/* Account Currency */}
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <label className="text-xs text-kmf-accent font-medium mb-1 block">🏦 Account Currency</label>
+        <select className={inputClass} value={currency} onChange={(e) => setCurrency(e.target.value)}>
+          {CURRENCIES.map(c => <option key={c} value={c}>{c}</option>)}
+        </select>
+      </div>
 
-          <div>
-            <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Pair / Symbol</label>
-            <input type="text" className={inputClass} placeholder="EURUSD" value={pair} onChange={(e) => setPair(e.target.value.toUpperCase())} />
-          </div>
+      {/* Instrument */}
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <label className="text-xs text-kmf-accent font-medium mb-1 block">📊 Instrument</label>
+        <select className={inputClass} value={instrument} onChange={(e) => setInstrument(e.target.value)}>
+          <option value="">Select instrument</option>
+          {INSTRUMENTS.map(i => <option key={i} value={i}>{i}</option>)}
+        </select>
+      </div>
 
-          <div>
-            <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Account Balance ({settings.currency || 'USD'})</label>
-            <input type="number" step="any" className={inputClass} value={accountBalance} onChange={(e) => setAccountBalance(e.target.value)} />
-          </div>
+      {/* Leverage */}
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <label className="text-xs text-kmf-accent font-medium mb-1 block">✅ Leverage</label>
+        <select className={inputClass} value={leverage} onChange={(e) => setLeverage(e.target.value)}>
+          {LEVERAGES.map(l => <option key={l} value={l}>{l}</option>)}
+        </select>
+      </div>
 
-          <div>
-            <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Risk per Trade (%)</label>
-            <input type="number" step="0.1" min="0.1" max="100" className={inputClass} value={riskPercent} onChange={(e) => setRiskPercent(e.target.value)} />
-            <div className="flex gap-2 mt-2">
-              {['0.5', '1', '1.5', '2', '3'].map((v) => (
-                <button
-                  key={v}
-                  type="button"
-                  onClick={() => setRiskPercent(v)}
-                  className={`px-3 py-1 rounded text-xs font-medium transition-all ${
-                    riskPercent === v
-                      ? 'bg-kmf-accent/20 text-kmf-accent border border-kmf-accent/40'
-                      : 'bg-kmf-surface text-kmf-text-tertiary border border-kmf-accent/10 hover:border-kmf-accent/30'
-                  }`}
-                >
-                  {v}%
-                </button>
-              ))}
-            </div>
-          </div>
+      {/* Entry Price */}
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <label className="text-xs text-kmf-accent font-medium mb-1 block">📍 Entry Price</label>
+        <input type="number" step="any" className={inputClass} placeholder="Entry price..." value={entryPrice} onChange={(e) => setEntryPrice(e.target.value)} />
+      </div>
 
-          <div>
-            <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Entry Price</label>
-            <input type="number" step="any" className={inputClass} placeholder="1.08500" value={entryPrice} onChange={(e) => setEntryPrice(e.target.value)} />
-          </div>
+      {/* Stop Loss */}
+      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <label className="text-xs text-kmf-accent font-medium mb-1 block">🔴 Stop Loss</label>
+        <input type="number" step="any" className={inputClass} placeholder="Stop loss price..." value={stopLoss} onChange={(e) => setStopLoss(e.target.value)} />
+      </div>
 
-          <div>
-            <label className="block text-sm font-medium text-kmf-text-secondary mb-1.5">Stop Loss Price</label>
-            <input type="number" step="any" className={inputClass} placeholder="1.08200" value={stopLossPrice} onChange={(e) => setStopLossPrice(e.target.value)} />
+      {/* Risk Per Trade */}
+      <div className="bg-kmf-panel rounded-xl p-4 border-2 border-kmf-accent/20">
+        <div className="flex items-center justify-between mb-3">
+          <label className="text-xs text-kmf-accent font-medium">⚠️ Risk Per Trade</label>
+          <div className="flex items-center gap-1">
+            <input type="number" step="0.1" min="0.2" max="100" value={riskPercent}
+              onChange={(e) => setRiskPercent(parseFloat(e.target.value) || 1)}
+              className="w-16 bg-kmf-surface border border-kmf-accent/20 rounded px-2 py-1 text-sm text-kmf-text-primary text-right focus:outline-none focus:border-kmf-accent" />
+            <span className="text-sm text-kmf-text-tertiary">%</span>
           </div>
         </div>
-
-        {/* Results Panel */}
-        <div className="space-y-4">
-          {result ? (
-            <>
-              {/* Main Result */}
-              <div className="bg-kmf-panel rounded-xl p-6 border-2 border-kmf-accent/30 shadow-glow text-center">
-                <p className="text-xs text-kmf-text-tertiary uppercase tracking-wider mb-1">Recommended Lot Size</p>
-                <p className="text-5xl font-bold gradient-text mb-2">{result.standardLot}</p>
-                <p className="text-sm text-kmf-text-tertiary">standard lots ({result.lotSize} exact)</p>
-              </div>
-
-              {/* Details */}
-              <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 space-y-4">
-                <h3 className="text-sm font-semibold text-kmf-accent uppercase tracking-wider">Breakdown</h3>
-
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center py-2 border-b border-kmf-accent/5">
-                    <span className="text-sm text-kmf-text-tertiary">Risk Amount</span>
-                    <span className="text-sm font-bold text-kmf-loss">${result.riskAmount}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-kmf-accent/5">
-                    <span className="text-sm text-kmf-text-tertiary">Stop Loss Distance</span>
-                    <span className="text-sm font-bold text-kmf-text-primary">{result.pipsDistance} pips</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-kmf-accent/5">
-                    <span className="text-sm text-kmf-text-tertiary">Standard Lots</span>
-                    <span className="text-sm font-bold text-kmf-accent">{result.standardLot}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-kmf-accent/5">
-                    <span className="text-sm text-kmf-text-tertiary">Mini Lots</span>
-                    <span className="text-sm font-bold text-kmf-text-primary">{result.miniLot}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2">
-                    <span className="text-sm text-kmf-text-tertiary">Micro Lots</span>
-                    <span className="text-sm font-bold text-kmf-text-primary">{result.microLot}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Warning */}
-              <div className="bg-kmf-pending/5 rounded-xl p-4 border border-kmf-pending/20 flex gap-3">
-                <FaInfoCircle className="text-kmf-pending flex-shrink-0 mt-0.5" />
-                <p className="text-xs text-kmf-text-tertiary leading-relaxed">
-                  Maximum potential loss on this trade: <span className="text-kmf-loss font-bold">${result.potentialLoss}</span> ({riskPercent}% of account).
-                  This calculation assumes standard lot sizing. Verify with your broker for exact pip values.
-                </p>
-              </div>
-            </>
-          ) : (
-            <div className="bg-kmf-panel rounded-xl p-12 border border-kmf-accent/10 text-center">
-              <div className="w-16 h-16 mx-auto rounded-full bg-kmf-accent/10 flex items-center justify-center mb-4">
-                <FaCalculator className="text-kmf-accent text-2xl" />
-              </div>
-              <h2 className="text-lg font-semibold text-kmf-text-primary mb-2">Enter Parameters</h2>
-              <p className="text-kmf-text-tertiary text-sm">Fill in entry price and stop loss to calculate lot size</p>
-            </div>
-          )}
+        <input type="range" min="0.2" max="100" step="0.1" value={riskPercent}
+          onChange={(e) => setRiskPercent(parseFloat(e.target.value))}
+          className={`w-full h-2 rounded-lg appearance-none bg-kmf-surface cursor-pointer ${sliderColor}`} />
+        <div className="flex justify-between mt-2 text-xs">
+          <span className="text-kmf-text-tertiary">0.2%</span>
+          <div className="flex gap-3">
+            <span className="text-kmf-profit">🟢 Safe (≤2%)</span>
+            <span className="text-yellow-400">🟡 Moderate (2-5%)</span>
+            <span className="text-kmf-loss">🔴 Danger ({'>'}5%)</span>
+          </div>
+          <span className="text-kmf-text-tertiary">100%</span>
         </div>
+        <p className={`text-center text-xs font-medium mt-2 ${riskLabel.color}`}>{riskLabel.text}</p>
+      </div>
+
+      {/* Results */}
+      {results && (
+        <div className="bg-kmf-panel rounded-xl p-5 border-2 border-kmf-accent/30">
+          <h2 className="text-sm font-bold text-kmf-accent mb-4">📊 Calculation Results</h2>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-kmf-surface/50 rounded-lg p-3"><p className="text-xs text-kmf-text-tertiary">Risk Amount</p><p className="text-lg font-bold text-kmf-loss">${results.riskAmount}</p></div>
+            <div className="bg-kmf-surface/50 rounded-lg p-3"><p className="text-xs text-kmf-text-tertiary">Pip Distance</p><p className="text-lg font-bold text-kmf-text-primary">{results.pipDistance} pips</p></div>
+            <div className="bg-kmf-surface/50 rounded-lg p-3 col-span-2"><p className="text-xs text-kmf-text-tertiary">Recommended Lot Size</p><p className="text-2xl font-bold text-kmf-accent">{results.lotSize}</p></div>
+            <div className="bg-kmf-surface/50 rounded-lg p-3"><p className="text-xs text-kmf-text-tertiary">Standard Lots</p><p className="text-sm font-bold text-kmf-text-primary">{results.standardLots}</p></div>
+            <div className="bg-kmf-surface/50 rounded-lg p-3"><p className="text-xs text-kmf-text-tertiary">Mini Lots</p><p className="text-sm font-bold text-kmf-text-primary">{results.miniLots}</p></div>
+          </div>
+          <div className="mt-3 p-3 rounded-lg bg-kmf-loss/10 border border-kmf-loss/20">
+            <p className="text-xs text-kmf-loss font-medium">⚠️ Maximum potential loss: ${results.maxLoss} ({riskPercent}% of balance)</p>
+          </div>
+        </div>
+      )}
+
+      {/* Advanced Options */}
+      <button onClick={() => setShowAdvanced(!showAdvanced)}
+        className="w-full flex items-center justify-center gap-2 py-3 text-sm text-kmf-accent hover:text-kmf-accent-bright transition-all">
+        {showAdvanced ? <FaChevronUp /> : <FaChevronDown />}
+        🔽 Advanced Options
+      </button>
+      {showAdvanced && results && (
+        <div className="bg-kmf-panel rounded-xl p-5 border border-kmf-accent/10">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-kmf-surface/50 rounded-lg p-3"><p className="text-xs text-kmf-text-tertiary">Margin Required</p><p className="text-sm font-bold text-kmf-text-primary">${results.marginRequired}</p></div>
+            <div className="bg-kmf-surface/50 rounded-lg p-3"><p className="text-xs text-kmf-text-tertiary">Micro Lots</p><p className="text-sm font-bold text-kmf-text-primary">{results.microLots}</p></div>
+          </div>
+        </div>
+      )}
+
+      {/* Risk Disclaimer */}
+      <div className="bg-kmf-panel rounded-xl p-4 border border-yellow-500/20">
+        <p className="text-xs font-semibold text-yellow-400 mb-1">⚠️ Risk Disclaimer</p>
+        <p className="text-xs text-kmf-text-tertiary">Trading involves risk. Never risk more than 1-2% per trade. This calculator is for educational purposes only.</p>
       </div>
     </div>
   );
