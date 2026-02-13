@@ -22,7 +22,7 @@ export default {
           },
           profit: '#00E676',
           loss: '#FF5252',
-          pending: '#FFD740',
+          pending: '#FFB74D',
           breakeven: '#78909C',
           star: '#FFD740',
           logo: '#D4C9B0',
