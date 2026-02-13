@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { TradesProvider } from './contexts/TradesContext';
 
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/auth/LoginPage';
@@ -34,8 +35,14 @@ function App() {
           <Route path="/register" element={<AuthRedirect><RegisterPage /></AuthRedirect>} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
 
-          {/* Protected app routes */}
-          <Route path="/app" element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
+          {/* Protected app routes - wrapped in TradesProvider */}
+          <Route path="/app" element={
+            <ProtectedRoute>
+              <TradesProvider>
+                <AppLayout />
+              </TradesProvider>
+            </ProtectedRoute>
+          }>
             <Route index element={<DashboardPage />} />
             <Route path="add-trade" element={<AddTradePage />} />
             <Route path="history" element={<HistoryPage />} />
