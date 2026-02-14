@@ -1,7 +1,9 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect, useMemo } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useTrades } from '../contexts/TradesContext';
-import { FaPlus, FaSave, FaTimes, FaStar, FaCheck } from 'react-icons/fa';
+import SymbolPicker from '../components/trade/SymbolPicker';
+import { getSymbolByCode } from '../data/defaultSymbols';
+import { FaPlus, FaStar, FaCheck, FaCalendarAlt, FaClock, FaChevronDown } from 'react-icons/fa';
 
 const DEFAULT_CHECKLIST = [
   'Analyzed chart on multiple timeframes',
@@ -18,72 +20,192 @@ const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg
 
 const AddTradePage = () => {
   const navigate = useNavigate();
-  const { addTrade } = useTrades();
+  const [searchParams] = useSearchParams();
+  const editId = searchParams.get('edit');
+  const { trades, addTrade, editTrade } = useTrades();
+
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const [validationMsg, setValidationMsg] = useState('');
+  const [showSymbolPicker, setShowSymbolPicker] = useState(false);
+  const [selectedSymbol, setSelectedSymbol] = useState(null);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [editingTrade, setEditingTrade] = useState(null);
 
-  const now = new Date();
   const [form, setForm] = useState({
-    instrument: '',
     type: 'BUY',
     entryPrice: '',
     stopLoss: '',
     takeProfit: '',
     lotSize: '0.10',
     actualPnL: '',
-    result: 'PROFIT',
+    result: 'PENDING',
     rating: 3,
     notes: '',
     completedTasks: [],
+    tradeDate: new Date().toISOString().split('T')[0],
+    tradeTime: `${String(new Date().getHours()).padStart(2, '0')}:${String(new Date().getMinutes()).padStart(2, '0')}`,
   });
 
-  const [dateStr] = useState(`${now.getDate()} ${now.toLocaleDateString('en', { month: 'short' })} ${now.getFullYear()}`);
-  const [timeStr] = useState(`${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`);
+  const [fieldErrors, setFieldErrors] = useState({
+    instrument: false, entryPrice: false, lotSize: false,
+    stopLoss: false, takeProfit: false, actualPnL: false,
+  });
+
+  // Load trade for editing
+  useEffect(() => {
+    if (editId && trades.length > 0) {
+      const trade = trades.find(t => t.id === editId);
+      if (trade) {
+        setIsEditMode(true);
+        setEditingTrade(trade);
+        setSelectedSymbol(getSymbolByCode(trade.instrument));
+        const dt = new Date(trade.tradeDateTime || trade.timestamp);
+        setForm({
+          type: trade.type || 'BUY',
+          entryPrice: trade.entryPrice?.toString() || '',
+          stopLoss: trade.stopLoss?.toString() || '',
+          takeProfit: trade.takeProfit?.toString() || '',
+          lotSize: trade.lotSize?.toString() || '0.10',
+          actualPnL: trade.actualPnL?.toString() || '',
+          result: trade.result || 'PENDING',
+          rating: trade.rating || 3,
+          notes: trade.notes || '',
+          completedTasks: trade.completedTasks || [],
+          tradeDate: dt.toISOString().split('T')[0],
+          tradeTime: `${String(dt.getHours()).padStart(2, '0')}:${String(dt.getMinutes()).padStart(2, '0')}`,
+        });
+        console.log('[KMF_DEBUG] Loaded trade for editing:', trade.id);
+      }
+    }
+  }, [editId, trades]);
 
   const updateField = (field, value) => {
     setForm(prev => ({ ...prev, [field]: value }));
     setError('');
+    setValidationMsg('');
+    setFieldErrors(prev => ({ ...prev, [field]: false }));
+    if (field === 'type') {
+      setFieldErrors(prev => ({ ...prev, stopLoss: false, takeProfit: false }));
+    }
   };
 
   const toggleChecklistItem = (idx) => {
     setForm(prev => {
       const tasks = [...prev.completedTasks];
       const i = tasks.indexOf(idx);
-      if (i >= 0) tasks.splice(i, 1);
-      else tasks.push(idx);
+      if (i >= 0) tasks.splice(i, 1); else tasks.push(idx);
       return { ...prev, completedTasks: tasks };
     });
   };
 
+  const buildTradeDateTime = () => {
+    try {
+      const [year, month, day] = form.tradeDate.split('-').map(Number);
+      const [hours, minutes] = form.tradeTime.split(':').map(Number);
+      return new Date(year, month - 1, day, hours, minutes).getTime();
+    } catch (err) {
+      console.error('[KMF_DEBUG] Error building tradeDateTime:', err);
+      return Date.now();
+    }
+  };
+
+  const isFormValid = useMemo(() => {
+    return selectedSymbol !== null &&
+      form.entryPrice && parseFloat(form.entryPrice) > 0 &&
+      form.lotSize && parseFloat(form.lotSize) > 0;
+  }, [selectedSymbol, form.entryPrice, form.lotSize]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.instrument.trim()) { setError('Instrument is required'); return; }
-    if (!form.entryPrice) { setError('Entry price is required'); return; }
+    setError('');
+    setValidationMsg('');
+    setFieldErrors({ instrument: false, entryPrice: false, lotSize: false, stopLoss: false, takeProfit: false, actualPnL: false });
+
+    if (!selectedSymbol) {
+      setFieldErrors(prev => ({ ...prev, instrument: true }));
+      setValidationMsg('Please select an instrument');
+      return;
+    }
+    const entry = parseFloat(form.entryPrice);
+    if (!entry || entry <= 0) {
+      setFieldErrors(prev => ({ ...prev, entryPrice: true }));
+      setValidationMsg('Entry price must be greater than 0');
+      return;
+    }
+    const lotSize = parseFloat(form.lotSize);
+    if (!lotSize || lotSize <= 0) {
+      setFieldErrors(prev => ({ ...prev, lotSize: true }));
+      setValidationMsg('Lot size must be greater than 0');
+      return;
+    }
+
+    const sl = form.stopLoss ? parseFloat(form.stopLoss) : null;
+    const tp = form.takeProfit ? parseFloat(form.takeProfit) : null;
+    const pnl = form.actualPnL ? parseFloat(form.actualPnL) : null;
+
+    // SL/TP cross-validation — mirrors Android
+    if (sl !== null && tp !== null) {
+      const slAboveEntry = sl > entry;
+      const tpAboveEntry = tp > entry;
+      if (slAboveEntry === tpAboveEntry) {
+        setFieldErrors(prev => ({ ...prev, stopLoss: true, takeProfit: true }));
+        setValidationMsg('SL and TP must be on opposite sides of entry price');
+        return;
+      }
+      if ((sl < entry && tp > sl && tp < entry) || (sl > entry && tp < sl && tp > entry)) {
+        setFieldErrors(prev => ({ ...prev, takeProfit: true }));
+        setValidationMsg('TP cannot be between Entry and SL');
+        return;
+      }
+    }
+
+    // P/L vs Result — mirrors Android
+    if (pnl !== null) {
+      if (form.result === 'PROFIT' && pnl < 0) {
+        setFieldErrors(prev => ({ ...prev, actualPnL: true }));
+        setValidationMsg('P/L cannot be negative when result is PROFIT');
+        return;
+      }
+      if (form.result === 'LOSS' && pnl > 0) {
+        setFieldErrors(prev => ({ ...prev, actualPnL: true }));
+        setValidationMsg('P/L cannot be positive when result is LOSS');
+        return;
+      }
+    }
 
     setSaving(true);
     try {
-      const ts = Date.now();
-      await addTrade({
-        instrument: form.instrument.toUpperCase().trim(),
+      const tradeData = {
+        instrument: selectedSymbol.symbol,
         type: form.type,
-        entryPrice: parseFloat(form.entryPrice) || 0,
-        stopLoss: form.stopLoss ? parseFloat(form.stopLoss) : null,
-        takeProfit: form.takeProfit ? parseFloat(form.takeProfit) : null,
-        lotSize: parseFloat(form.lotSize) || 0.1,
-        pnlAmount: form.actualPnL ? parseFloat(form.actualPnL) : null,
-        actualPnL: form.actualPnL ? parseFloat(form.actualPnL) : null,
+        entryPrice: entry,
+        stopLoss: sl,
+        takeProfit: tp,
+        lotSize,
+        pnlAmount: pnl,
+        actualPnL: pnl,
         result: form.result,
         rating: form.rating,
         notes: form.notes,
         completedTasks: form.completedTasks,
-        timestamp: ts,
-        tradeDateTime: ts,
-        followedPlan: form.completedTasks.length >= 4,
+        timestamp: isEditMode ? editingTrade.timestamp : Date.now(),
+        tradeDateTime: buildTradeDateTime(),
+        followedPlan: form.completedTasks.length >= Math.floor(DEFAULT_CHECKLIST.length / 2),
         rMultiple: 0,
         photoUri: null,
-      });
+      };
+
+      if (isEditMode && editingTrade) {
+        await editTrade(editingTrade.id, tradeData);
+        console.log('[KMF_DEBUG] Trade updated:', editingTrade.id);
+      } else {
+        await addTrade(tradeData);
+        console.log('[KMF_DEBUG] Trade added successfully');
+      }
       navigate('/app/history');
     } catch (err) {
+      console.error('[KMF_DEBUG] Error saving trade:', err);
       setError('Failed to save trade. Please try again.');
     } finally {
       setSaving(false);
@@ -92,11 +214,17 @@ const AddTradePage = () => {
 
   return (
     <div className="max-w-3xl mx-auto animate-fadeIn">
+      {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 rounded-lg bg-kmf-accent/15 flex items-center justify-center">
           <FaPlus className="text-kmf-accent text-lg" />
         </div>
-        <h1 className="text-2xl font-bold text-kmf-text-primary">Add Trade</h1>
+        <div>
+          <h1 className="text-2xl font-bold text-kmf-text-primary">
+            {isEditMode ? '✏️ Edit Trade' : '➕ Add Trade'}
+          </h1>
+          {isEditMode && <p className="text-xs text-kmf-text-tertiary">Editing {editingTrade?.instrument}</p>}
+        </div>
       </div>
 
       {error && (
@@ -106,28 +234,38 @@ const AddTradePage = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Date & Time */}
         <div className="grid grid-cols-2 gap-3">
-          <div className="bg-kmf-panel rounded-lg p-3 border border-kmf-accent/10 text-center">
-            <p className="text-xs text-kmf-text-tertiary">📅</p>
-            <p className="text-sm font-medium text-kmf-text-primary">{dateStr}</p>
+          <div>
+            <label className="text-xs text-kmf-accent font-medium mb-1 block">📅 Trade Date</label>
+            <div className="relative">
+              <FaCalendarAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-kmf-accent text-sm pointer-events-none" />
+              <input type="date" value={form.tradeDate} onChange={(e) => updateField('tradeDate', e.target.value)}
+                className={`${inputClass} pl-9 cursor-pointer`} />
+            </div>
           </div>
-          <div className="bg-kmf-panel rounded-lg p-3 border border-kmf-accent/10 text-center">
-            <p className="text-xs text-kmf-text-tertiary">🕐</p>
-            <p className="text-sm font-medium text-kmf-text-primary">{timeStr}</p>
+          <div>
+            <label className="text-xs text-kmf-accent font-medium mb-1 block">🕐 Trade Time</label>
+            <div className="relative">
+              <FaClock className="absolute left-3 top-1/2 -translate-y-1/2 text-kmf-accent text-sm pointer-events-none" />
+              <input type="time" value={form.tradeTime} onChange={(e) => updateField('tradeTime', e.target.value)}
+                className={`${inputClass} pl-9 cursor-pointer`} />
+            </div>
           </div>
         </div>
 
         {/* Trade Type */}
         <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
-          <p className="text-sm font-semibold text-kmf-text-primary mb-3">Trade Type</p>
+          <p className="text-sm font-semibold text-kmf-text-primary mb-3">📊 Trade Type</p>
           <div className="grid grid-cols-2 gap-3">
             {['BUY', 'SELL'].map((t) => (
               <button key={t} type="button" onClick={() => updateField('type', t)}
                 className={`py-3 rounded-lg text-sm font-bold transition-all ${
                   form.type === t
-                    ? t === 'BUY' ? 'bg-kmf-profit/20 text-kmf-profit border-2 border-kmf-profit/50' : 'bg-kmf-loss/20 text-kmf-loss border-2 border-kmf-loss/50'
-                    : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary'
+                    ? t === 'BUY'
+                      ? 'bg-kmf-profit/20 text-kmf-profit border-2 border-kmf-profit/50 shadow-[0_0_12px_rgba(0,230,118,0.15)]'
+                      : 'bg-kmf-loss/20 text-kmf-loss border-2 border-kmf-loss/50 shadow-[0_0_12px_rgba(255,82,82,0.15)]'
+                    : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary hover:border-kmf-accent/30'
                 }`}>
-                {t === 'BUY' ? '✅ ' : '📊 '}{t === 'BUY' ? 'Buy' : 'Sell'}
+                {t === 'BUY' ? '📈 BUY' : '📉 SELL'}
               </button>
             ))}
           </div>
@@ -135,32 +273,53 @@ const AddTradePage = () => {
 
         {/* Trade Details */}
         <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 space-y-3">
-          <p className="text-sm font-semibold text-kmf-text-primary">📋 Trade Details</p>
+          <p className="text-sm font-semibold text-kmf-text-primary">📝 Trade Details</p>
+
+          {/* Symbol Picker Trigger */}
           <div>
-            <label className="text-xs text-kmf-accent font-medium">Instrument</label>
-            <input type="text" className={inputClass} placeholder="EUR/USD, XAU/USD, NAS100..." value={form.instrument} onChange={(e) => updateField('instrument', e.target.value)} />
+            <label className={`text-xs font-medium mb-1 block ${fieldErrors.instrument ? 'text-kmf-loss' : 'text-kmf-accent'}`}>Instrument *</label>
+            <button type="button" onClick={() => setShowSymbolPicker(true)}
+              className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-left transition-all ${
+                fieldErrors.instrument ? 'bg-kmf-surface border-2 border-kmf-loss/50' : 'bg-kmf-surface border border-kmf-accent/20 hover:border-kmf-accent/40'
+              }`}>
+              <span className={`text-sm ${selectedSymbol ? 'font-medium text-kmf-text-primary' : 'text-kmf-text-tertiary/50'}`}>
+                {selectedSymbol ? `${selectedSymbol.symbol} — ${selectedSymbol.name}` : 'EUR/USD, XAU/USD, NAS100...'}
+              </span>
+              <FaChevronDown className="text-kmf-text-tertiary text-xs" />
+            </button>
           </div>
+
           <div>
-            <label className="text-xs text-kmf-accent font-medium">Entry Price</label>
-            <input type="number" step="any" className={inputClass} placeholder="1.0850" value={form.entryPrice} onChange={(e) => updateField('entryPrice', e.target.value)} />
+            <label className={`text-xs font-medium mb-1 block ${fieldErrors.entryPrice ? 'text-kmf-loss' : 'text-kmf-accent'}`}>Entry Price *</label>
+            <input type="number" step="any" className={`${inputClass} ${fieldErrors.entryPrice ? 'border-kmf-loss/50 border-2' : ''}`}
+              placeholder="1.0850" value={form.entryPrice} onChange={(e) => updateField('entryPrice', e.target.value)} />
           </div>
+
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="text-xs text-kmf-accent font-medium">SL</label>
-              <input type="number" step="any" className={inputClass} placeholder="< Entry" value={form.stopLoss} onChange={(e) => updateField('stopLoss', e.target.value)} />
+              <label className={`text-xs font-medium mb-1 block ${fieldErrors.stopLoss ? 'text-kmf-loss' : 'text-kmf-accent'}`}>SL</label>
+              <input type="number" step="any" className={`${inputClass} ${fieldErrors.stopLoss ? 'border-kmf-loss/50 border-2' : ''}`}
+                placeholder={form.type === 'BUY' ? '< Entry' : '> Entry'} value={form.stopLoss} onChange={(e) => updateField('stopLoss', e.target.value)} />
             </div>
             <div>
-              <label className="text-xs text-kmf-accent font-medium">TP</label>
-              <input type="number" step="any" className={inputClass} placeholder="> Entry" value={form.takeProfit} onChange={(e) => updateField('takeProfit', e.target.value)} />
+              <label className={`text-xs font-medium mb-1 block ${fieldErrors.takeProfit ? 'text-kmf-loss' : 'text-kmf-accent'}`}>TP</label>
+              <input type="number" step="any" className={`${inputClass} ${fieldErrors.takeProfit ? 'border-kmf-loss/50 border-2' : ''}`}
+                placeholder={form.type === 'BUY' ? '> Entry' : '< Entry'} value={form.takeProfit} onChange={(e) => updateField('takeProfit', e.target.value)} />
             </div>
           </div>
+
+          {validationMsg && <p className="text-xs text-kmf-loss font-medium px-1">⚠️ {validationMsg}</p>}
+
           <div>
-            <label className="text-xs text-kmf-accent font-medium">Lot Size</label>
-            <input type="number" step="0.01" min="0.01" className={inputClass} value={form.lotSize} onChange={(e) => updateField('lotSize', e.target.value)} />
+            <label className={`text-xs font-medium mb-1 block ${fieldErrors.lotSize ? 'text-kmf-loss' : 'text-kmf-accent'}`}>Lot Size *</label>
+            <input type="number" step="0.01" min="0.01" className={`${inputClass} ${fieldErrors.lotSize ? 'border-kmf-loss/50 border-2' : ''}`}
+              placeholder="0.10" value={form.lotSize} onChange={(e) => updateField('lotSize', e.target.value)} />
           </div>
+
           <div>
-            <label className="text-xs text-kmf-accent font-medium">💰 Actual P/L</label>
-            <input type="number" step="any" className={inputClass} placeholder="+245.50 or -120.30" value={form.actualPnL} onChange={(e) => updateField('actualPnL', e.target.value)} />
+            <label className={`text-xs font-medium mb-1 block ${fieldErrors.actualPnL ? 'text-kmf-loss' : 'text-kmf-accent'}`}>💰 Actual P/L</label>
+            <input type="number" step="any" className={`${inputClass} ${fieldErrors.actualPnL ? 'border-kmf-loss/50 border-2' : ''}`}
+              placeholder="+245.50 or -120.30" value={form.actualPnL} onChange={(e) => updateField('actualPnL', e.target.value)} />
           </div>
         </div>
 
@@ -168,48 +327,49 @@ const AddTradePage = () => {
         <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
           <div className="flex items-center justify-between mb-3">
             <p className="text-sm font-semibold text-kmf-text-primary">✅ Pre-Trade Checklist</p>
-            <span className="text-xs text-kmf-accent font-medium">{form.completedTasks.length}/{DEFAULT_CHECKLIST.length}</span>
+            <span className="text-xs text-kmf-accent font-bold">{form.completedTasks.length}/{DEFAULT_CHECKLIST.length}</span>
           </div>
           <div className="space-y-2">
-            {DEFAULT_CHECKLIST.map((item, idx) => (
-              <button key={idx} type="button" onClick={() => toggleChecklistItem(idx)}
-                className={`w-full flex items-center gap-3 p-2.5 rounded-lg text-left transition-all ${
-                  form.completedTasks.includes(idx) ? 'bg-kmf-profit/10 border border-kmf-profit/30' : 'bg-kmf-surface/50 border border-transparent hover:border-kmf-accent/20'
-                }`}>
-                <div className={`w-5 h-5 rounded flex-shrink-0 flex items-center justify-center ${
-                  form.completedTasks.includes(idx) ? 'bg-kmf-profit text-white' : 'border border-kmf-text-tertiary/30'
-                }`}>
-                  {form.completedTasks.includes(idx) && <FaCheck size={10} />}
-                </div>
-                <span className={`text-sm ${form.completedTasks.includes(idx) ? 'text-kmf-text-primary' : 'text-kmf-text-tertiary'}`}>{item}</span>
-              </button>
-            ))}
+            {DEFAULT_CHECKLIST.map((item, idx) => {
+              const checked = form.completedTasks.includes(idx);
+              return (
+                <button key={idx} type="button" onClick={() => toggleChecklistItem(idx)}
+                  className={`w-full flex items-center gap-3 p-2.5 rounded-lg text-left transition-all ${
+                    checked ? 'bg-kmf-profit/10 border border-kmf-profit/30' : 'bg-kmf-surface/50 border border-transparent hover:border-kmf-accent/20'
+                  }`}>
+                  <div className={`w-5 h-5 rounded flex-shrink-0 flex items-center justify-center ${checked ? 'bg-kmf-profit text-white' : 'border border-kmf-text-tertiary/30'}`}>
+                    {checked && <FaCheck size={10} />}
+                  </div>
+                  <span className={`text-sm ${checked ? 'text-kmf-text-primary line-through opacity-70' : 'text-kmf-text-tertiary'}`}>{item}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        {/* Result */}
+        {/* Result — with BREAKEVEN */}
         <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
-          <p className="text-sm font-semibold text-kmf-text-primary mb-3">Result</p>
-          <div className="grid grid-cols-3 gap-2">
+          <p className="text-sm font-semibold text-kmf-text-primary mb-3">🎯 Result</p>
+          <div className="grid grid-cols-4 gap-2">
             {[
-              { val: 'PROFIT', label: '✅ PROFIT', cls: 'bg-kmf-profit/20 text-kmf-profit border-kmf-profit/50' },
-              { val: 'LOSS', label: '❌ LOSS', cls: 'bg-kmf-loss/20 text-kmf-loss border-kmf-loss/50' },
-              { val: 'PENDING', label: '⏳ Pending', cls: 'bg-kmf-pending/20 text-kmf-pending border-kmf-pending/50' },
+              { val: 'PROFIT', label: '✅ Profit', cls: 'bg-kmf-profit/20 text-kmf-profit border-kmf-profit/50' },
+              { val: 'LOSS', label: '❌ Loss', cls: 'bg-kmf-loss/20 text-kmf-loss border-kmf-loss/50' },
+              { val: 'BREAKEVEN', label: '⚖️ BE', cls: 'bg-kmf-pending/20 text-kmf-pending border-kmf-pending/50' },
+              { val: 'PENDING', label: '⏳ Pending', cls: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50' },
             ].map((r) => (
               <button key={r.val} type="button" onClick={() => updateField('result', r.val)}
                 className={`py-2.5 rounded-lg text-xs font-bold transition-all ${
-                  form.result === r.val ? `${r.cls} border-2` : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary'
+                  form.result === r.val ? `${r.cls} border-2` : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary hover:border-kmf-accent/30'
                 }`}>
                 {r.label}
               </button>
             ))}
           </div>
 
-          {/* Rating */}
           <div className="mt-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-kmf-text-primary flex items-center gap-1"><FaStar className="text-kmf-star" /> Rating:</span>
-              <span className="text-sm font-bold text-kmf-star">{form.rating}/5</span>
+              <span className="text-sm text-kmf-text-primary flex items-center gap-1"><FaStar className="text-yellow-400" /> Rating:</span>
+              <span className="text-sm font-bold text-yellow-400">{form.rating}/5</span>
             </div>
             <input type="range" min="1" max="5" step="1" value={form.rating} onChange={(e) => updateField('rating', parseInt(e.target.value))}
               className="w-full accent-kmf-accent h-2 rounded-lg appearance-none bg-kmf-surface cursor-pointer" />
@@ -219,21 +379,26 @@ const AddTradePage = () => {
         {/* Notes */}
         <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
           <p className="text-sm font-semibold text-kmf-text-primary mb-2">📝 Notes</p>
-          <textarea className={`${inputClass} min-h-[80px] resize-y`} placeholder="Add your notes here..." value={form.notes} onChange={(e) => updateField('notes', e.target.value)} rows={3} />
+          <textarea className={`${inputClass} min-h-[80px] resize-y`} placeholder="Trade notes, reasoning, lessons learned..."
+            value={form.notes} onChange={(e) => updateField('notes', e.target.value)} rows={3} />
         </div>
 
         {/* Actions */}
-        <div className="flex gap-3">
-          <button type="button" onClick={() => navigate('/app')}
+        <div className="flex gap-3 pb-6">
+          <button type="button" onClick={() => navigate(isEditMode ? '/app/history' : '/app')}
             className="flex-1 py-3 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary text-sm font-medium hover:text-kmf-text-primary hover:border-kmf-accent/40 transition-all">
             Cancel
           </button>
-          <button type="submit" disabled={saving}
-            className="flex-1 py-3 rounded-lg bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white font-bold text-sm hover:shadow-glow transition-all disabled:opacity-50">
-            💾 {saving ? 'Saving...' : 'Save Trade'}
+          <button type="submit" disabled={saving || !isFormValid}
+            className="flex-1 py-3 rounded-lg bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white font-bold text-sm hover:shadow-glow transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+            💾 {saving ? 'Saving...' : isEditMode ? 'Save Changes' : 'Save Trade'}
           </button>
         </div>
       </form>
+
+      <SymbolPicker isOpen={showSymbolPicker} onClose={() => setShowSymbolPicker(false)}
+        onSelect={(sym) => { setSelectedSymbol(sym); setFieldErrors(prev => ({ ...prev, instrument: false })); }}
+        currentSymbol={selectedSymbol} />
     </div>
   );
 };
