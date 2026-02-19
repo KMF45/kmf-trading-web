@@ -228,3 +228,61 @@ export const deleteWeeklyGoal = async (userId, goalId) => {
     throw err;
   }
 };
+
+// ============ CHECKLISTS ============
+
+export const getChecklists = async (userId) => {
+  try {
+    const ref = collection(db, 'users', userId, 'checklists');
+    const snapshot = await getDocs(ref);
+    return snapshot.docs.map(docSnap => {
+      const d = docSnap.data();
+      return {
+        id: docSnap.id,
+        name: d.name || 'Checklist',
+        isDefault: d.isDefault || false,
+        tasks: d.tasks || [],
+        createdAt: d.createdAt || Date.now(),
+      };
+    });
+  } catch (err) {
+    console.error('Error getting checklists:', err);
+    return [];
+  }
+};
+
+export const saveChecklist = async (userId, checklist) => {
+  try {
+    const ref = collection(db, 'users', userId, 'checklists');
+    const docRef = await addDoc(ref, {
+      ...checklist,
+      userId,
+      createdAt: checklist.createdAt || Date.now(),
+      updatedAt: Date.now(),
+    });
+    return docRef.id;
+  } catch (err) {
+    console.error('Error saving checklist:', err);
+    throw err;
+  }
+};
+
+export const updateChecklist = async (userId, checklistId, updates) => {
+  try {
+    const ref = doc(db, 'users', userId, 'checklists', checklistId);
+    await updateDoc(ref, { ...updates, updatedAt: Date.now() });
+  } catch (err) {
+    console.error('Error updating checklist:', err);
+    throw err;
+  }
+};
+
+export const deleteChecklist = async (userId, checklistId) => {
+  try {
+    const ref = doc(db, 'users', userId, 'checklists', checklistId);
+    await deleteDoc(ref);
+  } catch (err) {
+    console.error('Error deleting checklist:', err);
+    throw err;
+  }
+};
