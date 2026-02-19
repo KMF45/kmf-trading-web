@@ -1,7 +1,22 @@
 import { useTrades } from '../contexts/TradesContext';
-import { FaChartLine, FaRocket, FaChartBar, FaMedal, FaShieldAlt, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
+import { FaChartLine, FaRocket, FaChartBar, FaFire, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { calculateRMultiple } from '../utils/models';
+
+const MonthlyTooltip = ({ active, payload, label }) => {
+  if (active && payload?.[0]) {
+    const val = payload[0].value;
+    return (
+      <div className="bg-kmf-panel border border-kmf-accent/30 rounded-lg px-3 py-2 shadow-glow">
+        <p className="text-xs text-kmf-text-tertiary mb-0.5">{label}</p>
+        <p className={`text-sm font-bold ${val >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+          {val >= 0 ? '+' : ''}${val.toFixed(2)}
+        </p>
+      </div>
+    );
+  }
+  return null;
+};
 
 const StatisticsPage = () => {
   const { stats, closedTrades, getPnL } = useTrades();
@@ -181,23 +196,49 @@ const StatisticsPage = () => {
         </div>
       )}
 
-      {/* Best / Worst Trade */}
-      <div className="grid grid-cols-2 gap-4">
+      {/* Best / Worst Trade + Streak */}
+      <div className="grid grid-cols-3 gap-4">
         <div className="bg-kmf-panel rounded-xl p-5 border border-kmf-accent/10">
           <div className="flex items-center justify-between mb-2">
-            <p className="text-xs font-medium text-kmf-text-tertiary uppercase tracking-wider">BEST TRADE</p>
-            <FaRocket className="text-kmf-profit" />
+            <p className="text-xs font-medium text-kmf-text-tertiary uppercase tracking-wider">BEST</p>
+            <FaRocket className="text-kmf-profit text-sm" />
           </div>
-          <p className="text-2xl font-bold text-kmf-profit">USD {stats.bestTrade.toFixed(2)}</p>
+          <p className="text-xl font-bold text-kmf-profit">${stats.bestTrade.toFixed(0)}</p>
         </div>
         <div className="bg-kmf-panel rounded-xl p-5 border border-kmf-accent/10">
           <div className="flex items-center justify-between mb-2">
-            <p className="text-xs font-medium text-kmf-text-tertiary uppercase tracking-wider">WORST TRADE</p>
-            <FaChartBar className="text-kmf-loss" />
+            <p className="text-xs font-medium text-kmf-text-tertiary uppercase tracking-wider">WORST</p>
+            <FaChartBar className="text-kmf-loss text-sm" />
           </div>
-          <p className="text-2xl font-bold text-kmf-loss">USD {stats.worstTrade.toFixed(2)}</p>
+          <p className="text-xl font-bold text-kmf-loss">${stats.worstTrade.toFixed(0)}</p>
+        </div>
+        <div className="bg-kmf-panel rounded-xl p-5 border border-orange-500/20">
+          <div className="flex items-center justify-between mb-2">
+            <p className="text-xs font-medium text-kmf-text-tertiary uppercase tracking-wider">STREAK</p>
+            <FaFire className="text-orange-400 text-sm" />
+          </div>
+          <p className="text-xl font-bold text-orange-400">{stats.tradingStreak}d</p>
         </div>
       </div>
+
+      {/* Monthly P&L */}
+      {stats.monthlyPL.some(m => m.pl !== 0) && (
+        <div className="bg-kmf-panel rounded-xl p-5 border border-kmf-accent/10">
+          <p className="text-xs font-medium text-kmf-text-tertiary uppercase tracking-wider mb-4">MONTHLY P&amp;L</p>
+          <ResponsiveContainer width="100%" height={160}>
+            <BarChart data={stats.monthlyPL} barSize={24}>
+              <XAxis dataKey="month" stroke="#90A4AE" fontSize={10} tickLine={false} axisLine={false} />
+              <YAxis stroke="#90A4AE" fontSize={10} tickLine={false} axisLine={false} width={50} tickFormatter={(v) => `$${v}`} />
+              <Tooltip content={<MonthlyTooltip />} />
+              <Bar dataKey="pl" radius={[4, 4, 0, 0]}>
+                {stats.monthlyPL.map((entry, i) => (
+                  <Cell key={i} fill={entry.pl >= 0 ? '#00E676' : '#FF5252'} fillOpacity={0.85} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+      )}
 
       {/* Top Pairs */}
       {stats.topPairs.length > 0 && (

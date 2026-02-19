@@ -363,6 +363,48 @@ export const TradesProvider = ({ children }) => {
     return result;
   })();
 
+  // Monthly P&L — last 6 months
+  const monthlyPL = (() => {
+    const now = new Date();
+    const months = [];
+    for (let i = 5; i >= 0; i--) {
+      const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+      const start = d.getTime();
+      const end = new Date(d.getFullYear(), d.getMonth() + 1, 1).getTime();
+      const pl = closedTrades
+        .filter(t => { const ts = t.tradeDateTime || t.timestamp; return ts >= start && ts < end; })
+        .reduce((s, t) => s + getPnL(t), 0);
+      months.push({
+        month: d.toLocaleDateString('en', { month: 'short' }),
+        pl: parseFloat(pl.toFixed(2)),
+      });
+    }
+    return months;
+  })();
+
+  // Trading streak — consecutive calendar days with at least one closed trade (ending today)
+  const tradingStreak = (() => {
+    if (closedTrades.length === 0) return 0;
+    const tradeDays = new Set(
+      closedTrades.map(t => {
+        const d = new Date(t.tradeDateTime || t.timestamp);
+        return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+      })
+    );
+    let streak = 0;
+    const today = new Date();
+    for (let i = 0; i < 365; i++) {
+      const d = new Date(today.getFullYear(), today.getMonth(), today.getDate() - i);
+      const key = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+      if (tradeDays.has(key)) {
+        streak++;
+      } else if (i > 0) {
+        break;
+      }
+    }
+    return streak;
+  })();
+
   // Profit Factor quality indicator
   const pfQuality = profitFactor >= 2.0 ? 'Excellent' : profitFactor >= 1.0 ? 'Good' : 'Poor';
 
@@ -387,6 +429,8 @@ export const TradesProvider = ({ children }) => {
     disciplinePercent,
     maxDrawdown,
     monthPL,
+    monthlyPL,
+    tradingStreak,
     topPairs,
     tradingLevel,
     traderBadge,

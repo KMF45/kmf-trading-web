@@ -1,24 +1,11 @@
 import { useState } from 'react';
+import { useTrades } from '../contexts/TradesContext';
 import { FaCheck, FaPlus, FaEdit, FaTrash, FaTimes, FaSave } from 'react-icons/fa';
 
-const DEFAULT_CHECKLIST = {
-  name: 'Pre-Trade Checklist',
-  isDefault: true,
-  tasks: [
-    'Analyzed chart on multiple timeframes',
-    'Identified support/resistance zones',
-    'Set Stop Loss correctly',
-    'Calculated Risk/Reward ratio (min 1:2)',
-    'Checked economic calendar',
-    'Am calm and focused',
-    'Verified lot size',
-    'Defined clear exit plan',
-  ],
-};
-
 const ChecklistPage = () => {
-  const [checklists, setChecklists] = useState([DEFAULT_CHECKLIST]);
-  const [editingIdx, setEditingIdx] = useState(null);
+  const { checklists, addChecklist, editChecklist, removeChecklist, setDefaultChecklist, loading } = useTrades();
+
+  const [editingId, setEditingId] = useState(null);
   const [editName, setEditName] = useState('');
   const [editTasks, setEditTasks] = useState([]);
   const [newTaskText, setNewTaskText] = useState('');
@@ -26,18 +13,24 @@ const ChecklistPage = () => {
   const [createName, setCreateName] = useState('');
   const [createTasks, setCreateTasks] = useState([]);
   const [createNewTask, setCreateNewTask] = useState('');
+  const [saving, setSaving] = useState(false);
 
-  const startEdit = (idx) => {
-    setEditingIdx(idx);
-    setEditName(checklists[idx].name);
-    setEditTasks([...checklists[idx].tasks]);
+  const startEdit = (checklist) => {
+    setEditingId(checklist.id);
+    setEditName(checklist.name);
+    setEditTasks([...checklist.tasks]);
     setNewTaskText('');
   };
 
-  const saveEdit = () => {
+  const saveEdit = async () => {
     if (!editName.trim()) return;
-    setChecklists(prev => prev.map((c, i) => i === editingIdx ? { ...c, name: editName.trim(), tasks: editTasks } : c));
-    setEditingIdx(null);
+    setSaving(true);
+    try {
+      await editChecklist(editingId, { name: editName.trim(), tasks: editTasks });
+    } finally {
+      setSaving(false);
+      setEditingId(null);
+    }
   };
 
   const addTaskToEdit = () => {
@@ -50,25 +43,38 @@ const ChecklistPage = () => {
     setEditTasks(prev => prev.filter((_, i) => i !== taskIdx));
   };
 
-  const deleteChecklist = (idx) => {
-    setChecklists(prev => prev.filter((_, i) => i !== idx));
+  const handleDelete = async (id) => {
+    await removeChecklist(id);
   };
 
-  const handleCreate = () => {
+  const handleCreate = async () => {
     if (!createName.trim() || createTasks.length === 0) return;
-    const isFirst = checklists.length === 0;
-    setChecklists(prev => [...prev, { name: createName.trim(), isDefault: isFirst, tasks: createTasks }]);
-    setCreateName('');
-    setCreateTasks([]);
-    setCreateNewTask('');
-    setShowCreate(false);
+    setSaving(true);
+    try {
+      const isFirst = checklists.length === 0;
+      await addChecklist({ name: createName.trim(), isDefault: isFirst, tasks: createTasks, createdAt: Date.now() });
+      setCreateName('');
+      setCreateTasks([]);
+      setCreateNewTask('');
+      setShowCreate(false);
+    } finally {
+      setSaving(false);
+    }
   };
 
-  const setAsDefault = (idx) => {
-    setChecklists(prev => prev.map((c, i) => ({ ...c, isDefault: i === idx })));
+  const handleSetDefault = async (id) => {
+    await setDefaultChecklist(id);
   };
 
   const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-kmf-text-primary text-sm placeholder:text-kmf-text-tertiary/50 focus:outline-none focus:border-kmf-accent transition-all";
+
+  if (loading) {
+    return (
+      <div className="max-w-3xl mx-auto flex items-center justify-center h-48">
+        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-kmf-accent to-kmf-accent-bright animate-pulse" />
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-3xl mx-auto space-y-5 animate-fadeIn">
@@ -96,9 +102,9 @@ const ChecklistPage = () => {
       </div>
 
       {/* Checklist Templates */}
-      {checklists.map((checklist, idx) => (
-        <div key={idx} className="bg-kmf-panel rounded-xl border-2 border-kmf-accent/20 overflow-hidden">
-          {editingIdx === idx ? (
+      {checklists.map((checklist) => (
+        <div key={checklist.id} className="bg-kmf-panel rounded-xl border-2 border-kmf-accent/20 overflow-hidden">
+          {editingId === checklist.id ? (
             <div className="p-5 space-y-3">
               <input type="text" className={inputClass} placeholder="Checklist name..." value={editName} onChange={(e) => setEditName(e.target.value)} />
               <div className="space-y-2">
@@ -116,8 +122,10 @@ const ChecklistPage = () => {
                 <button onClick={addTaskToEdit} disabled={!newTaskText.trim()} className="px-3 py-2 rounded-lg bg-kmf-accent text-white text-sm disabled:opacity-50"><FaPlus size={12} /></button>
               </div>
               <div className="flex gap-2 justify-end pt-2">
-                <button onClick={() => setEditingIdx(null)} className="px-4 py-2 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary text-sm">Cancel</button>
-                <button onClick={saveEdit} className="px-4 py-2 rounded-lg bg-kmf-accent text-white text-sm font-medium"><FaSave size={12} className="inline mr-1" />Save</button>
+                <button onClick={() => setEditingId(null)} className="px-4 py-2 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary text-sm">Cancel</button>
+                <button onClick={saveEdit} disabled={saving} className="px-4 py-2 rounded-lg bg-kmf-accent text-white text-sm font-medium disabled:opacity-50">
+                  <FaSave size={12} className="inline mr-1" />{saving ? 'Saving...' : 'Save'}
+                </button>
               </div>
             </div>
           ) : (
@@ -127,8 +135,8 @@ const ChecklistPage = () => {
                 {checklist.isDefault && (
                   <span className="text-xs px-2 py-0.5 rounded bg-kmf-accent/20 text-kmf-accent font-medium">DEFAULT</span>
                 )}
-                <button onClick={() => startEdit(idx)} className="p-2 rounded-lg text-kmf-accent hover:bg-kmf-accent/10 transition-all"><FaEdit size={13} /></button>
-                <button onClick={() => deleteChecklist(idx)} className="p-2 rounded-lg text-kmf-loss hover:bg-kmf-loss/10 transition-all"><FaTrash size={13} /></button>
+                <button onClick={() => startEdit(checklist)} className="p-2 rounded-lg text-kmf-accent hover:bg-kmf-accent/10 transition-all"><FaEdit size={13} /></button>
+                <button onClick={() => handleDelete(checklist.id)} className="p-2 rounded-lg text-kmf-loss hover:bg-kmf-loss/10 transition-all"><FaTrash size={13} /></button>
               </div>
               <p className="text-xs text-kmf-text-tertiary mb-3">{checklist.tasks.length} tasks</p>
               <div className="space-y-1.5">
@@ -143,7 +151,7 @@ const ChecklistPage = () => {
                 )}
               </div>
               {!checklist.isDefault && (
-                <button onClick={() => setAsDefault(idx)} className="mt-3 text-xs text-kmf-accent hover:text-kmf-accent-bright transition-all">
+                <button onClick={() => handleSetDefault(checklist.id)} className="mt-3 text-xs text-kmf-accent hover:text-kmf-accent-bright transition-all">
                   Set as default
                 </button>
               )}
@@ -177,14 +185,17 @@ const ChecklistPage = () => {
               </div>
               <div className="flex gap-2">
                 <input type="text" className={`${inputClass} flex-1`} placeholder="Add task..." value={createNewTask}
-                  onChange={(e) => setCreateNewTask(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter' && createNewTask.trim()) { setCreateTasks(prev => [...prev, createNewTask.trim()]); setCreateNewTask(''); } }} />
+                  onChange={(e) => setCreateNewTask(e.target.value)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' && createNewTask.trim()) { setCreateTasks(prev => [...prev, createNewTask.trim()]); setCreateNewTask(''); } }} />
                 <button onClick={() => { if (createNewTask.trim()) { setCreateTasks(prev => [...prev, createNewTask.trim()]); setCreateNewTask(''); } }}
                   disabled={!createNewTask.trim()} className="px-3 py-2 rounded-lg bg-kmf-accent text-white text-sm disabled:opacity-50"><FaPlus size={12} /></button>
               </div>
               <div className="flex gap-2 justify-end pt-2">
                 <button onClick={() => setShowCreate(false)} className="px-4 py-2 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary text-sm">Cancel</button>
-                <button onClick={handleCreate} disabled={!createName.trim() || createTasks.length === 0}
-                  className="px-4 py-2 rounded-lg bg-kmf-accent text-white text-sm font-medium disabled:opacity-50">Create</button>
+                <button onClick={handleCreate} disabled={!createName.trim() || createTasks.length === 0 || saving}
+                  className="px-4 py-2 rounded-lg bg-kmf-accent text-white text-sm font-medium disabled:opacity-50">
+                  {saving ? 'Creating...' : 'Create'}
+                </button>
               </div>
             </div>
           </div>

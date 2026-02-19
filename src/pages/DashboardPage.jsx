@@ -1,6 +1,6 @@
 import { useAuth } from '../contexts/AuthContext';
 import { useTrades } from '../contexts/TradesContext';
-import { FaChartLine, FaPlus, FaHistory, FaClipboardCheck, FaArrowUp, FaArrowDown, FaSync } from 'react-icons/fa';
+import { FaChartLine, FaPlus, FaHistory, FaClipboardCheck, FaArrowUp, FaArrowDown, FaSync, FaClock } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -27,7 +27,7 @@ const CustomTooltip = ({ active, payload }) => {
 
 const DashboardPage = () => {
   const { user } = useAuth();
-  const { trades, stats, settings, loading, closedTrades, loadData, syncing, getPnL } = useTrades();
+  const { trades, stats, settings, loading, closedTrades, openTrades, loadData, syncing, getPnL } = useTrades();
 
   const balance = settings.accountBalance || 0;
   const plPercent = balance > 0 ? ((stats.totalPL / (balance - stats.totalPL)) * 100) : 0;
@@ -137,6 +137,43 @@ const DashboardPage = () => {
           </div>
         )}
       </div>
+
+      {/* Open Positions */}
+      {openTrades.length > 0 && (
+        <div className="bg-kmf-panel rounded-xl p-5 border border-yellow-500/30">
+          <div className="flex items-center gap-2 mb-4">
+            <FaClock className="text-yellow-400" />
+            <h2 className="text-base font-bold text-yellow-400">Open Positions</h2>
+            <span className="ml-auto text-xs px-2 py-0.5 rounded-full bg-yellow-400/15 text-yellow-400 font-medium">
+              {openTrades.length}
+            </span>
+          </div>
+          <div className="space-y-2">
+            {openTrades.map((trade) => {
+              const dt = new Date(trade.tradeDateTime || trade.timestamp);
+              const dateStr = `${dt.getDate()} ${dt.toLocaleDateString('en', { month: 'short' })}`;
+              return (
+                <Link key={trade.id} to={`/app/add-trade?edit=${trade.id}`}
+                  className="flex items-center justify-between p-3 rounded-lg bg-kmf-surface/60 border border-yellow-500/10 hover:border-yellow-500/30 transition-all group">
+                  <div className="flex items-center gap-3">
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded ${trade.type === 'BUY' ? 'bg-kmf-profit/15 text-kmf-profit' : 'bg-kmf-loss/15 text-kmf-loss'}`}>
+                      {trade.type}
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-kmf-text-primary group-hover:text-kmf-accent transition-colors">{trade.instrument}</p>
+                      <p className="text-xs text-kmf-text-tertiary">{dateStr} • {trade.lotSize} lot</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-xs text-kmf-text-tertiary">Entry</p>
+                    <p className="text-sm font-bold text-kmf-text-primary">{trade.entryPrice}</p>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Quick Actions */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">

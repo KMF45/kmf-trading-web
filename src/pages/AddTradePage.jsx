@@ -1,9 +1,12 @@
-import { useState, useEffect, useMemo } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useState, useEffect, useMemo, useRef } from 'react';
+import { useNavigate, useSearchParams, useBlocker } from 'react-router-dom';
+import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import { useTrades } from '../contexts/TradesContext';
+import { useAuth } from '../contexts/AuthContext';
 import SymbolPicker from '../components/trade/SymbolPicker';
 import { getSymbolByCode } from '../data/defaultSymbols';
-import { FaPlus, FaStar, FaCheck, FaCalendarAlt, FaClock, FaChevronDown } from 'react-icons/fa';
+import { storage } from '../config/firebase';
+import { FaPlus, FaStar, FaCheck, FaCalendarAlt, FaClock, FaChevronDown, FaCamera, FaTimes } from 'react-icons/fa';
 
 const DEFAULT_CHECKLIST = [
   'Analyzed chart on multiple timeframes',
@@ -23,6 +26,7 @@ const AddTradePage = () => {
   const [searchParams] = useSearchParams();
   const editId = searchParams.get('edit');
   const { trades, addTrade, editTrade } = useTrades();
+  const { user } = useAuth();
 
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
@@ -31,6 +35,12 @@ const AddTradePage = () => {
   const [selectedSymbol, setSelectedSymbol] = useState(null);
   const [isEditMode, setIsEditMode] = useState(false);
   const [editingTrade, setEditingTrade] = useState(null);
+  const [isDirty, setIsDirty] = useState(false);
+  const submittedRef = useRef(false);
+  const [photoFile, setPhotoFile] = useState(null);
+  const [photoPreview, setPhotoPreview] = useState(null);
+  const [existingPhotoUri, setExistingPhotoUri] = useState(null);
+  const [photoRemoved, setPhotoRemoved] = useState(false);
 
   const [form, setForm] = useState({
     type: 'BUY',
@@ -75,19 +85,58 @@ const AddTradePage = () => {
           tradeDate: dt.toISOString().split('T')[0],
           tradeTime: `${String(dt.getHours()).padStart(2, '0')}:${String(dt.getMinutes()).padStart(2, '0')}`,
         });
+        if (trade.photoUri) {
+          setExistingPhotoUri(trade.photoUri);
+          setPhotoPreview(trade.photoUri);
+        }
         console.log('[KMF_DEBUG] Loaded trade for editing:', trade.id);
       }
     }
   }, [editId, trades]);
 
+  // Block navigation when form has unsaved changes
+  useBlocker(({ currentLocation, nextLocation }) =>
+    isDirty && !submittedRef.current && currentLocation.pathname !== nextLocation.pathname
+      ? !window.confirm('You have unsaved changes. Leave without saving?')
+      : false
+  );
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (isDirty && !submittedRef.current) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    };
+    window.addEventListener('beforeunload', handler);
+    return () => window.removeEventListener('beforeunload', handler);
+  }, [isDirty]);
+
   const updateField = (field, value) => {
     setForm(prev => ({ ...prev, [field]: value }));
+    setIsDirty(true);
     setError('');
     setValidationMsg('');
     setFieldErrors(prev => ({ ...prev, [field]: false }));
     if (field === 'type') {
       setFieldErrors(prev => ({ ...prev, stopLoss: false, takeProfit: false }));
     }
+  };
+
+  const handlePhotoSelect = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setPhotoFile(file);
+    setPhotoPreview(URL.createObjectURL(file));
+    setPhotoRemoved(false);
+    setIsDirty(true);
+  };
+
+  const handlePhotoRemove = () => {
+    setPhotoFile(null);
+    setPhotoPreview(null);
+    setPhotoRemoved(true);
+    setIsDirty(true);
   };
 
   const toggleChecklistItem = (idx) => {
@@ -176,6 +225,18 @@ const AddTradePage = () => {
 
     setSaving(true);
     try {
+      // Upload photo if a new one was selected
+      let photoUri = existingPhotoUri || null;
+      if (photoFile && user) {
+        const ext = photoFile.name.split('.').pop();
+        const path = `users/${user.uid}/trades/${Date.now()}.${ext}`;
+        const storageRef = ref(storage, path);
+        await uploadBytes(storageRef, photoFile);
+        photoUri = await getDownloadURL(storageRef);
+      } else if (photoRemoved) {
+        photoUri = null;
+      }
+
       const tradeData = {
         instrument: selectedSymbol.symbol,
         type: form.type,
@@ -193,9 +254,10 @@ const AddTradePage = () => {
         tradeDateTime: buildTradeDateTime(),
         followedPlan: form.completedTasks.length >= Math.floor(DEFAULT_CHECKLIST.length / 2),
         rMultiple: 0,
-        photoUri: null,
+        photoUri,
       };
 
+      submittedRef.current = true;
       if (isEditMode && editingTrade) {
         await editTrade(editingTrade.id, tradeData);
         console.log('[KMF_DEBUG] Trade updated:', editingTrade.id);
@@ -383,9 +445,29 @@ const AddTradePage = () => {
             value={form.notes} onChange={(e) => updateField('notes', e.target.value)} rows={3} />
         </div>
 
+        {/* Photo */}
+        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+          <p className="text-sm font-semibold text-kmf-text-primary mb-3">📷 Chart Screenshot</p>
+          {photoPreview ? (
+            <div className="relative inline-block">
+              <img src={photoPreview} alt="Trade chart" className="w-full max-h-48 object-cover rounded-lg border border-kmf-accent/20" />
+              <button type="button" onClick={handlePhotoRemove}
+                className="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/70 text-white flex items-center justify-center hover:bg-kmf-loss/80 transition-all">
+                <FaTimes size={11} />
+              </button>
+            </div>
+          ) : (
+            <label className="flex flex-col items-center justify-center gap-2 p-6 border-2 border-dashed border-kmf-accent/20 rounded-lg cursor-pointer hover:border-kmf-accent/40 hover:bg-kmf-accent/5 transition-all">
+              <FaCamera className="text-kmf-accent text-2xl" />
+              <span className="text-xs text-kmf-text-tertiary">Tap to add a chart screenshot</span>
+              <input type="file" accept="image/*" className="hidden" onChange={handlePhotoSelect} />
+            </label>
+          )}
+        </div>
+
         {/* Actions */}
         <div className="flex gap-3 pb-6">
-          <button type="button" onClick={() => navigate(isEditMode ? '/app/history' : '/app')}
+          <button type="button" onClick={() => { submittedRef.current = true; navigate(isEditMode ? '/app/history' : '/app'); }}
             className="flex-1 py-3 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary text-sm font-medium hover:text-kmf-text-primary hover:border-kmf-accent/40 transition-all">
             Cancel
           </button>

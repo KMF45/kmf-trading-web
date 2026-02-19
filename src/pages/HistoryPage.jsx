@@ -261,6 +261,16 @@ const HistoryPage = () => {
               </div>
             )}
 
+            {/* Chart Screenshot */}
+            {trade.photoUri && (
+              <div className="mb-3">
+                <p className="text-[10px] text-kmf-text-tertiary uppercase tracking-wider mb-1.5">Chart</p>
+                <a href={trade.photoUri} target="_blank" rel="noopener noreferrer">
+                  <img src={trade.photoUri} alt="Trade chart" className="w-full max-h-48 object-cover rounded-lg border border-kmf-accent/20 hover:opacity-90 transition-opacity cursor-zoom-in" />
+                </a>
+              </div>
+            )}
+
             {/* Action buttons */}
             <div className="flex gap-2 flex-wrap">
               {/* Finalize button (only for PENDING trades) */}
