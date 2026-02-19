@@ -17,10 +17,16 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-initializeAppCheck(app, {
-  provider: new ReCaptchaV3Provider(import.meta.env.VITE_RECAPTCHA_SITE_KEY),
-  isTokenAutoRefreshEnabled: true,
-});
+try {
+  if (import.meta.env.VITE_RECAPTCHA_SITE_KEY) {
+    initializeAppCheck(app, {
+      provider: new ReCaptchaV3Provider(import.meta.env.VITE_RECAPTCHA_SITE_KEY),
+      isTokenAutoRefreshEnabled: true,
+    });
+  }
+} catch (e) {
+  console.warn('[AppCheck] Failed to initialize:', e);
+}
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
