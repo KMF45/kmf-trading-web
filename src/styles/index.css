@@ -107,9 +107,14 @@
     to   { transform: translateX(300px) rotate(-360deg); }
   }
 
+  @keyframes kmf-deorbit-385 {
+    from { transform: translateX(385px) rotate(0deg); }
+    to   { transform: translateX(385px) rotate(-360deg); }
+  }
+
   /* ── Ambient orb pulse ── */
   @keyframes kmf-orb-pulse {
-    0%, 100% { opacity: 0.18; transform: scale(1); }
-    50%       { opacity: 0.30; transform: scale(1.08); }
+    0%, 100% { opacity: 0.14; transform: scale(1); }
+    50%       { opacity: 0.22; transform: scale(1.06); }
   }
 }
