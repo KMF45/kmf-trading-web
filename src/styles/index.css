@@ -92,9 +92,9 @@
     to   { transform: rotate(360deg); }
   }
 
-  @keyframes kmf-deorbit-135 {
-    from { transform: translateX(135px) rotate(0deg); }
-    to   { transform: translateX(135px) rotate(-360deg); }
+  @keyframes kmf-deorbit-130 {
+    from { transform: translateX(130px) rotate(0deg); }
+    to   { transform: translateX(130px) rotate(-360deg); }
   }
 
   @keyframes kmf-deorbit-215 {
@@ -102,8 +102,14 @@
     to   { transform: translateX(215px) rotate(-360deg); }
   }
 
-  @keyframes kmf-deorbit-295 {
-    from { transform: translateX(295px) rotate(0deg); }
-    to   { transform: translateX(295px) rotate(-360deg); }
+  @keyframes kmf-deorbit-300 {
+    from { transform: translateX(300px) rotate(0deg); }
+    to   { transform: translateX(300px) rotate(-360deg); }
+  }
+
+  /* ── Ambient orb pulse ── */
+  @keyframes kmf-orb-pulse {
+    0%, 100% { opacity: 0.18; transform: scale(1); }
+    50%       { opacity: 0.30; transform: scale(1.08); }
   }
 }
