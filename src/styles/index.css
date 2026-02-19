@@ -85,4 +85,25 @@
     0% { width: 0%; }
     100% { width: 100%; }
   }
+
+  /* ── Orbital animation keyframes ── */
+  @keyframes kmf-orbit {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  @keyframes kmf-deorbit-135 {
+    from { transform: translateX(135px) rotate(0deg); }
+    to   { transform: translateX(135px) rotate(-360deg); }
+  }
+
+  @keyframes kmf-deorbit-215 {
+    from { transform: translateX(215px) rotate(0deg); }
+    to   { transform: translateX(215px) rotate(-360deg); }
+  }
+
+  @keyframes kmf-deorbit-295 {
+    from { transform: translateX(295px) rotate(0deg); }
+    to   { transform: translateX(295px) rotate(-360deg); }
+  }
 }

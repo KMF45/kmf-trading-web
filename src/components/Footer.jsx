@@ -1,4 +1,4 @@
-import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,25 +38,7 @@ const Footer = () => {
                 <FaGithub className="text-2xl" />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="text-2xl" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin className="text-2xl" />
-              </a>
-              <a
-                href="mailto:contact@kmfjournal.com"
+                href="mailto:kmf45.ai@gmail.com"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
                 aria-label="Email"
               >

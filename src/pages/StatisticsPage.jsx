@@ -1,28 +1,29 @@
 import { useTrades } from '../contexts/TradesContext';
-import { FaChartLine, FaRocket, FaChartBar } from 'react-icons/fa';
+import { FaChartLine, FaRocket, FaChartBar, FaMedal, FaShieldAlt, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { calculateRMultiple } from '../utils/models';
 
 const StatisticsPage = () => {
   const { stats, closedTrades, getPnL } = useTrades();
 
-  // R-Multiple Distribution
+  // Fix 1.4: R-Multiple Distribution using calculateRMultiple() — bucket names match Android
   const rMultipleData = (() => {
-    const buckets = { '<-2R': 0, '-2R to -1R': 0, '-1R to 0': 0, '0 to 1R': 0, '1R to 2R': 0, '2R to 3R': 0, '3R+': 0 };
+    const buckets = { '3R+': 0, '2R-3R': 0, '1R-2R': 0, '0R-1R': 0, '-1R-0R': 0, '-2R--1R': 0, '<-2R': 0 };
     closedTrades.forEach(t => {
-      const r = t.rMultiple || 0;
-      if (r < -2) buckets['<-2R']++;
-      else if (r < -1) buckets['-2R to -1R']++;
-      else if (r < 0) buckets['-1R to 0']++;
-      else if (r < 1) buckets['0 to 1R']++;
-      else if (r < 2) buckets['1R to 2R']++;
-      else if (r < 3) buckets['2R to 3R']++;
-      else buckets['3R+']++;
+      const r = calculateRMultiple(t);
+      if (r >= 3) buckets['3R+']++;
+      else if (r >= 2) buckets['2R-3R']++;
+      else if (r >= 1) buckets['1R-2R']++;
+      else if (r >= 0) buckets['0R-1R']++;
+      else if (r >= -1) buckets['-1R-0R']++;
+      else if (r >= -2) buckets['-2R--1R']++;
+      else buckets['<-2R']++;
     });
     return Object.entries(buckets).filter(([, v]) => v > 0).map(([name, count]) => ({ name, count }));
   })();
 
   // Discipline label
-  const disciplineLabel = stats.disciplinePercent >= 80 ? '✅ CONSISTENT' : stats.disciplinePercent >= 60 ? '⚠️ MODERATE' : '❌ NEEDS WORK';
+  const disciplineLabel = stats.disciplinePercent >= 80 ? 'CONSISTENT' : stats.disciplinePercent >= 60 ? 'MODERATE' : 'NEEDS WORK';
 
   // Win rate circle
   const wr = stats.winRate;
@@ -55,10 +56,41 @@ const StatisticsPage = () => {
 
   return (
     <div className="max-w-7xl mx-auto space-y-5 animate-fadeIn">
-      <div>
-        <h1 className="text-2xl font-bold text-kmf-text-primary">Statistics</h1>
-        <p className="text-sm text-kmf-text-tertiary">Performance Overview</p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-kmf-text-primary">Statistics</h1>
+          <p className="text-sm text-kmf-text-tertiary">Performance Overview</p>
+        </div>
+        {/* Trading Level Badge */}
+        <div className="flex items-center gap-2">
+          <span className={`text-xs px-2.5 py-1 rounded-full font-bold ${stats.traderBadge.bg} ${stats.traderBadge.color}`}>
+            {stats.traderBadge.badge}
+          </span>
+          <span className="text-xs px-2.5 py-1 rounded-full font-bold bg-kmf-accent/15 text-kmf-accent">
+            {stats.tradingLevel.label}
+          </span>
+        </div>
       </div>
+
+      {/* Insights/Alerts */}
+      {stats.insights.length > 0 && (
+        <div className="space-y-2">
+          {stats.insights.map((insight, i) => (
+            <div key={i} className={`rounded-xl p-3 border flex items-start gap-3 ${
+              insight.type === 'CRITICAL' ? 'bg-red-500/10 border-red-500/30' :
+              insight.type === 'WARNING' ? 'bg-yellow-500/10 border-yellow-500/30' :
+              insight.type === 'SUCCESS' ? 'bg-green-500/10 border-green-500/30' :
+              'bg-blue-500/10 border-blue-500/30'
+            }`}>
+              {insight.type === 'CRITICAL' && <FaExclamationTriangle className="text-red-400 mt-0.5 flex-shrink-0" />}
+              {insight.type === 'WARNING' && <FaExclamationTriangle className="text-yellow-400 mt-0.5 flex-shrink-0" />}
+              {insight.type === 'SUCCESS' && <FaCheckCircle className="text-green-400 mt-0.5 flex-shrink-0" />}
+              {insight.type === 'INFO' && <FaInfoCircle className="text-blue-400 mt-0.5 flex-shrink-0" />}
+              <p className="text-xs text-kmf-text-secondary">{insight.message}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Win Rate + Total P/L */}
       <div className="grid grid-cols-2 gap-4">
@@ -87,9 +119,16 @@ const StatisticsPage = () => {
           </p>
           <p className="text-xs text-kmf-text-tertiary mt-1">{stats.totalPL >= 0 ? 'profit' : 'loss'}</p>
           <div className="border-t border-kmf-accent/10 mt-3 pt-3">
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <span className="text-xs text-kmf-text-tertiary">Profit Factor</span>
-              <span className="text-sm font-bold text-kmf-profit">{stats.profitFactor.toFixed(2)}</span>
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-bold text-kmf-profit">{stats.profitFactor.toFixed(2)}</span>
+                <span className={`text-[10px] px-1.5 py-0.5 rounded font-medium ${
+                  stats.pfQuality === 'Excellent' ? 'bg-kmf-profit/15 text-kmf-profit' :
+                  stats.pfQuality === 'Good' ? 'bg-yellow-500/15 text-yellow-400' :
+                  'bg-kmf-loss/15 text-kmf-loss'
+                }`}>{stats.pfQuality}</span>
+              </div>
             </div>
           </div>
         </div>
