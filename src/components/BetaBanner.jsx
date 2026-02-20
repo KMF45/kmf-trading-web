@@ -116,7 +116,7 @@ const BetaBanner = () => (
             {[
               { label: 'Lifetime Access', value: 'FREE', sub: 'all premium features' },
               { label: 'Early Access', value: '100%', sub: 'every new release' },
-              { label: 'Spots Left', value: '∞ → 0', sub: 'limited number' },
+              { label: 'Spots Available', value: '50', sub: 'limited beta access' },
             ].map((s) => (
               <div
                 key={s.label}
