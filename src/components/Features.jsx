@@ -75,10 +75,12 @@ const PrimaryCard = ({ feature, index }) => {
         style={{ boxShadow: '0 2px 20px rgba(0,0,0,0.25)' }}>
 
         {/* Icon */}
-        <div className="relative mb-5 inline-block">
-          <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} blur-xl opacity-30 rounded-full`} />
-          <div className="relative rounded-xl p-3.5 w-fit transition-transform duration-300 group-hover:scale-110"
-            style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.07)' }}>
+        <div className="mb-5">
+          <div className="rounded-xl p-3.5 w-fit transition-transform duration-300 group-hover:scale-110"
+            style={{
+              background: `${feature.accentColor}14`,
+              border: `1px solid ${feature.accentColor}28`,
+            }}>
             <Icon style={{ fontSize: 22, color: feature.accentColor }} />
           </div>
         </div>
