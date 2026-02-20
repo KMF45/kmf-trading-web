@@ -33,14 +33,6 @@ const Navbar = () => {
             <a href="/#download" className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium">Download</a>
             <a href="/#faq" className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium">FAQ</a>
 
-            {user && (
-              <Link
-                to="/app"
-                className="px-6 py-2.5 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white text-sm font-semibold rounded-lg shadow-glow hover:shadow-glow-hover transition-all duration-300 hover:scale-105"
-              >
-                Open App
-              </Link>
-            )}
           </div>
 
           <button
@@ -59,11 +51,6 @@ const Navbar = () => {
               <a href="/#features" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">Features</a>
               <a href="/#download" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">Download</a>
               <a href="/#faq" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">FAQ</a>
-              {user && (
-                <div className="flex gap-3 mt-2">
-                  <Link to="/app" onClick={() => setMobileOpen(false)} className="flex-1 text-center px-5 py-2.5 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white text-sm font-semibold rounded-lg">Open App</Link>
-                </div>
-              )}
             </div>
           </div>
         )}
