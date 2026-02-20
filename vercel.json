@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/((?!\\.well-known|assets|logo\\.png|favicon\\.png|terms-of-service\\.html|privacy-policy\\.html|robots\\.txt|sitemap\\.xml|manifest\\.json).*)",
+      "source": "/((?!\\.well-known|assets|logo\\.png|logo-80\\.webp|logo-320\\.webp|logo-320\\.png|favicon\\.png|favicon\\.webp|terms-of-service\\.html|privacy-policy\\.html|robots\\.txt|sitemap\\.xml|manifest\\.json).*)",
       "destination": "/index.html"
     }
   ],
@@ -12,7 +12,12 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
         { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google.com/recaptcha/ https://recaptcha.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self'; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com wss://*.firebaseio.com https://*.firebasestorage.googleapis.com https://firebaseappcheck.googleapis.com https://content-firebaseappcheck.googleapis.com https://www.google-analytics.com; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com; object-src 'none'; base-uri 'self';"
+        }
       ]
     },
     {
@@ -22,7 +27,7 @@
       ]
     },
     {
-      "source": "/(logo|favicon)\\.(png|ico)",
+      "source": "/(logo|favicon)\\.(png|webp|ico)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
