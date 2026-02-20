@@ -1,261 +1,267 @@
 import { FaDownload } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
-// ── Category accent colors ───────────────────────────────────────────────────
-const CAT = {
-  forex:       { color: '#4FC3F7', glow: 'rgba(79,195,247,0.14)'  },
-  metals:      { color: '#FFD740', glow: 'rgba(255,215,64,0.14)'  },
-  crypto:      { color: '#FF9800', glow: 'rgba(255,152,0,0.14)'   },
-  indices:     { color: '#26C6DA', glow: 'rgba(38,198,218,0.14)'  },
-  commodities: { color: '#FFB74D', glow: 'rgba(255,183,77,0.14)'  },
-};
-
-// ── 4 orbital rings, 22 symbols total ───────────────────────────────────────
-const ORBIT_RINGS = [
-  {
-    radius: 130,
-    duration: 24,
-    deorbitKeyframe: 'kmf-deorbit-130',
-    symbols: [
-      { name: 'EUR/USD', category: 'forex',   positive: true,  change: '+0.124%' },
-      { name: 'GBP/USD', category: 'forex',   positive: false, change: '-0.083%' },
-      { name: 'USD/JPY', category: 'forex',   positive: true,  change: '+0.217%' },
-      { name: 'USD/CHF', category: 'forex',   positive: false, change: '-0.051%' },
-    ],
-  },
-  {
-    radius: 215,
-    duration: 38,
-    deorbitKeyframe: 'kmf-deorbit-215',
-    symbols: [
-      { name: 'XAU/USD', category: 'metals',  positive: true,  change: '+0.342%' },
-      { name: 'BTC/USD', category: 'crypto',  positive: true,  change: '+1.24%'  },
-      { name: 'ETH/USD', category: 'crypto',  positive: false, change: '-0.671%' },
-      { name: 'XRP/USD', category: 'crypto',  positive: true,  change: '+2.10%'  },
-      { name: 'XAG/USD', category: 'metals',  positive: false, change: '-0.183%' },
-    ],
-  },
-  {
-    radius: 300,
-    duration: 56,
-    deorbitKeyframe: 'kmf-deorbit-300',
-    symbols: [
-      { name: 'NAS100',  category: 'indices',     positive: true,  change: '+0.451%' },
-      { name: 'SPX500',  category: 'indices',     positive: true,  change: '+0.312%' },
-      { name: 'DAX40',   category: 'indices',     positive: false, change: '-0.224%' },
-      { name: 'DJI30',   category: 'indices',     positive: true,  change: '+0.285%' },
-      { name: 'OIL',     category: 'commodities', positive: false, change: '-0.178%' },
-    ],
-  },
-  {
-    radius: 385,
-    duration: 76,
-    deorbitKeyframe: 'kmf-deorbit-385',
-    symbols: [
-      { name: 'GBP/JPY', category: 'forex',   positive: true,  change: '+0.306%' },
-      { name: 'AUD/USD', category: 'forex',   positive: false, change: '-0.142%' },
-      { name: 'SOL/USD', category: 'crypto',  positive: true,  change: '+3.21%'  },
-      { name: 'EUR/GBP', category: 'forex',   positive: false, change: '-0.067%' },
-      { name: 'FTSE100', category: 'indices', positive: true,  change: '+0.196%' },
-      { name: 'LTC/USD', category: 'crypto',  positive: false, change: '-0.884%' },
-    ],
-  },
+// ── Market ticker data ────────────────────────────────────────────────────────
+const TICKER_ITEMS = [
+  { symbol: 'EUR/USD', change: '+0.124%', positive: true },
+  { symbol: 'GBP/USD', change: '-0.083%', positive: false },
+  { symbol: 'XAU/USD', change: '+0.342%', positive: true },
+  { symbol: 'BTC/USD', change: '+1.240%', positive: true },
+  { symbol: 'NAS100',  change: '+0.451%', positive: true },
+  { symbol: 'SPX500',  change: '+0.312%', positive: true },
+  { symbol: 'USD/JPY', change: '+0.217%', positive: true },
+  { symbol: 'ETH/USD', change: '-0.671%', positive: false },
+  { symbol: 'OIL',     change: '-0.178%', positive: false },
+  { symbol: 'DAX40',   change: '-0.224%', positive: false },
+  { symbol: 'XAG/USD', change: '-0.183%', positive: false },
+  { symbol: 'SOL/USD', change: '+3.210%', positive: true },
+  { symbol: 'GBP/JPY', change: '+0.306%', positive: true },
+  { symbol: 'AUD/USD', change: '-0.142%', positive: false },
 ];
 
-// ── Badge component ──────────────────────────────────────────────────────────
-const OrbitSymbol = ({ name, category, positive, change, duration, deorbitKeyframe, index, total }) => {
-  const delay   = -(index / total) * duration;
-  const cat     = CAT[category];
-  const plColor = positive ? '#00C853' : '#FF5252';
-
-  const animBase = {
-    animationTimingFunction: 'linear',
-    animationIterationCount: 'infinite',
-    animationDuration:       `${duration}s`,
-    animationDelay:          `${delay}s`,
-  };
-
+// ── Scrolling market ticker ───────────────────────────────────────────────────
+const MarketTicker = () => {
+  const items = [...TICKER_ITEMS, ...TICKER_ITEMS];
   return (
     <div style={{
-      position: 'absolute', top: '50%', left: '50%', width: 0, height: 0,
-      animationName: 'kmf-orbit', willChange: 'transform', ...animBase,
+      position: 'relative', width: '100%', overflow: 'hidden',
+      borderTop: '1px solid rgba(79,195,247,0.08)',
+      background: 'rgba(8,10,14,0.75)',
+      backdropFilter: 'blur(12px)',
+      padding: '10px 0',
     }}>
-      <div style={{ position: 'absolute', animationName: deorbitKeyframe, willChange: 'transform', ...animBase }}>
-        <div style={{ transform: 'translate(-50%, -50%)' }}>
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: 5,
-            backgroundColor: 'rgba(12,14,18,0.78)',
-            backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)',
-            border: `1px solid ${cat.color}30`,
-            borderRadius: 999,
-            padding: '4px 10px 4px 7px',
-            whiteSpace: 'nowrap',
-            boxShadow: `0 0 0 1px ${cat.color}10, 0 0 10px ${cat.glow}, 0 2px 8px rgba(0,0,0,0.45)`,
-          }}>
-            <div style={{
-              width: 6, height: 6, borderRadius: '50%',
-              backgroundColor: cat.color,
-              boxShadow: `0 0 5px ${cat.color}90`,
-              flexShrink: 0,
-            }} />
-            <span style={{ fontSize: 10.5, fontWeight: 700, color: '#D0DDE3', letterSpacing: '0.04em' }}>
-              {name}
+      <div style={{ position: 'absolute', top: 0, left: 0, width: 100, height: '100%', background: 'linear-gradient(to right, #0F1115, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: 0, right: 0, width: 100, height: '100%', background: 'linear-gradient(to left, #0F1115, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+      <div style={{ display: 'flex', animation: 'kmf-ticker 32s linear infinite', width: 'max-content' }}>
+        {items.map((item, i) => (
+          <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '0 22px', flexShrink: 0 }}>
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#7A9BB0', letterSpacing: '0.07em' }}>{item.symbol}</span>
+            <span style={{ fontSize: 10.5, fontWeight: 600, color: item.positive ? '#00C853' : '#FF5252' }}>
+              {item.positive ? '▲' : '▼'} {item.change}
             </span>
-            <span style={{ width: 1, height: 9, backgroundColor: 'rgba(255,255,255,0.10)', flexShrink: 0 }} />
-            <span style={{ fontSize: 9.5, fontWeight: 600, color: plColor, letterSpacing: '0.02em' }}>
-              {positive ? '▲' : '▼'} {change}
-            </span>
+            <span style={{ width: 1, height: 10, background: 'rgba(79,195,247,0.12)', flexShrink: 0 }} />
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
 
-// ── Background ───────────────────────────────────────────────────────────────
-const HeroBackground = () => (
-  <div aria-hidden="true" style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+// ── Mock app preview card ─────────────────────────────────────────────────────
+const AppPreview = () => (
+  <div
+    className="animate-float"
+    style={{
+      background: 'rgba(14, 18, 26, 0.97)',
+      border: '1px solid rgba(79,195,247,0.16)',
+      borderRadius: 20,
+      padding: '22px',
+      width: 310,
+      boxShadow: '0 0 0 1px rgba(79,195,247,0.04), 0 24px 70px rgba(0,0,0,0.60), 0 0 60px rgba(79,195,247,0.05)',
+    }}
+  >
+    {/* Titlebar */}
+    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 18 }}>
+      <span style={{ fontSize: 10, fontWeight: 700, color: '#4FC3F7', letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+        K.M.F. Dashboard
+      </span>
+      <div style={{ display: 'flex', gap: 5 }}>
+        {['#FF5252', '#FFD740', '#00E676'].map((c, i) => (
+          <div key={i} style={{ width: 7, height: 7, borderRadius: '50%', background: c, opacity: 0.55 }} />
+        ))}
+      </div>
+    </div>
 
-    {/* dot grid */}
-    <div style={{
-      position: 'absolute', inset: 0,
-      backgroundImage: 'radial-gradient(rgba(79,195,247,0.10) 1px, transparent 1px)',
-      backgroundSize: '34px 34px',
-      maskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%)',
-      WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%)',
-    }} />
+    {/* Balance */}
+    <div style={{ marginBottom: 14 }}>
+      <p style={{ fontSize: 9.5, color: '#3D5A6A', fontWeight: 700, marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+        Account Balance
+      </p>
+      <p style={{ fontSize: 27, fontWeight: 800, color: '#DFF0F8', letterSpacing: '-0.02em', lineHeight: 1 }}>
+        $12,450<span style={{ color: '#4FC3F7', fontSize: 21 }}>.32</span>
+      </p>
+      <p style={{ fontSize: 11, color: '#00C853', fontWeight: 600, marginTop: 5, display: 'flex', alignItems: 'center', gap: 3 }}>
+        <span>▲</span> +$1,234.50 this month
+      </p>
+    </div>
 
-    {/* ambient orbs */}
-    <div style={{
-      position: 'absolute', top: '-8%', left: '-4%', width: 500, height: 500, borderRadius: '50%',
-      background: 'radial-gradient(circle, rgba(79,195,247,0.09) 0%, transparent 70%)',
-      animation: 'kmf-orb-pulse 8s ease-in-out infinite',
-    }} />
-    <div style={{
-      position: 'absolute', bottom: '-8%', right: '-4%', width: 540, height: 540, borderRadius: '50%',
-      background: 'radial-gradient(circle, rgba(38,198,218,0.07) 0%, transparent 70%)',
-      animation: 'kmf-orb-pulse 10s ease-in-out infinite', animationDelay: '3s',
-    }} />
-    <div style={{
-      position: 'absolute', top: '20%', right: '6%', width: 280, height: 280, borderRadius: '50%',
-      background: 'radial-gradient(circle, rgba(255,152,0,0.05) 0%, transparent 70%)',
-      animation: 'kmf-orb-pulse 13s ease-in-out infinite', animationDelay: '6s',
-    }} />
-    <div style={{
-      position: 'absolute', bottom: '20%', left: '6%', width: 240, height: 240, borderRadius: '50%',
-      background: 'radial-gradient(circle, rgba(255,215,64,0.05) 0%, transparent 70%)',
-      animation: 'kmf-orb-pulse 11s ease-in-out infinite', animationDelay: '2s',
-    }} />
-
-    {/* dark vignette behind text so symbols don't fight with content */}
-    <div style={{
-      position: 'absolute', inset: 0,
-      background: 'radial-gradient(ellipse 42% 52% at 50% 46%, rgba(10,12,16,0.92) 0%, rgba(10,12,16,0.55) 45%, transparent 72%)',
-    }} />
-
-    {/* orbit rings + symbols */}
-    <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      {ORBIT_RINGS.map((ring, ri) => (
-        <div key={ri} style={{
-          position: 'absolute',
-          width: ring.radius * 2, height: ring.radius * 2,
-          borderRadius: '50%',
-          border: '1px solid rgba(79,195,247,0.06)',
-        }} />
+    {/* Metrics row */}
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 7, marginBottom: 14 }}>
+      {[
+        { label: 'Win Rate', value: '68%', color: '#00C853' },
+        { label: 'Profit Factor', value: '2.1', color: '#4FC3F7' },
+        { label: 'Max DD', value: '4.2%', color: '#FFD740' },
+      ].map((s) => (
+        <div key={s.label} style={{
+          background: 'rgba(255,255,255,0.03)',
+          border: '1px solid rgba(255,255,255,0.055)',
+          borderRadius: 10,
+          padding: '9px 6px',
+          textAlign: 'center',
+        }}>
+          <p style={{ fontSize: 14, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</p>
+          <p style={{ fontSize: 8.5, color: '#3D5A6A', marginTop: 4, lineHeight: 1.2 }}>{s.label}</p>
+        </div>
       ))}
+    </div>
 
-      {ORBIT_RINGS.map((ring, ri) =>
-        ring.symbols.map((sym, si) => (
-          <OrbitSymbol
-            key={`${ri}-${si}`}
-            {...sym}
-            duration={ring.duration}
-            deorbitKeyframe={ring.deorbitKeyframe}
-            index={si}
-            total={ring.symbols.length}
-          />
-        ))
-      )}
+    {/* Sparkline */}
+    <div style={{ marginBottom: 14 }}>
+      <p style={{ fontSize: 9.5, color: '#3D5A6A', fontWeight: 700, marginBottom: 7, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+        Balance Curve
+      </p>
+      <svg width="100%" height="44" viewBox="0 0 266 44" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#4FC3F7" stopOpacity="0.30" />
+            <stop offset="100%" stopColor="#4FC3F7" stopOpacity="0" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M0,40 C18,38 30,35 50,31 S78,24 100,20 S128,15 152,13 S190,9 214,7 S244,5 266,3"
+          fill="none" stroke="#4FC3F7" strokeWidth="1.8" strokeLinecap="round"
+        />
+        <path
+          d="M0,40 C18,38 30,35 50,31 S78,24 100,20 S128,15 152,13 S190,9 214,7 S244,5 266,3 L266,44 L0,44 Z"
+          fill="url(#sg)"
+        />
+      </svg>
+    </div>
+
+    {/* Recent trades */}
+    <div>
+      <p style={{ fontSize: 9.5, color: '#3D5A6A', fontWeight: 700, marginBottom: 9, textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+        Recent Trades
+      </p>
+      {[
+        { symbol: 'EUR/USD', type: 'LONG',  result: 'WIN',  pnl: '+$124.50' },
+        { symbol: 'XAU/USD', type: 'SHORT', result: 'WIN',  pnl: '+$89.20'  },
+        { symbol: 'BTC/USD', type: 'LONG',  result: 'LOSS', pnl: '-$45.30'  },
+      ].map((t, i) => (
+        <div key={i} style={{
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '6px 0',
+          borderBottom: i < 2 ? '1px solid rgba(255,255,255,0.045)' : 'none',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
+            <div style={{ width: 5, height: 5, borderRadius: '50%', background: t.result === 'WIN' ? '#00C853' : '#FF5252', flexShrink: 0 }} />
+            <span style={{ fontSize: 11, fontWeight: 700, color: '#C0D5E2' }}>{t.symbol}</span>
+            <span style={{ fontSize: 8.5, color: '#3D5A6A', background: 'rgba(255,255,255,0.055)', padding: '1px 5px', borderRadius: 4, fontWeight: 600 }}>{t.type}</span>
+          </div>
+          <span style={{ fontSize: 11, fontWeight: 700, color: t.pnl.startsWith('+') ? '#00C853' : '#FF5252' }}>{t.pnl}</span>
+        </div>
+      ))}
     </div>
   </div>
 );
 
-// ── Stats bar (fills empty bottom area) ─────────────────────────────────────
+// ── Stats ─────────────────────────────────────────────────────────────────────
 const stats = [
   { value: '10,000+', label: 'Trades Tracked' },
-  { value: '22',      label: 'Instruments'     },
-  { value: '8',       label: 'Languages'       },
-  { value: '2',       label: 'Platforms'       },
+  { value: '22',      label: 'Instruments'    },
+  { value: '8',       label: 'Languages'      },
+  { value: '2',       label: 'Platforms'      },
 ];
 
-// ── Hero ─────────────────────────────────────────────────────────────────────
+// ── Hero ──────────────────────────────────────────────────────────────────────
 const Hero = () => (
   <section
-    className="relative min-h-screen flex flex-col items-center justify-center bg-kmf-bg pt-20 overflow-hidden"
+    className="relative min-h-screen flex flex-col bg-kmf-bg pt-20 overflow-hidden"
     aria-label="K.M.F. Trading Journal introduction"
   >
-    <HeroBackground />
+    {/* Background */}
+    <div aria-hidden="true" style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+      <div style={{
+        position: 'absolute', inset: 0,
+        backgroundImage: 'radial-gradient(rgba(79,195,247,0.075) 1px, transparent 1px)',
+        backgroundSize: '32px 32px',
+        maskImage: 'radial-gradient(ellipse 90% 85% at 50% 48%, black 0%, transparent 100%)',
+        WebkitMaskImage: 'radial-gradient(ellipse 90% 85% at 50% 48%, black 0%, transparent 100%)',
+      }} />
+      <div style={{ position: 'absolute', top: '-8%', left: '-4%', width: 650, height: 650, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,195,247,0.07) 0%, transparent 70%)', animation: 'kmf-orb-pulse 9s ease-in-out infinite' }} />
+      <div style={{ position: 'absolute', bottom: '-8%', right: '-4%', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(38,198,218,0.05) 0%, transparent 70%)', animation: 'kmf-orb-pulse 11s ease-in-out infinite', animationDelay: '3s' }} />
+      <div style={{ position: 'absolute', top: '35%', right: '8%', width: 350, height: 350, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,195,247,0.04) 0%, transparent 70%)', animation: 'kmf-orb-pulse 14s ease-in-out infinite', animationDelay: '6s' }} />
+    </div>
 
-    {/* main content */}
-    <div className="container mx-auto px-4 text-center relative z-10 flex-1 flex flex-col items-center justify-center">
-      <div className="mb-8">
-        <picture>
-          <source srcSet="/logo-320.webp" type="image/webp" />
-          <img
-            src="/logo-320.png"
-            alt="K.M.F. Trading Journal logo"
-            className="w-40 h-40 mx-auto drop-shadow-[0_0_24px_rgba(79,195,247,0.55)]"
-            width="160" height="160"
-            fetchpriority="high"
-          />
-        </picture>
-      </div>
+    {/* Main content — split layout */}
+    <div className="container mx-auto px-4 relative z-10 flex-1 flex items-center">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-14 xl:gap-20 items-center py-16">
 
-      <h1 className="text-6xl font-bold mb-6">
-        <span className="logo-text">K.M.F.</span>
-        <br />
-        <span className="text-kmf-text-primary">Trading Journal</span>
-      </h1>
+        {/* Left: Text */}
+        <div className="text-center lg:text-left">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 bg-kmf-accent/10 rounded-full border border-kmf-accent/25">
+            <HiSparkles className="text-kmf-accent text-sm" aria-hidden="true" />
+            <span className="text-kmf-accent text-sm font-semibold">Professional Trading Journal</span>
+          </div>
 
-      <p className="text-3xl font-semibold text-kmf-text-secondary mb-4">
-        KEEP MOVING FORWARD
-      </p>
+          {/* Logo */}
+          <div className="flex justify-center lg:justify-start mb-6">
+            <picture>
+              <source srcSet="/logo-80.webp" type="image/webp" />
+              <img
+                src="/logo.png"
+                alt="K.M.F. Trading Journal logo"
+                className="w-20 h-20 drop-shadow-[0_0_20px_rgba(79,195,247,0.50)]"
+                width="80" height="80"
+                fetchpriority="high"
+              />
+            </picture>
+          </div>
 
-      <p className="text-xl text-kmf-text-tertiary max-w-2xl mx-auto mb-12">
-        Professional trading journal for forex, stocks and crypto traders. Track your trades,
-        analyze performance, and improve your strategy.
-      </p>
+          <h1 className="text-5xl sm:text-6xl font-bold mb-4 leading-tight">
+            <span className="logo-text">K.M.F.</span>
+            <br />
+            <span className="text-kmf-text-primary">Trading Journal</span>
+          </h1>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-        <a
-          href="#download"
-          className="px-8 py-4 bg-kmf-accent-bright text-white text-lg font-semibold rounded-lg flex items-center gap-3 hover:shadow-glow transition-all duration-300 hover:scale-105"
-        >
-          <FaDownload aria-hidden="true" />
-          Download App
-        </a>
-        <a
-          href="#features"
-          className="px-8 py-4 bg-transparent text-kmf-accent text-lg font-semibold rounded-lg border-2 border-kmf-accent flex items-center gap-3 hover:bg-kmf-accent/10 transition-all duration-300"
-        >
-          <HiSparkles aria-hidden="true" />
-          Explore Features
-        </a>
+          <p className="text-lg font-semibold text-kmf-accent mb-5 tracking-[0.22em] uppercase">
+            Keep Moving Forward
+          </p>
+
+          <p className="text-lg text-kmf-text-tertiary max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed">
+            Professional trading journal for forex, stocks and crypto. Track trades,
+            analyze performance, and build real discipline — from your phone.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+            <a
+              href="#download"
+              className="px-8 py-4 bg-kmf-accent-bright text-white text-lg font-semibold rounded-lg flex items-center justify-center gap-3 hover:shadow-glow transition-all duration-300 hover:scale-105"
+            >
+              <FaDownload aria-hidden="true" />
+              Download App
+            </a>
+            <a
+              href="#features"
+              className="px-8 py-4 bg-transparent text-kmf-accent text-lg font-semibold rounded-lg border-2 border-kmf-accent flex items-center justify-center gap-3 hover:bg-kmf-accent/10 transition-all duration-300"
+            >
+              <HiSparkles aria-hidden="true" />
+              Explore Features
+            </a>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-kmf-accent/10">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <p className="text-2xl font-bold gradient-text">{s.value}</p>
+                <p className="text-xs text-kmf-text-tertiary mt-1 uppercase tracking-wider">{s.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right: App preview (desktop only) */}
+        <div className="hidden lg:flex justify-center xl:justify-end">
+          <AppPreview />
+        </div>
       </div>
     </div>
 
-    {/* stats bar — fills empty bottom space */}
-    <div className="relative z-10 w-full border-t border-kmf-accent/10 bg-kmf-bg/60 backdrop-blur-sm">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-kmf-accent/10">
-          {stats.map((s) => (
-            <div key={s.label} className="py-5 text-center">
-              <p className="text-2xl font-bold gradient-text">{s.value}</p>
-              <p className="text-xs text-kmf-text-tertiary mt-0.5 uppercase tracking-wider">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+    {/* Market ticker */}
+    <div className="relative z-10">
+      <MarketTicker />
     </div>
   </section>
 );

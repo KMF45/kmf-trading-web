@@ -86,30 +86,10 @@
     100% { width: 100%; }
   }
 
-  /* ── Orbital animation keyframes ── */
-  @keyframes kmf-orbit {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
-
-  @keyframes kmf-deorbit-130 {
-    from { transform: translateX(130px) rotate(0deg); }
-    to   { transform: translateX(130px) rotate(-360deg); }
-  }
-
-  @keyframes kmf-deorbit-215 {
-    from { transform: translateX(215px) rotate(0deg); }
-    to   { transform: translateX(215px) rotate(-360deg); }
-  }
-
-  @keyframes kmf-deorbit-300 {
-    from { transform: translateX(300px) rotate(0deg); }
-    to   { transform: translateX(300px) rotate(-360deg); }
-  }
-
-  @keyframes kmf-deorbit-385 {
-    from { transform: translateX(385px) rotate(0deg); }
-    to   { transform: translateX(385px) rotate(-360deg); }
+  /* ── Market ticker scroll ── */
+  @keyframes kmf-ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
 
   /* ── Ambient orb pulse ── */
