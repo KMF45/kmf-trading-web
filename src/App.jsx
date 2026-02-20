@@ -9,6 +9,18 @@ import NotFoundPage from './pages/NotFoundPage';
 // Blog - lazy loaded
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BestTradingJournalAndroid2026 = lazy(() => import('./pages/blog/BestTradingJournalAndroid2026'));
+const ProfitFactorVsWinRate = lazy(() => import('./pages/blog/ProfitFactorVsWinRate'));
+const OnePercentRiskRule = lazy(() => import('./pages/blog/OnePercentRiskRule'));
+const RevengeTrading = lazy(() => import('./pages/blog/RevengeTrading'));
+const WeeklyTradingReviewTemplate = lazy(() => import('./pages/blog/WeeklyTradingReviewTemplate'));
+const RMultipleExplained = lazy(() => import('./pages/blog/RMultipleExplained'));
+const WhyTradersBreakRules = lazy(() => import('./pages/blog/WhyTradersBreakRules'));
+const HowToRecoverFromLosingStreak = lazy(() => import('./pages/blog/HowToRecoverFromLosingStreak'));
+const TenQuestionsAfterEveryTrade = lazy(() => import('./pages/blog/TenQuestionsAfterEveryTrade'));
+const TradingExpectancyExplained = lazy(() => import('./pages/blog/TradingExpectancyExplained'));
+const HowToSetStopLoss = lazy(() => import('./pages/blog/HowToSetStopLoss'));
+const PositionSizingGuide = lazy(() => import('./pages/blog/PositionSizingGuide'));
+const PreTradeChecklist = lazy(() => import('./pages/blog/PreTradeChecklist'));
 
 // Lazy loaded (only when navigating away from landing)
 const LoginPage = lazy(() => import('./pages/auth/LoginPage'));
@@ -82,6 +94,18 @@ function App() {
             {/* Blog */}
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026 />} />
+            <Route path="/blog/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRate />} />
+            <Route path="/blog/1-percent-risk-rule" element={<OnePercentRiskRule />} />
+            <Route path="/blog/revenge-trading" element={<RevengeTrading />} />
+            <Route path="/blog/weekly-trading-review-template" element={<WeeklyTradingReviewTemplate />} />
+            <Route path="/blog/r-multiple-explained" element={<RMultipleExplained />} />
+            <Route path="/blog/why-traders-break-their-rules" element={<WhyTradersBreakRules />} />
+            <Route path="/blog/how-to-recover-from-losing-streak" element={<HowToRecoverFromLosingStreak />} />
+            <Route path="/blog/10-questions-after-every-trade" element={<TenQuestionsAfterEveryTrade />} />
+            <Route path="/blog/trading-expectancy-explained" element={<TradingExpectancyExplained />} />
+            <Route path="/blog/how-to-set-stop-loss" element={<HowToSetStopLoss />} />
+            <Route path="/blog/position-sizing-guide" element={<PositionSizingGuide />} />
+            <Route path="/blog/pre-trade-checklist" element={<PreTradeChecklist />} />
 
             {/* 404 */}
             <Route path="*" element={<NotFoundPage />} />
