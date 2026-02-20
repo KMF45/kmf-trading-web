@@ -1,4 +1,4 @@
-import { FaCheck, FaTimes, FaCrown, FaDownload } from 'react-icons/fa';
+import { FaCheck, FaTimes, FaCrown, FaClock } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
 const FREE_FEATURES = [
@@ -99,12 +99,12 @@ const Pricing = () => (
 
           {/* CTA */}
           <a
-            href="#download"
+            href="#beta"
             className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm mb-7 transition-all duration-200 hover:scale-[1.02]"
             style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.10)', color: '#B0BEC5' }}
           >
-            <FaDownload style={{ fontSize: 13 }} />
-            Download Free
+            <FaClock style={{ fontSize: 13 }} />
+            Coming Soon
           </a>
 
           {/* Features */}
@@ -154,12 +154,12 @@ const Pricing = () => (
 
           {/* CTA */}
           <a
-            href="#download"
-            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm text-white mb-7 shadow-glow hover:shadow-glow-hover transition-all duration-200 hover:scale-[1.02]"
-            style={{ background: 'linear-gradient(135deg, #4FC3F7, #03A9F4)' }}
+            href="#beta"
+            className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm text-white mb-7 transition-all duration-200 hover:scale-[1.02]"
+            style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 16px rgba(255,179,0,0.25)' }}
           >
             <HiSparkles style={{ fontSize: 15 }} />
-            Get Premium
+            Join Beta — Get Premium Free
           </a>
 
           {/* Features */}

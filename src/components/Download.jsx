@@ -1,4 +1,4 @@
-import { FaAndroid, FaDownload, FaCheckCircle } from 'react-icons/fa';
+import { FaAndroid, FaCheckCircle, FaClock } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
 const Download = () => {
@@ -23,30 +23,35 @@ const Download = () => {
                 <span className="inline-flex items-center gap-2 px-6 py-3 bg-kmf-accent/20 text-kmf-accent
                              rounded-full text-sm font-semibold border border-kmf-accent/50 shadow-glow">
                   <HiSparkles className="text-lg" />
-                  Now Available
+                  Launching Soon on Google Play
                 </span>
               </div>
 
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-6">
-                <span className="gradient-text">Download Now</span>
+                <span className="gradient-text">Coming Soon</span>
               </h2>
 
               <p className="text-xl text-kmf-text-secondary text-center mb-12 max-w-2xl mx-auto">
-                Start tracking your trades professionally. Available for Android devices.
+                K.M.F. Trading Journal is launching on Google Play soon. Join the beta program to get early access and free lifetime Premium.
               </p>
 
               <div className="flex justify-center mb-12">
-                <a
-                  href="#"
-                  className="group relative inline-flex items-center gap-4 px-10 py-5
-                           bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white text-xl font-bold
-                           rounded-2xl shadow-glow-strong hover:shadow-glow-hover transition-all duration-300
-                           hover:scale-105 overflow-hidden"
+                <div
+                  className="inline-flex items-center gap-4 px-10 py-5 rounded-2xl text-xl font-bold cursor-not-allowed select-none"
+                  style={{
+                    background: 'rgba(255,255,255,0.05)',
+                    border: '1px solid rgba(255,255,255,0.10)',
+                    color: 'rgba(255,255,255,0.30)',
+                  }}
+                  aria-disabled="true"
                 >
-                  <FaAndroid className="text-3xl group-hover:rotate-12 transition-transform" />
+                  <FaAndroid className="text-3xl" />
                   <span>Download for Android</span>
-                  <FaDownload className="text-2xl group-hover:animate-bounce" />
-                </a>
+                  <span className="text-sm font-semibold px-3 py-1 rounded-full" style={{ background: 'rgba(255,255,255,0.07)', color: 'rgba(255,255,255,0.40)', border: '1px solid rgba(255,255,255,0.10)' }}>
+                    <FaClock className="inline mr-1.5" style={{ fontSize: 10 }} />
+                    Coming Soon
+                  </span>
+                </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">

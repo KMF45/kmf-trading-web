@@ -1,5 +1,6 @@
 import Navbar from '../components/landing/Navbar';
 import Hero from '../components/Hero';
+import BetaBanner from '../components/BetaBanner';
 import WhyKMF from '../components/WhyKMF';
 import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
@@ -15,6 +16,7 @@ const LandingPage = () => {
       <Navbar />
       <main>
         <Hero />
+        <BetaBanner />
         <WhyKMF />
         <Features />
         <HowItWorks />

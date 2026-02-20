@@ -1,4 +1,4 @@
-import { FaDownload } from 'react-icons/fa';
+import { FaClock } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 
 // ── Market ticker ─────────────────────────────────────────────────────────────
@@ -109,11 +109,12 @@ const Hero = () => (
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
         <a
-          href="#download"
-          className="px-8 py-4 bg-kmf-accent-bright text-white text-lg font-semibold rounded-lg flex items-center gap-3 hover:shadow-glow transition-all duration-300 hover:scale-105"
+          href="#beta"
+          className="px-8 py-4 text-white text-lg font-semibold rounded-lg flex items-center gap-3 transition-all duration-300 hover:scale-105"
+          style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
         >
-          <FaDownload aria-hidden="true" />
-          Download App
+          <FaClock aria-hidden="true" />
+          Coming Soon — Join Beta
         </a>
         <a
           href="#features"
