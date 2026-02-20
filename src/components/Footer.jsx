@@ -1,4 +1,5 @@
 import { FaGithub, FaEnvelope } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -53,7 +54,7 @@ const Footer = () => {
               {['Features', 'Download'].map((link) => (
                 <li key={link}>
                   <a
-                    href={`#${link.toLowerCase()}`}
+                    href={`/#${link.toLowerCase()}`}
                     className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                              inline-block hover:translate-x-1 duration-200"
                   >
@@ -61,6 +62,15 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/blog"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200"
+                >
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 

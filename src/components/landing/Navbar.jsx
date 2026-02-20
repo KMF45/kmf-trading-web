@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+
 const Navbar = () => {
   const { user } = useAuth();
   const [scrolled, setScrolled] = useState(false);
@@ -32,6 +33,7 @@ const Navbar = () => {
             <a href="/#features" className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium">Features</a>
             <a href="/#download" className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium">Download</a>
             <a href="/#faq" className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium">FAQ</a>
+            <Link to="/blog" className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium">Blog</Link>
 
           </div>
 
@@ -51,6 +53,7 @@ const Navbar = () => {
               <a href="/#features" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">Features</a>
               <a href="/#download" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">Download</a>
               <a href="/#faq" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">FAQ</a>
+              <Link to="/blog" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">Blog</Link>
             </div>
           </div>
         )}
