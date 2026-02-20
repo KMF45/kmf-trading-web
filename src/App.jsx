@@ -6,6 +6,10 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import LandingPage from './pages/LandingPage';
 import NotFoundPage from './pages/NotFoundPage';
 
+// Blog - lazy loaded
+const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BestTradingJournalAndroid2026 = lazy(() => import('./pages/blog/BestTradingJournalAndroid2026'));
+
 // Lazy loaded (only when navigating away from landing)
 const LoginPage = lazy(() => import('./pages/auth/LoginPage'));
 const RegisterPage = lazy(() => import('./pages/auth/RegisterPage'));
@@ -74,6 +78,10 @@ function App() {
               <Route path="calculator" element={<LotCalculatorPage />} />
               <Route path="settings" element={<SettingsPage />} />
             </Route>
+
+            {/* Blog */}
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026 />} />
 
             {/* 404 */}
             <Route path="*" element={<NotFoundPage />} />
