@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function HowToRecoverFromLosingStreak() {
   return (
     <BlogArticleLayout
+      slug="how-to-recover-from-losing-streak"
       title="How to Recover from a Losing Streak Without Blowing Your Account"
       metaTitle="How to Recover from a Trading Losing Streak Without Blowing Your Account | K.M.F. Trading Journal"
       metaDescription="Every trader faces losing streaks. The difference between professionals and amateurs is how they respond. A practical, step-by-step guide to surviving and recovering."

@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function TradingExpectancyExplained() {
   return (
     <BlogArticleLayout
+      slug="trading-expectancy-explained"
       title="Trading Expectancy Explained: The Formula That Tells If Your Strategy Works"
       metaTitle="Trading Expectancy Explained: The Formula Every Trader Must Know | K.M.F. Trading Journal"
       metaDescription="Expectancy is the one number that tells you if your trading strategy is profitable long-term. Learn the formula, how to calculate it, and what it means for your trading."

@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function PreTradeChecklist() {
   return (
     <BlogArticleLayout
+      slug="pre-trade-checklist"
       title="The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry"
       metaTitle="Pre-Trade Checklist: 10 Things to Verify Before Every Entry | K.M.F. Trading Journal"
       metaDescription="A pre-trade checklist is the most effective tool for consistent trading. Here are 10 questions to verify before you enter any trade — adapt them to your own strategy."

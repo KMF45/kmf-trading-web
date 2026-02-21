@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function ProfitFactorVsWinRate() {
   return (
     <BlogArticleLayout
+      slug="profit-factor-vs-win-rate"
       title="Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?"
       metaTitle="Profit Factor vs Win Rate: Which Metric Predicts Trading Success? | K.M.F. Trading Journal"
       metaDescription="Most traders obsess over win rate. But profit factor is a far better predictor of long-term success. Learn what both metrics mean, how to calculate them, and which one to optimize."

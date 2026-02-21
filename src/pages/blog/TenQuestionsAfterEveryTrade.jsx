@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function TenQuestionsAfterEveryTrade() {
   return (
     <BlogArticleLayout
+      slug="10-questions-after-every-trade"
       title="10 Questions Every Trader Should Ask After Every Trade"
       metaTitle="10 Post-Trade Review Questions Every Trader Should Ask | K.M.F. Trading Journal"
       metaDescription="The questions you ask after a trade matter more than the result. Here are 10 post-trade review questions that will accelerate your development as a trader."

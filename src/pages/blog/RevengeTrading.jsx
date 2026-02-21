@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function RevengeTrading() {
   return (
     <BlogArticleLayout
+      slug="revenge-trading"
       title="Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle"
       metaTitle="Revenge Trading: Psychology, Warning Signs & How to Stop | K.M.F. Trading Journal"
       metaDescription="Revenge trading is one of the fastest ways to blow a trading account. Understand the psychology behind it and learn practical techniques to stop it before it starts."

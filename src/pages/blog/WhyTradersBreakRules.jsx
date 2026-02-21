@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function WhyTradersBreakRules() {
   return (
     <BlogArticleLayout
+      slug="why-traders-break-their-rules"
       title="Why You Break Your Own Trading Rules — And How to Stop"
       metaTitle="Why Traders Break Their Own Rules — And How to Stop | K.M.F. Trading Journal"
       metaDescription="You know the rules. You wrote them yourself. So why do you keep breaking them? The psychology of rule-breaking in trading and practical solutions."

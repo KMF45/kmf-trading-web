@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function WeeklyTradingReviewTemplate() {
   return (
     <BlogArticleLayout
+      slug="weekly-trading-review-template"
       title="How to Do a Weekly Trading Review (With a Complete Template)"
       metaTitle="How to Do a Weekly Trading Review: Complete Template | K.M.F. Trading Journal"
       metaDescription="A step-by-step guide to conducting a proper weekly trading review. Includes a complete template with questions to evaluate your performance, discipline, and strategy."

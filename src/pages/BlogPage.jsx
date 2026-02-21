@@ -130,8 +130,14 @@ export default function BlogPage() {
     if (desc) desc.setAttribute('content',
       'Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.'
     );
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', 'https://kmfjournal.com/blog');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://kmfjournal.com/blog');
     return () => {
       document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';
+      if (canonical) canonical.setAttribute('href', 'https://kmfjournal.com/');
+      if (ogUrl) ogUrl.setAttribute('content', 'https://kmfjournal.com/');
     };
   }, []);
 

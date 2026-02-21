@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function PositionSizingGuide() {
   return (
     <BlogArticleLayout
+      slug="position-sizing-guide"
       title="Position Sizing Guide: How Much Should You Trade?"
       metaTitle="Position Sizing Guide: The Exact Formula for Every Market | K.M.F. Trading Journal"
       metaDescription="Position sizing is the most underrated skill in trading. Learn the exact formula to calculate how much to trade based on your account size, risk tolerance, and stop loss distance."

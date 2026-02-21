@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function OnePercentRiskRule() {
   return (
     <BlogArticleLayout
+      slug="1-percent-risk-rule"
       title="The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive"
       metaTitle="The 1% Risk Rule: How Professional Traders Manage Position Risk | K.M.F. Trading Journal"
       metaDescription="Learn why professional traders never risk more than 1% per trade, how to calculate it, and how it protects your account during losing streaks."

@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function HowToSetStopLoss() {
   return (
     <BlogArticleLayout
+      slug="how-to-set-stop-loss"
       title="How to Set a Stop Loss Properly (Not Just Randomly)"
       metaTitle="How to Set a Stop Loss Properly: 3 Professional Methods | K.M.F. Trading Journal"
       metaDescription="Most traders set stop losses based on dollar amounts or round numbers. Learn the three professional methods for placing stop losses where the market actually invalidates your trade."

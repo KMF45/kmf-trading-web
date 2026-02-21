@@ -6,18 +6,87 @@ import { FaCheck, FaTimes, FaEnvelope } from 'react-icons/fa';
 
 const MAILTO = `mailto:contact@kmfjournal.com?subject=Beta%20Tester%20Application%20%E2%80%94%20K.M.F.%20Trading%20Journal`;
 
+const SITE = 'https://kmfjournal.com';
+const SLUG = 'best-free-trading-journal-app-android-2026';
+const PAGE_TITLE = 'Best Free Trading Journal App for Android in 2026 | K.M.F. Trading Journal';
+const PAGE_DESC = 'Looking for the best free trading journal app for Android in 2026? Compare K.M.F., TraderSync, Tradervue and Edgewonk — features, pricing, and which is best for forex, stock and crypto traders.';
+const PAGE_URL = `${SITE}/blog/${SLUG}`;
+const OG_IMAGE = `${SITE}/blog/og/${SLUG}.png`;
+
+function setMeta(name, content, attr = 'name') {
+  const el = document.querySelector(`meta[${attr}="${name}"]`);
+  if (el) el.setAttribute('content', content);
+}
+
 export default function BestTradingJournalAndroid2026() {
   useEffect(() => {
-    document.title = 'Best Free Trading Journal App for Android in 2026 | K.M.F. Trading Journal';
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content',
-      'Looking for the best free trading journal app for Android in 2026? Compare K.M.F., TraderSync, Tradervue and Edgewonk — features, pricing, and which is best for forex, stock and crypto traders.'
-    );
+    document.title = PAGE_TITLE;
+    setMeta('description', PAGE_DESC);
+
+    // Canonical
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', PAGE_URL);
+
+    // OG
+    setMeta('og:type', 'article', 'property');
+    setMeta('og:url', PAGE_URL, 'property');
+    setMeta('og:title', PAGE_TITLE, 'property');
+    setMeta('og:description', PAGE_DESC, 'property');
+    setMeta('og:image', OG_IMAGE, 'property');
+
+    // Twitter
+    setMeta('twitter:url', PAGE_URL, 'name');
+    setMeta('twitter:title', PAGE_TITLE, 'name');
+    setMeta('twitter:description', PAGE_DESC, 'name');
+    setMeta('twitter:image', OG_IMAGE, 'name');
+
+    // JSON-LD: Article
+    const articleLd = document.createElement('script');
+    articleLd.type = 'application/ld+json';
+    articleLd.id = 'ld-article';
+    articleLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Best Free Trading Journal App for Android in 2026',
+      description: PAGE_DESC,
+      datePublished: '2026-02-20',
+      author: { '@type': 'Organization', name: 'K.M.F. Dev Team', url: SITE },
+      publisher: { '@type': 'Organization', name: 'K.M.F. Trading Journal', url: SITE, logo: { '@type': 'ImageObject', url: `${SITE}/logo.png` } },
+      image: OG_IMAGE,
+      url: PAGE_URL,
+    });
+    document.head.appendChild(articleLd);
+
+    // JSON-LD: BreadcrumbList
+    const breadcrumbLd = document.createElement('script');
+    breadcrumbLd.type = 'application/ld+json';
+    breadcrumbLd.id = 'ld-breadcrumb';
+    breadcrumbLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog` },
+        { '@type': 'ListItem', position: 3, name: 'Best Free Trading Journal App for Android 2026', item: PAGE_URL },
+      ],
+    });
+    document.head.appendChild(breadcrumbLd);
+
     return () => {
       document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';
-      if (desc) desc.setAttribute('content',
-        'K.M.F. Trading Journal is a professional trading journal app for forex, stocks & crypto traders.'
-      );
+      setMeta('description', 'K.M.F. Trading Journal is a professional trading journal app for forex, stocks & crypto traders.');
+      if (canonical) canonical.setAttribute('href', `${SITE}/`);
+      setMeta('og:type', 'website', 'property');
+      setMeta('og:url', `${SITE}/`, 'property');
+      setMeta('og:title', 'K.M.F. Trading Journal – Professional Trade Tracking & Analysis', 'property');
+      setMeta('og:description', 'Track your trades, analyze performance with advanced statistics, manage risk with a lot calculator, and improve your trading discipline. Free for Android & Web.', 'property');
+      setMeta('og:image', `${SITE}/logo.png`, 'property');
+      setMeta('twitter:url', `${SITE}/`, 'name');
+      setMeta('twitter:title', 'K.M.F. Trading Journal – Keep Moving Forward', 'name');
+      setMeta('twitter:description', 'Professional trading journal for forex, stocks & crypto. Track, analyze and improve your trading performance.', 'name');
+      setMeta('twitter:image', `${SITE}/logo.png`, 'name');
+      document.getElementById('ld-article')?.remove();
+      document.getElementById('ld-breadcrumb')?.remove();
     };
   }, []);
 

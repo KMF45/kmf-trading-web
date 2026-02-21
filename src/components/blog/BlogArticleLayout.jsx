@@ -3,16 +3,101 @@ import { Link } from 'react-router-dom';
 import Navbar from '../landing/Navbar';
 import Footer from '../Footer';
 
-export default function BlogArticleLayout({ title, metaTitle, metaDescription, date, dateISO, readTime, category, categoryColor = '#4FC3F7', children }) {
+const SITE = 'https://kmfjournal.com';
+const DEFAULTS = {
+  title: 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy',
+  description: 'K.M.F. Trading Journal is a professional trading journal app for forex, stocks & crypto traders.',
+  ogTitle: 'K.M.F. Trading Journal – Professional Trade Tracking & Analysis',
+  ogDescription: 'Track your trades, analyze performance with advanced statistics, manage risk with a lot calculator, and improve your trading discipline. Free for Android & Web.',
+  ogImage: `${SITE}/logo.png`,
+  ogUrl: `${SITE}/`,
+  twitterTitle: 'K.M.F. Trading Journal – Keep Moving Forward',
+  twitterDescription: 'Professional trading journal for forex, stocks & crypto. Track, analyze and improve your trading performance.',
+};
+
+function setMeta(name, content, attr = 'name') {
+  const el = document.querySelector(`meta[${attr}="${name}"]`);
+  if (el) el.setAttribute('content', content);
+}
+
+export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, readTime, category, categoryColor = '#4FC3F7', children }) {
   useEffect(() => {
-    document.title = metaTitle || `${title} | K.M.F. Trading Journal`;
-    const desc = document.querySelector('meta[name="description"]');
-    if (desc && metaDescription) desc.setAttribute('content', metaDescription);
+    const pageTitle = metaTitle || `${title} | K.M.F. Trading Journal`;
+    const pageUrl = `${SITE}/blog/${slug}`;
+    const ogImage = `${SITE}/blog/og/${slug}.png`;
+
+    // Title + description
+    document.title = pageTitle;
+    setMeta('description', metaDescription || DEFAULTS.description);
+
+    // Canonical
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', pageUrl);
+
+    // OG
+    setMeta('og:type', 'article', 'property');
+    setMeta('og:url', pageUrl, 'property');
+    setMeta('og:title', pageTitle, 'property');
+    setMeta('og:description', metaDescription || DEFAULTS.ogDescription, 'property');
+    setMeta('og:image', ogImage, 'property');
+
+    // Twitter
+    setMeta('twitter:url', pageUrl, 'name');
+    setMeta('twitter:title', pageTitle, 'name');
+    setMeta('twitter:description', metaDescription || DEFAULTS.twitterDescription, 'name');
+    setMeta('twitter:image', ogImage, 'name');
+
+    // JSON-LD: Article
+    const articleLd = document.createElement('script');
+    articleLd.type = 'application/ld+json';
+    articleLd.id = 'ld-article';
+    articleLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: title,
+      description: metaDescription,
+      datePublished: dateISO,
+      author: { '@type': 'Organization', name: 'K.M.F. Dev Team', url: SITE },
+      publisher: { '@type': 'Organization', name: 'K.M.F. Trading Journal', url: SITE, logo: { '@type': 'ImageObject', url: `${SITE}/logo.png` } },
+      image: ogImage,
+      url: pageUrl,
+    });
+    document.head.appendChild(articleLd);
+
+    // JSON-LD: BreadcrumbList
+    const breadcrumbLd = document.createElement('script');
+    breadcrumbLd.type = 'application/ld+json';
+    breadcrumbLd.id = 'ld-breadcrumb';
+    breadcrumbLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog` },
+        { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
+      ],
+    });
+    document.head.appendChild(breadcrumbLd);
+
     return () => {
-      document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';
-      if (desc) desc.setAttribute('content', 'K.M.F. Trading Journal is a professional trading journal app for forex, stocks & crypto traders.');
+      // Restore defaults
+      document.title = DEFAULTS.title;
+      setMeta('description', DEFAULTS.description);
+      if (canonical) canonical.setAttribute('href', `${SITE}/`);
+      setMeta('og:type', 'website', 'property');
+      setMeta('og:url', DEFAULTS.ogUrl, 'property');
+      setMeta('og:title', DEFAULTS.ogTitle, 'property');
+      setMeta('og:description', DEFAULTS.ogDescription, 'property');
+      setMeta('og:image', DEFAULTS.ogImage, 'property');
+      setMeta('twitter:url', DEFAULTS.ogUrl, 'name');
+      setMeta('twitter:title', DEFAULTS.twitterTitle, 'name');
+      setMeta('twitter:description', DEFAULTS.twitterDescription, 'name');
+      setMeta('twitter:image', DEFAULTS.ogImage, 'name');
+      // Remove JSON-LD
+      document.getElementById('ld-article')?.remove();
+      document.getElementById('ld-breadcrumb')?.remove();
     };
-  }, [title, metaTitle, metaDescription]);
+  }, [title, metaTitle, metaDescription, slug, dateISO]);
 
   return (
     <>
@@ -33,6 +118,7 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, d
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-kmf-text-primary mb-8 leading-tight" style={{ letterSpacing: '-0.02em' }} itemProp="headline">{title}</h1>
           {children}
+          <ArticleCTA />
         </article>
         <div className="max-w-2xl mx-auto mt-12">
           <Link to="/blog" className="text-sm text-kmf-accent hover:text-kmf-accent-bright transition-colors">← Back to Blog</Link>
@@ -40,6 +126,27 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, d
       </main>
       <Footer />
     </>
+  );
+}
+
+// CTA at end of every article
+const MAILTO = `mailto:contact@kmfjournal.com?subject=Beta%20Tester%20Application%20%E2%80%94%20K.M.F.%20Trading%20Journal`;
+
+function ArticleCTA() {
+  return (
+    <div className="rounded-2xl p-7 mt-10 text-center" style={{ background: 'rgba(26,22,14,0.95)', border: '1px solid rgba(255,179,0,0.22)' }}>
+      <p className="text-lg font-bold text-kmf-text-primary mb-2">Track These Metrics Automatically</p>
+      <p className="text-sm text-kmf-text-secondary mb-5">
+        K.M.F. Trading Journal calculates profit factor, R-multiple, expectancy and more — so you can focus on trading, not spreadsheets.
+        <br />
+        <strong style={{ color: '#FFB300' }}>Join the beta and get free lifetime Premium access.</strong>
+      </p>
+      <a href={MAILTO}
+        className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-base transition-all hover:scale-105"
+        style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}>
+        Apply for Beta Access →
+      </a>
+    </div>
   );
 }
 

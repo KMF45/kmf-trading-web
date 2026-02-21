@@ -5,6 +5,7 @@ import BlogArticleLayout, {
 export default function RMultipleExplained() {
   return (
     <BlogArticleLayout
+      slug="r-multiple-explained"
       title="R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)"
       metaTitle="R-Multiple Explained: Measure Trade Quality Beyond Dollar P/L | K.M.F. Trading Journal"
       metaDescription="R-multiple is the most honest way to evaluate your trades. Learn what R means, how to calculate it, and why a -$50 trade can be better than a +$200 trade."
