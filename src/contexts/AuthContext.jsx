@@ -1,4 +1,4 @@
-mport { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -37,8 +37,8 @@ export const AuthProvider = ({ children }) => {
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       if (!result.user.emailVerified) {
-      const reviewAccounts = ['testuser@email.com', 'kmf45.ai@gmail.com'];
-      if (!reviewAccounts.includes(email.toLowerCase())) {
+        const reviewAccounts = ['testuser@email.com', 'kmf45.ai@gmail.com'];
+        if (!reviewAccounts.includes(email.toLowerCase())) {
           await signOut(auth);
           return { success: false, needsVerification: true };
         }
