@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       if (!result.user.emailVerified) {
-        const reviewAccounts = ['testuser@email.com', 'kmf45.ai@gmail.com'];
+        const reviewAccounts = [];
         if (!reviewAccounts.includes(email.toLowerCase())) {
           await signOut(auth);
           return { success: false, needsVerification: true };
