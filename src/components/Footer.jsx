@@ -1,4 +1,4 @@
-import { FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -29,15 +29,6 @@ const Footer = () => {
               Professional trading journal for serious traders. Track, analyze, and improve your trading performance.
             </p>
             <div className="flex gap-4">
-              <a
-                href="https://github.com/KMF45"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
-                aria-label="GitHub"
-              >
-                <FaGithub className="text-2xl" />
-              </a>
               <a
                 href="mailto:kmf45.ai@gmail.com"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
@@ -107,11 +98,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-6 text-center">
-          <span className="text-xs text-kmf-text-tertiary px-3 py-1 bg-kmf-panel rounded-full border border-kmf-accent/20">
-            v1.0.0 • Landing Page
-          </span>
-        </div>
       </div>
     </footer>
   );
