@@ -9,11 +9,16 @@ export default function PreTradeChecklist() {
       title="The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry"
       metaTitle="Pre-Trade Checklist: 10 Things to Verify Before Every Entry | K.M.F. Trading Journal"
       metaDescription="A pre-trade checklist is the most effective tool for consistent trading. Here are 10 questions to verify before you enter any trade — adapt them to your own strategy."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="February 14, 2026"
+      dateISO="2026-02-14"
       readTime="6 min read"
       category="Discipline"
       categoryColor="#FFB300"
+      relatedArticles={[
+        { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
+        { slug: 'weekly-trading-review-template', title: 'How to Do a Weekly Trading Review (With a Complete Template)', category: 'Improvement' },
+        { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
+      ]}
     >
       <Intro>
         Before every commercial flight, pilots work through a standardized pre-flight checklist — not because experienced pilots have forgotten how planes work, but because checklists systematically prevent the class of error caused by overconfidence, distraction, or time pressure. Before complex surgeries, operating teams run verbal checklists that have demonstrably reduced preventable deaths. Trading is a domain of consequential decisions made under uncertainty and emotional pressure. The case for checklists is the same.

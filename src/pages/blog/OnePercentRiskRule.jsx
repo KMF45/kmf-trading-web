@@ -9,11 +9,16 @@ export default function OnePercentRiskRule() {
       title="The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive"
       metaTitle="The 1% Risk Rule: How Professional Traders Manage Position Risk | K.M.F. Trading Journal"
       metaDescription="Learn why professional traders never risk more than 1% per trade, how to calculate it, and how it protects your account during losing streaks."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="January 9, 2026"
+      dateISO="2026-01-09"
       readTime="6 min read"
       category="Risk Management"
       categoryColor="#00C853"
+      relatedArticles={[
+        { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },
+        { slug: 'how-to-set-stop-loss', title: 'How to Set a Stop Loss Properly (Not Just Randomly)', category: 'Risk Management' },
+        { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },
+      ]}
     >
       <Intro>
         Most retail traders who blow their accounts do not lose because of a bad strategy. They lose because of bad risk management. They find a setup they love, size in too large, and one trade — or one bad week — takes out 30%, 50%, or all of their capital. The 1% risk rule is the simplest, most reliable defense against that outcome.

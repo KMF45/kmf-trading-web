@@ -9,11 +9,16 @@ export default function WeeklyTradingReviewTemplate() {
       title="How to Do a Weekly Trading Review (With a Complete Template)"
       metaTitle="How to Do a Weekly Trading Review: Complete Template | K.M.F. Trading Journal"
       metaDescription="A step-by-step guide to conducting a proper weekly trading review. Includes a complete template with questions to evaluate your performance, discipline, and strategy."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="January 16, 2026"
+      dateISO="2026-01-16"
       readTime="8 min read"
       category="Improvement"
       categoryColor="#FFB300"
+      relatedArticles={[
+        { slug: '10-questions-after-every-trade', title: '10 Questions Every Trader Should Ask After Every Trade', category: 'Improvement' },
+        { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
+        { slug: 'trading-expectancy-explained', title: 'Trading Expectancy Explained: The Formula That Tells If Your Strategy Works', category: 'Statistics' },
+      ]}
     >
       <Intro>
         The difference between traders who improve and traders who repeat the same mistakes month after month is almost always the same: one group reviews their performance systematically, and the other does not. A weekly trading review is not optional for serious development. It is the mechanism through which patterns become visible, mistakes become lessons, and lessons become habits.

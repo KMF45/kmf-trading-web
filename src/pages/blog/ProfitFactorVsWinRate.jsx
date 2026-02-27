@@ -9,11 +9,16 @@ export default function ProfitFactorVsWinRate() {
       title="Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?"
       metaTitle="Profit Factor vs Win Rate: Which Metric Predicts Trading Success? | K.M.F. Trading Journal"
       metaDescription="Most traders obsess over win rate. But profit factor is a far better predictor of long-term success. Learn what both metrics mean, how to calculate them, and which one to optimize."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="January 6, 2026"
+      dateISO="2026-01-06"
       readTime="7 min read"
       category="Statistics"
       categoryColor="#4FC3F7"
+      relatedArticles={[
+        { slug: 'trading-expectancy-explained', title: 'Trading Expectancy Explained: The Formula That Tells If Your Strategy Works', category: 'Statistics' },
+        { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
+        { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
+      ]}
     >
       <Intro>
         Ask most traders what makes a good system and they will say something like "I win 70% of my trades." Win rate feels good. It is intuitive, easy to explain, and emotionally satisfying. But win rate alone tells you almost nothing about whether a strategy is profitable — and chasing a high win rate is one of the most common mistakes developing traders make.

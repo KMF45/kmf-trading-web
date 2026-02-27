@@ -9,11 +9,16 @@ export default function WhyTradersBreakRules() {
       title="Why You Break Your Own Trading Rules — And How to Stop"
       metaTitle="Why Traders Break Their Own Rules — And How to Stop | K.M.F. Trading Journal"
       metaDescription="You know the rules. You wrote them yourself. So why do you keep breaking them? The psychology of rule-breaking in trading and practical solutions."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="January 23, 2026"
+      dateISO="2026-01-23"
       readTime="7 min read"
       category="Psychology"
       categoryColor="#CE93D8"
+      relatedArticles={[
+        { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
+        { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
+        { slug: '10-questions-after-every-trade', title: '10 Questions Every Trader Should Ask After Every Trade', category: 'Improvement' },
+      ]}
     >
       <Intro>
         Almost every serious trader has a written trading plan. They have spent time defining their setups, their risk rules, their entry and exit criteria. And almost every serious trader regularly violates that plan. Not because they forgot the rules. Not because they think the rules are wrong. But because something in the moment overrides the rules — and understanding exactly what that something is, is the first step to stopping it.

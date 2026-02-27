@@ -9,11 +9,16 @@ export default function RMultipleExplained() {
       title="R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)"
       metaTitle="R-Multiple Explained: Measure Trade Quality Beyond Dollar P/L | K.M.F. Trading Journal"
       metaDescription="R-multiple is the most honest way to evaluate your trades. Learn what R means, how to calculate it, and why a -$50 trade can be better than a +$200 trade."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="January 20, 2026"
+      dateISO="2026-01-20"
       readTime="6 min read"
       category="Statistics"
       categoryColor="#4FC3F7"
+      relatedArticles={[
+        { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },
+        { slug: 'trading-expectancy-explained', title: 'Trading Expectancy Explained: The Formula That Tells If Your Strategy Works', category: 'Statistics' },
+        { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },
+      ]}
     >
       <Intro>
         Most traders evaluate their trades by looking at the dollar profit or loss. But dollar P/L is one of the least informative metrics available to you. A $500 win might be a terrible trade. A $50 loss might be an excellent trade. R-multiple is the metric that reveals the truth — it measures not what you made or lost, but how well you executed relative to the risk you accepted.

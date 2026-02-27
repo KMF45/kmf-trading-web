@@ -9,11 +9,16 @@ export default function HowToRecoverFromLosingStreak() {
       title="How to Recover from a Losing Streak Without Blowing Your Account"
       metaTitle="How to Recover from a Trading Losing Streak Without Blowing Your Account | K.M.F. Trading Journal"
       metaDescription="Every trader faces losing streaks. The difference between professionals and amateurs is how they respond. A practical, step-by-step guide to surviving and recovering."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="January 27, 2026"
+      dateISO="2026-01-27"
       readTime="7 min read"
       category="Psychology"
       categoryColor="#CE93D8"
+      relatedArticles={[
+        { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
+        { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
+        { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
+      ]}
     >
       <Intro>
         Losing streaks are not a sign that you have failed. They are a mathematical certainty — an inevitable feature of any strategy that operates under uncertainty. Even the most profitable systems will produce extended runs of losses. The traders who survive and thrive long-term are not the ones who never lose streaks. They are the ones who have a clear, rehearsed response when a losing streak arrives.

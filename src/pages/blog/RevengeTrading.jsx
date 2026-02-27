@@ -9,11 +9,16 @@ export default function RevengeTrading() {
       title="Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle"
       metaTitle="Revenge Trading: Psychology, Warning Signs & How to Stop | K.M.F. Trading Journal"
       metaDescription="Revenge trading is one of the fastest ways to blow a trading account. Understand the psychology behind it and learn practical techniques to stop it before it starts."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="January 13, 2026"
+      dateISO="2026-01-13"
       readTime="7 min read"
       category="Psychology"
       categoryColor="#CE93D8"
+      relatedArticles={[
+        { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
+        { slug: 'how-to-recover-from-losing-streak', title: 'How to Recover from a Losing Streak Without Blowing Your Account', category: 'Psychology' },
+        { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
+      ]}
     >
       <Intro>
         Revenge trading is the act of taking impulsive trades with the primary motivation of recovering money lost in a previous trade — not because a valid setup exists. It is one of the most destructive patterns in retail trading, and it is almost universal. Nearly every trader has done it. The ones who survive long term are the ones who learn to stop.

@@ -20,7 +20,7 @@ function setMeta(name, content, attr = 'name') {
   if (el) el.setAttribute('content', content);
 }
 
-export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, readTime, category, categoryColor = '#4FC3F7', children }) {
+export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], children }) {
   useEffect(() => {
     const pageTitle = metaTitle || `${title} | K.M.F. Trading Journal`;
     const pageUrl = `${SITE}/blog/${slug}`;
@@ -118,6 +118,24 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-kmf-text-primary mb-8 leading-tight" style={{ letterSpacing: '-0.02em' }} itemProp="headline">{title}</h1>
           {children}
+          {relatedArticles.length > 0 && (
+            <div className="rounded-xl p-6 mt-10 mb-4" style={{ background: 'rgba(79,195,247,0.04)', border: '1px solid rgba(79,195,247,0.12)' }}>
+              <p className="text-xs font-bold text-kmf-accent uppercase tracking-widest mb-4">Related Articles</p>
+              <ul className="space-y-3">
+                {relatedArticles.map((a) => (
+                  <li key={a.slug}>
+                    <Link to={`/blog/${a.slug}`} className="group flex items-start gap-3">
+                      <span className="text-kmf-accent mt-0.5 flex-shrink-0">→</span>
+                      <span>
+                        <span className="text-sm font-medium text-kmf-text-primary group-hover:text-kmf-accent transition-colors">{a.title}</span>
+                        {a.category && <span className="text-xs text-kmf-text-tertiary ml-2">({a.category})</span>}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           <ArticleCTA />
         </article>
         <div className="max-w-2xl mx-auto mt-12">

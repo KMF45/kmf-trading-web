@@ -9,11 +9,16 @@ export default function TradingExpectancyExplained() {
       title="Trading Expectancy Explained: The Formula That Tells If Your Strategy Works"
       metaTitle="Trading Expectancy Explained: The Formula Every Trader Must Know | K.M.F. Trading Journal"
       metaDescription="Expectancy is the one number that tells you if your trading strategy is profitable long-term. Learn the formula, how to calculate it, and what it means for your trading."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="February 3, 2026"
+      dateISO="2026-02-03"
       readTime="6 min read"
       category="Statistics"
       categoryColor="#4FC3F7"
+      relatedArticles={[
+        { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },
+        { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
+        { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
+      ]}
     >
       <Intro>
         What if you could know, with mathematical certainty, whether your trading strategy will make money over the long term — before you have traded it for years? Expectancy is the formula that gives you exactly that. It is the single number that summarizes the profitability of any strategy, and every serious trader should be able to calculate it from their trade history within minutes.

@@ -9,7 +9,7 @@ const posts = [
     title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?',
     excerpt: 'Most traders obsess over win rate, but profit factor is a far better predictor of long-term success. See the math that reveals why a 70% win rate trader can be losing money while a 40% win rate trader thrives.',
     category: 'Statistics',
-    date: 'February 20, 2026',
+    date: 'January 6, 2026',
     readTime: '7 min read',
     categoryColor: '#4FC3F7',
   },
@@ -18,7 +18,7 @@ const posts = [
     title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive',
     excerpt: 'Learn why professional traders never risk more than 1% per trade, how to calculate exact position sizes using the rule, and how it protects your account during the losing streaks that are mathematically inevitable.',
     category: 'Risk Management',
-    date: 'February 20, 2026',
+    date: 'January 9, 2026',
     readTime: '6 min read',
     categoryColor: '#00C853',
   },
@@ -27,7 +27,7 @@ const posts = [
     title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle',
     excerpt: 'Revenge trading is one of the fastest ways to blow a trading account. Understand the psychology of loss aversion and ego that drives it, and learn five practical techniques to stop the cycle before it starts.',
     category: 'Psychology',
-    date: 'February 20, 2026',
+    date: 'January 13, 2026',
     readTime: '7 min read',
     categoryColor: '#CE93D8',
   },
@@ -36,7 +36,7 @@ const posts = [
     title: 'How to Do a Weekly Trading Review (With a Complete Template)',
     excerpt: 'The difference between traders who improve and those who repeat the same mistakes is a systematic weekly review. A step-by-step guide across five areas, with a complete 15-question template you can use immediately.',
     category: 'Improvement',
-    date: 'February 20, 2026',
+    date: 'January 16, 2026',
     readTime: '8 min read',
     categoryColor: '#FFB300',
   },
@@ -45,7 +45,7 @@ const posts = [
     title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)',
     excerpt: 'Dollar P/L is one of the least informative metrics in trading. R-multiple — actual P/L divided by your initial risk — is the honest way to evaluate every trade. Learn how to calculate it and use it to find your real edge.',
     category: 'Statistics',
-    date: 'February 20, 2026',
+    date: 'January 20, 2026',
     readTime: '6 min read',
     categoryColor: '#4FC3F7',
   },
@@ -54,7 +54,7 @@ const posts = [
     title: 'Why You Break Your Own Trading Rules — And How to Stop',
     excerpt: 'You wrote the rules yourself. You know they work. So why do you keep breaking them? The science of System 1 vs System 2 thinking explains almost every instance of rule-breaking — and the solutions are practical, not motivational.',
     category: 'Psychology',
-    date: 'February 20, 2026',
+    date: 'January 23, 2026',
     readTime: '7 min read',
     categoryColor: '#CE93D8',
   },
@@ -63,7 +63,7 @@ const posts = [
     title: 'How to Recover from a Losing Streak Without Blowing Your Account',
     excerpt: 'Losing streaks are mathematically inevitable even in profitable strategies. A step-by-step recovery framework: how to assess whether it is variance or a broken edge, reduce size correctly, and return to full trading gradually.',
     category: 'Psychology',
-    date: 'February 20, 2026',
+    date: 'January 27, 2026',
     readTime: '7 min read',
     categoryColor: '#CE93D8',
   },
@@ -72,7 +72,7 @@ const posts = [
     title: '10 Questions Every Trader Should Ask After Every Trade',
     excerpt: 'Most traders check their P/L and move on. The traders who accelerate their development ask deeper questions after every trade. These 10 post-trade review questions separate process quality from random outcomes.',
     category: 'Improvement',
-    date: 'February 20, 2026',
+    date: 'January 30, 2026',
     readTime: '5 min read',
     categoryColor: '#FFB300',
   },
@@ -81,7 +81,7 @@ const posts = [
     title: 'Trading Expectancy Explained: The Formula That Tells If Your Strategy Works',
     excerpt: 'Expectancy is the one number that reveals whether your strategy is profitable long-term. Learn the formula, see it applied to different win rate and R:R combinations, and calculate your own expectancy from trade history.',
     category: 'Statistics',
-    date: 'February 20, 2026',
+    date: 'February 3, 2026',
     readTime: '6 min read',
     categoryColor: '#4FC3F7',
   },
@@ -90,7 +90,7 @@ const posts = [
     title: 'How to Set a Stop Loss Properly (Not Just Randomly)',
     excerpt: 'Most traders place stop losses based on arbitrary pip counts or dollar amounts. Learn the three professional methods — structure-based, ATR-based, and candle-based — that place stops where the market actually invalidates your trade.',
     category: 'Risk Management',
-    date: 'February 20, 2026',
+    date: 'February 6, 2026',
     readTime: '7 min read',
     categoryColor: '#00C853',
   },
@@ -99,7 +99,7 @@ const posts = [
     title: 'Position Sizing Guide: How Much Should You Trade?',
     excerpt: 'Two traders, identical strategies, one blows up and one grows consistently. The difference is almost always position sizing. The exact formula for forex, stocks, and crypto — with worked examples for each market.',
     category: 'Risk Management',
-    date: 'February 20, 2026',
+    date: 'February 10, 2026',
     readTime: '7 min read',
     categoryColor: '#00C853',
   },
@@ -108,7 +108,7 @@ const posts = [
     title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry',
     excerpt: 'Pilots and surgeons use checklists before every consequential action. Traders should too. A 10-point pre-trade checklist covering technical, risk, and psychological criteria — and why the discipline of skipping trades matters as much as taking them.',
     category: 'Discipline',
-    date: 'February 20, 2026',
+    date: 'February 14, 2026',
     readTime: '6 min read',
     categoryColor: '#FFB300',
   },
@@ -134,10 +134,50 @@ export default function BlogPage() {
     if (canonical) canonical.setAttribute('href', 'https://kmfjournal.com/blog');
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute('content', 'https://kmfjournal.com/blog');
+
+    // JSON-LD: CollectionPage
+    const collectionLd = document.createElement('script');
+    collectionLd.type = 'application/ld+json';
+    collectionLd.id = 'ld-collection';
+    collectionLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'K.M.F. Trading Journal Blog',
+      description: 'Trading insights, app guides, and tips for serious traders.',
+      url: 'https://kmfjournal.com/blog',
+      publisher: { '@type': 'Organization', name: 'K.M.F. Trading Journal', url: 'https://kmfjournal.com', logo: { '@type': 'ImageObject', url: 'https://kmfjournal.com/logo.png' } },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: posts.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `https://kmfjournal.com/blog/${p.slug}`,
+          name: p.title,
+        })),
+      },
+    });
+    document.head.appendChild(collectionLd);
+
+    // JSON-LD: BreadcrumbList
+    const breadcrumbLd = document.createElement('script');
+    breadcrumbLd.type = 'application/ld+json';
+    breadcrumbLd.id = 'ld-blog-breadcrumb';
+    breadcrumbLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://kmfjournal.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kmfjournal.com/blog' },
+      ],
+    });
+    document.head.appendChild(breadcrumbLd);
+
     return () => {
       document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';
       if (canonical) canonical.setAttribute('href', 'https://kmfjournal.com/');
       if (ogUrl) ogUrl.setAttribute('content', 'https://kmfjournal.com/');
+      document.getElementById('ld-collection')?.remove();
+      document.getElementById('ld-blog-breadcrumb')?.remove();
     };
   }, []);
 

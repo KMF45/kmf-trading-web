@@ -63,6 +63,26 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
+
+            <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">From the Blog</h4>
+            <ul className="space-y-2">
+              {[
+                { slug: 'best-free-trading-journal-app-android-2026', title: 'Best Trading Journal App 2026' },
+                { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate' },
+                { slug: 'revenge-trading', title: 'Revenge Trading: How to Stop' },
+                { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule Explained' },
+              ].map((post) => (
+                <li key={post.slug}>
+                  <Link
+                    to={`/blog/${post.slug}`}
+                    className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                             inline-block hover:translate-x-1 duration-200 text-sm"
+                  >
+                    {post.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>

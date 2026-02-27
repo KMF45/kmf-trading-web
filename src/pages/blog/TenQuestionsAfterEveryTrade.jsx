@@ -9,11 +9,16 @@ export default function TenQuestionsAfterEveryTrade() {
       title="10 Questions Every Trader Should Ask After Every Trade"
       metaTitle="10 Post-Trade Review Questions Every Trader Should Ask | K.M.F. Trading Journal"
       metaDescription="The questions you ask after a trade matter more than the result. Here are 10 post-trade review questions that will accelerate your development as a trader."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="January 30, 2026"
+      dateISO="2026-01-30"
       readTime="5 min read"
       category="Improvement"
       categoryColor="#FFB300"
+      relatedArticles={[
+        { slug: 'weekly-trading-review-template', title: 'How to Do a Weekly Trading Review (With a Complete Template)', category: 'Improvement' },
+        { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
+        { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
+      ]}
     >
       <Intro>
         The average retail trader closes a trade, checks the profit or loss number, and moves on. Maybe they feel good. Maybe they feel frustrated. And then they repeat the same patterns next week, next month, and next year. The traders who improve rapidly do something different: they interrogate every trade with specific, structured questions that separate what happened from why it happened.

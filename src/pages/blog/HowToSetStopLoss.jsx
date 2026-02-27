@@ -9,11 +9,16 @@ export default function HowToSetStopLoss() {
       title="How to Set a Stop Loss Properly (Not Just Randomly)"
       metaTitle="How to Set a Stop Loss Properly: 3 Professional Methods | K.M.F. Trading Journal"
       metaDescription="Most traders set stop losses based on dollar amounts or round numbers. Learn the three professional methods for placing stop losses where the market actually invalidates your trade."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="February 6, 2026"
+      dateISO="2026-02-06"
       readTime="7 min read"
       category="Risk Management"
       categoryColor="#00C853"
+      relatedArticles={[
+        { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
+        { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },
+        { slug: 'how-to-recover-from-losing-streak', title: 'How to Recover from a Losing Streak Without Blowing Your Account', category: 'Psychology' },
+      ]}
     >
       <Intro>
         A poorly placed stop loss is often worse than no stop loss at all. Not because the concept of a stop loss is wrong, but because stops placed in the wrong location consistently stop you out of trades that would have been profitable — while providing false security that you have managed your risk. Stop loss placement is a skill, and most retail traders have never been taught it properly.

@@ -50,6 +50,7 @@ export default function BestTradingJournalAndroid2026() {
       headline: 'Best Free Trading Journal App for Android in 2026',
       description: PAGE_DESC,
       datePublished: '2026-02-20',
+      dateModified: '2026-02-27',
       author: { '@type': 'Organization', name: 'K.M.F. Dev Team', url: SITE },
       publisher: { '@type': 'Organization', name: 'K.M.F. Trading Journal', url: SITE, logo: { '@type': 'ImageObject', url: `${SITE}/logo.png` } },
       image: OG_IMAGE,
@@ -335,6 +336,28 @@ export default function BestTradingJournalAndroid2026() {
           <p className="text-kmf-text-secondary leading-relaxed mb-8">
             Edgewonk is excellent for deep analysis but requires a $169 investment and offers no mobile functionality at all.
           </p>
+
+          {/* Related Articles */}
+          <div className="rounded-xl p-6 mt-10 mb-8" style={{ background: 'rgba(79,195,247,0.04)', border: '1px solid rgba(79,195,247,0.12)' }}>
+            <p className="text-xs font-bold text-kmf-accent uppercase tracking-widest mb-4">Related Articles</p>
+            <ul className="space-y-3">
+              {[
+                { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },
+                { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
+                { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
+              ].map((a) => (
+                <li key={a.slug}>
+                  <Link to={`/blog/${a.slug}`} className="group flex items-start gap-3">
+                    <span className="text-kmf-accent mt-0.5 flex-shrink-0">&rarr;</span>
+                    <span>
+                      <span className="text-sm font-medium text-kmf-text-primary group-hover:text-kmf-accent transition-colors">{a.title}</span>
+                      <span className="text-xs text-kmf-text-tertiary ml-2">({a.category})</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Final CTA */}
           <div className="rounded-2xl p-7 text-center"

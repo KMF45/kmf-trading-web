@@ -9,11 +9,16 @@ export default function PositionSizingGuide() {
       title="Position Sizing Guide: How Much Should You Trade?"
       metaTitle="Position Sizing Guide: The Exact Formula for Every Market | K.M.F. Trading Journal"
       metaDescription="Position sizing is the most underrated skill in trading. Learn the exact formula to calculate how much to trade based on your account size, risk tolerance, and stop loss distance."
-      date="February 20, 2026"
-      dateISO="2026-02-20"
+      date="February 10, 2026"
+      dateISO="2026-02-10"
       readTime="7 min read"
       category="Risk Management"
       categoryColor="#00C853"
+      relatedArticles={[
+        { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
+        { slug: 'how-to-set-stop-loss', title: 'How to Set a Stop Loss Properly (Not Just Randomly)', category: 'Risk Management' },
+        { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
+      ]}
     >
       <Intro>
         Take two traders with identical strategies, identical setups, identical entry and exit points. One grows their account consistently for years. The other blows up within months. The difference is almost always position sizing. Position sizing is the single most important variable you directly control in trading — and it is the one most consistently underestimated by beginners.
