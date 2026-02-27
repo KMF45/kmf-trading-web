@@ -38,10 +38,11 @@ const PREMIUM_FEATURES = [
 const CheckRow = ({ text, included, muted }) => (
   <li className="flex items-center gap-3 py-1.5">
     {included ? (
-      <FaCheck style={{ fontSize: 11, color: '#00C853', flexShrink: 0 }} />
+      <FaCheck style={{ fontSize: 11, color: '#00C853', flexShrink: 0 }} aria-hidden="true" />
     ) : (
-      <FaTimes style={{ fontSize: 11, color: '#FF5252', opacity: 0.45, flexShrink: 0 }} />
+      <FaTimes style={{ fontSize: 11, color: '#FF5252', opacity: 0.45, flexShrink: 0 }} aria-hidden="true" />
     )}
+    <span className="sr-only">{included ? 'Included:' : 'Not included:'}</span>
     <span
       className="text-sm"
       style={{ color: included ? (muted ? '#7A9BB0' : '#B0BEC5') : '#B0BEC540' }}

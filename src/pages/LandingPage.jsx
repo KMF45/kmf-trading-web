@@ -14,7 +14,7 @@ const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <BetaBanner />
         <WhyKMF />

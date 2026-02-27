@@ -31,7 +31,7 @@ const MarketTicker = () => {
     }}>
       <div style={{ position: 'absolute', top: 0, left: 0, width: 100, height: '100%', background: 'linear-gradient(to right, #0F1115, transparent)', zIndex: 2, pointerEvents: 'none' }} />
       <div style={{ position: 'absolute', top: 0, right: 0, width: 100, height: '100%', background: 'linear-gradient(to left, #0F1115, transparent)', zIndex: 2, pointerEvents: 'none' }} />
-      <div style={{ display: 'flex', animation: 'kmf-ticker 32s linear infinite', width: 'max-content' }}>
+      <div style={{ display: 'flex', animation: 'kmf-ticker 32s linear infinite', width: 'max-content', willChange: 'transform' }}>
         {items.map((item, i) => (
           <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 7, padding: '0 22px', flexShrink: 0 }}>
             <span style={{ fontSize: 11, fontWeight: 700, color: '#7A9BB0', letterSpacing: '0.07em' }}>{item.symbol}</span>
@@ -69,10 +69,10 @@ const Hero = () => (
         maskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%)',
         WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%)',
       }} />
-      <div style={{ position: 'absolute', top: '-8%', left: '-4%', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,195,247,0.09) 0%, transparent 70%)', animation: 'kmf-orb-pulse 8s ease-in-out infinite' }} />
-      <div style={{ position: 'absolute', bottom: '-8%', right: '-4%', width: 540, height: 540, borderRadius: '50%', background: 'radial-gradient(circle, rgba(38,198,218,0.07) 0%, transparent 70%)', animation: 'kmf-orb-pulse 10s ease-in-out infinite', animationDelay: '3s' }} />
-      <div style={{ position: 'absolute', top: '20%', right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,152,0,0.05) 0%, transparent 70%)', animation: 'kmf-orb-pulse 13s ease-in-out infinite', animationDelay: '6s' }} />
-      <div style={{ position: 'absolute', bottom: '20%', left: '6%', width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,215,64,0.05) 0%, transparent 70%)', animation: 'kmf-orb-pulse 11s ease-in-out infinite', animationDelay: '2s' }} />
+      <div style={{ position: 'absolute', top: '-8%', left: '-4%', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,195,247,0.09) 0%, transparent 70%)', animation: 'kmf-orb-pulse 8s ease-in-out infinite', willChange: 'transform, opacity' }} />
+      <div style={{ position: 'absolute', bottom: '-8%', right: '-4%', width: 540, height: 540, borderRadius: '50%', background: 'radial-gradient(circle, rgba(38,198,218,0.07) 0%, transparent 70%)', animation: 'kmf-orb-pulse 10s ease-in-out infinite', animationDelay: '3s', willChange: 'transform, opacity' }} />
+      <div style={{ position: 'absolute', top: '20%', right: '6%', width: 280, height: 280, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,152,0,0.05) 0%, transparent 70%)', animation: 'kmf-orb-pulse 13s ease-in-out infinite', animationDelay: '6s', willChange: 'transform, opacity' }} />
+      <div style={{ position: 'absolute', bottom: '20%', left: '6%', width: 240, height: 240, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,215,64,0.05) 0%, transparent 70%)', animation: 'kmf-orb-pulse 11s ease-in-out infinite', animationDelay: '2s', willChange: 'transform, opacity' }} />
       {/* vignette behind text */}
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 55% 60% at 50% 46%, rgba(10,12,16,0.85) 0%, rgba(10,12,16,0.40) 50%, transparent 75%)' }} />
     </div>
