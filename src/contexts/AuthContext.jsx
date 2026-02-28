@@ -1,15 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import {
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
-  signOut,
-  sendPasswordResetEmail,
-  sendEmailVerification,
-  signInWithPopup,
-  GoogleAuthProvider
-} from 'firebase/auth';
-import { auth, googleProvider } from '../config/firebase';
+import { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 const AuthContext = createContext(null);
 
@@ -19,27 +8,68 @@ export const useAuth = () => {
   return context;
 };
 
+// Lazy-load Firebase to keep it off the critical path (477 kB deferred)
+let _firebase = null;
+const getFirebase = async () => {
+  if (_firebase) return _firebase;
+  const [config, authMod] = await Promise.all([
+    import('../config/firebase'),
+    import('firebase/auth'),
+  ]);
+  _firebase = {
+    auth: config.auth,
+    googleProvider: config.googleProvider,
+    onAuthStateChanged: authMod.onAuthStateChanged,
+    signInWithEmailAndPassword: authMod.signInWithEmailAndPassword,
+    createUserWithEmailAndPassword: authMod.createUserWithEmailAndPassword,
+    signOut: authMod.signOut,
+    sendPasswordResetEmail: authMod.sendPasswordResetEmail,
+    sendEmailVerification: authMod.sendEmailVerification,
+    signInWithPopup: authMod.signInWithPopup,
+  };
+  return _firebase;
+};
+
+const getErrorMessage = (code) => {
+  const errors = {
+    'auth/user-not-found': 'No account found with this email',
+    'auth/wrong-password': 'Incorrect password',
+    'auth/invalid-credential': 'Invalid email or password',
+    'auth/email-already-in-use': 'Email already registered',
+    'auth/weak-password': 'Password must be at least 6 characters',
+    'auth/invalid-email': 'Invalid email address',
+    'auth/too-many-requests': 'Too many attempts. Try again later',
+    'auth/popup-closed-by-user': 'Sign-in popup was closed',
+    'auth/network-request-failed': 'Network error. Check your connection',
+  };
+  return errors[code] || 'An error occurred. Please try again';
+};
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
+    let unsubscribe;
+    getFirebase().then((fb) => {
+      unsubscribe = fb.onAuthStateChanged(fb.auth, (u) => {
+        setUser(u);
+        setLoading(false);
+      });
     });
-    return unsubscribe;
+    return () => unsubscribe?.();
   }, []);
 
-  const login = async (email, password) => {
+  const login = useCallback(async (email, password) => {
     setError('');
     try {
-      const result = await signInWithEmailAndPassword(auth, email, password);
+      const fb = await getFirebase();
+      const result = await fb.signInWithEmailAndPassword(fb.auth, email, password);
       if (!result.user.emailVerified) {
         const reviewAccounts = ['testuser@email.com', 'kmf45.ai@gmail.com'];
         if (!reviewAccounts.includes(email.toLowerCase())) {
-          await signOut(auth);
+          await fb.signOut(fb.auth);
           return { success: false, needsVerification: true };
         }
       }
@@ -48,36 +78,39 @@ export const AuthProvider = ({ children }) => {
       setError(getErrorMessage(err.code));
       return { success: false, error: getErrorMessage(err.code) };
     }
-  };
+  }, []);
 
-  const register = async (email, password) => {
+  const register = useCallback(async (email, password) => {
     setError('');
     try {
-      const result = await createUserWithEmailAndPassword(auth, email, password);
-      await sendEmailVerification(result.user);
-      await signOut(auth);
+      const fb = await getFirebase();
+      const result = await fb.createUserWithEmailAndPassword(fb.auth, email, password);
+      await fb.sendEmailVerification(result.user);
+      await fb.signOut(fb.auth);
       return { success: true, needsVerification: true };
     } catch (err) {
       setError(getErrorMessage(err.code));
       return { success: false, error: getErrorMessage(err.code) };
     }
-  };
+  }, []);
 
-  const loginWithGoogle = async () => {
+  const loginWithGoogle = useCallback(async () => {
     setError('');
     try {
-      await signInWithPopup(auth, googleProvider);
+      const fb = await getFirebase();
+      await fb.signInWithPopup(fb.auth, fb.googleProvider);
       return { success: true };
     } catch (err) {
       setError(getErrorMessage(err.code));
       return { success: false, error: getErrorMessage(err.code) };
     }
-  };
+  }, []);
 
-  const resetPassword = async (email) => {
+  const resetPassword = useCallback(async (email) => {
     setError('');
     try {
-      await sendPasswordResetEmail(auth, email, {
+      const fb = await getFirebase();
+      await fb.sendPasswordResetEmail(fb.auth, email, {
         url: 'https://kmfjournal.com',
         handleCodeInApp: false
       });
@@ -86,37 +119,24 @@ export const AuthProvider = ({ children }) => {
       setError(getErrorMessage(err.code));
       return { success: false, error: getErrorMessage(err.code) };
     }
-  };
+  }, []);
 
-  const logout = async () => {
-    await signOut(auth);
-  };
+  const logout = useCallback(async () => {
+    const fb = await getFirebase();
+    await fb.signOut(fb.auth);
+  }, []);
 
-  const resendVerification = async (email, password) => {
+  const resendVerification = useCallback(async (email, password) => {
     try {
-      const result = await signInWithEmailAndPassword(auth, email, password);
-      await sendEmailVerification(result.user);
-      await signOut(auth);
+      const fb = await getFirebase();
+      const result = await fb.signInWithEmailAndPassword(fb.auth, email, password);
+      await fb.sendEmailVerification(result.user);
+      await fb.signOut(fb.auth);
       return { success: true };
     } catch (err) {
       return { success: false, error: getErrorMessage(err.code) };
     }
-  };
-
-  const getErrorMessage = (code) => {
-    const errors = {
-      'auth/user-not-found': 'No account found with this email',
-      'auth/wrong-password': 'Incorrect password',
-      'auth/invalid-credential': 'Invalid email or password',
-      'auth/email-already-in-use': 'Email already registered',
-      'auth/weak-password': 'Password must be at least 6 characters',
-      'auth/invalid-email': 'Invalid email address',
-      'auth/too-many-requests': 'Too many attempts. Try again later',
-      'auth/popup-closed-by-user': 'Sign-in popup was closed',
-      'auth/network-request-failed': 'Network error. Check your connection',
-    };
-    return errors[code] || 'An error occurred. Please try again';
-  };
+  }, []);
 
   const value = {
     user,

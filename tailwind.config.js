@@ -18,7 +18,7 @@ export default {
           text: {
             primary: '#FFFFFF',
             secondary: '#B0BEC5',
-            tertiary: '#A0B4BE',
+            tertiary: '#B8CAD4',
           },
           profit: '#00E676',
           loss: '#FF5252',

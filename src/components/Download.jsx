@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import { FaAndroid, FaCheckCircle, FaRocket, FaDatabase, FaMobileAlt, FaLock, FaGlobe, FaCloud, FaShieldAlt } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
-import { db } from '../config/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+// Firebase loaded lazily on form submit (not on page load)
+const getFirestore = async () => {
+  const [{ db }, fs] = await Promise.all([
+    import('../config/firebase'),
+    import('firebase/firestore'),
+  ]);
+  return { db, collection: fs.collection, addDoc: fs.addDoc, serverTimestamp: fs.serverTimestamp };
+};
 
 const Download = () => {
   const [email, setEmail] = useState('');
@@ -13,10 +19,11 @@ const Download = () => {
     if (!email.trim()) return;
     setStatus('sending');
     try {
-      await addDoc(collection(db, 'betaSignups'), {
+      const fs = await getFirestore();
+      await fs.addDoc(fs.collection(fs.db, 'betaSignups'), {
         email: email.trim().toLowerCase(),
         source: 'launch-notify',
-        createdAt: serverTimestamp(),
+        createdAt: fs.serverTimestamp(),
       });
       setStatus('success');
       setEmail('');

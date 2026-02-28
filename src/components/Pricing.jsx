@@ -40,12 +40,12 @@ const CheckRow = ({ text, included, muted }) => (
     {included ? (
       <FaCheck style={{ fontSize: 11, color: '#00C853', flexShrink: 0 }} aria-hidden="true" />
     ) : (
-      <FaTimes style={{ fontSize: 11, color: '#FF5252', opacity: 0.45, flexShrink: 0 }} aria-hidden="true" />
+      <FaTimes style={{ fontSize: 11, color: '#FF5252', opacity: 0.7, flexShrink: 0 }} aria-hidden="true" />
     )}
     <span className="sr-only">{included ? 'Included:' : 'Not included:'}</span>
     <span
       className="text-sm"
-      style={{ color: included ? (muted ? '#7A9BB0' : '#B0BEC5') : '#B0BEC540' }}
+      style={{ color: included ? (muted ? '#8FB3C5' : '#B8CAD4') : '#6B7D87' }}
     >
       {text}
     </span>
@@ -104,7 +104,7 @@ const Pricing = () => (
           <a
             href="#beta"
             className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm mb-7 transition-all duration-200 hover:scale-[1.02]"
-            style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.10)', color: '#B0BEC5' }}
+            style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.10)', color: '#B8CAD4' }}
           >
             <FaClock style={{ fontSize: 13 }} />
             Coming Soon
@@ -112,7 +112,7 @@ const Pricing = () => (
 
           <ul className="space-y-0 flex-1">
             {FREE_FEATURES.map((f) => <CheckRow key={f} text={f} included={true} />)}
-            <div className="my-2 border-t border-white/5" />
+            <li aria-hidden="true" className="my-2 border-t border-white/5" role="separator" />
             {FREE_MISSING.map((f) => <CheckRow key={f} text={f} included={false} />)}
           </ul>
         </div>
@@ -219,7 +219,7 @@ const Pricing = () => (
       </div>
 
       {/* Footer note */}
-      <p className="text-center text-xs text-kmf-text-tertiary/50 mt-8">
+      <p className="text-center text-xs mt-8" style={{ color: '#6B7D87' }}>
         Prices shown in USD. Billing handled securely via Google Play. Cancel anytime.
       </p>
     </div>

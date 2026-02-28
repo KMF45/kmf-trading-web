@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import { FaRocket, FaEnvelope, FaInfinity, FaBell, FaCheckCircle } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
-import { db } from '../config/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+// Firebase loaded lazily on form submit (not on page load)
+const getFirestore = async () => {
+  const [{ db }, fs] = await Promise.all([
+    import('../config/firebase'),
+    import('firebase/firestore'),
+  ]);
+  return { db, collection: fs.collection, addDoc: fs.addDoc, serverTimestamp: fs.serverTimestamp };
+};
 
 const perks = [
   { icon: FaInfinity,  text: 'Free lifetime access to Premium' },
@@ -20,11 +26,12 @@ const BetaBanner = () => {
     if (!email.trim()) return;
     setStatus('sending');
     try {
-      await addDoc(collection(db, 'betaSignups'), {
+      const fs = await getFirestore();
+      await fs.addDoc(fs.collection(fs.db, 'betaSignups'), {
         name: name.trim(),
         email: email.trim().toLowerCase(),
         source: 'landing-beta',
-        createdAt: serverTimestamp(),
+        createdAt: fs.serverTimestamp(),
       });
       setStatus('success');
       setName('');
@@ -97,7 +104,7 @@ const BetaBanner = () => {
                         style={{ background: 'rgba(255,179,0,0.14)', border: '1px solid rgba(255,179,0,0.25)' }}>
                         <Icon style={{ fontSize: 12, color: '#FFB300' }} aria-hidden="true" />
                       </div>
-                      <span className="text-sm font-medium" style={{ color: '#C8B090' }}>{p.text}</span>
+                      <span className="text-sm font-medium" style={{ color: '#D4C0A0' }}>{p.text}</span>
                     </li>
                   );
                 })}
@@ -173,8 +180,8 @@ const BetaBanner = () => {
                   }}
                 >
                   <p className="text-2xl font-extrabold mb-1" style={{ color: '#FFB300', letterSpacing: '-0.02em' }}>{s.value}</p>
-                  <p className="text-xs font-semibold" style={{ color: '#C8B090' }}>{s.label}</p>
-                  <p className="text-[10px] mt-0.5" style={{ color: '#7A6040' }}>{s.sub}</p>
+                  <p className="text-xs font-semibold" style={{ color: '#D4C0A0' }}>{s.label}</p>
+                  <p className="text-[10px] mt-0.5" style={{ color: '#9A8060' }}>{s.sub}</p>
                 </div>
               ))}
             </div>
