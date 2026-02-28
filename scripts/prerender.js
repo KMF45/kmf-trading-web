@@ -32,6 +32,11 @@ const routes = [
   '/blog/position-sizing-guide',
   '/blog/pre-trade-checklist',
   '/blog/best-free-trading-journal-app-android-2026',
+  '/blog/execution-gap-backtest-vs-live-trading',
+  '/blog/prop-firm-trading-journal',
+  '/blog/good-loss-vs-bad-win',
+  '/blog/ghost-trades-journaling-missed-opportunities',
+  '/blog/crypto-vs-forex-journaling',
 ];
 
 // Simple static file server that falls back to index.html (SPA)

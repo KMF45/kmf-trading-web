@@ -21,6 +21,11 @@ const TradingExpectancyExplained = lazy(() => import('./pages/blog/TradingExpect
 const HowToSetStopLoss = lazy(() => import('./pages/blog/HowToSetStopLoss'));
 const PositionSizingGuide = lazy(() => import('./pages/blog/PositionSizingGuide'));
 const PreTradeChecklist = lazy(() => import('./pages/blog/PreTradeChecklist'));
+const ExecutionGap = lazy(() => import('./pages/blog/ExecutionGap'));
+const PropFirmJournal = lazy(() => import('./pages/blog/PropFirmJournal'));
+const GoodLossVsBadWin = lazy(() => import('./pages/blog/GoodLossVsBadWin'));
+const GhostTrades = lazy(() => import('./pages/blog/GhostTrades'));
+const CryptoVsForexJournaling = lazy(() => import('./pages/blog/CryptoVsForexJournaling'));
 
 // Lazy loaded (only when navigating away from landing)
 const LoginPage = lazy(() => import('./pages/auth/LoginPage'));
@@ -106,6 +111,11 @@ function App() {
             <Route path="/blog/how-to-set-stop-loss" element={<HowToSetStopLoss />} />
             <Route path="/blog/position-sizing-guide" element={<PositionSizingGuide />} />
             <Route path="/blog/pre-trade-checklist" element={<PreTradeChecklist />} />
+            <Route path="/blog/execution-gap-backtest-vs-live-trading" element={<ExecutionGap />} />
+            <Route path="/blog/prop-firm-trading-journal" element={<PropFirmJournal />} />
+            <Route path="/blog/good-loss-vs-bad-win" element={<GoodLossVsBadWin />} />
+            <Route path="/blog/ghost-trades-journaling-missed-opportunities" element={<GhostTrades />} />
+            <Route path="/blog/crypto-vs-forex-journaling" element={<CryptoVsForexJournaling />} />
 
             {/* 404 */}
             <Route path="*" element={<NotFoundPage />} />

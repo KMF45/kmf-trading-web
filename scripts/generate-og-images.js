@@ -27,6 +27,11 @@ const articles = [
   { slug: 'position-sizing-guide', title: 'Position Sizing Guide:\nHow Much Should\nYou Trade?', category: 'Risk Management', color: '#00C853' },
   { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist:\n10 Things to Verify\nBefore Every Trade Entry', category: 'Discipline', color: '#FFB300' },
   { slug: 'best-free-trading-journal-app-android-2026', title: 'Best Free Trading Journal\nApp for Android\nin 2026', category: 'App Reviews', color: '#4FC3F7' },
+  { slug: 'execution-gap-backtest-vs-live-trading', title: 'The Execution Gap:\nWhy Your Strategy Works\nin Backtesting But Fails Live', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'prop-firm-trading-journal', title: 'Prop Firm Killers:\nHow a Trading Journal\nSaves Your Funded Account', category: 'Risk Management', color: '#00C853' },
+  { slug: 'good-loss-vs-bad-win', title: 'Good Losses, Bad Wins:\nWhy the Trade You\'re Proud of\nMight Be Your Worst', category: 'Improvement', color: '#FFB300' },
+  { slug: 'ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades:\nWhy the Trades You Don\'t Take\nCost You More Than Losses', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'crypto-vs-forex-journaling', title: 'Crypto vs Forex:\nWhy Your Trading Journal\nNeeds Different Rules', category: 'Risk Management', color: '#00C853' },
 ];
 
 function hexToRgb(hex) {
