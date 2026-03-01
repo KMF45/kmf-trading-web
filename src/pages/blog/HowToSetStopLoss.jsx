@@ -15,9 +15,9 @@ export default function HowToSetStopLoss() {
       category="Risk Management"
       categoryColor="#00C853"
       relatedArticles={[
+        { slug: 'crypto-vs-forex-journaling', title: 'Crypto vs Forex: Why Your Trading Journal Needs Different Rules for Each Market', category: 'Risk Management' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
         { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },
-        { slug: 'how-to-recover-from-losing-streak', title: 'How to Recover from a Losing Streak Without Blowing Your Account', category: 'Psychology' },
       ]}
     >
       <Intro>

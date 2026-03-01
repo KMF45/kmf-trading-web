@@ -17,7 +17,7 @@ export default function CryptoVsForexJournaling() {
       relatedArticles={[
         { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
-        { slug: 'stop-loss-guide', title: 'Stop Loss Guide: How to Protect Your Capital Without Killing Your Trades', category: 'Risk Management' },
+        { slug: 'how-to-set-stop-loss', title: 'How to Set a Stop Loss Properly (Not Just Randomly)', category: 'Risk Management' },
       ]}
     >
       <Intro>

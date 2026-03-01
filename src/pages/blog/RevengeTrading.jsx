@@ -15,9 +15,9 @@ export default function RevengeTrading() {
       category="Psychology"
       categoryColor="#CE93D8"
       relatedArticles={[
+        { slug: 'ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades: Why the Trades You Don\'t Take Are Costing You More Than the Ones You Lose', category: 'Psychology' },
         { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
         { slug: 'how-to-recover-from-losing-streak', title: 'How to Recover from a Losing Streak Without Blowing Your Account', category: 'Psychology' },
-        { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
       ]}
     >
       <Intro>
