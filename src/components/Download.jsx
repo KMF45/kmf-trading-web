@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaAndroid, FaCheckCircle, FaRocket, FaDatabase, FaMobileAlt, FaLock, FaGlobe, FaCloud, FaShieldAlt } from 'react-icons/fa';
+import { FaAndroid, FaCheckCircle, FaLock, FaGlobe, FaCloud, FaShieldAlt } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 // Firebase loaded lazily on form submit (not on page load)
 const getFirestore = async () => {
@@ -101,26 +101,6 @@ const Download = () => {
                   Something went wrong. Please try again.
                 </p>
               )}
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-                {[
-                  { label: 'Latest Version', value: 'v1.0.0', Icon: FaRocket },
-                  { label: 'App Size', value: '10 MB', Icon: FaDatabase },
-                  { label: 'Minimum Version', value: 'Android 8.0+', Icon: FaMobileAlt },
-                ].map((spec) => (
-                  <div
-                    key={spec.label}
-                    className="bg-kmf-surface/50 rounded-xl p-6 text-center border border-kmf-accent/20
-                             hover:border-kmf-accent/50 transition-all duration-300 hover-lift"
-                  >
-                    <div className="flex justify-center mb-2">
-                      <spec.Icon className="text-3xl text-kmf-accent" aria-hidden="true" />
-                    </div>
-                    <div className="text-2xl font-bold text-kmf-accent mb-1">{spec.value}</div>
-                    <div className="text-sm text-kmf-text-tertiary">{spec.label}</div>
-                  </div>
-                ))}
-              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 {[
