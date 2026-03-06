@@ -88,8 +88,33 @@ async function prerender() {
     // Wait a bit for React to settle and useEffect to fire
     await new Promise(r => setTimeout(r, 1500));
 
-    const html = await page.content();
+    let html = await page.content();
     await page.close();
+
+    // Remove homepage-only JSON-LD from non-homepage routes
+    // (SoftwareApplication, FAQPage, Organization, WebSite, homepage BreadcrumbList)
+    if (route !== '/') {
+      html = html.replace(
+        /<!-- Structured Data: SoftwareApplication -->[\s\S]*?<\/script>/,
+        ''
+      );
+      html = html.replace(
+        /<!-- Structured Data: Organization -->[\s\S]*?<\/script>/,
+        ''
+      );
+      html = html.replace(
+        /<!-- Structured Data: WebSite -->[\s\S]*?<\/script>/,
+        ''
+      );
+      html = html.replace(
+        /<!-- Structured Data: FAQPage[\s\S]*?<\/script>/,
+        ''
+      );
+      html = html.replace(
+        /<!-- Structured Data: BreadcrumbList -->[\s\S]*?<\/script>/,
+        ''
+      );
+    }
 
     // Write to dist
     const outDir = route === '/' ? DIST : join(DIST, route);

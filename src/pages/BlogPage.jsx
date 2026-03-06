@@ -245,6 +245,14 @@ export default function BlogPage() {
             </p>
           </div>
 
+          {/* Internal links for SEO */}
+          <div className="flex flex-wrap gap-3 mb-10 text-xs">
+            <Link to="/#features" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">Features</Link>
+            <Link to="/#pricing" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">Pricing</Link>
+            <Link to="/#download" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">Download</Link>
+            <Link to="/#faq" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">FAQ</Link>
+          </div>
+
           {/* Posts */}
           <div className="space-y-5">
             {posts.map((post) => (

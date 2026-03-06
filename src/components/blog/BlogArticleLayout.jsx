@@ -164,6 +164,13 @@ function ArticleCTA() {
         style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}>
         Apply for Beta Access →
       </a>
+      <div className="flex items-center justify-center gap-4 mt-4 text-xs">
+        <Link to="/#features" className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors">See All Features</Link>
+        <span className="text-kmf-text-tertiary/40">|</span>
+        <Link to="/#pricing" className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors">View Pricing</Link>
+        <span className="text-kmf-text-tertiary/40">|</span>
+        <Link to="/blog" className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors">More Articles</Link>
+      </div>
     </div>
   );
 }

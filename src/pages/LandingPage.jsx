@@ -7,6 +7,7 @@ import HowItWorks from '../components/HowItWorks';
 import Testimonials from '../components/Testimonials';
 import Pricing from '../components/Pricing';
 import Download from '../components/Download';
+import BlogHighlights from '../components/BlogHighlights';
 import FAQ from '../components/FAQ';
 import Footer from '../components/Footer';
 
@@ -23,6 +24,7 @@ const LandingPage = () => {
         <Testimonials />
         <Pricing />
         <Download />
+        <BlogHighlights />
         <FAQ />
       </main>
       <Footer />

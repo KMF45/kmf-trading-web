@@ -52,8 +52,8 @@ const CheckRow = ({ text, included, muted }) => (
   </li>
 );
 
-const MONTHLY_PRICE = 5.99;
-const ANNUAL_PRICE = 59.99;
+const MONTHLY_PRICE = 9.99;
+const ANNUAL_PRICE = 99.99;
 const SAVE_PERCENT = Math.round((1 - ANNUAL_PRICE / (MONTHLY_PRICE * 12)) * 100);
 
 const Pricing = () => (
