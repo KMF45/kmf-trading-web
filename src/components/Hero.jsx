@@ -101,8 +101,8 @@ const Hero = () => (
       </p>
 
       <p className="text-xl text-kmf-text-tertiary max-w-2xl mx-auto mb-12">
-        Professional trading journal for forex, stocks and crypto traders. Track your trades,
-        analyze performance, and improve your strategy.
+        Professional trading journal for forex, stocks and crypto traders. Track trades, analyze performance,
+        master your psychology, and earn achievements as you improve.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">

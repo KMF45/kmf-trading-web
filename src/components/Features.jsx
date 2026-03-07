@@ -1,6 +1,7 @@
 import {
   FaHome, FaPlus, FaHistory, FaChartLine, FaClipboardCheck,
-  FaTasks, FaCalculator, FaBell, FaDatabase, FaGlobe
+  FaTasks, FaCalculator, FaBell, FaDatabase, FaGlobe,
+  FaBrain, FaTrophy, FaBook, FaClock
 } from 'react-icons/fa';
 
 const primaryFeatures = [
@@ -39,26 +40,44 @@ const primaryFeatures = [
   {
     icon: FaPlus,
     title: 'Smart Trade Entry',
-    description: 'Fast entry with instrument autocomplete, SL/TP cross-validation, pre-trade checklist, and P/L tracking.',
+    description: 'Fast entry with instrument autocomplete, SL/TP cross-validation, pre-trade checklist, emotion tracking, and screenshot upload.',
     color: 'from-green-500 to-emerald-500',
     accentColor: '#00C853',
-    tags: ['< 30 sec entry', 'SL/TP Validation', 'Checklist'],
+    tags: ['< 30 sec entry', 'SL/TP Validation', 'Emotions', 'Screenshots'],
+  },
+  {
+    icon: FaBrain,
+    title: 'Trading Psychology',
+    description: 'Track pre-trade and post-trade emotions, detect tilt patterns, discover your trader personality profile, and measure honesty with the Honesty Mirror.',
+    color: 'from-purple-500 to-pink-500',
+    accentColor: '#CE93D8',
+    tags: ['Emotion Tracking', 'Tilt Detection', 'Personality Profile', 'Honesty Mirror'],
+  },
+  {
+    icon: FaTrophy,
+    title: 'Achievements & Gamification',
+    description: 'Earn XP, unlock badges, build streaks, and climb trader tiers from Novice to Master Strategist. Stay motivated with progress tracking.',
+    color: 'from-yellow-400 to-amber-500',
+    accentColor: '#FFB300',
+    tags: ['XP & Levels', 'Badges', 'Streaks', 'Trader Tiers'],
   },
   {
     icon: FaHistory,
     title: 'Trade History',
     description: 'Full history with search, result filters, finalize pending trades, edit date/time, and delete confirmation.',
-    color: 'from-purple-500 to-pink-500',
-    accentColor: '#CE93D8',
+    color: 'from-rose-500 to-red-500',
+    accentColor: '#FF5252',
     tags: ['Search', 'Filter by Result', 'Edit & Delete'],
   },
 ];
 
 const secondaryFeatures = [
-  { icon: FaTasks,    title: 'Custom Checklists',    description: 'Build and manage your own pre-trade checklists' },
-  { icon: FaBell,     title: 'Smart Notifications',  description: 'Daily reminders and weekly review alerts' },
-  { icon: FaDatabase, title: 'Export Data',           description: 'Export trades to JSON, CSV or PDF anytime' },
-  { icon: FaGlobe,    title: '8 Languages',           description: 'EN, RO, RU, JA, FR, DE, ZH and more' },
+  { icon: FaTasks,       title: 'Custom Checklists',    description: 'Build and manage your own pre-trade checklists' },
+  { icon: FaBell,        title: 'Smart Notifications',  description: 'Daily reminders and weekly review alerts' },
+  { icon: FaBook,        title: 'Trading Diary',        description: 'Free-form journal for reflections and lessons learned' },
+  { icon: FaClock,       title: 'Session Analysis',     description: 'Track performance across Asian, London & NY sessions' },
+  { icon: FaDatabase,    title: 'Export & Backup',      description: 'Export trades to JSON, CSV or PDF. Cloud backup & restore' },
+  { icon: FaGlobe,       title: '8 Languages',          description: 'EN, RO, RU, JA, FR, DE, ZH and more' },
 ];
 
 const PrimaryCard = ({ feature, index }) => {
@@ -166,7 +185,7 @@ const Features = () => {
         </div>
 
         {/* Secondary features — 4 columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-16">
           {secondaryFeatures.map((feature, index) => (
             <SecondaryCard key={index} feature={feature} />
           ))}

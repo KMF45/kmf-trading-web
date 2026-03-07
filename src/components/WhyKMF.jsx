@@ -13,7 +13,7 @@ const items = [
     icon: FaBrain,
     title: 'Psychology Meets Analytics',
     description:
-      'Other journals track P/L. KMF tracks discipline. Pre-trade checklists, weekly self-reviews, discipline score, and goal tracking — because mindset makes the difference.',
+      'Other journals track P/L. KMF tracks your mind. Emotion tracking, tilt detection, trader personality profiling, honesty mirror, and gamification — because mindset makes the difference.',
     accent: '#CE93D8',
     tag: 'beyond the numbers',
   },

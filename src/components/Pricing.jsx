@@ -8,6 +8,7 @@ const FREE_FEATURES = [
   'Win rate & basic P/L',
   'Lot size calculator',
   'Pre-trade checklist',
+  'Trading diary',
   'Offline access',
   '8 languages',
 ];
@@ -17,21 +18,32 @@ const FREE_MISSING = [
   'Advanced statistics',
   'Cloud sync (Android + Web)',
   'Weekly review & goals',
+  'Emotion tracking & tilt detection',
+  'Trader personality profile',
+  'Achievements & gamification',
   'Smart notifications',
-  'Export data (CSV / JSON / PDF)',
+  'Screenshot upload',
+  'Export & backup (CSV / JSON / PDF)',
 ];
 
 const PREMIUM_FEATURES = [
   'Everything in Free',
+  '14-day free trial',
   'Unlimited trades',
   'Advanced statistics',
   'Cloud sync (Android + Web)',
   'Weekly review & goals',
+  'Emotion tracking & tilt detection',
+  'Trader personality profile',
+  'Honesty Mirror',
+  'Achievements, XP & trader tiers',
+  'Session analysis (Asia/London/NY)',
   'Smart notifications',
-  'Export data (CSV / JSON / PDF)',
+  'Screenshot upload',
+  'Export & backup (CSV / JSON / PDF)',
   'Balance curve & drawdown chart',
-  'Discipline score tracking',
   'R-multiple & Expectancy',
+  'Trade setups with per-setup stats',
   'Priority support',
 ];
 
@@ -52,8 +64,8 @@ const CheckRow = ({ text, included, muted }) => (
   </li>
 );
 
-const MONTHLY_PRICE = 9.99;
-const ANNUAL_PRICE = 99.99;
+const MONTHLY_PRICE = 4.99;
+const ANNUAL_PRICE = 29.99;
 const SAVE_PERCENT = Math.round((1 - ANNUAL_PRICE / (MONTHLY_PRICE * 12)) * 100);
 
 const Pricing = () => (
@@ -74,7 +86,7 @@ const Pricing = () => (
           <span className="text-kmf-text-primary">Premium to Dominate.</span>
         </h2>
         <p className="text-lg text-kmf-text-tertiary max-w-xl mx-auto leading-relaxed">
-          No credit card required to get started. Core journaling is free forever.
+          No credit card required. Core journaling is free forever. Try Premium free for 14 days.
         </p>
       </div>
 

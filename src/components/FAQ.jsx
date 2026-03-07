@@ -4,31 +4,51 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 const faqs = [
   {
     question: 'What is K.M.F. Trading Journal?',
-    answer: 'K.M.F. Trading Journal is a professional trading journal application for forex, stocks, and crypto traders. It helps you track trades, analyze performance with advanced statistics like win rate, profit factor, and expectancy, manage risk with a lot size calculator, and improve discipline with weekly reviews and pre-trade checklists.',
+    answer: 'K.M.F. Trading Journal is a professional trading journal application for forex, stocks, and crypto traders. It helps you track trades, analyze performance with advanced statistics, manage risk with a lot size calculator, track emotions and trading psychology, earn achievements, and improve discipline with weekly reviews and pre-trade checklists.',
   },
   {
     question: 'Is K.M.F. Trading Journal free?',
-    answer: 'K.M.F. Trading Journal is free to download with core features. A premium subscription is available for advanced analytics, cloud sync, and additional premium features.',
+    answer: 'Yes. Core features like trade logging (50/month), history, lot calculator, checklists, and a trading diary are free forever. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 14 days — no credit card required.',
+  },
+  {
+    question: 'What is the 14-day free trial?',
+    answer: 'Every new user gets 14 days of full Premium access for free. You can explore all features — unlimited trades, advanced statistics, emotion tracking, personality profile, achievements, cloud sync, and export — with no commitment. After the trial, you keep free-tier access or subscribe to stay Premium.',
   },
   {
     question: 'What platforms does K.M.F. Trading Journal support?',
-    answer: 'K.M.F. Trading Journal is available on Android devices (Android 8.0+) and as a web application at kmfjournal.com, with cloud sync between both platforms.',
+    answer: 'K.M.F. Trading Journal is available on Android devices (Android 7.0+) and as a web application at kmfjournal.com, with cloud sync between both platforms.',
   },
   {
-    question: 'What languages are supported?',
-    answer: 'The app supports 8 languages: English, English (US), Romanian, Russian, Japanese, French, German, and Chinese.',
+    question: 'How does emotion tracking and tilt detection work?',
+    answer: 'Before and after each trade, you log your emotional state (Calm, Confident, Anxious, Frustrated, Fearful, or Excited). The app builds an emotion heatmap calendar, detects tilt patterns with a 4-level warning system, and uses the Honesty Mirror to correlate your self-ratings with actual P/L — helping you identify psychological blind spots.',
   },
   {
-    question: 'Can I export my trading data?',
-    answer: 'Yes, you can export your trade data to JSON and CSV formats, as well as PDF reports for comprehensive record-keeping.',
+    question: 'What is the trader personality profile?',
+    answer: 'Based on your trading behavior, the app identifies your trader archetype: Sniper (disciplined, low frequency), Robot (mechanical, rule-based), Momentum Rider (trend-follower), Wave Rider (oscillator-based), Gambler (risky entries), or Revenge Trader (emotional overtrading). This helps you understand your patterns and improve.',
+  },
+  {
+    question: 'How does the achievement and gamification system work?',
+    answer: 'You earn XP for logging trades, completing checklists, doing weekly reviews, and maintaining discipline. Unlock bronze, silver, and gold badges, build streaks, and climb four trader tiers: Novice, Disciplined Trader, Risk Manager, and Master Strategist. It keeps you motivated and consistent.',
   },
   {
     question: 'What statistics does K.M.F. Trading Journal track?',
-    answer: 'The app tracks win rate, profit factor, expectancy, average R-multiple, max drawdown, monthly P/L, discipline scores, best and worst trades, top-performing instruments, and balance evolution over time.',
+    answer: 'The app tracks win rate, profit factor, expectancy, average R-multiple, max drawdown, monthly P/L, discipline scores, best and worst trades, top-performing instruments, balance evolution, session performance (Asian/London/NY), and per-setup win rates.',
+  },
+  {
+    question: 'Can I track trade setups?',
+    answer: 'Yes. You can create named trading setups and the app tracks per-setup statistics including win rate, total trades, average profit, and average loss — so you can see which setups actually work.',
+  },
+  {
+    question: 'Can I export my trading data?',
+    answer: 'Yes. Premium users can export trade data to JSON, CSV, and PDF formats, as well as create full cloud backups and restore them on any device.',
   },
   {
     question: 'Does K.M.F. Trading Journal have a lot size calculator?',
     answer: 'Yes. The built-in lot size calculator lets you input your account balance, risk percentage, entry price, stop loss, leverage, and instrument to calculate the optimal position size for any trade.',
+  },
+  {
+    question: 'What languages are supported?',
+    answer: 'The app supports 8 languages: English, English (US), Romanian, Russian, Japanese, French, German, and Chinese.',
   },
 ];
 

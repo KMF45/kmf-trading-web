@@ -104,12 +104,12 @@ const Download = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 {[
-                  'Free to download',
-                  'Premium features with subscription',
+                  'Free to download — 14-day Premium trial',
+                  'Emotion tracking & psychology tools',
+                  'Achievements, XP & trader tiers',
                   'Offline functionality',
-                  'Regular updates',
-                  'Secure data storage',
-                  'Export to PDF/JSON',
+                  'Google Sign-In & cloud sync',
+                  'Export & backup (PDF/CSV/JSON)',
                 ].map((feature) => (
                   <div
                     key={feature}
