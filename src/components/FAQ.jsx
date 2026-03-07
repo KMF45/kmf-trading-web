@@ -32,11 +32,7 @@ const faqs = [
   },
   {
     question: 'What statistics does K.M.F. Trading Journal track?',
-    answer: 'The app tracks win rate, profit factor, expectancy, average R-multiple, max drawdown, monthly P/L, discipline scores, best and worst trades, top-performing instruments, balance evolution, session performance (Asian/London/NY), and per-setup win rates.',
-  },
-  {
-    question: 'Can I track trade setups?',
-    answer: 'Yes. You can create named trading setups and the app tracks per-setup statistics including win rate, total trades, average profit, and average loss — so you can see which setups actually work.',
+    answer: 'The app tracks win rate, profit factor, expectancy, average R-multiple, max drawdown, monthly P/L, discipline scores, best and worst trades, top-performing instruments, balance evolution, and session performance (Asian/London/NY).',
   },
   {
     question: 'Can I export my trading data?',

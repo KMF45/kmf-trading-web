@@ -43,7 +43,6 @@ const PREMIUM_FEATURES = [
   'Export & backup (CSV / JSON / PDF)',
   'Balance curve & drawdown chart',
   'R-multiple & Expectancy',
-  'Trade setups with per-setup stats',
   'Priority support',
 ];
 
