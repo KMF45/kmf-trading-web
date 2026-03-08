@@ -52,13 +52,22 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     let unsubscribe;
-    getFirebase().then((fb) => {
-      unsubscribe = fb.onAuthStateChanged(fb.auth, (u) => {
-        setUser(u);
-        setLoading(false);
+    const init = () => {
+      getFirebase().then((fb) => {
+        unsubscribe = fb.onAuthStateChanged(fb.auth, (u) => {
+          setUser(u);
+          setLoading(false);
+        });
       });
-    });
-    return () => unsubscribe?.();
+    };
+    // Defer Firebase loading so it doesn't block LCP on landing page
+    if (typeof requestIdleCallback === 'function') {
+      const id = requestIdleCallback(init, { timeout: 2000 });
+      return () => { cancelIdleCallback(id); unsubscribe?.(); };
+    } else {
+      const tid = setTimeout(init, 50);
+      return () => { clearTimeout(tid); unsubscribe?.(); };
+    }
   }, []);
 
   const login = useCallback(async (email, password) => {

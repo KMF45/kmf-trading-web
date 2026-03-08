@@ -41,7 +41,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-3 group">
               <picture>
                 <source srcSet="/logo-80.webp" type="image/webp" />
-                <img src="/logo-80.png" alt="K.M.F. Trading Journal" className="w-10 h-10 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)] group-hover:drop-shadow-[0_0_12px_rgba(79,195,247,0.6)] transition-all" width="40" height="40" loading="lazy" />
+                <img src="/logo-80.png" alt="K.M.F. Trading Journal" className="w-10 h-10 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)] group-hover:drop-shadow-[0_0_12px_rgba(79,195,247,0.6)] transition-all" width="40" height="40" loading="eager" fetchPriority="high" />
               </picture>
               <span className="text-lg font-bold logo-text hidden sm:block">K.M.F.</span>
             </Link>
