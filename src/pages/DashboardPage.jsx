@@ -1,7 +1,7 @@
 import { useAuth } from '../contexts/AuthContext';
 import { useTrades } from '../contexts/TradesContext';
 import AnimatedNumber from '../components/common/AnimatedNumber';
-import { FaChartLine, FaPlus, FaHistory, FaClipboardCheck, FaSync, FaClock, FaArrowUp, FaArrowDown, FaFire, FaTrophy, FaShieldAlt } from 'react-icons/fa';
+import { FaChartLine, FaPlus, FaHistory, FaClipboardCheck, FaSync, FaClock, FaArrowUp, FaArrowDown, FaFire, FaTrophy, FaShieldAlt, FaExclamationTriangle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -70,6 +70,25 @@ const DashboardPage = () => {
           <FaSync className={syncing ? 'animate-spin' : ''} />
         </button>
       </div>
+
+      {/* Tilt Detection Alert */}
+      {stats.tiltStatus.isTilting && (
+        <div className={`rounded-2xl p-4 border ${stats.tiltStatus.severity === 'high' ? 'bg-kmf-loss/8 border-kmf-loss/30' : 'bg-orange-500/8 border-orange-500/30'} animate-fadeIn`}>
+          <div className="flex items-start gap-3">
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${stats.tiltStatus.severity === 'high' ? 'bg-kmf-loss/15' : 'bg-orange-500/15'}`}>
+              <FaExclamationTriangle className={`text-lg ${stats.tiltStatus.severity === 'high' ? 'text-kmf-loss' : 'text-orange-400'}`} />
+            </div>
+            <div className="flex-1">
+              <p className={`text-sm font-bold mb-1 ${stats.tiltStatus.severity === 'high' ? 'text-kmf-loss' : 'text-orange-400'}`}>
+                Tilt Detected
+              </p>
+              {stats.tiltStatus.alerts.map((alert, i) => (
+                <p key={i} className="text-xs text-kmf-text-secondary mb-0.5">{alert.message}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Account Balance — hero card with animated border */}
       <div className="glow-border">

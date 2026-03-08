@@ -8,8 +8,9 @@ import {
   updateWeeklyGoal as updateWeeklyGoalService, deleteWeeklyGoal as deleteWeeklyGoalService,
   getChecklists, saveChecklist as saveChecklistService,
   updateChecklist as updateChecklistService, deleteChecklist as deleteChecklistService,
+  getDiaryEntries, saveDiaryEntry as saveDiaryEntryService, deleteDiaryEntry as deleteDiaryEntryService,
 } from '../services/firestore';
-import { calculateRMultiple } from '../utils/models';
+import { calculateRMultiple, XP_VALUES, getLevelForXP, getXPProgress, ACHIEVEMENTS } from '../utils/models';
 
 const TradesContext = createContext(null);
 
@@ -26,6 +27,7 @@ export const TradesProvider = ({ children }) => {
   const [weeklyReviews, setWeeklyReviews] = useState([]);
   const [weeklyGoals, setWeeklyGoals] = useState([]);
   const [checklists, setChecklists] = useState([]);
+  const [diaryEntries, setDiaryEntries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [syncing, setSyncing] = useState(false);
 
@@ -38,18 +40,20 @@ export const TradesProvider = ({ children }) => {
     }
     setLoading(true);
     try {
-      const [tradesData, settingsData, reviewsData, goalsData, checklistsData] = await Promise.all([
+      const [tradesData, settingsData, reviewsData, goalsData, checklistsData, diaryData] = await Promise.all([
         getTrades(user.uid),
         getUserSettings(user.uid),
         getWeeklyReviews(user.uid),
         getWeeklyGoals(user.uid),
         getChecklists(user.uid),
+        getDiaryEntries(user.uid),
       ]);
       setTrades(tradesData);
       setSettings(settingsData);
       setWeeklyReviews(reviewsData);
       setWeeklyGoals(goalsData);
       setChecklists(checklistsData);
+      setDiaryEntries(diaryData);
     } catch (err) {
       console.error('Error loading data:', err);
     } finally {
@@ -213,6 +217,39 @@ export const TradesProvider = ({ children }) => {
       }));
       await Promise.all(updates.map(u => updateChecklistService(user.uid, u.id, { isDefault: u.isDefault })));
       setChecklists(prev => prev.map(c => ({ ...c, isDefault: c.id === checklistId })));
+    } finally {
+      setSyncing(false);
+    }
+  };
+
+  // ============ DIARY OPERATIONS ============
+
+  const saveDiaryEntry = async (entry) => {
+    if (!user) return;
+    setSyncing(true);
+    try {
+      const docId = await saveDiaryEntryService(user.uid, entry);
+      setDiaryEntries(prev => {
+        const idx = prev.findIndex(e => e.date === entry.date);
+        if (idx >= 0) {
+          const updated = [...prev];
+          updated[idx] = { ...updated[idx], ...entry, id: docId };
+          return updated;
+        }
+        return [{ ...entry, id: docId }, ...prev];
+      });
+      return docId;
+    } finally {
+      setSyncing(false);
+    }
+  };
+
+  const removeDiaryEntry = async (entryId) => {
+    if (!user) return;
+    setSyncing(true);
+    try {
+      await deleteDiaryEntryService(user.uid, entryId);
+      setDiaryEntries(prev => prev.filter(e => e.id !== entryId));
     } finally {
       setSyncing(false);
     }
@@ -408,6 +445,99 @@ export const TradesProvider = ({ children }) => {
   // Profit Factor quality indicator
   const pfQuality = profitFactor >= 2.0 ? 'Excellent' : profitFactor >= 1.0 ? 'Good' : 'Poor';
 
+  // Max win streak — for achievements
+  const maxWinStreak = (() => {
+    if (closedTrades.length === 0) return 0;
+    const sorted = [...closedTrades].sort((a, b) => (a.tradeDateTime || a.timestamp) - (b.tradeDateTime || b.timestamp));
+    let max = 0, current = 0;
+    sorted.forEach(t => {
+      if (t.result === 'PROFIT') { current++; if (current > max) max = current; }
+      else current = 0;
+    });
+    return max;
+  })();
+
+  // Current loss streak — for tilt detection
+  const currentLossStreak = (() => {
+    if (closedTrades.length === 0) return 0;
+    const sorted = [...closedTrades].sort((a, b) => (b.tradeDateTime || b.timestamp) - (a.tradeDateTime || a.timestamp));
+    let streak = 0;
+    for (const t of sorted) {
+      if (t.result === 'LOSS') streak++;
+      else break;
+    }
+    return streak;
+  })();
+
+  // Trades with notes / stop loss — for achievements
+  const tradesWithNotes = closedTrades.filter(t => t.notes && t.notes.trim().length > 0).length;
+  const tradesWithSL = closedTrades.filter(t => t.stopLoss && t.stopLoss > 0).length;
+  const slRate = closedTrades.length > 0 ? (tradesWithSL / closedTrades.length) * 100 : 0;
+
+  // Tilt Detection — mirrors Android TiltDetection
+  const tiltStatus = (() => {
+    const result = { isTilting: false, alerts: [], severity: 'none' };
+    // 3+ consecutive losses
+    if (currentLossStreak >= 3) {
+      result.isTilting = true;
+      result.alerts.push({ type: 'LOSS_STREAK', message: `${currentLossStreak} consecutive losses. Consider taking a break.`, severity: 'high' });
+    }
+    // Check recent lot size increase after losses
+    if (closedTrades.length >= 3) {
+      const sorted = [...closedTrades].sort((a, b) => (b.tradeDateTime || b.timestamp) - (a.tradeDateTime || a.timestamp));
+      const recent3 = sorted.slice(0, 3);
+      const avgLot = recent3.reduce((s, t) => s + (t.lotSize || 0), 0) / 3;
+      const olderTrades = sorted.slice(3, 13);
+      if (olderTrades.length > 0) {
+        const olderAvg = olderTrades.reduce((s, t) => s + (t.lotSize || 0), 0) / olderTrades.length;
+        if (olderAvg > 0 && avgLot > olderAvg * 1.5) {
+          result.isTilting = true;
+          result.alerts.push({ type: 'LOT_INCREASE', message: 'Your lot sizes are increasing significantly. Watch for revenge trading.', severity: 'medium' });
+        }
+      }
+    }
+    // Check negative emotions before recent trades
+    if (closedTrades.length >= 2) {
+      const sorted = [...closedTrades].sort((a, b) => (b.tradeDateTime || b.timestamp) - (a.tradeDateTime || a.timestamp));
+      const recent = sorted.slice(0, 3);
+      const negativeEmotions = ['ANXIOUS', 'FRUSTRATED', 'FEARFUL'];
+      const emotionalTrades = recent.filter(t => negativeEmotions.includes(t.emotionBefore));
+      if (emotionalTrades.length >= 2) {
+        result.isTilting = true;
+        result.alerts.push({ type: 'EMOTIONAL', message: 'Multiple recent trades entered with negative emotions.', severity: 'medium' });
+      }
+    }
+    result.severity = result.alerts.some(a => a.severity === 'high') ? 'high' : result.alerts.length > 0 ? 'medium' : 'none';
+    return result;
+  })();
+
+  // Gamification XP — computed from trades
+  const totalXP = (() => {
+    let xp = 0;
+    closedTrades.forEach(t => {
+      if (t.result === 'PROFIT') xp += XP_VALUES.TRADE_WIN;
+      else if (t.result === 'LOSS') xp += XP_VALUES.TRADE_LOSS;
+      else xp += XP_VALUES.TRADE_BREAKEVEN;
+      if (t.followedPlan) xp += XP_VALUES.BONUS_FOLLOWED_PLAN;
+      if ((t.completedTasks || []).length >= 3) xp += XP_VALUES.BONUS_CHECKLIST_COMPLETE;
+      if (t.notes && t.notes.trim().length > 0) xp += XP_VALUES.BONUS_HAS_NOTES;
+      if (t.stopLoss && t.stopLoss > 0) xp += XP_VALUES.BONUS_HAS_STOP_LOSS;
+    });
+    // XP from diary entries
+    xp += diaryEntries.length * XP_VALUES.DIARY_ENTRY;
+    // XP from weekly reviews
+    xp += weeklyReviews.length * XP_VALUES.WEEKLY_REVIEW;
+    return xp;
+  })();
+
+  const xpProgress = getXPProgress(totalXP);
+  const currentLevel = getLevelForXP(totalXP);
+
+  // Check unlocked achievements
+  const achievementStats = { closedTrades: closedTrades.length, winRate, profitFactor, disciplinePercent, tradingStreak, maxWinStreak, tradesWithNotes, tradesWithSL, slRate, avgRMultiple };
+  const unlockedAchievements = ACHIEVEMENTS.filter(a => a.check(achievementStats));
+  const lockedAchievements = ACHIEVEMENTS.filter(a => !a.check(achievementStats));
+
   const stats = {
     totalTrades: trades.length,
     closedTrades: closedTrades.length,
@@ -435,14 +565,26 @@ export const TradesProvider = ({ children }) => {
     tradingLevel,
     traderBadge,
     insights,
+    maxWinStreak,
+    currentLossStreak,
+    tradesWithNotes,
+    tradesWithSL,
+    slRate,
+    tiltStatus,
+    totalXP,
+    xpProgress,
+    currentLevel,
+    unlockedAchievements,
+    lockedAchievements,
   };
 
   const value = {
     trades, settings, loading, syncing, stats,
-    closedTrades, openTrades, weeklyReviews, weeklyGoals, checklists,
+    closedTrades, openTrades, weeklyReviews, weeklyGoals, checklists, diaryEntries,
     addTrade, editTrade, removeTrade, saveSettings, loadData,
     saveWeeklyReview, addWeeklyGoal, updateGoal, removeGoal,
     addChecklist, editChecklist, removeChecklist, setDefaultChecklist,
+    saveDiaryEntry, removeDiaryEntry,
     getPnL,
   };
 

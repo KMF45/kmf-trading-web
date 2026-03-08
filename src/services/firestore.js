@@ -34,6 +34,8 @@ export const getTrades = async (userId) => {
         tradeDateTime: d.tradeDateTime || d.timestamp || Date.now(),
         followedPlan: d.followedPlan !== false,
         rMultiple: d.rMultiple || 0,
+        emotionBefore: d.emotionBefore || null,
+        emotionAfter: d.emotionAfter || null,
         createdAt: d.createdAt || Date.now(),
         updatedAt: d.updatedAt || Date.now(),
       };
@@ -67,6 +69,8 @@ export const addTrade = async (userId, trade) => {
       tradeDateTime: trade.tradeDateTime || Date.now(),
       followedPlan: trade.followedPlan !== false,
       rMultiple: trade.rMultiple || 0,
+      emotionBefore: trade.emotionBefore || null,
+      emotionAfter: trade.emotionAfter || null,
       createdAt: Date.now(),
       updatedAt: Date.now(),
     };
@@ -283,6 +287,61 @@ export const deleteChecklist = async (userId, checklistId) => {
     await deleteDoc(ref);
   } catch (err) {
     console.error('Error deleting checklist:', err);
+    throw err;
+  }
+};
+
+// ============ DIARY ENTRIES ============
+
+export const getDiaryEntries = async (userId) => {
+  try {
+    const ref = collection(db, 'users', userId, 'diaryEntries');
+    const q = query(ref, orderBy('date', 'desc'));
+    const snapshot = await getDocs(q);
+    return snapshot.docs.map(docSnap => {
+      const d = docSnap.data();
+      return {
+        id: docSnap.id,
+        date: d.date || '',
+        mood: d.mood || 3,
+        preMarketNotes: d.preMarketNotes || '',
+        postMarketNotes: d.postMarketNotes || '',
+        lessonsLearned: d.lessonsLearned || '',
+        gratitude: d.gratitude || '',
+        emotionState: d.emotionState || null,
+        createdAt: d.createdAt || Date.now(),
+        updatedAt: d.updatedAt || Date.now(),
+      };
+    });
+  } catch (err) {
+    console.error('Error getting diary entries:', err);
+    return [];
+  }
+};
+
+export const saveDiaryEntry = async (userId, entry) => {
+  try {
+    const docId = `diary_${entry.date}`;
+    const ref = doc(db, 'users', userId, 'diaryEntries', docId);
+    await setDoc(ref, {
+      ...entry,
+      userId,
+      updatedAt: Date.now(),
+      createdAt: entry.createdAt || Date.now(),
+    }, { merge: true });
+    return docId;
+  } catch (err) {
+    console.error('Error saving diary entry:', err);
+    throw err;
+  }
+};
+
+export const deleteDiaryEntry = async (userId, entryId) => {
+  try {
+    const ref = doc(db, 'users', userId, 'diaryEntries', entryId);
+    await deleteDoc(ref);
+  } catch (err) {
+    console.error('Error deleting diary entry:', err);
     throw err;
   }
 };

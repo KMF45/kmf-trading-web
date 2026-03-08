@@ -2,7 +2,8 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import {
   FaHome, FaPlus, FaHistory, FaChartLine, FaClipboardCheck,
-  FaTasks, FaCalculator, FaCog, FaSignOutAlt, FaTimes, FaChevronLeft
+  FaTasks, FaCalculator, FaCog, FaSignOutAlt, FaTimes, FaChevronLeft,
+  FaTrophy, FaBook
 } from 'react-icons/fa';
 
 const navItems = [
@@ -11,8 +12,10 @@ const navItems = [
   { to: '/app/history', icon: FaHistory, label: 'History' },
   { to: '/app/statistics', icon: FaChartLine, label: 'Statistics' },
   { to: '/app/weekly-review', icon: FaClipboardCheck, label: 'Weekly Review' },
+  { to: '/app/diary', icon: FaBook, label: 'Trading Diary' },
   { to: '/app/checklist', icon: FaTasks, label: 'Checklist' },
   { to: '/app/calculator', icon: FaCalculator, label: 'Lot Calculator' },
+  { to: '/app/profile', icon: FaTrophy, label: 'Profile & XP' },
   { to: '/app/settings', icon: FaCog, label: 'Settings' },
 ];
 

@@ -41,3 +41,6 @@ export const calculateRMultiple = (trade) => {
  * Check if a goal has excessive carry-overs — matches Android hasExcessiveCarryOvers()
  */
 export const hasExcessiveCarryOvers = (goal) => (goal.carryOverCount || 0) >= 3;
+
+// Re-export gamification from data/models
+export { XP_VALUES, LEVELS, getLevelForXP, getXPProgress, ACHIEVEMENTS, TradeEmotion, EmotionMeta } from '../data/models';

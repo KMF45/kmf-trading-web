@@ -6,6 +6,7 @@ import { useAuth } from '../contexts/AuthContext';
 import SymbolPicker from '../components/trade/SymbolPicker';
 import { getSymbolByCode } from '../data/defaultSymbols';
 import { storage } from '../config/firebase';
+import { EmotionMeta } from '../data/models';
 import { FaPlus, FaStar, FaCheck, FaCalendarAlt, FaClock, FaChevronDown, FaCamera, FaTimes } from 'react-icons/fa';
 
 const DEFAULT_CHECKLIST = [
@@ -55,6 +56,8 @@ const AddTradePage = () => {
     completedTasks: [],
     tradeDate: new Date().toISOString().split('T')[0],
     tradeTime: `${String(new Date().getHours()).padStart(2, '0')}:${String(new Date().getMinutes()).padStart(2, '0')}`,
+    emotionBefore: null,
+    emotionAfter: null,
   });
 
   const [fieldErrors, setFieldErrors] = useState({
@@ -84,6 +87,8 @@ const AddTradePage = () => {
           completedTasks: trade.completedTasks || [],
           tradeDate: dt.toISOString().split('T')[0],
           tradeTime: `${String(dt.getHours()).padStart(2, '0')}:${String(dt.getMinutes()).padStart(2, '0')}`,
+          emotionBefore: trade.emotionBefore || null,
+          emotionAfter: trade.emotionAfter || null,
         });
         if (trade.photoUri) {
           setExistingPhotoUri(trade.photoUri);
@@ -254,6 +259,8 @@ const AddTradePage = () => {
         tradeDateTime: buildTradeDateTime(),
         followedPlan: form.completedTasks.length >= Math.floor(DEFAULT_CHECKLIST.length / 2),
         rMultiple: 0,
+        emotionBefore: form.emotionBefore,
+        emotionAfter: form.emotionAfter,
         photoUri,
       };
 
@@ -406,6 +413,47 @@ const AddTradePage = () => {
                 </button>
               );
             })}
+          </div>
+        </div>
+
+        {/* Emotions */}
+        <div className="glass-card rounded-2xl p-4">
+          <p className="text-sm font-semibold text-kmf-text-primary mb-3">🧠 Emotions</p>
+          <div className="space-y-3">
+            <div>
+              <p className="text-xs text-kmf-text-tertiary mb-2">Before entering trade</p>
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                {Object.entries(EmotionMeta).map(([key, meta]) => (
+                  <button key={key} type="button" onClick={() => updateField('emotionBefore', form.emotionBefore === key ? null : key)}
+                    className={`flex flex-col items-center gap-1 p-2 rounded-lg text-xs font-medium transition-all ${
+                      form.emotionBefore === key
+                        ? 'border-2 shadow-[0_0_12px_rgba(79,195,247,0.15)]'
+                        : 'bg-kmf-surface/50 border border-transparent hover:border-kmf-accent/20'
+                    }`}
+                    style={form.emotionBefore === key ? { borderColor: meta.color, backgroundColor: `${meta.color}15` } : {}}>
+                    <span className="text-lg">{meta.icon}</span>
+                    <span className={form.emotionBefore === key ? 'text-kmf-text-primary' : 'text-kmf-text-tertiary'}>{meta.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="text-xs text-kmf-text-tertiary mb-2">After closing trade</p>
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                {Object.entries(EmotionMeta).map(([key, meta]) => (
+                  <button key={key} type="button" onClick={() => updateField('emotionAfter', form.emotionAfter === key ? null : key)}
+                    className={`flex flex-col items-center gap-1 p-2 rounded-lg text-xs font-medium transition-all ${
+                      form.emotionAfter === key
+                        ? 'border-2 shadow-[0_0_12px_rgba(79,195,247,0.15)]'
+                        : 'bg-kmf-surface/50 border border-transparent hover:border-kmf-accent/20'
+                    }`}
+                    style={form.emotionAfter === key ? { borderColor: meta.color, backgroundColor: `${meta.color}15` } : {}}>
+                    <span className="text-lg">{meta.icon}</span>
+                    <span className={form.emotionAfter === key ? 'text-kmf-text-primary' : 'text-kmf-text-tertiary'}>{meta.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 

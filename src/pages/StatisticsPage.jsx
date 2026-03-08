@@ -1,8 +1,9 @@
 import { useTrades } from '../contexts/TradesContext';
 import AnimatedNumber from '../components/common/AnimatedNumber';
 import { FaChartLine, FaRocket, FaChartBar, FaFire, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { calculateRMultiple } from '../utils/models';
+import { getTradingSession } from '../data/models';
 
 const MonthlyTooltip = ({ active, payload, label }) => {
   if (active && payload?.[0]) {
@@ -37,6 +38,61 @@ const StatisticsPage = () => {
     });
     return Object.entries(buckets).filter(([, v]) => v > 0).map(([name, count]) => ({ name, count }));
   })();
+
+  // Equity Curve data
+  const equityCurve = (() => {
+    if (closedTrades.length === 0) return [];
+    const sorted = [...closedTrades].sort((a, b) => (a.tradeDateTime || a.timestamp) - (b.tradeDateTime || b.timestamp));
+    let running = 0;
+    return sorted.map((t, i) => {
+      running += getPnL(t);
+      const d = new Date(t.tradeDateTime || t.timestamp);
+      return {
+        trade: i + 1,
+        date: `${d.getDate()} ${d.toLocaleDateString('en', { month: 'short' })}`,
+        equity: parseFloat(running.toFixed(2)),
+      };
+    });
+  })();
+
+  // Heatmap: performance by day of week × hour block
+  const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const HOURS = ['00-03', '04-07', '08-11', '12-15', '16-19', '20-23'];
+  const heatmapData = (() => {
+    const grid = {};
+    DAYS.forEach(d => { grid[d] = {}; HOURS.forEach(h => { grid[d][h] = { pl: 0, count: 0 }; }); });
+    closedTrades.forEach(t => {
+      const dt = new Date(t.tradeDateTime || t.timestamp);
+      const dayIdx = dt.getDay(); // 0=Sun
+      const day = DAYS[dayIdx === 0 ? 6 : dayIdx - 1]; // shift to Mon-first
+      const hour = dt.getHours();
+      const hourBlock = HOURS[Math.floor(hour / 4)];
+      grid[day][hourBlock].pl += getPnL(t);
+      grid[day][hourBlock].count++;
+    });
+    return grid;
+  })();
+
+  // Find min/max P/L for heatmap color scaling
+  const heatmapRange = (() => {
+    let min = 0, max = 0;
+    DAYS.forEach(d => HOURS.forEach(h => {
+      const v = heatmapData[d]?.[h]?.pl || 0;
+      if (v < min) min = v;
+      if (v > max) max = v;
+    }));
+    return { min, max };
+  })();
+
+  const getHeatColor = (val) => {
+    if (val === 0) return 'rgba(255,255,255,0.03)';
+    if (val > 0) {
+      const intensity = heatmapRange.max > 0 ? Math.min(val / heatmapRange.max, 1) : 0;
+      return `rgba(0,230,118,${0.1 + intensity * 0.5})`;
+    }
+    const intensity = heatmapRange.min < 0 ? Math.min(Math.abs(val) / Math.abs(heatmapRange.min), 1) : 0;
+    return `rgba(255,82,82,${0.1 + intensity * 0.5})`;
+  };
 
   const disciplineLabel = stats.disciplinePercent >= 80 ? 'CONSISTENT' : stats.disciplinePercent >= 60 ? 'MODERATE' : 'NEEDS WORK';
 
@@ -273,6 +329,123 @@ const StatisticsPage = () => {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
+        </div>
+      )}
+
+      {/* Equity Curve */}
+      {equityCurve.length > 1 && (
+        <div className="glass-card rounded-2xl p-5">
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest">EQUITY CURVE</p>
+            <span className={`text-xs font-bold ${equityCurve[equityCurve.length - 1].equity >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+              {equityCurve[equityCurve.length - 1].equity >= 0 ? '+' : ''}${equityCurve[equityCurve.length - 1].equity.toFixed(2)}
+            </span>
+          </div>
+          <ResponsiveContainer width="100%" height={220}>
+            <AreaChart data={equityCurve}>
+              <defs>
+                <linearGradient id="eqGradProfit" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#00E676" stopOpacity={0.25} />
+                  <stop offset="95%" stopColor="#00E676" stopOpacity={0} />
+                </linearGradient>
+                <linearGradient id="eqGradLoss" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#FF5252" stopOpacity={0.25} />
+                  <stop offset="95%" stopColor="#FF5252" stopOpacity={0} />
+                </linearGradient>
+              </defs>
+              <XAxis dataKey="date" stroke="#546E7A" fontSize={10} tickLine={false} axisLine={false} interval="preserveStartEnd" />
+              <YAxis stroke="#546E7A" fontSize={10} tickLine={false} axisLine={false} width={55} tickFormatter={(v) => `$${v}`} />
+              <Tooltip content={({ active, payload }) => {
+                if (active && payload?.[0]) {
+                  const v = payload[0].value;
+                  return (
+                    <div className="tooltip-glow rounded-lg px-3 py-2">
+                      <p className="text-xs text-kmf-text-tertiary mb-0.5">Trade #{payload[0].payload.trade}</p>
+                      <p className={`text-sm font-bold ${v >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+                        {v >= 0 ? '+' : ''}${v.toFixed(2)}
+                      </p>
+                    </div>
+                  );
+                }
+                return null;
+              }} />
+              <Area type="monotone" dataKey="equity"
+                stroke={equityCurve[equityCurve.length - 1].equity >= 0 ? '#00E676' : '#FF5252'}
+                strokeWidth={2.5}
+                fill={equityCurve[equityCurve.length - 1].equity >= 0 ? 'url(#eqGradProfit)' : 'url(#eqGradLoss)'}
+                dot={false}
+                activeDot={{ r: 5, stroke: '#0F1115', strokeWidth: 2 }} />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+
+      {/* Performance Heatmap — Day × Hour */}
+      {closedTrades.length >= 3 && (
+        <div className="glass-card rounded-2xl p-5">
+          <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest mb-4">PERFORMANCE HEATMAP</p>
+          <p className="text-xs text-kmf-text-tertiary mb-3">P/L by day of week and time of day</p>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[400px]">
+              <thead>
+                <tr>
+                  <th className="text-[10px] text-kmf-text-tertiary font-medium pb-2 text-left w-12"></th>
+                  {HOURS.map(h => (
+                    <th key={h} className="text-[10px] text-kmf-text-tertiary font-medium pb-2 text-center">{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {DAYS.map(day => (
+                  <tr key={day}>
+                    <td className="text-[10px] text-kmf-text-tertiary font-medium py-0.5 pr-2">{day}</td>
+                    {HOURS.map(hour => {
+                      const cell = heatmapData[day]?.[hour] || { pl: 0, count: 0 };
+                      return (
+                        <td key={hour} className="p-0.5">
+                          <div className="rounded-lg h-10 flex flex-col items-center justify-center transition-all hover:scale-105 cursor-default relative group"
+                            style={{ backgroundColor: getHeatColor(cell.pl) }}>
+                            {cell.count > 0 && (
+                              <>
+                                <span className={`text-[10px] font-bold ${cell.pl >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+                                  {cell.pl >= 0 ? '+' : ''}{cell.pl.toFixed(0)}
+                                </span>
+                                <span className="text-[8px] text-kmf-text-tertiary">{cell.count}t</span>
+                              </>
+                            )}
+                            {/* Tooltip on hover */}
+                            {cell.count > 0 && (
+                              <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 tooltip-glow rounded-lg px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                                <p className="text-[10px] text-kmf-text-tertiary">{day} {hour}</p>
+                                <p className={`text-xs font-bold ${cell.pl >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+                                  {cell.pl >= 0 ? '+' : ''}${cell.pl.toFixed(2)} ({cell.count} trades)
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {/* Legend */}
+          <div className="flex items-center justify-center gap-4 mt-3">
+            <div className="flex items-center gap-1.5">
+              <div className="w-3 h-3 rounded" style={{ backgroundColor: 'rgba(255,82,82,0.4)' }} />
+              <span className="text-[10px] text-kmf-text-tertiary">Loss</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <div className="w-3 h-3 rounded" style={{ backgroundColor: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)' }} />
+              <span className="text-[10px] text-kmf-text-tertiary">No trades</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <div className="w-3 h-3 rounded" style={{ backgroundColor: 'rgba(0,230,118,0.4)' }} />
+              <span className="text-[10px] text-kmf-text-tertiary">Profit</span>
+            </div>
+          </div>
         </div>
       )}
 

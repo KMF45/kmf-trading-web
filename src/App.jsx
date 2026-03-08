@@ -41,6 +41,8 @@ const WeeklyReviewPage = lazy(() => import('./pages/WeeklyReviewPage'));
 const LotCalculatorPage = lazy(() => import('./pages/LotCalculatorPage'));
 const SettingsPage = lazy(() => import('./pages/SettingsPage'));
 const ChecklistPage = lazy(() => import('./pages/ChecklistPage'));
+const ProfilePage = lazy(() => import('./pages/ProfilePage'));
+const TradingDiaryPage = lazy(() => import('./pages/TradingDiaryPage'));
 
 // Lazy load TradesProvider (imports Firebase/Firestore)
 const TradesProviderModule = lazy(() =>
@@ -94,6 +96,8 @@ function App() {
               <Route path="checklist" element={<ChecklistPage />} />
               <Route path="calculator" element={<LotCalculatorPage />} />
               <Route path="settings" element={<SettingsPage />} />
+              <Route path="profile" element={<ProfilePage />} />
+              <Route path="diary" element={<TradingDiaryPage />} />
             </Route>
 
             {/* Blog */}

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTrades } from '../contexts/TradesContext';
 import { formatPrice, formatPnL, formatDate, formatTime } from '../utils/formatters';
 import { getCategoryEmoji, getSymbolByCode } from '../data/defaultSymbols';
+import { EmotionMeta } from '../data/models';
 import {
   FaHistory, FaSearch, FaFilter, FaChevronDown, FaChevronUp,
   FaEdit, FaTrashAlt, FaCheck, FaTimes, FaCalendarAlt, FaClock,
@@ -171,6 +172,20 @@ const HistoryPage = () => {
                 <span className={`text-xs font-bold ${trade.rMultiple >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
                   {trade.rMultiple > 0 ? '+' : ''}{trade.rMultiple.toFixed(2)}R
                 </span>
+              </div>
+            )}
+            {(trade.emotionBefore || trade.emotionAfter) && (
+              <div className="flex items-center gap-3 mb-2">
+                {trade.emotionBefore && EmotionMeta[trade.emotionBefore] && (
+                  <span className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-lg" style={{ backgroundColor: `${EmotionMeta[trade.emotionBefore].color}15`, color: EmotionMeta[trade.emotionBefore].color }}>
+                    {EmotionMeta[trade.emotionBefore].icon} Before: {EmotionMeta[trade.emotionBefore].label}
+                  </span>
+                )}
+                {trade.emotionAfter && EmotionMeta[trade.emotionAfter] && (
+                  <span className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-lg" style={{ backgroundColor: `${EmotionMeta[trade.emotionAfter].color}15`, color: EmotionMeta[trade.emotionAfter].color }}>
+                    {EmotionMeta[trade.emotionAfter].icon} After: {EmotionMeta[trade.emotionAfter].label}
+                  </span>
+                )}
               </div>
             )}
             {trade.notes && (
