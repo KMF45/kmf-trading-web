@@ -72,7 +72,7 @@ const SettingsPage = () => {
   );
 
   const SettingRow = ({ icon, label, sublabel, onClick, right }) => (
-    <button onClick={onClick} className="w-full bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 flex items-center gap-3 hover:border-kmf-accent/20 transition-all text-left">
+    <button onClick={onClick} className="w-full glass-card rounded-2xl p-4 flex items-center gap-3 hover-glow transition-all text-left">
       <span className="text-lg">{icon}</span>
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-kmf-text-primary">{label}</p>
@@ -83,7 +83,7 @@ const SettingsPage = () => {
   );
 
   return (
-    <div className="max-w-3xl mx-auto space-y-1 animate-fadeIn">
+    <div className="max-w-3xl mx-auto space-y-1 animate-fadeIn stagger-in">
       <div className="flex items-center gap-3 mb-4">
         <FaCog className="text-kmf-accent text-xl" />
         <h1 className="text-2xl font-bold text-kmf-text-primary">Settings</h1>
@@ -91,7 +91,7 @@ const SettingsPage = () => {
 
       {/* Account */}
       <SectionHeader title="Account" />
-      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 flex items-center gap-3">
+      <div className="glass-card rounded-2xl p-4 flex items-center gap-3">
         <div className="w-10 h-10 rounded-full bg-kmf-accent/20 flex items-center justify-center text-kmf-accent font-bold">{user?.email?.[0]?.toUpperCase() || '?'}</div>
         <div>
           <p className="text-sm text-kmf-text-primary">Logged in as</p>
@@ -102,7 +102,7 @@ const SettingsPage = () => {
 
       {/* Account Settings */}
       <SectionHeader title="Account Settings" />
-      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 space-y-3">
+      <div className="glass-card rounded-2xl p-4 space-y-3">
         <div>
           <label className="text-xs text-kmf-text-tertiary mb-1 block">💰 Balance</label>
           <div className="flex items-center gap-2">
@@ -122,7 +122,7 @@ const SettingsPage = () => {
 
       {/* Language */}
       <SectionHeader title="Appearance" />
-      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+      <div className="glass-card rounded-2xl p-4">
         <label className="text-xs text-kmf-text-tertiary mb-1 block">🌍 Language</label>
         <select value={language} onChange={(e) => setLanguage(e.target.value)}
           className="w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-sm text-kmf-text-primary focus:outline-none focus:border-kmf-accent">
@@ -132,7 +132,7 @@ const SettingsPage = () => {
 
       {/* Save Button */}
       <button onClick={handleSave} disabled={syncing}
-        className="w-full py-3 rounded-xl bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white font-bold text-sm hover:shadow-glow transition-all disabled:opacity-50 flex items-center justify-center gap-2">
+        className="btn-primary w-full py-3 rounded-2xl text-white font-bold text-sm disabled:opacity-50 flex items-center justify-center gap-2">
         {saved ? <><FaCheck /> Saved!</> : syncing ? 'Saving...' : <><FaSave /> Save Settings</>}
       </button>
 

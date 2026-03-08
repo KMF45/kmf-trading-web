@@ -28,24 +28,32 @@ const Sidebar = ({ isOpen, onClose, collapsed, onToggleCollapse }) => {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 bg-black/60 z-40 lg:hidden" onClick={onClose} />
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden modal-backdrop" onClick={onClose} />
       )}
 
-      <aside className={`fixed top-0 left-0 h-full z-50 bg-kmf-panel border-r border-kmf-accent/20 
+      <aside className={`fixed top-0 left-0 h-full z-50 border-r border-kmf-accent/10
         transition-all duration-300 flex flex-col
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'} 
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static lg:z-auto
         ${collapsed ? 'w-20' : 'w-64'}`}
+        style={{ background: 'linear-gradient(180deg, #1A1D24 0%, #14171C 100%)' }}
       >
-        <div className={`p-4 border-b border-kmf-accent/10 flex items-center ${collapsed ? 'justify-center' : 'justify-between'}`}>
+        {/* Logo */}
+        <div className={`p-4 border-b border-white/5 flex items-center ${collapsed ? 'justify-center' : 'justify-between'}`}>
           {!collapsed && (
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="KMF" className="w-9 h-9 drop-shadow-[0_0_6px_rgba(79,195,247,0.4)]" />
+              <picture>
+                <source srcSet="/logo-80.webp" type="image/webp" />
+                <img src="/logo-80.png" alt="KMF" className="w-9 h-9 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)]" width="36" height="36" />
+              </picture>
               <span className="text-base font-bold logo-text">K.M.F.</span>
             </div>
           )}
           {collapsed && (
-            <img src="/logo.png" alt="KMF" className="w-9 h-9 drop-shadow-[0_0_6px_rgba(79,195,247,0.4)]" />
+            <picture>
+              <source srcSet="/logo-80.webp" type="image/webp" />
+              <img src="/logo-80.png" alt="KMF" className="w-9 h-9 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)]" width="36" height="36" />
+            </picture>
           )}
           <button onClick={onClose} className="lg:hidden text-kmf-text-tertiary hover:text-kmf-accent transition-colors">
             <FaTimes size={18} />
@@ -55,9 +63,10 @@ const Sidebar = ({ isOpen, onClose, collapsed, onToggleCollapse }) => {
           </button>
         </div>
 
-        <div className={`p-4 border-b border-kmf-accent/10 ${collapsed ? 'px-2' : ''}`}>
+        {/* User info */}
+        <div className={`p-4 border-b border-white/5 ${collapsed ? 'px-2' : ''}`}>
           <div className={`flex items-center gap-3 ${collapsed ? 'justify-center' : ''}`}>
-            <div className="w-9 h-9 rounded-full bg-gradient-to-r from-kmf-accent to-kmf-accent-bright flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-kmf-accent to-kmf-accent-bright flex items-center justify-center text-white text-sm font-bold flex-shrink-0 shadow-glow">
               {user?.email?.charAt(0).toUpperCase() || 'U'}
             </div>
             {!collapsed && (
@@ -69,6 +78,7 @@ const Sidebar = ({ isOpen, onClose, collapsed, onToggleCollapse }) => {
           </div>
         </div>
 
+        {/* Navigation */}
         <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
           {navItems.map((item) => (
             <NavLink
@@ -77,11 +87,11 @@ const Sidebar = ({ isOpen, onClose, collapsed, onToggleCollapse }) => {
               end={item.end}
               onClick={onClose}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200
+                `nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium
                 ${collapsed ? 'justify-center px-2' : ''}
                 ${isActive
-                  ? 'bg-kmf-accent/15 text-kmf-accent border border-kmf-accent/30 shadow-[0_0_10px_rgba(79,195,247,0.15)]'
-                  : 'text-kmf-text-secondary hover:text-kmf-text-primary hover:bg-kmf-surface/50'
+                  ? 'nav-item-active bg-kmf-accent/10 text-kmf-accent'
+                  : 'text-kmf-text-secondary hover:text-kmf-text-primary'
                 }`
               }
               title={collapsed ? item.label : undefined}
@@ -92,11 +102,12 @@ const Sidebar = ({ isOpen, onClose, collapsed, onToggleCollapse }) => {
           ))}
         </nav>
 
-        <div className="p-3 border-t border-kmf-accent/10">
+        {/* Logout */}
+        <div className="p-3 border-t border-white/5">
           <button
             onClick={handleLogout}
-            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium w-full
-              text-kmf-loss/80 hover:text-kmf-loss hover:bg-kmf-loss/10 transition-all duration-200
+            className={`nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium w-full
+              text-kmf-loss/70 hover:text-kmf-loss hover:bg-kmf-loss/8 transition-all
               ${collapsed ? 'justify-center px-2' : ''}`}
             title={collapsed ? 'Logout' : undefined}
           >

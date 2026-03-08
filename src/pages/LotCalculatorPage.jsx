@@ -156,7 +156,7 @@ const LotCalculatorPage = () => {
   }, [balance, riskPercent]);
 
   return (
-    <div className="max-w-3xl mx-auto animate-fadeIn">
+    <div className="max-w-3xl mx-auto animate-fadeIn stagger-in">
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 rounded-lg bg-kmf-accent/15 flex items-center justify-center">
@@ -170,7 +170,7 @@ const LotCalculatorPage = () => {
 
       <div className="space-y-4">
         {/* ========== ACCOUNT SETTINGS ========== */}
-        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 space-y-3">
+        <div className="glass-card rounded-2xl p-4 space-y-3">
           <p className="text-sm font-semibold text-kmf-text-primary">💳 Account Settings</p>
 
           <div className="grid grid-cols-2 gap-3">
@@ -202,7 +202,7 @@ const LotCalculatorPage = () => {
             <div className="flex gap-2 mt-2 flex-wrap">
               {RISK_PRESETS.map(r => (
                 <button key={r} onClick={() => setRiskPercent(r.toString())}
-                  className={`px-2.5 py-1 rounded text-xs font-medium transition-all ${
+                  className={`px-2.5 py-1 rounded text-xs font-medium transition-all hover-scale ${
                     parseFloat(riskPercent) === r
                       ? 'bg-kmf-accent/20 text-kmf-accent border border-kmf-accent/40'
                       : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary hover:border-kmf-accent/30'
@@ -218,7 +218,7 @@ const LotCalculatorPage = () => {
             <div className="flex gap-2 flex-wrap">
               {LEVERAGE_OPTIONS.map(l => (
                 <button key={l} onClick={() => setLeverage(l)}
-                  className={`px-3 py-1.5 rounded text-xs font-medium transition-all ${
+                  className={`px-3 py-1.5 rounded text-xs font-medium transition-all hover-scale ${
                     leverage === l
                       ? 'bg-kmf-accent/20 text-kmf-accent border border-kmf-accent/40'
                       : 'bg-kmf-surface border border-kmf-accent/10 text-kmf-text-tertiary hover:border-kmf-accent/30'
@@ -231,7 +231,7 @@ const LotCalculatorPage = () => {
         </div>
 
         {/* ========== INSTRUMENT & PRICES ========== */}
-        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 space-y-3">
+        <div className="glass-card rounded-2xl p-4 space-y-3">
           <p className="text-sm font-semibold text-kmf-text-primary">📊 Instrument & Prices</p>
 
           {/* Symbol Picker */}
@@ -270,7 +270,7 @@ const LotCalculatorPage = () => {
           {selectedSymbol && (
             <div className="flex items-center gap-2">
               <button onClick={fetchLivePrice} disabled={loadingPrice}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-kmf-surface border border-kmf-accent/10 text-xs text-kmf-text-secondary hover:text-kmf-accent hover:border-kmf-accent/30 transition-all disabled:opacity-50">
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-kmf-surface border border-kmf-accent/10 text-xs text-kmf-text-secondary hover:text-kmf-accent hover:border-kmf-accent/30 transition-all disabled:opacity-50 hover-scale">
                 <FaSync size={10} className={loadingPrice ? 'animate-spin' : ''} />
                 {loadingPrice ? 'Fetching...' : 'Refresh Price'}
               </button>
@@ -316,7 +316,7 @@ const LotCalculatorPage = () => {
           <div className="space-y-3">
             {/* Error */}
             {result.hasError && result.errorMessage && (
-              <div className="bg-kmf-loss/10 border border-kmf-loss/30 rounded-xl p-4 flex items-start gap-3">
+              <div className="bg-kmf-loss/10 border border-kmf-loss/30 rounded-2xl p-4 flex items-start gap-3">
                 <FaExclamationTriangle className="text-kmf-loss text-sm flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-kmf-loss">{result.errorMessage}</p>
               </div>
@@ -324,7 +324,7 @@ const LotCalculatorPage = () => {
 
             {/* Warning */}
             {result.warningMessage && (
-              <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 flex items-start gap-3">
+              <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-4 flex items-start gap-3">
                 <FaExclamationTriangle className="text-yellow-400 text-sm flex-shrink-0 mt-0.5" />
                 <p className="text-sm text-yellow-400 whitespace-pre-line">{result.warningMessage}</p>
               </div>
@@ -332,56 +332,58 @@ const LotCalculatorPage = () => {
 
             {/* Main Result Card */}
             {result.lotSize > 0 && (
-              <div className="bg-gradient-to-br from-kmf-accent/10 to-kmf-accent/5 rounded-xl p-5 border border-kmf-accent/30 shadow-[0_0_20px_rgba(79,195,247,0.08)]">
-                <div className="text-center mb-4">
-                  <p className="text-xs text-kmf-accent font-medium mb-1 uppercase tracking-wider">Recommended Lot Size</p>
-                  <p className="text-4xl font-black text-kmf-text-primary tracking-tight">
-                    {result.lotSize.toFixed(2)}
-                  </p>
-                  <p className="text-xs text-kmf-text-tertiary mt-1">Standard Lots (truncated, not rounded)</p>
-                </div>
+              <div className="hover-glow rounded-2xl">
+                <div className="bg-gradient-to-br from-kmf-accent/10 to-kmf-accent/5 rounded-2xl p-5 border border-kmf-accent/30 shadow-[0_0_20px_rgba(79,195,247,0.08)]">
+                  <div className="text-center mb-4">
+                    <p className="text-xs text-kmf-accent font-medium mb-1 uppercase tracking-wider">Recommended Lot Size</p>
+                    <p className="text-4xl font-black text-kmf-text-primary tracking-tight">
+                      {result.lotSize.toFixed(2)}
+                    </p>
+                    <p className="text-xs text-kmf-text-tertiary mt-1">Standard Lots (truncated, not rounded)</p>
+                  </div>
 
-                {/* Lot variants */}
-                <div className="grid grid-cols-3 gap-2 mb-4">
-                  <div className="bg-kmf-panel/50 rounded-lg p-2.5 text-center">
-                    <p className="text-[10px] text-kmf-text-tertiary uppercase">Standard</p>
-                    <p className="text-sm font-bold text-kmf-text-primary">{result.standardLots.toFixed(2)}</p>
+                  {/* Lot variants */}
+                  <div className="grid grid-cols-3 gap-2 mb-4">
+                    <div className="bg-kmf-panel/50 rounded-lg p-2.5 text-center">
+                      <p className="text-[10px] text-kmf-text-tertiary uppercase">Standard</p>
+                      <p className="text-sm font-bold text-kmf-text-primary">{result.standardLots.toFixed(2)}</p>
+                    </div>
+                    <div className="bg-kmf-panel/50 rounded-lg p-2.5 text-center">
+                      <p className="text-[10px] text-kmf-text-tertiary uppercase">Mini</p>
+                      <p className="text-sm font-bold text-kmf-text-primary">{result.miniLots.toFixed(1)}</p>
+                    </div>
+                    <div className="bg-kmf-panel/50 rounded-lg p-2.5 text-center">
+                      <p className="text-[10px] text-kmf-text-tertiary uppercase">Micro</p>
+                      <p className="text-sm font-bold text-kmf-text-primary">{result.microLots}</p>
+                    </div>
                   </div>
-                  <div className="bg-kmf-panel/50 rounded-lg p-2.5 text-center">
-                    <p className="text-[10px] text-kmf-text-tertiary uppercase">Mini</p>
-                    <p className="text-sm font-bold text-kmf-text-primary">{result.miniLots.toFixed(1)}</p>
-                  </div>
-                  <div className="bg-kmf-panel/50 rounded-lg p-2.5 text-center">
-                    <p className="text-[10px] text-kmf-text-tertiary uppercase">Micro</p>
-                    <p className="text-sm font-bold text-kmf-text-primary">{result.microLots}</p>
-                  </div>
-                </div>
 
-                {/* Details grid */}
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="bg-kmf-panel/50 rounded-lg p-2.5">
-                    <p className="text-[10px] text-kmf-text-tertiary uppercase">Risk Amount</p>
-                    <p className="text-sm font-bold text-kmf-loss">
-                      {formatNumber(result.riskAmount)} {accountCurrency}
-                    </p>
-                  </div>
-                  <div className="bg-kmf-panel/50 rounded-lg p-2.5">
-                    <p className="text-[10px] text-kmf-text-tertiary uppercase">SL Distance</p>
-                    <p className="text-sm font-bold text-kmf-text-primary">
-                      {result.stopLossPips.toFixed(1)} pips
-                    </p>
-                  </div>
-                  <div className="bg-kmf-panel/50 rounded-lg p-2.5">
-                    <p className="text-[10px] text-kmf-text-tertiary uppercase">Pip Value</p>
-                    <p className="text-sm font-bold text-kmf-text-primary">
-                      {formatNumber(result.pipValue, 4)} {accountCurrency}
-                    </p>
-                  </div>
-                  <div className="bg-kmf-panel/50 rounded-lg p-2.5">
-                    <p className="text-[10px] text-kmf-text-tertiary uppercase">Margin Required</p>
-                    <p className="text-sm font-bold text-kmf-text-primary">
-                      {formatNumber(result.marginRequired)} {accountCurrency}
-                    </p>
+                  {/* Details grid */}
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="bg-kmf-panel/50 rounded-lg p-2.5">
+                      <p className="text-[10px] text-kmf-text-tertiary uppercase">Risk Amount</p>
+                      <p className="text-sm font-bold text-kmf-loss">
+                        {formatNumber(result.riskAmount)} {accountCurrency}
+                      </p>
+                    </div>
+                    <div className="bg-kmf-panel/50 rounded-lg p-2.5">
+                      <p className="text-[10px] text-kmf-text-tertiary uppercase">SL Distance</p>
+                      <p className="text-sm font-bold text-kmf-text-primary">
+                        {result.stopLossPips.toFixed(1)} pips
+                      </p>
+                    </div>
+                    <div className="bg-kmf-panel/50 rounded-lg p-2.5">
+                      <p className="text-[10px] text-kmf-text-tertiary uppercase">Pip Value</p>
+                      <p className="text-sm font-bold text-kmf-text-primary">
+                        {formatNumber(result.pipValue, 4)} {accountCurrency}
+                      </p>
+                    </div>
+                    <div className="bg-kmf-panel/50 rounded-lg p-2.5">
+                      <p className="text-[10px] text-kmf-text-tertiary uppercase">Margin Required</p>
+                      <p className="text-sm font-bold text-kmf-text-primary">
+                        {formatNumber(result.marginRequired)} {accountCurrency}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -389,7 +391,7 @@ const LotCalculatorPage = () => {
 
             {/* TP / R:R section */}
             {result.lotSize > 0 && result.riskRewardRatio > 0 && (
-              <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+              <div className="glass-card rounded-2xl p-4">
                 <p className="text-sm font-semibold text-kmf-text-primary mb-3">🎯 Risk/Reward Analysis</p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
                   <div className="bg-kmf-surface rounded-lg p-2.5 text-center">
@@ -436,8 +438,8 @@ const LotCalculatorPage = () => {
               <div className="flex items-start gap-2 px-1 pb-6">
                 <FaInfoCircle className="text-kmf-text-tertiary text-xs flex-shrink-0 mt-0.5" />
                 <p className="text-[11px] text-kmf-text-tertiary leading-relaxed">
-                  Lot sizes are <span className="text-kmf-accent font-medium">truncated</span> (floored), not rounded — matching professional broker standards. 
-                  This ensures your actual risk never exceeds the target risk percentage. 
+                  Lot sizes are <span className="text-kmf-accent font-medium">truncated</span> (floored), not rounded — matching professional broker standards.
+                  This ensures your actual risk never exceeds the target risk percentage.
                   Live prices are cached for 30s. Exchange rates use fallbacks when API is unavailable.
                 </p>
               </div>
@@ -447,7 +449,7 @@ const LotCalculatorPage = () => {
 
         {/* Placeholder when no result yet */}
         {!result && selectedSymbol && (
-          <div className="bg-kmf-panel rounded-xl p-6 border border-kmf-accent/10 text-center">
+          <div className="glass-card rounded-2xl p-6 text-center">
             <p className="text-sm text-kmf-text-tertiary">
               Enter <span className="text-kmf-accent">Entry Price</span> and <span className="text-kmf-accent">Stop Loss</span> to calculate lot size
             </p>
@@ -455,7 +457,7 @@ const LotCalculatorPage = () => {
         )}
 
         {!selectedSymbol && (
-          <div className="bg-kmf-panel rounded-xl p-8 border border-kmf-accent/10 text-center">
+          <div className="glass-card rounded-2xl p-8 text-center">
             <p className="text-3xl mb-2">📐</p>
             <p className="text-sm text-kmf-text-tertiary">
               Select an <span className="text-kmf-accent">instrument</span> to start calculating

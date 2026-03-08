@@ -144,24 +144,24 @@ const WeeklyReviewPage = () => {
   const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-kmf-text-primary text-sm placeholder:text-kmf-text-tertiary/50 focus:outline-none focus:border-kmf-accent transition-all";
 
   return (
-    <div className="max-w-4xl mx-auto space-y-5 animate-fadeIn">
+    <div className="max-w-4xl mx-auto space-y-5 animate-fadeIn stagger-in">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold text-kmf-text-primary">Weekly Review</h1>
-        <button onClick={loadData} disabled={syncing} className="p-2 rounded-lg text-kmf-text-tertiary hover:text-kmf-accent hover:bg-kmf-accent/10 transition-all disabled:opacity-50">
+        <button onClick={loadData} disabled={syncing} className="p-2 rounded-lg text-kmf-text-tertiary hover:text-kmf-accent hover:bg-kmf-accent/10 transition-all disabled:opacity-50 hover-scale">
           <FaSync className={syncing ? 'animate-spin' : ''} size={14} />
         </button>
       </div>
 
       {/* Week Navigator */}
-      <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+      <div className="glass-card rounded-2xl p-4">
         <div className="flex items-center justify-between">
-          <button onClick={() => navigate('prev')} className="p-2 rounded-lg text-kmf-accent hover:bg-kmf-accent/10 transition-all"><FaChevronLeft /></button>
+          <button onClick={() => navigate('prev')} className="p-2 rounded-lg text-kmf-accent hover:bg-kmf-accent/10 transition-all hover-scale"><FaChevronLeft /></button>
           <div className="text-center">
             <p className="text-lg font-bold text-kmf-text-primary">Week {selectedWeek}</p>
             <p className="text-xs text-kmf-text-tertiary">{formatDate(start)} – {formatDate(end)}</p>
           </div>
-          <button onClick={() => navigate('next')} disabled={isFuture} className="p-2 rounded-lg text-kmf-accent hover:bg-kmf-accent/10 transition-all disabled:opacity-30"><FaChevronRight /></button>
+          <button onClick={() => navigate('next')} disabled={isFuture} className="p-2 rounded-lg text-kmf-accent hover:bg-kmf-accent/10 transition-all disabled:opacity-30 hover-scale"><FaChevronRight /></button>
         </div>
         {isCurrentWeek && (
           <p className="text-center mt-2"><span className="text-xs text-kmf-accent">📅 Current Week</span></p>
@@ -169,7 +169,7 @@ const WeeklyReviewPage = () => {
       </div>
 
       {/* Weekly Statistics */}
-      <div className="bg-kmf-panel rounded-xl p-5 border border-kmf-accent/10">
+      <div className="glass-card rounded-2xl p-5">
         <h2 className="text-sm font-bold text-kmf-text-primary mb-4">📊 Weekly Statistics</h2>
         <div className="grid grid-cols-2 gap-3">
           {[
@@ -186,7 +186,7 @@ const WeeklyReviewPage = () => {
             { label: 'Best Trade', value: `+${weekBest.toFixed(2)} USD`, color: 'text-kmf-profit' },
             { label: 'Worst Trade', value: `${weekWorst.toFixed(2)} USD`, color: 'text-kmf-loss' },
           ].map((s, i) => (
-            <div key={i} className="bg-kmf-surface/50 rounded-lg p-3 border border-kmf-accent/5">
+            <div key={i} className="stat-card hover-tilt bg-kmf-surface/50 rounded-lg p-3 border border-kmf-accent/5">
               <p className="text-xs text-kmf-text-tertiary">{s.label}</p>
               <p className={`text-sm font-bold ${s.color || 'text-kmf-text-primary'}`}>{s.value}</p>
             </div>
@@ -195,7 +195,7 @@ const WeeklyReviewPage = () => {
       </div>
 
       {/* Self-Evaluation */}
-      <div className="bg-kmf-panel rounded-xl p-5 border border-kmf-accent/10">
+      <div className="glass-card rounded-2xl p-5">
         <h2 className="text-sm font-bold text-kmf-text-primary mb-4">🧠 Self-Evaluation</h2>
         <div className="space-y-4">
           {sliders.map(({ key, label }) => (
@@ -213,7 +213,7 @@ const WeeklyReviewPage = () => {
       </div>
 
       {/* Reflection Notes */}
-      <div className="bg-kmf-panel rounded-xl p-5 border border-kmf-accent/10">
+      <div className="glass-card rounded-2xl p-5">
         <h2 className="text-sm font-bold text-kmf-text-primary mb-4">💭 Reflection Notes</h2>
         <div className="space-y-3">
           <div>
@@ -236,26 +236,26 @@ const WeeklyReviewPage = () => {
 
       {/* Save Review */}
       <button onClick={handleSaveReview} disabled={syncing}
-        className="w-full py-3 rounded-xl bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white font-bold text-sm hover:shadow-glow transition-all disabled:opacity-50">
+        className="btn-primary w-full py-3 rounded-2xl text-white font-bold text-sm disabled:opacity-50">
         {syncing ? 'Saving...' : existingReview ? 'Update Review' : 'Save Review'}
       </button>
 
       {/* Goals for Next Week */}
-      <div className="bg-kmf-panel rounded-xl p-5 border border-kmf-accent/10">
+      <div className="glass-card rounded-2xl p-5">
         <h2 className="text-sm font-bold text-kmf-text-primary mb-4">🚀 Goals for Next Week (Week {nextWeek})</h2>
         <div className="flex gap-2 mb-4">
           <input type="text" className={`${inputClass} flex-1`} placeholder="Add a new goal..."
             value={newGoalText} onChange={(e) => setNewGoalText(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleAddGoal()} />
           <button onClick={handleAddGoal} disabled={!newGoalText.trim() || syncing}
-            className="w-10 h-10 rounded-lg bg-kmf-accent text-white flex items-center justify-center hover:bg-kmf-accent-bright transition-all disabled:opacity-50">
+            className="w-10 h-10 rounded-lg bg-kmf-accent text-white flex items-center justify-center hover:bg-kmf-accent-bright transition-all disabled:opacity-50 hover-scale">
             <FaPlus size={14} />
           </button>
         </div>
         {goalsForNextWeek.length > 0 ? (
           <div className="space-y-2">
             {goalsForNextWeek.map((goal) => (
-              <div key={goal.id} className={`flex items-center gap-3 p-3 rounded-lg border transition-all ${
+              <div key={goal.id} className={`flex items-center gap-3 p-3 rounded-lg border transition-all hover-lift ${
                 goal.status === 'COMPLETED' ? 'bg-kmf-profit/5 border-kmf-profit/20' : goal.status === 'CANCELLED' ? 'bg-kmf-loss/5 border-kmf-loss/20 opacity-50' : 'bg-kmf-surface/50 border-kmf-accent/10'
               }`}>
                 <button onClick={() => updateGoal(goal.id, { status: goal.status === 'COMPLETED' ? 'PENDING' : 'COMPLETED' })}
@@ -265,7 +265,7 @@ const WeeklyReviewPage = () => {
                   {goal.status === 'COMPLETED' && <FaCheck size={10} />}
                 </button>
                 <span className={`flex-1 text-sm ${goal.status === 'COMPLETED' ? 'line-through text-kmf-text-tertiary' : 'text-kmf-text-primary'}`}>{goal.goalText}</span>
-                <button onClick={() => removeGoal(goal.id)} className="p-1.5 rounded text-kmf-text-tertiary hover:text-kmf-loss transition-all"><FaTrash size={11} /></button>
+                <button onClick={() => removeGoal(goal.id)} className="p-1.5 rounded text-kmf-text-tertiary hover:text-kmf-loss transition-all hover-scale"><FaTrash size={11} /></button>
               </div>
             ))}
           </div>

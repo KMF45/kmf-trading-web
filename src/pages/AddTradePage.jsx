@@ -19,7 +19,7 @@ const DEFAULT_CHECKLIST = [
   'Defined clear exit plan',
 ];
 
-const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-kmf-text-primary text-sm placeholder:text-kmf-text-tertiary/50 focus:outline-none focus:border-kmf-accent focus:ring-1 focus:ring-kmf-accent/30 transition-all";
+const inputClass = "w-full bg-kmf-surface border border-kmf-accent/20 rounded-lg px-4 py-2.5 text-kmf-text-primary text-sm placeholder:text-kmf-text-tertiary/50 focus:outline-none focus:border-kmf-accent focus:ring-1 focus:ring-kmf-accent/30 transition-all input-glow";
 
 const AddTradePage = () => {
   const navigate = useNavigate();
@@ -275,7 +275,7 @@ const AddTradePage = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto animate-fadeIn">
+    <div className="max-w-3xl mx-auto smooth-entry">
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <div className="w-10 h-10 rounded-lg bg-kmf-accent/15 flex items-center justify-center">
@@ -293,7 +293,7 @@ const AddTradePage = () => {
         <div className="mb-4 p-3 rounded-lg bg-kmf-loss/10 border border-kmf-loss/30 text-kmf-loss text-sm">{error}</div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4 stagger-in">
         {/* Date & Time */}
         <div className="grid grid-cols-2 gap-3">
           <div>
@@ -315,7 +315,7 @@ const AddTradePage = () => {
         </div>
 
         {/* Trade Type */}
-        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <div className="glass-card rounded-2xl p-4">
           <p className="text-sm font-semibold text-kmf-text-primary mb-3">📊 Trade Type</p>
           <div className="grid grid-cols-2 gap-3">
             {['BUY', 'SELL'].map((t) => (
@@ -334,7 +334,7 @@ const AddTradePage = () => {
         </div>
 
         {/* Trade Details */}
-        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10 space-y-3">
+        <div className="glass-card rounded-2xl p-4 space-y-3">
           <p className="text-sm font-semibold text-kmf-text-primary">📝 Trade Details</p>
 
           {/* Symbol Picker Trigger */}
@@ -386,7 +386,7 @@ const AddTradePage = () => {
         </div>
 
         {/* Pre-Trade Checklist */}
-        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <div className="glass-card rounded-2xl p-4">
           <div className="flex items-center justify-between mb-3">
             <p className="text-sm font-semibold text-kmf-text-primary">✅ Pre-Trade Checklist</p>
             <span className="text-xs text-kmf-accent font-bold">{form.completedTasks.length}/{DEFAULT_CHECKLIST.length}</span>
@@ -410,7 +410,7 @@ const AddTradePage = () => {
         </div>
 
         {/* Result — with BREAKEVEN */}
-        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <div className="glass-card rounded-2xl p-4">
           <p className="text-sm font-semibold text-kmf-text-primary mb-3">🎯 Result</p>
           <div className="grid grid-cols-4 gap-2">
             {[
@@ -439,14 +439,14 @@ const AddTradePage = () => {
         </div>
 
         {/* Notes */}
-        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <div className="glass-card rounded-2xl p-4">
           <p className="text-sm font-semibold text-kmf-text-primary mb-2">📝 Notes</p>
           <textarea className={`${inputClass} min-h-[80px] resize-y`} placeholder="Trade notes, reasoning, lessons learned..."
             value={form.notes} onChange={(e) => updateField('notes', e.target.value)} rows={3} />
         </div>
 
         {/* Photo */}
-        <div className="bg-kmf-panel rounded-xl p-4 border border-kmf-accent/10">
+        <div className="glass-card rounded-2xl p-4">
           <p className="text-sm font-semibold text-kmf-text-primary mb-3">📷 Chart Screenshot</p>
           {photoPreview ? (
             <div className="relative inline-block">
@@ -468,11 +468,11 @@ const AddTradePage = () => {
         {/* Actions */}
         <div className="flex gap-3 pb-6">
           <button type="button" onClick={() => { submittedRef.current = true; navigate(isEditMode ? '/app/history' : '/app'); }}
-            className="flex-1 py-3 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary text-sm font-medium hover:text-kmf-text-primary hover:border-kmf-accent/40 transition-all">
+            className="flex-1 py-3 rounded-lg border border-kmf-accent/20 text-kmf-text-secondary text-sm font-medium hover:text-kmf-text-primary hover:border-kmf-accent/40 transition-all hover-scale">
             Cancel
           </button>
           <button type="submit" disabled={saving || !isFormValid}
-            className="flex-1 py-3 rounded-lg bg-gradient-to-r from-kmf-accent to-kmf-accent-bright text-white font-bold text-sm hover:shadow-glow transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+            className="flex-1 py-3 rounded-lg btn-primary text-sm disabled:opacity-40 disabled:cursor-not-allowed hover-scale">
             💾 {saving ? 'Saving...' : isEditMode ? 'Save Changes' : 'Save Trade'}
           </button>
         </div>
