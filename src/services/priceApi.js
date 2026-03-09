@@ -5,7 +5,7 @@
  */
 
 const API_BASE = 'https://api.twelvedata.com';
-const API_KEY = 'demo'; // Replace with actual key for production
+const API_KEY = import.meta.env.VITE_TWELVEDATA_API_KEY || 'demo';
 
 // Cache to avoid excessive API calls
 const priceCache = new Map();

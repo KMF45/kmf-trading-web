@@ -1,7 +1,7 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — landing page, blog (18 articole), și webapp complet cu visual polish premium. Stack: React 19, Vite, Tailwind CSS, Firebase (Auth + Firestore). Deploy pe Vercel. Phase 1 (visual polish) COMPLET. Phase 2 COMPLET — emotions tracking, tilt detection, gamification, Trading Diary, equity curve, performance heatmap. Theme toggle și import/export excluse (nu sunt necesare la web).
+Proiect web pentru kmfjournal.com — landing page, blog (18 articole), și webapp complet aliniat cu Android app. Stack: React 19, Vite, Tailwind CSS, Firebase (Auth + Firestore). Phase 1 (visual polish) + Phase 2 (features) + Phase 3 (Android alignment) + Phase 4 (Statistics deep alignment) — toate COMPLETE. StatisticsPage acum are TOATE secțiunile din Android: P&L by Day, P&L by Session, Top Pairs Pie Chart, Emotion Stats, Emotional Journey, Honesty Mirror, Trader Personality, Duration Stats.
 
 ## Sesiuni de lucru
 
@@ -110,7 +110,23 @@ Proiect web pentru kmfjournal.com — landing page, blog (18 articole), și weba
 - Firestore: noua colecție `diaryEntries` — trebuie adăugate security rules
 - `utils/models.js` și `data/models.js` sunt ambele active — TradesContext importă din utils/models
 - Build OK, zero erori
-**Următorii pași sugerați:** Heatmap + equity curve în Statistics, Firestore security rules update
+**Următorii pași sugerați:** Aliniere cu Android app, Firestore security rules update
+
+---
+
+### 2026-03-09 — Sesiunea #3 (Task 1) — Aliniere web cu Android app
+**Ce s-a cerut:** Meniurile și caracteristicile web-ului să semene cu Android-ul
+**Ce s-a făcut:**
+- **Sidebar**: ordine nav identică cu Android (Dashboard, Add Trade, History, Statistics, Weekly Review, Checklist, Lot Calculator, Trading Diary, Settings). Profile scos din meniu principal.
+- **Dashboard**: refăcut — 6 stat cards (Total P/L, Win Rate, Total Trades, Month P/L, Max Drawdown, Profit Factor), Performance Summary (4 cards: avg win/loss, best/worst), Balance Evolution, Open Positions. Scoase: Quick Actions, greeting.
+- **Statistics**: adăugat time range selector (7d, 30d, 3mo, YTD, All Time) — toate graficele și statisticile respectă filtrul. Link către Profile din badge-ul trader.
+- **Settings**: refăcut cu 5 secțiuni expandabile (Account, Settings, Data, Support, About) identic cu Android. Adăugat About section, logout confirmation dialog.
+**Fișiere modificate:**
+- `src/components/layout/Sidebar.jsx` — nav order + removed Profile
+- `src/pages/DashboardPage.jsx` — rescris layout
+- `src/pages/StatisticsPage.jsx` — time range filter + displayStats
+- `src/pages/SettingsPage.jsx` — rescris cu secțiuni expandabile
+**Build:** OK, zero erori
 
 ---
 
@@ -125,5 +141,25 @@ Proiect web pentru kmfjournal.com — landing page, blog (18 articole), și weba
 **De reținut:** Theme toggle și import/export excluse din Phase 2 (nu sunt necesare la web per decizia userului)
 **Build:** OK, zero erori
 **Phase 2 COMPLET.**
+
+---
+
+### 2026-03-09 — Sesiunea #4 (Task 1) — Statistics Deep Alignment cu Android
+**Ce s-a cerut:** Web-ul să fie identic cu Android-ul — lipseau multe secțiuni din Statistics
+**Ce s-a făcut:**
+- **P&L by Day**: Bar chart Mon-Sat cu verde/roșu, tooltip cu sumă
+- **P&L by Session**: Asian/London/NY cu steaguri, trades count, win rate, best session
+- **Top Pairs P/L**: Pie Chart (recharts PieChart) cu legendă colorată — înlocuiește lista veche
+- **Emotion Stats**: Bare de distribuție pe fiecare emoție cu procente și culori
+- **Emotional Journey**: Top 5 tranziții before→after cu emoji
+- **Honesty Mirror**: Honesty score, avg rating winners/losers, overconfident/underconfident count
+- **Trader Personality**: Engine complet — 6 tipuri (Sniper, Wave Rider, Student, Gambler, Intuitive, Explorer), strengths/weaknesses, dominant emotion, stability %, progress bar
+- **Duration Stats**: Avg duration, avg win/loss duration (condițional pe closeDateTime)
+- **Currency fix**: Toate sumele afișează currency din settings, nu hardcodat USD
+**Fișiere modificate:**
+- `src/pages/StatisticsPage.jsx` — rescris complet cu 7+ secțiuni noi
+**Build:** OK, zero erori, 20 pagini prerendered
+**De reținut:** Firebase credentials sunt expuse în cod public pe GitHub — trebuie migrat la .env
+**Următorii pași sugerați:** Fix AddTrade bug (user reportat "nimic nu se deschide"), deploy
 
 ---
