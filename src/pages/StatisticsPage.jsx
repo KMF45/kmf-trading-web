@@ -1,9 +1,30 @@
+import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { useTrades } from '../contexts/TradesContext';
 import AnimatedNumber from '../components/common/AnimatedNumber';
-import { FaChartLine, FaRocket, FaChartBar, FaFire, FaExclamationTriangle, FaInfoCircle, FaCheckCircle } from 'react-icons/fa';
+import { FaChartLine, FaRocket, FaChartBar, FaFire, FaExclamationTriangle, FaInfoCircle, FaCheckCircle, FaTrophy } from 'react-icons/fa';
 import { BarChart, Bar, AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { calculateRMultiple } from '../utils/models';
 import { getTradingSession } from '../data/models';
+
+const TIME_RANGES = [
+  { key: '7d', label: '7 Days' },
+  { key: '30d', label: '30 Days' },
+  { key: '3m', label: '3 Months' },
+  { key: 'ytd', label: 'YTD' },
+  { key: 'all', label: 'All Time' },
+];
+
+const getTimeRangeStart = (key) => {
+  const now = new Date();
+  switch (key) {
+    case '7d': return new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7).getTime();
+    case '30d': return new Date(now.getFullYear(), now.getMonth(), now.getDate() - 30).getTime();
+    case '3m': return new Date(now.getFullYear(), now.getMonth() - 3, now.getDate()).getTime();
+    case 'ytd': return new Date(now.getFullYear(), 0, 1).getTime();
+    default: return 0;
+  }
+};
 
 const MonthlyTooltip = ({ active, payload, label }) => {
   if (active && payload?.[0]) {
@@ -22,11 +43,42 @@ const MonthlyTooltip = ({ active, payload, label }) => {
 
 const StatisticsPage = () => {
   const { stats, closedTrades, getPnL } = useTrades();
+  const [timeRange, setTimeRange] = useState('all');
+
+  // Filter trades by time range
+  const filteredTrades = useMemo(() => {
+    if (timeRange === 'all') return closedTrades;
+    const start = getTimeRangeStart(timeRange);
+    return closedTrades.filter(t => (t.tradeDateTime || t.timestamp) >= start);
+  }, [closedTrades, timeRange]);
+
+  // Filtered stats
+  const fStats = useMemo(() => {
+    const trades = filteredTrades;
+    const wins = trades.filter(t => t.result === 'PROFIT');
+    const losses = trades.filter(t => t.result === 'LOSS');
+    const totalPL = trades.reduce((s, t) => s + getPnL(t), 0);
+    const winRate = trades.length > 0 ? (wins.length / trades.length) * 100 : 0;
+    const avgWin = wins.length > 0 ? wins.reduce((s, t) => s + getPnL(t), 0) / wins.length : 0;
+    const avgLoss = losses.length > 0 ? Math.abs(losses.reduce((s, t) => s + getPnL(t), 0) / losses.length) : 0;
+    const totalWinAmt = wins.reduce((s, t) => s + getPnL(t), 0);
+    const totalLossAmt = Math.abs(losses.reduce((s, t) => s + getPnL(t), 0));
+    const profitFactor = totalLossAmt > 0 ? totalWinAmt / totalLossAmt : totalWinAmt;
+    const expectancy = trades.length > 0 ? ((winRate / 100) * avgWin) - ((1 - winRate / 100) * avgLoss) : 0;
+    const avgRMul = trades.length > 0 ? trades.reduce((s, t) => s + calculateRMultiple(t), 0) / trades.length : 0;
+    const bestTrade = trades.length > 0 ? Math.max(...trades.map(t => getPnL(t))) : 0;
+    const worstTrade = trades.length > 0 ? Math.min(...trades.map(t => getPnL(t))) : 0;
+    return { totalPL, winRate, avgWin, avgLoss, profitFactor, expectancy, avgRMultiple: avgRMul, bestTrade, worstTrade, closedTrades: trades.length, wins: wins.length, losses: losses.length, pfQuality: profitFactor >= 2 ? 'Excellent' : profitFactor >= 1 ? 'Good' : 'Poor' };
+  }, [filteredTrades, getPnL]);
+
+  // Use filtered trades for all charts when not 'all', otherwise use global stats
+  const displayStats = timeRange === 'all' ? stats : { ...stats, ...fStats };
+  const displayTrades = filteredTrades;
 
   // R-Multiple Distribution
   const rMultipleData = (() => {
     const buckets = { '3R+': 0, '2R-3R': 0, '1R-2R': 0, '0R-1R': 0, '-1R-0R': 0, '-2R--1R': 0, '<-2R': 0 };
-    closedTrades.forEach(t => {
+    displayTrades.forEach(t => {
       const r = calculateRMultiple(t);
       if (r >= 3) buckets['3R+']++;
       else if (r >= 2) buckets['2R-3R']++;
@@ -41,8 +93,8 @@ const StatisticsPage = () => {
 
   // Equity Curve data
   const equityCurve = (() => {
-    if (closedTrades.length === 0) return [];
-    const sorted = [...closedTrades].sort((a, b) => (a.tradeDateTime || a.timestamp) - (b.tradeDateTime || b.timestamp));
+    if (displayTrades.length === 0) return [];
+    const sorted = [...displayTrades].sort((a, b) => (a.tradeDateTime || a.timestamp) - (b.tradeDateTime || b.timestamp));
     let running = 0;
     return sorted.map((t, i) => {
       running += getPnL(t);
@@ -61,7 +113,7 @@ const StatisticsPage = () => {
   const heatmapData = (() => {
     const grid = {};
     DAYS.forEach(d => { grid[d] = {}; HOURS.forEach(h => { grid[d][h] = { pl: 0, count: 0 }; }); });
-    closedTrades.forEach(t => {
+    displayTrades.forEach(t => {
       const dt = new Date(t.tradeDateTime || t.timestamp);
       const dayIdx = dt.getDay(); // 0=Sun
       const day = DAYS[dayIdx === 0 ? 6 : dayIdx - 1]; // shift to Mon-first
@@ -94,10 +146,10 @@ const StatisticsPage = () => {
     return `rgba(255,82,82,${0.1 + intensity * 0.5})`;
   };
 
-  const disciplineLabel = stats.disciplinePercent >= 80 ? 'CONSISTENT' : stats.disciplinePercent >= 60 ? 'MODERATE' : 'NEEDS WORK';
+  const disciplineLabel = displayStats.disciplinePercent >= 80 ? 'CONSISTENT' : displayStats.disciplinePercent >= 60 ? 'MODERATE' : 'NEEDS WORK';
 
   // Win rate ring (animated SVG)
-  const wr = stats.winRate;
+  const wr = displayStats.winRate;
   const radius = 52;
   const circumference = 2 * Math.PI * radius;
   const strokeDash = (wr / 100) * circumference;
@@ -135,13 +187,27 @@ const StatisticsPage = () => {
           <p className="text-sm text-kmf-text-tertiary">Performance Overview</p>
         </div>
         <div className="flex items-center gap-2">
-          <span className={`text-xs px-2.5 py-1 rounded-full font-bold ${stats.traderBadge.bg} ${stats.traderBadge.color}`}>
-            {stats.traderBadge.badge}
-          </span>
+          <Link to="/app/profile" className={`flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full font-bold ${stats.traderBadge.bg} ${stats.traderBadge.color} hover:opacity-80 transition-opacity`}>
+            <FaTrophy size={10} /> {stats.traderBadge.badge}
+          </Link>
           <span className="text-xs px-2.5 py-1 rounded-full font-bold bg-kmf-accent/15 text-kmf-accent">
             {stats.tradingLevel.label}
           </span>
         </div>
+      </div>
+
+      {/* Time Range Selector */}
+      <div className="flex gap-2 flex-wrap">
+        {TIME_RANGES.map((tr) => (
+          <button key={tr.key} onClick={() => setTimeRange(tr.key)}
+            className={`px-3 py-1.5 rounded-full text-xs font-medium hover-scale transition-all ${
+              timeRange === tr.key
+                ? 'bg-kmf-accent/20 text-kmf-accent border border-kmf-accent/40'
+                : 'bg-kmf-surface/50 border border-white/5 text-kmf-text-tertiary hover:border-kmf-accent/20'
+            }`}>
+            {tr.label}
+          </button>
+        ))}
       </div>
 
       {/* Insights */}
@@ -191,34 +257,34 @@ const StatisticsPage = () => {
               <span className="text-[10px] text-kmf-text-tertiary mt-0.5">win rate</span>
             </div>
           </div>
-          <p className="text-sm text-kmf-text-tertiary mt-3">{stats.closedTrades} Trades</p>
+          <p className="text-sm text-kmf-text-tertiary mt-3">{displayStats.closedTrades} Trades</p>
         </div>
 
         {/* Total P/L + Profit Factor */}
         <div className="glass-card rounded-2xl p-6 hover-tilt">
           <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest mb-2">TOTAL P/L</p>
-          <p className={`text-4xl font-black ${stats.totalPL >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
-            <AnimatedNumber value={stats.totalPL} prefix={stats.totalPL >= 0 ? '+' : ''} suffix="" decimals={0} />
+          <p className={`text-4xl font-black ${displayStats.totalPL >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+            <AnimatedNumber value={displayStats.totalPL} prefix={displayStats.totalPL >= 0 ? '+' : ''} suffix="" decimals={0} />
             <span className="text-lg font-medium text-kmf-text-tertiary ml-2">USD</span>
           </p>
-          <p className="text-xs text-kmf-text-tertiary mt-1 mb-4">{stats.totalPL >= 0 ? 'net profit' : 'net loss'}</p>
+          <p className="text-xs text-kmf-text-tertiary mt-1 mb-4">{displayStats.totalPL >= 0 ? 'net profit' : 'net loss'}</p>
 
           <div className="border-t border-white/5 pt-3 space-y-2">
             <div className="flex justify-between items-center">
               <span className="text-xs text-kmf-text-tertiary">Profit Factor</span>
               <div className="flex items-center gap-2">
-                <span className="text-sm font-bold text-kmf-profit">{stats.profitFactor.toFixed(2)}</span>
+                <span className="text-sm font-bold text-kmf-profit">{displayStats.profitFactor.toFixed(2)}</span>
                 <span className={`text-[10px] px-1.5 py-0.5 rounded font-bold ${
-                  stats.pfQuality === 'Excellent' ? 'bg-kmf-profit/15 text-kmf-profit' :
-                  stats.pfQuality === 'Good' ? 'bg-yellow-500/15 text-yellow-400' :
+                  displayStats.pfQuality === 'Excellent' ? 'bg-kmf-profit/15 text-kmf-profit' :
+                  displayStats.pfQuality === 'Good' ? 'bg-yellow-500/15 text-yellow-400' :
                   'bg-kmf-loss/15 text-kmf-loss'
-                }`}>{stats.pfQuality}</span>
+                }`}>{displayStats.pfQuality}</span>
               </div>
             </div>
             <div className="flex justify-between">
               <span className="text-xs text-kmf-text-tertiary">Avg R-Multiple</span>
-              <span className={`text-sm font-bold ${stats.avgRMultiple >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
-                {stats.avgRMultiple >= 0 ? '+' : ''}{stats.avgRMultiple.toFixed(2)}R
+              <span className={`text-sm font-bold ${displayStats.avgRMultiple >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+                {displayStats.avgRMultiple >= 0 ? '+' : ''}{displayStats.avgRMultiple.toFixed(2)}R
               </span>
             </div>
           </div>
@@ -229,14 +295,14 @@ const StatisticsPage = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="stat-card stat-card-accent p-5 hover-tilt">
           <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest mb-2">EXPECTANCY</p>
-          <p className={`text-3xl font-black ${stats.expectancy >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
-            <AnimatedNumber value={stats.expectancy} prefix="" decimals={0} />
+          <p className={`text-3xl font-black ${displayStats.expectancy >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+            <AnimatedNumber value={displayStats.expectancy} prefix="" decimals={0} />
             <span className="text-lg font-medium text-kmf-text-tertiary ml-1">USD</span>
           </p>
           <p className="text-xs text-kmf-text-tertiary mt-1">per trade</p>
           <div className="border-t border-white/5 mt-3 pt-3 space-y-1">
-            <div className="flex justify-between"><span className="text-xs text-kmf-text-tertiary">Avg Win</span><span className="text-xs font-bold text-kmf-profit">+{stats.avgWin.toFixed(0)}</span></div>
-            <div className="flex justify-between"><span className="text-xs text-kmf-text-tertiary">Avg Loss</span><span className="text-xs font-bold text-kmf-loss">-{stats.avgLoss.toFixed(0)}</span></div>
+            <div className="flex justify-between"><span className="text-xs text-kmf-text-tertiary">Avg Win</span><span className="text-xs font-bold text-kmf-profit">+{displayStats.avgWin.toFixed(0)}</span></div>
+            <div className="flex justify-between"><span className="text-xs text-kmf-text-tertiary">Avg Loss</span><span className="text-xs font-bold text-kmf-loss">-{displayStats.avgLoss.toFixed(0)}</span></div>
           </div>
         </div>
 
@@ -247,20 +313,20 @@ const StatisticsPage = () => {
             <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(26,29,36,0.8)" strokeWidth="6" />
               <circle cx="50" cy="50" r="42" fill="none"
-                stroke={stats.disciplinePercent >= 70 ? '#00E676' : '#FF5252'}
+                stroke={displayStats.disciplinePercent >= 70 ? '#00E676' : '#FF5252'}
                 strokeWidth="6" strokeDasharray={2 * Math.PI * 42}
-                strokeDashoffset={(1 - stats.disciplinePercent / 100) * 2 * Math.PI * 42}
+                strokeDashoffset={(1 - displayStats.disciplinePercent / 100) * 2 * Math.PI * 42}
                 strokeLinecap="round" className="ring-animate"
-                style={{ '--ring-circumference': 2 * Math.PI * 42, '--ring-offset': (1 - stats.disciplinePercent / 100) * 2 * Math.PI * 42 }} />
+                style={{ '--ring-circumference': 2 * Math.PI * 42, '--ring-offset': (1 - displayStats.disciplinePercent / 100) * 2 * Math.PI * 42 }} />
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className={`text-xl font-black ${stats.disciplinePercent >= 70 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
-                {stats.disciplinePercent.toFixed(0)}%
+              <span className={`text-xl font-black ${displayStats.disciplinePercent >= 70 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
+                {displayStats.disciplinePercent.toFixed(0)}%
               </span>
             </div>
           </div>
           <span className={`text-xs px-2.5 py-1 rounded-full font-bold ${
-            stats.disciplinePercent >= 80 ? 'bg-kmf-profit/15 text-kmf-profit' : stats.disciplinePercent >= 60 ? 'bg-yellow-500/15 text-yellow-400' : 'bg-kmf-loss/15 text-kmf-loss'
+            displayStats.disciplinePercent >= 80 ? 'bg-kmf-profit/15 text-kmf-profit' : displayStats.disciplinePercent >= 60 ? 'bg-yellow-500/15 text-yellow-400' : 'bg-kmf-loss/15 text-kmf-loss'
           }`}>{disciplineLabel}</span>
         </div>
       </div>
@@ -292,7 +358,7 @@ const StatisticsPage = () => {
             <FaRocket className="text-kmf-profit text-xs" />
           </div>
           <p className="text-xl font-black text-kmf-profit">
-            <AnimatedNumber value={stats.bestTrade} prefix="$" decimals={0} />
+            <AnimatedNumber value={displayStats.bestTrade} prefix="$" decimals={0} />
           </p>
         </div>
         <div className="stat-card stat-card-loss p-4 hover-tilt">
@@ -301,7 +367,7 @@ const StatisticsPage = () => {
             <FaChartBar className="text-kmf-loss text-xs" />
           </div>
           <p className="text-xl font-black text-kmf-loss">
-            <AnimatedNumber value={Math.abs(stats.worstTrade)} prefix="$" decimals={0} />
+            <AnimatedNumber value={Math.abs(displayStats.worstTrade)} prefix="$" decimals={0} />
           </p>
         </div>
         <div className="stat-card p-4 hover-tilt" style={{ borderLeft: '3px solid rgba(251,146,60,0.5)' }}>
@@ -309,21 +375,21 @@ const StatisticsPage = () => {
             <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest">STREAK</p>
             <FaFire className="text-orange-400 text-xs" />
           </div>
-          <p className="text-xl font-black text-orange-400">{stats.tradingStreak}d</p>
+          <p className="text-xl font-black text-orange-400">{displayStats.tradingStreak}d</p>
         </div>
       </div>
 
       {/* Monthly P&L */}
-      {stats.monthlyPL.some(m => m.pl !== 0) && (
+      {displayStats.monthlyPL.some(m => m.pl !== 0) && (
         <div className="glass-card rounded-2xl p-5">
           <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest mb-4">MONTHLY P&amp;L</p>
           <ResponsiveContainer width="100%" height={180}>
-            <BarChart data={stats.monthlyPL} barSize={28}>
+            <BarChart data={displayStats.monthlyPL} barSize={28}>
               <XAxis dataKey="month" stroke="#546E7A" fontSize={10} tickLine={false} axisLine={false} />
               <YAxis stroke="#546E7A" fontSize={10} tickLine={false} axisLine={false} width={50} tickFormatter={(v) => `$${v}`} />
               <Tooltip content={<MonthlyTooltip />} />
               <Bar dataKey="pl" radius={[6, 6, 0, 0]}>
-                {stats.monthlyPL.map((entry, i) => (
+                {displayStats.monthlyPL.map((entry, i) => (
                   <Cell key={i} fill={entry.pl >= 0 ? '#00E676' : '#FF5252'} fillOpacity={0.85} />
                 ))}
               </Bar>
@@ -381,7 +447,7 @@ const StatisticsPage = () => {
       )}
 
       {/* Performance Heatmap — Day × Hour */}
-      {closedTrades.length >= 3 && (
+      {displayTrades.length >= 3 && (
         <div className="glass-card rounded-2xl p-5">
           <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest mb-4">PERFORMANCE HEATMAP</p>
           <p className="text-xs text-kmf-text-tertiary mb-3">P/L by day of week and time of day</p>
@@ -450,11 +516,11 @@ const StatisticsPage = () => {
       )}
 
       {/* Top Pairs */}
-      {stats.topPairs.length > 0 && (
+      {displayStats.topPairs.length > 0 && (
         <div className="glass-card rounded-2xl p-5">
           <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest mb-4">TOP PAIRS</p>
           <div className="space-y-3">
-            {stats.topPairs.map((pair, i) => {
+            {displayStats.topPairs.map((pair, i) => {
               const pairWR = pair.trades > 0 ? ((pair.wins / pair.trades) * 100) : 0;
               return (
                 <div key={i} className="flex items-center gap-3">

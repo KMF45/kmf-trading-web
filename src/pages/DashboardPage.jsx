@@ -1,7 +1,7 @@
 import { useAuth } from '../contexts/AuthContext';
 import { useTrades } from '../contexts/TradesContext';
 import AnimatedNumber from '../components/common/AnimatedNumber';
-import { FaChartLine, FaPlus, FaHistory, FaClipboardCheck, FaSync, FaClock, FaArrowUp, FaArrowDown, FaFire, FaTrophy, FaShieldAlt, FaExclamationTriangle } from 'react-icons/fa';
+import { FaChartLine, FaSync, FaArrowUp, FaArrowDown, FaExclamationTriangle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -20,10 +20,9 @@ const CustomTooltip = ({ active, payload }) => {
 
 const SkeletonLoader = () => (
   <div className="max-w-7xl mx-auto space-y-5">
-    <div className="skeleton h-8 w-40" />
     <div className="skeleton h-40 w-full rounded-2xl" />
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      {[...Array(4)].map((_, i) => <div key={i} className="skeleton h-24 rounded-xl" />)}
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      {[...Array(6)].map((_, i) => <div key={i} className="skeleton h-24 rounded-xl" />)}
     </div>
     <div className="skeleton h-72 w-full rounded-xl" />
   </div>
@@ -50,27 +49,8 @@ const DashboardPage = () => {
 
   if (loading) return <SkeletonLoader />;
 
-  const greeting = (() => {
-    const h = new Date().getHours();
-    if (h < 12) return 'Good Morning';
-    if (h < 18) return 'Good Afternoon';
-    return 'Good Evening';
-  })();
-
   return (
     <div className="max-w-7xl mx-auto space-y-5 stagger-in">
-      {/* Header with greeting */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-kmf-text-primary">{greeting}, <span className="gradient-text">{user?.displayName || 'Trader'}</span></h1>
-          <p className="text-sm text-kmf-text-tertiary mt-0.5">Here's your trading overview</p>
-        </div>
-        <button onClick={loadData} disabled={syncing}
-          className="p-2.5 rounded-xl text-kmf-text-tertiary hover:text-kmf-accent hover:bg-kmf-accent/10 transition-all disabled:opacity-50 hover-scale">
-          <FaSync className={syncing ? 'animate-spin' : ''} />
-        </button>
-      </div>
-
       {/* Tilt Detection Alert */}
       {stats.tiltStatus.isTilting && (
         <div className={`rounded-2xl p-4 border ${stats.tiltStatus.severity === 'high' ? 'bg-kmf-loss/8 border-kmf-loss/30' : 'bg-orange-500/8 border-orange-500/30'} animate-fadeIn`}>
@@ -93,11 +73,17 @@ const DashboardPage = () => {
       {/* Account Balance — hero card with animated border */}
       <div className="glow-border">
         <div className="glass-card rounded-2xl p-6 sm:p-8 text-center shimmer">
-          {/* Ambient orb */}
           <div className="absolute top-0 right-0 w-40 h-40 rounded-full blur-3xl opacity-10"
             style={{ background: stats.totalPL >= 0 ? 'rgba(0,230,118,0.4)' : 'rgba(255,82,82,0.4)' }} />
 
-          <p className="text-sm text-kmf-text-tertiary mb-2 tracking-wider uppercase">Account Balance</p>
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-sm text-kmf-text-tertiary tracking-wider uppercase">Account Balance</p>
+            <button onClick={loadData} disabled={syncing}
+              className="p-2 rounded-lg text-kmf-text-tertiary hover:text-kmf-accent hover:bg-kmf-accent/10 transition-all disabled:opacity-50">
+              <FaSync size={14} className={syncing ? 'animate-spin' : ''} />
+            </button>
+          </div>
+
           <p className="text-5xl sm:text-6xl font-black tracking-tight">
             <AnimatedNumber value={balance} prefix="$" decimals={2}
               className={balance > 0 ? 'text-kmf-text-primary' : 'text-kmf-loss'} />
@@ -116,75 +102,45 @@ const DashboardPage = () => {
         </div>
       </div>
 
-      {/* Quick Stats Row */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      {/* Quick Stats — 6 cards matching Android layout */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {[
+          { label: 'Total P/L', value: stats.totalPL, prefix: stats.totalPL >= 0 ? '+$' : '-$', displayValue: Math.abs(stats.totalPL), decimals: 2,
+            color: stats.totalPL >= 0 ? 'text-kmf-profit' : 'text-kmf-loss' },
           { label: 'Win Rate', value: stats.closedTrades > 0 ? stats.winRate : 0, suffix: '%', decimals: 1,
-            color: stats.winRate >= 50 ? 'text-kmf-profit' : 'text-kmf-loss', icon: FaTrophy, variant: stats.winRate >= 50 ? 'stat-card-profit' : 'stat-card-loss' },
-          { label: 'Profit Factor', value: stats.profitFactor, suffix: '', decimals: 2,
-            color: 'text-kmf-accent', icon: FaChartLine, variant: 'stat-card-accent' },
-          { label: 'Total Trades', value: stats.totalTrades, suffix: '', decimals: 0,
-            color: 'text-kmf-text-primary', icon: FaShieldAlt, variant: '' },
-          { label: 'Streak', value: stats.tradingStreak, suffix: 'd', decimals: 0,
-            color: 'text-orange-400', icon: FaFire, variant: '' },
+            color: stats.winRate >= 50 ? 'text-kmf-profit' : 'text-kmf-loss' },
+          { label: 'Total Trades', value: stats.totalTrades, decimals: 0, color: 'text-kmf-text-primary' },
+          { label: 'Month P/L', value: stats.monthPL, prefix: stats.monthPL >= 0 ? '+$' : '-$', displayValue: Math.abs(stats.monthPL), decimals: 2,
+            color: stats.monthPL >= 0 ? 'text-kmf-profit' : 'text-kmf-loss' },
+          { label: 'Max Drawdown', value: stats.maxDrawdown.percent, suffix: '%', decimals: 2, color: 'text-kmf-loss' },
+          { label: 'Profit Factor', value: stats.profitFactor, decimals: 2, color: stats.profitFactor >= 1 ? 'text-kmf-profit' : 'text-kmf-loss' },
         ].map((s, i) => (
-          <div key={i} className={`stat-card p-4 hover-tilt ${s.variant}`}>
-            <div className="flex items-center justify-between mb-2">
-              <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest">{s.label}</p>
-              <s.icon className={`text-xs ${s.color} opacity-60`} />
-            </div>
+          <div key={i} className="stat-card p-4 hover-tilt">
+            <p className="text-[10px] font-bold text-kmf-text-tertiary uppercase tracking-widest mb-2">{s.label}</p>
             <p className={`text-2xl font-black ${s.color}`}>
-              <AnimatedNumber value={s.value} suffix={s.suffix} decimals={s.decimals} />
+              <AnimatedNumber value={s.displayValue ?? s.value} prefix={s.prefix || ''} suffix={s.suffix || ''} decimals={s.decimals} />
             </p>
           </div>
         ))}
       </div>
 
-      {/* Performance Summary — two columns */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {/* Win/Loss breakdown */}
-        <div className="glass-card rounded-2xl p-5">
-          <h2 className="text-xs font-bold text-kmf-text-tertiary uppercase tracking-widest mb-4">Performance</h2>
-          <div className="space-y-3">
-            {[
-              { label: 'Avg Win', value: stats.avgWin, color: 'text-kmf-profit', prefix: '+$' },
-              { label: 'Avg Loss', value: stats.avgLoss, color: 'text-kmf-loss', prefix: '-$' },
-              { label: 'Best Trade', value: stats.bestTrade, color: 'text-kmf-profit', prefix: '+$' },
-              { label: 'Worst Trade', value: Math.abs(stats.worstTrade), color: 'text-kmf-loss', prefix: '-$' },
-            ].map((s, i) => (
-              <div key={i} className="flex items-center justify-between py-1.5 border-b border-white/5 last:border-0">
-                <span className="text-sm text-kmf-text-tertiary">{s.label}</span>
-                <span className={`text-sm font-bold ${s.color}`}>
-                  <AnimatedNumber value={s.value} prefix={s.prefix} decimals={2} />
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Month P/L + Drawdown */}
-        <div className="glass-card rounded-2xl p-5">
-          <h2 className="text-xs font-bold text-kmf-text-tertiary uppercase tracking-widest mb-4">This Month</h2>
-          <div className="text-center mb-4">
-            <p className={`text-3xl font-black ${stats.monthPL >= 0 ? 'text-kmf-profit' : 'text-kmf-loss'}`}>
-              <AnimatedNumber value={stats.monthPL} prefix={stats.monthPL >= 0 ? '+$' : '-$'} decimals={2} />
-            </p>
-            <p className="text-xs text-kmf-text-tertiary mt-1">month P/L</p>
-          </div>
-          <div className="border-t border-white/5 pt-3 space-y-2">
-            <div className="flex justify-between">
-              <span className="text-sm text-kmf-text-tertiary">Max Drawdown</span>
-              <span className="text-sm font-bold text-kmf-loss">{stats.maxDrawdown.percent.toFixed(2)}%</span>
+      {/* Performance Summary — matching Android */}
+      <div className="glass-card rounded-2xl p-5">
+        <h2 className="text-xs font-bold text-kmf-text-tertiary uppercase tracking-widest mb-4">Performance Summary</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {[
+            { label: 'Avg Win', value: stats.avgWin, color: 'text-kmf-profit', prefix: '+$' },
+            { label: 'Avg Loss', value: stats.avgLoss, color: 'text-kmf-loss', prefix: '-$' },
+            { label: 'Best Trade', value: stats.bestTrade, color: 'text-kmf-profit', prefix: '+$' },
+            { label: 'Worst Trade', value: Math.abs(stats.worstTrade), color: 'text-kmf-loss', prefix: '-$' },
+          ].map((s, i) => (
+            <div key={i} className="bg-kmf-surface/50 rounded-xl p-3">
+              <p className="text-[10px] text-kmf-text-tertiary uppercase tracking-wider mb-1">{s.label}</p>
+              <p className={`text-lg font-bold ${s.color}`}>
+                <AnimatedNumber value={s.value} prefix={s.prefix} decimals={2} />
+              </p>
             </div>
-            <div className="flex justify-between">
-              <span className="text-sm text-kmf-text-tertiary">Drawdown Amount</span>
-              <span className="text-sm font-bold text-kmf-loss">${stats.maxDrawdown.amount.toFixed(2)}</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-sm text-kmf-text-tertiary">Profit Factor</span>
-              <span className="text-sm font-bold text-kmf-profit">{stats.profitFactor > 0 ? stats.profitFactor.toFixed(2) : '--'}</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -259,26 +215,6 @@ const DashboardPage = () => {
           </div>
         </div>
       )}
-
-      {/* Quick Actions */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {[
-          { to: '/app/add-trade', icon: FaPlus, label: 'New Trade', gradient: 'from-[#4FC3F7] to-[#03A9F4]', glow: 'rgba(79,195,247,0.3)' },
-          { to: '/app/history', icon: FaHistory, label: 'History', gradient: 'from-purple-500 to-pink-500', glow: 'rgba(168,85,247,0.3)' },
-          { to: '/app/statistics', icon: FaChartLine, label: 'Statistics', gradient: 'from-orange-500 to-red-500', glow: 'rgba(249,115,22,0.3)' },
-          { to: '/app/weekly-review', icon: FaClipboardCheck, label: 'Weekly Review', gradient: 'from-teal-500 to-cyan-500', glow: 'rgba(20,184,166,0.3)' },
-        ].map((item) => (
-          <Link key={item.to} to={item.to}
-            className="glass-card rounded-2xl p-4 text-center hover-lift group cursor-pointer">
-            <div className={`w-12 h-12 mx-auto rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-3
-              group-hover:scale-110 group-hover:shadow-lg transition-all duration-300`}
-              style={{ '--tw-shadow': `0 4px 20px ${item.glow}` }}>
-              <item.icon className="text-white text-lg" />
-            </div>
-            <p className="text-xs font-semibold text-kmf-text-secondary group-hover:text-kmf-text-primary transition-colors">{item.label}</p>
-          </Link>
-        ))}
-      </div>
     </div>
   );
 };
