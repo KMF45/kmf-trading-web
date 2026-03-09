@@ -1,11 +1,10 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { useNavigate, useSearchParams, useBlocker } from 'react-router-dom';
-import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import { useTrades } from '../contexts/TradesContext';
 import { useAuth } from '../contexts/AuthContext';
 import SymbolPicker from '../components/trade/SymbolPicker';
 import { getSymbolByCode } from '../data/defaultSymbols';
-import { storage } from '../config/firebase';
+import { getStorageLazy } from '../config/firebase';
 import { EmotionMeta } from '../data/models';
 import { FaPlus, FaStar, FaCheck, FaCalendarAlt, FaClock, FaChevronDown, FaCamera, FaTimes } from 'react-icons/fa';
 
@@ -230,12 +229,14 @@ const AddTradePage = () => {
 
     setSaving(true);
     try {
-      // Upload photo if a new one was selected
+      // Upload photo if a new one was selected (lazy load Storage SDK)
       let photoUri = existingPhotoUri || null;
       if (photoFile && user) {
+        const { ref, uploadBytes, getDownloadURL } = await import('firebase/storage');
+        const storageInstance = await getStorageLazy();
         const ext = photoFile.name.split('.').pop();
         const path = `users/${user.uid}/trades/${Date.now()}.${ext}`;
-        const storageRef = ref(storage, path);
+        const storageRef = ref(storageInstance, path);
         await uploadBytes(storageRef, photoFile);
         photoUri = await getDownloadURL(storageRef);
       } else if (photoRemoved) {

@@ -7,12 +7,12 @@ export default defineConfig({
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
   },
   build: {
-    // Code splitting for better performance (Google SEO: page speed)
     rollupOptions: {
       output: {
         manualChunks: {
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-firebase': ['firebase/app', 'firebase/auth', 'firebase/firestore'],
+          'vendor-firebase-core': ['firebase/app', 'firebase/auth'],
+          'vendor-firestore': ['firebase/firestore'],
           'vendor-charts': ['recharts'],
         }
       }

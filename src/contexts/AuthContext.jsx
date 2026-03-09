@@ -16,6 +16,8 @@ const getFirebase = async () => {
     import('../config/firebase'),
     import('firebase/auth'),
   ]);
+  // Init AppCheck in background (non-blocking)
+  config.initAppCheck?.();
   _firebase = {
     auth: config.auth,
     googleProvider: config.googleProvider,

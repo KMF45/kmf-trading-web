@@ -1,8 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
-import { getStorage } from 'firebase/storage';
-import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -17,18 +15,33 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-try {
-  initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider(import.meta.env.VITE_RECAPTCHA_SITE_KEY),
-    isTokenAutoRefreshEnabled: true,
-  });
-} catch (e) {
-  console.warn('[AppCheck] Failed to initialize:', e);
-}
+// AppCheck — lazy init (not needed at startup)
+let appCheckInitialized = false;
+export const initAppCheck = async () => {
+  if (appCheckInitialized) return;
+  appCheckInitialized = true;
+  try {
+    const { initializeAppCheck, ReCaptchaV3Provider } = await import('firebase/app-check');
+    initializeAppCheck(app, {
+      provider: new ReCaptchaV3Provider(import.meta.env.VITE_RECAPTCHA_SITE_KEY),
+      isTokenAutoRefreshEnabled: true,
+    });
+  } catch (e) {
+    console.warn('[AppCheck] Failed to initialize:', e);
+  }
+};
+
+// Storage — lazy loaded (only needed by AddTradePage for photo uploads)
+let _storage = null;
+export const getStorageLazy = async () => {
+  if (_storage) return _storage;
+  const { getStorage } = await import('firebase/storage');
+  _storage = getStorage(app);
+  return _storage;
+};
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-export const storage = getStorage(app);
 export const googleProvider = new GoogleAuthProvider();
 
 googleProvider.setCustomParameters({
