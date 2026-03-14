@@ -167,15 +167,6 @@ const posts = [
     categoryColor: '#00C853',
   },
   {
-    slug: 'mae-mfe-explained',
-    title: 'MAE & MFE: The Two Numbers That Tell You If You\'re Leaving Money on the Table',
-    excerpt: 'Your stop loss might be too wide and your exits too early — but you\'d never know without tracking MAE and MFE. Learn the two metrics that reveal hidden leaks in your trading.',
-    category: 'Statistics',
-    date: 'March 14, 2026',
-    readTime: '8 min read',
-    categoryColor: '#4FC3F7',
-  },
-  {
     slug: 'tradingview-kmf-workflow',
     title: 'TradingView + K.M.F. Journal: The Perfect Workflow for a Modern Trader',
     excerpt: 'Analyze on TradingView, execute on your broker, journal in K.M.F. — the step-by-step workflow that turns random trades into a compounding feedback loop.',
