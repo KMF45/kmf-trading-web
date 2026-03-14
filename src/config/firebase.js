@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -31,21 +30,6 @@ export const initAppCheck = async () => {
   }
 };
 
-// Storage — lazy loaded (only needed by AddTradePage for photo uploads)
-let _storage = null;
-export const getStorageLazy = async () => {
-  if (_storage) return _storage;
-  const { getStorage } = await import('firebase/storage');
-  _storage = getStorage(app);
-  return _storage;
-};
-
-export const auth = getAuth(app);
 export const db = getFirestore(app);
-export const googleProvider = new GoogleAuthProvider();
-
-googleProvider.setCustomParameters({
-  prompt: 'select_account'
-});
 
 export default app;

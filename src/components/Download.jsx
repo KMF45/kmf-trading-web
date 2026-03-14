@@ -3,10 +3,11 @@ import { FaAndroid, FaCheckCircle, FaLock, FaGlobe, FaCloud, FaShieldAlt } from 
 import { HiSparkles } from 'react-icons/hi2';
 // Firebase loaded lazily on form submit (not on page load)
 const getFirestore = async () => {
-  const [{ db }, fs] = await Promise.all([
+  const [{ db, initAppCheck }, fs] = await Promise.all([
     import('../config/firebase'),
     import('firebase/firestore'),
   ]);
+  await initAppCheck();
   return { db, collection: fs.collection, addDoc: fs.addDoc, serverTimestamp: fs.serverTimestamp };
 };
 
