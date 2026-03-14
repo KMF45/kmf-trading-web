@@ -27,7 +27,8 @@ const Download = () => {
       });
       setStatus('success');
       setEmail('');
-    } catch {
+    } catch (err) {
+      console.error('[Download] Submit failed:', err);
       setStatus('error');
     }
   };

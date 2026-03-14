@@ -36,7 +36,8 @@ const BetaBanner = () => {
       setStatus('success');
       setName('');
       setEmail('');
-    } catch {
+    } catch (err) {
+      console.error('[BetaBanner] Submit failed:', err);
       setStatus('error');
     }
   };
