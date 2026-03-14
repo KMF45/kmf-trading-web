@@ -5,13 +5,49 @@
     <link>https://kmfjournal.com/blog</link>
     <description>Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kmfjournal.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://kmfjournal.com/logo.png</url>
       <title>K.M.F. Trading Journal Blog</title>
       <link>https://kmfjournal.com/blog</link>
     </image>
+
+    <item>
+      <title>How to Never Break the Daily Drawdown Rule Again: A Prop Firm Survival Guide</title>
+      <link>https://kmfjournal.com/blog/prop-firm-daily-drawdown-guide</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/prop-firm-daily-drawdown-guide</guid>
+      <pubDate>Fri, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Risk Management</category>
+      <description>The daily drawdown rule kills more funded accounts than bad strategies. A 5-rule system with checklists and journaling that makes violations nearly impossible.</description>
+    </item>
+
+    <item>
+      <title>Why Excel Is Slowly Killing Your Trading Performance</title>
+      <link>https://kmfjournal.com/blog/excel-vs-trading-journal-app</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/excel-vs-trading-journal-app</guid>
+      <pubDate>Fri, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Improvement</category>
+      <description>Your spreadsheet has errors you don't know about, columns you stopped filling in, and formulas that break every time you add a row. Here's why a dedicated journal app wins.</description>
+    </item>
+
+    <item>
+      <title>TradingView + K.M.F. Journal: The Perfect Workflow for a Modern Trader</title>
+      <link>https://kmfjournal.com/blog/tradingview-kmf-workflow</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/tradingview-kmf-workflow</guid>
+      <pubDate>Fri, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Improvement</category>
+      <description>Analyze on TradingView, execute on your broker, journal in K.M.F. — the step-by-step workflow that turns random trades into a compounding feedback loop.</description>
+    </item>
+
+    <item>
+      <title>MAE &amp; MFE: The Two Numbers That Tell You If You're Leaving Money on the Table</title>
+      <link>https://kmfjournal.com/blog/mae-mfe-explained</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/mae-mfe-explained</guid>
+      <pubDate>Fri, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Statistics</category>
+      <description>Your stop loss might be too wide and your exits too early — but you'd never know without tracking MAE and MFE. Learn the two metrics that reveal hidden leaks in your trading.</description>
+    </item>
 
     <item>
       <title>Crypto vs Forex: Why Your Trading Journal Needs Different Rules for Each Market</title>

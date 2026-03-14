@@ -37,6 +37,10 @@ const routes = [
   '/blog/good-loss-vs-bad-win',
   '/blog/ghost-trades-journaling-missed-opportunities',
   '/blog/crypto-vs-forex-journaling',
+  '/blog/mae-mfe-explained',
+  '/blog/tradingview-kmf-workflow',
+  '/blog/excel-vs-trading-journal-app',
+  '/blog/prop-firm-daily-drawdown-guide',
 ];
 
 // Simple static file server that falls back to index.html (SPA)

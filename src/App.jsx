@@ -25,6 +25,10 @@ const PropFirmJournal = lazy(() => import('./pages/blog/PropFirmJournal'));
 const GoodLossVsBadWin = lazy(() => import('./pages/blog/GoodLossVsBadWin'));
 const GhostTrades = lazy(() => import('./pages/blog/GhostTrades'));
 const CryptoVsForexJournaling = lazy(() => import('./pages/blog/CryptoVsForexJournaling'));
+const MaeMfeExplained = lazy(() => import('./pages/blog/MaeMfeExplained'));
+const TradingViewKmfWorkflow = lazy(() => import('./pages/blog/TradingViewKmfWorkflow'));
+const ExcelVsTradingJournal = lazy(() => import('./pages/blog/ExcelVsTradingJournal'));
+const PropFirmDailyDrawdown = lazy(() => import('./pages/blog/PropFirmDailyDrawdown'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -63,6 +67,10 @@ function App() {
           <Route path="/blog/good-loss-vs-bad-win" element={<GoodLossVsBadWin />} />
           <Route path="/blog/ghost-trades-journaling-missed-opportunities" element={<GhostTrades />} />
           <Route path="/blog/crypto-vs-forex-journaling" element={<CryptoVsForexJournaling />} />
+          <Route path="/blog/mae-mfe-explained" element={<MaeMfeExplained />} />
+          <Route path="/blog/tradingview-kmf-workflow" element={<TradingViewKmfWorkflow />} />
+          <Route path="/blog/excel-vs-trading-journal-app" element={<ExcelVsTradingJournal />} />
+          <Route path="/blog/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdown />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />

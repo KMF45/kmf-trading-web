@@ -166,6 +166,42 @@ const posts = [
     readTime: '8 min read',
     categoryColor: '#00C853',
   },
+  {
+    slug: 'mae-mfe-explained',
+    title: 'MAE & MFE: The Two Numbers That Tell You If You\'re Leaving Money on the Table',
+    excerpt: 'Your stop loss might be too wide and your exits too early — but you\'d never know without tracking MAE and MFE. Learn the two metrics that reveal hidden leaks in your trading.',
+    category: 'Statistics',
+    date: 'March 14, 2026',
+    readTime: '8 min read',
+    categoryColor: '#4FC3F7',
+  },
+  {
+    slug: 'tradingview-kmf-workflow',
+    title: 'TradingView + K.M.F. Journal: The Perfect Workflow for a Modern Trader',
+    excerpt: 'Analyze on TradingView, execute on your broker, journal in K.M.F. — the step-by-step workflow that turns random trades into a compounding feedback loop.',
+    category: 'Improvement',
+    date: 'March 14, 2026',
+    readTime: '7 min read',
+    categoryColor: '#FFB300',
+  },
+  {
+    slug: 'excel-vs-trading-journal-app',
+    title: 'Why Excel Is Slowly Killing Your Trading Performance',
+    excerpt: 'Your spreadsheet has errors you don\'t know about, columns you stopped filling in, and formulas that break every time you add a row. Here\'s why a dedicated journal app wins.',
+    category: 'Improvement',
+    date: 'March 14, 2026',
+    readTime: '7 min read',
+    categoryColor: '#FFB300',
+  },
+  {
+    slug: 'prop-firm-daily-drawdown-guide',
+    title: 'How to Never Break the Daily Drawdown Rule Again: A Prop Firm Survival Guide',
+    excerpt: 'The daily drawdown rule kills more funded accounts than bad strategies. A 5-rule system with checklists and journaling that makes violations nearly impossible.',
+    category: 'Risk Management',
+    date: 'March 14, 2026',
+    readTime: '9 min read',
+    categoryColor: '#00C853',
+  },
 ];
 
 export default function BlogPage() {

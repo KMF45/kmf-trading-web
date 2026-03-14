@@ -1,7 +1,7 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site pur de prezentare: landing page + blog (18 articole). Stack: React 19, Vite, Tailwind CSS. Firebase folosit doar de BetaBanner (lazy, la form submit). Webapp-ul (autentificare + toate paginile app) a fost complet eliminat în sesiunea #5.
+Proiect web pentru kmfjournal.com — site pur de prezentare: landing page + blog (22 articole). Stack: React 19, Vite, Tailwind CSS. Firebase folosit doar de BetaBanner (lazy, la form submit). Webapp-ul eliminat în sesiunea #5. 4 articole noi adăugate în sesiunea #5 (Task 3).
 
 ## Sesiuni de lucru
 
@@ -41,6 +41,22 @@ Proiect web pentru kmfjournal.com — site pur de prezentare: landing page + blo
 **Fișiere modificate (7):** FAQ.jsx, Pricing.jsx, BlogArticleLayout.jsx, BestTradingJournalAndroid2026.jsx, index.html, index.css, CLAUDE.md
 **Fișiere șterse (1):** AnimatedNumber.jsx
 **Build:** OK, 20 pagini prerendered, zero erori
+
+### 2026-03-14 — Sesiunea #5 (Task 3)
+**Ce s-a cerut:** 4 articole blog noi — MAE/MFE, TradingView workflow, Excel vs Journal, Prop Firm Daily Drawdown
+**Ce s-a făcut:**
+- Scrise 4 articole complete cu storytelling, umor, și termeni explicați accesibil
+- Articolele: MAE & MFE Explained, TradingView + KMF Workflow, Excel vs Trading Journal App, Prop Firm Daily Drawdown Guide
+- Actualizat App.jsx (4 rute noi), BlogPage.jsx (4 posturi noi), prerender.js (4 rute)
+- Actualizat sitemap.xml (4 URL-uri noi) și rss.xml (4 items noi, lastBuildDate actualizat)
+**Fișiere create (4):**
+- `src/pages/blog/MaeMfeExplained.jsx`
+- `src/pages/blog/TradingViewKmfWorkflow.jsx`
+- `src/pages/blog/ExcelVsTradingJournal.jsx`
+- `src/pages/blog/PropFirmDailyDrawdown.jsx`
+**Fișiere modificate (5):** App.jsx, BlogPage.jsx, prerender.js, sitemap.xml, rss.xml
+**Build:** OK, 24 pagini prerendered, zero erori
+**Următorii pași sugerați:** Deploy, generare OG images pentru cele 4 articole noi
 
 ---
 
