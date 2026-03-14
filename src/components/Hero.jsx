@@ -51,7 +51,7 @@ const stats = [
   { value: '10,000+', label: 'Trades Tracked' },
   { value: '22',      label: 'Instruments'    },
   { value: '8',       label: 'Languages'      },
-  { value: '2',       label: 'Platforms'      },
+  { value: '22',      label: 'Blog Articles'  },
 ];
 
 // ── Hero ──────────────────────────────────────────────────────────────────────
