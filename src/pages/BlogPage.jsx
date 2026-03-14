@@ -185,6 +185,15 @@ const posts = [
     categoryColor: '#FFB300',
   },
   {
+    slug: 'strategy-is-not-enough',
+    title: 'The Perfect Strategy Myth: Why the Same Setup Makes One Trader Rich and Another Broke',
+    excerpt: 'Two traders, same strategy, opposite results. Strategy is only 20% of the game — the other 80% is psychology, habits, and the ability to execute under pressure. Here\'s what actually makes traders profitable.',
+    category: 'Psychology',
+    date: 'March 14, 2026',
+    readTime: '9 min read',
+    categoryColor: '#CE93D8',
+  },
+  {
     slug: 'prop-firm-daily-drawdown-guide',
     title: 'How to Never Break the Daily Drawdown Rule Again: A Prop Firm Survival Guide',
     excerpt: 'The daily drawdown rule kills more funded accounts than bad strategies. A 5-rule system with checklists and journaling that makes violations nearly impossible.',

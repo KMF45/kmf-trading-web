@@ -28,6 +28,7 @@ const CryptoVsForexJournaling = lazy(() => import('./pages/blog/CryptoVsForexJou
 const TradingViewKmfWorkflow = lazy(() => import('./pages/blog/TradingViewKmfWorkflow'));
 const ExcelVsTradingJournal = lazy(() => import('./pages/blog/ExcelVsTradingJournal'));
 const PropFirmDailyDrawdown = lazy(() => import('./pages/blog/PropFirmDailyDrawdown'));
+const StrategyIsNotEnough = lazy(() => import('./pages/blog/StrategyIsNotEnough'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -69,6 +70,7 @@ function App() {
           <Route path="/blog/tradingview-kmf-workflow" element={<TradingViewKmfWorkflow />} />
           <Route path="/blog/excel-vs-trading-journal-app" element={<ExcelVsTradingJournal />} />
           <Route path="/blog/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdown />} />
+          <Route path="/blog/strategy-is-not-enough" element={<StrategyIsNotEnough />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />

@@ -40,6 +40,7 @@ const routes = [
   '/blog/tradingview-kmf-workflow',
   '/blog/excel-vs-trading-journal-app',
   '/blog/prop-firm-daily-drawdown-guide',
+  '/blog/strategy-is-not-enough',
 ];
 
 // Simple static file server that falls back to index.html (SPA)
