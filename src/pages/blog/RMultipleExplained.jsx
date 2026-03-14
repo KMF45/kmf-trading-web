@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function RMultipleExplained() {
   return (
     <BlogArticleLayout
       slug="r-multiple-explained"
       title="R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)"
-      metaTitle="R-Multiple Explained: Measure Trade Quality Beyond Dollar P/L | K.M.F. Trading Journal"
+      metaTitle="R-Multiple: The One Metric That Separates Winning Traders from Losers | K.M.F."
       metaDescription="R-multiple is the most honest way to evaluate your trades. Learn what R means, how to calculate it, and why a -$50 trade can be better than a +$200 trade."
       date="January 20, 2026"
       dateISO="2026-01-20"
@@ -19,6 +20,11 @@ export default function RMultipleExplained() {
         { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },
         { slug: 'trading-expectancy-explained', title: 'Trading Expectancy Explained: The Formula That Tells If Your Strategy Works', category: 'Statistics' },
       ]}
+      faqItems={[
+        { question: 'What is R-multiple in trading?', answer: 'R-multiple measures trade performance relative to the initial risk (R). A trade that risks $100 and profits $300 has an R-multiple of +3R. A trade that loses $100 is -1R. It normalizes results across different position sizes.' },
+        { question: 'How do I calculate R-multiple?', answer: 'R-multiple = (Exit Price - Entry Price) / (Entry Price - Stop Loss Price). For long trades, a positive result means profit. The key is that every trade is measured in units of risk, not dollars.' },
+        { question: 'What is a good R-multiple?', answer: 'Most profitable traders aim for an average R-multiple above +0.5R across all trades. Individual winning trades of +2R to +3R are considered excellent. The key metric is your average R across a large sample of trades.' },
+      ]}
     >
       <Intro>
         Most traders evaluate their trades by looking at the dollar profit or loss. But dollar P/L is one of the least informative metrics available to you. A $500 win might be a terrible trade. A $50 loss might be an excellent trade. R-multiple is the metric that reveals the truth — it measures not what you made or lost, but how well you executed relative to the risk you accepted.
@@ -26,7 +32,7 @@ export default function RMultipleExplained() {
 
       <H2>What Is R?</H2>
       <P>
-        R stands for "Risk" — specifically, the exact amount of money you put at risk when you entered the trade. R is defined by your stop loss: it is the distance from your entry to your stop loss, multiplied by your position size.
+        R stands for "Risk" — specifically, the exact amount of money you put at risk when you entered the trade. R is defined by your <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss</Link>: it is the distance from your entry to your stop loss, multiplied by your position size.
       </P>
       <P>
         If you entered a trade with a $150 stop (meaning if the trade goes fully against you and hits the stop, you lose $150), then R = $150 for that trade. Everything else is measured relative to that number.
@@ -101,7 +107,7 @@ export default function RMultipleExplained() {
 
       <H3>The Connection to Expectancy</H3>
       <P>
-        R-multiple per trade, averaged over your trade history, is the foundation of your strategy's expectancy calculation. Expectancy tells you the expected value of each trade you take. Mastering R-multiple thinking is the first step to understanding expectancy deeply — which is the topic we explore fully in our article on trading expectancy.
+        R-multiple per trade, averaged over your trade history, is the foundation of your strategy's <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy calculation</Link>. Expectancy tells you the expected value of each trade you take. Mastering R-multiple thinking is the first step to understanding expectancy deeply. Combined with <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">profit factor</Link>, these metrics give you the complete picture of your strategy's viability.
       </P>
 
       <Takeaways items={[

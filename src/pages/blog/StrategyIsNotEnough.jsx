@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function StrategyIsNotEnough() {
   return (
     <BlogArticleLayout
       slug="strategy-is-not-enough"
       title="The Perfect Strategy Myth: Why the Same Setup Makes One Trader Rich and Another Broke"
-      metaTitle="The Perfect Strategy Myth: Why Strategy Is Only 20% of Trading Success | K.M.F."
+      metaTitle="The Perfect Strategy Myth: Why 80% of Trading Success Has Nothing to Do With Strategy | K.M.F."
       metaDescription="Two traders, same strategy, opposite results. The difference isn't the system — it's psychology, habits, and execution under pressure. Here's what actually makes traders profitable."
       date="March 14, 2026"
       dateISO="2026-03-14"
@@ -18,6 +19,11 @@ export default function StrategyIsNotEnough() {
         { slug: 'execution-gap-backtest-vs-live-trading', title: 'The Execution Gap: Why Your Strategy Works in Backtesting But Fails Live', category: 'Psychology' },
         { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
         { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
+      ]}
+      faqItems={[
+        { question: 'Why do traders with the same strategy get different results?', answer: 'Strategy is only about 20% of trading success. The other 80% comes from psychology, discipline, risk management, and execution consistency.' },
+        { question: 'Is finding the right strategy the most important thing?', answer: 'No. Most strategies with a statistical edge will work if executed consistently. The search for the perfect strategy is often procrastination that prevents developing the discipline that actually drives profitability.' },
+        { question: 'What matters more than strategy in trading?', answer: 'Execution discipline, risk management, emotional regulation, and systematic review (journaling and weekly reviews) are all more impactful than the strategy itself.' },
       ]}
     >
       <Intro>

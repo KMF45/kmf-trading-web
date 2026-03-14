@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function WhyTradersBreakRules() {
   return (
     <BlogArticleLayout
       slug="why-traders-break-their-rules"
       title="Why You Break Your Own Trading Rules — And How to Stop"
-      metaTitle="Why Traders Break Their Own Rules — And How to Stop | K.M.F. Trading Journal"
+      metaTitle="Why You Keep Breaking Your Trading Rules (The Psychology No One Talks About) | K.M.F."
       metaDescription="You know the rules. You wrote them yourself. So why do you keep breaking them? The psychology of rule-breaking in trading and practical solutions."
       date="January 23, 2026"
       dateISO="2026-01-23"
@@ -18,6 +19,11 @@ export default function WhyTradersBreakRules() {
         { slug: 'ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades: Why the Trades You Don\'t Take Are Costing You More Than the Ones You Lose', category: 'Psychology' },
         { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
         { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
+      ]}
+      faqItems={[
+        { question: 'Why do traders break their own rules?', answer: 'Trading rule-breaking is driven by System 1 (fast, emotional) thinking overriding System 2 (slow, rational) thinking. Under stress, fear of missing out, or after losses, the brain defaults to impulsive decisions that violate your plan.' },
+        { question: 'How do I stop breaking my trading rules?', answer: 'Use a physical or digital pre-trade checklist, set automatic stop losses before entering, establish a daily loss limit, and journal every rule violation with the emotion you felt. Awareness of the pattern is the first step.' },
+        { question: 'Is breaking trading rules normal?', answer: 'Yes — almost every trader struggles with it, especially in the first 1-2 years. The difference between professionals and amateurs is not that pros never feel the urge, but that they have systems in place to prevent acting on it.' },
       ]}
     >
       <Intro>
@@ -82,7 +88,7 @@ export default function WhyTradersBreakRules() {
       <H2>Practical Solutions</H2>
       <H3>1. Pre-trade checklist</H3>
       <P>
-        A written checklist that you must physically verify before touching an order forces System 2 into the loop. It creates a mandatory pause between the impulse and the action. The checklist should cover setup criteria, stop loss level, position size, and emotional state. If any box is unchecked, no trade is taken.
+        A written <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> that you must physically verify before touching an order forces System 2 into the loop. It creates a mandatory pause between the impulse and the action. The checklist should cover setup criteria, stop loss level, position size, and emotional state. If any box is unchecked, no trade is taken.
       </P>
       <H3>2. Reduce friction for good behavior</H3>
       <P>
@@ -98,7 +104,7 @@ export default function WhyTradersBreakRules() {
       </P>
       <H3>5. Weekly review to identify patterns</H3>
       <P>
-        Rule-breaking is not random. You probably break the same rules, in the same circumstances, at the same times of day. A disciplined weekly review reveals these patterns so you can address the root cause rather than just resolving to "do better."
+        Rule-breaking is not random. You probably break the same rules, in the same circumstances, at the same times of day. A disciplined <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">weekly review</Link> reveals these patterns so you can address the root cause rather than just resolving to "do better." Without this feedback loop, you're stuck in <Link to="/blog/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">the execution gap</Link> — knowing what to do but unable to do it consistently.
       </P>
 
       <Takeaways items={[

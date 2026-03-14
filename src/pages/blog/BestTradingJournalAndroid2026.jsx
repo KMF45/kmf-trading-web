@@ -73,6 +73,21 @@ export default function BestTradingJournalAndroid2026() {
     });
     document.head.appendChild(breadcrumbLd);
 
+    // JSON-LD: FAQPage
+    const faqLd = document.createElement('script');
+    faqLd.type = 'application/ld+json';
+    faqLd.id = 'ld-faq';
+    faqLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What is the best free trading journal app for Android?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal is the best free trading journal for Android in 2026, offering emotion tracking, risk calculators, achievements, and offline support — all free with an optional Premium tier.' } },
+        { '@type': 'Question', name: 'Is K.M.F. Trading Journal really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. K.M.F. offers a fully functional free tier with unlimited trade logging, basic statistics, and risk calculators. Premium adds advanced analytics, cloud sync, and behavioral psychology tools.' } },
+        { '@type': 'Question', name: 'Which trading journal app is best for forex traders?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal is designed for forex, stocks, and crypto traders. It includes a lot size calculator, pip-based stop loss tracking, and session-aware analytics tailored to forex markets.' } },
+      ],
+    });
+    document.head.appendChild(faqLd);
+
     return () => {
       document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';
       setMeta('description', 'K.M.F. Trading Journal is a professional trading journal app for forex, stocks & crypto traders.');
@@ -87,6 +102,7 @@ export default function BestTradingJournalAndroid2026() {
       setMeta('twitter:description', 'Professional trading journal for forex, stocks & crypto. Track, analyze and improve your trading performance.', 'name');
       setMeta('twitter:image', `${SITE}/logo.png`, 'name');
       document.getElementById('ld-article')?.remove();
+      document.getElementById('ld-faq')?.remove();
       document.getElementById('ld-breadcrumb')?.remove();
     };
   }, []);

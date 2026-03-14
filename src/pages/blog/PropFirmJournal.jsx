@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function PropFirmJournal() {
   return (
     <BlogArticleLayout
       slug="prop-firm-trading-journal"
       title="Prop Firm Killers: How a Trading Journal Saves Your Funded Account"
-      metaTitle="Prop Firm Trading Journal: How to Pass Evaluations & Keep Your Funded Account | K.M.F."
+      metaTitle="Prop Firm Journal: The System That Keeps Your Funded Account Alive | K.M.F."
       metaDescription="Most prop firm failures aren't bad trades — they're broken rules. Learn how a trading journal with risk calculator and checklists prevents daily drawdown breaches and keeps your funded account alive."
       date="February 23, 2026"
       dateISO="2026-02-23"
@@ -18,6 +19,11 @@ export default function PropFirmJournal() {
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
         { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },
         { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
+      ]}
+      faqItems={[
+        { question: 'Why do most prop firm traders fail?', answer: 'Most failures are not from bad strategies but from rule violations — exceeding daily drawdown limits, overtrading after losses, and not tracking risk in real-time.' },
+        { question: 'What should a prop firm trading journal track?', answer: 'Track daily P/L against your drawdown limit, number of trades per day, position size compliance, rule violations, and emotional state.' },
+        { question: 'How does a journal help pass prop firm evaluations?', answer: 'A journal enforces consistency by tracking every rule in the evaluation criteria: max daily loss, max total drawdown, minimum trading days, and profit target progress.' },
       ]}
     >
       <Intro>

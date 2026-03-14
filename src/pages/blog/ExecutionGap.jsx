@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function ExecutionGap() {
   return (
     <BlogArticleLayout
       slug="execution-gap-backtest-vs-live-trading"
       title="The Execution Gap: Why Your Strategy Works in Backtesting But Fails Live"
-      metaTitle="Execution Gap: Why Your Strategy Fails Live But Works in Backtesting | K.M.F. Trading Journal"
+      metaTitle="The Execution Gap: Why Your 70% Backtest Win Rate Drops to 40% Live | K.M.F."
       metaDescription="Your backtested strategy has a 70% win rate. Live, you're at 40%. The problem isn't the strategy — it's the gap between knowing and doing. Here's how to close it."
       date="February 22, 2026"
       dateISO="2026-02-22"
@@ -18,6 +19,11 @@ export default function ExecutionGap() {
         { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
         { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
         { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
+      ]}
+      faqItems={[
+        { question: 'What is the execution gap in trading?', answer: 'The execution gap is the difference between your strategy performance in backtesting and your actual live results. It is caused by emotions, hesitation, and psychological factors that do not exist in backtesting.' },
+        { question: 'Why does my strategy fail in live trading?', answer: 'In backtesting, you have no fear, no greed, and no pressure. Live trading introduces emotions that cause you to skip entries, exit early, and deviate from the plan — all of which degrade your edge.' },
+        { question: 'How do I close the execution gap?', answer: 'Use a pre-trade checklist to force systematic entries, journal every deviation from your plan, trade smaller sizes until execution improves, and review your execution score weekly.' },
       ]}
     >
       <Intro>

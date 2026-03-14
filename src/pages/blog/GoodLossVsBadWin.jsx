@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function GoodLossVsBadWin() {
   return (
     <BlogArticleLayout
       slug="good-loss-vs-bad-win"
       title="Good Losses, Bad Wins: Why the Trade You're Proud of Might Be Your Worst"
-      metaTitle="Good Loss vs Bad Win: Why Your Best Trade Might Be Your Worst | K.M.F. Trading Journal"
+      metaTitle="Good Losses, Bad Wins: Why Your Best Trade Might Be Your Worst Decision | K.M.F."
       metaDescription="A disciplined stop loss can be your best trade of the week. A lucky take profit with no plan can be your worst. Learn how to evaluate trade quality beyond P/L."
       date="February 24, 2026"
       dateISO="2026-02-24"
@@ -18,6 +19,11 @@ export default function GoodLossVsBadWin() {
         { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
         { slug: '10-questions-after-every-trade', title: '10 Questions Every Trader Should Ask After Every Trade', category: 'Improvement' },
         { slug: 'weekly-trading-review-template', title: 'How to Do a Weekly Trading Review (With a Complete Template)', category: 'Improvement' },
+      ]}
+      faqItems={[
+        { question: 'What is a good loss in trading?', answer: 'A good loss is a trade where you followed your plan perfectly — correct entry, proper position size, stop loss at the right level — but the market moved against you. The process was right, only the outcome was negative.' },
+        { question: 'What is a bad win in trading?', answer: 'A bad win is a profitable trade that violated your rules — no signal, moved stop loss, or oversized position. The profit was luck, not skill, and repeating the behavior will eventually lead to large losses.' },
+        { question: 'How do I evaluate trade quality beyond profit?', answer: 'Score each trade on process: Did you follow entry criteria? Was position size correct? Did you manage the trade according to plan? A 5/5 process score is a good trade regardless of P/L.' },
       ]}
     >
       <Intro>

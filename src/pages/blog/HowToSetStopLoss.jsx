@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function HowToSetStopLoss() {
   return (
     <BlogArticleLayout
       slug="how-to-set-stop-loss"
       title="How to Set a Stop Loss Properly (Not Just Randomly)"
-      metaTitle="How to Set a Stop Loss Properly: 3 Professional Methods | K.M.F. Trading Journal"
+      metaTitle="Stop Loss Placement: 3 Pro Methods Most Traders Don't Know | K.M.F. Trading Journal"
       metaDescription="Most traders set stop losses based on dollar amounts or round numbers. Learn the three professional methods for placing stop losses where the market actually invalidates your trade."
       date="February 6, 2026"
       dateISO="2026-02-06"
@@ -18,6 +19,11 @@ export default function HowToSetStopLoss() {
         { slug: 'crypto-vs-forex-journaling', title: 'Crypto vs Forex: Why Your Trading Journal Needs Different Rules for Each Market', category: 'Risk Management' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
         { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },
+      ]}
+      faqItems={[
+        { question: 'Where should I place my stop loss?', answer: 'Place your stop loss at a level where your trade idea is invalidated — behind structure (support/resistance), beyond an ATR multiple, or below/above a key candle. Never use arbitrary pip counts or dollar amounts.' },
+        { question: 'What are the 3 professional stop loss methods?', answer: 'The three methods are: structure-based (behind key support/resistance levels), ATR-based (using Average True Range as a volatility measure), and candle-based (beyond the high/low of a signal candle).' },
+        { question: 'Is a tighter stop loss better?', answer: 'Not necessarily. A stop loss that is too tight gets hit by normal market noise, reducing your win rate. The best stop loss balances protection against invalidation with enough room for the trade to breathe.' },
       ]}
     >
       <Intro>
@@ -43,7 +49,7 @@ export default function HowToSetStopLoss() {
         'Not setting a stop at all because "I\'ll watch it manually"',
       ]} />
       <Callout title="Critical Principle" color="#00C853">
-        The correct process is: identify your logical stop loss level first based on market structure, then calculate your position size from that distance. Never start with a position size and place a stop to fit it. That inverts the logic entirely and guarantees poor stop placement.
+        The correct process is: identify your logical stop loss level first based on market structure, then calculate your position size using the <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">position sizing formula</Link> from that distance. Never start with a position size and place a stop to fit it. That inverts the logic entirely and guarantees poor stop placement.
       </Callout>
 
       <Divider />

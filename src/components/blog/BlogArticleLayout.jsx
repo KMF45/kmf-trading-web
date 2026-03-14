@@ -20,7 +20,7 @@ function setMeta(name, content, attr = 'name') {
   if (el) el.setAttribute('content', content);
 }
 
-export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], children }) {
+export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], faqItems = [], children }) {
   useEffect(() => {
     const pageTitle = metaTitle || `${title} | K.M.F. Trading Journal`;
     const pageUrl = `${SITE}/blog/${slug}`;
@@ -79,6 +79,24 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
     });
     document.head.appendChild(breadcrumbLd);
 
+    // JSON-LD: FAQPage (for rich snippets in Google)
+    let faqLd;
+    if (faqItems.length > 0) {
+      faqLd = document.createElement('script');
+      faqLd.type = 'application/ld+json';
+      faqLd.id = 'ld-faq';
+      faqLd.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqItems.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.answer },
+        })),
+      });
+      document.head.appendChild(faqLd);
+    }
+
     return () => {
       // Restore defaults
       document.title = DEFAULTS.title;
@@ -96,8 +114,9 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       // Remove JSON-LD
       document.getElementById('ld-article')?.remove();
       document.getElementById('ld-breadcrumb')?.remove();
+      document.getElementById('ld-faq')?.remove();
     };
-  }, [title, metaTitle, metaDescription, slug, dateISO]);
+  }, [title, metaTitle, metaDescription, slug, dateISO, faqItems]);
 
   return (
     <>

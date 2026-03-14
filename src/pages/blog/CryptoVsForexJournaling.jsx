@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function CryptoVsForexJournaling() {
   return (
     <BlogArticleLayout
       slug="crypto-vs-forex-journaling"
       title="Crypto vs Forex: Why Your Trading Journal Needs Different Rules for Each Market"
-      metaTitle="Crypto vs Forex Trading Journal: Risk Management Differences That Matter | K.M.F."
+      metaTitle="Crypto vs Forex: The Journaling Mistakes That Blow Accounts in Each Market | K.M.F."
       metaDescription="Forex and crypto look similar on a chart but behave completely differently. Your journal, position sizing, and risk rules need to adapt — or you'll blow an account learning why."
       date="February 26, 2026"
       dateISO="2026-02-26"
@@ -18,6 +19,11 @@ export default function CryptoVsForexJournaling() {
         { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
         { slug: 'how-to-set-stop-loss', title: 'How to Set a Stop Loss Properly (Not Just Randomly)', category: 'Risk Management' },
+      ]}
+      faqItems={[
+        { question: 'Should I journal crypto and forex trades differently?', answer: 'Yes. Crypto markets trade 24/7 with higher volatility, while forex has sessions and lower average moves. Your journal should track different metrics for each market.' },
+        { question: 'What is the biggest risk difference between crypto and forex?', answer: 'Crypto can gap 10-20% in minutes due to low liquidity and no circuit breakers. Forex rarely moves more than 1-2% daily. Position sizing and stop loss rules must account for this volatility difference.' },
+        { question: 'Can I use the same trading journal for both markets?', answer: 'Yes, but configure different risk parameters. K.M.F. Trading Journal supports multiple instruments and lets you set risk rules per market.' },
       ]}
     >
       <Intro>

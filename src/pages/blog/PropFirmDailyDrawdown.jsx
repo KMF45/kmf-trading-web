@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function PropFirmDailyDrawdown() {
   return (
     <BlogArticleLayout
       slug="prop-firm-daily-drawdown-guide"
       title="How to Never Break the Daily Drawdown Rule Again: A Prop Firm Survival Guide"
-      metaTitle="Prop Firm Daily Drawdown Guide: Never Break the Rule Again | K.M.F. Trading Journal"
+      metaTitle="Prop Firm Daily Drawdown: A 5-Rule System to Never Break It Again | K.M.F."
       metaDescription="The daily drawdown rule kills more prop firm accounts than bad trades. Learn how to use a trading journal with checklists and risk management to protect your funded account."
       date="March 14, 2026"
       dateISO="2026-03-14"
@@ -18,6 +19,11 @@ export default function PropFirmDailyDrawdown() {
         { slug: 'prop-firm-trading-journal', title: 'Prop Firm Killers: How a Trading Journal Saves Your Funded Account', category: 'Risk Management' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
         { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
+      ]}
+      faqItems={[
+        { question: 'What is the daily drawdown rule in prop firms?', answer: 'The daily drawdown rule limits how much you can lose in a single day, typically 4-5% of your starting daily balance. Exceeding it results in immediate account termination.' },
+        { question: 'How do I avoid breaking the daily drawdown rule?', answer: 'Set a personal daily loss limit at 60-70% of the firm\'s limit, use a maximum of 2-3 trades per day, reduce size after each loss, and stop trading immediately when you hit your personal limit.' },
+        { question: 'What happens if I break the daily drawdown rule?', answer: 'Most prop firms terminate your account instantly with no second chance. You lose access to the funded account and must pay for a new evaluation.' },
       ]}
     >
       <Intro>

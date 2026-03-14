@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function TenQuestionsAfterEveryTrade() {
   return (
     <BlogArticleLayout
       slug="10-questions-after-every-trade"
       title="10 Questions Every Trader Should Ask After Every Trade"
-      metaTitle="10 Post-Trade Review Questions Every Trader Should Ask | K.M.F. Trading Journal"
+      metaTitle="10 Post-Trade Questions: The Review Habit That Transforms Your Trading | K.M.F."
       metaDescription="The questions you ask after a trade matter more than the result. Here are 10 post-trade review questions that will accelerate your development as a trader."
       date="January 30, 2026"
       dateISO="2026-01-30"
@@ -18,6 +19,11 @@ export default function TenQuestionsAfterEveryTrade() {
         { slug: 'good-loss-vs-bad-win', title: 'Good Losses, Bad Wins: Why the Trade You\'re Proud of Might Be Your Worst', category: 'Improvement' },
         { slug: 'weekly-trading-review-template', title: 'How to Do a Weekly Trading Review (With a Complete Template)', category: 'Improvement' },
         { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
+      ]}
+      faqItems={[
+        { question: 'What should I review after every trade?', answer: 'Review your entry trigger, exit execution, emotional state, risk management, and whether you followed your plan. The goal is to evaluate decision-making quality, not just P/L.' },
+        { question: 'Why is a post-trade review important?', answer: 'Without a structured review, traders repeat the same mistakes for months. A post-trade review creates a feedback loop that accelerates learning and helps identify behavioral patterns.' },
+        { question: 'How long should a post-trade review take?', answer: '2-5 minutes per trade is enough. Answer your review questions immediately after closing the trade while the experience is fresh.' },
       ]}
     >
       <Intro>

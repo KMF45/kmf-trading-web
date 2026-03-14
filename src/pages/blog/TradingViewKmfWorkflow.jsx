@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function TradingViewKmfWorkflow() {
   return (
     <BlogArticleLayout
       slug="tradingview-kmf-workflow"
       title="TradingView + K.M.F. Journal: The Perfect Workflow for a Modern Trader"
-      metaTitle="TradingView + Trading Journal Workflow: Analyze, Execute, Journal | K.M.F."
+      metaTitle="TradingView + Journal Workflow: The 3-Step System Pro Traders Use Daily | K.M.F."
       metaDescription="Learn the step-by-step workflow used by disciplined traders: analyze on TradingView, execute on your broker, and journal in K.M.F. — the complete modern trading workflow."
       date="March 14, 2026"
       dateISO="2026-03-14"
@@ -18,6 +19,11 @@ export default function TradingViewKmfWorkflow() {
         { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
         { slug: '10-questions-after-every-trade', title: '10 Questions Every Trader Should Ask After Every Trade', category: 'Improvement' },
         { slug: 'execution-gap-backtest-vs-live-trading', title: 'The Execution Gap: Why Your Strategy Works in Backtesting But Fails Live', category: 'Psychology' },
+      ]}
+      faqItems={[
+        { question: 'What is the best workflow for a modern trader?', answer: 'Analyze charts on TradingView, execute trades on your broker, and journal everything in a dedicated trading journal app. This three-tool workflow separates analysis, execution, and review for maximum clarity.' },
+        { question: 'How do I use TradingView with a trading journal?', answer: 'Set up your analysis and alerts on TradingView, screenshot your chart before entering, then log the trade in your journal with the screenshot, entry reason, and risk parameters.' },
+        { question: 'Why should I separate analysis from journaling?', answer: 'TradingView excels at charts but has no risk management, emotion tracking, or performance analytics. A dedicated journal fills these gaps and creates the feedback loop that drives improvement.' },
       ]}
     >
       <Intro>

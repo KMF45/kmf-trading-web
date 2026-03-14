@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function PreTradeChecklist() {
   return (
     <BlogArticleLayout
       slug="pre-trade-checklist"
       title="The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry"
-      metaTitle="Pre-Trade Checklist: 10 Things to Verify Before Every Entry | K.M.F. Trading Journal"
+      metaTitle="Pre-Trade Checklist: 10 Rules That Prevent 90% of Bad Trades | K.M.F."
       metaDescription="A pre-trade checklist is the most effective tool for consistent trading. Here are 10 questions to verify before you enter any trade — adapt them to your own strategy."
       date="February 14, 2026"
       dateISO="2026-02-14"
@@ -19,6 +20,11 @@ export default function PreTradeChecklist() {
         { slug: 'weekly-trading-review-template', title: 'How to Do a Weekly Trading Review (With a Complete Template)', category: 'Improvement' },
         { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
       ]}
+      faqItems={[
+        { question: 'What should be on a pre-trade checklist?', answer: 'A complete pre-trade checklist covers market conditions, trend alignment, entry trigger, stop loss placement, position size, risk-reward ratio, emotional state, news events, and whether the trade fits your trading plan.' },
+        { question: 'Why do traders need a checklist?', answer: 'A checklist forces systematic thinking before every trade, preventing impulsive entries driven by FOMO or emotion. Pilots and surgeons use checklists for the same reason — high-stakes decisions need a process, not instinct.' },
+        { question: 'How many items should a trading checklist have?', answer: 'Between 7 and 12 items is ideal. Fewer than 7 misses important criteria; more than 12 becomes impractical and traders start skipping items. Each item should be a clear yes/no question.' },
+      ]}
     >
       <Intro>
         Before every commercial flight, pilots work through a standardized pre-flight checklist — not because experienced pilots have forgotten how planes work, but because checklists systematically prevent the class of error caused by overconfidence, distraction, or time pressure. Before complex surgeries, operating teams run verbal checklists that have demonstrably reduced preventable deaths. Trading is a domain of consequential decisions made under uncertainty and emotional pressure. The case for checklists is the same.
@@ -29,7 +35,7 @@ export default function PreTradeChecklist() {
         Research on decision-making under pressure consistently shows that humans are poor at performing multi-step evaluations in real time — especially when under stress or time pressure. We skip steps, weight recent information too heavily, and allow emotional state to contaminate analytical judgment.
       </P>
       <P>
-        A checklist externalizes the decision criteria. Rather than relying on your in-the-moment System 1 (fast, emotional) thinking to evaluate a trade correctly, a checklist forces systematic engagement of System 2 (slow, deliberate) thinking. It creates a mandatory gap between impulse and action — and in that gap is where discipline lives.
+        A checklist externalizes the decision criteria. Rather than relying on your in-the-moment System 1 (fast, emotional) thinking to evaluate a trade correctly, a checklist forces systematic engagement of System 2 (slow, deliberate) thinking. It creates a mandatory gap between impulse and action — and in that gap is where discipline lives. This is also <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">why traders break their own rules</Link> — without a checklist, System 1 wins every time.
       </P>
       <Callout title="The Key Insight" color="#FFB300">
         A checklist does not make you a better analyst. It ensures that the analysis you already know how to do is actually performed before every trade — not just sometimes, not just when you remember, but every single time.
@@ -61,7 +67,7 @@ export default function PreTradeChecklist() {
 
       <H3>5. Have I calculated my position size based on 1% risk?</H3>
       <P>
-        Do not estimate. Calculate. Risk Amount = Account × 0.01. Position Size = Risk Amount ÷ Stop Distance. This takes 20 seconds and ensures that the worst possible outcome on this trade — a full loss — costs exactly 1% of your account, not approximately 1% based on feel.
+        Do not estimate. Calculate. Risk Amount = Account × 0.01. Position Size = Risk Amount ÷ Stop Distance. This takes 20 seconds and ensures that the worst possible outcome on this trade — a full loss — costs exactly 1% of your account, not approximately 1% based on feel. See our <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">complete position sizing guide</Link> for the exact formula across forex, stocks, and crypto.
       </P>
 
       <H3>6. Is there a major news event in the next hour?</H3>
@@ -71,7 +77,7 @@ export default function PreTradeChecklist() {
 
       <H3>7. Am I trading out of boredom or FOMO?</H3>
       <P>
-        Be honest. Ask yourself: am I entering this trade because there is a genuine setup, or because I am sitting in front of the screen and feel like I should be doing something? FOMO trades — entered because a move is already happening and you do not want to miss it — and boredom trades are among the most reliably losing categories of trade. If the honest answer is yes, close the chart and wait.
+        Be honest. Ask yourself: am I entering this trade because there is a genuine setup, or because I am sitting in front of the screen and feel like I should be doing something? FOMO trades — entered because a move is already happening and you do not want to miss it — and boredom trades are among the most reliably losing categories of trade. If the honest answer is yes, close the chart and wait. This kind of impulsive entry is the first step toward <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link>.
       </P>
 
       <H3>8. Am I emotionally ready to handle this trade going against me?</H3>

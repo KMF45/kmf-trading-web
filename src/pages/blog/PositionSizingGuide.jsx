@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function PositionSizingGuide() {
   return (
     <BlogArticleLayout
       slug="position-sizing-guide"
       title="Position Sizing Guide: How Much Should You Trade?"
-      metaTitle="Position Sizing Guide: The Exact Formula for Every Market | K.M.F. Trading Journal"
+      metaTitle="Position Sizing Formula: The #1 Skill That Separates Pros from Blown Accounts | K.M.F."
       metaDescription="Position sizing is the most underrated skill in trading. Learn the exact formula to calculate how much to trade based on your account size, risk tolerance, and stop loss distance."
       date="February 10, 2026"
       dateISO="2026-02-10"
@@ -18,6 +19,11 @@ export default function PositionSizingGuide() {
         { slug: 'crypto-vs-forex-journaling', title: 'Crypto vs Forex: Why Your Trading Journal Needs Different Rules for Each Market', category: 'Risk Management' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
         { slug: 'how-to-set-stop-loss', title: 'How to Set a Stop Loss Properly (Not Just Randomly)', category: 'Risk Management' },
+      ]}
+      faqItems={[
+        { question: 'What is position sizing in trading?', answer: 'Position sizing determines how much capital to allocate to a single trade based on your account size, risk tolerance, and stop loss distance. It is the most important risk management skill in trading.' },
+        { question: 'How do I calculate position size for forex?', answer: 'Divide your risk amount (account size × risk percentage) by your stop loss in pips × pip value. For example, on a $10,000 account risking 1% with a 50-pip stop loss, your position size would be 0.20 lots.' },
+        { question: 'What percentage should I risk per trade?', answer: 'Most professional traders risk between 0.5% and 2% of their account per trade. The 1% rule is the most common starting point for consistent risk management.' },
       ]}
     >
       <Intro>
@@ -32,14 +38,14 @@ export default function PositionSizingGuide() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Position Size = Risk Amount ÷ Stop Loss Distance (in price terms)</strong>
       </P>
       <P>
-        Every version of position sizing calculation — whether for forex lots, stock shares, or crypto units — is a variation of this core formula. The inputs change by market, but the logic is identical.
+        Every version of position sizing calculation — whether for forex lots, stock shares, or crypto units — is a variation of this core formula. The inputs change by market, but the logic is identical. Note that there are <Link to="/blog/crypto-vs-forex-journaling" className="text-kmf-accent hover:underline">different rules for crypto vs forex</Link> when it comes to journaling and risk.
       </P>
 
       <H2>Step-by-Step Process</H2>
       <Ul items={[
         'Step 1: Decide your risk percentage (typically 1% of account for established traders, 0.5% for beginners)',
         'Step 2: Calculate your risk amount in dollars: Risk Amount = Account Balance × Risk %',
-        'Step 3: Identify your stop loss level based on market structure (not on convenience)',
+        'Step 3: Identify your stop loss level based on market structure — learn more about <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">setting your stop loss properly</Link> (not on convenience)',
         'Step 4: Calculate the stop loss distance in price terms (Entry Price − Stop Loss Price)',
         'Step 5: Calculate position size: Position Size = Risk Amount ÷ Stop Loss Distance',
       ]} />
@@ -121,7 +127,7 @@ export default function PositionSizingGuide() {
         Many traders — especially those coming from a background of watching markets without trading — develop a habit of sizing positions based on how confident they feel about a setup. "This looks really good, I'll put more in." This is the anti-pattern.
       </P>
       <P>
-        No trade is so good that it justifies violating your risk rules. The 1% rule applies to every trade, including the one that looks like a certainty. Markets are uncertain by definition, and certainty-based position sizing is a bias, not an edge. Sizing by formula, consistently, is what transforms inconsistent traders into consistent ones.
+        No trade is so good that it justifies violating your risk rules. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">The 1% risk rule</Link> applies to every trade, including the one that looks like a certainty. Markets are uncertain by definition, and certainty-based position sizing is a bias, not an edge. Sizing by formula, consistently, is what transforms inconsistent traders into consistent ones.
       </P>
 
       <Takeaways items={[

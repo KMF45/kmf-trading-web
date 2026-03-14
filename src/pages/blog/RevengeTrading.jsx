@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function RevengeTrading() {
   return (
     <BlogArticleLayout
       slug="revenge-trading"
       title="Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle"
-      metaTitle="Revenge Trading: Psychology, Warning Signs & How to Stop | K.M.F. Trading Journal"
+      metaTitle="Revenge Trading: The #1 Account Killer — How to Stop Before It's Too Late | K.M.F."
       metaDescription="Revenge trading is one of the fastest ways to blow a trading account. Understand the psychology behind it and learn practical techniques to stop it before it starts."
       date="January 13, 2026"
       dateISO="2026-01-13"
@@ -18,6 +19,11 @@ export default function RevengeTrading() {
         { slug: 'ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades: Why the Trades You Don\'t Take Are Costing You More Than the Ones You Lose', category: 'Psychology' },
         { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
         { slug: 'how-to-recover-from-losing-streak', title: 'How to Recover from a Losing Streak Without Blowing Your Account', category: 'Psychology' },
+      ]}
+      faqItems={[
+        { question: 'What is revenge trading?', answer: 'Revenge trading is impulsive trading driven by the desire to recover losses quickly. Instead of following a plan, the trader increases position size or frequency, which usually leads to even larger losses.' },
+        { question: 'How do I stop revenge trading?', answer: 'Use a daily loss limit rule, step away from screens after a losing streak, journal every trade with emotional notes, and use a pre-trade checklist to filter impulsive entries.' },
+        { question: 'Why is revenge trading so dangerous?', answer: 'Revenge trading bypasses your risk management rules. It leads to oversized positions, emotional decisions, and compounding losses — often turning a small losing day into an account-threatening drawdown.' },
       ]}
     >
       <Intro>
@@ -34,7 +40,7 @@ export default function RevengeTrading() {
       </P>
       <H3>Ego and the Need to Be Right</H3>
       <P>
-        Many traders — especially those new to markets — unconsciously tie their self-worth to their trade outcomes. A loss is not just a financial event; it feels like a personal failure. The revenge trade is partly an attempt to prove that the market was wrong, or that the trader is not incompetent. This is dangerous because markets are indifferent to your ego.
+        Many traders — especially those new to markets — unconsciously tie their self-worth to their trade outcomes. This is one of the core reasons <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">why traders break their own rules</Link>. A loss is not just a financial event; it feels like a personal failure. The revenge trade is partly an attempt to prove that the market was wrong, or that the trader is not incompetent. This is dangerous because markets are indifferent to your ego.
       </P>
       <H3>Recency Bias</H3>
       <P>
@@ -91,11 +97,11 @@ export default function RevengeTrading() {
       </P>
       <H3>3. Reduce size after losses</H3>
       <P>
-        Many professional traders reduce their position size after a losing trade — sometimes to 50% of normal. This is the opposite of the revenge instinct. The logic is sound: when you are running below your edge, smaller bets limit the damage. When you return to normal performance, gradually restore normal size.
+        Many professional traders reduce their position size after a losing trade — sometimes to 50% of normal. This is the opposite of the revenge instinct. The logic is sound: when you are running below your edge, smaller bets limit the damage. When you return to normal performance, gradually restore normal size. For a deeper dive on this topic, see our guide on <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">recovering from a losing streak</Link>.
       </P>
       <H3>4. Write before re-entering</H3>
       <P>
-        Before you enter any trade after a loss, write down: the setup name, the entry reason, the stop loss level, the target, and your current emotional state on a scale of 1–10 (10 being completely calm). If you cannot articulate a clear setup, or if your emotional state is above 6, do not enter.
+        Before you enter any trade after a loss, write down: the setup name, the entry reason, the stop loss level, the target, and your current emotional state on a scale of 1–10 (10 being completely calm). If you cannot articulate a clear setup, or if your emotional state is above 6, do not enter. A structured <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> can automate this process.
       </P>
       <H3>5. Close the platform</H3>
       <P>

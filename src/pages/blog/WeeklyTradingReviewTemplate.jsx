@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function WeeklyTradingReviewTemplate() {
   return (
     <BlogArticleLayout
       slug="weekly-trading-review-template"
       title="How to Do a Weekly Trading Review (With a Complete Template)"
-      metaTitle="How to Do a Weekly Trading Review: Complete Template | K.M.F. Trading Journal"
+      metaTitle="Weekly Trading Review: The 15-Minute Routine That 10x Your Improvement | K.M.F."
       metaDescription="A step-by-step guide to conducting a proper weekly trading review. Includes a complete template with questions to evaluate your performance, discipline, and strategy."
       date="January 16, 2026"
       dateISO="2026-01-16"
@@ -19,6 +20,11 @@ export default function WeeklyTradingReviewTemplate() {
         { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
         { slug: 'trading-expectancy-explained', title: 'Trading Expectancy Explained: The Formula That Tells If Your Strategy Works', category: 'Statistics' },
       ]}
+      faqItems={[
+        { question: 'How do I do a weekly trading review?', answer: 'Review 5 areas every weekend: trade execution quality, risk management compliance, emotional patterns, market conditions, and strategy performance. Use a structured template with specific questions for each area.' },
+        { question: 'How long should a weekly trading review take?', answer: '15-30 minutes is enough if you journal trades daily. The weekly review is about patterns and trends, not re-analyzing individual trades. Focus on what changed this week vs last week.' },
+        { question: 'What questions should I ask in a weekly review?', answer: 'Key questions include: Did I follow my rules? What was my biggest mistake? What was my best-executed trade? Did emotions affect any decisions? What is one thing I will improve next week?' },
+      ]}
     >
       <Intro>
         The difference between traders who improve and traders who repeat the same mistakes month after month is almost always the same: one group reviews their performance systematically, and the other does not. A weekly trading review is not optional for serious development. It is the mechanism through which patterns become visible, mistakes become lessons, and lessons become habits.
@@ -26,7 +32,7 @@ export default function WeeklyTradingReviewTemplate() {
 
       <H2>Why Weekly — Not Daily</H2>
       <P>
-        Daily reviews are useful for logging trades while details are fresh, but they are too close to the action for pattern recognition. On any given day, you might have had two trades. That is not enough data to notice that you consistently overtrade on Tuesdays, or that your Monday morning setups have a significantly higher loss rate.
+        Daily reviews are useful for logging trades while details are fresh — answering your <Link to="/blog/10-questions-after-every-trade" className="text-kmf-accent hover:underline">post-trade review questions</Link> — but they are too close to the action for pattern recognition. On any given day, you might have had two trades. That is not enough data to notice that you consistently overtrade on Tuesdays, or that your Monday morning setups have a significantly higher loss rate.
       </P>
       <P>
         Weekly reviews offer the right resolution. You have enough trades to spot short-term patterns, enough time has passed to review decisions with emotional distance, and the cadence is frequent enough that you can actually change your behavior in response to what you find.
@@ -61,7 +67,7 @@ export default function WeeklyTradingReviewTemplate() {
 
       <H3>3. Process Review</H3>
       <P>
-        Separate the quality of your process from the quality of the outcome. A trade that followed your rules perfectly but lost money is a better trade than one that broke your rules but made money. Process review trains you to evaluate yourself on what you can actually control.
+        Separate the quality of your process from the quality of the outcome. A trade that followed your rules perfectly but lost money is a better trade than one that broke your rules but made money — understanding <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">good losses vs bad wins</Link> is essential for this. Process review trains you to evaluate yourself on what you can actually control.
       </P>
       <Ul items={[
         'Did my entries match my setup criteria for timeframe, structure, and confirmation?',

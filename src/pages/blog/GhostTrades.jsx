@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function GhostTrades() {
   return (
     <BlogArticleLayout
       slug="ghost-trades-journaling-missed-opportunities"
       title="Ghost Trades: Why the Trades You Don't Take Are Costing You More Than the Ones You Lose"
-      metaTitle="Ghost Trades: How Missed Trades Hurt Your Performance More Than Losses | K.M.F. Trading Journal"
+      metaTitle="Ghost Trades: Why the Trades You Skip Are Costing More Than Your Losses | K.M.F."
       metaDescription="The trades you skip out of fear or hesitation often outperform the ones you take. Learn how to journal missed opportunities and turn ghost trades into your biggest edge."
       date="February 25, 2026"
       dateISO="2026-02-25"
@@ -18,6 +19,11 @@ export default function GhostTrades() {
         { slug: 'execution-gap-backtest-vs-live-trading', title: 'The Execution Gap: Why Your Strategy Works in Backtesting But Fails Live', category: 'Psychology' },
         { slug: 'why-traders-break-their-rules', title: 'Why You Break Your Own Trading Rules — And How to Stop', category: 'Psychology' },
         { slug: 'pre-trade-checklist', title: 'The Pre-Trade Checklist: 10 Things to Verify Before Every Trade Entry', category: 'Discipline' },
+      ]}
+      faqItems={[
+        { question: 'What are ghost trades?', answer: 'Ghost trades are valid setups you identified but did not take — usually due to fear, hesitation, or recent losses. Tracking them reveals patterns of missed opportunity that may be larger than your actual losses.' },
+        { question: 'Should I journal trades I did not take?', answer: 'Yes. Recording missed opportunities with the entry, stop loss, and eventual outcome helps you measure the cost of hesitation. Many traders discover their ghost trades outperform their actual trades.' },
+        { question: 'How do I stop missing good trades?', answer: 'Reduce position size to lower emotional stakes, use a checklist so entries feel systematic rather than emotional, and set alerts so you are notified when price hits your entry zone.' },
       ]}
     >
       <Intro>

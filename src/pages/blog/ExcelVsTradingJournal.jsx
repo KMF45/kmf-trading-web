@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function ExcelVsTradingJournal() {
   return (
     <BlogArticleLayout
       slug="excel-vs-trading-journal-app"
       title="Why Excel Is Slowly Killing Your Trading Performance"
-      metaTitle="Excel vs Trading Journal App: Why Spreadsheets Are Costing You Money | K.M.F."
+      metaTitle="Excel vs Trading Journal App: Why Your Spreadsheet Is Costing You Money | K.M.F."
       metaDescription="Excel feels productive but it's silently hurting your trading. Calculation errors, inconsistent logging, and zero automation. See why a dedicated trading journal app outperforms spreadsheets."
       date="March 14, 2026"
       dateISO="2026-03-14"
@@ -18,6 +19,11 @@ export default function ExcelVsTradingJournal() {
         { slug: 'tradingview-kmf-workflow', title: 'TradingView + K.M.F. Journal: The Perfect Workflow for a Modern Trader', category: 'Improvement' },
         { slug: 'weekly-trading-review-template', title: 'How to Do a Weekly Trading Review (With a Complete Template)', category: 'Improvement' },
         { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },
+      ]}
+      faqItems={[
+        { question: 'Is Excel good enough for a trading journal?', answer: 'Excel works for basic trade logging but fails at automation, consistency, and analysis. Spreadsheet error rates of 1-5% in formulas mean your stats may be wrong without you knowing.' },
+        { question: 'What can a trading journal app do that Excel cannot?', answer: 'Dedicated apps offer automatic calculations (R-multiple, profit factor, expectancy), emotion tracking, photo attachments, achievement systems, pre-trade checklists, and cloud backup.' },
+        { question: 'Should I switch from Excel to a journal app?', answer: 'If you have been trading for more than a month and still use Excel, yes. The time saved on manual data entry and formula maintenance alone is worth it.' },
       ]}
     >
       <Intro>

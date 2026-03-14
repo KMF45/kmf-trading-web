@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function ProfitFactorVsWinRate() {
   return (
     <BlogArticleLayout
       slug="profit-factor-vs-win-rate"
       title="Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?"
-      metaTitle="Profit Factor vs Win Rate: Which Metric Predicts Trading Success? | K.M.F. Trading Journal"
+      metaTitle="Profit Factor vs Win Rate: The Metric That Actually Predicts If You'll Make Money | K.M.F."
       metaDescription="Most traders obsess over win rate. But profit factor is a far better predictor of long-term success. Learn what both metrics mean, how to calculate them, and which one to optimize."
       date="January 6, 2026"
       dateISO="2026-01-06"
@@ -18,6 +19,11 @@ export default function ProfitFactorVsWinRate() {
         { slug: 'trading-expectancy-explained', title: 'Trading Expectancy Explained: The Formula That Tells If Your Strategy Works', category: 'Statistics' },
         { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
+      ]}
+      faqItems={[
+        { question: 'What is profit factor in trading?', answer: 'Profit factor is total gross profit divided by total gross loss. A profit factor above 1.0 means you are profitable. Most consistently profitable traders have a profit factor between 1.5 and 2.5.' },
+        { question: 'Is win rate or profit factor more important?', answer: 'Profit factor is more important because it accounts for both win rate AND the size of wins vs losses. A trader with 40% win rate but large winners can have a higher profit factor than a trader with 70% win rate and small winners.' },
+        { question: 'What is a good profit factor?', answer: 'A profit factor of 1.5+ is good, 2.0+ is excellent, and 3.0+ is exceptional and rare over large samples. Below 1.0 means you are losing money. Between 1.0 and 1.3 means your edge is thin and vulnerable to slippage and fees.' },
       ]}
     >
       <Intro>
@@ -103,7 +109,7 @@ export default function ProfitFactorVsWinRate() {
       <H2>How to Improve Your Profit Factor</H2>
       <H3>Cut losers faster</H3>
       <P>
-        The most direct lever on profit factor is the denominator: your gross loss. Every time you move a stop loss further away to avoid being stopped out, you are increasing your average loss and dragging down your profit factor. Respect your initial stop loss placement. A smaller average loss has an enormous compounding effect on profit factor over time.
+        The most direct lever on profit factor is the denominator: your gross loss. Every time you move a stop loss further away to avoid being stopped out, you are increasing your average loss and dragging down your profit factor. Respect your initial <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss placement</Link>. A smaller average loss has an enormous compounding effect on profit factor over time.
       </P>
       <H3>Let winners run</H3>
       <P>
@@ -111,7 +117,7 @@ export default function ProfitFactorVsWinRate() {
       </P>
       <H3>Review your R:R before every trade</H3>
       <P>
-        Before entering any trade, calculate the distance from entry to stop loss and entry to target. If the ratio is not at least 1.5:1, the trade needs a higher probability to justify taking it. Filtering out low R:R setups alone can meaningfully improve profit factor without changing your strategy at all.
+        Before entering any trade, calculate the distance from entry to stop loss and entry to target. If the ratio is not at least 1.5:1, the trade needs a higher probability to justify taking it. Filtering out low R:R setups alone can meaningfully improve profit factor without changing your strategy at all. Measuring each trade in <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> makes this evaluation automatic.
       </P>
 
       <Divider />

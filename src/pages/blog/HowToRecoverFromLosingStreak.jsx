@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function HowToRecoverFromLosingStreak() {
   return (
     <BlogArticleLayout
       slug="how-to-recover-from-losing-streak"
       title="How to Recover from a Losing Streak Without Blowing Your Account"
-      metaTitle="How to Recover from a Trading Losing Streak Without Blowing Your Account | K.M.F. Trading Journal"
+      metaTitle="Losing Streak? The Step-by-Step Recovery Plan to Save Your Account | K.M.F."
       metaDescription="Every trader faces losing streaks. The difference between professionals and amateurs is how they respond. A practical, step-by-step guide to surviving and recovering."
       date="January 27, 2026"
       dateISO="2026-01-27"
@@ -18,6 +19,11 @@ export default function HowToRecoverFromLosingStreak() {
         { slug: 'execution-gap-backtest-vs-live-trading', title: 'The Execution Gap: Why Your Strategy Works in Backtesting But Fails Live', category: 'Psychology' },
         { slug: 'revenge-trading', title: 'Revenge Trading: What It Is, Why It Happens, and How to Break the Cycle', category: 'Psychology' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
+      ]}
+      faqItems={[
+        { question: 'How do I recover from a trading losing streak?', answer: 'First, reduce your position size by 50%. Then review your last 20 trades to determine if the losses are from variance or a broken edge. Take a 1-2 day break, journal your emotional state, and return with strict checklist-based trading.' },
+        { question: 'How many losses in a row is a losing streak?', answer: 'Any sequence of 3+ consecutive losses can feel like a streak, but statistically, even a 60% win rate strategy will have runs of 5-7 losses. The key is not the count but whether you are following your rules during the losses.' },
+        { question: 'Should I stop trading during a losing streak?', answer: 'Yes, temporarily. Take at least one full trading day off to reset emotionally. Use that time to review trades in your journal. When you return, trade with reduced size until you have 3 consecutive wins following your plan.' },
       ]}
     >
       <Intro>
@@ -48,7 +54,7 @@ export default function HowToRecoverFromLosingStreak() {
         Regardless of your assessment, the moment you identify a losing streak, reduce your position size. Go to 50% of your normal risk per trade. If the streak continues, consider dropping to 25%.
       </P>
       <P>
-        This is counterintuitive — it feels like reducing your ability to recover. But it is not. It is protecting your capital during a period where your edge may be temporarily reduced, either by market conditions or by subtle execution deterioration caused by the psychological pressure of the streak itself. You cannot think clearly when you are fighting to recover losses with full-size positions.
+        This is counterintuitive — it feels like reducing your ability to recover. But it is not. It is protecting your capital during a period where your edge may be temporarily reduced, either by market conditions or by subtle execution deterioration caused by the psychological pressure of the streak itself. Following <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">the 1% risk rule</Link> becomes even more critical during drawdowns. You cannot think clearly when you are fighting to recover losses with full-size positions.
       </P>
       <Table
         headers={['Normal Risk %', 'Reduced Risk (50%)', 'Further Reduced (25%)', 'When to Apply']}

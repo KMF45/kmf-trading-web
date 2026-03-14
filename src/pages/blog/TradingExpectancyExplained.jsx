@@ -1,13 +1,14 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { Link } from 'react-router-dom';
 
 export default function TradingExpectancyExplained() {
   return (
     <BlogArticleLayout
       slug="trading-expectancy-explained"
       title="Trading Expectancy Explained: The Formula That Tells If Your Strategy Works"
-      metaTitle="Trading Expectancy Explained: The Formula Every Trader Must Know | K.M.F. Trading Journal"
+      metaTitle="Trading Expectancy: The Formula That Reveals If Your Strategy Actually Works | K.M.F."
       metaDescription="Expectancy is the one number that tells you if your trading strategy is profitable long-term. Learn the formula, how to calculate it, and what it means for your trading."
       date="February 3, 2026"
       dateISO="2026-02-03"
@@ -18,6 +19,11 @@ export default function TradingExpectancyExplained() {
         { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },
         { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
         { slug: '1-percent-risk-rule', title: 'The 1% Risk Rule: The Trading Rule That Keeps Professional Traders Alive', category: 'Risk Management' },
+      ]}
+      faqItems={[
+        { question: 'What is trading expectancy?', answer: 'Trading expectancy is the average amount you expect to win or lose per trade. The formula is: (Win Rate × Average Win) - (Loss Rate × Average Loss). A positive number means your strategy is profitable over time.' },
+        { question: 'How do I calculate my trading expectancy?', answer: 'From your trade journal, find your win rate, average winning trade, and average losing trade. Multiply win rate by average win, subtract (loss rate × average loss). For example: (0.55 × $200) - (0.45 × $120) = $56 per trade.' },
+        { question: 'What is a good trading expectancy?', answer: 'Any positive expectancy means your strategy works long-term. The key is calculating expectancy over at least 50-100 trades to get a statistically meaningful result.' },
       ]}
     >
       <Intro>
