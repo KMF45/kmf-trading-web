@@ -80,7 +80,7 @@ export default function BestTradingJournalAndroid2026() {
       setMeta('og:type', 'website', 'property');
       setMeta('og:url', `${SITE}/`, 'property');
       setMeta('og:title', 'K.M.F. Trading Journal – Professional Trade Tracking & Analysis', 'property');
-      setMeta('og:description', 'Track your trades, analyze performance with advanced statistics, manage risk with a lot calculator, and improve your trading discipline. Free for Android & Web.', 'property');
+      setMeta('og:description', 'Track your trades, analyze performance with advanced statistics, manage risk with a lot calculator, and improve your trading discipline. Free for Android.', 'property');
       setMeta('og:image', `${SITE}/logo.png`, 'property');
       setMeta('twitter:url', `${SITE}/`, 'name');
       setMeta('twitter:title', 'K.M.F. Trading Journal – Keep Moving Forward', 'name');
@@ -188,7 +188,7 @@ export default function BestTradingJournalAndroid2026() {
               'Weekly review with 5 self-evaluation metrics',
               'Advanced stats: profit factor, R-multiple, expectancy, drawdown',
               'Built-in lot size calculator with live prices and R:R',
-              'Cloud sync between Android and Web (Premium)',
+              'Cloud sync & backup (Premium)',
               '8 languages including English, Romanian, Russian, Japanese',
               'Free core features — no credit card required',
             ]}

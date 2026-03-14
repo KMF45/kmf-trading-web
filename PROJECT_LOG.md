@@ -1,9 +1,48 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — landing page, blog (18 articole), și webapp complet aliniat cu Android app. Stack: React 19, Vite, Tailwind CSS, Firebase (Auth + Firestore). Phase 1 (visual polish) + Phase 2 (features) + Phase 3 (Android alignment) + Phase 4 (Statistics deep alignment) — toate COMPLETE. StatisticsPage acum are TOATE secțiunile din Android: P&L by Day, P&L by Session, Top Pairs Pie Chart, Emotion Stats, Emotional Journey, Honesty Mirror, Trader Personality, Duration Stats.
+Proiect web pentru kmfjournal.com — site pur de prezentare: landing page + blog (18 articole). Stack: React 19, Vite, Tailwind CSS. Firebase folosit doar de BetaBanner (lazy, la form submit). Webapp-ul (autentificare + toate paginile app) a fost complet eliminat în sesiunea #5.
 
 ## Sesiuni de lucru
+
+### 2026-03-14 — Sesiunea #5
+**Ce s-a cerut:** Eliminarea completă a webapp-ului — rămâne doar landing page + blog
+**Ce s-a făcut:**
+- Scos AuthProvider, AuthRedirect, toate rutele /app și /auth din App.jsx
+- Scos useAuth din Navbar.jsx (era nefolosit)
+- Șterse 23 fișiere: 10 pagini app, 3 pagini auth, 2 layout (AppLayout, Sidebar), 2 componente (ProtectedRoute, SymbolPicker), 2 servicii (firestore.js, priceApi.js), 2 contexte (AuthContext, TradesContext), 1 util (utils/models.js)
+**Fișiere modificate:**
+- `src/App.jsx` — scos importuri app/auth, AuthProvider wrapper, rute /app și /auth
+- `src/components/landing/Navbar.jsx` — scos import useAuth
+**Fișiere șterse (23):**
+- `src/pages/{Dashboard,AddTrade,History,Statistics,WeeklyReview,Checklist,LotCalculator,Settings,Profile,TradingDiary}Page.jsx`
+- `src/pages/auth/{Login,Register,ForgotPassword}Page.jsx`
+- `src/components/layout/{AppLayout,Sidebar}.jsx`
+- `src/components/common/ProtectedRoute.jsx`, `src/components/trade/SymbolPicker.jsx`
+- `src/services/{firestore,priceApi}.js`
+- `src/contexts/{AuthContext,TradesContext}.jsx`
+- `src/utils/models.js`
+**Build:** OK, 20 pagini prerendered, zero erori
+**De reținut:** vendor-firestore (449 kB) rămâne în bundle — vine de la BetaBanner (lazy load la submit). Dacă se scoate BetaBanner, se poate elimina și Firebase complet.
+---
+
+### 2026-03-14 — Sesiunea #5 (Task 2)
+**Ce s-a cerut:** Eliminarea referințelor la "2 platforme" / web app + cleanup CSS + update CLAUDE.md
+**Ce s-a făcut:**
+- FAQ.jsx: schimbat răspunsul la "What platforms?" — acum menționează doar Android
+- Pricing.jsx: "Cloud sync (Android + Web)" → "Cloud sync & backup" (în FREE_MISSING și PREMIUM_FEATURES)
+- BlogArticleLayout.jsx: OG description "Free for Android & Web" → "Free for Android"
+- BestTradingJournalAndroid2026.jsx: scos "& Web" din OG description, "Cloud sync between Android and Web" → "Cloud sync & backup"
+- index.html: 6 modificări — meta description, OG description, operatingSystem, featureList, FAQ JSON-LD, noscript fallback
+- WhyKMF.jsx: păstrat "vs web-only competitors" — e about competitori, nu despre noi (rămâne corect)
+- index.css: curățat de la ~490 linii la ~70 — scoase toate animațiile app-only (stat-card, nav-item, trade-profit/loss, input-glow, ring-animate, progress-animate, modal, slider, skeleton, etc.)
+- Șters `src/components/common/AnimatedNumber.jsx` — nefolosit (era doar în Dashboard)
+- CLAUDE.md: rescris complet — reflectă structura actuală (site static, fără auth/app)
+**Fișiere modificate (7):** FAQ.jsx, Pricing.jsx, BlogArticleLayout.jsx, BestTradingJournalAndroid2026.jsx, index.html, index.css, CLAUDE.md
+**Fișiere șterse (1):** AnimatedNumber.jsx
+**Build:** OK, 20 pagini prerendered, zero erori
+
+---
 
 ### 2026-03-08 — Sesiunea #1
 **Ce s-a cerut:** Modificare prețuri landing page: $9.99/lună și $79.99/an

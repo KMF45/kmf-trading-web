@@ -16,7 +16,7 @@ const FREE_FEATURES = [
 const FREE_MISSING = [
   'Unlimited trades',
   'Advanced statistics',
-  'Cloud sync (Android + Web)',
+  'Cloud sync & backup',
   'Weekly review & goals',
   'Emotion tracking & tilt detection',
   'Trader personality profile',
@@ -31,7 +31,7 @@ const PREMIUM_FEATURES = [
   '14-day free trial',
   'Unlimited trades',
   'Advanced statistics',
-  'Cloud sync (Android + Web)',
+  'Cloud sync & backup',
   'Weekly review & goals',
   'Emotion tracking & tilt detection',
   'Trader personality profile',

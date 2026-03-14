@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Eagerly loaded (landing page - first paint)
 import LandingPage from './pages/LandingPage';
@@ -27,30 +26,6 @@ const GoodLossVsBadWin = lazy(() => import('./pages/blog/GoodLossVsBadWin'));
 const GhostTrades = lazy(() => import('./pages/blog/GhostTrades'));
 const CryptoVsForexJournaling = lazy(() => import('./pages/blog/CryptoVsForexJournaling'));
 
-// Lazy loaded (only when navigating away from landing)
-const LoginPage = lazy(() => import('./pages/auth/LoginPage'));
-const RegisterPage = lazy(() => import('./pages/auth/RegisterPage'));
-const ForgotPasswordPage = lazy(() => import('./pages/auth/ForgotPasswordPage'));
-const AppLayout = lazy(() => import('./components/layout/AppLayout'));
-const ProtectedRoute = lazy(() => import('./components/common/ProtectedRoute'));
-const DashboardPage = lazy(() => import('./pages/DashboardPage'));
-const AddTradePage = lazy(() => import('./pages/AddTradePage'));
-const HistoryPage = lazy(() => import('./pages/HistoryPage'));
-const StatisticsPage = lazy(() => import('./pages/StatisticsPage'));
-const WeeklyReviewPage = lazy(() => import('./pages/WeeklyReviewPage'));
-const LotCalculatorPage = lazy(() => import('./pages/LotCalculatorPage'));
-const SettingsPage = lazy(() => import('./pages/SettingsPage'));
-const ChecklistPage = lazy(() => import('./pages/ChecklistPage'));
-const ProfilePage = lazy(() => import('./pages/ProfilePage'));
-const TradingDiaryPage = lazy(() => import('./pages/TradingDiaryPage'));
-
-// Lazy load TradesProvider (imports Firebase/Firestore)
-const TradesProviderModule = lazy(() =>
-  import('./contexts/TradesContext').then(mod => ({
-    default: ({ children }) => <mod.TradesProvider>{children}</mod.TradesProvider>
-  }))
-);
-
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
   <div className="min-h-screen bg-kmf-bg flex items-center justify-center">
@@ -61,71 +36,38 @@ const RouteLoader = () => (
   </div>
 );
 
-const AuthRedirect = ({ children }) => {
-  const { user, loading } = useAuth();
-  if (loading) return <RouteLoader />;
-  if (user) return <Navigate to="/app" replace />;
-  return children;
-};
-
 function App() {
   return (
     <Router>
-      <AuthProvider>
-        <Suspense fallback={<RouteLoader />}>
-          <Routes>
-            {/* Public routes - LandingPage loads instantly */}
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/login" element={<AuthRedirect><LoginPage /></AuthRedirect>} />
-            <Route path="/register" element={<AuthRedirect><RegisterPage /></AuthRedirect>} />
-            <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Suspense fallback={<RouteLoader />}>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
 
-            {/* Protected app routes - lazy loaded with Firebase */}
-            <Route path="/app" element={
-              <ProtectedRoute>
-                <TradesProviderModule>
-                  <AppLayout />
-                </TradesProviderModule>
-              </ProtectedRoute>
-            }>
-              <Route index element={<DashboardPage />} />
-              <Route path="add-trade" element={<AddTradePage />} />
-              <Route path="history" element={<HistoryPage />} />
-              <Route path="statistics" element={<StatisticsPage />} />
-              <Route path="weekly-review" element={<WeeklyReviewPage />} />
-              <Route path="checklist" element={<ChecklistPage />} />
-              <Route path="calculator" element={<LotCalculatorPage />} />
-              <Route path="settings" element={<SettingsPage />} />
-              <Route path="profile" element={<ProfilePage />} />
-              <Route path="diary" element={<TradingDiaryPage />} />
-            </Route>
+          {/* Blog */}
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026 />} />
+          <Route path="/blog/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRate />} />
+          <Route path="/blog/1-percent-risk-rule" element={<OnePercentRiskRule />} />
+          <Route path="/blog/revenge-trading" element={<RevengeTrading />} />
+          <Route path="/blog/weekly-trading-review-template" element={<WeeklyTradingReviewTemplate />} />
+          <Route path="/blog/r-multiple-explained" element={<RMultipleExplained />} />
+          <Route path="/blog/why-traders-break-their-rules" element={<WhyTradersBreakRules />} />
+          <Route path="/blog/how-to-recover-from-losing-streak" element={<HowToRecoverFromLosingStreak />} />
+          <Route path="/blog/10-questions-after-every-trade" element={<TenQuestionsAfterEveryTrade />} />
+          <Route path="/blog/trading-expectancy-explained" element={<TradingExpectancyExplained />} />
+          <Route path="/blog/how-to-set-stop-loss" element={<HowToSetStopLoss />} />
+          <Route path="/blog/position-sizing-guide" element={<PositionSizingGuide />} />
+          <Route path="/blog/pre-trade-checklist" element={<PreTradeChecklist />} />
+          <Route path="/blog/execution-gap-backtest-vs-live-trading" element={<ExecutionGap />} />
+          <Route path="/blog/prop-firm-trading-journal" element={<PropFirmJournal />} />
+          <Route path="/blog/good-loss-vs-bad-win" element={<GoodLossVsBadWin />} />
+          <Route path="/blog/ghost-trades-journaling-missed-opportunities" element={<GhostTrades />} />
+          <Route path="/blog/crypto-vs-forex-journaling" element={<CryptoVsForexJournaling />} />
 
-            {/* Blog */}
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026 />} />
-            <Route path="/blog/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRate />} />
-            <Route path="/blog/1-percent-risk-rule" element={<OnePercentRiskRule />} />
-            <Route path="/blog/revenge-trading" element={<RevengeTrading />} />
-            <Route path="/blog/weekly-trading-review-template" element={<WeeklyTradingReviewTemplate />} />
-            <Route path="/blog/r-multiple-explained" element={<RMultipleExplained />} />
-            <Route path="/blog/why-traders-break-their-rules" element={<WhyTradersBreakRules />} />
-            <Route path="/blog/how-to-recover-from-losing-streak" element={<HowToRecoverFromLosingStreak />} />
-            <Route path="/blog/10-questions-after-every-trade" element={<TenQuestionsAfterEveryTrade />} />
-            <Route path="/blog/trading-expectancy-explained" element={<TradingExpectancyExplained />} />
-            <Route path="/blog/how-to-set-stop-loss" element={<HowToSetStopLoss />} />
-            <Route path="/blog/position-sizing-guide" element={<PositionSizingGuide />} />
-            <Route path="/blog/pre-trade-checklist" element={<PreTradeChecklist />} />
-            <Route path="/blog/execution-gap-backtest-vs-live-trading" element={<ExecutionGap />} />
-            <Route path="/blog/prop-firm-trading-journal" element={<PropFirmJournal />} />
-            <Route path="/blog/good-loss-vs-bad-win" element={<GoodLossVsBadWin />} />
-            <Route path="/blog/ghost-trades-journaling-missed-opportunities" element={<GhostTrades />} />
-            <Route path="/blog/crypto-vs-forex-journaling" element={<CryptoVsForexJournaling />} />
-
-            {/* 404 */}
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
-      </AuthProvider>
+          {/* 404 */}
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

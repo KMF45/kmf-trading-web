@@ -8,7 +8,7 @@ const DEFAULTS = {
   title: 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy',
   description: 'K.M.F. Trading Journal is a professional trading journal app for forex, stocks & crypto traders.',
   ogTitle: 'K.M.F. Trading Journal – Professional Trade Tracking & Analysis',
-  ogDescription: 'Track your trades, analyze performance with advanced statistics, manage risk with a lot calculator, and improve your trading discipline. Free for Android & Web.',
+  ogDescription: 'Track your trades, analyze performance with advanced statistics, manage risk with a lot calculator, and improve your trading discipline. Free for Android.',
   ogImage: `${SITE}/logo.png`,
   ogUrl: `${SITE}/`,
   twitterTitle: 'K.M.F. Trading Journal – Keep Moving Forward',

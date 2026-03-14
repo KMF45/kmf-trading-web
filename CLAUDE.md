@@ -13,7 +13,9 @@
 
 ## Project Overview
 - **Location**: `/home/kmf45/kmf-trading-web`
-- **Stack**: React 18, Vite, Tailwind CSS, React Router, Firebase (Auth + Firestore)
+- **Type**: Static presentation site (landing page + blog) — NO webapp, NO authentication
+- **Stack**: React 19, Vite, Tailwind CSS, React Router
+- **Firebase**: Used ONLY by BetaBanner (lazy-loaded Firestore on form submit)
 - **URL**: https://kmfjournal.com
 - **Deploy**: GitHub Pages / static hosting
 
@@ -27,22 +29,23 @@ npm run dev      # dev server
 ```
 src/
 ├── pages/
-│   ├── LandingPage.jsx          # Main landing (orchestrates sections)
-│   ├── BlogPage.jsx             # Blog index with all posts
-│   ├── blog/                    # 13+ individual article pages
-│   └── auth/                    # Login, Register, ForgotPassword
+│   ├── LandingPage.jsx             # Main landing (orchestrates sections)
+│   ├── BlogPage.jsx                # Blog index with all posts
+│   ├── NotFoundPage.jsx            # 404 page
+│   └── blog/                       # 18 individual article pages
 ├── components/
-│   ├── landing/Navbar.jsx       # Fixed navbar with scroll detection
-│   ├── Hero.jsx                 # Hero section with market ticker
-│   ├── BetaBanner.jsx           # Beta signup with Firestore form
+│   ├── landing/Navbar.jsx          # Fixed navbar with scroll detection
+│   ├── Hero.jsx                    # Hero section with market ticker
+│   ├── BetaBanner.jsx              # Beta signup with Firestore form (only Firebase usage)
 │   ├── Features.jsx, WhyKMF.jsx, HowItWorks.jsx
 │   ├── Pricing.jsx, Download.jsx, FAQ.jsx
-│   ├── Testimonials.jsx
-│   ├── Footer.jsx               # Footer with blog links
+│   ├── Testimonials.jsx, BlogHighlights.jsx
+│   ├── Footer.jsx                  # Footer with blog links
 │   └── blog/BlogArticleLayout.jsx  # Shared article layout + SEO
-├── config/firebase.js           # Firebase init (Auth, Firestore, Storage)
-├── contexts/                    # AuthContext, TradesContext
-└── styles/index.css             # Tailwind + custom keyframes
+├── config/firebase.js              # Firebase init (Firestore only, used by BetaBanner)
+├── data/models.js                  # Enums and shared data
+├── utils/                          # formatters, calculations
+└── styles/index.css                # Tailwind + custom keyframes
 ```
 
 ## Blog Articles
@@ -58,8 +61,8 @@ src/
 
 ## Firebase
 - Project: `kmf-trading-journal`
-- Firestore collections: `users/{uid}/trades`, `betaSignups` (landing page forms)
-- Rules deployed from Android project: `/home/kmf45/AndroidStudioProjects/KMFTradingJournal/firestore.rules`
+- Firestore collection used: `betaSignups` (landing page beta signup form only)
+- Firebase is lazy-loaded — zero impact on page load performance
 
 ## Design System
 - **Dark theme**: bg #0F1115, accent cyan #4FC3F7, profit green #00C853, loss red #FF5252, gold #FFB300

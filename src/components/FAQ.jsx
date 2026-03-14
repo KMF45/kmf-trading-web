@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: 'What platforms does K.M.F. Trading Journal support?',
-    answer: 'K.M.F. Trading Journal is available on Android devices (Android 7.0+) and as a web application at kmfjournal.com, with cloud sync between both platforms.',
+    answer: 'K.M.F. Trading Journal is available on Android devices (Android 7.0+). Download it from Google Play or join the beta at kmfjournal.com.',
   },
   {
     question: 'How does emotion tracking and tilt detection work?',

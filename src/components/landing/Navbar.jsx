@@ -1,11 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-
 const Navbar = () => {
-  const { user } = useAuth();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const rafRef = useRef(null);
