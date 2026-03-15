@@ -275,6 +275,15 @@ const posts = [
     categoryColor: '#00C853',
   },
   {
+    slug: 'what-is-kmf-trading-journal',
+    title: 'What Is K.M.F. Trading Journal? The App Built by Traders Who Got Tired of Spreadsheets',
+    excerpt: 'A complete guide to K.M.F. — what it is, what it contains, how it helps you grow as a trader, and an honest breakdown of free vs premium. Built by traders, for traders.',
+    category: 'App Reviews',
+    date: 'March 15, 2026',
+    readTime: '10 min read',
+    categoryColor: '#4FC3F7',
+  },
+  {
     slug: 'scaling-in-vs-scaling-out',
     title: 'Scaling In vs Scaling Out: Which Method Destroys Fewer Accounts?',
     excerpt: 'Adding to positions and taking partial profits both change your risk in ways most traders don\'t understand. The math of cumulative risk, the averaging down trap, and when each method actually works.',

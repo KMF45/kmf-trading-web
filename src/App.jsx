@@ -39,6 +39,7 @@ const MondayEffectTrading = lazy(() => import('./pages/blog/MondayEffectTrading'
 const ConfidenceVsOverconfidence = lazy(() => import('./pages/blog/ConfidenceVsOverconfidence'));
 const WeekendGapRisk = lazy(() => import('./pages/blog/WeekendGapRisk'));
 const ScalingInVsScalingOut = lazy(() => import('./pages/blog/ScalingInVsScalingOut'));
+const WhatIsKmfTradingJournal = lazy(() => import('./pages/blog/WhatIsKmfTradingJournal'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -98,6 +99,7 @@ function App() {
           <Route path="/blog/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidence />} />
           <Route path="/blog/weekend-gap-risk" element={<WeekendGapRisk />} />
           <Route path="/blog/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOut />} />
+          <Route path="/blog/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournal />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />

@@ -51,6 +51,7 @@ const routes = [
   '/blog/confidence-vs-overconfidence',
   '/blog/weekend-gap-risk',
   '/blog/scaling-in-vs-scaling-out',
+  '/blog/what-is-kmf-trading-journal',
 ];
 
 // Simple static file server that falls back to index.html (SPA)

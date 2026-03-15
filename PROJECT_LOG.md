@@ -1,9 +1,24 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (31 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). Webapp eliminat în sesiunea #5. Landing page complet tradus: EN, RO, RU, JA, FR, DE, ZH cu language switcher în Navbar.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (32 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). Webapp eliminat în sesiunea #5. Landing page complet tradus: EN, RO, RU, JA, FR, DE, ZH cu language switcher în Navbar.
 
 ## Sesiuni de lucru
+
+### 2026-03-15 — Sesiunea #7b (Blog: What Is KMF Trading Journal)
+**Ce s-a cerut:** Articol pillar despre KMF app — ce este, features, diferențiatori, free vs premium, pentru cine e
+**Ce s-a făcut:**
+- Scris articol complet ~10 min read, ton onest fără hype
+- Secțiuni: intro (de ce am construit KMF), features walkthrough, psychology engine, gamification, diferențiatori, free vs premium table, pentru cine e/nu e, getting started
+- Linkuri interne către: excel-vs-trading-journal-app, pre-trade-checklist, weekly-trading-review-template, confidence-vs-overconfidence, strategy-is-not-enough, why-traders-fail-at-journaling
+- 5 FAQ items pentru SEO
+- Actualizat App.jsx, BlogPage.jsx, prerender.js, sitemap.xml, rss.xml
+**Fișiere create (1):**
+- `src/pages/blog/WhatIsKmfTradingJournal.jsx`
+**Fișiere modificate (5):** App.jsx, BlogPage.jsx, prerender.js, sitemap.xml, rss.xml
+**Build:** OK, 34 pagini prerendered, zero erori
+
+---
 
 ### 2026-03-15 — Sesiunea #7 (Internal linking blog)
 **Ce s-a cerut:** Adăugare linkuri interne între articolele blog
