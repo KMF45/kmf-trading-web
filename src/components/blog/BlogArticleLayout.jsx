@@ -48,11 +48,18 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
     setMeta('twitter:description', metaDescription || DEFAULTS.twitterDescription, 'name');
     setMeta('twitter:image', ogImage, 'name');
 
+    // JSON-LD helper: only create if not already present (avoids duplicates after prerender)
+    const addLd = (id, data) => {
+      if (document.getElementById(id)) return;
+      const el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      el.textContent = JSON.stringify(data);
+      document.head.appendChild(el);
+    };
+
     // JSON-LD: Article
-    const articleLd = document.createElement('script');
-    articleLd.type = 'application/ld+json';
-    articleLd.id = 'ld-article';
-    articleLd.textContent = JSON.stringify({
+    addLd('ld-article', {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: title,
@@ -63,13 +70,9 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       image: ogImage,
       url: pageUrl,
     });
-    document.head.appendChild(articleLd);
 
     // JSON-LD: BreadcrumbList
-    const breadcrumbLd = document.createElement('script');
-    breadcrumbLd.type = 'application/ld+json';
-    breadcrumbLd.id = 'ld-breadcrumb';
-    breadcrumbLd.textContent = JSON.stringify({
+    addLd('ld-breadcrumb', {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -78,15 +81,10 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
         { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
       ],
     });
-    document.head.appendChild(breadcrumbLd);
 
     // JSON-LD: FAQPage (for rich snippets in Google)
-    let faqLd;
     if (faqItems.length > 0) {
-      faqLd = document.createElement('script');
-      faqLd.type = 'application/ld+json';
-      faqLd.id = 'ld-faq';
-      faqLd.textContent = JSON.stringify({
+      addLd('ld-faq', {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: faqItems.map((f) => ({
@@ -95,7 +93,6 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
           acceptedAnswer: { '@type': 'Answer', text: f.answer },
         })),
       });
-      document.head.appendChild(faqLd);
     }
 
     return () => {
