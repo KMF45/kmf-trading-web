@@ -10,7 +10,7 @@ const FREE_FEATURES = [
   'Pre-trade checklist',
   'Trading diary',
   'Offline access',
-  '8 languages',
+  '7 languages',
 ];
 
 const FREE_MISSING = [

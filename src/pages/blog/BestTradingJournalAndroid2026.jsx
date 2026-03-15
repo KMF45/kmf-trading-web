@@ -205,7 +205,7 @@ export default function BestTradingJournalAndroid2026() {
               'Advanced stats: profit factor, R-multiple, expectancy, drawdown',
               'Built-in lot size calculator with live prices and R:R',
               'Cloud sync & backup (Premium)',
-              '8 languages including English, Romanian, Russian, Japanese',
+              '7 languages including English, Romanian, Russian, Japanese',
               'Free core features — no credit card required',
             ]}
             cons={[

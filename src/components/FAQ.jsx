@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     question: 'What languages are supported?',
-    answer: 'The app supports 8 languages: English, English (US), Romanian, Russian, Japanese, French, German, and Chinese.',
+    answer: 'The app supports 7 languages: English, Romanian, Russian, Japanese, French, German, and Chinese.',
   },
 ];
 

@@ -77,7 +77,7 @@ const secondaryFeatures = [
   { icon: FaBook,        title: 'Trading Diary',        description: 'Free-form journal for reflections and lessons learned' },
   { icon: FaClock,       title: 'Session Analysis',     description: 'Track performance across Asian, London & NY sessions' },
   { icon: FaDatabase,    title: 'Export & Backup',      description: 'Export trades to JSON, CSV or PDF. Cloud backup & restore' },
-  { icon: FaGlobe,       title: '8 Languages',          description: 'EN, RO, RU, JA, FR, DE, ZH and more' },
+  { icon: FaGlobe,       title: '7 Languages',          description: 'EN, RO, RU, JA, FR, DE, ZH' },
 ];
 
 const PrimaryCard = ({ feature, index }) => {

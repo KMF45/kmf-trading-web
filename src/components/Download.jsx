@@ -139,7 +139,7 @@ const Download = () => {
                   </div>
                   <div className="flex items-center gap-2 text-kmf-text-tertiary">
                     <FaGlobe className="text-xl text-kmf-accent" aria-hidden="true" />
-                    <span>8 Languages</span>
+                    <span>7 Languages</span>
                   </div>
                   <div className="flex items-center gap-2 text-kmf-text-tertiary">
                     <FaCloud className="text-xl text-kmf-accent" aria-hidden="true" />
