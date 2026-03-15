@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { FaRocket, FaEnvelope, FaInfinity, FaBell, FaCheckCircle } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
+import { useLanguage } from '../i18n/LanguageContext';
+
 // Firebase loaded lazily on form submit (not on page load)
 const getFirestore = async () => {
   const [{ db, initAppCheck }, fs] = await Promise.all([
@@ -11,16 +13,13 @@ const getFirestore = async () => {
   return { db, collection: fs.collection, addDoc: fs.addDoc, serverTimestamp: fs.serverTimestamp };
 };
 
-const perks = [
-  { icon: FaInfinity,  text: 'Free lifetime access to Premium' },
-  { icon: FaBell,      text: 'First to try every new feature' },
-  { icon: FaEnvelope,  text: 'Direct line to the dev team' },
-];
+const PERK_ICONS = [FaInfinity, FaBell, FaEnvelope];
 
 const BetaBanner = () => {
+  const { t } = useLanguage();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,6 +41,9 @@ const BetaBanner = () => {
       setStatus('error');
     }
   };
+
+  const perks = t('beta.perks');
+  const statBlocks = t('beta.statBlocks');
 
   return (
     <section
@@ -81,32 +83,33 @@ const BetaBanner = () => {
                 style={{ background: 'rgba(255,179,0,0.12)', border: '1px solid rgba(255,179,0,0.28)', color: '#FFB300' }}>
                 <FaRocket style={{ fontSize: 11 }} aria-hidden="true" />
                 <span style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-                  Limited Spots Available
+                  {t('beta.badge')}
                 </span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-                <span style={{ color: '#FFB300' }}>Become a Beta Tester.</span>
+                <span style={{ color: '#FFB300' }}>{t('beta.heading1')}</span>
                 <br />
-                <span className="text-kmf-text-primary">Get Premium. Forever. Free.</span>
+                <span className="text-kmf-text-primary">{t('beta.heading2')}</span>
               </h2>
 
               <p className="text-kmf-text-secondary leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-                We're looking for serious traders to test K.M.F. Trading Journal before the public launch.
-                Shape the product with your feedback — and in return, get <strong style={{ color: '#FFB300' }}>free lifetime access to all Premium features</strong>, forever.
+                {t('beta.description')}{' '}
+                <strong style={{ color: '#FFB300' }}>{t('beta.descHighlight')}</strong>
+                {t('beta.descEnd')}
               </p>
 
               {/* Perks */}
               <ul className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start mb-8">
-                {perks.map((p) => {
-                  const Icon = p.icon;
+                {perks.map((text, i) => {
+                  const Icon = PERK_ICONS[i];
                   return (
-                    <li key={p.text} className="flex items-center gap-2.5">
+                    <li key={i} className="flex items-center gap-2.5">
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0"
                         style={{ background: 'rgba(255,179,0,0.14)', border: '1px solid rgba(255,179,0,0.25)' }}>
                         <Icon style={{ fontSize: 12, color: '#FFB300' }} aria-hidden="true" />
                       </div>
-                      <span className="text-sm font-medium" style={{ color: '#D4C0A0' }}>{p.text}</span>
+                      <span className="text-sm font-medium" style={{ color: '#D4C0A0' }}>{text}</span>
                     </li>
                   );
                 })}
@@ -118,15 +121,15 @@ const BetaBanner = () => {
                   style={{ background: 'rgba(0,200,83,0.10)', border: '1px solid rgba(0,200,83,0.25)' }}>
                   <FaCheckCircle style={{ color: '#00C853', fontSize: 20, flexShrink: 0 }} />
                   <div>
-                    <p className="text-sm font-semibold text-kmf-text-primary">Application received!</p>
-                    <p className="text-xs text-kmf-text-tertiary">We'll reach out with next steps within 24 hours.</p>
+                    <p className="text-sm font-semibold text-kmf-text-primary">{t('beta.successTitle')}</p>
+                    <p className="text-xs text-kmf-text-tertiary">{t('beta.successSub')}</p>
                   </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto lg:mx-0">
                   <input
                     type="text"
-                    placeholder="Your name"
+                    placeholder={t('beta.namePlaceholder')}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="flex-1 px-4 py-3 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-[#FFB300]/40 transition-all"
@@ -134,7 +137,7 @@ const BetaBanner = () => {
                   />
                   <input
                     type="email"
-                    placeholder="Email address"
+                    placeholder={t('beta.emailPlaceholder')}
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -152,13 +155,13 @@ const BetaBanner = () => {
                     }}
                   >
                     <HiSparkles style={{ fontSize: 14 }} aria-hidden="true" />
-                    {status === 'sending' ? 'Sending...' : 'Apply Now'}
+                    {status === 'sending' ? t('beta.sendingBtn') : t('beta.submitBtn')}
                   </button>
                 </form>
               )}
               {status === 'error' && (
                 <p className="text-xs mt-2 text-center lg:text-left" style={{ color: '#FF5252' }}>
-                  Something went wrong. Please try again or email us at contact@kmfjournal.com
+                  {t('beta.errorMsg')}
                 </p>
               )}
             </div>
@@ -168,11 +171,7 @@ const BetaBanner = () => {
               className="hidden lg:flex flex-col gap-4 flex-shrink-0"
               style={{ width: 220 }}
             >
-              {[
-                { label: 'Lifetime Access', value: 'FREE', sub: 'all premium features' },
-                { label: 'Early Access', value: '100%', sub: 'every new release' },
-                { label: 'Spots Available', value: '50', sub: 'limited beta access' },
-              ].map((s) => (
+              {statBlocks.map((s) => (
                 <div
                   key={s.label}
                   className="rounded-2xl p-5 text-center"

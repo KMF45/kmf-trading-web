@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { FaAndroid, FaCheckCircle, FaLock, FaGlobe, FaCloud, FaShieldAlt } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
+import { useLanguage } from '../i18n/LanguageContext';
+
 // Firebase loaded lazily on form submit (not on page load)
 const getFirestore = async () => {
   const [{ db, initAppCheck }, fs] = await Promise.all([
@@ -11,9 +13,12 @@ const getFirestore = async () => {
   return { db, collection: fs.collection, addDoc: fs.addDoc, serverTimestamp: fs.serverTimestamp };
 };
 
+const TRUST_ICONS = [FaShieldAlt, FaLock, FaGlobe, FaCloud];
+
 const Download = () => {
+  const { t } = useLanguage();
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle');
 
   const handleNotify = async (e) => {
     e.preventDefault();
@@ -33,6 +38,8 @@ const Download = () => {
       setStatus('error');
     }
   };
+
+  const trustBadges = t('download.trustBadges');
 
   return (
     <section id="download" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-label="Download K.M.F. Trading Journal for Android">
@@ -55,16 +62,16 @@ const Download = () => {
                 <span className="inline-flex items-center gap-2 px-6 py-3 bg-kmf-accent/20 text-kmf-accent
                              rounded-full text-sm font-semibold border border-kmf-accent/50 shadow-glow">
                   <HiSparkles className="text-lg" aria-hidden="true" />
-                  Launching Soon on Google Play
+                  {t('download.badge')}
                 </span>
               </div>
 
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-6">
-                <span className="gradient-text">Coming Soon</span>
+                <span className="gradient-text">{t('download.heading')}</span>
               </h2>
 
               <p className="text-xl text-kmf-text-secondary text-center mb-8 max-w-2xl mx-auto">
-                K.M.F. Trading Journal is launching on Google Play soon. Get notified on launch day and never miss your chance to start journaling.
+                {t('download.subtitle')}
               </p>
 
               {/* Notify me form */}
@@ -73,13 +80,13 @@ const Download = () => {
                   <div className="inline-flex items-center gap-3 px-6 py-4 rounded-xl"
                     style={{ background: 'rgba(0,200,83,0.10)', border: '1px solid rgba(0,200,83,0.25)' }}>
                     <FaCheckCircle style={{ color: '#00C853', fontSize: 18, flexShrink: 0 }} />
-                    <p className="text-sm font-semibold text-kmf-text-primary">You're on the list! We'll email you on launch day.</p>
+                    <p className="text-sm font-semibold text-kmf-text-primary">{t('download.successMsg')}</p>
                   </div>
                 ) : (
                   <form onSubmit={handleNotify} className="flex flex-col sm:flex-row gap-3 w-full max-w-lg">
                     <input
                       type="email"
-                      placeholder="Enter your email"
+                      placeholder={t('download.emailPlaceholder')}
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -93,26 +100,19 @@ const Download = () => {
                       style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
                     >
                       <FaAndroid className="text-xl" aria-hidden="true" />
-                      {status === 'sending' ? 'Joining...' : 'Notify Me'}
+                      {status === 'sending' ? t('download.sendingBtn') : t('download.submitBtn')}
                     </button>
                   </form>
                 )}
               </div>
               {status === 'error' && (
                 <p className="text-xs text-center mb-6" style={{ color: '#FF5252' }}>
-                  Something went wrong. Please try again.
+                  {t('download.errorMsg')}
                 </p>
               )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
-                {[
-                  'Free to download — 14-day Premium trial',
-                  'Emotion tracking & psychology tools',
-                  'Achievements, XP & trader tiers',
-                  'Offline functionality',
-                  'Google Sign-In & cloud sync',
-                  'Export & backup (PDF/CSV/JSON)',
-                ].map((feature) => (
+                {t('download.features').map((feature) => (
                   <div
                     key={feature}
                     className="flex items-center gap-3 text-kmf-text-secondary"
@@ -126,25 +126,18 @@ const Download = () => {
               {/* Trust badges */}
               <div className="mt-12 text-center">
                 <p className="text-sm text-kmf-text-tertiary mb-4">
-                  Privacy-focused • Cloud synced • Professional tools
+                  {t('download.trustLine')}
                 </p>
                 <div className="flex justify-center gap-8 flex-wrap">
-                  <div className="flex items-center gap-2 text-kmf-text-tertiary">
-                    <FaShieldAlt className="text-xl text-kmf-accent" aria-hidden="true" />
-                    <span>SSL Secured</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-kmf-text-tertiary">
-                    <FaLock className="text-xl text-kmf-accent" aria-hidden="true" />
-                    <span>Data Encrypted</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-kmf-text-tertiary">
-                    <FaGlobe className="text-xl text-kmf-accent" aria-hidden="true" />
-                    <span>7 Languages</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-kmf-text-tertiary">
-                    <FaCloud className="text-xl text-kmf-accent" aria-hidden="true" />
-                    <span>Cloud Sync</span>
-                  </div>
+                  {trustBadges.map((badge, i) => {
+                    const Icon = TRUST_ICONS[i];
+                    return (
+                      <div key={badge} className="flex items-center gap-2 text-kmf-text-tertiary">
+                        <Icon className="text-xl text-kmf-accent" aria-hidden="true" />
+                        <span>{badge}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

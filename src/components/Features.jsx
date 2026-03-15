@@ -3,128 +3,64 @@ import {
   FaTasks, FaCalculator, FaBell, FaDatabase, FaGlobe,
   FaBrain, FaTrophy, FaBook, FaClock
 } from 'react-icons/fa';
+import { useLanguage } from '../i18n/LanguageContext';
 
-const primaryFeatures = [
-  {
-    icon: FaChartLine,
-    title: 'Advanced Statistics',
-    description: 'Win rate, profit factor, expectancy, R-multiple distribution, max drawdown, and discipline score — all calculated automatically.',
-    color: 'from-orange-500 to-red-500',
-    accentColor: '#FF7043',
-    tags: ['Win Rate', 'Profit Factor', 'R-Multiple', 'Expectancy'],
-  },
-  {
-    icon: FaHome,
-    title: 'Live Dashboard',
-    description: 'Real-time balance evolution chart, monthly P/L, open trades, and trader badge — your performance at a glance.',
-    color: 'from-blue-500 to-cyan-500',
-    accentColor: '#4FC3F7',
-    tags: ['Balance Curve', 'Monthly P/L', 'Open Trades', 'Trader Badge'],
-  },
-  {
-    icon: FaCalculator,
-    title: 'Lot Size Calculator',
-    description: 'Risk-based position sizing with live prices, exchange rate conversion, leverage options, and R:R analysis.',
-    color: 'from-yellow-500 to-orange-500',
-    accentColor: '#FFB300',
-    tags: ['Risk %', 'Live Prices', 'Leverage', 'R:R Ratio'],
-  },
-  {
-    icon: FaClipboardCheck,
-    title: 'Weekly Review',
-    description: 'Self-evaluation with 5 discipline metrics, reflection notes, and weekly goal tracking for continuous improvement.',
-    color: 'from-teal-500 to-cyan-500',
-    accentColor: '#26C6DA',
-    tags: ['Discipline Score', 'Goals', 'Reflection Notes'],
-  },
-  {
-    icon: FaPlus,
-    title: 'Smart Trade Entry',
-    description: 'Fast entry with instrument autocomplete, SL/TP cross-validation, pre-trade checklist, emotion tracking, and screenshot upload.',
-    color: 'from-green-500 to-emerald-500',
-    accentColor: '#00C853',
-    tags: ['< 30 sec entry', 'SL/TP Validation', 'Emotions', 'Screenshots'],
-  },
-  {
-    icon: FaBrain,
-    title: 'Trading Psychology',
-    description: 'Track pre-trade and post-trade emotions, detect tilt patterns, discover your trader personality profile, and measure honesty with the Honesty Mirror.',
-    color: 'from-purple-500 to-pink-500',
-    accentColor: '#CE93D8',
-    tags: ['Emotion Tracking', 'Tilt Detection', 'Personality Profile', 'Honesty Mirror'],
-  },
-  {
-    icon: FaTrophy,
-    title: 'Achievements & Gamification',
-    description: 'Earn XP, unlock badges, build streaks, and climb trader tiers from Novice to Master Strategist. Stay motivated with progress tracking.',
-    color: 'from-yellow-400 to-amber-500',
-    accentColor: '#FFB300',
-    tags: ['XP & Levels', 'Badges', 'Streaks', 'Trader Tiers'],
-  },
-  {
-    icon: FaHistory,
-    title: 'Trade History',
-    description: 'Full history with search, result filters, finalize pending trades, edit date/time, and delete confirmation.',
-    color: 'from-rose-500 to-red-500',
-    accentColor: '#FF5252',
-    tags: ['Search', 'Filter by Result', 'Edit & Delete'],
-  },
+const PRIMARY_ICONS = [FaChartLine, FaHome, FaCalculator, FaClipboardCheck, FaPlus, FaBrain, FaTrophy, FaHistory];
+const PRIMARY_COLORS = [
+  { color: 'from-orange-500 to-red-500', accentColor: '#FF7043' },
+  { color: 'from-blue-500 to-cyan-500', accentColor: '#4FC3F7' },
+  { color: 'from-yellow-500 to-orange-500', accentColor: '#FFB300' },
+  { color: 'from-teal-500 to-cyan-500', accentColor: '#26C6DA' },
+  { color: 'from-green-500 to-emerald-500', accentColor: '#00C853' },
+  { color: 'from-purple-500 to-pink-500', accentColor: '#CE93D8' },
+  { color: 'from-yellow-400 to-amber-500', accentColor: '#FFB300' },
+  { color: 'from-rose-500 to-red-500', accentColor: '#FF5252' },
 ];
 
-const secondaryFeatures = [
-  { icon: FaTasks,       title: 'Custom Checklists',    description: 'Build and manage your own pre-trade checklists' },
-  { icon: FaBell,        title: 'Smart Notifications',  description: 'Daily reminders and weekly review alerts' },
-  { icon: FaBook,        title: 'Trading Diary',        description: 'Free-form journal for reflections and lessons learned' },
-  { icon: FaClock,       title: 'Session Analysis',     description: 'Track performance across Asian, London & NY sessions' },
-  { icon: FaDatabase,    title: 'Export & Backup',      description: 'Export trades to JSON, CSV or PDF. Cloud backup & restore' },
-  { icon: FaGlobe,       title: '7 Languages',          description: 'EN, RO, RU, JA, FR, DE, ZH' },
-];
+const SECONDARY_ICONS = [FaTasks, FaBell, FaBook, FaClock, FaDatabase, FaGlobe];
 
 const PrimaryCard = ({ feature, index }) => {
-  const Icon = feature.icon;
+  const Icon = PRIMARY_ICONS[index];
+  const style = PRIMARY_COLORS[index];
   return (
     <div
       className="group relative animate-slideUp"
       style={{ animationDelay: `${index * 80}ms`, animationFillMode: 'both' }}
     >
       <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500"
-        style={{ background: `linear-gradient(135deg, ${feature.accentColor}22, transparent 60%)` }} />
+        style={{ background: `linear-gradient(135deg, ${style.accentColor}22, transparent 60%)` }} />
       <div className="relative bg-kmf-panel rounded-2xl p-6 border border-white/5
                     hover:border-white/10 transition-all duration-300 h-full flex flex-col"
         style={{ boxShadow: '0 2px 20px rgba(0,0,0,0.25)' }}>
 
-        {/* Icon */}
         <div className="mb-5">
           <div className="rounded-xl p-3.5 w-fit transition-transform duration-300 group-hover:scale-110"
             style={{
-              background: `${feature.accentColor}14`,
-              border: `1px solid ${feature.accentColor}28`,
+              background: `${style.accentColor}14`,
+              border: `1px solid ${style.accentColor}28`,
             }}>
-            <Icon style={{ fontSize: 22, color: feature.accentColor }} />
+            <Icon style={{ fontSize: 22, color: style.accentColor }} />
           </div>
         </div>
 
-        {/* Title */}
         <h3 className="text-base font-bold text-kmf-text-primary mb-2 transition-colors duration-200"
           style={{ letterSpacing: '-0.01em' }}>
           {feature.title}
         </h3>
 
-        {/* Description */}
         <p className="text-sm text-kmf-text-tertiary leading-relaxed flex-1 mb-4">
           {feature.description}
         </p>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-1.5 pt-3 border-t border-white/5">
           {feature.tags.map((tag) => (
             <span
               key={tag}
               className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
               style={{
-                background: `${feature.accentColor}14`,
-                color: feature.accentColor,
-                border: `1px solid ${feature.accentColor}25`,
+                background: `${style.accentColor}14`,
+                color: style.accentColor,
+                border: `1px solid ${style.accentColor}25`,
                 letterSpacing: '0.02em',
               }}
             >
@@ -138,7 +74,7 @@ const PrimaryCard = ({ feature, index }) => {
 };
 
 const SecondaryCard = ({ feature }) => {
-  const Icon = feature.icon;
+  const Icon = SECONDARY_ICONS[feature._idx];
   return (
     <div className="flex items-start gap-4 bg-kmf-panel/60 rounded-xl p-4 border border-white/5
                   hover:border-kmf-accent/20 hover:bg-kmf-panel transition-all duration-300 group">
@@ -155,6 +91,11 @@ const SecondaryCard = ({ feature }) => {
 };
 
 const Features = () => {
+  const { t } = useLanguage();
+
+  const primaryFeatures = t('features.primary');
+  const secondaryFeatures = t('features.secondary').map((f, i) => ({ ...f, _idx: i }));
+
   return (
     <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-label="Trading Journal Features">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-kmf-accent/[0.03] to-transparent" />
@@ -164,16 +105,16 @@ const Features = () => {
         <div className="text-center mb-16 animate-fadeIn">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold border border-kmf-accent/25">
-              ✦ Powerful Features
+              ✦ {t('features.badge')}
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold mb-4" style={{ letterSpacing: '-0.02em' }}>
-            <span className="gradient-text">Everything You Need to</span>
+            <span className="gradient-text">{t('features.heading1')}</span>
             <br />
-            <span className="text-kmf-text-primary">Trade with Discipline</span>
+            <span className="text-kmf-text-primary">{t('features.heading2')}</span>
           </h2>
           <p className="text-lg text-kmf-text-tertiary max-w-2xl mx-auto leading-relaxed">
-            Professional tools for forex, stock, and crypto traders — from trade tracking to advanced analytics and risk management.
+            {t('features.subtitle')}
           </p>
         </div>
 
@@ -184,7 +125,7 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Secondary features — 4 columns */}
+        {/* Secondary features — 3 columns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-16">
           {secondaryFeatures.map((feature, index) => (
             <SecondaryCard key={index} feature={feature} />
@@ -199,7 +140,7 @@ const Features = () => {
                      text-white font-semibold rounded-lg shadow-glow hover:shadow-glow-hover
                      transition-all duration-300 hover:scale-105"
           >
-            Get Started Now
+            {t('features.cta')}
           </a>
         </div>
       </div>

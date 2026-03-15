@@ -1,5 +1,6 @@
 import { FaClock } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
+import { useLanguage } from '../i18n/LanguageContext';
 
 // ── Market ticker ─────────────────────────────────────────────────────────────
 const TICKER_ITEMS = [
@@ -46,99 +47,101 @@ const MarketTicker = () => {
   );
 };
 
-// ── Stats ─────────────────────────────────────────────────────────────────────
-const stats = [
-  { value: '10,000+', label: 'Trades Tracked' },
-  { value: '22',      label: 'Instruments'    },
-  { value: '7',       label: 'Languages'      },
-  { value: '31',      label: 'Blog Articles'  },
-];
-
 // ── Hero ──────────────────────────────────────────────────────────────────────
-const Hero = () => (
-  <section
-    className="relative min-h-screen flex flex-col items-center justify-center bg-kmf-bg pt-20 overflow-hidden"
-    aria-label="K.M.F. Trading Journal introduction"
-  >
-    {/* Background */}
-    <div aria-hidden="true" style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
-      <div style={{
-        position: 'absolute', inset: 0,
-        backgroundImage: 'radial-gradient(rgba(79,195,247,0.08) 1px, transparent 1px)',
-        backgroundSize: '34px 34px',
-        maskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%)',
-        WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%)',
-      }} />
-      <div style={{ position: 'absolute', top: '-8%', left: '-4%', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,195,247,0.09) 0%, transparent 70%)', animation: 'kmf-orb-pulse 8s ease-in-out infinite', willChange: 'transform, opacity', contain: 'layout style paint' }} />
-      <div style={{ position: 'absolute', bottom: '-8%', right: '-4%', width: 540, height: 540, borderRadius: '50%', background: 'radial-gradient(circle, rgba(38,198,218,0.07) 0%, transparent 70%)', animation: 'kmf-orb-pulse 10s ease-in-out infinite', animationDelay: '3s', willChange: 'transform, opacity', contain: 'layout style paint' }} />
-      {/* vignette behind text */}
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 55% 60% at 50% 46%, rgba(10,12,16,0.85) 0%, rgba(10,12,16,0.40) 50%, transparent 75%)' }} />
-    </div>
+const Hero = () => {
+  const { t } = useLanguage();
 
-    {/* Main content — centered */}
-    <div className="container mx-auto px-4 text-center relative z-10 flex-1 flex flex-col items-center justify-center">
-      <div className="mb-8">
-        <picture>
-          <source srcSet="/logo-320.webp" type="image/webp" />
-          <img
-            src="/logo-320.png"
-            alt="K.M.F. Trading Journal logo"
-            className="w-40 h-40 mx-auto drop-shadow-[0_0_24px_rgba(79,195,247,0.55)]"
-            width="160" height="160"
-            fetchpriority="high"
-          />
-        </picture>
+  const stats = [
+    { value: '10,000+', label: t('hero.stats.trades') },
+    { value: '22',      label: t('hero.stats.instruments') },
+    { value: '7',       label: t('hero.stats.languages') },
+    { value: '31',      label: t('hero.stats.articles') },
+  ];
+
+  return (
+    <section
+      className="relative min-h-screen flex flex-col items-center justify-center bg-kmf-bg pt-20 overflow-hidden"
+      aria-label="K.M.F. Trading Journal introduction"
+    >
+      {/* Background */}
+      <div aria-hidden="true" style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
+        <div style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: 'radial-gradient(rgba(79,195,247,0.08) 1px, transparent 1px)',
+          backgroundSize: '34px 34px',
+          maskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%)',
+        }} />
+        <div style={{ position: 'absolute', top: '-8%', left: '-4%', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(79,195,247,0.09) 0%, transparent 70%)', animation: 'kmf-orb-pulse 8s ease-in-out infinite', willChange: 'transform, opacity', contain: 'layout style paint' }} />
+        <div style={{ position: 'absolute', bottom: '-8%', right: '-4%', width: 540, height: 540, borderRadius: '50%', background: 'radial-gradient(circle, rgba(38,198,218,0.07) 0%, transparent 70%)', animation: 'kmf-orb-pulse 10s ease-in-out infinite', animationDelay: '3s', willChange: 'transform, opacity', contain: 'layout style paint' }} />
+        {/* vignette behind text */}
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 55% 60% at 50% 46%, rgba(10,12,16,0.85) 0%, rgba(10,12,16,0.40) 50%, transparent 75%)' }} />
       </div>
 
-      <h1 className="text-6xl font-bold mb-6">
-        <span className="logo-text">K.M.F.</span>
-        <br />
-        <span className="text-kmf-text-primary">Trading Journal</span>
-      </h1>
+      {/* Main content — centered */}
+      <div className="container mx-auto px-4 text-center relative z-10 flex-1 flex flex-col items-center justify-center">
+        <div className="mb-8">
+          <picture>
+            <source srcSet="/logo-320.webp" type="image/webp" />
+            <img
+              src="/logo-320.png"
+              alt="K.M.F. Trading Journal logo"
+              className="w-40 h-40 mx-auto drop-shadow-[0_0_24px_rgba(79,195,247,0.55)]"
+              width="160" height="160"
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
 
-      <p className="text-3xl font-semibold text-kmf-text-secondary mb-4">
-        KEEP MOVING FORWARD
-      </p>
+        <h1 className="text-6xl font-bold mb-6">
+          <span className="logo-text">K.M.F.</span>
+          <br />
+          <span className="text-kmf-text-primary">Trading Journal</span>
+        </h1>
 
-      <p className="text-xl text-kmf-text-tertiary max-w-2xl mx-auto mb-12">
-        Professional trading journal for forex, stocks and crypto traders. Track trades, analyze performance,
-        master your psychology, and earn achievements as you improve.
-      </p>
+        <p className="text-3xl font-semibold text-kmf-text-secondary mb-4">
+          {t('hero.tagline')}
+        </p>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-        <a
-          href="#beta"
-          className="px-8 py-4 text-white text-lg font-semibold rounded-lg flex items-center gap-3 transition-all duration-300 hover:scale-105"
-          style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
-        >
-          <FaClock aria-hidden="true" />
-          Coming Soon — Join Beta
-        </a>
-        <a
-          href="#features"
-          className="px-8 py-4 bg-transparent text-kmf-accent text-lg font-semibold rounded-lg border-2 border-kmf-accent flex items-center gap-3 hover:bg-kmf-accent/10 transition-all duration-300"
-        >
-          <HiSparkles aria-hidden="true" />
-          Explore Features
-        </a>
+        <p className="text-xl text-kmf-text-tertiary max-w-2xl mx-auto mb-12">
+          {t('hero.subtitle')}
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <a
+            href="#beta"
+            className="px-8 py-4 text-white text-lg font-semibold rounded-lg flex items-center gap-3 transition-all duration-300 hover:scale-105"
+            style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
+          >
+            <FaClock aria-hidden="true" />
+            {t('hero.ctaPrimary')}
+          </a>
+          <a
+            href="#features"
+            className="px-8 py-4 bg-transparent text-kmf-accent text-lg font-semibold rounded-lg border-2 border-kmf-accent flex items-center gap-3 hover:bg-kmf-accent/10 transition-all duration-300"
+          >
+            <HiSparkles aria-hidden="true" />
+            {t('hero.ctaSecondary')}
+          </a>
+        </div>
+
+        {/* Stats */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 pt-8 border-t border-kmf-accent/10 w-full max-w-2xl mx-auto">
+          {stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <p className="text-2xl font-bold gradient-text">{s.value}</p>
+              <p className="text-xs text-kmf-text-tertiary mt-1 uppercase tracking-wider">{s.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 pt-8 border-t border-kmf-accent/10 w-full max-w-2xl mx-auto">
-        {stats.map((s) => (
-          <div key={s.label} className="text-center">
-            <p className="text-2xl font-bold gradient-text">{s.value}</p>
-            <p className="text-xs text-kmf-text-tertiary mt-1 uppercase tracking-wider">{s.label}</p>
-          </div>
-        ))}
+      {/* Market ticker — bottom strip */}
+      <div className="relative z-10 w-full mt-8">
+        <MarketTicker />
       </div>
-    </div>
-
-    {/* Market ticker — bottom strip */}
-    <div className="relative z-10 w-full mt-8">
-      <MarketTicker />
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Hero;

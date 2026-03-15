@@ -1,7 +1,9 @@
 import { FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -26,7 +28,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-kmf-text-secondary mb-4 max-w-md">
-              Professional trading journal for serious traders. Track, analyze, and improve your trading performance.
+              {t('footer.description')}
             </p>
             <div className="flex gap-4">
               <a
@@ -40,16 +42,21 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
-              {['Features', 'Pricing', 'Download', 'FAQ'].map((link) => (
-                <li key={link}>
+              {[
+                { label: t('nav.features'), href: '/#features' },
+                { label: t('nav.pricing'), href: '/#pricing' },
+                { label: t('nav.download'), href: '/#download' },
+                { label: t('nav.faq'), href: '/#faq' },
+              ].map((link) => (
+                <li key={link.href}>
                   <a
-                    href={`/#${link.toLowerCase()}`}
+                    href={link.href}
                     className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                              inline-block hover:translate-x-1 duration-200"
                   >
-                    {link}
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -59,12 +66,12 @@ const Footer = () => {
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                            inline-block hover:translate-x-1 duration-200"
                 >
-                  Blog
+                  {t('nav.blog')}
                 </Link>
               </li>
             </ul>
 
-            <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">From the Blog</h4>
+            <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">{t('footer.fromBlog')}</h4>
             <ul className="space-y-2">
               {[
                 { slug: 'best-free-trading-journal-app-android-2026', title: 'Best Trading Journal App 2026' },
@@ -86,7 +93,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">Legal</h4>
+            <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -94,7 +101,7 @@ const Footer = () => {
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                            inline-block hover:translate-x-1 duration-200"
                 >
-                  Privacy Policy
+                  {t('footer.privacy')}
                 </a>
               </li>
               <li>
@@ -103,7 +110,7 @@ const Footer = () => {
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                            inline-block hover:translate-x-1 duration-200"
                 >
-                  Terms of Service
+                  {t('footer.terms')}
                 </a>
               </li>
             </ul>
@@ -113,7 +120,7 @@ const Footer = () => {
         <div className="border-t border-kmf-accent/20 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-kmf-text-tertiary text-sm text-center sm:text-left">
-              © {currentYear} K.M.F. Trading Journal. All rights reserved.
+              © {currentYear} {t('footer.copyright')}
             </p>
           </div>
         </div>

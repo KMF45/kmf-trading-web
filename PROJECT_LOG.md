@@ -1,9 +1,35 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site pur de prezentare: landing page + blog (22 articole). Stack: React 19, Vite, Tailwind CSS. Firebase folosit doar de BetaBanner (lazy, la form submit). Webapp-ul eliminat în sesiunea #5. 4 articole noi + SEO optimizations + share buttons + interactive Recharts charts în 5 articole.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (31 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). Webapp eliminat în sesiunea #5. Landing page complet tradus: EN, RO, RU, JA, FR, DE, ZH cu language switcher în Navbar.
 
 ## Sesiuni de lucru
+
+### 2026-03-15 — Sesiunea #6c (Multi-language landing page)
+**Ce s-a cerut:** Landing page în toate cele 7 limbi cu language switcher
+**Ce s-a făcut:**
+- Creat `src/i18n/LanguageContext.jsx` — React Context + Provider + `useLanguage()` hook, localStorage persistence, EN fallback
+- Creat `src/i18n/translations.js` — 115KB, 7 limbi × toată structura landing page (nav, hero, beta, features, pricing, FAQ, etc.)
+- Adăugat language switcher dropdown în Navbar (desktop + mobile) cu steaguri și labels native
+- Wrapped LandingPage cu LanguageProvider
+- Actualizat 11 componente cu `t()`: Hero, Features, WhyKMF, HowItWorks, Testimonials, Pricing, FAQ, Download, BetaBanner, BlogHighlights, Footer
+- Termenii de trading rămân în EN în toate limbile (win rate, profit factor, stop loss, etc.)
+- Blogul rămâne doar în engleză
+**Fișiere create (2):**
+- `src/i18n/LanguageContext.jsx` — context, provider, hook, lang labels
+- `src/i18n/translations.js` — 7 limbi complete
+**Fișiere modificate (12):**
+- `src/pages/LandingPage.jsx` — wrapped cu LanguageProvider
+- `src/components/landing/Navbar.jsx` — language switcher + t()
+- `src/components/Hero.jsx`, `Features.jsx`, `WhyKMF.jsx`, `HowItWorks.jsx`, `Testimonials.jsx`, `Pricing.jsx`, `FAQ.jsx`, `Download.jsx`, `BetaBanner.jsx`, `BlogHighlights.jsx`, `Footer.jsx` — toate cu useLanguage() + t()
+**Build:** OK, 33 pagini prerendered, zero erori
+
+---
+
+### 2026-03-15 — Sesiunea #6b (9 articole noi + scroll fix + JSON-LD fix + language count 8→7)
+Detalii în sesiunea anterioară (context compactat).
+
+---
 
 ### 2026-03-15 — Sesiunea #6
 **Ce s-a cerut:** Grafice interactive Recharts în 5 articole blog
