@@ -6,7 +6,8 @@
  * Run: node scripts/prerender.js
  */
 
-import { launch } from 'puppeteer';
+import puppeteer from 'puppeteer-core';
+import chromium from '@sparticuz/chromium';
 import { createServer } from 'http';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
@@ -79,9 +80,11 @@ async function prerender() {
   console.log('Starting prerender...');
   const server = await startServer();
 
-  const browser = await launch({
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  const browser = await puppeteer.launch({
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath(),
+    headless: chromium.headless,
   });
 
   for (const route of routes) {
