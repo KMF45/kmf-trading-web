@@ -120,7 +120,7 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
     <>
       <Navbar />
       <main className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
-        <article className="max-w-2xl mx-auto" itemScope itemType="https://schema.org/Article">
+        <article className="max-w-4xl mx-auto" itemScope itemType="https://schema.org/Article">
           <nav className="mb-8 text-sm text-kmf-text-tertiary" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-kmf-accent transition-colors">Home</Link>
             <span className="mx-2">/</span>
@@ -164,7 +164,7 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
           )}
           <ArticleCTA />
         </article>
-        <div className="max-w-2xl mx-auto mt-12">
+        <div className="max-w-4xl mx-auto mt-12">
           <Link to="/blog" className="text-sm text-kmf-accent hover:text-kmf-accent-bright transition-colors">← Back to Blog</Link>
         </div>
       </main>
