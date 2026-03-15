@@ -67,7 +67,7 @@ export default function CryptoVsForexJournaling() {
         Here's where the rubber meets the road. On a $10,000 forex account trading EUR/USD with 1% risk and a 30-pip stop loss, your position size is roughly 0.33 lots. The math is clean and familiar. Now apply 1% risk to Bitcoin with a $3,000 stop. Your maximum position size is $100 ÷ $3,000 per coin = 0.033 BTC. On a $60,000 BTC price, that's a position worth $2,000 — just 20% of your account.
       </P>
       <P>
-        Many forex traders see that 20% position and think they're being too conservative. On forex, they're used to controlling $33,000 worth of currency (0.33 lots) with a $10,000 account — 3.3× leverage. So they size up their crypto position to "feel normal." This is how accounts get blown. The 1% risk rule doesn't change between markets, but the position size it produces does — dramatically. Trust the math, not the feeling.
+        Many forex traders see that 20% position and think they're being too conservative. On forex, they're used to controlling $33,000 worth of currency (0.33 lots) with a $10,000 account — 3.3× leverage. So they size up their crypto position to "feel normal." This is how accounts get blown. The <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">1% risk rule</Link> doesn't change between markets, but the <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">position size</Link> it produces does — dramatically. Trust the math, not the feeling.
       </P>
 
       <H3>Leverage Differences</H3>
@@ -85,7 +85,7 @@ export default function CryptoVsForexJournaling() {
         Forex has sessions. London opens, New York overlaps, Tokyo takes over. There are quiet hours and active hours. You can leave a position overnight and reasonably expect that price won't gap 10% while you sleep — because even in the Asian session, major pairs have enough liquidity to move smoothly.
       </P>
       <P>
-        Crypto never closes. There is no "after hours." Bitcoin can move 8% on a Sunday morning while you're at brunch. Ethereum can gap on a Tuesday at 3 AM because a whale dumped $50 million on a thin order book. If you're holding crypto positions overnight — or over a weekend — your risk is fundamentally different from a forex position held overnight.
+        Crypto never closes. There is no "after hours." Bitcoin can move 8% on a Sunday morning while you're at brunch. Ethereum can gap on a Tuesday at 3 AM because a whale dumped $50 million on a thin order book. If you're holding crypto positions overnight — or over a weekend — your risk is fundamentally different from a forex position held overnight. Our guide on <Link to="/blog/weekend-gap-risk" className="text-kmf-accent hover:underline">weekend gap risk</Link> covers how to protect your account from these scenarios.
       </P>
 
       <H3>Journal Implications</H3>

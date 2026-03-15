@@ -72,7 +72,7 @@ export default function TradingViewKmfWorkflow() {
         'Any conditions that would cancel the trade (e.g., "not valid if price breaks above X before reaching my entry")',
       ]} />
       <P>
-        This plan takes 2 minutes to write and saves you from 90% of impulsive entries. If you can't articulate the plan clearly, the setup isn't clear enough to trade.
+        This plan takes 2 minutes to write and saves you from 90% of impulsive entries. If you can't articulate the plan clearly, the setup isn't clear enough to trade. For a structured approach, use our <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">10-point pre-trade checklist</Link>.
       </P>
 
       <Divider />
@@ -127,7 +127,7 @@ export default function TradingViewKmfWorkflow() {
       ]} />
 
       <Callout title="The Power of 'Did I Follow My Plan?'" color="#00C853">
-        This single question, tracked across 100 trades, will show you something powerful: your win rate and R-multiple when you follow your plan versus when you don't. Most traders discover a massive gap — like 55% win rate when disciplined vs 30% when improvising. That's the kind of insight that changes careers.
+        This single question, tracked across 100 trades, will show you something powerful: your win rate and R-multiple when you follow your plan versus when you don't. Most traders discover a massive gap — like 55% win rate when disciplined vs 30% when improvising. That's the kind of insight that changes careers. (We explore this concept deeply in <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">Good Losses, Bad Wins</Link>.)
       </Callout>
 
       <Divider />
@@ -141,11 +141,11 @@ export default function TradingViewKmfWorkflow() {
         'How many followed your plan? How many were impulsive?',
         'What was your average R-multiple for the week?',
         'Which setup performed best? Which performed worst?',
-        'Were there trades you should have taken but didn\'t (ghost trades)?',
+        'Were there trades you should have taken but didn\'t? (These are called ghost trades — and they\'re some of your most valuable data.)',
         'What\'s one thing you\'ll focus on improving next week?',
       ]} />
       <P>
-        The review closes the loop. Analysis → Execution → Journal → Review → Better Analysis. Without the review step, you're just collecting data. With it, you're building a feedback system that compounds over time — like interest, but for skill.
+        The review closes the loop. Analysis → Execution → Journal → Review → Better Analysis. Without the review step, you're just collecting data. With it, you're building a feedback system that compounds over time — like interest, but for skill. Need a template? Our <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">weekly trading review guide</Link> walks you through it step by step.
       </P>
 
       <Divider />

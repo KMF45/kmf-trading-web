@@ -73,7 +73,7 @@ export default function TradingExpectancyExplained() {
       </P>
       <H3>Negative Expectancy</H3>
       <P>
-        A strategy with negative expectancy will lose money over time, guaranteed. It does not matter how sophisticated the money management is, or how disciplined the execution. No position sizing technique can convert a negative expectancy into a profitable system. The only fixes are to improve win rate, improve average win size, or reduce average loss size.
+        A strategy with negative expectancy will lose money over time, guaranteed. It does not matter how sophisticated the money management is, or how disciplined the execution. No position sizing technique can convert a negative expectancy into a profitable system. The only fixes are to improve win rate, improve average win size, or reduce average loss size — and a solid foundation like the <Link to="/blog/1-percent-risk-rule">1% risk rule</Link> ensures you survive long enough to find those fixes.
       </P>
       <Callout title="The Casino Principle" color="#4FC3F7">
         Casinos make money not because every player loses every bet, but because the house has a slight positive expectancy on every game. Over millions of bets, the math is inevitable. Trading works the same way — if you have positive expectancy and take enough trades, profitability is a mathematical consequence, not a matter of luck.
@@ -95,7 +95,7 @@ export default function TradingExpectancyExplained() {
       <ExpectancyComparisonChart />
 
       <P>
-        Notice the 70% win rate entry: despite winning 7 out of 10 trades, the strategy loses money because average losses exceed average wins. This is the classic illusion of win rate — and expectancy reveals it immediately.
+        Notice the 70% win rate entry: despite winning 7 out of 10 trades, the strategy loses money because average losses exceed average wins. This is the classic illusion of win rate — and expectancy reveals it immediately. For a deeper dive into how win rate and profit factor interact, see our guide on <Link to="/blog/profit-factor-vs-win-rate">profit factor vs win rate</Link>.
       </P>
 
       <H2>Expectancy in R-Multiple Terms</H2>
@@ -106,7 +106,7 @@ export default function TradingExpectancyExplained() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Expectancy (R) = (Win Rate × Average R-Win) − (Loss Rate × 1)</strong>
       </P>
       <P>
-        This simplifies because a full loss is always -1R by definition. Example: 50% win rate, average win is +2R. Expectancy = (0.50 × 2) − (0.50 × 1) = 1.0 − 0.5 = <strong style={{ color: '#00E676' }}>+0.5R per trade</strong>. This means for every dollar you risk, you earn 50 cents on average.
+        This simplifies because a full loss is always -1R by definition. Example: 50% win rate, average win is +2R. Expectancy = (0.50 × 2) − (0.50 × 1) = 1.0 − 0.5 = <strong style={{ color: '#00E676' }}>+0.5R per trade</strong>. This means for every dollar you risk, you earn 50 cents on average. If R-multiples are new to you, our <Link to="/blog/r-multiple-explained">R-multiple guide</Link> breaks it down step by step.
       </P>
 
       <H2>How to Calculate Your Own Expectancy</H2>

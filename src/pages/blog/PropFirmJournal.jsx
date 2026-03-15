@@ -47,12 +47,12 @@ export default function PropFirmJournal() {
 
       <H3>1. The Oversized Revenge Trade</H3>
       <P>
-        It starts with a normal loss. -0.8% on the day. Fine. Then another: -0.5%. Now you're down 1.3% and feeling the pressure. Instead of stopping, you double your next position to "get it back fast." That trade goes against you. Suddenly you're at -3.5% and one stop loss away from breach. This escalation pattern is the single most common account killer in prop trading.
+        It starts with a normal loss. -0.8% on the day. Fine. Then another: -0.5%. Now you're down 1.3% and feeling the pressure. Instead of stopping, you double your next position to "get it back fast." That trade goes against you. Suddenly you're at -3.5% and one stop loss away from breach. This is textbook <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> — the single most common account killer in prop trading.
       </P>
 
       <H3>2. The Position Sizing Mistake</H3>
       <P>
-        On a $100,000 FTMO account with a 5% daily drawdown limit, your maximum daily loss is $5,000. If you take three trades, each can risk a maximum of ~$1,650. But most traders calculate lot size based on "what feels right" rather than on the actual drawdown limit. They risk $2,500 per trade, take three trades, and one bad session wipes them out. The math was wrong before the first trade was even placed.
+        On a $100,000 FTMO account with a 5% daily drawdown limit, your maximum daily loss is $5,000. If you take three trades, each can risk a maximum of ~$1,650. But most traders calculate lot size based on "what feels right" rather than on the actual drawdown limit. They risk $2,500 per trade, take three trades, and one bad session wipes them out. The math was wrong before the first trade was even placed. A proper <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">position sizing system</Link> prevents this entirely.
       </P>
 
       <H3>3. The "Just One More Trade" Spiral</H3>
@@ -101,7 +101,7 @@ export default function PropFirmJournal() {
 
       <H3>During the Session: The Hard Stop Rule</H3>
       <P>
-        Decide in advance: "If I reach X% daily loss, I close the platform. Not after the next trade. Now." For most prop firm accounts, this should be set at 60-70% of the allowed daily drawdown. If the limit is 5%, your hard stop is at 3%. This gives you a buffer zone — because the moment you hit your self-imposed limit and walk away, you still have 2% of breathing room in case of slippage or a gap on an open position.
+        Decide in advance: "If I reach X% daily loss, I close the platform. Not after the next trade. Now." For a detailed breakdown of this approach, see our <Link to="/blog/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">daily drawdown guide</Link>. For most prop firm accounts, this should be set at 60-70% of the allowed daily drawdown. If the limit is 5%, your hard stop is at 3%. This gives you a buffer zone — because the moment you hit your self-imposed limit and walk away, you still have 2% of breathing room in case of slippage or a gap on an open position.
       </P>
       <P>
         Log this rule in your journal. After the session, write down whether you honored it. If you didn't — if you kept trading after hitting your limit — that's the most important data point of the day. Not the P/L. The discipline breach.

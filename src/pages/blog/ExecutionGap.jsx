@@ -65,7 +65,7 @@ export default function ExecutionGap() {
         But his live account told a different story. After three months of live trading, his actual win rate was 41%. His average winner was only 1.1R because he kept closing trades early. And he had taken only 47% of the setups his strategy actually generated — he had skipped more than half.
       </P>
       <P>
-        Andrei didn't have a strategy problem. He had an execution problem. And the frustrating part was that he couldn't see it until he started journaling every single trade — including the ones he didn't take.
+        Andrei didn't have a strategy problem. He had an execution problem. And the frustrating part was that he couldn't see it until he started journaling every single trade — including the ones he didn't take. Those untaken setups — what we call <Link to="/blog/ghost-trades-journaling-missed-opportunities" className="text-kmf-accent hover:underline">ghost trades</Link> — turned out to be his most valuable data.
       </P>
 
       <Callout title="The uncomfortable truth" color="#CE93D8">
@@ -104,7 +104,7 @@ export default function ExecutionGap() {
 
       <H3>1. The 5-Second Rule</H3>
       <P>
-        When your setup triggers, give yourself five seconds. If it meets your criteria — all of them — enter. Not ten seconds. Not "let me watch one more candle." Five seconds. Hesitation is a feedback loop: the longer you wait, the more reasons your brain invents not to act. Cut the loop short.
+        When your setup triggers, give yourself five seconds. If it meets your criteria — all of them — enter. Not ten seconds. Not "let me watch one more candle." Five seconds. A <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> makes this binary: if every box is checked, you execute. Hesitation is a feedback loop: the longer you wait, the more reasons your brain invents not to act. Cut the loop short.
       </P>
 
       <H3>2. Pre-Commit to Your Setups</H3>
@@ -119,7 +119,7 @@ export default function ExecutionGap() {
 
       <H3>4. Review Skipped Trades Weekly</H3>
       <P>
-        In your weekly review, dedicate a section to trades you didn't take. What was the result? Why did you skip? Is there a pattern? This weekly confrontation with your own hesitation is uncomfortable — but it is the fastest way to build execution confidence.
+        In your <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">weekly review</Link>, dedicate a section to trades you didn't take. What was the result? Why did you skip? Is there a pattern? This weekly confrontation with your own hesitation is uncomfortable — but it is the fastest way to build execution confidence.
       </P>
 
       <Divider />

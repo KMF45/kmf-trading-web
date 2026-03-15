@@ -38,7 +38,7 @@ export default function ExcelVsTradingJournal() {
         The honeymoon phase lasts about two weeks.
       </P>
       <P>
-        Then you want to calculate your win rate. Easy enough — COUNTIF for wins divided by total. Then you want profit factor. Okay, SUMIF for gross profit, SUMIF for gross loss, divide... wait, does that formula account for breakeven trades? Let me check. Then you want to see your performance by trading session. Now you need a new column for session time, a VLOOKUP to categorize it, and a pivot table. Then you want R-multiple per trade. Another formula. Then your average R by setup type. Another pivot table. Then someone on Reddit mentions drawdown analysis and you realize you need to calculate running equity for every row.
+        Then you want to calculate your win rate. Easy enough — COUNTIF for wins divided by total. Then you want <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">profit factor</Link>. Okay, SUMIF for gross profit, SUMIF for gross loss, divide... wait, does that formula account for breakeven trades? Let me check. Then you want to see your performance by trading session. Now you need a new column for session time, a VLOOKUP to categorize it, and a pivot table. Then you want R-multiple per trade. Another formula. Then your average R by setup type. Another pivot table. Then someone on Reddit mentions drawdown analysis and you realize you need to calculate running equity for every row.
       </P>
       <P>
         Congratulations — you are now spending more time maintaining your spreadsheet than actually reviewing your trades. The tool that was supposed to help you trade better has become a second job.
@@ -96,7 +96,7 @@ export default function ExcelVsTradingJournal() {
         And every time you add a new feature, you introduce the possibility of breaking an existing one. It's a house of cards built on cell references, and it grows more fragile as it grows more complex.
       </P>
       <P>
-        A journal app calculates all of this instantly from the moment you log your first trade. Win rate, profit factor, expectancy, R-multiple averages, P/L by session, P/L by instrument, drawdown, discipline scores, emotion correlation — all automatic. You add a trade, the stats update. You don't build anything. You just trade and review.
+        A journal app calculates all of this instantly from the moment you log your first trade. Win rate, profit factor, <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy</Link>, <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple</Link> averages, P/L by session, P/L by instrument, drawdown, discipline scores, emotion correlation — all automatic. You add a trade, the stats update. You don't build anything. You just trade and review.
       </P>
 
       <H3>5. No Psychological Tracking</H3>
@@ -104,7 +104,7 @@ export default function ExcelVsTradingJournal() {
         Here's where Excel completely falls apart. The most valuable data in a trading journal isn't the numbers — it's the psychology. How did you feel before the trade? Were you anxious, confident, bored? Did you follow your plan? Was this a revenge trade?
       </P>
       <P>
-        You can add columns for this in Excel. But there's no structure, no predefined options, no analysis on top of it. You'll type "felt ok" in the emotions column for two weeks, then stop filling it in because it feels pointless. A dedicated journal app gives you structured emotion tracking, correlates it with your P/L, shows you patterns ("You lose money 73% of the time when you enter trades feeling anxious"), and even warns you when it detects tilt.
+        You can add columns for this in Excel. But there's no structure, no predefined options, no analysis on top of it. You'll type "felt ok" in the emotions column for two weeks, then stop filling it in because it feels pointless. This is exactly <Link to="/blog/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">why most traders fail at journaling</Link> in the first place. A dedicated journal app gives you structured emotion tracking, correlates it with your P/L, shows you patterns ("You lose money 73% of the time when you enter trades feeling anxious"), and even warns you when it detects tilt.
       </P>
       <P>
         Try getting that from a VLOOKUP.

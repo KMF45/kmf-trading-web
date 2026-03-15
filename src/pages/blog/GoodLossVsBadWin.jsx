@@ -35,7 +35,7 @@ export default function GoodLossVsBadWin() {
         The human brain is wired to evaluate outcomes, not processes. Green number = good. Red number = bad. This instinct serves us well in most of life. In trading, it's a trap that prevents almost every developing trader from improving.
       </P>
       <P>
-        When you judge every trade by its result, you reinforce whatever behavior produced that result — even if the behavior was reckless. The random AUD/USD win teaches your brain: "See? Ignoring the rules works." Meanwhile, the disciplined USD/CAD loss teaches: "Following rules leads to pain." Over hundreds of trades, this conditioning slowly erodes your discipline until you're trading entirely on impulse and calling it "intuition."
+        When you judge every trade by its result, you reinforce whatever behavior produced that result — even if the behavior was reckless. This is one of the core reasons <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">traders keep breaking their own rules</Link>. The random AUD/USD win teaches your brain: "See? Ignoring the rules works." Meanwhile, the disciplined USD/CAD loss teaches: "Following rules leads to pain." Over hundreds of trades, this conditioning slowly erodes your discipline until you're trading entirely on impulse and calling it "intuition."
       </P>
 
       <Divider />
@@ -56,7 +56,7 @@ export default function GoodLossVsBadWin() {
 
       <H2>What a "Bad Win" Actually Looks Like</H2>
       <P>
-        A bad win is a trade that broke your rules and happened to make money anyway. No real setup. No pre-trade checklist completed. Stop loss too tight, too wide, or nonexistent. Position size based on "feeling" rather than calculation. You entered because of FOMO, boredom, or a tip from a Discord channel. And you won.
+        A bad win is a trade that broke your rules and happened to make money anyway. No real setup. No <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> completed. Stop loss too tight, too wide, or nonexistent. Position size based on "feeling" rather than calculation. You entered because of FOMO, boredom, or a tip from a Discord channel. And you won.
       </P>
       <P>
         This is the most dangerous outcome in trading. Not because of the money — the money is real, the profit is real. It's dangerous because it teaches your brain that the rules don't matter. Every bad win erodes your discipline by exactly one notch. After enough bad wins, you don't have a trading system anymore. You have a gambling habit with occasional good luck.
@@ -94,7 +94,7 @@ export default function GoodLossVsBadWin() {
 
       <H3>Rating Your Trades 1-5</H3>
       <P>
-        After every trade, rate it on a 1-5 scale based on process quality — not profit:
+        After every trade, rate it on a 1-5 scale based on process quality — not profit. Combine this with calculating your <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple</Link> per trade and you have two metrics that matter far more than raw P/L:
       </P>
       <Ul items={[
         '5 — Perfect execution. Setup, entry, stop, size, management all followed the plan.',

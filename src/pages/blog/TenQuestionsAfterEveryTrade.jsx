@@ -52,7 +52,7 @@ export default function TenQuestionsAfterEveryTrade() {
 
       <H3>2. Was my stop loss placement based on structure or arbitrary?</H3>
       <P>
-        A stop loss should be placed at a price level that definitively invalidates your trade thesis — below a support level, above a resistance level, beyond a swing point. An arbitrary stop placed because "$50 feels like a reasonable loss" is not a stop loss. It is a prayer. This question verifies that your risk was defined by market logic, not convenience.
+        A stop loss should be placed at a price level that definitively invalidates your trade thesis — below a support level, above a resistance level, beyond a swing point. An arbitrary stop placed because "$50 feels like a reasonable loss" is not a stop loss. It is a prayer. This question verifies that your risk was defined by market logic, not convenience. For a complete framework on this, read our guide on <Link to="/blog/how-to-set-stop-loss">how to set a stop loss properly</Link>.
       </P>
 
       <H3>3. Did I size the position correctly for my risk rules?</H3>
@@ -92,7 +92,7 @@ export default function TenQuestionsAfterEveryTrade() {
 
       <H3>10. What is my R-multiple on this trade?</H3>
       <P>
-        Calculate the R-multiple: actual P/L divided by your initial risk. Record this number for every trade. Over time, your average R-multiple reveals whether your strategy has positive expectancy and tells you far more about your performance than dollar P/L.
+        Calculate the <Link to="/blog/r-multiple-explained">R-multiple</Link>: actual P/L divided by your initial risk. Record this number for every trade. Over time, your average R-multiple reveals whether your strategy has positive <Link to="/blog/trading-expectancy-explained">expectancy</Link> and tells you far more about your performance than dollar P/L.
       </P>
 
       <Divider />
@@ -117,7 +117,7 @@ export default function TenQuestionsAfterEveryTrade() {
         ]}
       />
       <P>
-        Total time: approximately 2 minutes per trade. Over a trading career, that 2 minutes per trade is the difference between stagnation and systematic improvement.
+        Total time: approximately 2 minutes per trade. Over a trading career, that 2 minutes per trade is the difference between stagnation and systematic improvement. Pair these questions with a structured <Link to="/blog/weekly-trading-review-template">weekly review</Link> and the compound effect on your trading is enormous.
       </P>
 
       <Takeaways items={[

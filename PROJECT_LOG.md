@@ -5,6 +5,25 @@ Proiect web pentru kmfjournal.com — site de prezentare: landing page multiling
 
 ## Sesiuni de lucru
 
+### 2026-03-15 — Sesiunea #7 (Internal linking blog)
+**Ce s-a cerut:** Adăugare linkuri interne între articolele blog
+**Ce s-a făcut:**
+- Adăugate 2-3 linkuri contextuale în body-ul a 8 articole care aveau zero linkuri interne
+- Linkuri integrate natural în text cu `className="text-kmf-accent hover:underline"`
+- Verificat: Firebase credentials sunt OK (`.env` ignorat de git, cod folosește `import.meta.env`)
+**Fișiere modificate (8):**
+- `src/pages/blog/TradingExpectancyExplained.jsx` — linkuri: profit-factor-vs-win-rate, r-multiple-explained, 1-percent-risk-rule
+- `src/pages/blog/TenQuestionsAfterEveryTrade.jsx` — linkuri: how-to-set-stop-loss, r-multiple-explained, trading-expectancy-explained, weekly-trading-review-template
+- `src/pages/blog/ExecutionGap.jsx` — linkuri: ghost-trades, pre-trade-checklist, weekly-trading-review-template
+- `src/pages/blog/PropFirmJournal.jsx` — linkuri: revenge-trading, position-sizing-guide, prop-firm-daily-drawdown-guide
+- `src/pages/blog/GoodLossVsBadWin.jsx` — linkuri: pre-trade-checklist, why-traders-break-their-rules, r-multiple-explained
+- `src/pages/blog/CryptoVsForexJournaling.jsx` — linkuri: 1-percent-risk-rule, position-sizing-guide, weekend-gap-risk
+- `src/pages/blog/TradingViewKmfWorkflow.jsx` — linkuri: pre-trade-checklist, weekly-trading-review-template, good-loss-vs-bad-win
+- `src/pages/blog/ExcelVsTradingJournal.jsx` — linkuri: profit-factor-vs-win-rate, trading-expectancy-explained, r-multiple-explained, why-traders-fail-at-journaling
+**Build:** OK, 33 pagini prerendered, zero erori
+
+---
+
 ### 2026-03-15 — Sesiunea #6c (Multi-language landing page)
 **Ce s-a cerut:** Landing page în toate cele 7 limbi cu language switcher
 **Ce s-a făcut:**
