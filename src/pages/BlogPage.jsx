@@ -347,7 +347,7 @@ export default function BlogPage() {
     <>
       <Navbar />
       <main className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
 
           {/* Header */}
           <div className="mb-12">
