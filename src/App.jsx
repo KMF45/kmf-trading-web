@@ -30,6 +30,15 @@ const TradingViewKmfWorkflow = lazy(() => import('./pages/blog/TradingViewKmfWor
 const ExcelVsTradingJournal = lazy(() => import('./pages/blog/ExcelVsTradingJournal'));
 const PropFirmDailyDrawdown = lazy(() => import('./pages/blog/PropFirmDailyDrawdown'));
 const StrategyIsNotEnough = lazy(() => import('./pages/blog/StrategyIsNotEnough'));
+const WhyTradersFailAtJournaling = lazy(() => import('./pages/blog/WhyTradersFailAtJournaling'));
+const OvertradingChecklist = lazy(() => import('./pages/blog/OvertradingChecklist'));
+const TiltRecoveryProtocol = lazy(() => import('./pages/blog/TiltRecoveryProtocol'));
+const WorstTradingExcuses = lazy(() => import('./pages/blog/WorstTradingExcuses'));
+const AiTradeReview = lazy(() => import('./pages/blog/AiTradeReview'));
+const MondayEffectTrading = lazy(() => import('./pages/blog/MondayEffectTrading'));
+const ConfidenceVsOverconfidence = lazy(() => import('./pages/blog/ConfidenceVsOverconfidence'));
+const WeekendGapRisk = lazy(() => import('./pages/blog/WeekendGapRisk'));
+const ScalingInVsScalingOut = lazy(() => import('./pages/blog/ScalingInVsScalingOut'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -79,6 +88,15 @@ function App() {
           <Route path="/blog/excel-vs-trading-journal-app" element={<ExcelVsTradingJournal />} />
           <Route path="/blog/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdown />} />
           <Route path="/blog/strategy-is-not-enough" element={<StrategyIsNotEnough />} />
+          <Route path="/blog/why-traders-fail-at-journaling" element={<WhyTradersFailAtJournaling />} />
+          <Route path="/blog/overtrading-checklist" element={<OvertradingChecklist />} />
+          <Route path="/blog/tilt-recovery-protocol" element={<TiltRecoveryProtocol />} />
+          <Route path="/blog/worst-trading-excuses" element={<WorstTradingExcuses />} />
+          <Route path="/blog/ai-trade-review" element={<AiTradeReview />} />
+          <Route path="/blog/monday-effect-trading" element={<MondayEffectTrading />} />
+          <Route path="/blog/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidence />} />
+          <Route path="/blog/weekend-gap-risk" element={<WeekendGapRisk />} />
+          <Route path="/blog/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOut />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />

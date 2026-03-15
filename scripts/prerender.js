@@ -42,6 +42,15 @@ const routes = [
   '/blog/excel-vs-trading-journal-app',
   '/blog/prop-firm-daily-drawdown-guide',
   '/blog/strategy-is-not-enough',
+  '/blog/why-traders-fail-at-journaling',
+  '/blog/overtrading-checklist',
+  '/blog/tilt-recovery-protocol',
+  '/blog/worst-trading-excuses',
+  '/blog/ai-trade-review',
+  '/blog/monday-effect-trading',
+  '/blog/confidence-vs-overconfidence',
+  '/blog/weekend-gap-risk',
+  '/blog/scaling-in-vs-scaling-out',
 ];
 
 // Simple static file server that falls back to index.html (SPA)

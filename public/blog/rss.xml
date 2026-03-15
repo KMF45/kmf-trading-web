@@ -5,13 +5,94 @@
     <link>https://kmfjournal.com/blog</link>
     <description>Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kmfjournal.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://kmfjournal.com/logo.png</url>
       <title>K.M.F. Trading Journal Blog</title>
       <link>https://kmfjournal.com/blog</link>
     </image>
+
+    <item>
+      <title>Scaling In vs Scaling Out: Which Method Destroys Fewer Accounts?</title>
+      <link>https://kmfjournal.com/blog/scaling-in-vs-scaling-out</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/scaling-in-vs-scaling-out</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Risk Management</category>
+      <description>Adding to positions and taking partial profits both change your risk in ways most traders don't understand. The math of cumulative risk and when each method actually works.</description>
+    </item>
+
+    <item>
+      <title>Weekend Gap Risk: How to Protect Your Account From Monday's Opening Surprise</title>
+      <link>https://kmfjournal.com/blog/weekend-gap-risk</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/weekend-gap-risk</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Risk Management</category>
+      <description>Your stop loss cannot save you from a weekend gap. Learn why gaps happen, which instruments gap most, and the Friday exit rules that prevent Monday morning disasters.</description>
+    </item>
+
+    <item>
+      <title>Confidence vs Overconfidence: The Invisible Line That Separates Winners from Blowups</title>
+      <link>https://kmfjournal.com/blog/confidence-vs-overconfidence</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/confidence-vs-overconfidence</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychology</category>
+      <description>Confidence built on data makes you profitable. Overconfidence built on win streaks blows your account. The Dunning-Kruger effect in trading and how to track where you stand.</description>
+    </item>
+
+    <item>
+      <title>The Monday Effect: Why Monday Is the Worst Day to Trade Aggressively</title>
+      <link>https://kmfjournal.com/blog/monday-effect-trading</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/monday-effect-trading</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychology</category>
+      <description>Lower volume, wider spreads, weekend FOMO, and pressure to start strong — Monday combines the worst market conditions with the worst psychological state.</description>
+    </item>
+
+    <item>
+      <title>How to Use AI for Trade Review (Without Losing Control of Your Process)</title>
+      <link>https://kmfjournal.com/blog/ai-trade-review</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/ai-trade-review</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Improvement</category>
+      <description>ChatGPT and Claude can find patterns in your trading data that you never could alone. Practical prompts, workflows, and the line between AI-augmented analysis and AI dependency.</description>
+    </item>
+
+    <item>
+      <title>The 7 Worst Excuses Traders Tell Themselves (And How Your Journal Exposes Them)</title>
+      <link>https://kmfjournal.com/blog/worst-trading-excuses</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/worst-trading-excuses</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychology</category>
+      <description>"The market was manipulated." "I was right, just wrong on timing." Every losing trader has a favorite excuse. Here's why they're all nonsense — and what the data actually shows.</description>
+    </item>
+
+    <item>
+      <title>Tilt Recovery Protocol: What Top Traders Do in the First 60 Minutes After a Big Loss</title>
+      <link>https://kmfjournal.com/blog/tilt-recovery-protocol</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/tilt-recovery-protocol</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychology</category>
+      <description>The 60 minutes after a big loss are the most dangerous in your trading day. A step-by-step protocol used by professional traders to recover mentally and protect capital.</description>
+    </item>
+
+    <item>
+      <title>Overtrading Checklist: 8 Signs You're Tilting Without Realizing It</title>
+      <link>https://kmfjournal.com/blog/overtrading-checklist</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/overtrading-checklist</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Discipline</category>
+      <description>Tilt doesn't announce itself. It creeps in through skipped checklists, smaller timeframes, and "just one more trade." 8 concrete warning signs and what to do when you spot them.</description>
+    </item>
+
+    <item>
+      <title>Why 90% of Traders Fail at Journaling (And How to Be in the 10%)</title>
+      <link>https://kmfjournal.com/blog/why-traders-fail-at-journaling</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/why-traders-fail-at-journaling</guid>
+      <pubDate>Sat, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychology</category>
+      <description>Most traders know journaling works but quit within weeks. The 5 psychological barriers that kill the habit and practical solutions that make journaling take 60 seconds, not 15 minutes.</description>
+    </item>
 
     <item>
       <title>The Perfect Strategy Myth: Why the Same Setup Makes One Trader Rich and Another Broke</title>
