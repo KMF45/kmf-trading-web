@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { LanguageProvider } from './i18n/LanguageContext';
 
 // Eagerly loaded (landing page - first paint)
 import LandingPage from './pages/LandingPage';
@@ -59,6 +59,7 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
+      <LanguageProvider>
       <ScrollToTop />
       <Suspense fallback={<RouteLoader />}>
         <Routes>
@@ -102,6 +103,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
+      </LanguageProvider>
     </Router>
   );
 }

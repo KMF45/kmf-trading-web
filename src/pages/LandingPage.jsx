@@ -1,4 +1,3 @@
-import { LanguageProvider } from '../i18n/LanguageContext';
 import Navbar from '../components/landing/Navbar';
 import Hero from '../components/Hero';
 import BetaBanner from '../components/BetaBanner';
@@ -14,7 +13,7 @@ import Footer from '../components/Footer';
 
 const LandingPage = () => {
   return (
-    <LanguageProvider>
+    <>
       <Navbar />
       <main id="main-content">
         <Hero />
@@ -29,7 +28,7 @@ const LandingPage = () => {
         <FAQ />
       </main>
       <Footer />
-    </LanguageProvider>
+    </>
   );
 };
 
