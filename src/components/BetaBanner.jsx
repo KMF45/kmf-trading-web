@@ -15,15 +15,26 @@ const getFirestore = async () => {
 
 const PERK_ICONS = [FaInfinity, FaBell, FaEnvelope];
 
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 const BetaBanner = () => {
   const { t } = useLanguage();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle');
+  const [fieldErrors, setFieldErrors] = useState({});
+
+  const validate = () => {
+    const errors = {};
+    if (name.trim().length < 2) errors.name = t('beta.errorName') || 'Name must be at least 2 characters';
+    if (!EMAIL_REGEX.test(email.trim())) errors.email = t('beta.errorEmail') || 'Please enter a valid email address';
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    if (!validate()) return;
     setStatus('sending');
     try {
       const fs = await getFirestore();
@@ -126,24 +137,31 @@ const BetaBanner = () => {
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto lg:mx-0">
-                  <input
-                    type="text"
-                    placeholder={t('beta.namePlaceholder')}
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="flex-1 px-4 py-3 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-[#FFB300]/40 transition-all"
-                    style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,179,0,0.18)' }}
-                  />
-                  <input
-                    type="email"
-                    placeholder={t('beta.emailPlaceholder')}
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 px-4 py-3 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-[#FFB300]/40 transition-all"
-                    style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,179,0,0.18)' }}
-                  />
+                <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-lg mx-auto lg:mx-0">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                  <div className="flex-1">
+                    <input
+                      type="text"
+                      placeholder={t('beta.namePlaceholder')}
+                      value={name}
+                      onChange={(e) => { setName(e.target.value); if (fieldErrors.name) setFieldErrors(prev => ({ ...prev, name: undefined })); }}
+                      className="w-full px-4 py-3 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-[#FFB300]/40 transition-all"
+                      style={{ background: 'rgba(255,255,255,0.06)', border: fieldErrors.name ? '1px solid #FF5252' : '1px solid rgba(255,179,0,0.18)' }}
+                    />
+                    {fieldErrors.name && <p className="text-xs mt-1 ml-1" style={{ color: '#FF5252' }}>{fieldErrors.name}</p>}
+                  </div>
+                  <div className="flex-1">
+                    <input
+                      type="email"
+                      placeholder={t('beta.emailPlaceholder')}
+                      value={email}
+                      onChange={(e) => { setEmail(e.target.value); if (fieldErrors.email) setFieldErrors(prev => ({ ...prev, email: undefined })); }}
+                      className="w-full px-4 py-3 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-[#FFB300]/40 transition-all"
+                      style={{ background: 'rgba(255,255,255,0.06)', border: fieldErrors.email ? '1px solid #FF5252' : '1px solid rgba(255,179,0,0.18)' }}
+                    />
+                    {fieldErrors.email && <p className="text-xs mt-1 ml-1" style={{ color: '#FF5252' }}>{fieldErrors.email}</p>}
+                  </div>
+                  </div>
                   <button
                     type="submit"
                     disabled={status === 'sending'}

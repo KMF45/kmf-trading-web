@@ -38,6 +38,8 @@ export const translations = {
       "successTitle": "Application received!",
       "successSub": "We'll reach out with next steps within 24 hours.",
       "errorMsg": "Something went wrong. Please try again or email us at contact@kmfjournal.com",
+      "errorName": "Name must be at least 2 characters",
+      "errorEmail": "Please enter a valid email address",
       "statBlocks": [
         {
           "label": "Lifetime Access",
@@ -319,6 +321,7 @@ export const translations = {
       "sendingBtn": "Joining...",
       "successMsg": "You're on the list! We'll email you on launch day.",
       "errorMsg": "Something went wrong. Please try again.",
+      "errorEmail": "Please enter a valid email address",
       "features": [
         "Free to download — 14-day Premium trial",
         "Emotion tracking & psychology tools",
@@ -442,6 +445,8 @@ export const translations = {
       "successTitle": "Cerere primită!",
       "successSub": "Te vom contacta cu pașii următori în 24 de ore.",
       "errorMsg": "Ceva nu a mers bine. Te rugăm să încerci din nou sau scrie-ne la contact@kmfjournal.com",
+      "errorName": "Numele trebuie să aibă cel puțin 2 caractere",
+      "errorEmail": "Te rugăm să introduci o adresă de email validă",
       "statBlocks": [
         {
           "label": "Acces pe viață",
@@ -723,6 +728,7 @@ export const translations = {
       "sendingBtn": "Se înscrie...",
       "successMsg": "Ești pe listă! Te vom anunța pe email în ziua lansării.",
       "errorMsg": "Ceva nu a mers bine. Te rugăm să încerci din nou.",
+      "errorEmail": "Te rugăm să introduci o adresă de email validă",
       "features": [
         "Descărcare gratuită — 14 zile Premium de probă",
         "Emotion tracking și instrumente de psihologie",
@@ -846,6 +852,8 @@ export const translations = {
       "successTitle": "Candidature reçue !",
       "successSub": "Nous vous contacterons avec les prochaines étapes sous 24 heures.",
       "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@kmfjournal.com",
+      "errorName": "Le nom doit contenir au moins 2 caractères",
+      "errorEmail": "Veuillez entrer une adresse email valide",
       "statBlocks": [
         {
           "label": "Accès à vie",
@@ -1127,6 +1135,7 @@ export const translations = {
       "sendingBtn": "Inscription...",
       "successMsg": "Vous êtes sur la liste ! Nous vous enverrons un email le jour du lancement.",
       "errorMsg": "Une erreur est survenue. Veuillez réessayer.",
+      "errorEmail": "Veuillez entrer une adresse email valide",
       "features": [
         "Téléchargement gratuit — 14 jours d'essai Premium",
         "Emotion tracking et outils de psychologie",
@@ -1250,6 +1259,8 @@ export const translations = {
       "successTitle": "Заявка получена!",
       "successSub": "Мы свяжемся с вами в течение 24 часов.",
       "errorMsg": "Что-то пошло не так. Попробуйте снова или напишите нам на contact@kmfjournal.com",
+      "errorName": "Имя должно содержать не менее 2 символов",
+      "errorEmail": "Пожалуйста, введите действительный адрес электронной почты",
       "statBlocks": [
         {
           "label": "Пожизненный доступ",
@@ -1531,6 +1542,7 @@ export const translations = {
       "sendingBtn": "Подписка...",
       "successMsg": "Вы в списке! Мы напишем вам в день запуска.",
       "errorMsg": "Что-то пошло не так. Попробуйте снова.",
+      "errorEmail": "Пожалуйста, введите действительный адрес электронной почты",
       "features": [
         "Бесплатная загрузка — 14-дневный Premium-пробный период",
         "Трекинг эмоций и инструменты психологии",
@@ -1654,6 +1666,8 @@ export const translations = {
       "successTitle": "応募を受け付けました！",
       "successSub": "24時間以内に次のステップをご連絡します。",
       "errorMsg": "エラーが発生しました。もう一度お試しいただくか、contact@kmfjournal.com までご連絡ください。",
+      "errorName": "名前は2文字以上で入力してください",
+      "errorEmail": "有効なメールアドレスを入力してください",
       "statBlocks": [
         {
           "label": "永久アクセス",
@@ -1935,6 +1949,7 @@ export const translations = {
       "sendingBtn": "登録中...",
       "successMsg": "リストに登録されました！ローンチ日にメールでお知らせします。",
       "errorMsg": "エラーが発生しました。もう一度お試しください。",
+      "errorEmail": "有効なメールアドレスを入力してください",
       "features": [
         "無料ダウンロード — 14日間Premiumトライアル",
         "感情トラッキング＆心理ツール",
@@ -2058,6 +2073,8 @@ export const translations = {
       "successTitle": "Bewerbung erhalten!",
       "successSub": "Wir melden uns innerhalb von 24 Stunden mit den nächsten Schritten.",
       "errorMsg": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreibe uns an contact@kmfjournal.com",
+      "errorName": "Der Name muss mindestens 2 Zeichen lang sein",
+      "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein",
       "statBlocks": [
         {
           "label": "Lebenslanger Zugang",
@@ -2339,6 +2356,7 @@ export const translations = {
       "sendingBtn": "Wird registriert...",
       "successMsg": "Du bist auf der Liste! Wir schreiben dir am Launchtag.",
       "errorMsg": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein",
       "features": [
         "Kostenloser Download — 14-tägiges Premium-Trial",
         "Emotionstracking & Psychologie-Tools",
@@ -2462,6 +2480,8 @@ export const translations = {
       "successTitle": "申请已收到！",
       "successSub": "我们将在 24 小时内与你联系。",
       "errorMsg": "出了点问题。请重试或发送邮件至 contact@kmfjournal.com",
+      "errorName": "姓名至少需要2个字符",
+      "errorEmail": "请输入有效的电子邮件地址",
       "statBlocks": [
         {
           "label": "终身使用",
@@ -2743,6 +2763,7 @@ export const translations = {
       "sendingBtn": "订阅中...",
       "successMsg": "你已加入通知列表！上线当天我们会发邮件通知你。",
       "errorMsg": "出了点问题。请重试。",
+      "errorEmail": "请输入有效的电子邮件地址",
       "features": [
         "免费下载 — 14 天 Premium 试用",
         "情绪追踪与心理工具",

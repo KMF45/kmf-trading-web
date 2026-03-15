@@ -15,14 +15,21 @@ const getFirestore = async () => {
 
 const TRUST_ICONS = [FaShieldAlt, FaLock, FaGlobe, FaCloud];
 
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 const Download = () => {
   const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle');
+  const [emailError, setEmailError] = useState('');
 
   const handleNotify = async (e) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    if (!EMAIL_REGEX.test(email.trim())) {
+      setEmailError(t('download.errorEmail') || 'Please enter a valid email address');
+      return;
+    }
+    setEmailError('');
     setStatus('sending');
     try {
       const fs = await getFirestore();
@@ -83,16 +90,19 @@ const Download = () => {
                     <p className="text-sm font-semibold text-kmf-text-primary">{t('download.successMsg')}</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleNotify} className="flex flex-col sm:flex-row gap-3 w-full max-w-lg">
-                    <input
-                      type="email"
-                      placeholder={t('download.emailPlaceholder')}
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="flex-1 px-5 py-4 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-kmf-accent/40 transition-all"
-                      style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(79,195,247,0.20)' }}
-                    />
+                  <form onSubmit={handleNotify} className="flex flex-col gap-3 w-full max-w-lg">
+                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex-1">
+                      <input
+                        type="email"
+                        placeholder={t('download.emailPlaceholder')}
+                        value={email}
+                        onChange={(e) => { setEmail(e.target.value); if (emailError) setEmailError(''); }}
+                        className="w-full px-5 py-4 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-kmf-accent/40 transition-all"
+                        style={{ background: 'rgba(255,255,255,0.06)', border: emailError ? '1px solid #FF5252' : '1px solid rgba(79,195,247,0.20)' }}
+                      />
+                      {emailError && <p className="text-xs mt-1 ml-1" style={{ color: '#FF5252' }}>{emailError}</p>}
+                    </div>
                     <button
                       type="submit"
                       disabled={status === 'sending'}
@@ -102,6 +112,7 @@ const Download = () => {
                       <FaAndroid className="text-xl" aria-hidden="true" />
                       {status === 'sending' ? t('download.sendingBtn') : t('download.submitBtn')}
                     </button>
+                    </div>
                   </form>
                 )}
               </div>
