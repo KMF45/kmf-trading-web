@@ -1,6 +1,7 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { ExpectancyComparisonChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
 
 export default function TradingExpectancyExplained() {
@@ -90,6 +91,9 @@ export default function TradingExpectancyExplained() {
           ['50%', '$200', '$100', '+$50/trade', 'Good — standard 2:1 R:R'],
         ]}
       />
+
+      <ExpectancyComparisonChart />
+
       <P>
         Notice the 70% win rate entry: despite winning 7 out of 10 trades, the strategy loses money because average losses exceed average wins. This is the classic illusion of win rate — and expectancy reveals it immediately.
       </P>

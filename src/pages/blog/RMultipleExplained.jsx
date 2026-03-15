@@ -1,6 +1,7 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { RMultipleDistribution } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
 
 export default function RMultipleExplained() {
@@ -93,6 +94,9 @@ export default function RMultipleExplained() {
           ['45%', '+1.8R', '-1.0R', '+0.26R per trade'],
         ]}
       />
+
+      <RMultipleDistribution />
+
       <P>
         Any positive expectancy in R terms is a viable strategy. An expectancy above +0.5R per trade is considered good. Notice that the 70% win rate example in the table has negative expectancy — because average winners are smaller than average losses.
       </P>

@@ -1,6 +1,7 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { ProfitFactorBarChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
 
 export default function ProfitFactorVsWinRate() {
@@ -82,6 +83,9 @@ export default function ProfitFactorVsWinRate() {
           ['Trend Trader C', '35%', '$600', '$150', '2.33', '+$11,250 (profitable)'],
         ]}
       />
+
+      <ProfitFactorBarChart />
+
       <P>
         Notice that both profitable profiles have win rates below 50%. This is common in professional trading, particularly among trend-following and swing-trading approaches. The edge lies entirely in the size of wins relative to losses.
       </P>

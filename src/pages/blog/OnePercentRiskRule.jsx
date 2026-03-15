@@ -1,6 +1,7 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { RiskRuleEquityCurve } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
 
 export default function OnePercentRiskRule() {
@@ -54,6 +55,9 @@ export default function OnePercentRiskRule() {
           ['20 losses', '-18.2%', '-33.2%', '-64.2%', '-87.8%'],
         ]}
       />
+
+      <RiskRuleEquityCurve />
+
       <P>
         At 5% risk per trade, a 10-trade losing streak — which is entirely within normal variance for a 50% win rate system — destroys 40% of your account. At that point, you need a 67% gain just to break even. At 1% risk, the same streak leaves you with 90% of your capital intact, and a simple 11% gain restores you to your starting point.
       </P>

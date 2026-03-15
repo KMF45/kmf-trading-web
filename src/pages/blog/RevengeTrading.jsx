@@ -1,6 +1,7 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { RevengeTradingEquityCurve } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
 
 export default function RevengeTrading() {
@@ -53,6 +54,8 @@ export default function RevengeTrading() {
       <P>
         The pattern is almost always the same: a valid trade hits the stop loss → frustration builds → instead of waiting, the trader immediately re-enters, often with a larger position to recover faster → the second trade also loses → emotional state deteriorates → a third trade follows, even larger, with no clear setup → the session ends with multiple times the original loss.
       </P>
+      <RevengeTradingEquityCurve />
+
       <Callout title="The Compounding Problem" color="#CE93D8">
         Revenge trades compound damage in two ways: they are usually taken without edge (outside your strategy), and they are often oversized. The combination of no edge plus large size is the formula for account destruction.
       </Callout>

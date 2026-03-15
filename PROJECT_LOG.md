@@ -1,9 +1,27 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site pur de prezentare: landing page + blog (22 articole). Stack: React 19, Vite, Tailwind CSS. Firebase folosit doar de BetaBanner (lazy, la form submit). Webapp-ul eliminat în sesiunea #5. 4 articole noi adăugate în sesiunea #5 (Task 3).
+Proiect web pentru kmfjournal.com — site pur de prezentare: landing page + blog (22 articole). Stack: React 19, Vite, Tailwind CSS. Firebase folosit doar de BetaBanner (lazy, la form submit). Webapp-ul eliminat în sesiunea #5. 4 articole noi + SEO optimizations + share buttons + interactive Recharts charts în 5 articole.
 
 ## Sesiuni de lucru
+
+### 2026-03-15 — Sesiunea #6
+**Ce s-a cerut:** Grafice interactive Recharts în 5 articole blog
+**Ce s-a făcut:**
+- Creat `BlogCharts.jsx` cu 5 componente: RiskRuleEquityCurve, ProfitFactorBarChart, RevengeTradingEquityCurve, RMultipleDistribution, ExpectancyComparisonChart
+- Toate graficele: dark theme (cardBg #1A1D24), responsive, tooltip-uri interactive, culori KMF (green profit, red loss, cyan accent)
+- Inserate în articolele corespunzătoare lângă tabelele existente (complementare, nu înlocuire)
+**Fișiere create (1):**
+- `src/components/blog/BlogCharts.jsx` — 5 componente Recharts
+**Fișiere modificate (5):**
+- `src/pages/blog/OnePercentRiskRule.jsx` — equity curve 1%/3%/5% risk
+- `src/pages/blog/ProfitFactorVsWinRate.jsx` — bar chart 3 trader profiles
+- `src/pages/blog/RevengeTrading.jsx` — equity curve disciplined vs revenge
+- `src/pages/blog/RMultipleExplained.jsx` — R-multiple distribution histogram
+- `src/pages/blog/TradingExpectancyExplained.jsx` — expectancy comparison chart
+**Build:** OK, 24 pagini prerendered, zero erori
+
+---
 
 ### 2026-03-14 — Sesiunea #5
 **Ce s-a cerut:** Eliminarea completă a webapp-ului — rămâne doar landing page + blog
