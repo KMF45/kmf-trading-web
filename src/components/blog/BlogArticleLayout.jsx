@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../landing/Navbar';
 import Footer from '../Footer';
+import { FaXTwitter, FaRedditAlien, FaWhatsapp, FaLinkedinIn, FaLink, FaCheck } from 'react-icons/fa6';
 
 const SITE = 'https://kmfjournal.com';
 const DEFAULTS = {
@@ -135,8 +136,17 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
             <time className="text-xs text-kmf-text-tertiary" dateTime={dateISO}>{date}</time>
             <span className="text-xs text-kmf-text-tertiary">· {readTime}</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-kmf-text-primary mb-8 leading-tight" style={{ letterSpacing: '-0.02em' }} itemProp="headline">{title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-kmf-text-primary mb-6 leading-tight" style={{ letterSpacing: '-0.02em' }} itemProp="headline">{title}</h1>
+          <div className="mb-8">
+            <ShareButtons title={title} slug={slug} compact />
+          </div>
           {children}
+          <div className="rounded-xl p-5 mt-10 mb-4" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+              <p className="text-sm text-kmf-text-secondary">Found this useful? Share it with a fellow trader.</p>
+              <ShareButtons title={title} slug={slug} />
+            </div>
+          </div>
           {relatedArticles.length > 0 && (
             <div className="rounded-xl p-6 mt-10 mb-4" style={{ background: 'rgba(79,195,247,0.04)', border: '1px solid rgba(79,195,247,0.12)' }}>
               <p className="text-xs font-bold text-kmf-accent uppercase tracking-widest mb-4">Related Articles</p>
@@ -163,6 +173,72 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       </main>
       <Footer />
     </>
+  );
+}
+
+// Share buttons
+function ShareButtons({ title, slug, compact }) {
+  const [copied, setCopied] = useState(false);
+  const url = `${SITE}/blog/${slug}`;
+  const text = encodeURIComponent(title);
+  const encodedUrl = encodeURIComponent(url);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(url).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  const buttons = [
+    { label: 'Share on X', icon: FaXTwitter, href: `https://x.com/intent/tweet?text=${text}&url=${encodedUrl}`, color: '#A0A0A0' },
+    { label: 'Share on Reddit', icon: FaRedditAlien, href: `https://www.reddit.com/submit?url=${encodedUrl}&title=${text}`, color: '#FF5700' },
+    { label: 'Share on WhatsApp', icon: FaWhatsapp, href: `https://wa.me/?text=${text}%20${encodedUrl}`, color: '#25D366' },
+    { label: 'Share on LinkedIn', icon: FaLinkedinIn, href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`, color: '#0A66C2' },
+  ];
+
+  return (
+    <div className={`flex items-center gap-2 ${compact ? '' : 'flex-wrap'}`}>
+      {!compact && <span className="text-xs font-semibold text-kmf-text-tertiary uppercase tracking-wider mr-1">Share</span>}
+      {buttons.map((b) => {
+        const Icon = b.icon;
+        return (
+          <a
+            key={b.label}
+            href={b.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={b.label}
+            className="flex items-center justify-center rounded-lg transition-all duration-200 hover:scale-110"
+            style={{
+              width: compact ? 32 : 36,
+              height: compact ? 32 : 36,
+              background: 'rgba(255,255,255,0.06)',
+              border: '1px solid rgba(255,255,255,0.08)',
+              color: '#8899A6',
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = b.color; e.currentTarget.style.borderColor = `${b.color}40`; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = '#8899A6'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
+          >
+            <Icon style={{ fontSize: compact ? 13 : 15 }} />
+          </a>
+        );
+      })}
+      <button
+        onClick={handleCopy}
+        aria-label={copied ? 'Link copied' : 'Copy link'}
+        className="flex items-center justify-center rounded-lg transition-all duration-200 hover:scale-110"
+        style={{
+          width: compact ? 32 : 36,
+          height: compact ? 32 : 36,
+          background: copied ? 'rgba(0,200,83,0.12)' : 'rgba(255,255,255,0.06)',
+          border: `1px solid ${copied ? 'rgba(0,200,83,0.25)' : 'rgba(255,255,255,0.08)'}`,
+          color: copied ? '#00C853' : '#8899A6',
+        }}
+      >
+        {copied ? <FaCheck style={{ fontSize: compact ? 12 : 14 }} /> : <FaLink style={{ fontSize: compact ? 12 : 14 }} />}
+      </button>
+    </div>
   );
 }
 
