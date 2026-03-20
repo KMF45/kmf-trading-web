@@ -121,14 +121,13 @@ Detalii în sesiunea anterioară (context compactat).
 **Build:** OK, 20 pagini prerendered, zero erori
 
 ### 2026-03-14 — Sesiunea #5 (Task 3)
-**Ce s-a cerut:** 4 articole blog noi — MAE/MFE, TradingView workflow, Excel vs Journal, Prop Firm Daily Drawdown
+**Ce s-a cerut:** 3 articole blog noi — TradingView workflow, Excel vs Journal, Prop Firm Daily Drawdown
 **Ce s-a făcut:**
 - Scrise 4 articole complete cu storytelling, umor, și termeni explicați accesibil
 - Articolele: MAE & MFE Explained, TradingView + KMF Workflow, Excel vs Trading Journal App, Prop Firm Daily Drawdown Guide
 - Actualizat App.jsx (4 rute noi), BlogPage.jsx (4 posturi noi), prerender.js (4 rute)
 - Actualizat sitemap.xml (4 URL-uri noi) și rss.xml (4 items noi, lastBuildDate actualizat)
 **Fișiere create (4):**
-- `src/pages/blog/MaeMfeExplained.jsx`
 - `src/pages/blog/TradingViewKmfWorkflow.jsx`
 - `src/pages/blog/ExcelVsTradingJournal.jsx`
 - `src/pages/blog/PropFirmDailyDrawdown.jsx`
