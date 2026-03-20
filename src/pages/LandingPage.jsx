@@ -32,11 +32,13 @@ const FAQ_SCHEMA = {
 
 const LandingPage = () => {
   useEffect(() => {
-    const faqLd = document.createElement('script');
-    faqLd.type = 'application/ld+json';
-    faqLd.id = 'ld-faq-landing';
-    faqLd.textContent = JSON.stringify(FAQ_SCHEMA);
-    document.head.appendChild(faqLd);
+    if (!document.getElementById('ld-faq-landing')) {
+      const faqLd = document.createElement('script');
+      faqLd.type = 'application/ld+json';
+      faqLd.id = 'ld-faq-landing';
+      faqLd.textContent = JSON.stringify(FAQ_SCHEMA);
+      document.head.appendChild(faqLd);
+    }
     return () => { document.getElementById('ld-faq-landing')?.remove(); };
   }, []);
 

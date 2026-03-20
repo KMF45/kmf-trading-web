@@ -40,11 +40,17 @@ export default function BestTradingJournalAndroid2026() {
     setMeta('twitter:description', PAGE_DESC, 'name');
     setMeta('twitter:image', OG_IMAGE, 'name');
 
-    // JSON-LD: Article
-    const articleLd = document.createElement('script');
-    articleLd.type = 'application/ld+json';
-    articleLd.id = 'ld-article';
-    articleLd.textContent = JSON.stringify({
+    // JSON-LD helper: skip if already exists (from prerender)
+    const injectLd = (id, data) => {
+      if (document.getElementById(id)) return;
+      const el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      el.textContent = JSON.stringify(data);
+      document.head.appendChild(el);
+    };
+
+    injectLd('ld-article', {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: 'Best Free Trading Journal App for Android in 2026',
@@ -56,13 +62,8 @@ export default function BestTradingJournalAndroid2026() {
       image: OG_IMAGE,
       url: PAGE_URL,
     });
-    document.head.appendChild(articleLd);
 
-    // JSON-LD: BreadcrumbList
-    const breadcrumbLd = document.createElement('script');
-    breadcrumbLd.type = 'application/ld+json';
-    breadcrumbLd.id = 'ld-breadcrumb';
-    breadcrumbLd.textContent = JSON.stringify({
+    injectLd('ld-breadcrumb', {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -71,13 +72,8 @@ export default function BestTradingJournalAndroid2026() {
         { '@type': 'ListItem', position: 3, name: 'Best Free Trading Journal App for Android 2026', item: PAGE_URL },
       ],
     });
-    document.head.appendChild(breadcrumbLd);
 
-    // JSON-LD: FAQPage
-    const faqLd = document.createElement('script');
-    faqLd.type = 'application/ld+json';
-    faqLd.id = 'ld-faq';
-    faqLd.textContent = JSON.stringify({
+    injectLd('ld-faq', {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
@@ -86,7 +82,6 @@ export default function BestTradingJournalAndroid2026() {
         { '@type': 'Question', name: 'Which trading journal app is best for forex traders?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal is designed for forex, stocks, and crypto traders. It includes a lot size calculator, pip-based stop loss tracking, and session-aware analytics tailored to forex markets.' } },
       ],
     });
-    document.head.appendChild(faqLd);
 
     return () => {
       document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';

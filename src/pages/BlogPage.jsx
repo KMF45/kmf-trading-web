@@ -306,11 +306,17 @@ export default function BlogPage() {
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute('content', 'https://kmfjournal.com/blog');
 
-    // JSON-LD: CollectionPage
-    const collectionLd = document.createElement('script');
-    collectionLd.type = 'application/ld+json';
-    collectionLd.id = 'ld-collection';
-    collectionLd.textContent = JSON.stringify({
+    // JSON-LD helper: skip if already present (avoids duplicates after prerender)
+    const addLd = (id, data) => {
+      if (document.getElementById(id)) return;
+      const el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      el.textContent = JSON.stringify(data);
+      document.head.appendChild(el);
+    };
+
+    addLd('ld-collection', {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
       name: 'K.M.F. Trading Journal Blog',
@@ -327,13 +333,8 @@ export default function BlogPage() {
         })),
       },
     });
-    document.head.appendChild(collectionLd);
 
-    // JSON-LD: BreadcrumbList
-    const breadcrumbLd = document.createElement('script');
-    breadcrumbLd.type = 'application/ld+json';
-    breadcrumbLd.id = 'ld-blog-breadcrumb';
-    breadcrumbLd.textContent = JSON.stringify({
+    addLd('ld-blog-breadcrumb', {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -341,7 +342,6 @@ export default function BlogPage() {
         { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://kmfjournal.com/blog' },
       ],
     });
-    document.head.appendChild(breadcrumbLd);
 
     return () => {
       document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';
