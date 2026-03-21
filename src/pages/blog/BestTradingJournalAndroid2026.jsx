@@ -215,7 +215,7 @@ export default function BestTradingJournalAndroid2026() {
             ]}
             cons={[
               'Android only (iOS not available yet)',
-              'Currently in beta — Google Play launch coming soon',
+              'New on Google Play — growing feature set with regular updates',
             ]}
             free="50 trades/month, full journaling, lot calculator, checklists"
             premium="Unlimited trades, cloud sync, advanced statistics, weekly review, notifications, export"

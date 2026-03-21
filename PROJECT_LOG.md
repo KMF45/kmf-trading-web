@@ -1,9 +1,43 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (32 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). Webapp eliminat în sesiunea #5. Landing page complet tradus: EN, RO, RU, JA, FR, DE, ZH cu language switcher în Navbar.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (32 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play (open testing). Toate textele "Coming Soon"/"Notify Me"/"Launch Soon" actualizate → "Download"/"Available" în toate 7 limbile. Download section trimite direct la Google Play Store.
 
 ## Sesiuni de lucru
+
+### 2026-03-21 — Sesiunea #8 (App live pe Google Play — actualizări complete)
+**Ce s-a cerut:** Actualizare site după lansarea app-ului pe Google Play: fix articole count, FAQ duplicate JSON-LD, remove MAE/MFE references, BetaBanner mailto, Download → Google Play link, Privacy/Terms updates, toate textele "Coming Soon" → "Download Now" în 7 limbi
+**Ce s-a făcut:**
+- Fix hero stats: 31 → 32 articole
+- Fix FAQPage JSON-LD duplicat: mutat din index.html în LandingPage.jsx cu guard `getElementById`
+- BetaBanner: Firebase form → mailto cu template email
+- Download section: Firebase notify form → buton direct Google Play Store
+- BlogArticleLayout + BestTradingJournalAndroid2026: CTA butoane cu mailto template
+- Privacy Policy: adăugat TwelveData, vârstă 13→18, updated date
+- Terms of Service: eliminat €100 minimum liability, updated date
+- Actualizat TOATE textele "Coming Soon"/"Notify Me"/"Launch Soon" în 7 limbi (EN, RO, FR, RU, JA, DE, ZH):
+  - hero.ctaPrimary → "Download on Google Play"
+  - pricing free/monthly/annual CTA → "Download Free" / "Get Premium"
+  - download badge/heading/subtitle/submitBtn → "Available" / "Download Now"
+  - testimonials note → "Leave a review on Google Play!"
+  - Removed unused download form keys (emailPlaceholder, sendingBtn, successMsg, errorMsg, errorEmail)
+- Blog articles: WhatIsKmfTradingJournal "coming soon" → live text, BestTradingJournalAndroid2026 "beta coming soon" → "new on Google Play"
+**Fișiere modificate:**
+- `src/i18n/translations.js` — toate 7 limbile actualizate
+- `src/components/Hero.jsx` — stats count fix
+- `src/components/BetaBanner.jsx` — Firebase → mailto
+- `src/components/Download.jsx` — Firebase form → Google Play link
+- `src/components/blog/BlogArticleLayout.jsx` — CTA mailto template
+- `src/pages/LandingPage.jsx` — FAQPage JSON-LD dinamic
+- `src/pages/BlogPage.jsx` — JSON-LD guard pattern
+- `src/pages/blog/BestTradingJournalAndroid2026.jsx` — CTA mailto + text fix
+- `src/pages/blog/WhatIsKmfTradingJournal.jsx` — text "coming soon" → live
+- `public/privacy-policy.html` — TwelveData, age 18, date update
+- `public/terms-of-service.html` — removed €100 cap, date update
+- `index.html` — removed static FAQPage JSON-LD
+**Build:** OK, zero erori
+
+---
 
 ### 2026-03-15 — Sesiunea #7b (Blog: What Is KMF Trading Journal)
 **Ce s-a cerut:** Articol pillar despre KMF app — ce este, features, diferențiatori, free vs premium, pentru cine e

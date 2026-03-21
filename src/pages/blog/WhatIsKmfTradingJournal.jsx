@@ -280,10 +280,10 @@ export default function WhatIsKmfTradingJournal() {
 
       <H2>Getting Started</H2>
       <P>
-        K.M.F. is currently in beta and launching on Google Play soon. You can join the beta program for free and get lifetime Premium access — no credit card, no strings. Beta spots are limited.
+        K.M.F. Trading Journal is available now on Google Play. Download it for free and start journaling your trades today — no credit card required. Premium features include a 14-day free trial.
       </P>
       <Ul items={[
-        'Download K.M.F. from Google Play (coming soon)',
+        'Download K.M.F. from Google Play',
         'Create an account — email or Google Sign-In',
         'Log your first trade in under 30 seconds',
         'Run through your first pre-trade checklist',

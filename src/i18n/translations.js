@@ -10,7 +10,7 @@ export const translations = {
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
       "subtitle": "Professional trading journal for forex, stocks and crypto traders. Track trades, analyze performance, master your psychology, and earn achievements as you improve.",
-      "ctaPrimary": "Coming Soon — Join Beta",
+      "ctaPrimary": "Download on Google Play",
       "ctaSecondary": "Explore Features",
       "stats": {
         "trades": "Trades Tracked",
@@ -227,7 +227,7 @@ export const translations = {
       "heading1": "What Traders Are",
       "heading2": "Saying",
       "subtitle": "Join traders who are already building better discipline and consistency with K.M.F.",
-      "note": "Early feedback from beta testers. Google Play reviews coming soon.",
+      "note": "Early feedback from beta testers. Leave a review on Google Play!",
       "items": [
         {
           "text": "Finally a journal that focuses on discipline, not just P/L. The weekly review feature changed how I approach trading completely.",
@@ -252,19 +252,19 @@ export const translations = {
         "label": "Free",
         "period": "/ forever",
         "tagline": "Perfect to get started and build the habit.",
-        "cta": "Coming Soon"
+        "cta": "Download Free"
       },
       "monthly": {
         "label": "Premium Monthly",
         "period": "/ month",
         "tagline": "For traders serious about improvement.",
-        "cta": "Join Beta — Get Premium Free"
+        "cta": "Get Premium"
       },
       "annual": {
         "label": "Premium Annual",
         "period": "/ year",
         "tagline": "Same features, bigger savings.",
-        "cta": "Join Beta — Get Premium Free",
+        "cta": "Get Premium",
         "bestValue": "BEST VALUE",
         "save": "SAVE"
       },
@@ -313,15 +313,10 @@ export const translations = {
       ]
     },
     "download": {
-      "badge": "Launching Soon on Google Play",
-      "heading": "Coming Soon",
-      "subtitle": "K.M.F. Trading Journal is launching on Google Play soon. Get notified on launch day and never miss your chance to start journaling.",
-      "emailPlaceholder": "Enter your email",
-      "submitBtn": "Notify Me",
-      "sendingBtn": "Joining...",
-      "successMsg": "You're on the list! We'll email you on launch day.",
-      "errorMsg": "Something went wrong. Please try again.",
-      "errorEmail": "Please enter a valid email address",
+      "badge": "Available on Google Play",
+      "heading": "Download Now",
+      "subtitle": "K.M.F. Trading Journal is available on Google Play. Start journaling your trades today — free download with a 14-day Premium trial.",
+      "submitBtn": "Download on Google Play",
       "features": [
         "Free to download — 14-day Premium trial",
         "Emotion tracking & psychology tools",
@@ -417,7 +412,7 @@ export const translations = {
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
       "subtitle": "Jurnal de trading profesional pentru traderi de forex, acțiuni și crypto. Înregistrează trade-uri, analizează performanța, stăpânește-ți psihologia și deblochează realizări pe măsură ce progresezi.",
-      "ctaPrimary": "În curând — Înscrie-te în Beta",
+      "ctaPrimary": "Descarcă de pe Google Play",
       "ctaSecondary": "Descoperă funcționalitățile",
       "stats": {
         "trades": "Trade-uri înregistrate",
@@ -634,7 +629,7 @@ export const translations = {
       "heading1": "Ce spun",
       "heading2": "traderii",
       "subtitle": "Alătură-te traderilor care își construiesc deja o disciplină și consistență mai bune cu K.M.F.",
-      "note": "Feedback timpuriu de la beta testeri. Recenziile pe Google Play vor apărea în curând.",
+      "note": "Feedback timpuriu de la beta testeri. Lasă o recenzie pe Google Play!",
       "items": [
         {
           "text": "În sfârșit un jurnal care se concentrează pe disciplină, nu doar pe P/L. Funcția de evaluare săptămânală mi-a schimbat complet abordarea în trading.",
@@ -659,19 +654,19 @@ export const translations = {
         "label": "Gratuit",
         "period": "/ pentru totdeauna",
         "tagline": "Perfect pentru a începe și a-ți forma obiceiul.",
-        "cta": "În curând"
+        "cta": "Descarcă gratuit"
       },
       "monthly": {
         "label": "Premium lunar",
         "period": "/ lună",
         "tagline": "Pentru traderii serioși în privința îmbunătățirii.",
-        "cta": "Înscrie-te în Beta — Primești Premium gratuit"
+        "cta": "Obține Premium"
       },
       "annual": {
         "label": "Premium anual",
         "period": "/ an",
         "tagline": "Aceleași funcționalități, economii mai mari.",
-        "cta": "Înscrie-te în Beta — Primești Premium gratuit",
+        "cta": "Obține Premium",
         "bestValue": "CEL MAI BUN PREȚ",
         "save": "ECONOMISEȘTI"
       },
@@ -720,15 +715,10 @@ export const translations = {
       ]
     },
     "download": {
-      "badge": "În curând pe Google Play",
-      "heading": "În curând",
-      "subtitle": "K.M.F. Trading Journal se lansează în curând pe Google Play. Primește notificare în ziua lansării și nu rata șansa de a începe să jurnalizezi.",
-      "emailPlaceholder": "Introdu email-ul tău",
-      "submitBtn": "Anunță-mă",
-      "sendingBtn": "Se înscrie...",
-      "successMsg": "Ești pe listă! Te vom anunța pe email în ziua lansării.",
-      "errorMsg": "Ceva nu a mers bine. Te rugăm să încerci din nou.",
-      "errorEmail": "Te rugăm să introduci o adresă de email validă",
+      "badge": "Disponibil pe Google Play",
+      "heading": "Descarcă acum",
+      "subtitle": "K.M.F. Trading Journal este disponibil pe Google Play. Începe să jurnalizezi trade-urile astăzi — descărcare gratuită cu 14 zile trial Premium.",
+      "submitBtn": "Descarcă de pe Google Play",
       "features": [
         "Descărcare gratuită — 14 zile Premium de probă",
         "Emotion tracking și instrumente de psihologie",
@@ -824,7 +814,7 @@ export const translations = {
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
       "subtitle": "Journal de trading professionnel pour les traders forex, actions et crypto. Suivez vos trades, analysez vos performances, maîtrisez votre psychologie et débloquez des récompenses au fil de votre progression.",
-      "ctaPrimary": "Bientôt disponible — Rejoindre la bêta",
+      "ctaPrimary": "Télécharger sur Google Play",
       "ctaSecondary": "Découvrir les fonctionnalités",
       "stats": {
         "trades": "Trades enregistrés",
@@ -1041,7 +1031,7 @@ export const translations = {
       "heading1": "Ce que disent",
       "heading2": "les traders",
       "subtitle": "Rejoignez les traders qui développent déjà une meilleure discipline et régularité avec K.M.F.",
-      "note": "Retours précoces des bêta testeurs. Les avis Google Play arrivent bientôt.",
+      "note": "Retours précoces des bêta testeurs. Laissez un avis sur Google Play !",
       "items": [
         {
           "text": "Enfin un journal qui se concentre sur la discipline, pas juste le P/L. La fonctionnalité de bilan hebdomadaire a complètement changé ma façon d'aborder le trading.",
@@ -1066,19 +1056,19 @@ export const translations = {
         "label": "Gratuit",
         "period": "/ pour toujours",
         "tagline": "Parfait pour commencer et prendre l'habitude.",
-        "cta": "Bientôt disponible"
+        "cta": "Télécharger gratuit"
       },
       "monthly": {
         "label": "Premium mensuel",
         "period": "/ mois",
         "tagline": "Pour les traders sérieux dans leur progression.",
-        "cta": "Rejoindre la bêta — Obtenez Premium gratuit"
+        "cta": "Obtenir Premium"
       },
       "annual": {
         "label": "Premium annuel",
         "period": "/ an",
         "tagline": "Mêmes fonctionnalités, plus d'économies.",
-        "cta": "Rejoindre la bêta — Obtenez Premium gratuit",
+        "cta": "Obtenir Premium",
         "bestValue": "MEILLEURE OFFRE",
         "save": "ÉCONOMISEZ"
       },
@@ -1127,15 +1117,10 @@ export const translations = {
       ]
     },
     "download": {
-      "badge": "Bientôt sur Google Play",
-      "heading": "Bientôt disponible",
-      "subtitle": "K.M.F. Trading Journal arrive bientôt sur Google Play. Soyez notifié le jour du lancement et ne manquez pas votre chance de commencer à journaliser.",
-      "emailPlaceholder": "Entrez votre email",
-      "submitBtn": "Me notifier",
-      "sendingBtn": "Inscription...",
-      "successMsg": "Vous êtes sur la liste ! Nous vous enverrons un email le jour du lancement.",
-      "errorMsg": "Une erreur est survenue. Veuillez réessayer.",
-      "errorEmail": "Veuillez entrer une adresse email valide",
+      "badge": "Disponible sur Google Play",
+      "heading": "Télécharger maintenant",
+      "subtitle": "K.M.F. Trading Journal est disponible sur Google Play. Commencez à journaliser vos trades dès aujourd'hui — téléchargement gratuit avec 14 jours d'essai Premium.",
+      "submitBtn": "Télécharger sur Google Play",
       "features": [
         "Téléchargement gratuit — 14 jours d'essai Premium",
         "Emotion tracking et outils de psychologie",
@@ -1231,7 +1216,7 @@ export const translations = {
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
       "subtitle": "Профессиональный торговый дневник для трейдеров на форекс, акциях и криптовалюте. Записывайте сделки, анализируйте результаты, работайте над психологией и получайте достижения по мере роста.",
-      "ctaPrimary": "Скоро запуск — Присоединяйтесь к бета-тесту",
+      "ctaPrimary": "Скачать в Google Play",
       "ctaSecondary": "Обзор возможностей",
       "stats": {
         "trades": "Сделок записано",
@@ -1448,7 +1433,7 @@ export const translations = {
       "heading1": "Что говорят",
       "heading2": "трейдеры",
       "subtitle": "Присоединяйтесь к трейдерам, которые уже строят дисциплину и стабильность с K.M.F.",
-      "note": "Ранние отзывы бета-тестеров. Отзывы в Google Play появятся скоро.",
+      "note": "Ранние отзывы бета-тестеров. Оставьте отзыв в Google Play!",
       "items": [
         {
           "text": "Наконец дневник, который фокусируется на дисциплине, а не только на P/L. Еженедельный обзор полностью изменил мой подход к трейдингу.",
@@ -1473,19 +1458,19 @@ export const translations = {
         "label": "Бесплатно",
         "period": "/ навсегда",
         "tagline": "Идеально, чтобы начать и выработать привычку.",
-        "cta": "Скоро"
+        "cta": "Скачать бесплатно"
       },
       "monthly": {
         "label": "Premium на месяц",
         "period": "/ месяц",
         "tagline": "Для трейдеров, серьёзно настроенных на рост.",
-        "cta": "Вступить в бету — получить Premium бесплатно"
+        "cta": "Получить Premium"
       },
       "annual": {
         "label": "Premium на год",
         "period": "/ год",
         "tagline": "Те же функции, больше экономия.",
-        "cta": "Вступить в бету — получить Premium бесплатно",
+        "cta": "Получить Premium",
         "bestValue": "ЛУЧШАЯ ЦЕНА",
         "save": "ЭКОНОМИЯ"
       },
@@ -1534,15 +1519,10 @@ export const translations = {
       ]
     },
     "download": {
-      "badge": "Скоро на Google Play",
-      "heading": "Скоро запуск",
-      "subtitle": "K.M.F. Trading Journal скоро появится в Google Play. Подпишитесь на уведомление, чтобы не пропустить запуск.",
-      "emailPlaceholder": "Введите ваш email",
-      "submitBtn": "Уведомить меня",
-      "sendingBtn": "Подписка...",
-      "successMsg": "Вы в списке! Мы напишем вам в день запуска.",
-      "errorMsg": "Что-то пошло не так. Попробуйте снова.",
-      "errorEmail": "Пожалуйста, введите действительный адрес электронной почты",
+      "badge": "Доступно в Google Play",
+      "heading": "Скачать сейчас",
+      "subtitle": "K.M.F. Trading Journal доступен в Google Play. Начните вести дневник торговли уже сегодня — бесплатная загрузка с 14-дневным пробным периодом Premium.",
+      "submitBtn": "Скачать в Google Play",
       "features": [
         "Бесплатная загрузка — 14-дневный Premium-пробный период",
         "Трекинг эмоций и инструменты психологии",
@@ -1638,7 +1618,7 @@ export const translations = {
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
       "subtitle": "FX・株式・暗号資産トレーダーのためのプロフェッショナルトレード日誌。取引を記録し、パフォーマンスを分析し、心理をマスターし、上達とともに実績を解除しましょう。",
-      "ctaPrimary": "近日公開 — ベータ版に参加する",
+      "ctaPrimary": "Google Playでダウンロード",
       "ctaSecondary": "機能を見る",
       "stats": {
         "trades": "記録されたトレード数",
@@ -1855,7 +1835,7 @@ export const translations = {
       "heading1": "トレーダーの",
       "heading2": "声",
       "subtitle": "K.M.F.で規律と一貫性を築いているトレーダーの仲間入りをしましょう。",
-      "note": "ベータテスターからの初期フィードバックです。Google Playレビューは近日公開。",
+      "note": "ベータテスターからの初期フィードバックです。Google Playでレビューを残してください！",
       "items": [
         {
           "text": "P/Lだけでなく規律にフォーカスした日誌はこれが初めて。ウィークリーレビュー機能でトレードへのアプローチが完全に変わりました。",
@@ -1880,19 +1860,19 @@ export const translations = {
         "label": "無料",
         "period": "/ 永久",
         "tagline": "始めて習慣を作るのに最適。",
-        "cta": "近日公開"
+        "cta": "無料ダウンロード"
       },
       "monthly": {
         "label": "Premium 月額",
         "period": "/ 月",
         "tagline": "本気で上達したいトレーダーに。",
-        "cta": "ベータに参加 — Premium無料ゲット"
+        "cta": "Premiumを取得"
       },
       "annual": {
         "label": "Premium 年額",
         "period": "/ 年",
         "tagline": "同じ機能で、もっとお得に。",
-        "cta": "ベータに参加 — Premium無料ゲット",
+        "cta": "Premiumを取得",
         "bestValue": "お得",
         "save": "節約"
       },
@@ -1941,15 +1921,10 @@ export const translations = {
       ]
     },
     "download": {
-      "badge": "Google Playに近日公開",
-      "heading": "近日公開",
-      "subtitle": "K.M.F. Trading Journalは間もなくGoogle Playに登場します。ローンチ日の通知を受け取って、ジャーナリングを始めるチャンスをお見逃しなく。",
-      "emailPlaceholder": "メールアドレスを入力",
-      "submitBtn": "通知を受け取る",
-      "sendingBtn": "登録中...",
-      "successMsg": "リストに登録されました！ローンチ日にメールでお知らせします。",
-      "errorMsg": "エラーが発生しました。もう一度お試しください。",
-      "errorEmail": "有効なメールアドレスを入力してください",
+      "badge": "Google Playで公開中",
+      "heading": "今すぐダウンロード",
+      "subtitle": "K.M.F. Trading JournalはGoogle Playで公開中です。今日からトレード日誌を始めましょう — 無料ダウンロード、14日間のPremiumトライアル付き。",
+      "submitBtn": "Google Playでダウンロード",
       "features": [
         "無料ダウンロード — 14日間Premiumトライアル",
         "感情トラッキング＆心理ツール",
@@ -2045,7 +2020,7 @@ export const translations = {
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
       "subtitle": "Professionelles Trading-Tagebuch für Forex-, Aktien- und Krypto-Trader. Trades erfassen, Performance analysieren, Psychologie meistern und Erfolge freischalten.",
-      "ctaPrimary": "Demnächst verfügbar — Beta beitreten",
+      "ctaPrimary": "Im Google Play herunterladen",
       "ctaSecondary": "Funktionen entdecken",
       "stats": {
         "trades": "Erfasste Trades",
@@ -2262,7 +2237,7 @@ export const translations = {
       "heading1": "Was Trader",
       "heading2": "sagen",
       "subtitle": "Schließe dich Tradern an, die bereits mit K.M.F. an Disziplin und Konsistenz arbeiten.",
-      "note": "Frühes Feedback von Beta-Testern. Google Play-Bewertungen folgen bald.",
+      "note": "Frühes Feedback von Beta-Testern. Hinterlasse eine Bewertung auf Google Play!",
       "items": [
         {
           "text": "Endlich ein Tagebuch, das sich auf Disziplin konzentriert, nicht nur auf P/L. Das wöchentliche Review hat meinen Ansatz beim Trading komplett verändert.",
@@ -2287,19 +2262,19 @@ export const translations = {
         "label": "Kostenlos",
         "period": "/ für immer",
         "tagline": "Perfekt zum Starten und Gewohnheiten aufbauen.",
-        "cta": "Demnächst verfügbar"
+        "cta": "Kostenlos herunterladen"
       },
       "monthly": {
         "label": "Premium Monatlich",
         "period": "/ Monat",
         "tagline": "Für Trader, die es ernst meinen mit Verbesserung.",
-        "cta": "Beta beitreten — Premium kostenlos erhalten"
+        "cta": "Premium holen"
       },
       "annual": {
         "label": "Premium Jährlich",
         "period": "/ Jahr",
         "tagline": "Gleiche Funktionen, mehr sparen.",
-        "cta": "Beta beitreten — Premium kostenlos erhalten",
+        "cta": "Premium holen",
         "bestValue": "BESTER WERT",
         "save": "SPARE"
       },
@@ -2348,15 +2323,10 @@ export const translations = {
       ]
     },
     "download": {
-      "badge": "Bald auf Google Play",
-      "heading": "Demnächst verfügbar",
-      "subtitle": "K.M.F. Trading Journal erscheint bald auf Google Play. Lass dich am Launchtag benachrichtigen und verpasse nicht den Start.",
-      "emailPlaceholder": "Deine E-Mail-Adresse",
-      "submitBtn": "Benachrichtige mich",
-      "sendingBtn": "Wird registriert...",
-      "successMsg": "Du bist auf der Liste! Wir schreiben dir am Launchtag.",
-      "errorMsg": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
-      "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "badge": "Verfügbar im Google Play",
+      "heading": "Jetzt herunterladen",
+      "subtitle": "K.M.F. Trading Journal ist im Google Play Store verfügbar. Starte noch heute mit dem Journaling deiner Trades — kostenloser Download mit 14-tägiger Premium-Testphase.",
+      "submitBtn": "Im Google Play herunterladen",
       "features": [
         "Kostenloser Download — 14-tägiges Premium-Trial",
         "Emotionstracking & Psychologie-Tools",
@@ -2452,7 +2422,7 @@ export const translations = {
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
       "subtitle": "专为外汇、股票和加密货币交易者打造的专业交易日志。记录交易、分析表现、掌握心理、在进步中获得成就。",
-      "ctaPrimary": "即将推出 — 加入 Beta 测试",
+      "ctaPrimary": "在 Google Play 下载",
       "ctaSecondary": "探索功能",
       "stats": {
         "trades": "已记录交易",
@@ -2669,7 +2639,7 @@ export const translations = {
       "heading1": "交易者们",
       "heading2": "的评价",
       "subtitle": "加入那些已经在用 K.M.F. 建立纪律和一致性的交易者们。",
-      "note": "来自 Beta 测试者的早期反馈。Google Play 评价即将上线。",
+      "note": "来自 Beta 测试者的早期反馈。在 Google Play 留下你的评价吧！",
       "items": [
         {
           "text": "终于有一款专注于纪律而不仅仅是 P/L 的日志。每周复盘功能彻底改变了我对交易的态度。",
@@ -2694,19 +2664,19 @@ export const translations = {
         "label": "免费",
         "period": "/ 永久",
         "tagline": "完美的起步，养成记录习惯。",
-        "cta": "即将推出"
+        "cta": "免费下载"
       },
       "monthly": {
         "label": "Premium 月付",
         "period": "/ 月",
         "tagline": "为认真追求进步的交易者。",
-        "cta": "加入 Beta — 免费获得 Premium"
+        "cta": "获取 Premium"
       },
       "annual": {
         "label": "Premium 年付",
         "period": "/ 年",
         "tagline": "同样的功能，更大的优惠。",
-        "cta": "加入 Beta — 免费获得 Premium",
+        "cta": "获取 Premium",
         "bestValue": "最超值",
         "save": "节省"
       },
@@ -2755,15 +2725,10 @@ export const translations = {
       ]
     },
     "download": {
-      "badge": "即将登陆 Google Play",
-      "heading": "即将推出",
-      "subtitle": "K.M.F. Trading Journal 即将在 Google Play 上线。订阅通知，在上线当天第一时间获取。",
-      "emailPlaceholder": "输入你的邮箱",
-      "submitBtn": "通知我",
-      "sendingBtn": "订阅中...",
-      "successMsg": "你已加入通知列表！上线当天我们会发邮件通知你。",
-      "errorMsg": "出了点问题。请重试。",
-      "errorEmail": "请输入有效的电子邮件地址",
+      "badge": "已上线 Google Play",
+      "heading": "立即下载",
+      "subtitle": "K.M.F. Trading Journal 已在 Google Play 上线。今天就开始记录你的交易 — 免费下载，附带 14 天 Premium 试用。",
+      "submitBtn": "在 Google Play 下载",
       "features": [
         "免费下载 — 14 天 Premium 试用",
         "情绪追踪与心理工具",
