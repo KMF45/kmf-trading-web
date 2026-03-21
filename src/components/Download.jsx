@@ -1,23 +1,50 @@
+import { useState } from 'react';
 import { FaAndroid, FaCheckCircle, FaLock, FaGlobe, FaCloud, FaShieldAlt } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 import { useLanguage } from '../i18n/LanguageContext';
 
+// Firebase loaded lazily on form submit (not on page load)
+const getFirestore = async () => {
+  const [{ db, initAppCheck }, fs] = await Promise.all([
+    import('../config/firebase'),
+    import('firebase/firestore'),
+  ]);
+  await initAppCheck();
+  return { db, collection: fs.collection, addDoc: fs.addDoc, serverTimestamp: fs.serverTimestamp };
+};
+
 const TRUST_ICONS = [FaShieldAlt, FaLock, FaGlobe, FaCloud];
 
-const MAILTO = `mailto:contact@kmfjournal.com?subject=${encodeURIComponent('Beta Tester Application — K.M.F. Trading Journal')}&body=${encodeURIComponent(`Hi K.M.F. Team,
-
-I'd like to apply for the beta testing program.
-
-Name:
-Trading experience (beginner / intermediate / advanced):
-Markets I trade (forex / stocks / crypto):
-Current journal method (spreadsheet / app / none):
-
-Looking forward to testing K.M.F.!
-`)}`;
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const Download = () => {
   const { t } = useLanguage();
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('idle');
+  const [emailError, setEmailError] = useState('');
+
+  const handleNotify = async (e) => {
+    e.preventDefault();
+    if (!EMAIL_REGEX.test(email.trim())) {
+      setEmailError(t('download.errorEmail') || 'Please enter a valid email address');
+      return;
+    }
+    setEmailError('');
+    setStatus('sending');
+    try {
+      const fs = await getFirestore();
+      await fs.addDoc(fs.collection(fs.db, 'betaSignups'), {
+        email: email.trim().toLowerCase(),
+        source: 'launch-notify',
+        createdAt: fs.serverTimestamp(),
+      });
+      setStatus('success');
+      setEmail('');
+    } catch (err) {
+      console.error('[Download] Submit failed:', err);
+      setStatus('error');
+    }
+  };
 
   const trustBadges = t('download.trustBadges');
 
@@ -54,17 +81,46 @@ const Download = () => {
                 {t('download.subtitle')}
               </p>
 
-              {/* Apply button */}
+              {/* Notify me form */}
               <div className="flex justify-center mb-12">
-                <a
-                  href={MAILTO}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-200 hover:scale-105"
-                  style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
-                >
-                  <FaAndroid className="text-xl" aria-hidden="true" />
-                  {t('download.submitBtn')}
-                </a>
+                {status === 'success' ? (
+                  <div className="inline-flex items-center gap-3 px-6 py-4 rounded-xl"
+                    style={{ background: 'rgba(0,200,83,0.10)', border: '1px solid rgba(0,200,83,0.25)' }}>
+                    <FaCheckCircle style={{ color: '#00C853', fontSize: 18, flexShrink: 0 }} />
+                    <p className="text-sm font-semibold text-kmf-text-primary">{t('download.successMsg')}</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleNotify} className="flex flex-col gap-3 w-full max-w-lg">
+                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex-1">
+                      <input
+                        type="email"
+                        placeholder={t('download.emailPlaceholder')}
+                        value={email}
+                        onChange={(e) => { setEmail(e.target.value); if (emailError) setEmailError(''); }}
+                        className="w-full px-5 py-4 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-kmf-accent/40 transition-all"
+                        style={{ background: 'rgba(255,255,255,0.06)', border: emailError ? '1px solid #FF5252' : '1px solid rgba(79,195,247,0.20)' }}
+                      />
+                      {emailError && <p className="text-xs mt-1 ml-1" style={{ color: '#FF5252' }}>{emailError}</p>}
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={status === 'sending'}
+                      className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-200 hover:scale-105 disabled:opacity-60 disabled:hover:scale-100 flex-shrink-0"
+                      style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
+                    >
+                      <FaAndroid className="text-xl" aria-hidden="true" />
+                      {status === 'sending' ? t('download.sendingBtn') : t('download.submitBtn')}
+                    </button>
+                    </div>
+                  </form>
+                )}
               </div>
+              {status === 'error' && (
+                <p className="text-xs text-center mb-6" style={{ color: '#FF5252' }}>
+                  {t('download.errorMsg')}
+                </p>
+              )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 {t('download.features').map((feature) => (

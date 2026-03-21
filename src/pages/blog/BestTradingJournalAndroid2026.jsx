@@ -4,7 +4,17 @@ import Navbar from '../../components/landing/Navbar';
 import Footer from '../../components/Footer';
 import { FaCheck, FaTimes, FaEnvelope } from 'react-icons/fa';
 
-const MAILTO = `mailto:contact@kmfjournal.com?subject=Beta%20Tester%20Application%20%E2%80%94%20K.M.F.%20Trading%20Journal`;
+const MAILTO = `mailto:contact@kmfjournal.com?subject=${encodeURIComponent('Beta Tester Application — K.M.F. Trading Journal')}&body=${encodeURIComponent(`Hi K.M.F. Team,
+
+I'd like to apply for the beta testing program.
+
+Name:
+Trading experience (beginner / intermediate / advanced):
+Markets I trade (forex / stocks / crypto):
+Current journal method (spreadsheet / app / none):
+
+Looking forward to testing K.M.F.!
+`)}`;
 
 const SITE = 'https://kmfjournal.com';
 const SLUG = 'best-free-trading-journal-app-android-2026';
