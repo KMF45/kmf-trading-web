@@ -55,7 +55,7 @@ const Hero = () => {
     { value: '10,000+', label: t('hero.stats.trades') },
     { value: '22',      label: t('hero.stats.instruments') },
     { value: '7',       label: t('hero.stats.languages') },
-    { value: '31',      label: t('hero.stats.articles') },
+    { value: '32',      label: t('hero.stats.articles') },
   ];
 
   return (

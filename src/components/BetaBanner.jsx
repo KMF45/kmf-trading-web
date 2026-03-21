@@ -1,57 +1,23 @@
-import { useState } from 'react';
-import { FaRocket, FaEnvelope, FaInfinity, FaBell, FaCheckCircle } from 'react-icons/fa';
+import { FaRocket, FaEnvelope, FaInfinity, FaBell } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
 import { useLanguage } from '../i18n/LanguageContext';
 
-// Firebase loaded lazily on form submit (not on page load)
-const getFirestore = async () => {
-  const [{ db, initAppCheck }, fs] = await Promise.all([
-    import('../config/firebase'),
-    import('firebase/firestore'),
-  ]);
-  await initAppCheck();
-  return { db, collection: fs.collection, addDoc: fs.addDoc, serverTimestamp: fs.serverTimestamp };
-};
-
 const PERK_ICONS = [FaInfinity, FaBell, FaEnvelope];
 
-const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const MAILTO = `mailto:contact@kmfjournal.com?subject=${encodeURIComponent('Beta Tester Application — K.M.F. Trading Journal')}&body=${encodeURIComponent(`Hi K.M.F. Team,
+
+I'd like to apply for the beta testing program.
+
+Name:
+Trading experience (beginner / intermediate / advanced):
+Markets I trade (forex / stocks / crypto):
+Current journal method (spreadsheet / app / none):
+
+Looking forward to testing K.M.F.!
+`)}`;
 
 const BetaBanner = () => {
   const { t } = useLanguage();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle');
-  const [fieldErrors, setFieldErrors] = useState({});
-
-  const validate = () => {
-    const errors = {};
-    if (name.trim().length < 2) errors.name = t('beta.errorName') || 'Name must be at least 2 characters';
-    if (!EMAIL_REGEX.test(email.trim())) errors.email = t('beta.errorEmail') || 'Please enter a valid email address';
-    setFieldErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!validate()) return;
-    setStatus('sending');
-    try {
-      const fs = await getFirestore();
-      await fs.addDoc(fs.collection(fs.db, 'betaSignups'), {
-        name: name.trim(),
-        email: email.trim().toLowerCase(),
-        source: 'landing-beta',
-        createdAt: fs.serverTimestamp(),
-      });
-      setStatus('success');
-      setName('');
-      setEmail('');
-    } catch (err) {
-      console.error('[BetaBanner] Submit failed:', err);
-      setStatus('error');
-    }
-  };
 
   const perks = t('beta.perks');
   const statBlocks = t('beta.statBlocks');
@@ -126,62 +92,22 @@ const BetaBanner = () => {
                 })}
               </ul>
 
-              {/* Inline Form */}
-              {status === 'success' ? (
-                <div className="flex items-center gap-3 p-4 rounded-xl max-w-lg mx-auto lg:mx-0"
-                  style={{ background: 'rgba(0,200,83,0.10)', border: '1px solid rgba(0,200,83,0.25)' }}>
-                  <FaCheckCircle style={{ color: '#00C853', fontSize: 20, flexShrink: 0 }} />
-                  <div>
-                    <p className="text-sm font-semibold text-kmf-text-primary">{t('beta.successTitle')}</p>
-                    <p className="text-xs text-kmf-text-tertiary">{t('beta.successSub')}</p>
-                  </div>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3 max-w-lg mx-auto lg:mx-0">
-                  <div className="flex flex-col sm:flex-row gap-3">
-                  <div className="flex-1">
-                    <input
-                      type="text"
-                      placeholder={t('beta.namePlaceholder')}
-                      value={name}
-                      onChange={(e) => { setName(e.target.value); if (fieldErrors.name) setFieldErrors(prev => ({ ...prev, name: undefined })); }}
-                      className="w-full px-4 py-3 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-[#FFB300]/40 transition-all"
-                      style={{ background: 'rgba(255,255,255,0.06)', border: fieldErrors.name ? '1px solid #FF5252' : '1px solid rgba(255,179,0,0.18)' }}
-                    />
-                    {fieldErrors.name && <p className="text-xs mt-1 ml-1" style={{ color: '#FF5252' }}>{fieldErrors.name}</p>}
-                  </div>
-                  <div className="flex-1">
-                    <input
-                      type="email"
-                      placeholder={t('beta.emailPlaceholder')}
-                      value={email}
-                      onChange={(e) => { setEmail(e.target.value); if (fieldErrors.email) setFieldErrors(prev => ({ ...prev, email: undefined })); }}
-                      className="w-full px-4 py-3 rounded-xl text-sm text-kmf-text-primary placeholder-kmf-text-tertiary outline-none focus:ring-2 focus:ring-[#FFB300]/40 transition-all"
-                      style={{ background: 'rgba(255,255,255,0.06)', border: fieldErrors.email ? '1px solid #FF5252' : '1px solid rgba(255,179,0,0.18)' }}
-                    />
-                    {fieldErrors.email && <p className="text-xs mt-1 ml-1" style={{ color: '#FF5252' }}>{fieldErrors.email}</p>}
-                  </div>
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={status === 'sending'}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 hover:scale-105 disabled:opacity-60 disabled:hover:scale-100 flex-shrink-0"
-                    style={{
-                      background: 'linear-gradient(135deg, #FFB300, #FF8F00)',
-                      color: '#1A1200',
-                      boxShadow: '0 4px 20px rgba(255,179,0,0.30)',
-                    }}
-                  >
-                    <HiSparkles style={{ fontSize: 14 }} aria-hidden="true" />
-                    {status === 'sending' ? t('beta.sendingBtn') : t('beta.submitBtn')}
-                  </button>
-                </form>
-              )}
-              {status === 'error' && (
-                <p className="text-xs mt-2 text-center lg:text-left" style={{ color: '#FF5252' }}>
-                  {t('beta.errorMsg')}
-                </p>
-              )}
+              {/* Apply button */}
+              <a
+                href={MAILTO}
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm transition-all duration-200 hover:scale-105"
+                style={{
+                  background: 'linear-gradient(135deg, #FFB300, #FF8F00)',
+                  color: '#1A1200',
+                  boxShadow: '0 4px 20px rgba(255,179,0,0.30)',
+                }}
+              >
+                <HiSparkles style={{ fontSize: 14 }} aria-hidden="true" />
+                {t('beta.submitBtn')}
+              </a>
+              <p className="text-xs mt-3 text-center lg:text-left" style={{ color: '#9A8060' }}>
+                contact@kmfjournal.com · {t('beta.descHighlight')}
+              </p>
             </div>
 
             {/* Right: Visual stat block */}
