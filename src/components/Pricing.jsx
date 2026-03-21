@@ -1,5 +1,5 @@
-import { FaCheck, FaTimes, FaCrown, FaClock } from 'react-icons/fa';
-import { HiSparkles } from 'react-icons/hi2';
+import { FaCheck, FaTimes, FaCrown, FaGooglePlay } from 'react-icons/fa';
+
 import { useLanguage } from '../i18n/LanguageContext';
 
 const CheckRow = ({ text, included, muted }) => (
@@ -72,11 +72,13 @@ const Pricing = () => {
             </div>
 
             <a
-              href="#beta"
+              href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm mb-7 transition-all duration-200 hover:scale-[1.02]"
               style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.10)', color: '#B8CAD4' }}
             >
-              <FaClock style={{ fontSize: 13 }} />
+              <FaGooglePlay style={{ fontSize: 13 }} />
               {t('pricing.free.cta')}
             </a>
 
@@ -112,11 +114,13 @@ const Pricing = () => {
             </div>
 
             <a
-              href="#beta"
+              href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm text-white mb-7 transition-all duration-200 hover:scale-[1.02]"
               style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 16px rgba(255,179,0,0.25)' }}
             >
-              <HiSparkles style={{ fontSize: 15 }} />
+              <FaGooglePlay style={{ fontSize: 15 }} />
               {t('pricing.monthly.cta')}
             </a>
 
@@ -172,11 +176,13 @@ const Pricing = () => {
             </div>
 
             <a
-              href="#beta"
+              href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm text-white mb-7 transition-all duration-200 hover:scale-[1.02]"
               style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 16px rgba(255,179,0,0.25)' }}
             >
-              <HiSparkles style={{ fontSize: 15 }} />
+              <FaGooglePlay style={{ fontSize: 15 }} />
               {t('pricing.annual.cta')}
             </a>
 
