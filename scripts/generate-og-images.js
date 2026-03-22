@@ -49,6 +49,10 @@ const articles = [
   { slug: 'static-vs-trailing-drawdown', title: 'Static vs Trailing Drawdown:\nThe Prop Firm Rule That\nKills Most Funded Accounts', category: 'Risk Management', color: '#00C853' },
   { slug: 'revenge-trading-kill-switch', title: 'The Revenge Trading\nKill Switch:\n5 Rules to Stop the Bleed', category: 'Psychology', color: '#CE93D8' },
   { slug: 'metatrader-pre-trade-checklist', title: 'MetaTrader Pre-Trade\nChecklist: 5 Things to Check\nBefore Every MT4/MT5 Trade', category: 'Discipline', color: '#FFB300' },
+  { slug: 'breakeven-stop-too-early', title: 'The $0.01 Gap:\nWhy You Move Your Stop\nto Breakeven Too Early', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'scared-money-prop-firm', title: 'Trading with Scared Money:\nWhy Your 100k Prop Account\nFeels Like a Burden', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'lotto-ticket-syndrome', title: 'The Lotto Ticket Syndrome:\nWhy You Increase Risk\nAfter a Big Win', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'prospect-theory-trading', title: 'Why You Close Winners\nToo Early and Let\nYour Losers Run', category: 'Psychology', color: '#CE93D8' },
 ];
 
 function hexToRgb(hex) {

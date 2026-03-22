@@ -319,6 +319,42 @@ export const posts = [
     readTime: '8 min read',
     categoryColor: '#FFB300',
   },
+  {
+    slug: 'breakeven-stop-too-early',
+    title: 'The $0.01 Gap: Why You Move Your Stop Loss to Breakeven Too Early',
+    excerpt: 'You move your stop to breakeven to "protect profits." But the math says you are destroying your expectancy. The psychology behind premature breakeven stops and how to fix it.',
+    category: 'Psychology',
+    date: 'March 22, 2026',
+    readTime: '9 min read',
+    categoryColor: '#CE93D8',
+  },
+  {
+    slug: 'scared-money-prop-firm',
+    title: "Trading with 'Scared Money': Why Your 100k Prop Account Feels Like a Burden",
+    excerpt: 'If you check your balance every 30 seconds, you have already lost the trade. The neuroscience of fear-based trading and how to detach from the money on prop firm accounts.',
+    category: 'Psychology',
+    date: 'March 22, 2026',
+    readTime: '9 min read',
+    categoryColor: '#CE93D8',
+  },
+  {
+    slug: 'lotto-ticket-syndrome',
+    title: "The 'Lotto Ticket' Syndrome: Why You Increase Risk After a Big Win",
+    excerpt: 'After a big win, your brain floods with dopamine and you feel invincible. Then you double your risk and lose a week\'s profit in one trade. The neuroscience of post-win euphoria.',
+    category: 'Psychology',
+    date: 'March 22, 2026',
+    readTime: '9 min read',
+    categoryColor: '#CE93D8',
+  },
+  {
+    slug: 'prospect-theory-trading',
+    title: 'Why You Close Your Winners Too Early and Let Your Losers Run',
+    excerpt: 'Your brain values avoiding a $100 loss 2.25x more than gaining $100. This biological asymmetry is why you cut winners and hold losers. Prospect theory explained for traders.',
+    category: 'Psychology',
+    date: 'March 22, 2026',
+    readTime: '10 min read',
+    categoryColor: '#CE93D8',
+  },
 ];
 
 export default function BlogPage() {

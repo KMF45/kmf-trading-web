@@ -45,6 +45,10 @@ const WhatIsKmfTradingJournal = lazy(() => import('./pages/blog/WhatIsKmfTrading
 const StaticVsTrailingDrawdown = lazy(() => import('./pages/blog/StaticVsTrailingDrawdown'));
 const RevengeTradingKillSwitch = lazy(() => import('./pages/blog/RevengeTradingKillSwitch'));
 const MetatraderPreTradeChecklist = lazy(() => import('./pages/blog/MetatraderPreTradeChecklist'));
+const BreakevenStopTooEarly = lazy(() => import('./pages/blog/BreakevenStopTooEarly'));
+const ScaredMoneyPropFirm = lazy(() => import('./pages/blog/ScaredMoneyPropFirm'));
+const LottoTicketSyndrome = lazy(() => import('./pages/blog/LottoTicketSyndrome'));
+const ProspectTheoryTrading = lazy(() => import('./pages/blog/ProspectTheoryTrading'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -110,6 +114,10 @@ function App() {
           <Route path="/blog/static-vs-trailing-drawdown" element={<StaticVsTrailingDrawdown />} />
           <Route path="/blog/revenge-trading-kill-switch" element={<RevengeTradingKillSwitch />} />
           <Route path="/blog/metatrader-pre-trade-checklist" element={<MetatraderPreTradeChecklist />} />
+          <Route path="/blog/breakeven-stop-too-early" element={<BreakevenStopTooEarly />} />
+          <Route path="/blog/scared-money-prop-firm" element={<ScaredMoneyPropFirm />} />
+          <Route path="/blog/lotto-ticket-syndrome" element={<LottoTicketSyndrome />} />
+          <Route path="/blog/prospect-theory-trading" element={<ProspectTheoryTrading />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />

@@ -428,3 +428,156 @@ export function ConsecutiveLossImpact() {
     </ChartWrapper>
   );
 }
+
+// ── Breakeven Stop Too Early ──────────────────────────────────────────────────
+export function BreakevenExpectancyChart() {
+  const data = [
+    { trade: '10', full: 1200, be: 1200 },
+    { trade: '20', full: 2800, be: 1900 },
+    { trade: '30', full: 4600, be: 2400 },
+    { trade: '40', full: 6100, be: 2700 },
+    { trade: '50', full: 8200, be: 3100 },
+    { trade: '60', full: 9800, be: 3200 },
+    { trade: '70', full: 12100, be: 3500 },
+    { trade: '80', full: 14500, be: 3600 },
+    { trade: '90', full: 16200, be: 3400 },
+    { trade: '100', full: 18800, be: 3700 },
+  ];
+  return (
+    <ChartWrapper title="Cumulative P/L: Full Take Profit vs Premature Breakeven Stop">
+      <ResponsiveContainer width="100%" height={300}>
+        <AreaChart data={data} margin={chartMargin}>
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} />
+          <XAxis dataKey="trade" stroke={COLORS.text} tick={{ fontSize: 12 }} label={{ value: 'Trades', position: 'insideBottom', offset: -2, fill: COLORS.text, fontSize: 12 }} />
+          <YAxis stroke={COLORS.text} tick={{ fontSize: 12 }} tickFormatter={v => `$${(v / 1000).toFixed(0)}k`} />
+          <Tooltip content={<CustomTooltip formatter={v => `$${v.toLocaleString()}`} />} />
+          <Legend wrapperStyle={{ fontSize: 12 }} />
+          <Area type="monotone" dataKey="full" name="Full TP (3R target)" stroke={COLORS.green} fill={COLORS.green} fillOpacity={0.15} strokeWidth={2} />
+          <Area type="monotone" dataKey="be" name="Breakeven Stop at +0.5R" stroke={COLORS.gold} fill={COLORS.gold} fillOpacity={0.1} strokeWidth={2} strokeDasharray="5 5" />
+        </AreaChart>
+      </ResponsiveContainer>
+      <p style={{ textAlign: 'center', color: COLORS.text, fontSize: 12, marginTop: 8 }}>
+        Same strategy, same entries, same win rate. The only difference: moving your stop to breakeven too early
+        costs you 80% of your profits over 100 trades.
+      </p>
+    </ChartWrapper>
+  );
+}
+
+// ── Scared Money Performance ──────────────────────────────────────────────────
+export function ScaredMoneyChart() {
+  const data = [
+    { week: 'Wk 1', calm: 2.1, scared: 1.8 },
+    { week: 'Wk 2', calm: 1.5, scared: 0.3 },
+    { week: 'Wk 3', calm: -0.8, scared: -2.1 },
+    { week: 'Wk 4', calm: 2.4, scared: -0.5 },
+    { week: 'Wk 5', calm: 1.1, scared: -1.8 },
+    { week: 'Wk 6', calm: -0.3, scared: -3.2 },
+    { week: 'Wk 7', calm: 1.9, scared: -0.9 },
+    { week: 'Wk 8', calm: 2.7, scared: 0.4 },
+  ];
+  return (
+    <ChartWrapper title="Weekly Returns: Calm Execution vs 'Scared Money' Trading">
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data} margin={chartMargin}>
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} />
+          <XAxis dataKey="week" stroke={COLORS.text} tick={{ fontSize: 12 }} />
+          <YAxis stroke={COLORS.text} tick={{ fontSize: 12 }} tickFormatter={v => `${v}%`} />
+          <Tooltip content={<CustomTooltip formatter={v => `${v}%`} />} />
+          <Legend wrapperStyle={{ fontSize: 12 }} />
+          <ReferenceLine y={0} stroke={COLORS.text} strokeOpacity={0.3} />
+          <Bar dataKey="calm" name="Calm Execution" fill={COLORS.green} radius={[4, 4, 0, 0]} />
+          <Bar dataKey="scared" name="Scared Money" fill={COLORS.red} radius={[4, 4, 0, 0]} opacity={0.7} />
+        </BarChart>
+      </ResponsiveContainer>
+      <p style={{ textAlign: 'center', color: COLORS.text, fontSize: 12, marginTop: 8 }}>
+        Same strategy, same market. The scared trader exits winners early, hesitates on entries,
+        and panic-closes during normal drawdowns. Result: +10.6% vs -6.0% over 8 weeks.
+      </p>
+    </ChartWrapper>
+  );
+}
+
+// ── Lotto Ticket Risk Escalation ──────────────────────────────────────────────
+export function LottoTicketChart() {
+  const data = [
+    { trade: 'Mon AM', risk: 1, pnl: 280, fill: COLORS.green },
+    { trade: 'Mon PM', risk: 1, pnl: 195, fill: COLORS.green },
+    { trade: 'Tue AM', risk: 1.5, pnl: 410, fill: COLORS.green },
+    { trade: 'Tue PM', risk: 2, pnl: 520, fill: COLORS.gold },
+    { trade: 'Wed AM', risk: 2.5, pnl: -625, fill: COLORS.red },
+    { trade: 'Wed PM', risk: 3, pnl: -890, fill: COLORS.red },
+    { trade: 'Thu AM', risk: 3.5, pnl: -1050, fill: COLORS.red },
+  ];
+  return (
+    <ChartWrapper title="The Lotto Ticket Cycle: How a Winning Week Becomes a Losing One">
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data} margin={chartMargin}>
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} />
+          <XAxis dataKey="trade" stroke={COLORS.text} tick={{ fontSize: 11 }} />
+          <YAxis stroke={COLORS.text} tick={{ fontSize: 12 }} tickFormatter={v => `$${v}`} />
+          <Tooltip content={<CustomTooltip formatter={v => `$${v}`} />} />
+          <ReferenceLine y={0} stroke={COLORS.text} strokeOpacity={0.3} />
+          <Bar dataKey="pnl" name="P/L per Trade" radius={[4, 4, 0, 0]}>
+            {data.map((entry, i) => (
+              <Cell key={i} fill={entry.fill} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+      <p style={{ textAlign: 'center', color: COLORS.text, fontSize: 12, marginTop: 8 }}>
+        Monday: disciplined 1% risk, +$475. By Wednesday: 2.5% risk, -$625 in one trade.
+        The dopamine from winning made the risk invisible.
+      </p>
+    </ChartWrapper>
+  );
+}
+
+// ── Prospect Theory Value Function ────────────────────────────────────────────
+export function ProspectTheoryChart() {
+  const data = [];
+  for (let x = -100; x <= 100; x += 5) {
+    let value;
+    if (x >= 0) {
+      value = Math.pow(x, 0.65);
+    } else {
+      value = -2.25 * Math.pow(Math.abs(x), 0.65);
+    }
+    data.push({ x, value: Math.round(value * 10) / 10 });
+  }
+  return (
+    <ChartWrapper title="Kahneman's Prospect Theory: How Your Brain Values Gains vs Losses">
+      <ResponsiveContainer width="100%" height={320}>
+        <AreaChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 20 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} />
+          <XAxis
+            dataKey="x"
+            stroke={COLORS.text}
+            tick={{ fontSize: 11 }}
+            label={{ value: 'Actual P/L ($)', position: 'insideBottom', offset: -12, fill: COLORS.text, fontSize: 12 }}
+          />
+          <YAxis
+            stroke={COLORS.text}
+            tick={{ fontSize: 11 }}
+            label={{ value: 'Perceived Value', angle: -90, position: 'insideLeft', fill: COLORS.text, fontSize: 12, dx: -5 }}
+          />
+          <Tooltip content={<CustomTooltip formatter={v => v.toFixed(1)} />} />
+          <ReferenceLine x={0} stroke={COLORS.text} strokeOpacity={0.4} />
+          <ReferenceLine y={0} stroke={COLORS.text} strokeOpacity={0.4} />
+          <Area
+            type="monotone"
+            dataKey="value"
+            stroke={COLORS.purple}
+            fill={COLORS.purple}
+            fillOpacity={0.1}
+            strokeWidth={2.5}
+          />
+        </AreaChart>
+      </ResponsiveContainer>
+      <p style={{ textAlign: 'center', color: COLORS.text, fontSize: 12, marginTop: 8 }}>
+        A $100 loss hurts 2.25x more than a $100 gain feels good. That asymmetry is why
+        you close winners at +$50 but hold losers past -$200 hoping they come back.
+      </p>
+    </ChartWrapper>
+  );
+}

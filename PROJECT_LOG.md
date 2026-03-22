@@ -1,9 +1,37 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (35 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 35 OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5 articole, dateModified pe Article schema. 47 URL-uri în sitemap, 44 pagini prerendered.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (39 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 39 OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5+ articole, dateModified pe Article schema. 51 URL-uri în sitemap, 48 pagini prerendered.
 
 ## Sesiuni de lucru
+
+### 2026-03-22 — Sesiunea #11 (4 psychology articles targeting Search Console queries)
+**Ce s-a cerut:** 4 articole noi de psihologie bazate pe query-uri Search Console: breakeven stop, scared money, lotto ticket syndrome, prospect theory. Cu grafice, storytelling, humor, honest KMF mentions.
+**Ce s-a facut:**
+- 4 charts noi in BlogCharts: BreakevenExpectancyChart (AreaChart), ScaredMoneyChart (BarChart), LottoTicketChart (BarChart), ProspectTheoryChart (AreaChart Kahneman curve)
+- 4 articole noi cu HowTo + FAQ schema:
+  1. breakeven-stop-too-early — premature BE stop kills expectancy by 80%, amygdala vs prefrontal
+  2. scared-money-prop-firm — fear-based trading neuroscience, 50% buffer rule, hide P/L
+  3. lotto-ticket-syndrome — dopamine trap, house money effect, 4-stage self-destruction pattern
+  4. prospect-theory-trading — Kahneman value function, disposition effect, prospect theory tax
+- Cross-linking: articles link to each other + existing related articles
+- KMF mentions honest: R-multiple tracking, tilt detection 4 levels, pre-trade emotional state, lot calculator
+- Hero stats: 35 → 39
+- Sitemap: 51 URLs, prerender: 48 pages, OG: 39 images, RSS: 4 new entries
+**Fisiere create:**
+- `src/pages/blog/BreakevenStopTooEarly.jsx`
+- `src/pages/blog/ScaredMoneyPropFirm.jsx`
+- `src/pages/blog/LottoTicketSyndrome.jsx`
+- `src/pages/blog/ProspectTheoryTrading.jsx`
+**Fisiere modificate:**
+- `src/App.jsx` — 4 new lazy imports + routes
+- `src/pages/BlogPage.jsx` — 4 new posts
+- `src/components/Hero.jsx` — 35→39
+- `src/components/blog/BlogCharts.jsx` — 4 new chart components
+- `public/sitemap.xml`, `public/blog/rss.xml`, `scripts/prerender.js`, `scripts/generate-og-images.js`
+**Build:** OK, 915 modules, 48 pagini prerendered, zero erori
+
+---
 
 ### 2026-03-22 — Sesiunea #10 (SEO deep optimization + 3 new articles)
 **Ce s-a cerut:** SEO optimization complet: About page E-E-A-T, meta titles, dateModified, HowTo schema, Core Web Vitals, + 3 articole noi cu grafice, storytelling, honest app mentions
