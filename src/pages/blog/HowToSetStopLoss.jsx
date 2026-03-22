@@ -12,6 +12,7 @@ export default function HowToSetStopLoss() {
       metaDescription="Most traders set stop losses based on dollar amounts or round numbers. Learn the three professional methods for placing stop losses where the market actually invalidates your trade."
       date="February 6, 2026"
       dateISO="2026-02-06"
+      dateModified="2026-03-22"
       readTime="7 min read"
       category="Risk Management"
       categoryColor="#00C853"

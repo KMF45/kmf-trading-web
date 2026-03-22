@@ -22,7 +22,7 @@ function setMeta(name, content, attr = 'name') {
   if (el) el.setAttribute('content', content);
 }
 
-export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], faqItems = [], howToSteps = [], children }) {
+export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, dateModified, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], faqItems = [], howToSteps = [], children }) {
   useEffect(() => {
     const pageTitle = metaTitle || `${title} | K.M.F. Trading Journal`;
     const pageUrl = `${SITE}/blog/${slug}`;
@@ -66,7 +66,8 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       headline: title,
       description: metaDescription,
       datePublished: dateISO,
-      author: { '@type': 'Organization', name: 'K.M.F. Dev Team', url: SITE },
+      dateModified: dateModified || dateISO,
+      author: { '@type': 'Organization', name: 'K.M.F. Dev Team', url: `${SITE}/about` },
       publisher: { '@type': 'Organization', name: 'K.M.F. Trading Journal', url: SITE, logo: { '@type': 'ImageObject', url: `${SITE}/logo.png` } },
       image: ogImage,
       url: pageUrl,

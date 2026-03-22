@@ -19,6 +19,7 @@ const PORT = 4173;
 
 const routes = [
   '/',
+  '/about',
   '/blog',
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',
@@ -52,6 +53,9 @@ const routes = [
   '/blog/weekend-gap-risk',
   '/blog/scaling-in-vs-scaling-out',
   '/blog/what-is-kmf-trading-journal',
+  '/blog/static-vs-trailing-drawdown',
+  '/blog/revenge-trading-kill-switch',
+  '/blog/metatrader-pre-trade-checklist',
   '/blog/category/psychology',
   '/blog/category/risk-management',
   '/blog/category/statistics',

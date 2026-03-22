@@ -1,9 +1,57 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (32 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 32 OG images, blog category pages (6 categorii), accessibility pass complet. 42 URL-uri în sitemap, 40 pagini prerendered.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (35 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 35 OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5 articole, dateModified pe Article schema. 47 URL-uri în sitemap, 44 pagini prerendered.
 
 ## Sesiuni de lucru
+
+### 2026-03-22 — Sesiunea #10 (SEO deep optimization + 3 new articles)
+**Ce s-a cerut:** SEO optimization complet: About page E-E-A-T, meta titles, dateModified, HowTo schema, Core Web Vitals, + 3 articole noi cu grafice, storytelling, honest app mentions
+**Ce s-a făcut:**
+- About page (E-E-A-T): Organization JSON-LD, origin story, philosophy, contact
+- robots.txt cleanup: removed stale Disallow /app/ and unnecessary Allow /assets/
+- HowTo JSON-LD schema pe 5 articole: PreTradeChecklist, WeeklyTradingReviewTemplate, HowToSetStopLoss, PositionSizingGuide, TiltRecoveryProtocol
+- dateModified adaugat in Article schema (BlogArticleLayout) + setat pe 6 articole actualizate
+- Author URL pointing to /about in Article schema
+- Meta title optimization pe ScalingInVsScalingOut (match search query)
+- 3 new blog charts: DrawdownComparisonChart, ScalingOutEquityCurve, ConsecutiveLossImpact
+- 3 articole noi (cu grafice, HowTo, FAQ, storytelling, honest KMF mentions):
+  1. static-vs-trailing-drawdown — prop firm drawdown math + survival strategies
+  2. revenge-trading-kill-switch — 5-rule kill switch + cortisol/dopamine science
+  3. metatrader-pre-trade-checklist — MT4/MT5/cTrader specific checklist
+- ScalingInVsScalingOut updated: chart added, meta optimized, dateModified
+- Hero stats: 32 → 35 articles
+- RSS feed: 3 new articles added
+- OG images: 35 total generated
+- Sitemap: 47 URLs (3 new articles + about + 6 categories)
+- Prerender: 44 pages total
+**Fisiere create:**
+- `src/pages/AboutPage.jsx` — E-E-A-T about page
+- `src/pages/blog/StaticVsTrailingDrawdown.jsx` — new article
+- `src/pages/blog/RevengeTradingKillSwitch.jsx` — new article
+- `src/pages/blog/MetatraderPreTradeChecklist.jsx` — new article
+**Fisiere modificate:**
+- `src/App.jsx` — 4 new lazy imports + routes (AboutPage + 3 articles)
+- `src/pages/BlogPage.jsx` — 3 new posts in array
+- `src/components/Hero.jsx` — stats 32→35
+- `src/components/Footer.jsx` — About link added
+- `src/components/blog/BlogArticleLayout.jsx` — dateModified prop, HowTo JSON-LD, author URL to /about
+- `src/components/blog/BlogCharts.jsx` — 3 new chart components (AreaChart, LineChart, BarChart)
+- `src/pages/blog/ScalingInVsScalingOut.jsx` — chart, meta title, dateModified
+- `src/pages/blog/PreTradeChecklist.jsx` — howToSteps + dateModified
+- `src/pages/blog/WeeklyTradingReviewTemplate.jsx` — howToSteps + dateModified
+- `src/pages/blog/HowToSetStopLoss.jsx` — howToSteps + dateModified
+- `src/pages/blog/PositionSizingGuide.jsx` — howToSteps + dateModified
+- `src/pages/blog/TiltRecoveryProtocol.jsx` — howToSteps + dateModified
+- `public/robots.txt` — cleanup
+- `public/sitemap.xml` — 47 URLs total
+- `public/blog/rss.xml` — 3 new articles
+- `scripts/prerender.js` — 44 routes total
+- `scripts/generate-og-images.js` — 3 new articles (35 total)
+**Build:** OK, 911 modules, 44 pagini prerendered, zero erori
+**Urmatorii pasi:** Resubmit sitemap in Search Console dupa deploy, run PageSpeed Insights din browser
+
+---
 
 ### 2026-03-22 — Sesiunea #9 (Site optimization: performance, SEO, categories, accessibility)
 **Ce s-a cerut:** Optimizare completă site — CTA-uri Google Play, promo banner, preconnect, GA4 tracking, 404 fix, vendor-charts optimization, OG images, sitemap lastmod, translation split, sticky CTA banner, blog category pages, accessibility pass

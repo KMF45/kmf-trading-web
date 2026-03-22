@@ -9,6 +9,7 @@ import NotFoundPage from './pages/NotFoundPage';
 // Blog - lazy loaded
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogCategoryPage = lazy(() => import('./pages/BlogCategoryPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
 const BestTradingJournalAndroid2026 = lazy(() => import('./pages/blog/BestTradingJournalAndroid2026'));
 const ProfitFactorVsWinRate = lazy(() => import('./pages/blog/ProfitFactorVsWinRate'));
 const OnePercentRiskRule = lazy(() => import('./pages/blog/OnePercentRiskRule'));
@@ -41,6 +42,9 @@ const ConfidenceVsOverconfidence = lazy(() => import('./pages/blog/ConfidenceVsO
 const WeekendGapRisk = lazy(() => import('./pages/blog/WeekendGapRisk'));
 const ScalingInVsScalingOut = lazy(() => import('./pages/blog/ScalingInVsScalingOut'));
 const WhatIsKmfTradingJournal = lazy(() => import('./pages/blog/WhatIsKmfTradingJournal'));
+const StaticVsTrailingDrawdown = lazy(() => import('./pages/blog/StaticVsTrailingDrawdown'));
+const RevengeTradingKillSwitch = lazy(() => import('./pages/blog/RevengeTradingKillSwitch'));
+const MetatraderPreTradeChecklist = lazy(() => import('./pages/blog/MetatraderPreTradeChecklist'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -68,6 +72,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
 
           {/* Blog */}
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/category/:category" element={<BlogCategoryPage />} />
           <Route path="/blog/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026 />} />
@@ -102,6 +107,9 @@ function App() {
           <Route path="/blog/weekend-gap-risk" element={<WeekendGapRisk />} />
           <Route path="/blog/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOut />} />
           <Route path="/blog/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournal />} />
+          <Route path="/blog/static-vs-trailing-drawdown" element={<StaticVsTrailingDrawdown />} />
+          <Route path="/blog/revenge-trading-kill-switch" element={<RevengeTradingKillSwitch />} />
+          <Route path="/blog/metatrader-pre-trade-checklist" element={<MetatraderPreTradeChecklist />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />

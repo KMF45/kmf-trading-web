@@ -14,6 +14,33 @@
     </image>
 
     <item>
+      <title>Static vs Trailing Drawdown: The Prop Firm Rule That Kills Most Funded Accounts</title>
+      <link>https://kmfjournal.com/blog/static-vs-trailing-drawdown</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/static-vs-trailing-drawdown</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Risk Management</category>
+      <description>Most traders fail prop firm challenges not because of bad trades, but because they don't understand the difference between static and trailing drawdown. The math, the traps, and how to survive both.</description>
+    </item>
+
+    <item>
+      <title>The Revenge Trading Kill Switch: 5 Rules That Stop the Bleed Before It Starts</title>
+      <link>https://kmfjournal.com/blog/revenge-trading-kill-switch</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/revenge-trading-kill-switch</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychology</category>
+      <description>After 2 consecutive losses, your decision-making quality drops to 15%. A 5-rule kill switch protocol backed by cortisol science that stops revenge trading before it destroys your account.</description>
+    </item>
+
+    <item>
+      <title>The MetaTrader Pre-Trade Checklist: 5 Things to Verify Before Every MT4/MT5 Trade</title>
+      <link>https://kmfjournal.com/blog/metatrader-pre-trade-checklist</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/metatrader-pre-trade-checklist</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Discipline</category>
+      <description>A 5-point checklist specifically for MetaTrader users: Context, Trigger, Stop, Size, Reward. Platform-specific instructions for MT4, MT5, and cTrader with exact lot size calculations.</description>
+    </item>
+
+    <item>
       <title>What Is K.M.F. Trading Journal? The App Built by Traders Who Got Tired of Spreadsheets</title>
       <link>https://kmfjournal.com/blog/what-is-kmf-trading-journal</link>
       <guid isPermaLink="true">https://kmfjournal.com/blog/what-is-kmf-trading-journal</guid>

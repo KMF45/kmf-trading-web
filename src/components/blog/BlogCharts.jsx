@@ -3,7 +3,7 @@
  * Dark-themed to match KMF design system.
  */
 import {
-  LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid,
+  LineChart, Line, BarChart, Bar, AreaChart, Area, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer, Cell, ReferenceLine
 } from 'recharts';
 
@@ -280,6 +280,151 @@ export function ExpectancyComparisonChart() {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
+    </ChartWrapper>
+  );
+}
+
+// ─── Static vs Trailing Drawdown Comparison ───
+export function DrawdownComparisonChart() {
+  // 12-trade sequence on a $100k account. Trader wins, loses, wins, then has a bad day.
+  const trades = [
+    { trade: 'Start', balance: 100000 },
+    { trade: '1', balance: 101500 },  // +1.5k
+    { trade: '2', balance: 103200 },  // +1.7k (new high)
+    { trade: '3', balance: 102000 },  // -1.2k
+    { trade: '4', balance: 104100 },  // +2.1k (new high)
+    { trade: '5', balance: 105800 },  // +1.7k (new high)
+    { trade: '6', balance: 104200 },  // -1.6k
+    { trade: '7', balance: 102800 },  // -1.4k
+    { trade: '8', balance: 101000 },  // -1.8k (bad streak)
+    { trade: '9', balance: 99500 },   // -1.5k
+    { trade: '10', balance: 100800 }, // +1.3k
+    { trade: '11', balance: 99200 },  // -1.6k
+    { trade: '12', balance: 98000 },  // -1.2k
+  ];
+
+  // Static: 5% from initial balance = $95,000 always
+  // Trailing: 5% from highest balance reached. Ratchets up but never down.
+  let highWater = 100000;
+  const data = trades.map(t => {
+    if (t.balance > highWater) highWater = t.balance;
+    return {
+      ...t,
+      'Static Limit': 95000,
+      'Trailing Limit': Math.round(highWater * 0.95),
+    };
+  });
+
+  return (
+    <ChartWrapper title="Static vs Trailing Drawdown — Same Trades, Different Kill Zone">
+      <ResponsiveContainer width="100%" height={340}>
+        <LineChart data={data} margin={chartMargin}>
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} />
+          <XAxis dataKey="trade" stroke={COLORS.text} tick={{ fontSize: 12 }} />
+          <YAxis
+            stroke={COLORS.text}
+            tick={{ fontSize: 12 }}
+            tickFormatter={v => `$${(v / 1000).toFixed(0)}k`}
+            domain={[93000, 107000]}
+          />
+          <Tooltip content={<CustomTooltip formatter={v => `$${v.toLocaleString()}`} />} />
+          <Legend wrapperStyle={{ fontSize: 12, color: COLORS.text }} />
+          <Line type="monotone" dataKey="balance" name="Balance" stroke={COLORS.cyan} strokeWidth={2.5} dot={{ r: 4, fill: COLORS.cyan }} />
+          <Line type="stepAfter" dataKey="Static Limit" stroke={COLORS.green} strokeWidth={2} strokeDasharray="8 4" dot={false} />
+          <Line type="stepAfter" dataKey="Trailing Limit" stroke={COLORS.red} strokeWidth={2} strokeDasharray="8 4" dot={false} />
+        </LineChart>
+      </ResponsiveContainer>
+      <p style={{ textAlign: 'center', color: COLORS.text, fontSize: 12, marginTop: 8 }}>
+        The trailing limit (red) ratchets up with each new high — making it progressively easier to breach.
+        The static limit (green) stays fixed at 5% below your starting balance.
+      </p>
+    </ChartWrapper>
+  );
+}
+
+// ─── Scaling Out vs Full TP: Equity Over 30 Trades ───
+export function ScalingOutEquityCurve() {
+  // Same 30 trades, 40% win rate, 3:1 R:R, risk $100 per trade
+  const outcomes = [
+    -1,-1,3,-1,-1,3,-1,3,-1,-1,  // trades 1-10
+    3,-1,-1,-1,3,-1,3,-1,-1,3,   // trades 11-20
+    -1,-1,3,-1,3,-1,-1,3,-1,3,   // trades 21-30
+  ];
+
+  let fullTP = 10000;
+  let scaleOut = 10000;
+  const data = [{ trade: 0, 'Full TP (3R)': fullTP, 'Scale Out (1R+3R)': scaleOut }];
+
+  outcomes.forEach((r, i) => {
+    if (r > 0) {
+      fullTP += 100 * 3;          // full 3R win
+      scaleOut += 100 * (0.5 * 1 + 0.5 * 3); // 50% at 1R + 50% at 3R = 2R effective
+    } else {
+      fullTP -= 100;
+      scaleOut -= 100;
+    }
+    data.push({
+      trade: i + 1,
+      'Full TP (3R)': Math.round(fullTP),
+      'Scale Out (1R+3R)': Math.round(scaleOut),
+    });
+  });
+
+  return (
+    <ChartWrapper title="Same 30 Trades, Same Win Rate — Different Exit Strategy">
+      <ResponsiveContainer width="100%" height={320}>
+        <AreaChart data={data} margin={chartMargin}>
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} />
+          <XAxis dataKey="trade" stroke={COLORS.text} tick={{ fontSize: 12 }} label={{ value: 'Trade #', position: 'insideBottom', offset: -2, fill: COLORS.text, fontSize: 12 }} />
+          <YAxis stroke={COLORS.text} tick={{ fontSize: 12 }} tickFormatter={v => `$${(v / 1000).toFixed(1)}k`} />
+          <Tooltip content={<CustomTooltip formatter={v => `$${v.toLocaleString()}`} />} />
+          <Legend wrapperStyle={{ fontSize: 12, color: COLORS.text }} />
+          <ReferenceLine y={10000} stroke={COLORS.text} strokeDasharray="5 5" strokeOpacity={0.4} />
+          <Area type="monotone" dataKey="Full TP (3R)" stroke={COLORS.green} fill={COLORS.green} fillOpacity={0.1} strokeWidth={2.5} dot={false} />
+          <Area type="monotone" dataKey="Scale Out (1R+3R)" stroke={COLORS.gold} fill={COLORS.gold} fillOpacity={0.1} strokeWidth={2} dot={false} />
+        </AreaChart>
+      </ResponsiveContainer>
+      <p style={{ textAlign: 'center', color: COLORS.text, fontSize: 12, marginTop: 8 }}>
+        After 30 trades, scaling out leaves $600 on the table — a 33% reduction in profit from the same trades.
+      </p>
+    </ChartWrapper>
+  );
+}
+
+// ─── Revenge Trading: Performance Degradation After Consecutive Losses ───
+export function ConsecutiveLossImpact() {
+  const data = [
+    { state: 'Baseline', quality: 100, winRate: 48, color: COLORS.cyan },
+    { state: 'After 1 Loss', quality: 85, winRate: 42, color: COLORS.green },
+    { state: 'After 2 Losses', quality: 62, winRate: 34, color: COLORS.gold },
+    { state: 'After 3 Losses', quality: 38, winRate: 24, color: '#FF8A80' },
+    { state: '"One More Trade"', quality: 15, winRate: 12, color: COLORS.red },
+  ];
+
+  return (
+    <ChartWrapper title="Decision Quality vs Consecutive Losses">
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data} margin={chartMargin} barCategoryGap="20%">
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} />
+          <XAxis dataKey="state" stroke={COLORS.text} tick={{ fontSize: 11 }} />
+          <YAxis
+            stroke={COLORS.text}
+            tick={{ fontSize: 12 }}
+            tickFormatter={v => `${v}%`}
+            domain={[0, 110]}
+          />
+          <Tooltip content={<CustomTooltip formatter={v => `${v}%`} />} />
+          <Bar dataKey="quality" name="Decision Quality" radius={[6, 6, 0, 0]}>
+            {data.map((entry, i) => (
+              <Cell key={i} fill={entry.color} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+      <p style={{ textAlign: 'center', color: COLORS.text, fontSize: 12, marginTop: 8 }}>
+        By the 4th consecutive loss, your decision-making is operating at 15% capacity.
+        That "one more trade" is not trading — it is gambling with cortisol.
+      </p>
     </ChartWrapper>
   );
 }

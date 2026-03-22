@@ -46,6 +46,9 @@ const articles = [
   { slug: 'weekend-gap-risk', title: 'Weekend Gap Risk:\nHow to Protect Your\nPositions Over the Weekend', category: 'Risk Management', color: '#00C853' },
   { slug: 'scaling-in-vs-scaling-out', title: 'Scaling In vs Scaling Out:\nWhich Position Management\nStrategy Works Better?', category: 'Risk Management', color: '#00C853' },
   { slug: 'what-is-kmf-trading-journal', title: 'What Is K.M.F.\nTrading Journal?\nEverything You Need to Know', category: 'App Reviews', color: '#4FC3F7' },
+  { slug: 'static-vs-trailing-drawdown', title: 'Static vs Trailing Drawdown:\nThe Prop Firm Rule That\nKills Most Funded Accounts', category: 'Risk Management', color: '#00C853' },
+  { slug: 'revenge-trading-kill-switch', title: 'The Revenge Trading\nKill Switch:\n5 Rules to Stop the Bleed', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'metatrader-pre-trade-checklist', title: 'MetaTrader Pre-Trade\nChecklist: 5 Things to Check\nBefore Every MT4/MT5 Trade', category: 'Discipline', color: '#FFB300' },
 ];
 
 function hexToRgb(hex) {

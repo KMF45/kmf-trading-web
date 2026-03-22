@@ -1,6 +1,7 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
 } from '../../components/blog/BlogArticleLayout';
+import { ScalingOutEquityCurve } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
 
 export default function ScalingInVsScalingOut() {
@@ -8,10 +9,11 @@ export default function ScalingInVsScalingOut() {
     <BlogArticleLayout
       slug="scaling-in-vs-scaling-out"
       title="Scaling In vs Scaling Out: Which Method Destroys Fewer Accounts?"
-      metaTitle="Scaling In vs Scaling Out: The Position Management Mistake That Wrecks Traders | K.M.F."
-      metaDescription="Scaling in and scaling out change your risk profile in ways most traders do not understand. Learn the math, the dangers, and when each method actually works."
+      metaTitle="Scaling In vs Scaling Out: Why It Feels Better But Is Mathematically Worse | K.M.F."
+      metaDescription="Why scaling out feels better but is mathematically worse for most traders. The hidden math of adding to positions, taking partial profits, and what actually works."
       date="March 15, 2026"
       dateISO="2026-03-15"
+      dateModified="2026-03-22"
       readTime="8 min read"
       category="Risk Management"
       categoryColor="#00C853"
@@ -86,6 +88,8 @@ export default function ScalingInVsScalingOut() {
       <P>
         Consider this example: a strategy with a 40% win rate and a 3:1 reward-to-risk. Full position exit gives an expectancy of 0.40 × 3 - 0.60 × 1 = +0.60R per trade. If you scale out 50% at 1R and hold 50% for 3R, your expectancy drops to 0.40 × (0.5 + 1.5) - 0.60 × 1 = +0.20R per trade. That is a 67% reduction in expectancy — from the same strategy, the same entries, the same win rate. The difference is entirely in how you manage the exit.
       </P>
+
+      <ScalingOutEquityCurve />
 
       <Divider />
 

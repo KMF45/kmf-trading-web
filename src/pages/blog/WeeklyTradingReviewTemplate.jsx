@@ -12,6 +12,7 @@ export default function WeeklyTradingReviewTemplate() {
       metaDescription="A step-by-step guide to conducting a proper weekly trading review. Includes a complete template with questions to evaluate your performance, discipline, and strategy."
       date="January 16, 2026"
       dateISO="2026-01-16"
+      dateModified="2026-03-22"
       readTime="8 min read"
       category="Improvement"
       categoryColor="#FFB300"

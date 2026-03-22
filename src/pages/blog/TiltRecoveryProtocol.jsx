@@ -12,6 +12,7 @@ export default function TiltRecoveryProtocol() {
       metaDescription="A step-by-step protocol for the critical 60 minutes after a major trading loss. Learn the exact sequence top traders use to recover mentally and protect their capital."
       date="March 15, 2026"
       dateISO="2026-03-15"
+      dateModified="2026-03-22"
       readTime="8 min read"
       category="Psychology"
       categoryColor="#CE93D8"

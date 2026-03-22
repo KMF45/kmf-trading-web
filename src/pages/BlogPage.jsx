@@ -292,6 +292,33 @@ export const posts = [
     readTime: '8 min read',
     categoryColor: '#00C853',
   },
+  {
+    slug: 'static-vs-trailing-drawdown',
+    title: 'Static vs Trailing Drawdown: The Prop Firm Rule That Silently Kills Funded Accounts',
+    excerpt: 'Most prop firm failures happen because traders don\'t understand the difference between static and trailing drawdown. The math, the trap, and how to survive both.',
+    category: 'Risk Management',
+    date: 'March 22, 2026',
+    readTime: '9 min read',
+    categoryColor: '#00C853',
+  },
+  {
+    slug: 'revenge-trading-kill-switch',
+    title: 'The Revenge Trading Kill Switch: A Protocol Your Future Self Will Thank You For',
+    excerpt: 'Knowing about revenge trading doesn\'t stop it. Cortisol and dopamine override knowledge. A 5-rule pre-programmed protocol that works when willpower doesn\'t.',
+    category: 'Psychology',
+    date: 'March 22, 2026',
+    readTime: '10 min read',
+    categoryColor: '#CE93D8',
+  },
+  {
+    slug: 'metatrader-pre-trade-checklist',
+    title: 'How to Build a Pre-Trade Checklist for MetaTrader and cTrader (5 Rules That Actually Stick)',
+    excerpt: 'Five checks, 60 seconds, specific to MT4/MT5/cTrader. Platform-specific instructions, lot size calculations, and the practical workflow most checklists miss.',
+    category: 'Discipline',
+    date: 'March 22, 2026',
+    readTime: '8 min read',
+    categoryColor: '#FFB300',
+  },
 ];
 
 export default function BlogPage() {

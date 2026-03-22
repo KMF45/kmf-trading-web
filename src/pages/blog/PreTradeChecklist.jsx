@@ -12,6 +12,7 @@ export default function PreTradeChecklist() {
       metaDescription="A pre-trade checklist is the most effective tool for consistent trading. Here are 10 questions to verify before you enter any trade — adapt them to your own strategy."
       date="February 14, 2026"
       dateISO="2026-02-14"
+      dateModified="2026-03-22"
       readTime="6 min read"
       category="Discipline"
       categoryColor="#FFB300"

@@ -69,6 +69,15 @@ const Footer = () => {
                   {t('nav.blog')}
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200"
+                >
+                  About
+                </Link>
+              </li>
             </ul>
 
             <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">{t('footer.fromBlog')}</h4>

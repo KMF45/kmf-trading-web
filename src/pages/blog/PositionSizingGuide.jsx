@@ -12,6 +12,7 @@ export default function PositionSizingGuide() {
       metaDescription="Position sizing is the most underrated skill in trading. Learn the exact formula to calculate how much to trade based on your account size, risk tolerance, and stop loss distance."
       date="February 10, 2026"
       dateISO="2026-02-10"
+      dateModified="2026-03-22"
       readTime="7 min read"
       category="Risk Management"
       categoryColor="#00C853"
