@@ -1,8 +1,18 @@
-import { createContext, useContext, useState, useCallback } from 'react';
-import { translations } from './translations';
+import { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
+import en from './lang/en';
 
 const LANGS = ['en', 'ro', 'ru', 'ja', 'fr', 'de', 'zh'];
 const STORAGE_KEY = 'kmf-lang';
+
+// Dynamic imports for non-EN languages (code-split)
+const loaders = {
+  ro: () => import('./lang/ro'),
+  fr: () => import('./lang/fr'),
+  ru: () => import('./lang/ru'),
+  ja: () => import('./lang/ja'),
+  de: () => import('./lang/de'),
+  zh: () => import('./lang/zh'),
+};
 
 const LanguageContext = createContext();
 
@@ -15,6 +25,24 @@ export const LanguageProvider = ({ children }) => {
     return 'en';
   });
 
+  // Cache loaded translations
+  const cache = useRef({ en });
+
+  const [translations, setTranslations] = useState(() => cache.current[lang] || en);
+
+  useEffect(() => {
+    if (cache.current[lang]) {
+      setTranslations(cache.current[lang]);
+      return;
+    }
+    if (loaders[lang]) {
+      loaders[lang]().then((mod) => {
+        cache.current[lang] = mod.default;
+        setTranslations(mod.default);
+      });
+    }
+  }, [lang]);
+
   const setLang = useCallback((code) => {
     if (LANGS.includes(code)) {
       setLangState(code);
@@ -24,20 +52,20 @@ export const LanguageProvider = ({ children }) => {
 
   const t = useCallback((key) => {
     const keys = key.split('.');
-    let val = translations[lang];
+    let val = translations;
     for (const k of keys) {
       val = val?.[k];
       if (val === undefined) break;
     }
     if (val !== undefined) return val;
     // Fallback to English
-    let fallback = translations.en;
+    let fallback = en;
     for (const k of keys) {
       fallback = fallback?.[k];
       if (fallback === undefined) break;
     }
     return fallback ?? key;
-  }, [lang]);
+  }, [translations]);
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, t, LANGS }}>
