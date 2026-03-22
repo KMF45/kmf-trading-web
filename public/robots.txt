@@ -3,10 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /app/
-
-# Allow CSS/JS for proper rendering
-Allow: /assets/
 
 # Sitemap location
 Sitemap: https://kmfjournal.com/sitemap.xml

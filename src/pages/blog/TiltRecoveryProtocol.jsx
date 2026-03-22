@@ -25,6 +25,13 @@ export default function TiltRecoveryProtocol() {
         { question: 'How long should I wait before trading again after a major loss?', answer: 'At minimum, wait until your emotional state returns to baseline — typically 30 to 60 minutes. Many professional traders recommend finishing the session entirely after a significant loss and returning the next day with reduced position size. The key is that your decision to re-enter should be calm and strategic, not reactive.' },
         { question: 'What is the difference between a good loss and a bad loss?', answer: 'A good loss is a trade that followed your plan, had proper risk management, and simply did not work out — this is normal variance. A bad loss is one where you deviated from your rules: wrong position size, no stop loss, emotional entry, or a setup outside your strategy. The distinction matters because good losses require no behavioral change, while bad losses demand it.' },
       ]}
+      howToSteps={[
+        { name: 'Close your platform immediately', text: 'Within 60 seconds of the loss, close your trading platform completely. Do not minimize — close and log out. Create maximum friction between you and the next trade.' },
+        { name: 'Reset physically', text: 'Spend 5 minutes on controlled breathing or a short walk. Move away from your desk. The goal is to lower cortisol and break the fight-or-flight loop.' },
+        { name: 'Name the emotion', text: 'Identify exactly what you feel: anger, shame, fear, frustration. Naming the emotion engages the prefrontal cortex and reduces its intensity.' },
+        { name: 'Review the trade objectively', text: 'After 15-20 minutes, review the trade with one question: was this a good loss (plan followed) or a bad loss (rules broken)? Write the answer in your journal.' },
+        { name: 'Decide whether to continue', text: 'Based on your emotional state and the type of loss, decide if you can trade again today. If in doubt, stop for the day and return tomorrow with reduced size.' },
+      ]}
     >
       <Intro>
         The 60 minutes after a significant trading loss are the most dangerous period in a trader's day. Cortisol and adrenaline are elevated, rational processing is impaired, and the emotional brain is screaming for immediate action — usually in the form of a revenge trade. What separates professionals from amateurs is not that professionals avoid big losses. It is that they have a rehearsed protocol for what happens next. This is that protocol.

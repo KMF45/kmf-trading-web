@@ -22,7 +22,7 @@ function setMeta(name, content, attr = 'name') {
   if (el) el.setAttribute('content', content);
 }
 
-export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], faqItems = [], children }) {
+export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], faqItems = [], howToSteps = [], children }) {
   useEffect(() => {
     const pageTitle = metaTitle || `${title} | K.M.F. Trading Journal`;
     const pageUrl = `${SITE}/blog/${slug}`;
@@ -96,6 +96,22 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       });
     }
 
+    // JSON-LD: HowTo (for step-by-step rich results)
+    if (howToSteps.length > 0) {
+      addLd('ld-howto', {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: title,
+        description: metaDescription,
+        step: howToSteps.map((s, i) => ({
+          '@type': 'HowToStep',
+          position: i + 1,
+          name: s.name,
+          text: s.text,
+        })),
+      });
+    }
+
     return () => {
       // Restore defaults
       document.title = DEFAULTS.title;
@@ -114,8 +130,9 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       document.getElementById('ld-article')?.remove();
       document.getElementById('ld-breadcrumb')?.remove();
       document.getElementById('ld-faq')?.remove();
+      document.getElementById('ld-howto')?.remove();
     };
-  }, [title, metaTitle, metaDescription, slug, dateISO, faqItems]);
+  }, [title, metaTitle, metaDescription, slug, dateISO, faqItems, howToSteps]);
 
   return (
     <>

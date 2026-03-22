@@ -25,6 +25,13 @@ export default function HowToSetStopLoss() {
         { question: 'What are the 3 professional stop loss methods?', answer: 'The three methods are: structure-based (behind key support/resistance levels), ATR-based (using Average True Range as a volatility measure), and candle-based (beyond the high/low of a signal candle).' },
         { question: 'Is a tighter stop loss better?', answer: 'Not necessarily. A stop loss that is too tight gets hit by normal market noise, reducing your win rate. The best stop loss balances protection against invalidation with enough room for the trade to breathe.' },
       ]}
+      howToSteps={[
+        { name: 'Identify the invalidation level', text: 'Determine the price level where your trade idea is no longer valid. This is where the market structure breaks or your setup fails.' },
+        { name: 'Choose a placement method', text: 'Select structure-based (behind support/resistance), ATR-based (1.5-2x ATR from entry), or candle-based (beyond signal candle high/low).' },
+        { name: 'Add a buffer', text: 'Place the stop a few pips beyond the invalidation level to account for spread, slippage, and stop hunting wicks.' },
+        { name: 'Calculate position size from stop distance', text: 'Use your stop loss distance to calculate exact position size using the 1% risk rule. Never adjust the stop to fit a position size.' },
+        { name: 'Set the stop before entering', text: 'Place the stop loss order before or simultaneously with your entry. Never enter a trade planning to add the stop later.' },
+      ]}
     >
       <Intro>
         A poorly placed stop loss is often worse than no stop loss at all. Not because the concept of a stop loss is wrong, but because stops placed in the wrong location consistently stop you out of trades that would have been profitable — while providing false security that you have managed your risk. Stop loss placement is a skill, and most retail traders have never been taught it properly.

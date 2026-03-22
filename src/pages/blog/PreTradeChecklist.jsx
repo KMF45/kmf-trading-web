@@ -25,6 +25,18 @@ export default function PreTradeChecklist() {
         { question: 'Why do traders need a checklist?', answer: 'A checklist forces systematic thinking before every trade, preventing impulsive entries driven by FOMO or emotion. Pilots and surgeons use checklists for the same reason — high-stakes decisions need a process, not instinct.' },
         { question: 'How many items should a trading checklist have?', answer: 'Between 7 and 12 items is ideal. Fewer than 7 misses important criteria; more than 12 becomes impractical and traders start skipping items. Each item should be a clear yes/no question.' },
       ]}
+      howToSteps={[
+        { name: 'Verify setup criteria', text: 'Confirm the trade matches your defined setup conditions. If you are stretching the definition, reject the trade.' },
+        { name: 'Check higher timeframe trend', text: 'Ensure the higher timeframe trend supports your trade direction. Trading against the trend requires extra justification.' },
+        { name: 'Identify entry trigger', text: 'Define the exact price action or indicator signal that will trigger your entry. No trigger, no trade.' },
+        { name: 'Place stop loss at invalidation', text: 'Set your stop loss where your trade idea is invalidated — behind structure, ATR-based, or candle-based.' },
+        { name: 'Calculate position size', text: 'Use the 1% rule to calculate exact lot size based on stop loss distance and account balance.' },
+        { name: 'Verify risk-reward ratio', text: 'Confirm your target gives at least 1:2 risk-reward. If not, the trade may not be worth taking.' },
+        { name: 'Check economic calendar', text: 'Verify no high-impact news events are scheduled during your expected trade duration.' },
+        { name: 'Assess emotional state', text: 'Rate your emotional state honestly. If you are angry, anxious, or euphoric, step away.' },
+        { name: 'Confirm plan alignment', text: 'Verify the trade fits your weekly/monthly trading plan and does not exceed your daily trade limit.' },
+        { name: 'Log the trade before entry', text: 'Write down your thesis, entry, stop, and target in your journal before clicking the button.' },
+      ]}
     >
       <Intro>
         Before every commercial flight, pilots work through a standardized pre-flight checklist — not because experienced pilots have forgotten how planes work, but because checklists systematically prevent the class of error caused by overconfidence, distraction, or time pressure. Before complex surgeries, operating teams run verbal checklists that have demonstrably reduced preventable deaths. Trading is a domain of consequential decisions made under uncertainty and emotional pressure. The case for checklists is the same.

@@ -25,6 +25,13 @@ export default function WeeklyTradingReviewTemplate() {
         { question: 'How long should a weekly trading review take?', answer: '15-30 minutes is enough if you journal trades daily. The weekly review is about patterns and trends, not re-analyzing individual trades. Focus on what changed this week vs last week.' },
         { question: 'What questions should I ask in a weekly review?', answer: 'Key questions include: Did I follow my rules? What was my biggest mistake? What was my best-executed trade? Did emotions affect any decisions? What is one thing I will improve next week?' },
       ]}
+      howToSteps={[
+        { name: 'Review your statistics', text: 'Start with raw numbers: total trades, win rate, profit factor, average R-multiple. Compare to last week and your baseline.' },
+        { name: 'Evaluate execution quality', text: 'Review each trade for plan adherence. Did you follow your entry criteria, stop placement, and exit rules? Score each trade.' },
+        { name: 'Analyze emotional patterns', text: 'Identify which emotions influenced your decisions. Look for patterns: revenge trades after losses, overconfidence after wins.' },
+        { name: 'Assess risk management', text: 'Check if you respected position sizing rules, maximum daily loss limits, and correlation exposure across all trades.' },
+        { name: 'Set one improvement goal', text: 'Choose exactly one specific, measurable improvement for next week. Write it down and place it where you will see it before trading.' },
+      ]}
     >
       <Intro>
         The difference between traders who improve and traders who repeat the same mistakes month after month is almost always the same: one group reviews their performance systematically, and the other does not. A weekly trading review is not optional for serious development. It is the mechanism through which patterns become visible, mistakes become lessons, and lessons become habits.

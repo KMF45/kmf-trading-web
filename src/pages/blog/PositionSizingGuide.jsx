@@ -25,6 +25,13 @@ export default function PositionSizingGuide() {
         { question: 'How do I calculate position size for forex?', answer: 'Divide your risk amount (account size × risk percentage) by your stop loss in pips × pip value. For example, on a $10,000 account risking 1% with a 50-pip stop loss, your position size would be 0.20 lots.' },
         { question: 'What percentage should I risk per trade?', answer: 'Most professional traders risk between 0.5% and 2% of their account per trade. The 1% rule is the most common starting point for consistent risk management.' },
       ]}
+      howToSteps={[
+        { name: 'Determine your risk percentage', text: 'Choose how much of your account you are willing to lose on this trade. Start with 1% for most setups.' },
+        { name: 'Calculate your risk amount', text: 'Multiply your account balance by your risk percentage. On a $10,000 account at 1%, your risk amount is $100.' },
+        { name: 'Set your stop loss', text: 'Place your stop loss at the technical invalidation point. Measure the distance in pips from your entry to your stop.' },
+        { name: 'Calculate position size', text: 'Divide risk amount by (stop loss in pips × pip value). This gives you the exact lot size for this trade.' },
+        { name: 'Verify and enter', text: 'Double-check that the position size feels right relative to your account. If it looks too large, reduce risk percentage — never widen the stop.' },
+      ]}
     >
       <Intro>
         Take two traders with identical strategies, identical setups, identical entry and exit points. One grows their account consistently for years. The other blows up within months. The difference is almost always position sizing. Position sizing is the single most important variable you directly control in trading — and it is the one most consistently underestimated by beginners.
