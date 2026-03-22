@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../landing/Navbar';
 import Footer from '../Footer';
 import { FaXTwitter, FaRedditAlien, FaWhatsapp, FaLinkedinIn, FaLink, FaCheck } from 'react-icons/fa6';
+import { FaGooglePlay } from 'react-icons/fa';
 
 const SITE = 'https://kmfjournal.com';
 const DEFAULTS = {
@@ -119,6 +120,7 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
   return (
     <>
       <Navbar />
+      <StickyPlayBanner />
       <main className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
         <article className="max-w-4xl mx-auto" itemScope itemType="https://schema.org/Article">
           <nav className="mb-8 text-sm text-kmf-text-tertiary" aria-label="Breadcrumb">
@@ -239,19 +241,9 @@ function ShareButtons({ title, slug, compact }) {
   );
 }
 
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.kmf.tradingjournal';
+
 // CTA at end of every article
-const MAILTO = `mailto:contact@kmfjournal.com?subject=${encodeURIComponent('Beta Tester Application — K.M.F. Trading Journal')}&body=${encodeURIComponent(`Hi K.M.F. Team,
-
-I'd like to apply for the beta testing program.
-
-Name:
-Trading experience (beginner / intermediate / advanced):
-Markets I trade (forex / stocks / crypto):
-Current journal method (spreadsheet / app / none):
-
-Looking forward to testing K.M.F.!
-`)}`;
-
 function ArticleCTA() {
   return (
     <div className="rounded-2xl p-7 mt-10 text-center" style={{ background: 'rgba(26,22,14,0.95)', border: '1px solid rgba(255,179,0,0.22)' }}>
@@ -259,12 +251,15 @@ function ArticleCTA() {
       <p className="text-sm text-kmf-text-secondary mb-5">
         K.M.F. Trading Journal calculates profit factor, R-multiple, expectancy and more — so you can focus on trading, not spreadsheets.
         <br />
-        <strong style={{ color: '#FFB300' }}>Join the beta and get free lifetime Premium access.</strong>
+        <strong style={{ color: '#FFB300' }}>Download free with a 14-day Premium trial.</strong>
       </p>
-      <a href={MAILTO}
+      <a href={PLAY_STORE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => window.gtag?.('event', 'play_store_click', { source: 'blog_cta' })}
         className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-base transition-all hover:scale-105"
         style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}>
-        Apply for Beta Access →
+        <FaGooglePlay /> Download on Google Play
       </a>
       <div className="flex items-center justify-center gap-4 mt-4 text-xs">
         <Link to="/#features" className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors">See All Features</Link>
@@ -272,6 +267,45 @@ function ArticleCTA() {
         <Link to="/#pricing" className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors">View Pricing</Link>
         <span className="text-kmf-text-tertiary/40">|</span>
         <Link to="/blog" className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors">More Articles</Link>
+      </div>
+    </div>
+  );
+}
+
+// Sticky CTA bar — appears after scrolling past 40% of article
+function StickyPlayBanner() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+      setVisible(scrolled > 0.25 && scrolled < 0.92);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <div
+      className="fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300"
+      style={{ transform: visible ? 'translateY(0)' : 'translateY(100%)' }}
+    >
+      <div className="max-w-xl mx-auto px-4 pb-4">
+        <a
+          href={PLAY_STORE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => window.gtag?.('event', 'play_store_click', { source: 'blog_sticky' })}
+          className="flex items-center justify-center gap-3 w-full py-3 rounded-xl font-semibold text-sm transition-all hover:scale-[1.02]"
+          style={{
+            background: 'linear-gradient(135deg, #FFB300, #FF8F00)',
+            color: '#1A1200',
+            boxShadow: '0 4px 24px rgba(255,179,0,0.35), 0 -2px 12px rgba(0,0,0,0.3)',
+          }}
+        >
+          <FaGooglePlay />
+          Download K.M.F. Trading Journal — Free
+        </a>
       </div>
     </div>
   );

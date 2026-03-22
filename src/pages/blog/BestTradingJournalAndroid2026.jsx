@@ -2,19 +2,9 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/landing/Navbar';
 import Footer from '../../components/Footer';
-import { FaCheck, FaTimes, FaEnvelope } from 'react-icons/fa';
+import { FaCheck, FaTimes, FaGooglePlay } from 'react-icons/fa';
 
-const MAILTO = `mailto:contact@kmfjournal.com?subject=${encodeURIComponent('Beta Tester Application — K.M.F. Trading Journal')}&body=${encodeURIComponent(`Hi K.M.F. Team,
-
-I'd like to apply for the beta testing program.
-
-Name:
-Trading experience (beginner / intermediate / advanced):
-Markets I trade (forex / stocks / crypto):
-Current journal method (spreadsheet / app / none):
-
-Looking forward to testing K.M.F.!
-`)}`;
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.kmf.tradingjournal';
 
 const SITE = 'https://kmfjournal.com';
 const SLUG = 'best-free-trading-journal-app-android-2026';
@@ -220,11 +210,14 @@ export default function BestTradingJournalAndroid2026() {
             free="50 trades/month, full journaling, lot calculator, checklists"
             premium="Unlimited trades, cloud sync, advanced statistics, weekly review, notifications, export"
             cta={
-              <a href={MAILTO}
+              <a href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => window.gtag?.('event', 'play_store_click', { source: 'blog_best_journal_card' })}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200' }}>
-                <FaEnvelope style={{ fontSize: 12 }} />
-                Join Beta — Get Lifetime Premium Free
+                <FaGooglePlay style={{ fontSize: 12 }} />
+                Download Free on Google Play
               </a>
             }
           />
@@ -384,18 +377,20 @@ export default function BestTradingJournalAndroid2026() {
           <div className="rounded-2xl p-7 text-center"
             style={{ background: 'rgba(26,22,14,0.95)', border: '1px solid rgba(255,179,0,0.22)' }}>
             <p className="text-lg font-bold text-kmf-text-primary mb-2">
-              K.M.F. is currently in beta
+              K.M.F. is available on Google Play
             </p>
             <p className="text-sm text-kmf-text-secondary mb-5">
-              The first 50 beta testers get <strong style={{ color: '#FFB300' }}>free lifetime Premium access</strong> — all features, forever, no subscription.
+              Download free and start journaling your trades today. <strong style={{ color: '#FFB300' }}>14-day Premium trial included</strong> — no credit card required.
             </p>
-            <a href={MAILTO}
+            <a href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => window.gtag?.('event', 'play_store_click', { source: 'blog_best_journal_bottom' })}
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-base transition-all hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}>
-              <FaEnvelope style={{ fontSize: 14 }} />
-              Apply for Beta Access
+              <FaGooglePlay style={{ fontSize: 14 }} />
+              Download on Google Play
             </a>
-            <p className="text-xs text-kmf-text-tertiary mt-3">contact@kmfjournal.com · 50 spots only</p>
           </div>
 
         </article>

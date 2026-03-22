@@ -360,7 +360,7 @@ export const translations = {
         },
         {
           "question": "What platforms does K.M.F. Trading Journal support?",
-          "answer": "K.M.F. Trading Journal is available on Android devices (Android 7.0+). Download it from Google Play or join the beta at kmfjournal.com."
+          "answer": "K.M.F. Trading Journal is available on Android devices (Android 7.0+). Download it free from Google Play."
         },
         {
           "question": "How does emotion tracking and tilt detection work?",
@@ -763,7 +763,7 @@ export const translations = {
         },
         {
           "question": "Pe ce platforme este disponibil K.M.F. Trading Journal?",
-          "answer": "K.M.F. Trading Journal este disponibil pe dispozitive Android (Android 7.0+). Descarcă-l din Google Play sau înscrie-te în beta pe kmfjournal.com."
+          "answer": "K.M.F. Trading Journal este disponibil pe dispozitive Android (Android 7.0+). Descarcă-l gratuit din Google Play."
         },
         {
           "question": "Cum funcționează emotion tracking și tilt detection?",
@@ -1166,7 +1166,7 @@ export const translations = {
         },
         {
           "question": "Sur quelles plateformes K.M.F. Trading Journal est-il disponible ?",
-          "answer": "K.M.F. Trading Journal est disponible sur les appareils Android (Android 7.0+). Téléchargez-le depuis Google Play ou rejoignez la bêta sur kmfjournal.com."
+          "answer": "K.M.F. Trading Journal est disponible sur les appareils Android (Android 7.0+). Téléchargez-le gratuitement depuis Google Play."
         },
         {
           "question": "Comment fonctionnent l'emotion tracking et la tilt detection ?",
@@ -1972,7 +1972,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journalはどのプラットフォームに対応していますか？",
-          "answer": "K.M.F. Trading JournalはAndroidデバイス（Android 7.0以上）で利用可能です。Google Playからダウンロードするか、kmfjournal.comでベータ版にご参加ください。"
+          "answer": "K.M.F. Trading JournalはAndroidデバイス（Android 7.0以上）で利用可能です。Google Playから無料でダウンロードできます。"
         },
         {
           "question": "感情トラッキングとtilt検出はどのように機能しますか？",
@@ -2375,7 +2375,7 @@ export const translations = {
         },
         {
           "question": "Welche Plattformen unterstützt K.M.F. Trading Journal?",
-          "answer": "K.M.F. Trading Journal ist auf Android-Geräten verfügbar (Android 7.0+). Lade es von Google Play herunter oder tritt der Beta auf kmfjournal.com bei."
+          "answer": "K.M.F. Trading Journal ist auf Android-Geräten verfügbar (Android 7.0+). Lade es kostenlos von Google Play herunter."
         },
         {
           "question": "Wie funktionieren Emotionstracking und Tilt-Erkennung?",
@@ -2778,7 +2778,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal 支持哪些平台？",
-          "answer": "K.M.F. Trading Journal 可在 Android 设备（Android 7.0+）上使用。从 Google Play 下载或在 kmfjournal.com 加入 Beta 测试。"
+          "answer": "K.M.F. Trading Journal 可在 Android 设备（Android 7.0+）上使用。从 Google Play 免费下载。"
         },
         {
           "question": "情绪追踪和 tilt 检测是如何工作的？",
