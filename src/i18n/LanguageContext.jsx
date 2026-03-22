@@ -43,6 +43,11 @@ export const LanguageProvider = ({ children }) => {
     }
   }, [lang]);
 
+  // Keep <html lang> in sync
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   const setLang = useCallback((code) => {
     if (LANGS.includes(code)) {
       setLangState(code);
