@@ -11,9 +11,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
-          'vendor-firebase-core': ['firebase/app', 'firebase/auth'],
-          'vendor-firestore': ['firebase/firestore'],
-          'vendor-charts': ['recharts'],
         }
       }
     },
