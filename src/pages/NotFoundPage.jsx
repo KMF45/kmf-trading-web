@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaBookOpen, FaRocket, FaQuestionCircle } from 'react-icons/fa';
+import { FaHome, FaBookOpen, FaGooglePlay, FaQuestionCircle } from 'react-icons/fa';
 
 const NotFoundPage = () => {
   useEffect(() => {
     document.title = 'Page Not Found | K.M.F. Trading Journal';
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', 'This page doesn\'t exist. Browse our trading blog or join the K.M.F. Trading Journal beta program.');
+    if (desc) desc.setAttribute('content', 'This page doesn\'t exist. Browse our trading blog or download K.M.F. Trading Journal from Google Play.');
     let robots = document.querySelector('meta[name="robots"]');
     if (robots) robots.setAttribute('content', 'noindex, nofollow');
     return () => {
@@ -34,9 +34,9 @@ const NotFoundPage = () => {
           <Link to="/blog" className="flex items-center gap-2 px-4 py-3 bg-kmf-panel border border-kmf-accent/20 rounded-xl text-kmf-text-primary text-sm font-medium hover:border-kmf-accent/50 transition-all">
             <FaBookOpen className="text-kmf-accent" /> Blog
           </Link>
-          <Link to="/#beta" className="flex items-center gap-2 px-4 py-3 bg-kmf-panel border border-kmf-accent/20 rounded-xl text-kmf-text-primary text-sm font-medium hover:border-kmf-accent/50 transition-all">
-            <FaRocket className="text-kmf-accent" /> Join Beta
-          </Link>
+          <a href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-3 bg-kmf-panel border border-kmf-accent/20 rounded-xl text-kmf-text-primary text-sm font-medium hover:border-kmf-accent/50 transition-all">
+            <FaGooglePlay className="text-kmf-accent" /> Download App
+          </a>
           <Link to="/#faq" className="flex items-center gap-2 px-4 py-3 bg-kmf-panel border border-kmf-accent/20 rounded-xl text-kmf-text-primary text-sm font-medium hover:border-kmf-accent/50 transition-all">
             <FaQuestionCircle className="text-kmf-accent" /> FAQ
           </Link>

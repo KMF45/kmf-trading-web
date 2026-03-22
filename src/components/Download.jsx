@@ -48,6 +48,7 @@ const Download = () => {
                   href={PLAY_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => window.gtag?.('event', 'play_store_click', { source: 'download' })}
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-200 hover:scale-105"
                   style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
                 >
