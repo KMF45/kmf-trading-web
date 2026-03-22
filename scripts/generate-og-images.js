@@ -32,6 +32,20 @@ const articles = [
   { slug: 'good-loss-vs-bad-win', title: 'Good Losses, Bad Wins:\nWhy the Trade You\'re Proud of\nMight Be Your Worst', category: 'Improvement', color: '#FFB300' },
   { slug: 'ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades:\nWhy the Trades You Don\'t Take\nCost You More Than Losses', category: 'Psychology', color: '#CE93D8' },
   { slug: 'crypto-vs-forex-journaling', title: 'Crypto vs Forex:\nWhy Your Trading Journal\nNeeds Different Rules', category: 'Risk Management', color: '#00C853' },
+  { slug: 'tradingview-kmf-workflow', title: 'TradingView + K.M.F.:\nThe Complete Trade\nJournaling Workflow', category: 'Improvement', color: '#FFB300' },
+  { slug: 'excel-vs-trading-journal-app', title: 'Excel vs Trading Journal App:\nWhy Spreadsheets Are\nKilling Your Progress', category: 'Improvement', color: '#FFB300' },
+  { slug: 'prop-firm-daily-drawdown-guide', title: 'Prop Firm Daily Drawdown:\nThe Complete Guide\nto Not Getting Cut', category: 'Risk Management', color: '#00C853' },
+  { slug: 'strategy-is-not-enough', title: 'Strategy Is Not Enough:\nWhy Execution Separates\nWinners from Losers', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'why-traders-fail-at-journaling', title: 'Why Traders Fail\nat Journaling —\nAnd How to Actually Stick', category: 'Improvement', color: '#FFB300' },
+  { slug: 'overtrading-checklist', title: 'The Overtrading Checklist:\nAre You Trading Too Much\nWithout Realizing It?', category: 'Discipline', color: '#FFB300' },
+  { slug: 'tilt-recovery-protocol', title: 'Tilt Recovery Protocol:\nHow to Reset Your Mind\nAfter a Bad Trade', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'worst-trading-excuses', title: 'The Worst Trading Excuses:\nLies Traders Tell\nThemselves Every Day', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'ai-trade-review', title: 'AI Trade Review:\nHow Artificial Intelligence\nCan Analyze Your Trades', category: 'Statistics', color: '#4FC3F7' },
+  { slug: 'monday-effect-trading', title: 'The Monday Effect:\nIs Monday Really\nthe Worst Day to Trade?', category: 'Statistics', color: '#4FC3F7' },
+  { slug: 'confidence-vs-overconfidence', title: 'Confidence vs Overconfidence:\nThe Fine Line That\nDestroys Trading Accounts', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'weekend-gap-risk', title: 'Weekend Gap Risk:\nHow to Protect Your\nPositions Over the Weekend', category: 'Risk Management', color: '#00C853' },
+  { slug: 'scaling-in-vs-scaling-out', title: 'Scaling In vs Scaling Out:\nWhich Position Management\nStrategy Works Better?', category: 'Risk Management', color: '#00C853' },
+  { slug: 'what-is-kmf-trading-journal', title: 'What Is K.M.F.\nTrading Journal?\nEverything You Need to Know', category: 'App Reviews', color: '#4FC3F7' },
 ];
 
 function hexToRgb(hex) {
