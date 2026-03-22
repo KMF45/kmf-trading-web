@@ -268,6 +268,7 @@ export const translations = {
         "bestValue": "BEST VALUE",
         "save": "SAVE"
       },
+      "promo": "New user offer: 50% off Premium for the first 3 months!",
       "footer": "Prices shown in USD. Billing handled securely via Google Play. Cancel anytime.",
       "freeFeatures": [
         "Trade logging",
@@ -670,6 +671,7 @@ export const translations = {
         "bestValue": "CEL MAI BUN PREȚ",
         "save": "ECONOMISEȘTI"
       },
+      "promo": "Ofertă pentru utilizatori noi: 50% reducere la Premium pentru primele 3 luni!",
       "footer": "Prețurile sunt afișate în USD. Plata se face securizat prin Google Play. Poți anula oricând.",
       "freeFeatures": [
         "Înregistrare trade-uri",
@@ -1072,6 +1074,7 @@ export const translations = {
         "bestValue": "MEILLEURE OFFRE",
         "save": "ÉCONOMISEZ"
       },
+      "promo": "Offre nouveaux utilisateurs : -50% sur Premium pendant les 3 premiers mois !",
       "footer": "Prix affichés en USD. Facturation sécurisée via Google Play. Annulation à tout moment.",
       "freeFeatures": [
         "Enregistrement des trades",
@@ -1474,6 +1477,7 @@ export const translations = {
         "bestValue": "ЛУЧШАЯ ЦЕНА",
         "save": "ЭКОНОМИЯ"
       },
+      "promo": "Предложение для новых пользователей: скидка 50% на Premium в первые 3 месяца!",
       "footer": "Цены указаны в USD. Оплата безопасно через Google Play. Отмена в любое время.",
       "freeFeatures": [
         "Запись сделок",
@@ -1876,6 +1880,7 @@ export const translations = {
         "bestValue": "お得",
         "save": "節約"
       },
+      "promo": "新規ユーザー限定：最初の3ヶ月間Premiumが50%オフ！",
       "footer": "価格はUSD表示です。お支払いはGoogle Play経由で安全に処理されます。いつでもキャンセル可能。",
       "freeFeatures": [
         "トレード記録",
@@ -2278,6 +2283,7 @@ export const translations = {
         "bestValue": "BESTER WERT",
         "save": "SPARE"
       },
+      "promo": "Angebot für Neukunden: 50% Rabatt auf Premium für die ersten 3 Monate!",
       "footer": "Preise in USD. Sichere Abrechnung über Google Play. Jederzeit kündbar.",
       "freeFeatures": [
         "Trade-Erfassung",
@@ -2680,6 +2686,7 @@ export const translations = {
         "bestValue": "最超值",
         "save": "节省"
       },
+      "promo": "新用户优惠：前 3 个月 Premium 享 5 折！",
       "footer": "价格以美元显示。通过 Google Play 安全结算。随时可取消。",
       "freeFeatures": [
         "交易记录",

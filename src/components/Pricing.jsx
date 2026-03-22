@@ -194,8 +194,16 @@ const Pricing = () => {
           </div>
         </div>
 
+        {/* Promo banner */}
+        <div className="mt-10 max-w-xl mx-auto text-center px-6 py-4 rounded-xl border border-kmf-accent/30"
+          style={{ background: 'rgba(79,195,247,0.08)' }}>
+          <p className="text-sm font-semibold text-kmf-accent">
+            {t('pricing.promo')}
+          </p>
+        </div>
+
         {/* Footer note */}
-        <p className="text-center text-xs mt-8" style={{ color: '#6B7D87' }}>
+        <p className="text-center text-xs mt-6" style={{ color: '#6B7D87' }}>
           {t('pricing.footer')}
         </p>
       </div>
