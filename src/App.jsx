@@ -8,6 +8,7 @@ import NotFoundPage from './pages/NotFoundPage';
 
 // Blog - lazy loaded
 const BlogPage = lazy(() => import('./pages/BlogPage'));
+const BlogCategoryPage = lazy(() => import('./pages/BlogCategoryPage'));
 const BestTradingJournalAndroid2026 = lazy(() => import('./pages/blog/BestTradingJournalAndroid2026'));
 const ProfitFactorVsWinRate = lazy(() => import('./pages/blog/ProfitFactorVsWinRate'));
 const OnePercentRiskRule = lazy(() => import('./pages/blog/OnePercentRiskRule'));
@@ -68,6 +69,7 @@ function App() {
 
           {/* Blog */}
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/category/:category" element={<BlogCategoryPage />} />
           <Route path="/blog/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026 />} />
           <Route path="/blog/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRate />} />
           <Route path="/blog/1-percent-risk-rule" element={<OnePercentRiskRule />} />

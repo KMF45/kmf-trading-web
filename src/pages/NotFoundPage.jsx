@@ -17,7 +17,7 @@ const NotFoundPage = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-kmf-bg flex items-center justify-center px-4">
+    <main id="main-content" className="min-h-screen bg-kmf-bg flex items-center justify-center px-4">
       <div className="text-center max-w-lg">
         <img src="/logo-320.webp" alt="K.M.F. Trading Journal" className="w-20 h-20 mx-auto mb-6 opacity-50" width="80" height="80" />
 

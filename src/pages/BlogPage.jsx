@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
 
-const posts = [
+export const posts = [
   {
     slug: 'profit-factor-vs-win-rate',
     title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?',
@@ -355,7 +355,7 @@ export default function BlogPage() {
   return (
     <>
       <Navbar />
-      <main className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
+      <main id="main-content" className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
 
           {/* Header */}
@@ -369,6 +369,16 @@ export default function BlogPage() {
             <p className="text-kmf-text-tertiary">
               Trading insights, app guides, and tips for serious traders.
             </p>
+          </div>
+
+          {/* Category filters */}
+          <div className="flex flex-wrap gap-2 mb-6 text-xs">
+            <Link to="/blog/category/psychology" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(206,147,216,0.08)', color: '#CE93D8', border: '1px solid rgba(206,147,216,0.15)' }}>Psychology</Link>
+            <Link to="/blog/category/risk-management" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(0,200,83,0.08)', color: '#00C853', border: '1px solid rgba(0,200,83,0.15)' }}>Risk Management</Link>
+            <Link to="/blog/category/statistics" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(79,195,247,0.08)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.15)' }}>Statistics</Link>
+            <Link to="/blog/category/improvement" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(255,179,0,0.08)', color: '#FFB300', border: '1px solid rgba(255,179,0,0.15)' }}>Improvement</Link>
+            <Link to="/blog/category/discipline" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(255,179,0,0.08)', color: '#FFB300', border: '1px solid rgba(255,179,0,0.15)' }}>Discipline</Link>
+            <Link to="/blog/category/app-reviews" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(79,195,247,0.08)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.15)' }}>App Reviews</Link>
           </div>
 
           {/* Internal links for SEO */}

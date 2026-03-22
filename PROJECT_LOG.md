@@ -1,9 +1,54 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (32 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play (open testing). Toate textele "Coming Soon"/"Notify Me"/"Launch Soon" actualizate → "Download"/"Available" în toate 7 limbile. Download section trimite direct la Google Play Store.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (32 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 32 OG images, blog category pages (6 categorii), accessibility pass complet. 42 URL-uri în sitemap, 40 pagini prerendered.
 
 ## Sesiuni de lucru
+
+### 2026-03-22 — Sesiunea #9 (Site optimization: performance, SEO, categories, accessibility)
+**Ce s-a cerut:** Optimizare completă site — CTA-uri Google Play, promo banner, preconnect, GA4 tracking, 404 fix, vendor-charts optimization, OG images, sitemap lastmod, translation split, sticky CTA banner, blog category pages, accessibility pass
+**Ce s-a făcut:**
+- Hero + Pricing CTA-uri: link direct la Google Play Store (FaClock → FaGooglePlay), GA4 tracking pe toate butoanele
+- Promo banner 50% off primele 3 luni în secțiunea Pricing (toate 7 limbile)
+- index.html: preconnect play.google.com, hreflang tags, cleanup preconnects nefolosite
+- GA4 event tracking: `play_store_click` pe Hero, Pricing (x3), Download, BlogArticleLayout CTA, StickyPlayBanner
+- NotFoundPage: "Join Beta" → "Download App" cu link Google Play
+- FAQ JSON-LD cleanup: removed "join beta at kmfjournal.com" din 6 limbi
+- vendor-charts optimization: removed manual chunks for recharts/firebase → recharts auto-splits to BlogCharts chunk (-56% landing page JS)
+- Translation split: 7 lazy-loaded lang files (EN static, rest dynamic import) → index.js 358KB → 284KB
+- 32 OG images generated (14 were missing)
+- Sitemap lastmod: script automated from git history, 25 dates updated
+- RSS audit: verified 32/32 articles, lastBuildDate updated
+- Sticky CTA banner pe blog articles (appears 25-92% scroll)
+- Blog category pages: 6 categorii (psychology, risk-management, statistics, improvement, discipline, app-reviews)
+- Accessibility pass: skip-to-content targets, aria-labels pe Play Store links, aria-hidden pe decorative icons, mobile nav role/aria-label
+**Fișiere create:**
+- `src/pages/BlogCategoryPage.jsx` — category page cu filtrare, breadcrumb, SEO
+- `src/i18n/lang/{en,ro,fr,ru,ja,de,zh}.js` — lazy-loaded translation files
+- `scripts/update-sitemap-lastmod.js` — git-based lastmod updater
+**Fișiere modificate:**
+- `src/App.jsx` — BlogCategoryPage lazy route
+- `src/pages/BlogPage.jsx` — export posts, category filter pills, id="main-content"
+- `src/pages/NotFoundPage.jsx` — Google Play CTA, id="main-content"
+- `src/pages/LandingPage.jsx` — FAQ JSON-LD cleanup
+- `src/components/Hero.jsx` — Google Play link + aria-label + GA4
+- `src/components/Pricing.jsx` — Google Play links + aria-labels + promo banner + GA4
+- `src/components/Download.jsx` — aria-label + GA4
+- `src/components/blog/BlogArticleLayout.jsx` — Google Play CTA + StickyPlayBanner
+- `src/components/landing/Navbar.jsx` — mobile nav role/aria-label
+- `src/i18n/LanguageContext.jsx` — lazy-loaded translations support
+- `src/i18n/translations.js` — promo key, cleanup unused keys
+- `src/pages/blog/BestTradingJournalAndroid2026.jsx` — Google Play CTA
+- `src/pages/blog/WhatIsKmfTradingJournal.jsx` — text updates
+- `vite.config.js` — removed manual chunks for recharts/firebase
+- `index.html` — preconnect, hreflang, cleanup
+- `scripts/prerender.js` — 6 category routes added (40 total)
+- `public/sitemap.xml` — 6 category URLs + lastmod updates (42 total)
+- `public/blog/rss.xml` — lastBuildDate updated
+**Build:** OK, 40 pagini prerendered, zero erori
+**Performance:** Landing page JS: 742KB → 324KB (-56%), index.js: 358KB → 284KB (-25% gzip)
+
+---
 
 ### 2026-03-21 — Sesiunea #8 (App live pe Google Play — actualizări complete)
 **Ce s-a cerut:** Actualizare site după lansarea app-ului pe Google Play: fix articole count, FAQ duplicate JSON-LD, remove MAE/MFE references, BetaBanner mailto, Download → Google Play link, Privacy/Terms updates, toate textele "Coming Soon" → "Download Now" în 7 limbi

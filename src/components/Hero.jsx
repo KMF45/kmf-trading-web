@@ -112,6 +112,7 @@ const Hero = () => {
             href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Download K.M.F. Trading Journal on Google Play (opens in new tab)"
             onClick={() => window.gtag?.('event', 'play_store_click', { source: 'hero' })}
             className="px-8 py-4 text-white text-lg font-semibold rounded-lg flex items-center gap-3 transition-all duration-300 hover:scale-105"
             style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}

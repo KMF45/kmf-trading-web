@@ -139,7 +139,7 @@ const Navbar = () => {
           </div>
 
           {mobileOpen && (
-            <div className="md:hidden pb-6 border-t border-kmf-accent/10 mt-2 pt-4 animate-fadeIn">
+            <div className="md:hidden pb-6 border-t border-kmf-accent/10 mt-2 pt-4 animate-fadeIn" role="navigation" aria-label="Mobile navigation">
               <div className="flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">{link.label}</a>
