@@ -26,6 +26,7 @@ export default function StaticVsTrailingDrawdown() {
         { question: 'Why is trailing drawdown harder than static drawdown?', answer: 'Because every time you make profit, the trailing limit moves up with you. If your $100K account peaks at $106K, your trailing 5% limit is now $100,700 — meaning you can only lose $5,300 from that peak before termination. With static drawdown, your limit stays at $95,000 regardless of how much profit you make.' },
         { question: 'Which prop firms use trailing drawdown?', answer: 'Many newer prop firms use trailing drawdown during the challenge phase. FTMO uses static drawdown. E8 Funding, MyFundedFX, and several others use trailing drawdown in at least one of their challenge phases. Always read the rules document carefully before starting.' },
         { question: 'Is trailing drawdown calculated on balance or equity?', answer: 'It depends on the firm. Some calculate on balance (closed trades only), others on equity (including open unrealized P/L). Equity-based trailing drawdown is the hardest — a floating profit that pulls back can trigger termination even if you close the trade at breakeven.' },
+        { question: 'Does trailing drawdown ever stop trailing?', answer: 'Most prop firms lock the trailing drawdown once the limit reaches your initial starting balance. For example, on a $100K account with 5% trailing drawdown, once the limit reaches $100,000, it stops moving and effectively becomes static. This is sometimes called a watermark lock. Always verify this with your specific firm.' },
       ]}
       howToSteps={[
         { name: 'Identify your drawdown type', text: 'Read your prop firm rules document. Determine whether your drawdown is static or trailing, and whether it is calculated on balance or equity.' },
@@ -66,7 +67,7 @@ export default function StaticVsTrailingDrawdown() {
 
       <H2>Trailing Drawdown: The Trap</H2>
       <P>
-        Trailing drawdown follows your highest account balance — the "high-water mark." Every time your account reaches a new peak, the trailing limit moves up with it. It never moves back down.
+        Trailing drawdown follows your highest account balance — the <strong>"high-water mark."</strong> Every time your account reaches a new peak, the trailing limit moves up with it. <strong>It only moves up, never down.</strong>
       </P>
       <P>
         Same example:
@@ -82,6 +83,9 @@ export default function StaticVsTrailingDrawdown() {
       <P>
         Read those numbers again. The trader made $6,000, gave back $5,500, and was still net positive. But the trailing limit had moved up to $100,700 during the winning streak — and it never came back down. The trader's own profits built the wall that killed him.
       </P>
+
+      <Callout title="Important: Most Firms Lock the Trail at Starting Balance" color="#4FC3F7">
+        Good news: the majority of prop firms stop the trailing drawdown once the limit reaches your initial balance. In our example, once the trailing limit hits $100,000, it locks there permanently — effectively becoming static drawdown from that point. This means your first goal on a trailing account is to grow enough profit that the trail "catches up" to your starting balance. After that, every additional dollar of profit is genuine buffer. Check your firm's rules — some call this a "watermark lock" or simply state that the trailing stop converts to static after reaching the initial balance.</Callout>
 
       <DrawdownComparisonChart />
 
