@@ -67,7 +67,7 @@ export default function ProspectTheoryTrading() {
         '"I would be so angry if this turns into a loss."',
       ]} />
       <P>
-        So you close at +20 pips instead of +60. You feel relieved. You "won." But you left 40 pips — and two-thirds of your expected reward — on the table. Multiply this by 100 trades and your average winning trade is 0.8R instead of 2.5R. Your strategy's <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy</Link> goes from positive to negative. You are systematically profitable on paper and systematically broke in practice.
+        So you close at +20 pips instead of +60. Or worse, you <Link to="/blog/breakeven-stop-too-early" className="text-kmf-accent hover:underline">move your stop to breakeven</Link> and get stopped at zero before price reaches your target. Either way, you left two-thirds of your expected reward on the table. Multiply this by 100 trades and your average winning trade is 0.8R instead of 2.5R. Your strategy's <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy</Link> goes from positive to negative. You are systematically profitable on paper and systematically broke in practice.
       </P>
 
       <H3>Scenario 2: The Loser You Cannot Kill</H3>

@@ -70,7 +70,7 @@ export default function LottoTicketSyndrome() {
         ]}
       />
       <P>
-        Stage 4 is where the real damage happens — and it is not the first loss that kills you. It is the attempt to recover from that loss using the same inflated risk that caused it. You took a 2.5% hit, so you try to make it back with a 3.5% trade, then a 4% trade. This is no longer trading. This is gambling with a chart open.
+        Stage 4 is where the real damage happens — and it is not the first loss that kills you. It is the attempt to recover from that loss using the same inflated risk that caused it. You took a 2.5% hit, so you try to make it back with a 3.5% trade, then a 4% trade. This is no longer trading. This is <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">revenge trading</Link> with a chart open.
       </P>
 
       <H2>Why Win Streaks Are Statistically Meaningless</H2>

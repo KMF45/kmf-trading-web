@@ -95,7 +95,7 @@ export default function BreakevenStopTooEarly() {
       </P>
 
       <Callout title="The Fear of Giving Back" color="#CE93D8">
-        A $200 unrealized gain that disappears feels worse than never having had it. This is called the "endowment effect" — the moment your P/L shows green, your brain considers that money yours. Losing "your" money (even unrealized) triggers a pain response 2.25x stronger than the pleasure of gaining it. That asymmetry is the engine behind every premature breakeven stop.
+        A $200 unrealized gain that disappears feels worse than never having had it. This is called the "endowment effect" — the moment your P/L shows green, your brain considers that money yours. Losing "your" money (even unrealized) triggers a pain response <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">2.25x stronger</Link> than the pleasure of gaining it. That asymmetry is the engine behind every premature breakeven stop.
       </Callout>
 
       <H2>The Real Cost: Trades You Were Right About</H2>

@@ -12,6 +12,7 @@ export default function ConfidenceVsOverconfidence() {
       metaDescription="Learn the critical difference between healthy trading confidence built on data and dangerous overconfidence fueled by win streaks. Includes a self-assessment table and practical tracking methods."
       date="March 15, 2026"
       dateISO="2026-03-15"
+      dateModified="2026-03-23"
       readTime="7 min read"
       category="Psychology"
       categoryColor="#CE93D8"
@@ -98,7 +99,7 @@ export default function ConfidenceVsOverconfidence() {
       </P>
       <H3>2. Treat win streaks as a warning, not a reward</H3>
       <P>
-        When you hit 5+ consecutive wins, tighten your process instead of loosening it. This is counterintuitive but essential. The reversion to the mean is coming — the question is only whether you will be properly sized when it does.
+        When you hit 5+ consecutive wins, tighten your process instead of loosening it. This is counterintuitive but essential. The reversion to the mean is coming — the question is only whether you will be properly sized when it does. We call this the <Link to="/blog/lotto-ticket-syndrome" className="text-kmf-accent hover:underline">"Lotto Ticket" Syndrome</Link> — the dopamine from winning makes risk invisible.
       </P>
       <H3>3. Maintain constant position sizing</H3>
       <P>

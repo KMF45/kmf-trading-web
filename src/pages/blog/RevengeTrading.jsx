@@ -13,6 +13,7 @@ export default function RevengeTrading() {
       metaDescription="Revenge trading is one of the fastest ways to blow a trading account. Understand the psychology behind it and learn practical techniques to stop it before it starts."
       date="January 13, 2026"
       dateISO="2026-01-13"
+      dateModified="2026-03-23"
       readTime="7 min read"
       category="Psychology"
       categoryColor="#CE93D8"
@@ -117,6 +118,9 @@ export default function RevengeTrading() {
       </P>
       <P>
         When you internalize this genuinely, not just intellectually, revenge trading loses its grip. There is nothing to recover. There is only the next valid setup, taken at the right size, with the right stop.
+      </P>
+      <P>
+        If you want a concrete, step-by-step protocol you can follow mechanically when you are tilted, read our <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading Kill Switch</Link> — five pre-programmed rules based on cortisol research that you set when calm and follow when you are not.
       </P>
 
       <Takeaways items={[
