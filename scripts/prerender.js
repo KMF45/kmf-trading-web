@@ -60,6 +60,7 @@ const routes = [
   '/blog/scared-money-prop-firm',
   '/blog/lotto-ticket-syndrome',
   '/blog/prospect-theory-trading',
+  '/blog/ro/what-is-kmf-trading-journal',
   '/blog/category/psychology',
   '/blog/category/risk-management',
   '/blog/category/statistics',

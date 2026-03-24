@@ -1,9 +1,34 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (39 articole EN). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 39 OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5+ articole, dateModified pe Article schema. 51 URL-uri în sitemap, 48 pagini prerendered.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 40 OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5+ articole, dateModified pe Article schema. 52 URL-uri în sitemap, 49 pagini prerendered. Sistem de traducere blog activ: LanguageSwitcher + hreflang + blogTranslations map.
 
 ## Sesiuni de lucru
+
+### 2026-03-24 — Sesiunea #12 (Blog translation system + first RO article)
+**Ce s-a cerut:** Traducerea articolului "What Is KMF Trading Journal" in romana + sistem de language switcher pe blog
+**Ce s-a facut:**
+- Sistem complet de traducere blog: blogTranslations.js (map slug→limbi), LanguageSwitcher.jsx (dropdown cu steaguri), hreflang tags in BlogArticleLayout
+- BlogArticleLayout: prop `lang`, URL corect per limba, hreflang + x-default, html lang attribute, ShareButtons primeste URL complet
+- Articol tradus RO: `/blog/ro/what-is-kmf-trading-journal` — traducere completa, termeni de trading pastrati in engleza
+- Ruta noua in App.jsx, sitemap cu xhtml:link hreflang, prerender (49 pagini), OG image entry, RSS entry
+- LanguageSwitcher apare pe ambele versiuni (EN si RO) automat bazat pe blogTranslations map
+**Fisiere create:**
+- `src/i18n/blogTranslations.js` — map slug → limbi disponibile
+- `src/components/blog/LanguageSwitcher.jsx` — dropdown language selector
+- `src/pages/blog/ro/WhatIsKmfTradingJournalRo.jsx` — articol tradus romana
+**Fisiere modificate:**
+- `src/components/blog/BlogArticleLayout.jsx` — lang prop, hreflang, LanguageSwitcher, ShareButtons cu URL
+- `src/App.jsx` — import + ruta `/blog/ro/what-is-kmf-trading-journal`
+- `public/sitemap.xml` — xmlns:xhtml, hreflang bidirectional, URL nou RO
+- `scripts/prerender.js` — ruta RO adaugata
+- `scripts/generate-og-images.js` — entry OG imagine RO
+- `public/blog/rss.xml` — entry RO
+- `PROJECT_LOG.md` — actualizat
+**De retinut:** Sistemul e scalabil — pentru a traduce alt articol: 1) creezi fisierul in `src/pages/blog/ro/`, 2) adaugi slug in blogTranslations.js, 3) adaugi ruta in App.jsx, 4) update sitemap/prerender/og/rss
+**Urmatorii pasi sugerati:** Traduce 1-2 articole populare in spaniola (piata mare, competitie mica pe SEO trading)
+
+---
 
 ### 2026-03-22 — Sesiunea #11 (4 psychology articles targeting Search Console queries)
 **Ce s-a cerut:** 4 articole noi de psihologie bazate pe query-uri Search Console: breakeven stop, scared money, lotto ticket syndrome, prospect theory. Cu grafice, storytelling, humor, honest KMF mentions.

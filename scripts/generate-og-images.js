@@ -53,6 +53,7 @@ const articles = [
   { slug: 'scared-money-prop-firm', title: 'Trading with Scared Money:\nWhy Your 100k Prop Account\nFeels Like a Burden', category: 'Psychology', color: '#CE93D8' },
   { slug: 'lotto-ticket-syndrome', title: 'The Lotto Ticket Syndrome:\nWhy You Increase Risk\nAfter a Big Win', category: 'Psychology', color: '#CE93D8' },
   { slug: 'prospect-theory-trading', title: 'Why You Close Winners\nToo Early and Let\nYour Losers Run', category: 'Psychology', color: '#CE93D8' },
+  { slug: 'ro-what-is-kmf-trading-journal', title: 'Ce este K.M.F.\nTrading Journal?\nAplicatia construita de traderi', category: 'Recenzii Aplicatii', color: '#4FC3F7' },
 ];
 
 function hexToRgb(hex) {

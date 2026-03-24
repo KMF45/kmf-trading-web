@@ -49,6 +49,7 @@ const BreakevenStopTooEarly = lazy(() => import('./pages/blog/BreakevenStopTooEa
 const ScaredMoneyPropFirm = lazy(() => import('./pages/blog/ScaredMoneyPropFirm'));
 const LottoTicketSyndrome = lazy(() => import('./pages/blog/LottoTicketSyndrome'));
 const ProspectTheoryTrading = lazy(() => import('./pages/blog/ProspectTheoryTrading'));
+const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTradingJournalRo'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -118,6 +119,9 @@ function App() {
           <Route path="/blog/scared-money-prop-firm" element={<ScaredMoneyPropFirm />} />
           <Route path="/blog/lotto-ticket-syndrome" element={<LottoTicketSyndrome />} />
           <Route path="/blog/prospect-theory-trading" element={<ProspectTheoryTrading />} />
+
+          {/* Translated articles */}
+          <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />

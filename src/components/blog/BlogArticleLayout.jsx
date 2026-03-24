@@ -4,6 +4,8 @@ import Navbar from '../landing/Navbar';
 import Footer from '../Footer';
 import { FaXTwitter, FaRedditAlien, FaWhatsapp, FaLinkedinIn, FaLink, FaCheck } from 'react-icons/fa6';
 import { FaGooglePlay } from 'react-icons/fa';
+import LanguageSwitcher from './LanguageSwitcher';
+import blogTranslations from '../../i18n/blogTranslations';
 
 const SITE = 'https://kmfjournal.com';
 const DEFAULTS = {
@@ -22,19 +24,48 @@ function setMeta(name, content, attr = 'name') {
   if (el) el.setAttribute('content', content);
 }
 
-export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, date, dateISO, dateModified, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], faqItems = [], howToSteps = [], children }) {
+export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, lang = 'en', date, dateISO, dateModified, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], faqItems = [], howToSteps = [], children }) {
+  const langPath = lang !== 'en' ? `${lang}/` : '';
+  const pageUrl = `${SITE}/blog/${langPath}${slug}`;
+  const ogImage = `${SITE}/blog/og/${lang !== 'en' ? `${lang}-` : ''}${slug}.png`;
+
   useEffect(() => {
     const pageTitle = metaTitle || `${title} | K.M.F. Trading Journal`;
-    const pageUrl = `${SITE}/blog/${slug}`;
-    const ogImage = `${SITE}/blog/og/${slug}.png`;
 
     // Title + description
     document.title = pageTitle;
     setMeta('description', metaDescription || DEFAULTS.description);
 
+    // html lang
+    document.documentElement.lang = lang;
+
     // Canonical
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.setAttribute('href', pageUrl);
+
+    // hreflang tags
+    const articleTranslations = blogTranslations[slug];
+    if (articleTranslations && Object.keys(articleTranslations).length > 1) {
+      Object.entries(articleTranslations).forEach(([langCode, path]) => {
+        const id = `hreflang-${langCode}`;
+        if (!document.getElementById(id)) {
+          const link = document.createElement('link');
+          link.rel = 'alternate';
+          link.hreflang = langCode;
+          link.href = `${SITE}${path}`;
+          link.id = id;
+          document.head.appendChild(link);
+        }
+      });
+      if (!document.getElementById('hreflang-x-default')) {
+        const xdef = document.createElement('link');
+        xdef.rel = 'alternate';
+        xdef.hreflang = 'x-default';
+        xdef.href = `${SITE}${articleTranslations.en}`;
+        xdef.id = 'hreflang-x-default';
+        document.head.appendChild(xdef);
+      }
+    }
 
     // OG
     setMeta('og:type', 'article', 'property');
@@ -132,8 +163,12 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       document.getElementById('ld-breadcrumb')?.remove();
       document.getElementById('ld-faq')?.remove();
       document.getElementById('ld-howto')?.remove();
+      // Remove hreflang
+      document.querySelectorAll('[id^="hreflang-"]').forEach(el => el.remove());
+      // Restore lang
+      document.documentElement.lang = 'en';
     };
-  }, [title, metaTitle, metaDescription, slug, dateISO, faqItems, howToSteps]);
+  }, [title, metaTitle, metaDescription, slug, dateISO, dateModified, faqItems, howToSteps, lang]);
 
   return (
     <>
@@ -152,16 +187,17 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
             <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ background: `${categoryColor}18`, color: categoryColor, border: `1px solid ${categoryColor}28` }}>{category}</span>
             <time className="text-xs text-kmf-text-tertiary" dateTime={dateISO}>{date}</time>
             <span className="text-xs text-kmf-text-tertiary">· {readTime}</span>
+            <LanguageSwitcher slug={slug} currentLang={lang} />
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-kmf-text-primary mb-6 leading-tight" style={{ letterSpacing: '-0.02em' }} itemProp="headline">{title}</h1>
           <div className="mb-8">
-            <ShareButtons title={title} slug={slug} compact />
+            <ShareButtons title={title} url={pageUrl} compact />
           </div>
           {children}
           <div className="rounded-xl p-5 mt-10 mb-4" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
               <p className="text-sm text-kmf-text-secondary">Found this useful? Share it with a fellow trader.</p>
-              <ShareButtons title={title} slug={slug} />
+              <ShareButtons title={title} url={pageUrl} />
             </div>
           </div>
           {relatedArticles.length > 0 && (
@@ -194,9 +230,8 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
 }
 
 // Share buttons
-function ShareButtons({ title, slug, compact }) {
+function ShareButtons({ title, url, compact }) {
   const [copied, setCopied] = useState(false);
-  const url = `${SITE}/blog/${slug}`;
   const text = encodeURIComponent(title);
   const encodedUrl = encodeURIComponent(url);
 
