@@ -274,21 +274,21 @@ export default function BestTradingJournalAndroid2026() {
             name="Edgewonk"
             tag="Best Desktop Journal"
             tagColor="#78909C"
-            description="Edgewonk is a powerful desktop-based trading journal with deep analytics. It's widely recommended in the professional trading community but has no mobile presence."
+            description="Edgewonk is a powerful trading journal with deep analytics, widely recommended in the professional trading community. It now offers a cloud version alongside its classic desktop app, but still has no dedicated mobile app."
             pros={[
               'Very deep analytics and reporting',
-              'One-time purchase (no subscription)',
+              'Cloud version now available (alongside desktop)',
               'Good for swing traders and investors',
             ]}
             cons={[
-              'No mobile app',
-              'Desktop only (Windows/Mac)',
+              'No dedicated mobile app',
+              'Annual subscription starting at $169/year',
               'No offline mobile logging',
-              'One-time cost of $169',
+              'No free plan available',
               'No real-time features',
             ]}
             free="No free plan"
-            premium="$169 one-time"
+            premium="From $169/year"
           />
 
           <Divider />
@@ -315,7 +315,7 @@ export default function BestTradingJournalAndroid2026() {
                   ['No broker req', true,  false, false, true ],
                   ['Discipline tools', true, false, false, false],
                   ['Advanced stats',true,  true,  true,  true ],
-                  ['Price',         'Free+','$30/mo','$30/mo','$169'],
+                  ['Price',         'Free+','$30/mo','$30/mo','$169/yr'],
                 ].map(([label, ...vals]) => (
                   <tr key={label} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                     <td className="px-4 py-3 text-kmf-text-tertiary font-medium">{label}</td>
@@ -335,6 +335,10 @@ export default function BestTradingJournalAndroid2026() {
             </table>
           </div>
 
+          <p className="text-xs text-kmf-text-tertiary mb-6" style={{ opacity: 0.6 }}>
+            Prices verified as of March 2026. Check each provider's website for the most current pricing.
+          </p>
+
           <Divider />
 
           {/* Verdict */}
@@ -348,7 +352,7 @@ export default function BestTradingJournalAndroid2026() {
             TraderSync and Tradervue are solid choices if you trade from a desktop and want automatic broker import — but their mobile experience is poor and free tiers are very limited.
           </p>
           <p className="text-kmf-text-secondary leading-relaxed mb-8">
-            Edgewonk is excellent for deep analysis but requires a $169 investment and offers no mobile functionality at all.
+            Edgewonk is excellent for deep analysis but requires a $169/year subscription and still lacks a dedicated mobile app.
           </p>
 
           {/* Related Articles */}

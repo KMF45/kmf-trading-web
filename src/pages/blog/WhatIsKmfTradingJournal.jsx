@@ -29,7 +29,7 @@ export default function WhatIsKmfTradingJournal() {
       ]}
     >
       <Intro>
-        Two years ago, we were exactly where you are now. Trading forex and crypto, trying to improve, and using a combination of Excel spreadsheets, screenshots saved in random folders, and notes typed into our phones at 2 AM after a bad session. We tried every journal app on the market. TraderSync wanted $30/month and required broker access. Tradervue had no mobile app. Edgewonk cost $169 and ran on desktop only. None of them tracked psychology. None of them worked offline. None of them felt like they were built by people who actually sit in front of charts every day. So we built K.M.F.
+        Two years ago, we were exactly where you are now. Trading forex and crypto, trying to improve, and using a combination of Excel spreadsheets, screenshots saved in random folders, and notes typed into our phones at 2 AM after a bad session. We tried every journal app on the market. Some wanted $20–30 per month and required broker access. Others had no mobile app at all. A few cost hundreds of dollars upfront and ran on desktop only. None of them tracked psychology. None of them worked offline. None of them felt like they were built by people who actually sit in front of charts every day. So we built K.M.F.
       </Intro>
 
       <H2>What K.M.F. Actually Is</H2>
@@ -190,7 +190,7 @@ export default function WhatIsKmfTradingJournal() {
 
       <H3>Psychology-First Approach</H3>
       <P>
-        Most journals are spreadsheets with a UI. K.M.F. is a psychology tool that happens to track trades. Emotion tracking, tilt detection, honesty mirror, personality profiling, and pre-trade emotional warnings — these features do not exist in TraderSync, Tradervue, or Edgewonk. They exist in K.M.F. because we believe that understanding yourself is more important than understanding the market.
+        Most journals are spreadsheets with a UI. K.M.F. is a psychology tool that happens to track trades. Emotion tracking, tilt detection, honesty mirror, personality profiling, and pre-trade emotional warnings — these features are hard to find in any other trading journal on the market. They exist in K.M.F. because we believe that understanding yourself is more important than understanding the market.
       </P>
 
       <H3>Honest Free Tier</H3>

@@ -30,7 +30,7 @@ export default function WhatIsKmfTradingJournalRo() {
       ]}
     >
       <Intro>
-        Acum doi ani, eram exact unde esti tu acum. Tranzactionam forex si crypto, incercam sa ne imbunatatim, si foloseam o combinatie de spreadsheet-uri Excel, capturi de ecran salvate in foldere random, si notite scrise pe telefon la 2 noaptea dupa o sesiune proasta. Am incercat fiecare aplicatie de journal de pe piata. TraderSync cerea $30/luna si acces la broker. Tradervue nu avea aplicatie mobila. Edgewonk costa $169 si mergea doar pe desktop. Niciuna nu urmarea psihologia. Niciuna nu functiona offline. Niciuna nu parea construita de oameni care chiar stau in fata chart-urilor in fiecare zi. Asa ca am construit K.M.F.
+        Acum doi ani, eram exact unde esti tu acum. Tranzactionam forex si crypto, incercam sa ne imbunatatim, si foloseam o combinatie de spreadsheet-uri Excel, capturi de ecran salvate in foldere random, si notite scrise pe telefon la 2 noaptea dupa o sesiune proasta. Am incercat fiecare aplicatie de journal de pe piata. Unele cereau $20–30 pe luna si acces la broker. Altele nu aveau deloc aplicatie mobila. Cateva costau sute de dolari si mergeau doar pe desktop. Niciuna nu urmarea psihologia. Niciuna nu functiona offline. Niciuna nu parea construita de oameni care chiar stau in fata chart-urilor in fiecare zi. Asa ca am construit K.M.F.
       </Intro>
 
       <H2>Ce este de fapt K.M.F.</H2>
@@ -70,10 +70,10 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Smart Trade Entry</H3>
       <P>
-        Logharea unui trade dureaza sub 30 de secunde. Autocomplete pentru instrument, directie, entry price si exit price, stop loss, take profit, lot size si o nota optionala. Aplicatia valideaza incrucisit SL/TP pentru a prinde erori de introducere inainte de salvare. Poti atasa si o captura de ecran a setup-ului tau (Premium).
+        Logharea unui trade dureaza sub 30 de secunde. Autocomplete pentru instrument, directie, entry price si exit price, stop loss, take profit, lot size si o nota optionala. Aplicatia verifica automat daca SL/TP sunt corecte pentru a prinde erori de introducere inainte de salvare. Poti atasa si o captura de ecran a setup-ului tau (Premium).
       </P>
       <P>
-        De ce conteaza viteza: daca logharea unui trade dureaza 5 minute, vei renunta pana in a doua saptamana. Stim asta pentru ca si noi am renuntat cu fiecare alt instrument pe care l-am incercat. Treizeci de secunde este pragul — sub el devine un obicei. Peste el devine o corvoada.
+        De ce conteaza viteza: daca logharea unui trade dureaza 5 minute, vei renunta pana in a doua saptamana. Stim asta pentru ca si noi am renuntat cu fiecare alt instrument pe care l-am incercat. Treizeci de secunde este pragul — sub el devine un obicei. Peste el devine o povara.
       </P>
 
       <H3>Live Dashboard</H3>
@@ -88,7 +88,7 @@ export default function WhatIsKmfTradingJournalRo() {
       <Ul items={[
         'Win rate, profit factor si trading expectancy — cele trei numere care iti spun daca strategia ta chiar functioneaza',
         'Distributia R-multiple — cum performeaza trade-urile tale relativ la risc, nu doar in dolari',
-        'P/L pe ziua saptamanii — lunile iti distrug contul?',
+        'P/L pe ziua saptamanii — zilele de luni iti distrug contul?',
         'P/L pe sesiune — Asian, London, New York. In care sesiune ai edge?',
         'Top instrumente — ce perechi sau simboluri iti aduc de fapt bani?',
         'Maximum drawdown si equity curve — povestea vizuala a contului tau in timp',
@@ -100,7 +100,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Lot Size Calculator</H3>
       <P>
-        Introdu balanta contului, procentul de risc, entry price si nivelul de stop loss. Calculator-ul iti da lot size-ul exact. Suporta forex, crypto si actiuni, gestioneaza automat conversiile de curs valutar si functioneaza offline. Fara "de obicei tranzactionez cu 0.1 loturi" — ceea ce nu este risk management, este o ghiceala care in cele din urma te va pune intr-un trade unde 0.1 loturi reprezinta 5% din cont.
+        Introdu balanta contului, procentul de risc, entry price si nivelul de stop loss. Calculator-ul iti da lot size-ul exact. Suporta forex, crypto si actiuni, gestioneaza automat conversiile de curs valutar si functioneaza offline. Fara "de obicei tranzactionez cu 0.1 loturi" — ceea ce nu este risk management, este doar o presupunere care in cele din urma te va pune intr-un trade unde 0.1 loturi reprezinta 5% din cont.
       </P>
 
       <H3>Pre-Trade Checklist</H3>
@@ -115,7 +115,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Trading Diary</H3>
       <P>
-        Un jurnal cu format liber pentru ganduri, lectii si observatii care nu se incadreaza intr-o intrare de trade. Analiza pre-market. Reflectii post-sesiune. Procesare emotionala dupa o zi grea. Jurnalul este separat de datele de trade — este spatiul tau sa gandesti pe hartie.
+        Un jurnal cu format liber pentru ganduri, lectii si observatii care nu se incadreaza intr-o intrare de trade. Analiza pre-market. Reflectii post-sesiune. Procesare emotionala dupa o zi grea. Jurnalul este separat de datele de trade — este spatiul tau sa iti pui gandurile in ordine.
       </P>
 
       <Divider />
@@ -127,7 +127,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Emotion Tracking</H3>
       <P>
-        Inainte de fiecare trade, iti loghezi starea emotionala: Calm, Confident, Anxious, Frustrated, Fearful sau Excited. Dupa ce trade-ul se inchide, o loghezi din nou. In timp, K.M.F. coreleaza emotiile tale cu rezultatele. S-ar putea sa descoperi ca pierzi bani in 73% din cazuri cand intri in trade-uri simtindu-te anxios — si acel insight singur iti poate schimba modul in care tranzactionezi.
+        Inainte de fiecare trade, iti loghezi starea emotionala: Calm, Confident, Anxious, Frustrated, Fearful sau Excited. Dupa ce trade-ul se inchide, o loghezi din nou. In timp, K.M.F. coreleaza emotiile tale cu rezultatele. S-ar putea sa descoperi ca pierzi bani in 73% din cazuri cand intri in trade-uri simtindu-te anxios — si doar acel insight iti poate schimba complet modul in care tranzactionezi.
       </P>
 
       <H3>Tilt Detection</H3>
@@ -137,7 +137,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Honesty Mirror (Premium)</H3>
       <P>
-        Honesty Mirror calculeaza corelatia dintre increderea auto-evaluata si P/L-ul tau real. Iti spune daca esti overconfident (te evaluezi bine pe trade-uri care pierd) sau underconfident (te indoiesti de trade-uri care de fapt castiga). Majoritatea traderilor sunt socati de ce releva asta — <Link to="/blog/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">confidence vs overconfidence</Link> este una dintre cele mai prost intelese dinamici in trading.
+        Honesty Mirror calculeaza corelatia dintre increderea auto-evaluata si P/L-ul tau real. Iti spune daca esti overconfident (te evaluezi bine pe trade-uri care pierd) sau underconfident (te indoiesti de trade-uri care de fapt castiga). Majoritatea traderilor sunt socati de ce le arata — <Link to="/blog/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">confidence vs overconfidence</Link> este una dintre cele mai prost intelese dinamici in trading.
       </P>
 
       <H3>Trader Personality Profile (Premium)</H3>
@@ -151,7 +151,7 @@ export default function WhatIsKmfTradingJournalRo() {
       </P>
 
       <Callout title="De ce conteaza psihologia atat de mult" color="#CE93D8">
-        Am construit Psychology Engine-ul pentru ca am invatat — pe pielea noastra — ca <Link to="/blog/strategy-is-not-enough" className="text-kmf-accent hover:underline">strategia reprezinta doar circa 20% din joc</Link>. Ceilalti 80% sunt executie, disciplina si managementul emotional. Poti avea cel mai bun setup din lume, si daca il sari pentru ca ti-e frica, sau iti dubli pozitia pentru ca esti furios, strategia devine irelevanta. K.M.F. face acei 80% vizibili si masurabil.
+        Am construit Psychology Engine-ul pentru ca am invatat — pe pielea noastra — ca <Link to="/blog/strategy-is-not-enough" className="text-kmf-accent hover:underline">strategia reprezinta doar circa 20% din joc</Link>. Ceilalti 80% sunt executie, disciplina si managementul emotional. Poti avea cel mai bun setup din lume, si daca il sari pentru ca ti-e frica, sau iti dubli pozitia pentru ca esti furios, strategia devine irelevanta. K.M.F. face acei 80% vizibili si masurabili.
       </Callout>
 
       <Divider />
@@ -191,7 +191,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Abordare Psychology-First</H3>
       <P>
-        Majoritatea jurnalelor sunt spreadsheet-uri cu o interfata. K.M.F. este un instrument de psihologie care se intampla sa urmareasca si trade-uri. Emotion tracking, tilt detection, Honesty Mirror, profilare de personalitate si avertizari emotionale pre-trade — aceste functii nu exista in TraderSync, Tradervue sau Edgewonk. Exista in K.M.F. pentru ca noi credem ca a te intelege pe tine insuti este mai important decat a intelege piata.
+        Majoritatea jurnalelor sunt spreadsheet-uri cu o interfata. K.M.F. este un instrument de psihologie care se intampla sa urmareasca si trade-uri. Emotion tracking, tilt detection, Honesty Mirror, profilare de personalitate si avertizari emotionale pre-trade — aceste functii sunt greu de gasit in orice alt trading journal de pe piata. Exista in K.M.F. pentru ca noi credem ca a te intelege pe tine insuti este mai important decat a intelege piata.
       </P>
 
       <H3>Free Tier sincer</H3>
@@ -238,10 +238,10 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H2>Cum te ajuta K.M.F. sa cresti ca trader</H2>
       <P>
-        Aplicatia creeaza un feedback loop care se compune in timp:
+        Aplicatia creeaza un feedback loop care se acumuleaza in timp:
       </P>
       <Ul items={[
-        'Logheaza fiecare trade cu context — nu doar numere, ci emotii, aderenta la plan si tipul de setup',
+        'Logheaza fiecare trade cu context — nu doar numere, ci emotii, respectarea planului si tipul de setup',
         'Statisticile reveleaza pattern-uri pe care nu le poti vedea in date brute — care sesiune este cea mai buna, care zi este cea mai proasta, care setup are edge real',
         'Emotion tracking-ul arata corelatia dintre starea ta mentala si rezultate — date pe care niciun spreadsheet nu le poate produce',
         'Weekly review-urile te forteaza sa iti confrunti performanta sincer si sa stabilesti obiective specifice de imbunatatire',
@@ -262,7 +262,7 @@ export default function WhatIsKmfTradingJournalRo() {
         'Vrei sa iti intelegi psihologia — nu doar P/L-ul',
         'Tranzactionezi de pe mobil si ai nevoie de un journal care functioneaza pe telefon, offline, in sub 30 de secunde',
         'Esti trader la o prop firm si ai nevoie de tracking strict al riscului si instrumente de disciplina',
-        'Esti un trader in dezvoltare care vrea un framework structurat de imbunatatire, nu doar un depozit de date',
+        'Esti un trader in dezvoltare care vrea un sistem structurat de imbunatatire, nu doar un depozit de date',
       ]} />
 
       <H3>K.M.F. NU este pentru tine daca:</H3>
