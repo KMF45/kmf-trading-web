@@ -52,7 +52,7 @@ const zh = {
       },
       {
         "label": "剩余名额",
-        "value": "50",
+        "value": "7",
         "sub": "限量 beta 名额"
       }
     ]

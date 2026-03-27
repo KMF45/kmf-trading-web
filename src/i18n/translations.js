@@ -53,7 +53,7 @@ export const translations = {
         },
         {
           "label": "Spots Available",
-          "value": "50",
+          "value": "7",
           "sub": "limited beta access"
         }
       ]
@@ -456,7 +456,7 @@ export const translations = {
         },
         {
           "label": "Locuri disponibile",
-          "value": "50",
+          "value": "7",
           "sub": "acces beta limitat"
         }
       ]
@@ -859,7 +859,7 @@ export const translations = {
         },
         {
           "label": "Places disponibles",
-          "value": "50",
+          "value": "7",
           "sub": "accès bêta limité"
         }
       ]
@@ -1262,7 +1262,7 @@ export const translations = {
         },
         {
           "label": "Свободных мест",
-          "value": "50",
+          "value": "7",
           "sub": "ограниченный бета-доступ"
         }
       ]
@@ -1665,7 +1665,7 @@ export const translations = {
         },
         {
           "label": "残り枠",
-          "value": "50",
+          "value": "7",
           "sub": "限定ベータアクセス"
         }
       ]
@@ -2068,7 +2068,7 @@ export const translations = {
         },
         {
           "label": "Verfügbare Plätze",
-          "value": "50",
+          "value": "7",
           "sub": "begrenzter Beta-Zugang"
         }
       ]
@@ -2471,7 +2471,7 @@ export const translations = {
         },
         {
           "label": "剩余名额",
-          "value": "50",
+          "value": "7",
           "sub": "限量 beta 名额"
         }
       ]

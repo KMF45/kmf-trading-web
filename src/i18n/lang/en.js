@@ -52,7 +52,7 @@ const en = {
       },
       {
         "label": "Spots Available",
-        "value": "50",
+        "value": "7",
         "sub": "limited beta access"
       }
     ]

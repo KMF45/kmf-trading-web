@@ -52,7 +52,7 @@ const de = {
       },
       {
         "label": "Verfügbare Plätze",
-        "value": "50",
+        "value": "7",
         "sub": "begrenzter Beta-Zugang"
       }
     ]

@@ -52,7 +52,7 @@ const ro = {
       },
       {
         "label": "Locuri disponibile",
-        "value": "50",
+        "value": "7",
         "sub": "acces beta limitat"
       }
     ]

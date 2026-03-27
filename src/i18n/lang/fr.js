@@ -52,7 +52,7 @@ const fr = {
       },
       {
         "label": "Places disponibles",
-        "value": "50",
+        "value": "7",
         "sub": "accès bêta limité"
       }
     ]
