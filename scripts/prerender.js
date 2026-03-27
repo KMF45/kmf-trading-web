@@ -18,9 +18,19 @@ const DIST = join(__dirname, '..', 'dist');
 const PORT = 4173;
 
 const routes = [
+  // Priority pages first (homepage, about, blog index, categories)
   '/',
   '/about',
   '/blog',
+  '/blog/category/psychology',
+  '/blog/category/risk-management',
+  '/blog/category/statistics',
+  '/blog/category/improvement',
+  '/blog/category/discipline',
+  '/blog/category/app-reviews',
+  // Translated articles
+  '/blog/ro/what-is-kmf-trading-journal',
+  // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',
   '/blog/revenge-trading',
@@ -60,13 +70,6 @@ const routes = [
   '/blog/scared-money-prop-firm',
   '/blog/lotto-ticket-syndrome',
   '/blog/prospect-theory-trading',
-  '/blog/ro/what-is-kmf-trading-journal',
-  '/blog/category/psychology',
-  '/blog/category/risk-management',
-  '/blog/category/statistics',
-  '/blog/category/improvement',
-  '/blog/category/discipline',
-  '/blog/category/app-reviews',
 ];
 
 // Simple static file server that falls back to index.html (SPA)
@@ -112,16 +115,18 @@ async function prerender() {
     headless: chromium.headless,
   });
 
+  let rendered = 0;
+  const page = await browser.newPage();
+
   for (const route of routes) {
-    const page = await browser.newPage();
-    const url = `http://localhost:${PORT}${route}`;
-    await page.goto(url, { waitUntil: 'networkidle0', timeout: 15000 });
+    try {
+      const url = `http://localhost:${PORT}${route}`;
+      await page.goto(url, { waitUntil: 'networkidle0', timeout: 15000 });
 
-    // Wait a bit for React to settle and useEffect to fire
-    await new Promise(r => setTimeout(r, 1500));
+      // Wait a bit for React to settle and useEffect to fire
+      await new Promise(r => setTimeout(r, 1500));
 
-    let html = await page.content();
-    await page.close();
+      var html = await page.content();
 
     // Remove homepage-only JSON-LD from non-homepage routes
     // (SoftwareApplication, FAQPage, Organization, WebSite, homepage BreadcrumbList)
@@ -153,12 +158,17 @@ async function prerender() {
     mkdirSync(outDir, { recursive: true });
     const outFile = join(outDir, 'index.html');
     writeFileSync(outFile, html);
+    rendered++;
     console.log(`  ✓ ${route}`);
+    } catch (err) {
+      console.error(`  ✗ ${route} — ${err.message}`);
+    }
   }
 
+  await page.close();
   await browser.close();
   server.close();
-  console.log(`Done — ${routes.length} pages prerendered.`);
+  console.log(`Done — ${rendered}/${routes.length} pages prerendered.`);
 }
 
 prerender().catch(err => {
