@@ -4,7 +4,8 @@ const zh = {
     "pricing": "价格",
     "download": "下载",
     "faq": "FAQ",
-    "blog": "博客"
+    "blog": "博客",
+    "resources": "资源"
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",

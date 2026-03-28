@@ -68,6 +68,68 @@ const LangSwitcher = () => {
   );
 };
 
+const ResourcesDropdown = () => {
+  const { t } = useLanguage();
+  const [open, setOpen] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const close = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+    document.addEventListener('mousedown', close);
+    return () => document.removeEventListener('mousedown', close);
+  }, []);
+
+  return (
+    <div className="relative" ref={ref}>
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-1 text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium"
+        aria-expanded={open}
+      >
+        {t('nav.resources') || 'Resources'}
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor" style={{ opacity: 0.5, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
+          <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+        </svg>
+      </button>
+
+      {open && (
+        <div
+          className="absolute left-0 top-full mt-2 rounded-xl overflow-hidden animate-fadeIn z-50"
+          style={{
+            background: 'rgba(20,23,30,0.97)',
+            border: '1px solid rgba(79,195,247,0.15)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+            backdropFilter: 'blur(12px)',
+            minWidth: 200,
+          }}
+        >
+          <Link
+            to="/blog"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+            style={{ borderBottom: '1px solid rgba(79,195,247,0.08)' }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
+              <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+            </svg>
+            {t('nav.blog')}
+          </Link>
+          <Link
+            to="/tools/lot-size-calculator"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm3-4H7v-2h8v2zm2-4H7V7h10v2z"/>
+            </svg>
+            Lot Size Calculator
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+};
+
 const Navbar = () => {
   const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
@@ -121,7 +183,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <a key={link.href} href={link.href} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium">{link.label}</a>
               ))}
-              <Link to="/blog" className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium">{t('nav.blog')}</Link>
+              <ResourcesDropdown />
               <LangSwitcher />
             </div>
 
@@ -144,7 +206,9 @@ const Navbar = () => {
                 {navLinks.map((link) => (
                   <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">{link.label}</a>
                 ))}
-                <Link to="/blog" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">{t('nav.blog')}</Link>
+                <span className="text-kmf-text-tertiary text-xs font-semibold uppercase tracking-wider px-2 pt-2">{t('nav.resources') || 'Resources'}</span>
+                <Link to="/blog" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">{t('nav.blog')}</Link>
+                <Link to="/tools/lot-size-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Lot Size Calculator</Link>
               </div>
             </div>
           )}

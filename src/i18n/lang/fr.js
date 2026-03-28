@@ -4,7 +4,8 @@ const fr = {
     "pricing": "Tarifs",
     "download": "Télécharger",
     "faq": "FAQ",
-    "blog": "Blog"
+    "blog": "Blog",
+    "resources": "Ressources"
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",

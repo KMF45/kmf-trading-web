@@ -4,7 +4,8 @@ const ro = {
     "pricing": "Prețuri",
     "download": "Descarcă",
     "faq": "Întrebări frecvente",
-    "blog": "Blog"
+    "blog": "Blog",
+    "resources": "Resurse"
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",

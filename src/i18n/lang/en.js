@@ -4,7 +4,8 @@ const en = {
     "pricing": "Pricing",
     "download": "Download",
     "faq": "FAQ",
-    "blog": "Blog"
+    "blog": "Blog",
+    "resources": "Resources"
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",

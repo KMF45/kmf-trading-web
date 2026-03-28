@@ -4,7 +4,8 @@ const ru = {
     "pricing": "Цены",
     "download": "Скачать",
     "faq": "FAQ",
-    "blog": "Блог"
+    "blog": "Блог",
+    "resources": "Ресурсы"
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",

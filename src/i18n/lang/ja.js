@@ -4,7 +4,8 @@ const ja = {
     "pricing": "料金",
     "download": "ダウンロード",
     "faq": "FAQ",
-    "blog": "ブログ"
+    "blog": "ブログ",
+    "resources": "リソース"
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",

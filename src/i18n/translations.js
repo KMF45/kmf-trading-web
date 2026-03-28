@@ -5,7 +5,8 @@ export const translations = {
       "pricing": "Pricing",
       "download": "Download",
       "faq": "FAQ",
-      "blog": "Blog"
+      "blog": "Blog",
+      "resources": "Resources"
     },
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
@@ -408,7 +409,8 @@ export const translations = {
       "pricing": "Prețuri",
       "download": "Descarcă",
       "faq": "Întrebări frecvente",
-      "blog": "Blog"
+      "blog": "Blog",
+      "resources": "Resurse"
     },
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
@@ -811,7 +813,8 @@ export const translations = {
       "pricing": "Tarifs",
       "download": "Télécharger",
       "faq": "FAQ",
-      "blog": "Blog"
+      "blog": "Blog",
+      "resources": "Ressources"
     },
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
@@ -1214,7 +1217,8 @@ export const translations = {
       "pricing": "Цены",
       "download": "Скачать",
       "faq": "FAQ",
-      "blog": "Блог"
+      "blog": "Блог",
+      "resources": "Ресурсы"
     },
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
@@ -1617,7 +1621,8 @@ export const translations = {
       "pricing": "料金",
       "download": "ダウンロード",
       "faq": "FAQ",
-      "blog": "ブログ"
+      "blog": "ブログ",
+      "resources": "リソース"
     },
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
@@ -2020,7 +2025,8 @@ export const translations = {
       "pricing": "Preise",
       "download": "Download",
       "faq": "FAQ",
-      "blog": "Blog"
+      "blog": "Blog",
+      "resources": "Ressourcen"
     },
     "hero": {
       "tagline": "KEEP MOVING FORWARD",
@@ -2423,7 +2429,8 @@ export const translations = {
       "pricing": "价格",
       "download": "下载",
       "faq": "FAQ",
-      "blog": "博客"
+      "blog": "博客",
+      "resources": "资源"
     },
     "hero": {
       "tagline": "KEEP MOVING FORWARD",

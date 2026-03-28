@@ -4,7 +4,8 @@ const de = {
     "pricing": "Preise",
     "download": "Download",
     "faq": "FAQ",
-    "blog": "Blog"
+    "blog": "Blog",
+    "resources": "Ressourcen"
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
