@@ -28,6 +28,8 @@ const routes = [
   '/blog/category/improvement',
   '/blog/category/discipline',
   '/blog/category/app-reviews',
+  // Tools
+  '/tools/lot-size-calculator',
   // Translated articles
   '/blog/ro/what-is-kmf-trading-journal',
   // Blog articles

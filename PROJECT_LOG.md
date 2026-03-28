@@ -5,6 +5,20 @@ Proiect web pentru kmfjournal.com — site de prezentare: landing page multiling
 
 ## Sesiuni de lucru
 
+### 2026-03-27 — Sesiunea #13 (Fix prerender crash — category pages nu se indexau)
+**Ce s-a cerut:** Investigare de ce 13 pagini apar "Crawled - currently not indexed" in Search Console
+**Ce s-a facut:**
+- Diagnosticat cauza: Puppeteer crea `browser.newPage()` per ruta → memory leak → crash "detached Frame" dupa ~48 rute. Category pages (ultimele 6) nu erau niciodata prerendered → Google primea shell SPA gol
+- Fix: refolosire unei singure pagini Puppeteer (eliminat memory leak), mutat category routes in top priority, adaugat try-catch per ruta
+- Rezultat: 49/49 pagini prerendered (inainte: 48/70, categorii lipseau complet)
+- Deploy pe Vercel via git push
+**Fisiere modificate:**
+- `scripts/prerender.js` — reuse page, route priority, per-route error handling
+**De retinut:** Articolele noi (6) sunt "crawled not indexed" doar fiindca sunt recente pe domeniu tanar — se vor indexa singure. sitemap.xml nu se indexeaza niciodata (normal). Category pages erau problema reala.
+**Urmatorii pasi sugerati:** Request indexing manual in Search Console pe cele 12 pagini. Monitorizeaza dupa 1 saptamana.
+
+---
+
 ### 2026-03-24 — Sesiunea #12 (Blog translation system + first RO article)
 **Ce s-a cerut:** Traducerea articolului "What Is KMF Trading Journal" in romana + sistem de language switcher pe blog
 **Ce s-a facut:**

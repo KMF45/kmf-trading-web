@@ -51,6 +51,9 @@ const LottoTicketSyndrome = lazy(() => import('./pages/blog/LottoTicketSyndrome'
 const ProspectTheoryTrading = lazy(() => import('./pages/blog/ProspectTheoryTrading'));
 const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTradingJournalRo'));
 
+// Tools
+const LotCalculatorPage = lazy(() => import('./pages/LotCalculatorPage'));
+
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
   <div className="min-h-screen bg-kmf-bg flex items-center justify-center">
@@ -119,6 +122,9 @@ function App() {
           <Route path="/blog/scared-money-prop-firm" element={<ScaredMoneyPropFirm />} />
           <Route path="/blog/lotto-ticket-syndrome" element={<LottoTicketSyndrome />} />
           <Route path="/blog/prospect-theory-trading" element={<ProspectTheoryTrading />} />
+
+          {/* Tools */}
+          <Route path="/tools/lot-size-calculator" element={<LotCalculatorPage />} />
 
           {/* Translated articles */}
           <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />
