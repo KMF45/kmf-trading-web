@@ -7,6 +7,7 @@ import { CATEGORIES, ALL_INSTRUMENTS, CUSTOM_INSTRUMENT } from '../data/instrume
 
 const LEVERAGE_OPTIONS = [1, 2, 5, 10, 20, 25, 30, 50, 100, 200, 300, 400, 500];
 const ACCOUNT_CURRENCIES = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'AUD', 'CAD', 'NZD'];
+const CURRENCY_SYMBOLS = { USD: '$', EUR: '€', GBP: '£', JPY: '¥', CHF: 'CHF ', AUD: 'A$', CAD: 'C$', NZD: 'NZ$' };
 
 const PAGE_TITLE = 'Free Lot Size Calculator — Forex, Crypto, Stocks, Indices | K.M.F.';
 const PAGE_DESC = 'Calculate the perfect lot size for any trade. 200+ instruments, real-time exchange rates, risk management built in. Free, no signup required.';
@@ -260,6 +261,7 @@ export default function LotCalculatorPage() {
   }), [balance, accountCurrency, riskPercent, entry, stopLoss, takeProfit, activeSymbol, leverage, exchangeRates]);
 
   const hasResult = result.lotSize > 0 && !result.hasError;
+  const cs = CURRENCY_SYMBOLS[accountCurrency] || accountCurrency + ' ';
 
   return (
     <>
@@ -423,9 +425,9 @@ export default function LotCalculatorPage() {
 
                     {/* Key metrics grid */}
                     <div className="grid grid-cols-2 gap-2">
-                      <ResultStat label="Risk Amount" value={`$${result.riskAmount.toFixed(2)}`} color="#FF5252" />
-                      <ResultStat label="Margin Required" value={`$${result.marginRequired.toFixed(2)}`} color="#FFB300" />
-                      <ResultStat label="Pip Value" value={`$${result.pipValue.toFixed(2)}`} color="#4FC3F7" />
+                      <ResultStat label="Risk Amount" value={`${cs}${result.riskAmount.toFixed(2)}`} color="#FF5252" />
+                      <ResultStat label="Margin Required" value={`${cs}${result.marginRequired.toFixed(2)}`} color="#FFB300" />
+                      <ResultStat label="Pip Value" value={`${cs}${result.pipValue.toFixed(2)}`} color="#4FC3F7" />
                       <ResultStat label="SL Distance" value={`${result.stopLossPips.toFixed(1)} pips`} color="#CE93D8" />
                     </div>
 
@@ -434,7 +436,7 @@ export default function LotCalculatorPage() {
                       <div className="grid grid-cols-3 gap-2">
                         <ResultStat label="TP Distance" value={`${result.takeProfitPips.toFixed(1)} pips`} color="#00E676" />
                         <ResultStat label="R:R Ratio" value={`1:${result.riskRewardRatio.toFixed(2)}`} color="#00E676" />
-                        <ResultStat label="Potential Win" value={`$${(result.balanceAfterWin - (parseFloat(balance) || 0)).toFixed(2)}`} color="#00E676" />
+                        <ResultStat label="Potential Win" value={`${cs}${(result.balanceAfterWin - (parseFloat(balance) || 0)).toFixed(2)}`} color="#00E676" />
                       </div>
                     )}
 
@@ -442,12 +444,12 @@ export default function LotCalculatorPage() {
                     <div className="grid grid-cols-2 gap-2">
                       <div className="rounded-xl p-3 text-center" style={{ background: 'rgba(255,82,82,0.05)', border: '1px solid rgba(255,82,82,0.1)' }}>
                         <p className="text-[10px] text-kmf-text-tertiary mb-0.5">Balance After Loss</p>
-                        <p className="text-sm font-bold text-red-400">${result.balanceAfterLoss.toFixed(2)}</p>
+                        <p className="text-sm font-bold text-red-400">{cs}{result.balanceAfterLoss.toFixed(2)}</p>
                       </div>
                       {result.balanceAfterWin > 0 && (
                         <div className="rounded-xl p-3 text-center" style={{ background: 'rgba(0,230,118,0.05)', border: '1px solid rgba(0,230,118,0.1)' }}>
                           <p className="text-[10px] text-kmf-text-tertiary mb-0.5">Balance After Win</p>
-                          <p className="text-sm font-bold text-green-400">${result.balanceAfterWin.toFixed(2)}</p>
+                          <p className="text-sm font-bold text-green-400">{cs}{result.balanceAfterWin.toFixed(2)}</p>
                         </div>
                       )}
                     </div>
