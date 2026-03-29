@@ -80,6 +80,19 @@ const Footer = () => {
               </li>
             </ul>
 
+            <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">Tools</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/tools/lot-size-calculator"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200 text-sm"
+                >
+                  Lot Size Calculator
+                </Link>
+              </li>
+            </ul>
+
             <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">{t('footer.fromBlog')}</h4>
             <ul className="space-y-2">
               {[

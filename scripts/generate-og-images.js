@@ -56,12 +56,18 @@ const articles = [
   { slug: 'ro-what-is-kmf-trading-journal', title: 'Ce este K.M.F.\nTrading Journal?\nAplicatia construita de traderi', category: 'Recenzii Aplicatii', color: '#4FC3F7' },
 ];
 
+// Tools OG images (output to /public/tools/og/)
+const toolsOutDir = join(__dirname, '..', 'public', 'tools', 'og');
+const tools = [
+  { slug: 'lot-size-calculator', title: 'Free Lot Size Calculator\n340+ Instruments\nReal-Time Exchange Rates', category: 'Trading Tool', color: '#4FC3F7' },
+];
+
 function hexToRgb(hex) {
   const n = parseInt(hex.slice(1), 16);
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
 }
 
-function generate(article) {
+function generate(article, outDir = OUT_DIR) {
   const W = 1200, H = 630;
   const canvas = createCanvas(W, H);
   const ctx = canvas.getContext('2d');
@@ -115,7 +121,7 @@ function generate(article) {
   ctx.fillText('kmfjournal.com', W - 60 - ctx.measureText('kmfjournal.com').width, H - 28);
 
   const buf = canvas.toBuffer('image/png');
-  const outPath = join(OUT_DIR, `${article.slug}.png`);
+  const outPath = join(outDir, `${article.slug}.png`);
   writeFileSync(outPath, buf);
   console.log(`  ✓ ${article.slug}.png`);
 }
@@ -123,6 +129,12 @@ function generate(article) {
 mkdirSync(OUT_DIR, { recursive: true });
 console.log('Generating OG images...');
 for (const article of articles) {
-  generate(article);
+  generate(article, OUT_DIR);
 }
-console.log(`Done — ${articles.length} images in public/blog/og/`);
+console.log(`Done — ${articles.length} blog images in public/blog/og/`);
+
+mkdirSync(toolsOutDir, { recursive: true });
+for (const tool of tools) {
+  generate(tool, toolsOutDir);
+}
+console.log(`Done — ${tools.length} tool images in public/tools/og/`);

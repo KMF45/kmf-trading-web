@@ -1,9 +1,34 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 40 OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5+ articole, dateModified pe Article schema. 52 URL-uri în sitemap, 49 pagini prerendered. Sistem de traducere blog activ: LanguageSwitcher + hreflang + blogTranslations map.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 40 OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5+ articole, dateModified pe Article schema. 53 URL-uri în sitemap, 50 pagini prerendered. Sistem de traducere blog activ: LanguageSwitcher + hreflang + blogTranslations map. Lot Size Calculator cu 341 instrumente, exchange rates real-time, favorites system.
 
 ## Sesiuni de lucru
+
+### 2026-03-28 — Sesiunea #14 (Lot Size Calculator + beta spots update)
+**Ce s-a cerut:** Pagina Lot Size Calculator la /tools/lot-size-calculator + actualizare beta spots 50→7
+**Ce s-a facut:**
+- Calculator complet cu 341 instrumente in 11 categorii (forex majors/crosses/exotics, indices, metals, energy, crypto, stocks, agriculture, bonds, ETFs)
+- Exchange rates real-time via open.er-api.com (cache 1h localStorage, fallback hardcoded rates)
+- Inline dropdown instrument picker cu search, category tabs, favorites (localStorage)
+- Calculul identic cu app-ul Android: truncation (floor), nu rounding
+- JSON-LD: WebApplication, FAQPage, BreadcrumbList schemas
+- FAQ section (6 intrebari), educational content, related articles, disclaimer
+- CTA bar compacta centrata cu link Google Play
+- Beta spots actualizat 50→7 in toate cele 7 limbi (14 fisiere)
+- Adaugat in sitemap.xml (priority 0.9) si prerender routes
+**Fisiere create:**
+- `src/data/instruments.js` — 341 instrumente cu contract size, pip size, quote currency
+- `src/pages/LotCalculatorPage.jsx` — pagina completa calculator
+**Fisiere modificate:**
+- `src/App.jsx` — lazy route /tools/lot-size-calculator
+- `public/sitemap.xml` — URL nou calculator
+- `scripts/prerender.js` — ruta calculator adaugata
+- `src/i18n/translations.js` + 7 lang files — beta spots 50→7
+**De retinut:** Calculator foloseste doar free API fara key. Custom instrument disponibil pentru instrumente nelisted. Favorites persist in localStorage.
+**Urmatorii pasi sugerati:** OG image pentru calculator, GA4 events (calculator_used, instrument_selected), link din navbar/footer catre calculator.
+
+---
 
 ### 2026-03-27 — Sesiunea #13 (Fix prerender crash — category pages nu se indexau)
 **Ce s-a cerut:** Investigare de ce 13 pagini apar "Crawled - currently not indexed" in Search Console

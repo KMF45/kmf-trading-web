@@ -130,6 +130,10 @@ export default function HowToSetStopLoss() {
         The practice of moving a stop loss further away when the trade goes against you — to avoid being stopped out — is not a stop loss adjustment strategy. It is a discipline failure. Your original stop was placed for a reason: it represented the price at which your trade thesis fails. Moving it away from your entry does not change that reality. It only increases the amount you will lose when the thesis finally fails.
       </P>
 
+      <Callout>
+        Once you have your stop loss level, use our <Link to="/tools/lot-size-calculator" className="text-kmf-accent underline hover:text-white transition-colors">free Lot Size Calculator</Link> to get the exact position size instantly — 340+ instruments supported.
+      </Callout>
+
       <Takeaways items={[
         'Stop losses should be placed at structural levels where the trade thesis is invalidated — not based on arbitrary pip counts or dollar amounts.',
         'The correct order: identify stop level first, then calculate position size. Never reverse this.',

@@ -60,6 +60,9 @@ export default function PositionSizingGuide() {
       <Callout title="The Golden Rule" color="#00C853">
         Always calculate position size from your stop loss, never move your stop loss to fit your preferred position size. Inverting this logic is one of the most common — and most destructive — mistakes in retail trading.
       </Callout>
+      <Callout>
+        Want to skip the math? Use our <Link to="/tools/lot-size-calculator" className="text-kmf-accent underline hover:text-white transition-colors">free Lot Size Calculator</Link> — 340+ instruments, real-time exchange rates, instant results.
+      </Callout>
 
       <Divider />
 

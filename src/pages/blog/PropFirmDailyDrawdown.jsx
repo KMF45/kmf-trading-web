@@ -183,6 +183,10 @@ export default function PropFirmDailyDrawdown() {
         The daily drawdown rule isn't your enemy. It's your guardrail. Build your trading around it instead of testing how close you can get without touching it.
       </P>
 
+      <Callout>
+        Calculate your exact position size for any prop firm account with our <Link to="/tools/lot-size-calculator" className="text-kmf-accent underline hover:text-white transition-colors">free Lot Size Calculator</Link> — stay within drawdown limits every time.
+      </Callout>
+
       <Takeaways items={[
         'The daily drawdown rule (typically 5%) is the #1 reason prop firm accounts get terminated — ahead of overall drawdown.',
         'Most violations aren\'t caused by one big loss — they\'re caused by 3-4 escalating trades driven by frustration and revenge trading.',

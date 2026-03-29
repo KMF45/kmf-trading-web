@@ -87,6 +87,9 @@ export default function OnePercentRiskRule() {
       <P>
         If this trade wins at a 2:1 target (100 pips above entry at 1.0900), the gain is $200 — a clean 2R outcome. If it loses at the stop, the loss is exactly $100, or 1% of the account.
       </P>
+      <Callout>
+        Skip the math — use our <Link to="/tools/lot-size-calculator" className="text-kmf-accent underline hover:text-white transition-colors">free Lot Size Calculator</Link> to get the exact position size for any instrument in seconds.
+      </Callout>
 
       <Divider />
 
