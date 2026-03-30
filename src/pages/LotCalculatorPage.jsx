@@ -457,6 +457,17 @@ export default function LotCalculatorPage() {
                       <p className="text-kmf-text-tertiary text-sm mt-2">standard lots</p>
                     </div>
 
+                    {/* Risk Summary — "Risking X to make Y" */}
+                    <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(79,195,247,0.04)', border: '1px solid rgba(79,195,247,0.1)' }}>
+                      <p className="text-sm text-kmf-text-secondary">
+                        Risking <span className="font-bold text-red-400">{cs}{result.riskAmount.toFixed(2)}</span>
+                        {result.takeProfitPips > 0 && (
+                          <> to make <span className="font-bold text-green-400">{cs}{(result.balanceAfterWin - (parseFloat(balance) || 0)).toFixed(2)}</span>
+                          <span className="text-kmf-text-tertiary ml-1.5 text-xs font-medium px-1.5 py-0.5 rounded-full" style={{ background: 'rgba(0,230,118,0.1)', color: '#00E676' }}>R:R 1:{result.riskRewardRatio.toFixed(1)}</span></>
+                        )}
+                      </p>
+                    </div>
+
                     {/* Lot breakdown: Standard / Mini / Micro */}
                     <div className="grid grid-cols-3 gap-2">
                       <div className="rounded-xl p-3 text-center" style={{ background: 'rgba(79,195,247,0.06)', border: '1px solid rgba(79,195,247,0.12)' }}>
