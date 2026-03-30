@@ -1,9 +1,41 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 40 OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5+ articole, dateModified pe Article schema. 53 URL-uri în sitemap, 50 pagini prerendered. Sistem de traducere blog activ: LanguageSwitcher + hreflang + blogTranslations map. Lot Size Calculator cu 341 instrumente, exchange rates real-time, favorites system.
+Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 40+ OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5+ articole, dateModified pe Article schema. 54 URL-uri în sitemap, 51 pagini prerendered. Sistem de traducere blog activ: LanguageSwitcher + hreflang + blogTranslations map. Lot Size Calculator cu 341 instrumente, exchange rates real-time, favorites system. Risk of Ruin Calculator cu Monte Carlo simulation, equity curve chart, scenario table.
 
 ## Sesiuni de lucru
+
+### 2026-03-30 — Sesiunea #16 (Risk of Ruin Calculator)
+**Ce s-a cerut:** Pagina Risk of Ruin Calculator cu Monte Carlo simulation, equity curves, scenario table, SEO content
+**Ce s-a facut:**
+- Calculator complet la `/tools/risk-of-ruin` cu:
+  - Monte Carlo engine (500 simulari, 50 equity curves pe chart)
+  - Inputs: win rate, avg win/loss R, risk %, nr trades, ruin threshold
+  - 5 preset-uri (Conservative, Standard, Aggressive, Scalper, Swing Trader)
+  - Rezultat color-coded (Excellent/Good/Moderate/Risky/Dangerous)
+  - Equity curve chart cu recharts (50 paths, ruin reference line, custom tooltip)
+  - Stats grid (Median, Average, Best, Worst)
+  - Scenario table: cum se schimba RoR la diferite risk per trade (analytical approximation)
+  - Expectancy indicator
+  - Content SEO educational cu internal links catre blog articles
+  - FAQ accordion (5 intrebari) cu JSON-LD FAQPage
+  - JSON-LD: WebApplication + FAQPage + BreadcrumbList
+  - GA4 event: risk_of_ruin_calculated
+  - Cross-link bidirectional cu Lot Size Calculator
+  - FARA prop firm angle (conform cerinta)
+**Fisiere create:**
+- `src/pages/RiskOfRuinPage.jsx` — pagina completa (24KB gzipped)
+**Fisiere modificate:**
+- `src/App.jsx` — lazy import + route /tools/risk-of-ruin
+- `src/components/landing/Navbar.jsx` — link in Resources dropdown (desktop + mobile)
+- `src/components/Footer.jsx` — link in sectiunea Tools
+- `public/sitemap.xml` — URL nou priority 0.9
+- `scripts/prerender.js` — ruta adaugata
+- `scripts/generate-og-images.js` — entry OG imagine cu tema rosie
+**Build:** OK, zero erori
+**Urmatorii pasi sugerati:** Deploy, generare OG image efectiv, testare pe mobile
+
+---
 
 ### 2026-03-28 — Sesiunea #14 (Lot Size Calculator + beta spots update)
 **Ce s-a cerut:** Pagina Lot Size Calculator la /tools/lot-size-calculator + actualizare beta spots 50→7

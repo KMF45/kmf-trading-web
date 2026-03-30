@@ -60,6 +60,7 @@ const articles = [
 const toolsOutDir = join(__dirname, '..', 'public', 'tools', 'og');
 const tools = [
   { slug: 'lot-size-calculator', title: 'Free Lot Size Calculator\n340+ Instruments\nReal-Time Exchange Rates', category: 'Trading Tool', color: '#4FC3F7' },
+  { slug: 'risk-of-ruin', title: 'Risk of Ruin Calculator\nMonte Carlo Simulation\nKnow Before You Blow', category: 'Trading Tool', color: '#FF5252' },
 ];
 
 function hexToRgb(hex) {

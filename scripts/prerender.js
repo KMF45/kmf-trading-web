@@ -30,6 +30,7 @@ const routes = [
   '/blog/category/app-reviews',
   // Tools
   '/tools/lot-size-calculator',
+  '/tools/risk-of-ruin',
   // Translated articles
   '/blog/ro/what-is-kmf-trading-journal',
   // Blog articles

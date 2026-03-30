@@ -53,6 +53,7 @@ const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTr
 
 // Tools
 const LotCalculatorPage = lazy(() => import('./pages/LotCalculatorPage'));
+const RiskOfRuinPage = lazy(() => import('./pages/RiskOfRuinPage'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -125,6 +126,7 @@ function App() {
 
           {/* Tools */}
           <Route path="/tools/lot-size-calculator" element={<LotCalculatorPage />} />
+          <Route path="/tools/risk-of-ruin" element={<RiskOfRuinPage />} />
 
           {/* Translated articles */}
           <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />

@@ -118,11 +118,22 @@ const ResourcesDropdown = () => {
             to="/tools/lot-size-calculator"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+            style={{ borderBottom: '1px solid rgba(79,195,247,0.08)' }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
               <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm3-4H7v-2h8v2zm2-4H7V7h10v2z"/>
             </svg>
             Lot Size Calculator
+          </Link>
+          <Link
+            to="/tools/risk-of-ruin"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+            </svg>
+            Risk of Ruin Calculator
           </Link>
         </div>
       )}
@@ -209,6 +220,7 @@ const Navbar = () => {
                 <span className="text-kmf-text-tertiary text-xs font-semibold uppercase tracking-wider px-2 pt-2">{t('nav.resources') || 'Resources'}</span>
                 <Link to="/blog" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">{t('nav.blog')}</Link>
                 <Link to="/tools/lot-size-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Lot Size Calculator</Link>
+                <Link to="/tools/risk-of-ruin" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Risk of Ruin Calculator</Link>
               </div>
             </div>
           )}
