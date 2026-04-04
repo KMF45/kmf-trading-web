@@ -51,6 +51,10 @@ const LottoTicketSyndrome = lazy(() => import('./pages/blog/LottoTicketSyndrome'
 const ProspectTheoryTrading = lazy(() => import('./pages/blog/ProspectTheoryTrading'));
 const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTradingJournalRo'));
 
+// LiquidHours legal pages
+const LHPrivacyPolicy = lazy(() => import('./pages/liquidhours/PrivacyPolicyPage'));
+const LHTermsOfUse = lazy(() => import('./pages/liquidhours/TermsOfUsePage'));
+
 // Tools
 const LotCalculatorPage = lazy(() => import('./pages/LotCalculatorPage'));
 const RiskOfRuinPage = lazy(() => import('./pages/RiskOfRuinPage'));
@@ -132,6 +136,10 @@ function App() {
 
           {/* Translated articles */}
           <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />
+
+          {/* LiquidHours legal */}
+          <Route path="/liquidhours/privacy-policy" element={<LHPrivacyPolicy />} />
+          <Route path="/liquidhours/terms-of-use" element={<LHTermsOfUse />} />
 
           {/* 404 */}
           <Route path="*" element={<NotFoundPage />} />
