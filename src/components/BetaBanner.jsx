@@ -62,7 +62,8 @@ const BetaBanner = () => {
 
     try {
       const { collection, addDoc, serverTimestamp } = await import('firebase/firestore');
-      const { db } = await import('../config/firebase');
+      const { db, initAppCheck } = await import('../config/firebase');
+      await initAppCheck();
 
       await addDoc(collection(db, 'betaSignups'), {
         name: form.name.trim(),
