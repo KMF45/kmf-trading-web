@@ -44,6 +44,9 @@ const BetaBanner = () => {
     const err = {};
     if (!form.name || form.name.trim().length < 2) err.name = t('beta.errorName');
     if (!form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) err.email = t('beta.errorEmail');
+    if (!form.experience) err.experience = true;
+    if (form.markets.length === 0) err.markets = true;
+    if (!form.journalMethod) err.journalMethod = true;
     setErrors(err);
     return Object.keys(err).length === 0;
   };
@@ -294,7 +297,7 @@ const BetaBanner = () => {
               <form onSubmit={handleSubmit} noValidate>
                 {/* Name */}
                 <div style={{ marginBottom: 14 }}>
-                  <label style={labelStyle}>{t('beta.namePlaceholder')}</label>
+                  <label style={{ ...labelStyle, color: errors.name ? '#FF5252' : '#D4C0A0' }}>{t('beta.namePlaceholder')} *</label>
                   <input
                     ref={firstInputRef}
                     type="text"
@@ -310,9 +313,9 @@ const BetaBanner = () => {
 
                 {/* Email */}
                 <div style={{ marginBottom: 14 }}>
-                  <label style={labelStyle}>
-                    {t('beta.emailPlaceholder')}
-                    <span style={{ color: '#9A8060', fontWeight: 400, marginLeft: 6, fontSize: 11 }}>
+                  <label style={{ ...labelStyle, color: errors.email ? '#FF5252' : '#D4C0A0' }}>
+                    {t('beta.emailPlaceholder')} *
+                    <span style={{ color: errors.email ? '#FF5252' : '#9A8060', fontWeight: 400, marginLeft: 6, fontSize: 11 }}>
                       — {t('beta.emailLoginNote')}
                     </span>
                   </label>
@@ -330,7 +333,7 @@ const BetaBanner = () => {
 
                 {/* Experience */}
                 <div style={{ marginBottom: 14 }}>
-                  <label style={labelStyle}>{t('beta.experienceLabel')}</label>
+                  <label style={{ ...labelStyle, color: errors.experience ? '#FF5252' : '#D4C0A0' }}>{t('beta.experienceLabel')} *</label>
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                     {experienceOptions.map((opt) => (
                       <button
@@ -352,7 +355,7 @@ const BetaBanner = () => {
 
                 {/* Markets (multi-select) */}
                 <div style={{ marginBottom: 14 }}>
-                  <label style={labelStyle}>{t('beta.marketsLabel')}</label>
+                  <label style={{ ...labelStyle, color: errors.markets ? '#FF5252' : '#D4C0A0' }}>{t('beta.marketsLabel')} *</label>
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                     {marketsOptions.map((opt) => (
                       <button
@@ -374,7 +377,7 @@ const BetaBanner = () => {
 
                 {/* Journal Method */}
                 <div style={{ marginBottom: 18 }}>
-                  <label style={labelStyle}>{t('beta.journalLabel')}</label>
+                  <label style={{ ...labelStyle, color: errors.journalMethod ? '#FF5252' : '#D4C0A0' }}>{t('beta.journalLabel')} *</label>
                   <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                     {journalOptions.map((opt) => (
                       <button
