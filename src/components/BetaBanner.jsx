@@ -75,7 +75,8 @@ const BetaBanner = () => {
       });
 
       setStatus('success');
-    } catch {
+    } catch (err) {
+      console.error('[BetaBanner] Submit failed:', err);
       setStatus('error');
     }
   };
