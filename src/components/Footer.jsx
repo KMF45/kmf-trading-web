@@ -100,6 +100,15 @@ const Footer = () => {
                   Risk of Ruin Calculator
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/tools/win-rate-rr-matrix"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200 text-sm"
+                >
+                  Win Rate vs R:R Matrix
+                </Link>
+              </li>
             </ul>
 
             <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">{t('footer.fromBlog')}</h4>

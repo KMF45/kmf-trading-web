@@ -129,11 +129,22 @@ const ResourcesDropdown = () => {
             to="/tools/risk-of-ruin"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+            style={{ borderBottom: '1px solid rgba(79,195,247,0.08)' }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
             </svg>
             Risk of Ruin Calculator
+          </Link>
+          <Link
+            to="/tools/win-rate-rr-matrix"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
+              <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/>
+            </svg>
+            Win Rate vs R:R Matrix
           </Link>
         </div>
       )}
@@ -221,6 +232,7 @@ const Navbar = () => {
                 <Link to="/blog" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">{t('nav.blog')}</Link>
                 <Link to="/tools/lot-size-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Lot Size Calculator</Link>
                 <Link to="/tools/risk-of-ruin" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Risk of Ruin Calculator</Link>
+                <Link to="/tools/win-rate-rr-matrix" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Win Rate vs R:R Matrix</Link>
               </div>
             </div>
           )}

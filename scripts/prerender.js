@@ -31,6 +31,7 @@ const routes = [
   // Tools
   '/tools/lot-size-calculator',
   '/tools/risk-of-ruin',
+  '/tools/win-rate-rr-matrix',
   // Translated articles
   '/blog/ro/what-is-kmf-trading-journal',
   // Blog articles

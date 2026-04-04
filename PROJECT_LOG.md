@@ -1,9 +1,39 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — site de prezentare: landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator). Stack: React 19, Vite, Tailwind CSS. Firebase doar BetaBanner (lazy). App lansată pe Google Play. Toate CTA-urile trimit direct la Google Play. Optimizări: lazy-loaded translations (-56% JS), GA4 event tracking, sticky CTA banner pe blog, 40+ OG images, blog category pages (6 categorii), accessibility pass complet, E-E-A-T About page, HowTo schema pe 5+ articole, dateModified pe Article schema. 54 URL-uri în sitemap, 51 pagini prerendered. Sistem de traducere blog activ: LanguageSwitcher + hreflang + blogTranslations map. Lot Size Calculator cu 341 instrumente, exchange rates real-time, favorites system. Risk of Ruin Calculator cu Monte Carlo simulation, equity curve chart, scenario table.
+Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator, Win Rate vs R:R Matrix). Stack: React 19, Vite, Tailwind CSS. 55 URL-uri în sitemap, 52 pagini prerendered. 3 OG images pentru tools.
 
 ## Sesiuni de lucru
+
+### 2026-04-03 — Sesiunea #17 (Win Rate vs R:R Matrix)
+**Ce s-a cerut:** Tool nou — heatmap interactiv Win Rate vs R:R, design frumos și animat
+**Ce s-a făcut:**
+- Pagina completă la `/tools/win-rate-rr-matrix`:
+  - Heatmap 13×11 (win rate 20→80% × R:R 0.3→5.0), 143 celule
+  - Animație staggered la load (celule apar în val)
+  - Hover → scale + glow + tooltip cu expectancy exactă + $ per $1000 riscat
+  - Marker animat (pulse) pe celula corespunzătoare win rate/R:R-ului tău
+  - 2 slidere (win rate + R:R) cu preview instant pe matrice
+  - Result card cu expectancy calculată în timp real, text contextual
+  - 3 insight cards (Win Rate Trap, Break-Even Diagonal, Professional Zone)
+  - FAQ accordion (5 întrebări), JSON-LD WebApplication + FAQPage + BreadcrumbList
+  - Cross-links către Risk of Ruin + Lot Size Calculator
+  - GA4 event: win_rate_rr_matrix_viewed
+- CSS: 3 keyframes noi în index.css (kmf-cell-appear, kmf-marker-pulse, kmf-fadeIn)
+**Fișiere create:**
+- `src/pages/WinRateRRMatrixPage.jsx`
+**Fișiere modificate:**
+- `src/App.jsx` — import lazy + rută `/tools/win-rate-rr-matrix`
+- `src/components/landing/Navbar.jsx` — link în ResourcesDropdown + mobile nav
+- `src/components/Footer.jsx` — link în secțiunea Tools
+- `src/styles/index.css` — 3 keyframes noi
+- `public/sitemap.xml` — URL nou adăugat
+- `scripts/prerender.js` — rută nouă
+- `scripts/generate-og-images.js` — entry OG imagine (verde)
+**Build:** OK, 52/52 pagini prerendate, zero erori
+**Următorii pași sugerați:** Drawdown Recovery Calculator, Break-even Win Rate Calculator
+
+---
 
 ### 2026-03-30 — Sesiunea #16 (Risk of Ruin Calculator)
 **Ce s-a cerut:** Pagina Risk of Ruin Calculator cu Monte Carlo simulation, equity curves, scenario table, SEO content
