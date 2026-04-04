@@ -149,18 +149,23 @@ export default function WinRateRRMatrixPage() {
   useEffect(() => {
     if (!tracked.current) {
       tracked.current = true;
-      window.gtag?.('event', 'win_rate_rr_matrix_viewed', { win_rate: winRate, rr });
+      window.gtag?.('event', 'win_rate_rr_matrix_viewed', { win_rate: winRateNum, rr });
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const myExpectancy = useMemo(() => calcExpectancy(winRate, rr), [winRate, rr]);
+  const winRateNum = useMemo(() => {
+    const n = parseFloat(winRate);
+    return isNaN(n) ? 50 : Math.min(99, Math.max(1, n));
+  }, [winRate]);
+
+  const myExpectancy = useMemo(() => calcExpectancy(winRateNum, rr), [winRateNum, rr]);
 
   // Find closest cell indices for the marker
   const markerCol = useMemo(() => {
     let idx = 0, minD = Infinity;
-    WIN_RATES.forEach((w, i) => { const d = Math.abs(w - winRate); if (d < minD) { minD = d; idx = i; } });
+    WIN_RATES.forEach((w, i) => { const d = Math.abs(w - winRateNum); if (d < minD) { minD = d; idx = i; } });
     return idx;
-  }, [winRate]);
+  }, [winRateNum]);
   const markerRow = useMemo(() => {
     let idx = 0, minD = Infinity;
     RR_VALUES.forEach((r, i) => { const d = Math.abs(r - rr); if (d < minD) { minD = d; idx = i; } });
@@ -169,6 +174,13 @@ export default function WinRateRRMatrixPage() {
 
   const handleSlider = useCallback((setter) => (e) => {
     setter(parseFloat(e.target.value));
+  }, []);
+
+  const handleWinRateInput = useCallback((e) => {
+    const val = e.target.value;
+    if (val === '') { setWinRate(''); return; }
+    const n = parseFloat(val);
+    if (!isNaN(n)) setWinRate(Math.min(99, Math.max(1, n)));
   }, []);
 
   const myColor = expectancyColor(myExpectancy);
@@ -225,28 +237,45 @@ export default function WinRateRRMatrixPage() {
             <p className="text-sm font-semibold text-kmf-text-secondary mb-5 uppercase tracking-wider">Your Strategy</p>
             <div className="grid sm:grid-cols-2 gap-8">
 
-              {/* Win Rate slider */}
+              {/* Win Rate slider + input */}
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <label className="text-sm font-medium text-kmf-text-primary">Win Rate</label>
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl font-bold" style={{ color: '#4FC3F7' }}>{winRate}%</span>
+                    <div className="flex items-center rounded-lg overflow-hidden"
+                      style={{ border: '1px solid rgba(79,195,247,0.3)', background: 'rgba(79,195,247,0.07)' }}>
+                      <input
+                        type="number"
+                        min="1" max="99" step="1"
+                        value={winRate}
+                        onChange={handleWinRateInput}
+                        onBlur={() => {
+                          const n = parseFloat(winRate);
+                          if (isNaN(n) || winRate === '') setWinRate(50);
+                          else setWinRate(Math.min(99, Math.max(1, n)));
+                        }}
+                        className="w-14 text-center text-lg font-bold bg-transparent outline-none py-1 tabular-nums"
+                        style={{ color: '#4FC3F7' }}
+                        aria-label="Win rate percentage"
+                      />
+                      <span className="pr-2.5 text-sm font-semibold" style={{ color: '#4FC3F7' }}>%</span>
+                    </div>
                   </div>
                 </div>
                 <input
-                  type="range" min="20" max="80" step="5"
-                  value={winRate}
+                  type="range" min="1" max="99" step="1"
+                  value={isNaN(parseFloat(winRate)) ? 50 : Math.min(99, Math.max(1, parseFloat(winRate)))}
                   onChange={handleSlider(setWinRate)}
                   className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                  style={{ accentColor: '#4FC3F7', background: `linear-gradient(to right, #4FC3F7 ${((winRate-20)/60)*100}%, rgba(79,195,247,0.15) 0%)` }}
+                  style={{ accentColor: '#4FC3F7', background: `linear-gradient(to right, #4FC3F7 ${((Math.min(99, Math.max(1, parseFloat(winRate) || 50))-1)/98)*100}%, rgba(79,195,247,0.15) 0%)` }}
                 />
                 <div className="flex justify-between text-xs text-kmf-text-tertiary mt-1.5">
-                  <span>20%</span><span>50%</span><span>80%</span>
+                  <span>1%</span><span>50%</span><span>99%</span>
                 </div>
                 <p className="text-xs text-kmf-text-tertiary mt-2">
-                  {winRate < 35 ? 'Low win rate — needs high R:R to be profitable'
-                    : winRate < 50 ? 'Below 50% — still profitable with good R:R'
-                    : winRate < 65 ? 'Solid win rate — even moderate R:R works'
+                  {(parseFloat(winRate) || 50) < 35 ? 'Low win rate — needs high R:R to be profitable'
+                    : (parseFloat(winRate) || 50) < 50 ? 'Below 50% — still profitable with good R:R'
+                    : (parseFloat(winRate) || 50) < 65 ? 'Solid win rate — even moderate R:R works'
                     : 'High win rate — can afford lower R:R targets'}
                 </p>
               </div>
@@ -338,8 +367,8 @@ export default function WinRateRRMatrixPage() {
                     <div key={w}
                       className="text-center text-xs font-semibold pb-1 rounded-t-md transition-colors"
                       style={{
-                        color: Math.abs(w - winRate) < 3 ? '#4FC3F7' : 'rgba(143,179,197,0.7)',
-                        background: Math.abs(w - winRate) < 3 ? 'rgba(79,195,247,0.08)' : 'transparent',
+                        color: Math.abs(w - winRateNum) < 3 ? '#4FC3F7' : 'rgba(143,179,197,0.7)',
+                        background: Math.abs(w - winRateNum) < 3 ? 'rgba(79,195,247,0.08)' : 'transparent',
                       }}>
                       {w}%
                     </div>
