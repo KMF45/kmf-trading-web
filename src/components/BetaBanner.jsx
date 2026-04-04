@@ -70,6 +70,7 @@ const BetaBanner = () => {
         experience: form.experience || '—',
         markets: form.markets.length > 0 ? form.markets.join(', ') : '—',
         journalMethod: form.journalMethod || '—',
+        source: 'web_modal',
         createdAt: serverTimestamp(),
       });
 
