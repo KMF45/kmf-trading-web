@@ -40,6 +40,16 @@ const de = {
     "errorMsg": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreibe uns an contact@kmfjournal.com",
     "errorName": "Der Name muss mindestens 2 Zeichen lang sein",
     "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein",
+    "modalTitle": "Für Beta-Zugang bewerben",
+    "emailLoginNote": "Verwende die E-Mail, mit der du dich einloggen wirst",
+    "experienceLabel": "Trading-Erfahrung",
+    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
+    "marketsLabel": "Gehandelte Märkte",
+    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
+    "journalLabel": "Aktuelle Journal-Methode",
+    "journalOptions": ["Spreadsheet", "Andere App", "Papier", "Keine"],
+    "activeTesterNote": "Um Premium kostenlos zu behalten, musst du ein aktiver Tester sein — gib regelmäßig Feedback und melde Bugs.",
+    "closeBtn": "Schließen",
     "statBlocks": [
       {
         "label": "Lebenslanger Zugang",

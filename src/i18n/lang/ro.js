@@ -40,6 +40,16 @@ const ro = {
     "errorMsg": "Ceva nu a mers bine. Te rugăm să încerci din nou sau scrie-ne la contact@kmfjournal.com",
     "errorName": "Numele trebuie să aibă cel puțin 2 caractere",
     "errorEmail": "Te rugăm să introduci o adresă de email validă",
+    "modalTitle": "Aplică pentru acces Beta",
+    "emailLoginNote": "Folosește emailul cu care te vei loga",
+    "experienceLabel": "Experiență de trading",
+    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
+    "marketsLabel": "Piețe tranzacționate",
+    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
+    "journalLabel": "Metodă actuală de jurnal",
+    "journalOptions": ["Spreadsheet", "Altă aplicație", "Pe hârtie", "Niciuna"],
+    "activeTesterNote": "Pentru a păstra Premium gratuit, trebuie să fii un tester activ — oferă feedback și raportează bug-uri regulat.",
+    "closeBtn": "Închide",
     "statBlocks": [
       {
         "label": "Acces pe viață",

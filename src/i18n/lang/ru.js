@@ -40,6 +40,16 @@ const ru = {
     "errorMsg": "Что-то пошло не так. Попробуйте снова или напишите нам на contact@kmfjournal.com",
     "errorName": "Имя должно содержать не менее 2 символов",
     "errorEmail": "Пожалуйста, введите действительный адрес электронной почты",
+    "modalTitle": "Заявка на бета-доступ",
+    "emailLoginNote": "Укажите email, с которым будете входить в приложение",
+    "experienceLabel": "Опыт в трейдинге",
+    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
+    "marketsLabel": "Торгуемые рынки",
+    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
+    "journalLabel": "Текущий метод ведения журнала",
+    "journalOptions": ["Spreadsheet", "Другое приложение", "Бумажный", "Нет"],
+    "activeTesterNote": "Чтобы сохранить бесплатный Premium, необходимо быть активным тестером — регулярно давайте обратную связь и сообщайте об ошибках.",
+    "closeBtn": "Закрыть",
     "statBlocks": [
       {
         "label": "Пожизненный доступ",

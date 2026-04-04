@@ -40,6 +40,16 @@ const zh = {
     "errorMsg": "出了点问题。请重试或发送邮件至 contact@kmfjournal.com",
     "errorName": "姓名至少需要2个字符",
     "errorEmail": "请输入有效的电子邮件地址",
+    "modalTitle": "申请 Beta 访问",
+    "emailLoginNote": "请使用你将用于登录的邮箱",
+    "experienceLabel": "交易经验",
+    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
+    "marketsLabel": "交易市场",
+    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
+    "journalLabel": "当前记录方式",
+    "journalOptions": ["Spreadsheet", "其他应用", "纸质", "无"],
+    "activeTesterNote": "为保持免费 Premium，你必须是活跃的测试者 — 定期提供反馈并报告问题。",
+    "closeBtn": "关闭",
     "statBlocks": [
       {
         "label": "终身使用",

@@ -40,6 +40,16 @@ const fr = {
     "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@kmfjournal.com",
     "errorName": "Le nom doit contenir au moins 2 caractères",
     "errorEmail": "Veuillez entrer une adresse email valide",
+    "modalTitle": "Postuler pour l'accès Bêta",
+    "emailLoginNote": "Utilisez l'email avec lequel vous vous connecterez",
+    "experienceLabel": "Expérience de trading",
+    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
+    "marketsLabel": "Marchés tradés",
+    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
+    "journalLabel": "Méthode de journal actuelle",
+    "journalOptions": ["Spreadsheet", "Autre application", "Papier", "Aucune"],
+    "activeTesterNote": "Pour conserver le Premium gratuit, vous devez être un testeur actif — fournissez des retours et signalez les bugs régulièrement.",
+    "closeBtn": "Fermer",
     "statBlocks": [
       {
         "label": "Accès à vie",

@@ -40,6 +40,16 @@ const ja = {
     "errorMsg": "エラーが発生しました。もう一度お試しいただくか、contact@kmfjournal.com までご連絡ください。",
     "errorName": "名前は2文字以上で入力してください",
     "errorEmail": "有効なメールアドレスを入力してください",
+    "modalTitle": "ベータアクセスに申し込む",
+    "emailLoginNote": "ログインに使用するメールアドレスを入力してください",
+    "experienceLabel": "トレーディング経験",
+    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
+    "marketsLabel": "取引市場",
+    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
+    "journalLabel": "現在のジャーナル方法",
+    "journalOptions": ["Spreadsheet", "他のアプリ", "紙", "なし"],
+    "activeTesterNote": "無料Premiumを維持するには、アクティブなテスターである必要があります — 定期的にフィードバックとバグ報告をお願いします。",
+    "closeBtn": "閉じる",
     "statBlocks": [
       {
         "label": "永久アクセス",

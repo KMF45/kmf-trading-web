@@ -40,6 +40,16 @@ const en = {
     "errorMsg": "Something went wrong. Please try again or email us at contact@kmfjournal.com",
     "errorName": "Name must be at least 2 characters",
     "errorEmail": "Please enter a valid email address",
+    "modalTitle": "Apply for Beta Access",
+    "emailLoginNote": "Use the email you'll log in with",
+    "experienceLabel": "Trading Experience",
+    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
+    "marketsLabel": "Markets You Trade",
+    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
+    "journalLabel": "Current Journal Method",
+    "journalOptions": ["Spreadsheet", "Another App", "Paper", "None"],
+    "activeTesterNote": "To keep free Premium, you must be an active tester — provide feedback and report bugs regularly.",
+    "closeBtn": "Close",
     "statBlocks": [
       {
         "label": "Lifetime Access",
