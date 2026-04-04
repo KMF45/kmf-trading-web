@@ -1,4 +1,4 @@
-import { FaEnvelope } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 
@@ -37,6 +37,15 @@ const Footer = () => {
                 aria-label="Email"
               >
                 <FaEnvelope className="text-2xl" />
+              </a>
+              <a
+                href="https://www.instagram.com/kmf.45.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-2xl" />
               </a>
             </div>
           </div>
