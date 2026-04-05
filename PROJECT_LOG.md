@@ -1,9 +1,32 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator, Win Rate vs R:R Matrix). Stack: React 19, Vite, Tailwind CSS. 55 URL-uri în sitemap, 52 pagini prerendered. 3 OG images pentru tools.
+Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator, Win Rate vs R:R Matrix) + LiquidHours legal pages. Stack: React 19, Vite, Tailwind CSS. Beta signup cu modal form + Firestore + Cloud Function email notification. 54 pagini prerendered.
 
 ## Sesiuni de lucru
+
+### 2026-04-04/05 — Sesiunea #18 (Beta Signup Modal + Email Notification + LiquidHours Legal)
+**Ce s-a cerut:** Înlocuire mailto link cu modal form pe BetaBanner + notificare email + pagini legale LiquidHours
+**Ce s-a făcut:**
+- BetaBanner.jsx: modal popup cu 5 câmpuri (name, email, experience chips, markets multi-select, journal method) + notă active tester + salvare Firestore `betaSignups`
+- Toate câmpurile obligatorii (validare + label roșu cu *)
+- Cloud Function `onBetaSignup`: Firestore trigger `onCreate` pe `betaSignups` → email la kmf45.ai@gmail.com cu tabel formatat
+- Fix AppCheck: `initAppCheck()` apelat înainte de Firestore write (AppCheck enforcement bloca scrierea)
+- Fix CSP: adăugat `https://*.google-analytics.com` în connect-src
+- Traduceri: 12 chei noi × 7 limbi
+- Pagini legale LiquidHours: `/liquidhours/privacy-policy` + `/liquidhours/terms-of-use` (noindex)
+- Video demo testat și abandonat (format vertical YouTube Short nu arată bine pe landing page)
+**Fișiere create:**
+- `src/pages/liquidhours/PrivacyPolicyPage.jsx`
+- `src/pages/liquidhours/TermsOfUsePage.jsx`
+**Fișiere modificate:**
+- `src/components/BetaBanner.jsx` — rescris complet (mailto → modal form + Firestore + AppCheck)
+- `src/i18n/lang/{en,ro,fr,de,ru,ja,zh}.js` — chei noi beta
+- `KMFTradingJournal/functions/src/index.ts` — adăugat `onBetaSignup` trigger (deploy separat)
+**Deploy:** Cloud Function `onBetaSignup` deployed pe us-central1. Web pushed pe GitHub.
+**Următorii pași sugerați:** Test signup de probă, deploy web pe hosting
+
+---
 
 ### 2026-04-03 — Sesiunea #17 (Win Rate vs R:R Matrix)
 **Ce s-a cerut:** Tool nou — heatmap interactiv Win Rate vs R:R, design frumos și animat
