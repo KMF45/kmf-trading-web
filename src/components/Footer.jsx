@@ -11,8 +11,9 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-kmf-accent/5 to-transparent pointer-events-none"></div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {/* Brand */}
+          <div>
             <div className="flex items-center gap-3 mb-4">
               <img
                 src="/logo-80.webp"
@@ -27,7 +28,7 @@ const Footer = () => {
                 <p className="text-sm text-kmf-text-tertiary">Keep Moving Forward</p>
               </div>
             </div>
-            <p className="text-kmf-text-secondary mb-4 max-w-md">
+            <p className="text-kmf-text-secondary mb-4">
               {t('footer.description')}
             </p>
             <div className="flex gap-4">
@@ -50,6 +51,7 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
@@ -88,14 +90,17 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
+          </div>
 
-            <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">Tools</h4>
+          {/* Tools */}
+          <div>
+            <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">Tools</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/tools/lot-size-calculator"
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
-                           inline-block hover:translate-x-1 duration-200 text-sm"
+                           inline-block hover:translate-x-1 duration-200"
                 >
                   Lot Size Calculator
                 </Link>
@@ -104,7 +109,7 @@ const Footer = () => {
                 <Link
                   to="/tools/risk-of-ruin"
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
-                           inline-block hover:translate-x-1 duration-200 text-sm"
+                           inline-block hover:translate-x-1 duration-200"
                 >
                   Risk of Ruin Calculator
                 </Link>
@@ -113,14 +118,17 @@ const Footer = () => {
                 <Link
                   to="/tools/win-rate-rr-matrix"
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
-                           inline-block hover:translate-x-1 duration-200 text-sm"
+                           inline-block hover:translate-x-1 duration-200"
                 >
                   Win Rate vs R:R Matrix
                 </Link>
               </li>
             </ul>
+          </div>
 
-            <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">{t('footer.fromBlog')}</h4>
+          {/* From the Blog + Legal */}
+          <div>
+            <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">{t('footer.fromBlog')}</h4>
             <ul className="space-y-2">
               {[
                 { slug: 'best-free-trading-journal-app-android-2026', title: 'Best Trading Journal App 2026' },
@@ -132,17 +140,15 @@ const Footer = () => {
                   <Link
                     to={`/blog/${post.slug}`}
                     className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
-                             inline-block hover:translate-x-1 duration-200 text-sm"
+                             inline-block hover:translate-x-1 duration-200"
                   >
                     {post.title}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div>
-            <h4 className="text-lg font-semibold text-kmf-text-primary mb-4">{t('footer.legal')}</h4>
+            <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">{t('footer.legal')}</h4>
             <ul className="space-y-2">
               <li>
                 <a
