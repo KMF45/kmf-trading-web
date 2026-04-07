@@ -248,7 +248,7 @@ export const translations = {
       "badge": "Simple Pricing",
       "heading1": "Free to Start.",
       "heading2": "Premium to Dominate.",
-      "subtitle": "No credit card required. Core journaling is free forever. Try Premium free for 14 days.",
+      "subtitle": "No credit card required. Core journaling is free forever. Try Premium free for 7 days.",
       "free": {
         "label": "Free",
         "period": "/ forever",
@@ -296,7 +296,7 @@ export const translations = {
       ],
       "premiumFeatures": [
         "Everything in Free",
-        "14-day free trial",
+        "7-day free trial",
         "Unlimited trades",
         "Advanced statistics",
         "Cloud sync & backup",
@@ -317,10 +317,10 @@ export const translations = {
     "download": {
       "badge": "Available on Google Play",
       "heading": "Download Now",
-      "subtitle": "K.M.F. Trading Journal is available on Google Play. Start journaling your trades today — free download with a 14-day Premium trial.",
+      "subtitle": "K.M.F. Trading Journal is available on Google Play. Start journaling your trades today — free download with a 7-day Premium trial.",
       "submitBtn": "Download on Google Play",
       "features": [
-        "Free to download — 14-day Premium trial",
+        "Free to download — 7-day Premium trial",
         "Emotion tracking & psychology tools",
         "Achievements, XP & trader tiers",
         "Offline functionality",
@@ -353,11 +353,11 @@ export const translations = {
         },
         {
           "question": "Is K.M.F. Trading Journal free?",
-          "answer": "Yes. Core features like trade logging (50/month), history, lot calculator, checklists, and a trading diary are free forever. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 14 days — no credit card required."
+          "answer": "Yes. Core features like trade logging (50/month), history, lot calculator, checklists, and a trading diary are free forever. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
         },
         {
-          "question": "What is the 14-day free trial?",
-          "answer": "Every new user gets 14 days of full Premium access for free. You can explore all features — unlimited trades, advanced statistics, emotion tracking, personality profile, achievements, cloud sync, and export — with no commitment. After the trial, you keep free-tier access or subscribe to stay Premium."
+          "question": "What is the 7-day free trial?",
+          "answer": "Every new user gets 7 days of full Premium access for free. You can explore all features — unlimited trades, advanced statistics, emotion tracking, personality profile, achievements, cloud sync, and export — with no commitment. After the trial, you keep free-tier access or subscribe to stay Premium."
         },
         {
           "question": "What platforms does K.M.F. Trading Journal support?",
@@ -652,7 +652,7 @@ export const translations = {
       "badge": "Prețuri simple",
       "heading1": "Gratuit la început.",
       "heading2": "Premium pentru dominare.",
-      "subtitle": "Fără card bancar. Jurnalizarea de bază e gratuită pentru totdeauna. Încearcă Premium gratuit timp de 14 zile.",
+      "subtitle": "Fără card bancar. Jurnalizarea de bază e gratuită pentru totdeauna. Încearcă Premium gratuit timp de 7 zile.",
       "free": {
         "label": "Gratuit",
         "period": "/ pentru totdeauna",
@@ -700,7 +700,7 @@ export const translations = {
       ],
       "premiumFeatures": [
         "Tot ce e în varianta gratuită",
-        "Perioadă de probă gratuită de 14 zile",
+        "Perioadă de probă gratuită de 7 zile",
         "Trade-uri nelimitate",
         "Statistici avansate",
         "Cloud sync și backup",
@@ -721,10 +721,10 @@ export const translations = {
     "download": {
       "badge": "Disponibil pe Google Play",
       "heading": "Descarcă acum",
-      "subtitle": "K.M.F. Trading Journal este disponibil pe Google Play. Începe să jurnalizezi trade-urile astăzi — descărcare gratuită cu 14 zile trial Premium.",
+      "subtitle": "K.M.F. Trading Journal este disponibil pe Google Play. Începe să jurnalizezi trade-urile astăzi — descărcare gratuită cu 7 zile trial Premium.",
       "submitBtn": "Descarcă de pe Google Play",
       "features": [
-        "Descărcare gratuită — 14 zile Premium de probă",
+        "Descărcare gratuită — 7 zile Premium de probă",
         "Emotion tracking și instrumente de psihologie",
         "Realizări, XP și niveluri de trader",
         "Funcționalitate offline",
@@ -757,11 +757,11 @@ export const translations = {
         },
         {
           "question": "Este K.M.F. Trading Journal gratuit?",
-          "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (50/lună), istoricul, lot calculator, checklist-urile și jurnalul de trading sunt gratuite pentru totdeauna. Premium deblochează trade-uri nelimitate, statistici avansate, cloud sync, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 14 zile — fără card bancar."
+          "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (50/lună), istoricul, lot calculator, checklist-urile și jurnalul de trading sunt gratuite pentru totdeauna. Premium deblochează trade-uri nelimitate, statistici avansate, cloud sync, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
         },
         {
-          "question": "Ce este perioada de probă gratuită de 14 zile?",
-          "answer": "Fiecare utilizator nou primește 14 zile de acces Premium complet, gratuit. Poți explora toate funcționalitățile — trade-uri nelimitate, statistici avansate, emotion tracking, profilul de personalitate, realizări, cloud sync și export — fără nicio obligație. După perioadă de probă, păstrezi accesul gratuit sau te abonezi pentru a rămâne Premium."
+          "question": "Ce este perioada de probă gratuită de 7 zile?",
+          "answer": "Fiecare utilizator nou primește 7 zile de acces Premium complet, gratuit. Poți explora toate funcționalitățile — trade-uri nelimitate, statistici avansate, emotion tracking, profilul de personalitate, realizări, cloud sync și export — fără nicio obligație. După perioadă de probă, păstrezi accesul gratuit sau te abonezi pentru a rămâne Premium."
         },
         {
           "question": "Pe ce platforme este disponibil K.M.F. Trading Journal?",
@@ -1056,7 +1056,7 @@ export const translations = {
       "badge": "Tarifs simples",
       "heading1": "Gratuit pour commencer.",
       "heading2": "Premium pour dominer.",
-      "subtitle": "Sans carte bancaire. La journalisation de base est gratuite pour toujours. Essayez Premium gratuitement pendant 14 jours.",
+      "subtitle": "Sans carte bancaire. La journalisation de base est gratuite pour toujours. Essayez Premium gratuitement pendant 7 jours.",
       "free": {
         "label": "Gratuit",
         "period": "/ pour toujours",
@@ -1104,7 +1104,7 @@ export const translations = {
       ],
       "premiumFeatures": [
         "Tout le contenu gratuit inclus",
-        "Essai gratuit de 14 jours",
+        "Essai gratuit de 7 jours",
         "Trades illimités",
         "Statistiques avancées",
         "Cloud sync et backup",
@@ -1125,10 +1125,10 @@ export const translations = {
     "download": {
       "badge": "Disponible sur Google Play",
       "heading": "Télécharger maintenant",
-      "subtitle": "K.M.F. Trading Journal est disponible sur Google Play. Commencez à journaliser vos trades dès aujourd'hui — téléchargement gratuit avec 14 jours d'essai Premium.",
+      "subtitle": "K.M.F. Trading Journal est disponible sur Google Play. Commencez à journaliser vos trades dès aujourd'hui — téléchargement gratuit avec 7 jours d'essai Premium.",
       "submitBtn": "Télécharger sur Google Play",
       "features": [
-        "Téléchargement gratuit — 14 jours d'essai Premium",
+        "Téléchargement gratuit — 7 jours d'essai Premium",
         "Emotion tracking et outils de psychologie",
         "Récompenses, XP et niveaux de trader",
         "Fonctionnement hors ligne",
@@ -1161,11 +1161,11 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal est-il gratuit ?",
-          "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (50/mois), l'historique, le lot calculator, les checklists et le journal de trading sont gratuits pour toujours. Le Premium débloque les trades illimités, les statistiques avancées, le cloud sync, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 14 jours — sans carte bancaire."
+          "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (50/mois), l'historique, le lot calculator, les checklists et le journal de trading sont gratuits pour toujours. Le Premium débloque les trades illimités, les statistiques avancées, le cloud sync, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
         },
         {
-          "question": "Qu'est-ce que l'essai gratuit de 14 jours ?",
-          "answer": "Chaque nouvel utilisateur bénéficie de 14 jours d'accès Premium complet gratuit. Explorez toutes les fonctionnalités — trades illimités, statistiques avancées, emotion tracking, profil de personnalité, récompenses, cloud sync et export — sans engagement. Après l'essai, vous conservez l'accès gratuit ou vous vous abonnez pour rester Premium."
+          "question": "Qu'est-ce que l'essai gratuit de 7 jours ?",
+          "answer": "Chaque nouvel utilisateur bénéficie de 7 jours d'accès Premium complet gratuit. Explorez toutes les fonctionnalités — trades illimités, statistiques avancées, emotion tracking, profil de personnalité, récompenses, cloud sync et export — sans engagement. Après l'essai, vous conservez l'accès gratuit ou vous vous abonnez pour rester Premium."
         },
         {
           "question": "Sur quelles plateformes K.M.F. Trading Journal est-il disponible ?",
@@ -1460,7 +1460,7 @@ export const translations = {
       "badge": "Простые цены",
       "heading1": "Бесплатно для старта.",
       "heading2": "Premium для доминирования.",
-      "subtitle": "Без привязки карты. Базовый дневник бесплатен навсегда. Попробуйте Premium бесплатно 14 дней.",
+      "subtitle": "Без привязки карты. Базовый дневник бесплатен навсегда. Попробуйте Premium бесплатно 7 дней.",
       "free": {
         "label": "Бесплатно",
         "period": "/ навсегда",
@@ -1565,11 +1565,11 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal бесплатный?",
-          "answer": "Да. Базовые функции — запись сделок (50/месяц), история, калькулятор lot size, чек-листы и торговый дневник — бесплатны навсегда. Premium открывает безлимитные сделки, продвинутую статистику, облачную синхронизацию, трекинг эмоций, достижения и многое другое. Попробуйте Premium бесплатно 14 дней — без привязки карты."
+          "answer": "Да. Базовые функции — запись сделок (50/месяц), история, калькулятор lot size, чек-листы и торговый дневник — бесплатны навсегда. Premium открывает безлимитные сделки, продвинутую статистику, облачную синхронизацию, трекинг эмоций, достижения и многое другое. Попробуйте Premium бесплатно 7 дней — без привязки карты."
         },
         {
           "question": "Что такое 14-дневный бесплатный пробный период?",
-          "answer": "Каждый новый пользователь получает 14 дней полного Premium-доступа бесплатно. Вы можете изучить все функции — безлимитные сделки, продвинутую статистику, трекинг эмоций, профиль личности, достижения, облачную синхронизацию и экспорт — без обязательств. После пробного периода вы сохраняете доступ к бесплатному тарифу или подписываетесь на Premium."
+          "answer": "Каждый новый пользователь получает 7 дней полного Premium-доступа бесплатно. Вы можете изучить все функции — безлимитные сделки, продвинутую статистику, трекинг эмоций, профиль личности, достижения, облачную синхронизацию и экспорт — без обязательств. После пробного периода вы сохраняете доступ к бесплатному тарифу или подписываетесь на Premium."
         },
         {
           "question": "Какие платформы поддерживает K.M.F. Trading Journal?",
@@ -1864,7 +1864,7 @@ export const translations = {
       "badge": "シンプルな料金",
       "heading1": "無料で始めよう。",
       "heading2": "Premiumで圧倒しよう。",
-      "subtitle": "クレジットカード不要。基本的なジャーナリングは永久無料。Premiumは14日間無料でお試しいただけます。",
+      "subtitle": "クレジットカード不要。基本的なジャーナリングは永久無料。Premiumは7日間無料でお試しいただけます。",
       "free": {
         "label": "無料",
         "period": "/ 永久",
@@ -1912,7 +1912,7 @@ export const translations = {
       ],
       "premiumFeatures": [
         "無料プランのすべて",
-        "14日間無料トライアル",
+        "7日間無料トライアル",
         "無制限トレード",
         "高度な統計",
         "クラウド同期＆バックアップ",
@@ -1933,10 +1933,10 @@ export const translations = {
     "download": {
       "badge": "Google Playで公開中",
       "heading": "今すぐダウンロード",
-      "subtitle": "K.M.F. Trading JournalはGoogle Playで公開中です。今日からトレード日誌を始めましょう — 無料ダウンロード、14日間のPremiumトライアル付き。",
+      "subtitle": "K.M.F. Trading JournalはGoogle Playで公開中です。今日からトレード日誌を始めましょう — 無料ダウンロード、7日間のPremiumトライアル付き。",
       "submitBtn": "Google Playでダウンロード",
       "features": [
-        "無料ダウンロード — 14日間Premiumトライアル",
+        "無料ダウンロード — 7日間Premiumトライアル",
         "感情トラッキング＆心理ツール",
         "実績、XP＆トレーダーティア",
         "オフライン機能",
@@ -1969,11 +1969,11 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journalは無料ですか？",
-          "answer": "はい。トレード記録（月50件）、履歴、lot sizeカリキュレーター、チェックリスト、トレード日記などの基本機能は永久無料です。Premiumでは無制限トレード、高度な統計、クラウド同期、感情トラッキング、実績などが利用可能になります。Premiumは14日間無料でお試しいただけます — クレジットカード不要。"
+          "answer": "はい。トレード記録（月50件）、履歴、lot sizeカリキュレーター、チェックリスト、トレード日記などの基本機能は永久無料です。Premiumでは無制限トレード、高度な統計、クラウド同期、感情トラッキング、実績などが利用可能になります。Premiumは7日間無料でお試しいただけます — クレジットカード不要。"
         },
         {
-          "question": "14日間の無料トライアルとは何ですか？",
-          "answer": "すべての新規ユーザーは、14日間のPremium全機能アクセスを無料で受けられます。無制限トレード、高度な統計、感情トラッキング、性格プロファイル、実績、クラウド同期、エクスポートなど、すべての機能をお試しいただけます。トライアル終了後は、無料プランを継続するか、Premiumに登録するか選択できます。"
+          "question": "7日間の無料トライアルとは何ですか？",
+          "answer": "すべての新規ユーザーは、7日間のPremium全機能アクセスを無料で受けられます。無制限トレード、高度な統計、感情トラッキング、性格プロファイル、実績、クラウド同期、エクスポートなど、すべての機能をお試しいただけます。トライアル終了後は、無料プランを継続するか、Premiumに登録するか選択できます。"
         },
         {
           "question": "K.M.F. Trading Journalはどのプラットフォームに対応していますか？",
@@ -2268,7 +2268,7 @@ export const translations = {
       "badge": "Einfache Preise",
       "heading1": "Kostenlos starten.",
       "heading2": "Premium zum Dominieren.",
-      "subtitle": "Keine Kreditkarte nötig. Basis-Journaling ist für immer kostenlos. Teste Premium 14 Tage kostenlos.",
+      "subtitle": "Keine Kreditkarte nötig. Basis-Journaling ist für immer kostenlos. Teste Premium 7 Tage kostenlos.",
       "free": {
         "label": "Kostenlos",
         "period": "/ für immer",
@@ -2373,11 +2373,11 @@ export const translations = {
         },
         {
           "question": "Ist K.M.F. Trading Journal kostenlos?",
-          "answer": "Ja. Kernfunktionen wie Trade-Erfassung (50/Monat), Historie, Lot-Size-Rechner, Checklisten und Trading-Tagebuch sind für immer kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Cloud-Sync, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 14 Tage kostenlos testen — keine Kreditkarte nötig."
+          "answer": "Ja. Kernfunktionen wie Trade-Erfassung (50/Monat), Historie, Lot-Size-Rechner, Checklisten und Trading-Tagebuch sind für immer kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Cloud-Sync, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
         },
         {
           "question": "Was ist die 14-tägige kostenlose Testphase?",
-          "answer": "Jeder neue Nutzer erhält 14 Tage vollen Premium-Zugang kostenlos. Du kannst alle Funktionen erkunden — unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Persönlichkeitsprofil, Erfolge, Cloud-Sync und Export — ohne Verpflichtung. Nach der Testphase behältst du den kostenlosen Zugang oder abonnierst Premium."
+          "answer": "Jeder neue Nutzer erhält 7 Tage vollen Premium-Zugang kostenlos. Du kannst alle Funktionen erkunden — unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Persönlichkeitsprofil, Erfolge, Cloud-Sync und Export — ohne Verpflichtung. Nach der Testphase behältst du den kostenlosen Zugang oder abonnierst Premium."
         },
         {
           "question": "Welche Plattformen unterstützt K.M.F. Trading Journal?",
@@ -2672,7 +2672,7 @@ export const translations = {
       "badge": "简单定价",
       "heading1": "免费起步。",
       "heading2": "Premium 制胜。",
-      "subtitle": "无需信用卡。基础日志功能永久免费。Premium 可免费试用 14 天。",
+      "subtitle": "无需信用卡。基础日志功能永久免费。Premium 可免费试用 7 天。",
       "free": {
         "label": "免费",
         "period": "/ 永久",
@@ -2720,7 +2720,7 @@ export const translations = {
       ],
       "premiumFeatures": [
         "包含免费版全部功能",
-        "14 天免费试用",
+        "7 天免费试用",
         "无限交易",
         "高级统计",
         "云同步与备份",
@@ -2741,10 +2741,10 @@ export const translations = {
     "download": {
       "badge": "已上线 Google Play",
       "heading": "立即下载",
-      "subtitle": "K.M.F. Trading Journal 已在 Google Play 上线。今天就开始记录你的交易 — 免费下载，附带 14 天 Premium 试用。",
+      "subtitle": "K.M.F. Trading Journal 已在 Google Play 上线。今天就开始记录你的交易 — 免费下载，附带 7 天 Premium 试用。",
       "submitBtn": "在 Google Play 下载",
       "features": [
-        "免费下载 — 14 天 Premium 试用",
+        "免费下载 — 7 天 Premium 试用",
         "情绪追踪与心理工具",
         "成就、XP 与交易者等级",
         "离线功能",
@@ -2777,11 +2777,11 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal 免费吗？",
-          "answer": "是的。交易记录（每月 50 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能永久免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 14 天——无需信用卡。"
+          "answer": "是的。交易记录（每月 50 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能永久免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 7 天——无需信用卡。"
         },
         {
-          "question": "什么是 14 天免费试用？",
-          "answer": "每位新用户都可免费获得 14 天完整 Premium 使用权。你可以体验所有功能——无限交易、高级统计、情绪追踪、性格画像、成就、云同步和导出——无任何承诺。试用期结束后，你可以继续使用免费版或订阅 Premium。"
+          "question": "什么是 7 天免费试用？",
+          "answer": "每位新用户都可免费获得 7 天完整 Premium 使用权。你可以体验所有功能——无限交易、高级统计、情绪追踪、性格画像、成就、云同步和导出——无任何承诺。试用期结束后，你可以继续使用免费版或订阅 Premium。"
         },
         {
           "question": "K.M.F. Trading Journal 支持哪些平台？",

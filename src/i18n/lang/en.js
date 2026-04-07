@@ -257,7 +257,7 @@ const en = {
     "badge": "Simple Pricing",
     "heading1": "Free to Start.",
     "heading2": "Premium to Dominate.",
-    "subtitle": "No credit card required. Core journaling is free forever. Try Premium free for 14 days.",
+    "subtitle": "No credit card required. Core journaling is free forever. Try Premium free for 7 days.",
     "free": {
       "label": "Free",
       "period": "/ forever",
@@ -305,7 +305,7 @@ const en = {
     ],
     "premiumFeatures": [
       "Everything in Free",
-      "14-day free trial",
+      "7-day free trial",
       "Unlimited trades",
       "Advanced statistics",
       "Cloud sync & backup",
@@ -326,10 +326,10 @@ const en = {
   "download": {
     "badge": "Available on Google Play",
     "heading": "Download Now",
-    "subtitle": "K.M.F. Trading Journal is available on Google Play. Start journaling your trades today — free download with a 14-day Premium trial.",
+    "subtitle": "K.M.F. Trading Journal is available on Google Play. Start journaling your trades today — free download with a 7-day Premium trial.",
     "submitBtn": "Download on Google Play",
     "features": [
-      "Free to download — 14-day Premium trial",
+      "Free to download — 7-day Premium trial",
       "Emotion tracking & psychology tools",
       "Achievements, XP & trader tiers",
       "Offline functionality",
@@ -362,11 +362,11 @@ const en = {
       },
       {
         "question": "Is K.M.F. Trading Journal free?",
-        "answer": "Yes. Core features like trade logging (50/month), history, lot calculator, checklists, and a trading diary are free forever. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 14 days — no credit card required."
+        "answer": "Yes. Core features like trade logging (50/month), history, lot calculator, checklists, and a trading diary are free forever. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
       },
       {
-        "question": "What is the 14-day free trial?",
-        "answer": "Every new user gets 14 days of full Premium access for free. You can explore all features — unlimited trades, advanced statistics, emotion tracking, personality profile, achievements, cloud sync, and export — with no commitment. After the trial, you keep free-tier access or subscribe to stay Premium."
+        "question": "What is the 7-day free trial?",
+        "answer": "Every new user gets 7 days of full Premium access for free. You can explore all features — unlimited trades, advanced statistics, emotion tracking, personality profile, achievements, cloud sync, and export — with no commitment. After the trial, you keep free-tier access or subscribe to stay Premium."
       },
       {
         "question": "What platforms does K.M.F. Trading Journal support?",

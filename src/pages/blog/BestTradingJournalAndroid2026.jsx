@@ -384,7 +384,7 @@ export default function BestTradingJournalAndroid2026() {
               K.M.F. is available on Google Play
             </p>
             <p className="text-sm text-kmf-text-secondary mb-5">
-              Download free and start journaling your trades today. <strong style={{ color: '#FFB300' }}>14-day Premium trial included</strong> — no credit card required.
+              Download free and start journaling your trades today. <strong style={{ color: '#FFB300' }}>7-day Premium trial included</strong> — no credit card required.
             </p>
             <a href={PLAY_STORE_URL}
               target="_blank"

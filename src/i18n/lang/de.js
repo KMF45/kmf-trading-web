@@ -257,7 +257,7 @@ const de = {
     "badge": "Einfache Preise",
     "heading1": "Kostenlos starten.",
     "heading2": "Premium zum Dominieren.",
-    "subtitle": "Keine Kreditkarte nötig. Basis-Journaling ist für immer kostenlos. Teste Premium 14 Tage kostenlos.",
+    "subtitle": "Keine Kreditkarte nötig. Basis-Journaling ist für immer kostenlos. Teste Premium 7 Tage kostenlos.",
     "free": {
       "label": "Kostenlos",
       "period": "/ für immer",
@@ -362,11 +362,11 @@ const de = {
       },
       {
         "question": "Ist K.M.F. Trading Journal kostenlos?",
-        "answer": "Ja. Kernfunktionen wie Trade-Erfassung (50/Monat), Historie, Lot-Size-Rechner, Checklisten und Trading-Tagebuch sind für immer kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Cloud-Sync, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 14 Tage kostenlos testen — keine Kreditkarte nötig."
+        "answer": "Ja. Kernfunktionen wie Trade-Erfassung (50/Monat), Historie, Lot-Size-Rechner, Checklisten und Trading-Tagebuch sind für immer kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Cloud-Sync, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
       },
       {
         "question": "Was ist die 14-tägige kostenlose Testphase?",
-        "answer": "Jeder neue Nutzer erhält 14 Tage vollen Premium-Zugang kostenlos. Du kannst alle Funktionen erkunden — unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Persönlichkeitsprofil, Erfolge, Cloud-Sync und Export — ohne Verpflichtung. Nach der Testphase behältst du den kostenlosen Zugang oder abonnierst Premium."
+        "answer": "Jeder neue Nutzer erhält 7 Tage vollen Premium-Zugang kostenlos. Du kannst alle Funktionen erkunden — unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Persönlichkeitsprofil, Erfolge, Cloud-Sync und Export — ohne Verpflichtung. Nach der Testphase behältst du den kostenlosen Zugang oder abonnierst Premium."
       },
       {
         "question": "Welche Plattformen unterstützt K.M.F. Trading Journal?",

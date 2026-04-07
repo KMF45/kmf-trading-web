@@ -19,8 +19,8 @@ const CheckRow = ({ text, included, muted }) => (
   </li>
 );
 
-const MONTHLY_PRICE = 9.99;
-const ANNUAL_PRICE = 79.99;
+const MONTHLY_PRICE = 5.99;
+const ANNUAL_PRICE = 49.99;
 const SAVE_PERCENT = Math.round((1 - ANNUAL_PRICE / (MONTHLY_PRICE * 12)) * 100);
 
 const Pricing = () => {
@@ -193,7 +193,7 @@ const Pricing = () => {
             </a>
 
             <ul className="space-y-0 flex-1 relative z-10">
-              {t('pricing.premiumFeatures').map((f, i) => (
+              {t('pricing.premiumFeatures').filter((_, i) => i !== 1).map((f, i) => (
                 <CheckRow key={f} text={f} included={true} muted={i > 0} />
               ))}
             </ul>

@@ -304,7 +304,7 @@ function ArticleCTA() {
       <p className="text-sm text-kmf-text-secondary mb-5">
         K.M.F. Trading Journal calculates profit factor, R-multiple, expectancy and more — so you can focus on trading, not spreadsheets.
         <br />
-        <strong style={{ color: '#FFB300' }}>Download free with a 14-day Premium trial.</strong>
+        <strong style={{ color: '#FFB300' }}>Download free with a 7-day Premium trial.</strong>
       </p>
       <a href={PLAY_STORE_URL}
         target="_blank"

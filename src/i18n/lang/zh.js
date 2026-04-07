@@ -257,7 +257,7 @@ const zh = {
     "badge": "简单定价",
     "heading1": "免费起步。",
     "heading2": "Premium 制胜。",
-    "subtitle": "无需信用卡。基础日志功能永久免费。Premium 可免费试用 14 天。",
+    "subtitle": "无需信用卡。基础日志功能永久免费。Premium 可免费试用 7 天。",
     "free": {
       "label": "免费",
       "period": "/ 永久",
@@ -305,7 +305,7 @@ const zh = {
     ],
     "premiumFeatures": [
       "包含免费版全部功能",
-      "14 天免费试用",
+      "7 天免费试用",
       "无限交易",
       "高级统计",
       "云同步与备份",
@@ -326,10 +326,10 @@ const zh = {
   "download": {
     "badge": "已上线 Google Play",
     "heading": "立即下载",
-    "subtitle": "K.M.F. Trading Journal 已在 Google Play 上线。今天就开始记录你的交易 — 免费下载，附带 14 天 Premium 试用。",
+    "subtitle": "K.M.F. Trading Journal 已在 Google Play 上线。今天就开始记录你的交易 — 免费下载，附带 7 天 Premium 试用。",
     "submitBtn": "在 Google Play 下载",
     "features": [
-      "免费下载 — 14 天 Premium 试用",
+      "免费下载 — 7 天 Premium 试用",
       "情绪追踪与心理工具",
       "成就、XP 与交易者等级",
       "离线功能",
@@ -362,11 +362,11 @@ const zh = {
       },
       {
         "question": "K.M.F. Trading Journal 免费吗？",
-        "answer": "是的。交易记录（每月 50 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能永久免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 14 天——无需信用卡。"
+        "answer": "是的。交易记录（每月 50 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能永久免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 7 天——无需信用卡。"
       },
       {
-        "question": "什么是 14 天免费试用？",
-        "answer": "每位新用户都可免费获得 14 天完整 Premium 使用权。你可以体验所有功能——无限交易、高级统计、情绪追踪、性格画像、成就、云同步和导出——无任何承诺。试用期结束后，你可以继续使用免费版或订阅 Premium。"
+        "question": "什么是 7 天免费试用？",
+        "answer": "每位新用户都可免费获得 7 天完整 Premium 使用权。你可以体验所有功能——无限交易、高级统计、情绪追踪、性格画像、成就、云同步和导出——无任何承诺。试用期结束后，你可以继续使用免费版或订阅 Premium。"
       },
       {
         "question": "K.M.F. Trading Journal 支持哪些平台？",

@@ -116,7 +116,7 @@ export default function ExcelVsTradingJournal() {
       <Table
         headers={['Feature', 'Excel / Google Sheets', 'Dedicated Journal App']}
         rows={[
-          ['Price', 'Free', 'Free (core) / $9.99/mo Premium'],
+          ['Price', 'Free', 'Free (core) / $5.99/mo Premium'],
           ['Setup time', '2-4 hours (building formulas)', '0 minutes — log your first trade'],
           ['Win rate calculation', 'Manual formula', 'Automatic'],
           ['Profit factor', 'Manual formula', 'Automatic'],

@@ -21,7 +21,7 @@ export default function WhatIsKmfTradingJournal() {
         { slug: 'tradingview-kmf-workflow', title: 'TradingView + K.M.F. Journal: The Perfect Workflow for a Modern Trader', category: 'Improvement' },
       ]}
       faqItems={[
-        { question: 'Is K.M.F. Trading Journal free?', answer: 'Yes. The core journaling features are free forever — trade logging, history, basic stats, lot calculator, checklist, diary, and offline access. Premium ($9.99/month or $79.99/year) adds advanced statistics, emotion tracking, cloud sync, and more.' },
+        { question: 'Is K.M.F. Trading Journal free?', answer: 'Yes. The core journaling features are free forever — trade logging, history, basic stats, lot calculator, checklist, diary, and offline access. Premium ($5.99/month or $49.99/year) adds advanced statistics, emotion tracking, cloud sync, and more.' },
         { question: 'What markets does K.M.F. support?', answer: 'K.M.F. supports forex, stocks, crypto, commodities, and indices. The lot size calculator adapts to different pip values and contract sizes automatically.' },
         { question: 'Does K.M.F. connect to my broker?', answer: 'No. K.M.F. uses manual trade entry only. Your broker credentials and trading data stay completely private — no API keys, no account access, no data sharing.' },
         { question: 'Is K.M.F. available on iPhone?', answer: 'Currently K.M.F. is Android-only. iOS is planned but there is no confirmed release date yet.' },
@@ -227,7 +227,7 @@ export default function WhatIsKmfTradingJournal() {
         ]}
       />
       <P>
-        <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Premium pricing:</strong> $9.99/month or $79.99/year (33% savings). 14-day free trial, no credit card required. Cancel anytime through Google Play.
+        <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Premium pricing:</strong> $5.99/month or $49.99/year (30% savings). 7-day free trial, no credit card required. Cancel anytime through Google Play.
       </P>
       <P>
         Is Premium worth it? If you trade more than 50 trades per month, or if you want the psychology features (emotion tracking, tilt detection, personality profile), or if you need cloud backup — yes. If you are just starting out and want to build the journaling habit first, the free tier is genuinely enough.
@@ -280,7 +280,7 @@ export default function WhatIsKmfTradingJournal() {
 
       <H2>Getting Started</H2>
       <P>
-        K.M.F. Trading Journal is available now on Google Play. Download it for free and start journaling your trades today — no credit card required. Premium features include a 14-day free trial.
+        K.M.F. Trading Journal is available now on Google Play. Download it for free and start journaling your trades today — no credit card required. Premium features include a 7-day free trial.
       </P>
       <Ul items={[
         'Download K.M.F. from Google Play',
@@ -298,7 +298,7 @@ export default function WhatIsKmfTradingJournal() {
       <Takeaways items={[
         'K.M.F. (Keep Moving Forward) is a trading journal app for Android, built by traders who got tired of spreadsheets and expensive web-only tools.',
         'Core features free forever: trade logging, history, basic stats, lot calculator, checklist, diary, offline access, 7 languages.',
-        'Premium ($9.99/month or $79.99/year) adds advanced statistics, psychology tracking, tilt detection, cloud sync, achievements, and more.',
+        'Premium ($5.99/month or $49.99/year) adds advanced statistics, psychology tracking, tilt detection, cloud sync, achievements, and more.',
         'No broker connection required — manual entry only, your data stays private.',
         'The psychology engine (emotion tracking, tilt detection, honesty mirror, personality profiling) is what separates K.M.F. from every other journal on the market.',
         'The app does not make you profitable — it makes your trading visible so you can improve faster.',

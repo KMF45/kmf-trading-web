@@ -22,7 +22,7 @@ export default function WhatIsKmfTradingJournalRo() {
         { slug: 'tradingview-kmf-workflow', title: 'TradingView + K.M.F. Journal: The Perfect Workflow for a Modern Trader', category: 'Improvement' },
       ]}
       faqItems={[
-        { question: 'K.M.F. Trading Journal este gratuit?', answer: 'Da. Functiile de baza sunt gratuite permanent — trade logging, istoric, statistici de baza, lot calculator, checklist, jurnal si acces offline. Premium ($9.99/luna sau $79.99/an) adauga statistici avansate, tracking emotional, cloud sync si altele.' },
+        { question: 'K.M.F. Trading Journal este gratuit?', answer: 'Da. Functiile de baza sunt gratuite permanent — trade logging, istoric, statistici de baza, lot calculator, checklist, jurnal si acces offline. Premium ($5.99/luna sau $49.99/an) adauga statistici avansate, tracking emotional, cloud sync si altele.' },
         { question: 'Ce piete suporta K.M.F.?', answer: 'K.M.F. suporta forex, actiuni, crypto, marfuri si indici. Lot calculator-ul se adapteaza automat la diferite valori de pip si dimensiuni de contract.' },
         { question: 'K.M.F. se conecteaza la broker?', answer: 'Nu. K.M.F. foloseste doar introducere manuala. Credentialele si datele tale de la broker raman complet private — fara chei API, fara acces la cont, fara partajare de date.' },
         { question: 'K.M.F. este disponibil pe iPhone?', answer: 'Momentan K.M.F. este doar pentru Android. iOS este planificat, dar nu exista o data confirmata de lansare.' },
@@ -228,7 +228,7 @@ export default function WhatIsKmfTradingJournalRo() {
         ]}
       />
       <P>
-        <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Pret Premium:</strong> $9.99/luna sau $79.99/an (economie 33%). 14 zile de incercare gratuita, fara card de credit. Anulare oricand prin Google Play.
+        <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Pret Premium:</strong> $5.99/luna sau $49.99/an (economie 30%). 7 zile de incercare gratuita, fara card de credit. Anulare oricand prin Google Play.
       </P>
       <P>
         Merita Premium? Daca tranzactionezi mai mult de 50 de trade-uri pe luna, sau daca vrei functiile de psihologie (emotion tracking, tilt detection, personality profile), sau daca ai nevoie de cloud backup — da. Daca abia incepi si vrei sa iti construiesti mai intai obiceiul de journaling, free tier-ul este cu adevarat suficient.
@@ -281,7 +281,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H2>Cum sa incepi</H2>
       <P>
-        K.M.F. Trading Journal este disponibil acum pe Google Play. Descarca-l gratuit si incepe sa iti loghezi trade-urile azi — fara card de credit. Functiile Premium includ o perioada de incercare gratuita de 14 zile.
+        K.M.F. Trading Journal este disponibil acum pe Google Play. Descarca-l gratuit si incepe sa iti loghezi trade-urile azi — fara card de credit. Functiile Premium includ o perioada de incercare gratuita de 7 zile.
       </P>
       <Ul items={[
         'Descarca K.M.F. de pe Google Play',
@@ -299,7 +299,7 @@ export default function WhatIsKmfTradingJournalRo() {
       <Takeaways items={[
         'K.M.F. (Keep Moving Forward) este o aplicatie de trading journal pentru Android, construita de traderi care s-au saturat de spreadsheet-uri si instrumente web scumpe.',
         'Functii de baza gratuite permanent: trade logging, istoric, statistici de baza, lot calculator, checklist, jurnal, acces offline, 7 limbi.',
-        'Premium ($9.99/luna sau $79.99/an) adauga statistici avansate, tracking psihologic, tilt detection, cloud sync, achievements si altele.',
+        'Premium ($5.99/luna sau $49.99/an) adauga statistici avansate, tracking psihologic, tilt detection, cloud sync, achievements si altele.',
         'Fara conexiune la broker — doar introducere manuala, datele tale raman private.',
         'Psychology Engine-ul (emotion tracking, tilt detection, Honesty Mirror, profilare de personalitate) este ceea ce separa K.M.F. de orice alt journal de pe piata.',
         'Aplicatia nu te face profitabil — iti face trading-ul vizibil ca sa te poti imbunatati mai rapid.',

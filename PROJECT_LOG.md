@@ -5,6 +5,42 @@ Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (
 
 ## Sesiuni de lucru
 
+### 2026-04-07 — Sesiunea #20 (Pricing Update)
+**Ce s-a cerut:** Schimbat free trial de la 14 la 7 zile, preț lunar de la $9.99 la $5.99, anual de la $79.99 la $49.99, recalculat save %
+**Ce s-a făcut:**
+- Actualizat MONTHLY_PRICE=5.99, ANNUAL_PRICE=49.99 în Pricing.jsx (SAVE_PERCENT se calculează automat → 30%)
+- Actualizat JSON-LD highPrice în index.html
+- Înlocuit "14-day/14 zile/14 jours/14 Tage/14 дней/14日間/14 天" → "7" în toate cele 7 limbi
+- Actualizat prețuri hardcoded în 3 articole blog (EN, RO, Excel comparison)
+- Actualizat FAQ JSON-LD în LandingPage.jsx
+- Actualizat CTA trial în BlogArticleLayout.jsx și BestTradingJournalAndroid2026.jsx
+**Fișiere modificate:**
+- `src/components/Pricing.jsx` — prețuri noi
+- `index.html` — JSON-LD schema + noscript
+- `src/pages/LandingPage.jsx` — FAQ schema
+- `src/components/blog/BlogArticleLayout.jsx` — CTA
+- `src/pages/blog/BestTradingJournalAndroid2026.jsx` — CTA
+- `src/pages/blog/WhatIsKmfTradingJournal.jsx` — prețuri + trial
+- `src/pages/blog/ro/WhatIsKmfTradingJournalRo.jsx` — prețuri + trial
+- `src/pages/blog/ExcelVsTradingJournal.jsx` — tabel comparativ
+- `src/i18n/translations.js` — trial 14→7 (7 limbi)
+- `src/i18n/lang/{en,ro,fr,de,ru,ja,zh}.js` — trial 14→7
+**Următorii pași sugerați:** Drawdown Recovery Calculator, Break-even Win Rate Calculator
+
+---
+
+### 2026-04-06 — Sesiunea #19 (Footer Reorganization)
+**Ce s-a cerut:** Restructurare footer — linkurile erau dezechilibrate (coloana din mijloc supraîncărcată, Legal cu doar 2 linkuri)
+**Ce s-a făcut:**
+- Reorganizat footer din 3 coloane (brand col-span-2 + links aglomerate + legal) în 4 coloane echilibrate: Brand | Quick Links | Tools | Blog + Legal
+- Responsive: 1 col mobile, 2 col tabletă, 4 col desktop (sm:grid-cols-2 lg:grid-cols-4)
+- Uniformizat font size pe toate linkurile (scos text-sm de pe Tools/Blog)
+**Fișiere modificate:**
+- `src/components/Footer.jsx` — restructurat grid layout
+**Următorii pași sugerați:** Drawdown Recovery Calculator, Break-even Win Rate Calculator
+
+---
+
 ### 2026-04-04/05 — Sesiunea #18 (Beta Signup Modal + Email Notification + LiquidHours Legal)
 **Ce s-a cerut:** Înlocuire mailto link cu modal form pe BetaBanner + notificare email + pagini legale LiquidHours
 **Ce s-a făcut:**
