@@ -207,7 +207,7 @@ export default function BestTradingJournalAndroid2026() {
               'Android only (iOS not available yet)',
               'New on Google Play — growing feature set with regular updates',
             ]}
-            free="50 trades/month, full journaling, lot calculator, checklists"
+            free="15 trades, full journaling, lot calculator, checklists"
             premium="Unlimited trades, cloud sync, advanced statistics, weekly review, notifications, export"
             cta={
               <a href={PLAY_STORE_URL}

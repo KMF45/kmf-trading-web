@@ -196,7 +196,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Free Tier sincer</H3>
       <P>
-        Free tier-ul nu este un demo. Include trade logging complet (50 trade-uri/luna), istoric cu cautare, P/L de baza si win rate, lot calculator, checklist pre-trade, jurnal de trading, acces offline si 7 limbi. Poti face journaling serios pe free tier luni intregi inainte de a decide daca Premium merita.
+        Free tier-ul nu este un demo. Include trade logging complet (15 trade-uri), istoric cu cautare, P/L de baza si win rate, lot calculator, checklist pre-trade, jurnal de trading, acces offline si 7 limbi. Dupa 15 trade-uri, poti activa un free trial sau sa faci upgrade la Premium.
       </P>
 
       <Divider />
@@ -205,7 +205,7 @@ export default function WhatIsKmfTradingJournalRo() {
       <Table
         headers={['Functie', 'Free', 'Premium']}
         rows={[
-          ['Trade logging', '50 trade-uri/luna', 'Nelimitat'],
+          ['Trade logging', '15 trade-uri', 'Nelimitat'],
           ['Istoric trade-uri si cautare', 'Da', 'Da'],
           ['Win rate si P/L de baza', 'Da', 'Da'],
           ['Lot size calculator', 'Da', 'Da'],
@@ -231,7 +231,7 @@ export default function WhatIsKmfTradingJournalRo() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Pret Premium:</strong> $5.99/luna sau $49.99/an (economie 30%). 7 zile de incercare gratuita, fara card de credit. Anulare oricand prin Google Play.
       </P>
       <P>
-        Merita Premium? Daca tranzactionezi mai mult de 50 de trade-uri pe luna, sau daca vrei functiile de psihologie (emotion tracking, tilt detection, personality profile), sau daca ai nevoie de cloud backup — da. Daca abia incepi si vrei sa iti construiesti mai intai obiceiul de journaling, free tier-ul este cu adevarat suficient.
+        Merita Premium? Daca vrei trade-uri nelimitate, functiile de psihologie (emotion tracking, tilt detection, personality profile), sau cloud backup — da. Free tier-ul iti ofera 15 trade-uri ca sa testezi aplicatia inainte de a decide.
       </P>
 
       <Divider />

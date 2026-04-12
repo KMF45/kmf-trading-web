@@ -5,6 +5,25 @@ Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (
 
 ## Sesiuni de lucru
 
+### 2026-04-12 — Sesiunea #21 (Free Tier: 50/month → 15 total)
+**Ce s-a cerut:** Actualizat limita free tier de la 50 trades/lună la 15 trades total (fără reset lunar)
+**Ce s-a făcut:**
+- Înlocuit "50 trades / month" → "15 trades" în toate cele 7 limbi (pricing feature list + FAQ answers)
+- Actualizat FAQ JSON-LD în LandingPage.jsx
+- Actualizat 3 articole blog: WhatIsKmfTradingJournal (EN + RO) + BestTradingJournalAndroid2026
+- Scos referințele la "per month/pe lună" — limita e acum totală, nu lunară
+- Adaptat textele: "free forever" → "free" unde era legat de 50/month
+**Fișiere modificate:**
+- `src/i18n/translations.js` — 14 locuri (7 limbi × pricing + FAQ)
+- `src/i18n/lang/{en,ro,fr,de,ru,ja,zh}.js` — pricing + FAQ în fiecare
+- `src/pages/LandingPage.jsx` — FAQ JSON-LD
+- `src/pages/blog/WhatIsKmfTradingJournal.jsx` — text + tabel + recomandare
+- `src/pages/blog/ro/WhatIsKmfTradingJournalRo.jsx` — text + tabel + recomandare
+- `src/pages/blog/BestTradingJournalAndroid2026.jsx` — free tier description
+**Următorii pași sugerați:** Build + deploy, Drawdown Recovery Calculator, Break-even Win Rate Calculator
+
+---
+
 ### 2026-04-07 — Sesiunea #20 (Pricing Update)
 **Ce s-a cerut:** Schimbat free trial de la 14 la 7 zile, preț lunar de la $9.99 la $5.99, anual de la $79.99 la $49.99, recalculat save %
 **Ce s-a făcut:**

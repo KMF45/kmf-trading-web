@@ -282,7 +282,7 @@ const en = {
     "footer": "Prices shown in USD. Billing handled securely via Google Play. Cancel anytime.",
     "freeFeatures": [
       "Trade logging",
-      "50 trades / month",
+      "15 trades",
       "Trade history & search",
       "Win rate & basic P/L",
       "Lot size calculator",
@@ -362,7 +362,7 @@ const en = {
       },
       {
         "question": "Is K.M.F. Trading Journal free?",
-        "answer": "Yes. Core features like trade logging (50/month), history, lot calculator, checklists, and a trading diary are free forever. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
+        "answer": "Yes. Core features like trade logging (15 trades), history, lot calculator, checklists, and a trading diary are free. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
       },
       {
         "question": "What is the 7-day free trial?",

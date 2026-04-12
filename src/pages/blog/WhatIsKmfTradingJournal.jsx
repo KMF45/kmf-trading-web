@@ -195,7 +195,7 @@ export default function WhatIsKmfTradingJournal() {
 
       <H3>Honest Free Tier</H3>
       <P>
-        The free tier is not a demo. It includes full trade logging (50 trades/month), trade history with search, basic P/L and win rate, the lot size calculator, pre-trade checklists, trading diary, offline access, and 7 languages. You can journal seriously on the free tier for months before deciding if Premium is worth it.
+        The free tier is not a demo. It includes full trade logging (15 trades), trade history with search, basic P/L and win rate, the lot size calculator, pre-trade checklists, trading diary, offline access, and 7 languages. After 15 trades, you can start a free trial or upgrade to Premium.
       </P>
 
       <Divider />
@@ -204,7 +204,7 @@ export default function WhatIsKmfTradingJournal() {
       <Table
         headers={['Feature', 'Free', 'Premium']}
         rows={[
-          ['Trade logging', '50 trades/month', 'Unlimited'],
+          ['Trade logging', '15 trades', 'Unlimited'],
           ['Trade history & search', 'Yes', 'Yes'],
           ['Win rate & basic P/L', 'Yes', 'Yes'],
           ['Lot size calculator', 'Yes', 'Yes'],
@@ -230,7 +230,7 @@ export default function WhatIsKmfTradingJournal() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Premium pricing:</strong> $5.99/month or $49.99/year (30% savings). 7-day free trial, no credit card required. Cancel anytime through Google Play.
       </P>
       <P>
-        Is Premium worth it? If you trade more than 50 trades per month, or if you want the psychology features (emotion tracking, tilt detection, personality profile), or if you need cloud backup — yes. If you are just starting out and want to build the journaling habit first, the free tier is genuinely enough.
+        Is Premium worth it? If you want unlimited trades, the psychology features (emotion tracking, tilt detection, personality profile), or cloud backup — yes. The free tier gives you 15 trades to experience the app before deciding.
       </P>
 
       <Divider />

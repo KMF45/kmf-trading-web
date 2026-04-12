@@ -282,7 +282,7 @@ const ro = {
     "footer": "Prețurile sunt afișate în USD. Plata se face securizat prin Google Play. Poți anula oricând.",
     "freeFeatures": [
       "Înregistrare trade-uri",
-      "50 trade-uri / lună",
+      "15 trade-uri",
       "Istoric trade-uri și căutare",
       "Win rate și P/L de bază",
       "Lot size calculator",
@@ -362,7 +362,7 @@ const ro = {
       },
       {
         "question": "Este K.M.F. Trading Journal gratuit?",
-        "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (50/lună), istoricul, lot calculator, checklist-urile și jurnalul de trading sunt gratuite pentru totdeauna. Premium deblochează trade-uri nelimitate, statistici avansate, cloud sync, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
+        "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (15 trade-uri), istoricul, lot calculator, checklist-urile și jurnalul de trading sunt gratuite. Premium deblochează trade-uri nelimitate, statistici avansate, cloud sync, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
       },
       {
         "question": "Ce este perioada de probă gratuită de 7 zile?",

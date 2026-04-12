@@ -273,7 +273,7 @@ export const translations = {
       "footer": "Prices shown in USD. Billing handled securely via Google Play. Cancel anytime.",
       "freeFeatures": [
         "Trade logging",
-        "50 trades / month",
+        "15 trades",
         "Trade history & search",
         "Win rate & basic P/L",
         "Lot size calculator",
@@ -353,7 +353,7 @@ export const translations = {
         },
         {
           "question": "Is K.M.F. Trading Journal free?",
-          "answer": "Yes. Core features like trade logging (50/month), history, lot calculator, checklists, and a trading diary are free forever. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
+          "answer": "Yes. Core features like trade logging (15 trades), history, lot calculator, checklists, and a trading diary are free. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
         },
         {
           "question": "What is the 7-day free trial?",
@@ -677,7 +677,7 @@ export const translations = {
       "footer": "Prețurile sunt afișate în USD. Plata se face securizat prin Google Play. Poți anula oricând.",
       "freeFeatures": [
         "Înregistrare trade-uri",
-        "50 trade-uri / lună",
+        "15 trade-uri",
         "Istoric trade-uri și căutare",
         "Win rate și P/L de bază",
         "Lot size calculator",
@@ -757,7 +757,7 @@ export const translations = {
         },
         {
           "question": "Este K.M.F. Trading Journal gratuit?",
-          "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (50/lună), istoricul, lot calculator, checklist-urile și jurnalul de trading sunt gratuite pentru totdeauna. Premium deblochează trade-uri nelimitate, statistici avansate, cloud sync, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
+          "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (15 trade-uri), istoricul, lot calculator, checklist-urile și jurnalul de trading sunt gratuite. Premium deblochează trade-uri nelimitate, statistici avansate, cloud sync, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
         },
         {
           "question": "Ce este perioada de probă gratuită de 7 zile?",
@@ -1081,7 +1081,7 @@ export const translations = {
       "footer": "Prix affichés en USD. Facturation sécurisée via Google Play. Annulation à tout moment.",
       "freeFeatures": [
         "Enregistrement des trades",
-        "50 trades / mois",
+        "15 trades",
         "Historique des trades et recherche",
         "Win rate et P/L de base",
         "Lot size calculator",
@@ -1161,7 +1161,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal est-il gratuit ?",
-          "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (50/mois), l'historique, le lot calculator, les checklists et le journal de trading sont gratuits pour toujours. Le Premium débloque les trades illimités, les statistiques avancées, le cloud sync, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
+          "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (15 trades), l'historique, le lot calculator, les checklists et le journal de trading sont gratuits. Le Premium débloque les trades illimités, les statistiques avancées, le cloud sync, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
         },
         {
           "question": "Qu'est-ce que l'essai gratuit de 7 jours ?",
@@ -1485,7 +1485,7 @@ export const translations = {
       "footer": "Цены указаны в USD. Оплата безопасно через Google Play. Отмена в любое время.",
       "freeFeatures": [
         "Запись сделок",
-        "50 сделок / месяц",
+        "15 сделок",
         "История сделок и поиск",
         "Win rate и базовый P/L",
         "Калькулятор lot size",
@@ -1565,7 +1565,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal бесплатный?",
-          "answer": "Да. Базовые функции — запись сделок (50/месяц), история, калькулятор lot size, чек-листы и торговый дневник — бесплатны навсегда. Premium открывает безлимитные сделки, продвинутую статистику, облачную синхронизацию, трекинг эмоций, достижения и многое другое. Попробуйте Premium бесплатно 7 дней — без привязки карты."
+          "answer": "Да. Базовые функции — запись сделок (15 сделок), история, калькулятор lot size, чек-листы и торговый дневник — бесплатны. Premium открывает безлимитные сделки, продвинутую статистику, облачную синхронизацию, трекинг эмоций, достижения и многое другое. Попробуйте Premium бесплатно 7 дней — без привязки карты."
         },
         {
           "question": "Что такое 14-дневный бесплатный пробный период?",
@@ -1889,7 +1889,7 @@ export const translations = {
       "footer": "価格はUSD表示です。お支払いはGoogle Play経由で安全に処理されます。いつでもキャンセル可能。",
       "freeFeatures": [
         "トレード記録",
-        "50トレード / 月",
+        "15トレード",
         "トレード履歴＆検索",
         "Win rate＆基本P/L",
         "Lot sizeカリキュレーター",
@@ -1969,7 +1969,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journalは無料ですか？",
-          "answer": "はい。トレード記録（月50件）、履歴、lot sizeカリキュレーター、チェックリスト、トレード日記などの基本機能は永久無料です。Premiumでは無制限トレード、高度な統計、クラウド同期、感情トラッキング、実績などが利用可能になります。Premiumは7日間無料でお試しいただけます — クレジットカード不要。"
+          "answer": "はい。トレード記録（15件）、履歴、lot sizeカリキュレーター、チェックリスト、トレード日記などの基本機能は無料です。Premiumでは無制限トレード、高度な統計、クラウド同期、感情トラッキング、実績などが利用可能になります。Premiumは7日間無料でお試しいただけます — クレジットカード不要。"
         },
         {
           "question": "7日間の無料トライアルとは何ですか？",
@@ -2293,7 +2293,7 @@ export const translations = {
       "footer": "Preise in USD. Sichere Abrechnung über Google Play. Jederzeit kündbar.",
       "freeFeatures": [
         "Trade-Erfassung",
-        "50 Trades / Monat",
+        "15 Trades",
         "Trade-Historie & Suche",
         "Win rate & Basis-P/L",
         "Lot-Size-Rechner",
@@ -2373,7 +2373,7 @@ export const translations = {
         },
         {
           "question": "Ist K.M.F. Trading Journal kostenlos?",
-          "answer": "Ja. Kernfunktionen wie Trade-Erfassung (50/Monat), Historie, Lot-Size-Rechner, Checklisten und Trading-Tagebuch sind für immer kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Cloud-Sync, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
+          "answer": "Ja. Kernfunktionen wie Trade-Erfassung (15 Trades), Historie, Lot-Size-Rechner, Checklisten und Trading-Tagebuch sind kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Cloud-Sync, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
         },
         {
           "question": "Was ist die 14-tägige kostenlose Testphase?",
@@ -2697,7 +2697,7 @@ export const translations = {
       "footer": "价格以美元显示。通过 Google Play 安全结算。随时可取消。",
       "freeFeatures": [
         "交易记录",
-        "每月 50 笔交易",
+        "15 笔交易",
         "交易历史与搜索",
         "Win rate 与基础 P/L",
         "Lot size 计算器",
@@ -2777,7 +2777,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal 免费吗？",
-          "answer": "是的。交易记录（每月 50 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能永久免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 7 天——无需信用卡。"
+          "answer": "是的。交易记录（15 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 7 天——无需信用卡。"
         },
         {
           "question": "什么是 7 天免费试用？",

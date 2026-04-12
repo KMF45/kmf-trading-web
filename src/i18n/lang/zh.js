@@ -282,7 +282,7 @@ const zh = {
     "footer": "价格以美元显示。通过 Google Play 安全结算。随时可取消。",
     "freeFeatures": [
       "交易记录",
-      "每月 50 笔交易",
+      "15 笔交易",
       "交易历史与搜索",
       "Win rate 与基础 P/L",
       "Lot size 计算器",
@@ -362,7 +362,7 @@ const zh = {
       },
       {
         "question": "K.M.F. Trading Journal 免费吗？",
-        "answer": "是的。交易记录（每月 50 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能永久免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 7 天——无需信用卡。"
+        "answer": "是的。交易记录（15 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 7 天——无需信用卡。"
       },
       {
         "question": "什么是 7 天免费试用？",

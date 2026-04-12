@@ -282,7 +282,7 @@ const fr = {
     "footer": "Prix affichés en USD. Facturation sécurisée via Google Play. Annulation à tout moment.",
     "freeFeatures": [
       "Enregistrement des trades",
-      "50 trades / mois",
+      "15 trades",
       "Historique des trades et recherche",
       "Win rate et P/L de base",
       "Lot size calculator",
@@ -362,7 +362,7 @@ const fr = {
       },
       {
         "question": "K.M.F. Trading Journal est-il gratuit ?",
-        "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (50/mois), l'historique, le lot calculator, les checklists et le journal de trading sont gratuits pour toujours. Le Premium débloque les trades illimités, les statistiques avancées, le cloud sync, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
+        "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (15 trades), l'historique, le lot calculator, les checklists et le journal de trading sont gratuits. Le Premium débloque les trades illimités, les statistiques avancées, le cloud sync, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
       },
       {
         "question": "Qu'est-ce que l'essai gratuit de 7 jours ?",
