@@ -91,7 +91,7 @@ const fr = {
       },
       {
         "title": "Gratuit pour commencer, Premium pour évoluer",
-        "description": "Journalisation complète, lot calculator, checklist-s et historique — entièrement gratuit. Passez au Premium uniquement quand vous souhaitez le cloud sync, les statistiques avancées et les trades illimités.",
+        "description": "Journalisation complète, lot calculator, checklist-s, cloud sync et historique — entièrement gratuit. Passez au Premium uniquement quand vous souhaitez les statistiques avancées et les trades illimités.",
         "tag": "sans carte bancaire"
       }
     ]
@@ -288,13 +288,13 @@ const fr = {
       "Lot size calculator",
       "Checklist pré-trade",
       "Journal de trading",
+      "Cloud sync et backup",
       "Accès hors ligne",
       "7 langues"
     ],
     "freeMissing": [
       "Trades illimités",
       "Statistiques avancées",
-      "Cloud sync et backup",
       "Bilan hebdomadaire et objectifs",
       "Emotion tracking et tilt detection",
       "Profil de personnalité du trader",
@@ -308,7 +308,6 @@ const fr = {
       "Essai gratuit de 7 jours",
       "Trades illimités",
       "Statistiques avancées",
-      "Cloud sync et backup",
       "Bilan hebdomadaire et objectifs",
       "Emotion tracking et tilt detection",
       "Profil de personnalité du trader",
@@ -362,7 +361,7 @@ const fr = {
       },
       {
         "question": "K.M.F. Trading Journal est-il gratuit ?",
-        "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (15 trades), l'historique, le lot calculator, les checklists et le journal de trading sont gratuits. Le Premium débloque les trades illimités, les statistiques avancées, le cloud sync, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
+        "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (15 trades), l'historique, le lot calculator, les checklists, le cloud sync et le journal de trading sont gratuits. Le Premium débloque les trades illimités, les statistiques avancées, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
       },
       {
         "question": "Qu'est-ce que l'essai gratuit de 7 jours ?",
@@ -390,7 +389,7 @@ const fr = {
       },
       {
         "question": "Puis-je exporter mes données de trading ?",
-        "answer": "Oui. Les utilisateurs Premium peuvent exporter les données de trades aux formats JSON, CSV et PDF, ainsi que créer des backups cloud complets et les restaurer sur n'importe quel appareil."
+        "answer": "Oui. Tous les utilisateurs bénéficient du cloud sync et backup. Les utilisateurs Premium peuvent également exporter les données de trades aux formats JSON, CSV et PDF."
       },
       {
         "question": "K.M.F. Trading Journal dispose-t-il d'un lot size calculator ?",

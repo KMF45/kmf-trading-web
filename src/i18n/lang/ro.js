@@ -91,7 +91,7 @@ const ro = {
       },
       {
         "title": "Gratuit la început, Premium pentru creștere",
-        "description": "Jurnalizare completă, lot calculator, checklist-uri și istoric — complet gratuit. Treci la Premium doar când vrei cloud sync, statistici avansate și trade-uri nelimitate.",
+        "description": "Jurnalizare completă, lot calculator, checklist-uri, cloud sync și istoric — complet gratuit. Treci la Premium doar când vrei statistici avansate și trade-uri nelimitate.",
         "tag": "fără card bancar"
       }
     ]
@@ -288,13 +288,13 @@ const ro = {
       "Lot size calculator",
       "Checklist pre-trade",
       "Jurnal de trading",
+      "Cloud sync și backup",
       "Acces offline",
       "7 limbi"
     ],
     "freeMissing": [
       "Trade-uri nelimitate",
       "Statistici avansate",
-      "Cloud sync și backup",
       "Evaluare săptămânală și obiective",
       "Emotion tracking și tilt detection",
       "Profilul de personalitate al traderului",
@@ -308,7 +308,6 @@ const ro = {
       "Perioadă de probă gratuită de 7 zile",
       "Trade-uri nelimitate",
       "Statistici avansate",
-      "Cloud sync și backup",
       "Evaluare săptămânală și obiective",
       "Emotion tracking și tilt detection",
       "Profilul de personalitate al traderului",
@@ -362,7 +361,7 @@ const ro = {
       },
       {
         "question": "Este K.M.F. Trading Journal gratuit?",
-        "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (15 trade-uri), istoricul, lot calculator, checklist-urile și jurnalul de trading sunt gratuite. Premium deblochează trade-uri nelimitate, statistici avansate, cloud sync, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
+        "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (15 trade-uri), istoricul, lot calculator, checklist-urile, cloud sync și jurnalul de trading sunt gratuite. Premium deblochează trade-uri nelimitate, statistici avansate, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
       },
       {
         "question": "Ce este perioada de probă gratuită de 7 zile?",
@@ -390,7 +389,7 @@ const ro = {
       },
       {
         "question": "Pot exporta datele de trading?",
-        "answer": "Da. Utilizatorii Premium pot exporta datele de trade în format JSON, CSV și PDF, precum și să creeze backup-uri complete în cloud și să le restaureze pe orice dispozitiv."
+        "answer": "Da. Toți utilizatorii beneficiază de cloud sync și backup. Utilizatorii Premium pot exporta și datele de trade în format JSON, CSV și PDF."
       },
       {
         "question": "Are K.M.F. Trading Journal un lot size calculator?",

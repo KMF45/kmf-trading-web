@@ -91,7 +91,7 @@ const en = {
       },
       {
         "title": "Free to Start, Premium to Scale",
-        "description": "Full journaling, lot calculator, checklists and history — completely free. Upgrade to Premium only when you want cloud sync, advanced stats, and unlimited trades.",
+        "description": "Full journaling, lot calculator, checklists, cloud sync and history — completely free. Upgrade to Premium only when you want advanced stats and unlimited trades.",
         "tag": "no credit card required"
       }
     ]
@@ -288,13 +288,13 @@ const en = {
       "Lot size calculator",
       "Pre-trade checklist",
       "Trading diary",
+      "Cloud sync & backup",
       "Offline access",
       "7 languages"
     ],
     "freeMissing": [
       "Unlimited trades",
       "Advanced statistics",
-      "Cloud sync & backup",
       "Weekly review & goals",
       "Emotion tracking & tilt detection",
       "Trader personality profile",
@@ -308,7 +308,6 @@ const en = {
       "7-day free trial",
       "Unlimited trades",
       "Advanced statistics",
-      "Cloud sync & backup",
       "Weekly review & goals",
       "Emotion tracking & tilt detection",
       "Trader personality profile",
@@ -362,7 +361,7 @@ const en = {
       },
       {
         "question": "Is K.M.F. Trading Journal free?",
-        "answer": "Yes. Core features like trade logging (15 trades), history, lot calculator, checklists, and a trading diary are free. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
+        "answer": "Yes. Core features like trade logging (15 trades), history, lot calculator, checklists, cloud sync, and a trading diary are free. Premium unlocks unlimited trades, advanced stats, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
       },
       {
         "question": "What is the 7-day free trial?",
@@ -390,7 +389,7 @@ const en = {
       },
       {
         "question": "Can I export my trading data?",
-        "answer": "Yes. Premium users can export trade data to JSON, CSV, and PDF formats, as well as create full cloud backups and restore them on any device."
+        "answer": "Yes. All users get cloud sync and backup. Premium users can also export trade data to JSON, CSV, and PDF formats."
       },
       {
         "question": "Does K.M.F. Trading Journal have a lot size calculator?",

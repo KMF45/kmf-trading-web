@@ -82,7 +82,7 @@ export const translations = {
         },
         {
           "title": "Free to Start, Premium to Scale",
-          "description": "Full journaling, lot calculator, checklists and history — completely free. Upgrade to Premium only when you want cloud sync, advanced stats, and unlimited trades.",
+          "description": "Full journaling, lot calculator, checklists, cloud sync and history — completely free. Upgrade to Premium only when you want advanced stats and unlimited trades.",
           "tag": "no credit card required"
         }
       ]
@@ -279,13 +279,13 @@ export const translations = {
         "Lot size calculator",
         "Pre-trade checklist",
         "Trading diary",
+        "Cloud sync & backup",
         "Offline access",
         "7 languages"
       ],
       "freeMissing": [
         "Unlimited trades",
         "Advanced statistics",
-        "Cloud sync & backup",
         "Weekly review & goals",
         "Emotion tracking & tilt detection",
         "Trader personality profile",
@@ -299,7 +299,6 @@ export const translations = {
         "7-day free trial",
         "Unlimited trades",
         "Advanced statistics",
-        "Cloud sync & backup",
         "Weekly review & goals",
         "Emotion tracking & tilt detection",
         "Trader personality profile",
@@ -353,7 +352,7 @@ export const translations = {
         },
         {
           "question": "Is K.M.F. Trading Journal free?",
-          "answer": "Yes. Core features like trade logging (15 trades), history, lot calculator, checklists, and a trading diary are free. Premium unlocks unlimited trades, advanced stats, cloud sync, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
+          "answer": "Yes. Core features like trade logging (15 trades), history, lot calculator, checklists, cloud sync, and a trading diary are free. Premium unlocks unlimited trades, advanced stats, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
         },
         {
           "question": "What is the 7-day free trial?",
@@ -381,7 +380,7 @@ export const translations = {
         },
         {
           "question": "Can I export my trading data?",
-          "answer": "Yes. Premium users can export trade data to JSON, CSV, and PDF formats, as well as create full cloud backups and restore them on any device."
+          "answer": "Yes. All users get cloud sync and backup. Premium users can also export trade data to JSON, CSV, and PDF formats."
         },
         {
           "question": "Does K.M.F. Trading Journal have a lot size calculator?",
@@ -486,7 +485,7 @@ export const translations = {
         },
         {
           "title": "Gratuit la început, Premium pentru creștere",
-          "description": "Jurnalizare completă, lot calculator, checklist-uri și istoric — complet gratuit. Treci la Premium doar când vrei cloud sync, statistici avansate și trade-uri nelimitate.",
+          "description": "Jurnalizare completă, lot calculator, checklist-uri, cloud sync și istoric — complet gratuit. Treci la Premium doar când vrei statistici avansate și trade-uri nelimitate.",
           "tag": "fără card bancar"
         }
       ]
@@ -683,13 +682,13 @@ export const translations = {
         "Lot size calculator",
         "Checklist pre-trade",
         "Jurnal de trading",
+        "Cloud sync și backup",
         "Acces offline",
         "7 limbi"
       ],
       "freeMissing": [
         "Trade-uri nelimitate",
         "Statistici avansate",
-        "Cloud sync și backup",
         "Evaluare săptămânală și obiective",
         "Emotion tracking și tilt detection",
         "Profilul de personalitate al traderului",
@@ -703,7 +702,6 @@ export const translations = {
         "Perioadă de probă gratuită de 7 zile",
         "Trade-uri nelimitate",
         "Statistici avansate",
-        "Cloud sync și backup",
         "Evaluare săptămânală și obiective",
         "Emotion tracking și tilt detection",
         "Profilul de personalitate al traderului",
@@ -757,7 +755,7 @@ export const translations = {
         },
         {
           "question": "Este K.M.F. Trading Journal gratuit?",
-          "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (15 trade-uri), istoricul, lot calculator, checklist-urile și jurnalul de trading sunt gratuite. Premium deblochează trade-uri nelimitate, statistici avansate, cloud sync, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
+          "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (15 trade-uri), istoricul, lot calculator, checklist-urile, cloud sync și jurnalul de trading sunt gratuite. Premium deblochează trade-uri nelimitate, statistici avansate, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
         },
         {
           "question": "Ce este perioada de probă gratuită de 7 zile?",
@@ -785,7 +783,7 @@ export const translations = {
         },
         {
           "question": "Pot exporta datele de trading?",
-          "answer": "Da. Utilizatorii Premium pot exporta datele de trade în format JSON, CSV și PDF, precum și să creeze backup-uri complete în cloud și să le restaureze pe orice dispozitiv."
+          "answer": "Da. Toți utilizatorii beneficiază de cloud sync și backup. Utilizatorii Premium pot exporta și datele de trade în format JSON, CSV și PDF."
         },
         {
           "question": "Are K.M.F. Trading Journal un lot size calculator?",
@@ -890,7 +888,7 @@ export const translations = {
         },
         {
           "title": "Gratuit pour commencer, Premium pour évoluer",
-          "description": "Journalisation complète, lot calculator, checklist-s et historique — entièrement gratuit. Passez au Premium uniquement quand vous souhaitez le cloud sync, les statistiques avancées et les trades illimités.",
+          "description": "Journalisation complète, lot calculator, checklist-s, cloud sync et historique — entièrement gratuit. Passez au Premium uniquement quand vous souhaitez les statistiques avancées et les trades illimités.",
           "tag": "sans carte bancaire"
         }
       ]
@@ -1087,13 +1085,13 @@ export const translations = {
         "Lot size calculator",
         "Checklist pré-trade",
         "Journal de trading",
+        "Cloud sync et backup",
         "Accès hors ligne",
         "7 langues"
       ],
       "freeMissing": [
         "Trades illimités",
         "Statistiques avancées",
-        "Cloud sync et backup",
         "Bilan hebdomadaire et objectifs",
         "Emotion tracking et tilt detection",
         "Profil de personnalité du trader",
@@ -1107,7 +1105,6 @@ export const translations = {
         "Essai gratuit de 7 jours",
         "Trades illimités",
         "Statistiques avancées",
-        "Cloud sync et backup",
         "Bilan hebdomadaire et objectifs",
         "Emotion tracking et tilt detection",
         "Profil de personnalité du trader",
@@ -1161,7 +1158,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal est-il gratuit ?",
-          "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (15 trades), l'historique, le lot calculator, les checklists et le journal de trading sont gratuits. Le Premium débloque les trades illimités, les statistiques avancées, le cloud sync, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
+          "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (15 trades), l'historique, le lot calculator, les checklists, le cloud sync et le journal de trading sont gratuits. Le Premium débloque les trades illimités, les statistiques avancées, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
         },
         {
           "question": "Qu'est-ce que l'essai gratuit de 7 jours ?",
@@ -1189,7 +1186,7 @@ export const translations = {
         },
         {
           "question": "Puis-je exporter mes données de trading ?",
-          "answer": "Oui. Les utilisateurs Premium peuvent exporter les données de trades aux formats JSON, CSV et PDF, ainsi que créer des backups cloud complets et les restaurer sur n'importe quel appareil."
+          "answer": "Oui. Tous les utilisateurs bénéficient du cloud sync et backup. Les utilisateurs Premium peuvent également exporter les données de trades aux formats JSON, CSV et PDF."
         },
         {
           "question": "K.M.F. Trading Journal dispose-t-il d'un lot size calculator ?",
@@ -1294,7 +1291,7 @@ export const translations = {
         },
         {
           "title": "Бесплатно для старта, Premium для роста",
-          "description": "Полный дневник, калькулятор lot size, чек-листы и история — полностью бесплатно. Переходите на Premium, только когда захотите облачную синхронизацию, продвинутую статистику и безлимитные сделки.",
+          "description": "Полный дневник, калькулятор lot size, чек-листы, облачная синхронизация и история — полностью бесплатно. Переходите на Premium, только когда захотите продвинутую статистику и безлимитные сделки.",
           "tag": "без привязки карты"
         }
       ]
@@ -1491,13 +1488,13 @@ export const translations = {
         "Калькулятор lot size",
         "Предторговый чек-лист",
         "Торговый дневник",
+        "Облачная синхронизация и бэкап",
         "Офлайн-доступ",
         "7 языков"
       ],
       "freeMissing": [
         "Безлимитные сделки",
         "Продвинутая статистика",
-        "Облачная синхронизация и бэкап",
         "Еженедельный обзор и цели",
         "Трекинг эмоций и обнаружение tilt",
         "Профиль личности трейдера",
@@ -1511,7 +1508,6 @@ export const translations = {
         "14-дневный бесплатный пробный период",
         "Безлимитные сделки",
         "Продвинутая статистика",
-        "Облачная синхронизация и бэкап",
         "Еженедельный обзор и цели",
         "Трекинг эмоций и обнаружение tilt",
         "Профиль личности трейдера",
@@ -1565,7 +1561,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal бесплатный?",
-          "answer": "Да. Базовые функции — запись сделок (15 сделок), история, калькулятор lot size, чек-листы и торговый дневник — бесплатны. Premium открывает безлимитные сделки, продвинутую статистику, облачную синхронизацию, трекинг эмоций, достижения и многое другое. Попробуйте Premium бесплатно 7 дней — без привязки карты."
+          "answer": "Да. Базовые функции — запись сделок (15 сделок), история, калькулятор lot size, чек-листы, облачная синхронизация и торговый дневник — бесплатны. Premium открывает безлимитные сделки, продвинутую статистику, трекинг эмоций, достижения и многое другое. Попробуйте Premium бесплатно 7 дней — без привязки карты."
         },
         {
           "question": "Что такое 14-дневный бесплатный пробный период?",
@@ -1593,7 +1589,7 @@ export const translations = {
         },
         {
           "question": "Можно ли экспортировать торговые данные?",
-          "answer": "Да. Premium-пользователи могут экспортировать данные о сделках в форматах JSON, CSV и PDF, а также создавать полные облачные бэкапы и восстанавливать их на любом устройстве."
+          "answer": "Да. Все пользователи получают облачную синхронизацию и бэкап. Premium-пользователи также могут экспортировать данные о сделках в форматах JSON, CSV и PDF."
         },
         {
           "question": "Есть ли в K.M.F. Trading Journal калькулятор lot size?",
@@ -1698,7 +1694,7 @@ export const translations = {
         },
         {
           "title": "無料で始められ、Premiumでスケール",
-          "description": "トレード記録、lot sizeカリキュレーター、チェックリスト、履歴 — すべて完全無料。クラウド同期、高度な統計、無制限トレードが必要になったらPremiumへ。",
+          "description": "トレード記録、lot sizeカリキュレーター、チェックリスト、クラウド同期、履歴 — すべて完全無料。高度な統計、無制限トレードが必要になったらPremiumへ。",
           "tag": "クレジットカード不要"
         }
       ]
@@ -1895,13 +1891,13 @@ export const translations = {
         "Lot sizeカリキュレーター",
         "トレード前チェックリスト",
         "トレード日記",
+        "クラウド同期＆バックアップ",
         "オフラインアクセス",
         "7言語対応"
       ],
       "freeMissing": [
         "無制限トレード",
         "高度な統計",
-        "クラウド同期＆バックアップ",
         "ウィークリーレビュー＆目標",
         "感情トラッキング＆tilt検出",
         "トレーダー性格プロファイル",
@@ -1915,7 +1911,6 @@ export const translations = {
         "7日間無料トライアル",
         "無制限トレード",
         "高度な統計",
-        "クラウド同期＆バックアップ",
         "ウィークリーレビュー＆目標",
         "感情トラッキング＆tilt検出",
         "トレーダー性格プロファイル",
@@ -1969,7 +1964,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journalは無料ですか？",
-          "answer": "はい。トレード記録（15件）、履歴、lot sizeカリキュレーター、チェックリスト、トレード日記などの基本機能は無料です。Premiumでは無制限トレード、高度な統計、クラウド同期、感情トラッキング、実績などが利用可能になります。Premiumは7日間無料でお試しいただけます — クレジットカード不要。"
+          "answer": "はい。トレード記録（15件）、履歴、lot sizeカリキュレーター、チェックリスト、クラウド同期、トレード日記などの基本機能は無料です。Premiumでは無制限トレード、高度な統計、感情トラッキング、実績などが利用可能になります。Premiumは7日間無料でお試しいただけます — クレジットカード不要。"
         },
         {
           "question": "7日間の無料トライアルとは何ですか？",
@@ -1997,7 +1992,7 @@ export const translations = {
         },
         {
           "question": "トレードデータをエクスポートできますか？",
-          "answer": "はい。PremiumユーザーはトレードデータをJSON、CSV、PDF形式でエクスポートでき、完全なクラウドバックアップの作成と任意のデバイスへの復元も可能です。"
+          "answer": "はい。すべてのユーザーがクラウド同期とバックアップを利用できます。PremiumユーザーはトレードデータをJSON、CSV、PDF形式でエクスポートすることも可能です。"
         },
         {
           "question": "K.M.F. Trading Journalにlot sizeカリキュレーターはありますか？",
@@ -2102,7 +2097,7 @@ export const translations = {
         },
         {
           "title": "Kostenlos starten, mit Premium skalieren",
-          "description": "Vollständiges Tagebuch, Lot-Size-Rechner, Checklisten und Historie — komplett kostenlos. Upgrade auf Premium erst, wenn du Cloud-Sync, erweiterte Statistiken und unbegrenzte Trades willst.",
+          "description": "Vollständiges Tagebuch, Lot-Size-Rechner, Checklisten, Cloud-Sync und Historie — komplett kostenlos. Upgrade auf Premium erst, wenn du erweiterte Statistiken und unbegrenzte Trades willst.",
           "tag": "keine Kreditkarte nötig"
         }
       ]
@@ -2299,13 +2294,13 @@ export const translations = {
         "Lot-Size-Rechner",
         "Pre-Trade-Checkliste",
         "Trading-Tagebuch",
+        "Cloud-Sync & Backup",
         "Offline-Zugang",
         "7 Sprachen"
       ],
       "freeMissing": [
         "Unbegrenzte Trades",
         "Erweiterte Statistiken",
-        "Cloud-Sync & Backup",
         "Wöchentliches Review & Ziele",
         "Emotionstracking & Tilt-Erkennung",
         "Trader-Persönlichkeitsprofil",
@@ -2319,7 +2314,6 @@ export const translations = {
         "14-tägige kostenlose Testphase",
         "Unbegrenzte Trades",
         "Erweiterte Statistiken",
-        "Cloud-Sync & Backup",
         "Wöchentliches Review & Ziele",
         "Emotionstracking & Tilt-Erkennung",
         "Trader-Persönlichkeitsprofil",
@@ -2373,7 +2367,7 @@ export const translations = {
         },
         {
           "question": "Ist K.M.F. Trading Journal kostenlos?",
-          "answer": "Ja. Kernfunktionen wie Trade-Erfassung (15 Trades), Historie, Lot-Size-Rechner, Checklisten und Trading-Tagebuch sind kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Cloud-Sync, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
+          "answer": "Ja. Kernfunktionen wie Trade-Erfassung (15 Trades), Historie, Lot-Size-Rechner, Checklisten, Cloud-Sync und Trading-Tagebuch sind kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
         },
         {
           "question": "Was ist die 14-tägige kostenlose Testphase?",
@@ -2401,7 +2395,7 @@ export const translations = {
         },
         {
           "question": "Kann ich meine Trading-Daten exportieren?",
-          "answer": "Ja. Premium-Nutzer können Trade-Daten in JSON-, CSV- und PDF-Formate exportieren sowie vollständige Cloud-Backups erstellen und auf jedem Gerät wiederherstellen."
+          "answer": "Ja. Alle Nutzer erhalten Cloud-Sync und Backup. Premium-Nutzer können Trade-Daten zusätzlich in JSON-, CSV- und PDF-Formate exportieren."
         },
         {
           "question": "Hat K.M.F. Trading Journal einen Lot-Size-Rechner?",
@@ -2506,7 +2500,7 @@ export const translations = {
         },
         {
           "title": "免费起步，Premium 进阶",
-          "description": "完整的日志功能、lot size 计算器、检查清单和历史记录——完全免费。只在需要云同步、高级统计和无限交易时升级 Premium。",
+          "description": "完整的日志功能、lot size 计算器、检查清单、云同步和历史记录——完全免费。只在需要高级统计和无限交易时升级 Premium。",
           "tag": "无需信用卡"
         }
       ]
@@ -2703,13 +2697,13 @@ export const translations = {
         "Lot size 计算器",
         "交易前检查清单",
         "交易日记",
+        "云同步与备份",
         "离线使用",
         "7 种语言"
       ],
       "freeMissing": [
         "无限交易",
         "高级统计",
-        "云同步与备份",
         "每周复盘与目标",
         "情绪追踪与 tilt 检测",
         "交易者性格画像",
@@ -2723,7 +2717,6 @@ export const translations = {
         "7 天免费试用",
         "无限交易",
         "高级统计",
-        "云同步与备份",
         "每周复盘与目标",
         "情绪追踪与 tilt 检测",
         "交易者性格画像",
@@ -2777,7 +2770,7 @@ export const translations = {
         },
         {
           "question": "K.M.F. Trading Journal 免费吗？",
-          "answer": "是的。交易记录（15 笔）、历史、lot size 计算器、检查清单和交易日记等核心功能免费。Premium 解锁无限交易、高级统计、云同步、情绪追踪、成就等更多功能。你可以免费试用 Premium 7 天——无需信用卡。"
+          "answer": "是的。交易记录（15 笔）、历史、lot size 计算器、检查清单、云同步和交易日记等核心功能免费。Premium 解锁无限交易、高级统计、情绪追踪、成就等更多功能。你可以免费试用 Premium 7 天——无需信用卡。"
         },
         {
           "question": "什么是 7 天免费试用？",
@@ -2805,7 +2798,7 @@ export const translations = {
         },
         {
           "question": "我可以导出交易数据吗？",
-          "answer": "可以。Premium 用户可以将交易数据导出为 JSON、CSV 和 PDF 格式，还可以创建完整的云端备份并在任何设备上恢复。"
+          "answer": "可以。所有用户均可使用云同步与备份。Premium 用户还可以将交易数据导出为 JSON、CSV 和 PDF 格式。"
         },
         {
           "question": "K.M.F. Trading Journal 有 lot size 计算器吗？",

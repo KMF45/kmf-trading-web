@@ -78,7 +78,7 @@ export default function BestTradingJournalAndroid2026() {
       '@type': 'FAQPage',
       mainEntity: [
         { '@type': 'Question', name: 'What is the best free trading journal app for Android?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal is the best free trading journal for Android in 2026, offering emotion tracking, risk calculators, achievements, and offline support — all free with an optional Premium tier.' } },
-        { '@type': 'Question', name: 'Is K.M.F. Trading Journal really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. K.M.F. offers a fully functional free tier with unlimited trade logging, basic statistics, and risk calculators. Premium adds advanced analytics, cloud sync, and behavioral psychology tools.' } },
+        { '@type': 'Question', name: 'Is K.M.F. Trading Journal really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. K.M.F. offers a free tier with 15 trades, basic statistics, risk calculators, and cloud sync. Premium adds unlimited trades, advanced analytics, and behavioral psychology tools.' } },
         { '@type': 'Question', name: 'Which trading journal app is best for forex traders?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal is designed for forex, stocks, and crypto traders. It includes a lot size calculator, pip-based stop loss tracking, and session-aware analytics tailored to forex markets.' } },
       ],
     });
@@ -199,7 +199,7 @@ export default function BestTradingJournalAndroid2026() {
               'Weekly review with 5 self-evaluation metrics',
               'Advanced stats: profit factor, R-multiple, expectancy, drawdown',
               'Built-in lot size calculator with live prices and R:R',
-              'Cloud sync & backup (Premium)',
+              'Cloud sync & backup (all plans)',
               '7 languages including English, Romanian, Russian, Japanese',
               'Free core features — no credit card required',
             ]}
@@ -208,7 +208,7 @@ export default function BestTradingJournalAndroid2026() {
               'New on Google Play — growing feature set with regular updates',
             ]}
             free="15 trades, full journaling, lot calculator, checklists"
-            premium="Unlimited trades, cloud sync, advanced statistics, weekly review, notifications, export"
+            premium="Unlimited trades, advanced statistics, weekly review, notifications, export, psychology tools"
             cta={
               <a href={PLAY_STORE_URL}
                 target="_blank"

@@ -5,6 +5,25 @@ Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (
 
 ## Sesiuni de lucru
 
+### 2026-04-13 — Sesiunea #22 (Cloud Sync → Free for all)
+**Ce s-a cerut:** Cloud sync nu mai e doar Premium — e disponibil și pe Free tier
+**Ce s-a făcut:**
+- Mutat "Cloud sync & backup" din `freeMissing`/`premiumFeatures` în `freeFeatures` (7 limbi × translations.js + lang files)
+- Scos "cloud sync" din descrierea "Upgrade to Premium" (7 limbi × 2 fișiere)
+- Actualizat FAQ "Is KMF free?" — cloud sync listat ca free feature (7 limbi × 2 fișiere + LandingPage JSON-LD)
+- Actualizat FAQ "Can I export?" — "All users get cloud sync. Premium can also export" (7 limbi × 2 fișiere + LandingPage JSON-LD)
+- Actualizat tabel Free vs Premium în blog EN + RO: Cloud sync = Yes / Yes
+- Actualizat BestTradingJournal2026: "(Premium)" → "(all plans)", scos cloud sync din premium description
+**Fișiere modificate:**
+- `src/i18n/translations.js` — ~35 locuri (freeFeatures, freeMissing, premiumFeatures, description, FAQ × 7 limbi)
+- `src/i18n/lang/{en,ro,fr,de,ru,ja,zh}.js` — aceleași categorii × fiecare limbă
+- `src/pages/LandingPage.jsx` — FAQ JSON-LD (2 întrebări)
+- `src/pages/blog/WhatIsKmfTradingJournal.jsx` — FAQ + tabel + text
+- `src/pages/blog/ro/WhatIsKmfTradingJournalRo.jsx` — FAQ + tabel + text
+- `src/pages/blog/BestTradingJournalAndroid2026.jsx` — JSON-LD + pros + free/premium descriptions
+
+---
+
 ### 2026-04-12 — Sesiunea #21 (Free Tier: 50/month → 15 total)
 **Ce s-a cerut:** Actualizat limita free tier de la 50 trades/lună la 15 trades total (fără reset lunar)
 **Ce s-a făcut:**

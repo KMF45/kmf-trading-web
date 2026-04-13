@@ -91,7 +91,7 @@ const de = {
       },
       {
         "title": "Kostenlos starten, mit Premium skalieren",
-        "description": "Vollständiges Tagebuch, Lot-Size-Rechner, Checklisten und Historie — komplett kostenlos. Upgrade auf Premium erst, wenn du Cloud-Sync, erweiterte Statistiken und unbegrenzte Trades willst.",
+        "description": "Vollständiges Tagebuch, Lot-Size-Rechner, Checklisten, Cloud-Sync und Historie — komplett kostenlos. Upgrade auf Premium erst, wenn du erweiterte Statistiken und unbegrenzte Trades willst.",
         "tag": "keine Kreditkarte nötig"
       }
     ]
@@ -288,13 +288,13 @@ const de = {
       "Lot-Size-Rechner",
       "Pre-Trade-Checkliste",
       "Trading-Tagebuch",
+      "Cloud-Sync & Backup",
       "Offline-Zugang",
       "7 Sprachen"
     ],
     "freeMissing": [
       "Unbegrenzte Trades",
       "Erweiterte Statistiken",
-      "Cloud-Sync & Backup",
       "Wöchentliches Review & Ziele",
       "Emotionstracking & Tilt-Erkennung",
       "Trader-Persönlichkeitsprofil",
@@ -308,7 +308,6 @@ const de = {
       "14-tägige kostenlose Testphase",
       "Unbegrenzte Trades",
       "Erweiterte Statistiken",
-      "Cloud-Sync & Backup",
       "Wöchentliches Review & Ziele",
       "Emotionstracking & Tilt-Erkennung",
       "Trader-Persönlichkeitsprofil",
@@ -362,7 +361,7 @@ const de = {
       },
       {
         "question": "Ist K.M.F. Trading Journal kostenlos?",
-        "answer": "Ja. Kernfunktionen wie Trade-Erfassung (15 Trades), Historie, Lot-Size-Rechner, Checklisten und Trading-Tagebuch sind kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Cloud-Sync, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
+        "answer": "Ja. Kernfunktionen wie Trade-Erfassung (15 Trades), Historie, Lot-Size-Rechner, Checklisten, Cloud-Sync und Trading-Tagebuch sind kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
       },
       {
         "question": "Was ist die 14-tägige kostenlose Testphase?",
@@ -390,7 +389,7 @@ const de = {
       },
       {
         "question": "Kann ich meine Trading-Daten exportieren?",
-        "answer": "Ja. Premium-Nutzer können Trade-Daten in JSON-, CSV- und PDF-Formate exportieren sowie vollständige Cloud-Backups erstellen und auf jedem Gerät wiederherstellen."
+        "answer": "Ja. Alle Nutzer erhalten Cloud-Sync und Backup. Premium-Nutzer können Trade-Daten zusätzlich in JSON-, CSV- und PDF-Formate exportieren."
       },
       {
         "question": "Hat K.M.F. Trading Journal einen Lot-Size-Rechner?",
