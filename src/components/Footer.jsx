@@ -123,6 +123,15 @@ const Footer = () => {
                   Win Rate vs R:R Matrix
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/tools/compound-calculator"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200"
+                >
+                  Compound Calculator
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -32,6 +32,7 @@ const routes = [
   '/tools/lot-size-calculator',
   '/tools/risk-of-ruin',
   '/tools/win-rate-rr-matrix',
+  '/tools/compound-calculator',
   // LiquidHours legal
   '/liquidhours/privacy-policy',
   '/liquidhours/terms-of-use',

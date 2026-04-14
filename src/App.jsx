@@ -59,6 +59,7 @@ const LHTermsOfUse = lazy(() => import('./pages/liquidhours/TermsOfUsePage'));
 const LotCalculatorPage = lazy(() => import('./pages/LotCalculatorPage'));
 const RiskOfRuinPage = lazy(() => import('./pages/RiskOfRuinPage'));
 const WinRateRRMatrixPage = lazy(() => import('./pages/WinRateRRMatrixPage'));
+const CompoundCalculatorPage = lazy(() => import('./pages/CompoundCalculatorPage'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -133,6 +134,7 @@ function App() {
           <Route path="/tools/lot-size-calculator" element={<LotCalculatorPage />} />
           <Route path="/tools/risk-of-ruin" element={<RiskOfRuinPage />} />
           <Route path="/tools/win-rate-rr-matrix" element={<WinRateRRMatrixPage />} />
+          <Route path="/tools/compound-calculator" element={<CompoundCalculatorPage />} />
 
           {/* Translated articles */}
           <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />
