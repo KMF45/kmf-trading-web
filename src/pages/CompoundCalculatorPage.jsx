@@ -1,6 +1,7 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
+import { toPng } from 'html-to-image';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
 
@@ -10,55 +11,71 @@ const OG_IMAGE = 'https://kmfjournal.com/tools/og/compound-calculator.png';
 const PAGE_URL = 'https://kmfjournal.com/tools/compound-calculator';
 
 /* ─── Compound Engine ─── */
-function calculateCompound(startBalance, monthlyPct, months, monthlyDeposit = 0) {
+function calculateCompound(startBalance, monthlyPct, months, monthlyDeposit = 0, monthlyWithdrawal = 0) {
   const data = [];
   let balance = startBalance;
   let totalDeposits = startBalance;
+  let totalWithdrawn = 0;
   let linearBalance = startBalance;
   const milestones = [];
   const milestoneTargets = [2, 3, 5, 10];
   const milestonesHit = new Set();
+  let bustedMonth = null;
 
   for (let m = 0; m <= months; m++) {
     const profit = m === 0 ? 0 : balance * (monthlyPct / 100);
     const deposit = m === 0 ? 0 : monthlyDeposit;
+    const withdrawal = m === 0 ? 0 : monthlyWithdrawal;
 
     if (m > 0) {
-      balance += profit + deposit;
+      balance += profit + deposit - withdrawal;
       totalDeposits += deposit;
-      linearBalance += (startBalance * monthlyPct / 100) + deposit;
+      totalWithdrawn += withdrawal;
+      linearBalance += (startBalance * monthlyPct / 100) + deposit - withdrawal;
+
+      // Account busted
+      if (balance <= 0) {
+        balance = 0;
+        linearBalance = Math.max(0, linearBalance);
+        bustedMonth = bustedMonth || m;
+      }
     }
 
-    const principal = Math.min(totalDeposits, balance);
-    const compoundProfit = Math.max(0, balance - totalDeposits);
+    const principal = Math.min(totalDeposits - totalWithdrawn, balance);
+    const compoundProfit = Math.max(0, balance - Math.max(0, totalDeposits - totalWithdrawn));
 
     data.push({
       month: m,
       balance: Math.round(balance * 100) / 100,
-      principal: Math.round(principal * 100) / 100,
+      principal: Math.round(Math.max(0, principal) * 100) / 100,
       profit: Math.round(compoundProfit * 100) / 100,
-      linear: Math.round(linearBalance * 100) / 100,
+      linear: Math.round(Math.max(0, linearBalance) * 100) / 100,
       monthlyProfit: Math.round(profit * 100) / 100,
       deposit,
+      withdrawal,
     });
 
     // Check milestones
-    const multiple = balance / startBalance;
-    for (const target of milestoneTargets) {
-      if (multiple >= target && !milestonesHit.has(target)) {
-        milestonesHit.add(target);
-        milestones.push({ month: m, multiple: target, balance: Math.round(balance) });
+    if (balance > 0) {
+      const multiple = balance / startBalance;
+      for (const target of milestoneTargets) {
+        if (multiple >= target && !milestonesHit.has(target)) {
+          milestonesHit.add(target);
+          milestones.push({ month: m, multiple: target, balance: Math.round(balance) });
+        }
       }
     }
+
+    if (bustedMonth) break;
   }
 
   const finalBalance = data[data.length - 1].balance;
-  const totalProfit = finalBalance - totalDeposits;
+  const totalProfit = finalBalance - (totalDeposits - totalWithdrawn);
   const growthMultiple = finalBalance / startBalance;
   const linearFinal = data[data.length - 1].linear;
   const compoundAdvantage = finalBalance - linearFinal;
 
-  return { data, milestones, finalBalance, totalProfit, totalDeposits, growthMultiple, compoundAdvantage, linearFinal };
+  return { data, milestones, finalBalance, totalProfit, totalDeposits, totalWithdrawn, growthMultiple, compoundAdvantage, linearFinal, bustedMonth };
 }
 
 /* ─── Drawdown Recovery Table ─── */
@@ -76,11 +93,12 @@ const DRAWDOWN_RECOVERY = [
 
 /* ─── Presets ─── */
 const PRESETS = [
-  { label: 'Conservative', desc: '$10k, 3%/mo, 12 months', balance: 10000, pct: 3, months: 12, deposit: 0 },
-  { label: 'Realistic', desc: '$10k, 5%/mo, 24 months', balance: 10000, pct: 5, months: 24, deposit: 0 },
-  { label: 'Ambitious', desc: '$10k, 8%/mo, 24 months', balance: 10000, pct: 8, months: 24, deposit: 0 },
-  { label: 'DCA + Trading', desc: '$5k, 5%/mo + $500/mo deposit', balance: 5000, pct: 5, months: 24, deposit: 500 },
-  { label: 'Prop Firm', desc: '$100k, 3%/mo, 12 months', balance: 100000, pct: 3, months: 12, deposit: 0 },
+  { label: 'Conservative', desc: '$10k, 3%/mo, 12 months', balance: 10000, pct: 3, months: 12, deposit: 0, withdrawal: 0 },
+  { label: 'Realistic', desc: '$10k, 5%/mo, 24 months', balance: 10000, pct: 5, months: 24, deposit: 0, withdrawal: 0 },
+  { label: 'Ambitious', desc: '$10k, 8%/mo, 24 months', balance: 10000, pct: 8, months: 24, deposit: 0, withdrawal: 0 },
+  { label: 'DCA + Trading', desc: '$5k, 5%/mo + $500/mo deposit', balance: 5000, pct: 5, months: 24, deposit: 500, withdrawal: 0 },
+  { label: 'Living Off Trading', desc: '$50k, 5%/mo, -$1k/mo withdrawal', balance: 50000, pct: 5, months: 24, deposit: 0, withdrawal: 1000 },
+  { label: 'Prop Firm', desc: '$100k, 3%/mo, 12 months', balance: 100000, pct: 3, months: 12, deposit: 0, withdrawal: 0 },
 ];
 
 /* ─── FAQ Data ─── */
@@ -139,6 +157,7 @@ function ChartTooltip({ active, payload, label }) {
       <p className="text-kmf-text-tertiary">Linear would be: {fmt(d.linear)}</p>
       {d.monthlyProfit > 0 && <p className="text-kmf-text-secondary mt-1">This month's profit: {fmt(d.monthlyProfit)}</p>}
       {d.deposit > 0 && <p className="text-kmf-text-secondary">+ {fmt(d.deposit)} deposit</p>}
+      {d.withdrawal > 0 && <p style={{ color: '#FF5252' }}>- {fmt(d.withdrawal)} withdrawal</p>}
     </div>
   );
 }
@@ -247,8 +266,12 @@ export default function CompoundCalculatorPage() {
   const [monthlyPct, setMonthlyPct] = useState('5');
   const [months, setMonths] = useState('24');
   const [deposit, setDeposit] = useState('0');
+  const [withdrawal, setWithdrawal] = useState('0');
   const [showDeposit, setShowDeposit] = useState(false);
+  const [showWithdrawal, setShowWithdrawal] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
+  const [sharing, setSharing] = useState(false);
+  const resultsRef = useRef(null);
 
   // Parse inputs
   const params = useMemo(() => ({
@@ -256,11 +279,12 @@ export default function CompoundCalculatorPage() {
     monthlyPct: Math.min(30, Math.max(0.5, parseFloat(monthlyPct) || 5)),
     months: Math.min(60, Math.max(3, parseInt(months) || 24)),
     deposit: Math.max(0, parseFloat(deposit) || 0),
-  }), [balance, monthlyPct, months, deposit]);
+    withdrawal: Math.max(0, parseFloat(withdrawal) || 0),
+  }), [balance, monthlyPct, months, deposit, withdrawal]);
 
   // Calculate
   const result = useMemo(() => {
-    return calculateCompound(params.balance, params.monthlyPct, params.months, params.deposit);
+    return calculateCompound(params.balance, params.monthlyPct, params.months, params.deposit, params.withdrawal);
   }, [params]);
 
   const realityCheck = useMemo(() => getRealityCheck(params.monthlyPct), [params.monthlyPct]);
@@ -271,7 +295,9 @@ export default function CompoundCalculatorPage() {
     setMonthlyPct(String(preset.pct));
     setMonths(String(preset.months));
     setDeposit(String(preset.deposit));
+    setWithdrawal(String(preset.withdrawal));
     setShowDeposit(preset.deposit > 0);
+    setShowWithdrawal(preset.withdrawal > 0);
   }, []);
 
   // GA4 event
@@ -459,14 +485,53 @@ export default function CompoundCalculatorPage() {
                   </div>
                 )}
               </div>
+
+              {/* Monthly withdrawal toggle */}
+              <div>
+                <button
+                  onClick={() => setShowWithdrawal(!showWithdrawal)}
+                  className="text-xs hover:underline flex items-center gap-1"
+                  style={{ color: '#FF9800' }}
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style={{ transform: showWithdrawal ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                  </svg>
+                  {showWithdrawal ? 'Hide monthly withdrawal' : 'Add monthly withdrawal (optional)'}
+                </button>
+                {showWithdrawal && (
+                  <div className="mt-3">
+                    <InputField
+                      label="Monthly Withdrawal"
+                      value={withdrawal}
+                      onChange={setWithdrawal}
+                      prefix="$"
+                      min={0}
+                      max={1000000}
+                      step={100}
+                      hint="Amount you take out each month"
+                    />
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Result Cards */}
-            <div className="lg:col-span-2 space-y-4">
+            <div className="lg:col-span-2 space-y-4" ref={resultsRef}>
+              {/* Busted warning */}
+              {result.bustedMonth && (
+                <div className="flex items-start gap-3 rounded-2xl p-4" style={{ background: 'rgba(255,82,82,0.08)', border: '1px solid rgba(255,82,82,0.25)' }}>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#FF5252" className="shrink-0 mt-0.5"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                  <div>
+                    <p className="text-sm font-semibold" style={{ color: '#FF5252' }}>Account depleted at month {result.bustedMonth}</p>
+                    <p className="text-xs text-kmf-text-secondary mt-1">Your monthly withdrawal ({fmt(params.withdrawal)}) exceeds the account's growth. Reduce withdrawal or increase your return target.</p>
+                  </div>
+                </div>
+              )}
+
               {/* Big result */}
               <div className="rounded-2xl p-6 text-center" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                <p className="text-sm text-kmf-text-tertiary mb-2">Projected balance after {params.months} months</p>
-                <div className="text-4xl sm:text-5xl font-bold mb-1" style={{ color: '#4FC3F7' }}>
+                <p className="text-sm text-kmf-text-tertiary mb-2">Projected balance after {result.bustedMonth ? result.bustedMonth : params.months} months</p>
+                <div className="text-4xl sm:text-5xl font-bold mb-1" style={{ color: result.bustedMonth ? '#FF5252' : '#4FC3F7' }}>
                   {fmt(result.finalBalance)}
                 </div>
                 <p className="text-sm text-kmf-text-tertiary">
@@ -475,12 +540,13 @@ export default function CompoundCalculatorPage() {
               </div>
 
               {/* Stats grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div className={`grid grid-cols-2 ${params.withdrawal > 0 ? 'sm:grid-cols-5' : 'sm:grid-cols-4'} gap-3`}>
                 {[
                   { label: 'Total Profit', value: fmt(result.totalProfit), color: '#00E676', hint: 'Pure compound earnings' },
                   { label: 'Growth', value: `${result.growthMultiple.toFixed(1)}x`, color: '#4FC3F7', hint: 'Your money multiplied by' },
                   { label: 'Compound Advantage', value: `+${fmt(result.compoundAdvantage)}`, color: '#FFB300', hint: 'Extra vs. linear growth' },
-                  { label: 'Month ' + params.months + ' Profit', value: fmt(result.data[result.data.length - 1]?.monthlyProfit || 0), color: '#00E676', hint: 'Last month\'s profit alone' },
+                  { label: 'Month ' + (result.bustedMonth || params.months) + ' Profit', value: fmt(result.data[result.data.length - 1]?.monthlyProfit || 0), color: '#00E676', hint: 'Last month\'s profit alone' },
+                  ...(params.withdrawal > 0 ? [{ label: 'Total Withdrawn', value: fmt(result.totalWithdrawn), color: '#FF9800', hint: 'Income taken out' }] : []),
                 ].map((s) => (
                   <div key={s.label} className="rounded-xl p-3 text-center" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}>
                     <p className="text-[11px] text-kmf-text-tertiary mb-1">{s.label}</p>
@@ -505,6 +571,48 @@ export default function CompoundCalculatorPage() {
                   ))}
                 </div>
               )}
+
+              {/* Share button */}
+              <div className="flex justify-end">
+                <button
+                  onClick={async () => {
+                    if (!resultsRef.current || sharing) return;
+                    setSharing(true);
+                    try {
+                      const dataUrl = await toPng(resultsRef.current, {
+                        backgroundColor: '#0F1115',
+                        pixelRatio: 2,
+                        style: { padding: '20px' },
+                      });
+                      const link = document.createElement('a');
+                      link.download = `kmf-compound-${fmt(params.balance).replace(/[^0-9]/g, '')}-${params.monthlyPct}pct-${params.months}mo.png`;
+                      link.href = dataUrl;
+                      link.click();
+                      window.gtag?.('event', 'compound_results_shared', {
+                        starting_balance: params.balance,
+                        monthly_pct: params.monthlyPct,
+                        months: params.months,
+                      });
+                    } catch {
+                      // Fallback: copy text summary
+                      const text = `KMF Compound Vision\n${fmt(params.balance)} → ${fmt(result.finalBalance)} in ${params.months} months at ${params.monthlyPct}%/mo\nTotal profit: ${fmt(result.totalProfit)} | Growth: ${result.growthMultiple.toFixed(1)}x\nhttps://kmfjournal.com/tools/compound-calculator`;
+                      await navigator.clipboard?.writeText(text).catch(() => {});
+                    } finally {
+                      setSharing(false);
+                    }
+                  }}
+                  disabled={sharing}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium transition-all hover:scale-105 disabled:opacity-50"
+                  style={{ background: 'rgba(79,195,247,0.1)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.2)' }}
+                >
+                  {sharing ? (
+                    <div className="w-3.5 h-3.5 border-2 border-kmf-accent/30 border-t-kmf-accent rounded-full animate-spin" />
+                  ) : (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+                  )}
+                  {sharing ? 'Generating...' : 'Share Results'}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -673,6 +781,7 @@ export default function CompoundCalculatorPage() {
                     <th className="text-right py-2 px-3">Balance Start</th>
                     <th className="text-right py-2 px-3">Profit</th>
                     {params.deposit > 0 && <th className="text-right py-2 px-3">Deposit</th>}
+                    {params.withdrawal > 0 && <th className="text-right py-2 px-3">Withdrawal</th>}
                     <th className="text-right py-2 px-3">Balance End</th>
                   </tr>
                 </thead>
@@ -685,6 +794,7 @@ export default function CompoundCalculatorPage() {
                         <td className="py-2 px-3 text-right text-kmf-text-secondary">{fmt(prevBalance)}</td>
                         <td className="py-2 px-3 text-right font-medium" style={{ color: '#00E676' }}>+{fmt(row.monthlyProfit)}</td>
                         {params.deposit > 0 && <td className="py-2 px-3 text-right text-kmf-text-secondary">+{fmt(row.deposit)}</td>}
+                        {params.withdrawal > 0 && <td className="py-2 px-3 text-right" style={{ color: '#FF9800' }}>-{fmt(row.withdrawal)}</td>}
                         <td className="py-2 px-3 text-right font-bold text-kmf-text-primary">{fmt(row.balance)}</td>
                       </tr>
                     );

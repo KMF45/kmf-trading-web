@@ -1,9 +1,26 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator, Win Rate vs R:R Matrix) + LiquidHours legal pages. Stack: React 19, Vite, Tailwind CSS. Beta signup cu modal form + Firestore + Cloud Function email notification. 54 pagini prerendered.
+Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator, Win Rate vs R:R Matrix, Compound Calculator) + LiquidHours legal pages. Stack: React 19, Vite, Tailwind CSS. Beta signup cu modal form + Firestore + Cloud Function email notification. 55 pagini prerendered.
 
 ## Sesiuni de lucru
+
+### 2026-04-14 — Sesiunea #23 (KMF Compound Vision Calculator)
+**Ce s-a cerut:** Calculator compound growth trading-focused la /tools/compound-calculator
+**Ce s-a făcut:**
+- Creat `CompoundCalculatorPage.jsx` — pagină completă cu: inputuri (balance, monthly %, timeframe, deposit), stacked area chart (Recharts), 5 presets, result cards, milestones (2x-10x), reality check messages, drawdown recovery table, monthly breakdown, 3 insight cards, educational content, FAQ accordion, cross-links
+- SEO complet: JSON-LD (WebApplication + FAQPage + BreadcrumbList), OG tags, canonical URL
+- Wired în App.jsx (lazy import + route), Footer.jsx, prerender.js, sitemap.xml
+**Fișiere create:**
+- `src/pages/CompoundCalculatorPage.jsx` — ~650 linii
+**Fișiere modificate:**
+- `src/App.jsx` — lazy import + route `/tools/compound-calculator`
+- `src/components/Footer.jsx` — link în secțiunea Tools
+- `scripts/prerender.js` — adăugat URL pentru prerender
+- `public/sitemap.xml` — adăugat entry
+**Commit:** `a95c79d` — pushed to main
+
+---
 
 ### 2026-04-13 — Sesiunea #22 (Cloud Sync → Free for all)
 **Ce s-a cerut:** Cloud sync nu mai e doar Premium — e disponibil și pe Free tier
