@@ -1,4 +1,5 @@
-import { FaEnvelope, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaTiktok, FaReddit } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 
@@ -47,6 +48,33 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <FaInstagram className="text-2xl" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@kmf.45"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="text-2xl" />
+              </a>
+              <a
+                href="https://x.com/KMF_45"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
+                aria-label="X (Twitter)"
+              >
+                <FaXTwitter className="text-2xl" />
+              </a>
+              <a
+                href="https://www.reddit.com/user/kmf_45"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
+                aria-label="Reddit"
+              >
+                <FaReddit className="text-2xl" />
               </a>
             </div>
           </div>
