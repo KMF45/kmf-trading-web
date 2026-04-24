@@ -1,9 +1,94 @@
 # Jurnal de Proiect — KMF Trading Journal Web
 
 ## Stare curentă
-Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator, Win Rate vs R:R Matrix, Compound Calculator) + LiquidHours legal pages. Stack: React 19, Vite, Tailwind CSS. Beta signup cu modal form + Firestore + Cloud Function email notification. 55 pagini prerendered.
+Proiect web pentru kmfjournal.com — landing page multilingv (7 limbi) + blog (39 articole EN + 1 RO) + tools (Lot Size Calculator, Risk of Ruin Calculator, Win Rate vs R:R Matrix, Compound Calculator) + LiquidHours legal pages. Stack: React 19, Vite, Tailwind CSS. Beta signup cu modal form + Firestore + Cloud Function email notification. 55 pagini prerendered. GSC Domain property verificat, toate URL-urile cheie indexate.
 
 ## Sesiuni de lucru
+
+### 2026-04-24 — Sesiunea #27 (Sprint 3: TOC sidebar sticky + scroll spy pe articole blog)
+**Ce s-a cerut:** Sprint 3 din plan — Table of Contents sticky în sidebar pe articolele blog.
+**Ce s-a făcut:**
+- Layout restructurat în BlogArticleLayout: wrapper flex `xl:flex xl:justify-center xl:gap-8` cu maxWidth 1200, articolul rămâne max-w-4xl, sidebar 240px vizibil DOAR pe xl (>=1280px)
+- Componenta `TableOfContents` — scanează `main article h2` după `requestAnimationFrame` (asigură DOM ready), slugify-uiește textul pentru ID unique, setează `scrollMarginTop: 96px` pentru ca hash scroll să țină cont de navbar
+- Scroll spy cu IntersectionObserver: `rootMargin: '-96px 0px -70% 0px'` → activ când heading-ul e în partea de sus a viewport-ului (nu imediat cum intră, ci după ce trece sub navbar)
+- Click pe item TOC: `scrollIntoView({behavior:'smooth'})` + `history.replaceState` pentru URL hash (fără reload)
+- Stil: border-left 2px cyan pe item activ (tranziție la hover pe items inactive → color #F0F4FF), background rgba(26,29,36,0.6), maxHeight cu overflow-y auto pentru TOC foarte lung
+- Early return: dacă articolul are <2 H2s, componenta nu se randează (nu e util un TOC de 1 item)
+- Bonus: toate H2s primesc acum `id` auto → linkuri directe `/blog/slug#section-name` devin funcționale out-of-the-box (util pentru sharing secțiuni specifice)
+**Fișiere modificate:**
+- `src/components/blog/BlogArticleLayout.jsx` — layout split în 2 lanes (main + aside sticky), componenta TableOfContents (~95 linii) inserată înainte de StickyPlayBanner
+**De reținut pentru viitor:**
+- Folosit `window.__tocSpy` pentru cleanup cross-render al IntersectionObserver — hack mic dar necesar când observer e creat într-un rAF delay
+- `scrollMarginTop` în CSS rezolvă hash scroll ascuns de navbar fixed fără JS — elegant
+- TOC apare doar pe xl (1280px+); laptop-uri 13" stau uzual la 1280-1440, deci majoritatea desktop-users văd TOC
+- Articolele scurte (1 H2) nu afișează TOC automat — zero configurare per articol
+**Următorii pași sugerați:** Testare `npm run dev` pentru UX (verifică scroll spy pe `/blog/profit-factor-vs-win-rate` care are 6 H2s) SAU commit Sprint 1+2+3 SAU Sprint 4 (hero canvas + DYK toast + mini quiz — optional polish)
+
+---
+
+### 2026-04-24 — Sesiunea #26 (Sprint 2: Blog search cu autocomplete + fuzzy match + highlight)
+**Ce s-a cerut:** Continuare cu Sprint 2 din plan — search bar funcțional pe BlogPage cu autocomplete.
+**Ce s-a făcut:**
+- Adăugat state local în BlogPage: `searchQuery`, `showDropdown`, `activeIdx` + refs pentru outside-click detection
+- Funcție `matchScore(post, query)` — scoring fuzzy: prefix match în titlu (+10), substring în titlu (+6), în categorie (+3), în excerpt (+1), plus bonus per cuvânt
+- Funcție `highlight(text, query)` — wrap termenii căutați în `<mark>` cu background `rgba(79,195,247,0.22)` și padding rotunjit (regex escape pentru caractere speciale)
+- Input cu lupă stângă (cyan când activ), buton clear dreapta când are text, outline + shadow cyan la focus, border cyan când există query
+- Autocomplete dropdown (z-20, backdrop blur, border cyan) — top 5 rezultate cu badge categorie + titlu cu highlight + meta (readTime · date); footer "N more results below" dacă sunt mai multe
+- Keyboard nav: ArrowUp/Down rotate în listă, Enter deschide articolul activ, Escape închide
+- Outside-click handler (mousedown) închide dropdown-ul
+- Empty state dropdown: "No articles match" când nu se găsește nimic
+- Lista principală: `posts.map` → `filteredPosts.map`; titlurile și excerpturile primesc highlight când există query; results count banner deasupra ("Showing N results for X"); empty state card cu buton "Clear search"
+- Build verificat: BlogPage bundle crescut de la ~5KB la 9.32KB gzipped, zero erori
+**Fișiere modificate:**
+- `src/pages/BlogPage.jsx` — +150 linii: helpers (matchScore, highlight), state+hooks, search UI, autocomplete dropdown, empty states, lista filtrată
+**De reținut pentru viitor:**
+- `<mark>` e semantically correct pentru highlight — accesibilitate + crawlere respectă
+- Pentru fuzzy match fără librărie externă: scoring ponderat pe titlu/categorie/excerpt + match pe cuvinte individuale = suficient de bun pentru 40 articole (nu e nevoie de Fuse.js)
+- Keyboard nav pattern standard (ArrowUp/Down + Enter + Escape) — users awaited
+- Dropdown folosește `window.location.href` în loc de programmatic navigate pentru că nu avem useNavigate în scope (alternativ: import useNavigate)
+**Următorii pași sugerați:** Sprint 3 (TOC sticky sidebar pentru articole + sticky bottom progress bar) SAU migrare progresivă colored cells pe alte articole SAU commit+deploy Sprint 1+2
+
+---
+
+### 2026-04-24 — Sesiunea #25 (Sprint 1: upgrade BlogArticleLayout — Callout, Takeaways, Table + new StatsStrip)
+**Ce s-a cerut:** Extragere pattern-uri din design system ZIP-uri (`Desktop/KMF Trading Journal Design System.zip` + `(1).zip`) și implementare Sprint 1 (impact maxim, risc minim, reusable pe toate articolele).
+**Ce s-a făcut:**
+- Extras 2 ZIP-uri în `/tmp/kmf-design/` — analiză `ui_kits/blog/article.html` (923 linii) și `blog/index.html` (553 linii)
+- Upgrade `Callout` în BlogArticleLayout: border-left accent 3px, background tinted cu culoarea color (color + "0D"), title uppercase small cu tracking larg
+- Upgrade `Takeaways` în BlogArticleLayout: IntersectionObserver (`useInView` hook, once=true) + staggered reveal per item (delay i * 90ms, translateY 10px → 0, fade 0 → 1)
+- Upgrade `Table` în BlogArticleLayout: API extinsă — cells pot fi string SAU `{value, color: 'green'|'red'|'cyan'|'gold'}`; headers uppercase 11px letterSpacing 0.06em cyan; row hover cu onMouseEnter/Leave (backward compatible cu toate tabelele existente)
+- Component nou `StatsStrip` — grid dinamic cu items.length coloane, `useInView` trigger, count-up animation cu `requestAnimationFrame` (1200ms, cubic ease-out `1 - Math.pow(1-t, 3)`), gradient text `linear-gradient(90deg, #4FC3F7, #03A9F4)` cu WebkitBackgroundClip; API: `{value, decimals, suffix, prefix, label}`
+- Demo integrare pe `ProfitFactorVsWinRate.jsx`: StatsStrip după `<Intro>` cu 3 stats (1.5 PF minim, 70% retail unprofitable, 2.1 PF top 10%) + Table cu celule colorate (red pentru losing, cyan pentru PF viabil, green pentru profitable)
+- Build + prerender verificat: StatsStrip label "Minimum profit factor" prezent în dist HTML, Table `#FF5252` (red) prezent × 2
+**Fișiere modificate:**
+- `src/components/blog/BlogArticleLayout.jsx` — import `useRef`, hook `useInView`, upgrade Callout/Takeaways/Table, adăugat StatsStrip + StatBox
+- `src/pages/blog/ProfitFactorVsWinRate.jsx` — import StatsStrip, adăugat `<StatsStrip items={[...]}>` după Intro, transformat rows din Table cu `{value, color}` objects pe coloanele PF și Result
+**De reținut pentru viitor:**
+- API backward compatible: toate celulele string existente funcționează; migrare progresivă per articol
+- Pattern useInView: `{ once: true, rootMargin: '0px 0px -60px 0px', threshold: 0.1 }` — trigger când element intră ultimele 60px în viewport
+- Sprint 2 (search autocomplete BlogPage), Sprint 3 (TOC sidebar + sticky bottom bar), Sprint 4 (hero canvas + DYK toast + mini quiz) — neconfirmate, necesită OK user
+- Prerender ocazional timeout intermittent (43/55 la build — nu e bug de cod, puppeteer issue), articolele individuale OK când se reia
+**Următorii pași sugerați:** Confirmare Sprint 2 (search cu autocomplete + fuzzy match pe BlogPage) SAU migrare progresivă colored cells pe alte articole SAU integrare `BlogCoverArt.jsx` pe BlogPage index.
+
+---
+
+### 2026-04-24 — Sesiunea #24 (SEO diagnostic tools + fix twitter tags)
+**Ce s-a cerut:** De ce nu apar `/tools/win-rate-rr-matrix` și `/tools/lot-size-calculator` în Google? Verificare sitemap + robots.
+**Ce s-a făcut:**
+- Verificat pe live: ambele URL-uri prezente în sitemap.xml cu `lastmod` corect, robots.txt permisiv, prerender funcționează (HTML real, H1 vizibil, JSON-LD complet)
+- Identificat bug: `LotCalculatorPage.jsx` nu seta `twitter:url`, `twitter:title`, `twitter:description`, `twitter:card` — rămâneau valorile generice din index.html
+- Fix: adăugat cele 4 linii missing în useEffect SEO + cleanup la unmount (restaurare valori homepage)
+- Build + prerender OK (55/55 pagini) — confirmat în `dist/tools/lot-size-calculator/index.html` că toate tag-urile twitter sunt acum corecte
+- User a verificat GSC: are deja Domain property → a făcut "Request Indexing" → Google a indexat cele 2 tools
+**Fișiere modificate:**
+- `src/pages/LotCalculatorPage.jsx` — useEffect SEO (linii 263-290): +4 set calls pentru twitter:* + 3 cleanup calls
+**De reținut pentru viitor:**
+- Domain property în GSC > URL prefix (acoperă automat www/http/https/subdomenii)
+- Pentru URL-uri noi: GSC → URL Inspection → Request Indexing (manual, 5 min per URL)
+- `WinRateRRMatrix`, `RiskOfRuin`, `CompoundCalculator` setează twitter:* corect; doar `LotCalculator` avea bug-ul
+**Următorii pași sugerați:** Integrare `BlogCoverArt.jsx` (din sesiune anterioară) în BlogPage + BlogArticleLayout, extragere pattern-uri din design system ZIP-uri (ui_kits/blog/)
+
+---
 
 ### 2026-04-14 — Sesiunea #23 (KMF Compound Vision Calculator)
 **Ce s-a cerut:** Calculator compound growth trading-focused la /tools/compound-calculator

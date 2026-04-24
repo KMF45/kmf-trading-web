@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { ProfitFactorBarChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -30,6 +30,12 @@ export default function ProfitFactorVsWinRate() {
       <Intro>
         Ask most traders what makes a good system and they will say something like "I win 70% of my trades." Win rate feels good. It is intuitive, easy to explain, and emotionally satisfying. But win rate alone tells you almost nothing about whether a strategy is profitable — and chasing a high win rate is one of the most common mistakes developing traders make.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 1.5, decimals: 1, label: <>Minimum profit factor<br />for a robust strategy</> },
+        { value: 70, decimals: 0, suffix: '%', label: <>of retail traders<br />are unprofitable (ESMA data)</> },
+        { value: 2.1, decimals: 1, label: <>Average profit factor<br />of top 10% prop traders</> },
+      ]} />
 
       <H2>What Is Win Rate?</H2>
       <P>
@@ -78,9 +84,9 @@ export default function ProfitFactorVsWinRate() {
       <Table
         headers={['Profile', 'Win Rate', 'Avg Win', 'Avg Loss', 'Profit Factor', 'Result (100 trades)']}
         rows={[
-          ['Scalper A', '75%', '$30', '$120', '0.75', '-$1,500 (losing)'],
-          ['Swing Trader B', '45%', '$250', '$100', '2.06', '+$5,750 (profitable)'],
-          ['Trend Trader C', '35%', '$600', '$150', '2.33', '+$11,250 (profitable)'],
+          ['Scalper A', '75%', '$30', '$120', { value: '0.75', color: 'red' }, { value: '−$1,500 (losing)', color: 'red' }],
+          ['Swing Trader B', '45%', '$250', '$100', { value: '2.06', color: 'cyan' }, { value: '+$5,750 (profitable)', color: 'green' }],
+          ['Trend Trader C', '35%', '$600', '$150', { value: '2.33', color: 'cyan' }, { value: '+$11,250 (profitable)', color: 'green' }],
         ]}
       />
 

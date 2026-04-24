@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
@@ -357,7 +357,95 @@ export const posts = [
   },
 ];
 
+// Fuzzy-ish match: higher score = better match
+function matchScore(post, query) {
+  const q = query.toLowerCase().trim();
+  if (!q) return 0;
+  const title = post.title.toLowerCase();
+  const cat = post.category.toLowerCase();
+  const excerpt = post.excerpt.toLowerCase();
+
+  let score = 0;
+  if (title.startsWith(q)) score += 10;
+  if (title.includes(q)) score += 6;
+  if (cat.includes(q)) score += 3;
+  if (excerpt.includes(q)) score += 1;
+
+  const words = q.split(/\s+/).filter((w) => w.length > 1);
+  words.forEach((w) => {
+    if (title.includes(w)) score += 2;
+    else if (cat.includes(w)) score += 1;
+    else if (excerpt.includes(w)) score += 0.3;
+  });
+  return score;
+}
+
+function highlight(text, query) {
+  const q = query.trim();
+  if (!q) return text;
+  try {
+    const esc = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const parts = text.split(new RegExp(`(${esc})`, 'ig'));
+    return parts.map((p, i) =>
+      p.toLowerCase() === q.toLowerCase() ? (
+        <mark key={i} style={{ background: 'rgba(79,195,247,0.22)', color: '#F0F4FF', padding: '0 2px', borderRadius: 3 }}>{p}</mark>
+      ) : (
+        <span key={i}>{p}</span>
+      )
+    );
+  } catch {
+    return text;
+  }
+}
+
 export default function BlogPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [activeIdx, setActiveIdx] = useState(0);
+  const searchRef = useRef(null);
+  const inputRef = useRef(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function onClick(e) {
+      if (searchRef.current && !searchRef.current.contains(e.target)) {
+        setShowDropdown(false);
+      }
+    }
+    document.addEventListener('mousedown', onClick);
+    return () => document.removeEventListener('mousedown', onClick);
+  }, []);
+
+  const filteredPosts = useMemo(() => {
+    const q = searchQuery.trim();
+    if (!q) return posts;
+    return posts
+      .map((p) => ({ post: p, score: matchScore(p, q) }))
+      .filter((x) => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .map((x) => x.post);
+  }, [searchQuery]);
+
+  const autocomplete = filteredPosts.slice(0, 5);
+
+  function handleKeyDown(e) {
+    if (!showDropdown || autocomplete.length === 0) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActiveIdx((i) => (i + 1) % autocomplete.length);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveIdx((i) => (i - 1 + autocomplete.length) % autocomplete.length);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      const target = autocomplete[activeIdx];
+      if (target) window.location.href = `/blog/${target.slug}`;
+    } else if (e.key === 'Escape') {
+      setShowDropdown(false);
+      inputRef.current?.blur();
+    }
+  }
+
   useEffect(() => {
     document.title = 'Blog | K.M.F. Trading Journal';
     const desc = document.querySelector('meta[name="description"]');
@@ -434,6 +522,118 @@ export default function BlogPage() {
             </p>
           </div>
 
+          {/* Search */}
+          <div ref={searchRef} className="relative mb-6">
+            <div className="relative">
+              <svg
+                className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
+                width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                style={{ color: searchQuery ? '#4FC3F7' : 'rgba(240,244,255,0.35)' }}
+              >
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                ref={inputRef}
+                type="search"
+                value={searchQuery}
+                onChange={(e) => { setSearchQuery(e.target.value); setActiveIdx(0); setShowDropdown(true); }}
+                onFocus={() => setShowDropdown(true)}
+                onKeyDown={handleKeyDown}
+                placeholder="Search articles — e.g. profit factor, stop loss, tilt…"
+                className="w-full pl-11 pr-10 py-3 rounded-xl text-sm text-kmf-text-primary placeholder:text-kmf-text-tertiary/60 outline-none transition-all"
+                style={{
+                  background: 'rgba(26,29,36,0.85)',
+                  border: `1px solid ${searchQuery || showDropdown ? 'rgba(79,195,247,0.35)' : 'rgba(255,255,255,0.07)'}`,
+                  boxShadow: searchQuery || showDropdown ? '0 0 0 3px rgba(79,195,247,0.08)' : 'none',
+                }}
+                aria-label="Search articles"
+                aria-autocomplete="list"
+                aria-expanded={showDropdown && autocomplete.length > 0}
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => { setSearchQuery(''); setActiveIdx(0); inputRef.current?.focus(); }}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-kmf-text-tertiary hover:text-kmf-text-primary hover:bg-white/5 transition-colors"
+                  aria-label="Clear search"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              )}
+            </div>
+
+            {/* Autocomplete dropdown */}
+            {showDropdown && searchQuery && autocomplete.length > 0 && (
+              <div
+                className="absolute left-0 right-0 mt-2 rounded-xl overflow-hidden z-20"
+                style={{
+                  background: 'rgba(15,17,21,0.98)',
+                  border: '1px solid rgba(79,195,247,0.2)',
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.55)',
+                  backdropFilter: 'blur(10px)',
+                }}
+                role="listbox"
+              >
+                {autocomplete.map((p, i) => (
+                  <Link
+                    key={p.slug}
+                    to={`/blog/${p.slug}`}
+                    onClick={() => setShowDropdown(false)}
+                    onMouseEnter={() => setActiveIdx(i)}
+                    className="flex items-start gap-3 px-4 py-3 transition-colors"
+                    style={{
+                      background: activeIdx === i ? 'rgba(79,195,247,0.08)' : 'transparent',
+                      borderBottom: i < autocomplete.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none',
+                    }}
+                    role="option"
+                    aria-selected={activeIdx === i}
+                  >
+                    <span
+                      className="flex-shrink-0 mt-0.5 text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                      style={{
+                        background: `${p.categoryColor}14`,
+                        color: p.categoryColor,
+                        border: `1px solid ${p.categoryColor}25`,
+                      }}
+                    >
+                      {p.category}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-semibold text-kmf-text-primary leading-snug">
+                        {highlight(p.title, searchQuery)}
+                      </p>
+                      <p className="text-xs text-kmf-text-tertiary mt-0.5">{p.readTime} · {p.date}</p>
+                    </div>
+                  </Link>
+                ))}
+                {filteredPosts.length > autocomplete.length && (
+                  <div
+                    className="px-4 py-2 text-[11px] text-kmf-text-tertiary uppercase tracking-widest"
+                    style={{ background: 'rgba(79,195,247,0.04)', borderTop: '1px solid rgba(255,255,255,0.04)' }}
+                  >
+                    {filteredPosts.length - autocomplete.length} more result{filteredPosts.length - autocomplete.length === 1 ? '' : 's'} below
+                  </div>
+                )}
+              </div>
+            )}
+
+            {showDropdown && searchQuery && autocomplete.length === 0 && (
+              <div
+                className="absolute left-0 right-0 mt-2 rounded-xl px-4 py-5 text-center text-sm text-kmf-text-tertiary z-20"
+                style={{
+                  background: 'rgba(15,17,21,0.98)',
+                  border: '1px solid rgba(255,255,255,0.07)',
+                }}
+              >
+                No articles match <strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>. Try a different term.
+              </div>
+            )}
+          </div>
+
           {/* Category filters */}
           <div className="flex flex-wrap gap-2 mb-6 text-xs">
             <Link to="/blog/category/psychology" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(206,147,216,0.08)', color: '#CE93D8', border: '1px solid rgba(206,147,216,0.15)' }}>Psychology</Link>
@@ -452,31 +652,79 @@ export default function BlogPage() {
             <Link to="/#faq" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">FAQ</Link>
           </div>
 
+          {/* Results count */}
+          {searchQuery && (
+            <p className="text-xs text-kmf-text-tertiary mb-4">
+              {filteredPosts.length === 0
+                ? <>No articles match <strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>.</>
+                : <>Showing <strong style={{ color: '#4FC3F7' }}>{filteredPosts.length}</strong> result{filteredPosts.length === 1 ? '' : 's'} for <strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>.</>
+              }
+            </p>
+          )}
+
+          {/* Empty state */}
+          {searchQuery && filteredPosts.length === 0 && (
+            <div
+              className="rounded-2xl p-8 text-center"
+              style={{ background: 'rgba(26,29,36,0.85)', border: '1px dashed rgba(255,255,255,0.1)' }}
+            >
+              <p className="text-kmf-text-primary font-semibold mb-2">No matching articles</p>
+              <p className="text-sm text-kmf-text-tertiary mb-4">
+                Try searching for a broader term, or browse by category above.
+              </p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="text-xs font-semibold px-4 py-2 rounded-full transition-colors"
+                style={{ background: 'rgba(79,195,247,0.1)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.25)' }}
+              >
+                Clear search
+              </button>
+            </div>
+          )}
+
           {/* Posts */}
           <div className="space-y-5">
-            {posts.map((post) => (
+            {filteredPosts.map((post, idx) => (
               <Link
                 key={post.slug}
                 to={`/blog/${post.slug}`}
-                className="block rounded-2xl p-6 border transition-all duration-200 group"
-                style={{ background: 'rgba(26,29,36,0.85)', border: '1px solid rgba(255,255,255,0.07)' }}
+                className="block rounded-2xl border overflow-hidden transition-all duration-200 group"
+                style={{ background: 'rgba(26,29,36,0.85)', borderColor: 'rgba(255,255,255,0.07)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(79,195,247,0.22)'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; }}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full"
-                    style={{ background: `${post.categoryColor}14`, color: post.categoryColor, border: `1px solid ${post.categoryColor}25` }}>
-                    {post.category}
-                  </span>
-                  <span className="text-xs text-kmf-text-tertiary">{post.date}</span>
-                  <span className="text-xs text-kmf-text-tertiary">· {post.readTime}</span>
+                <div className="flex flex-col md:flex-row">
+                  <div
+                    className="md:w-72 md:flex-shrink-0 overflow-hidden relative"
+                    style={{ aspectRatio: '1200 / 630', background: 'rgba(15,17,21,0.6)' }}
+                  >
+                    <img
+                      src={`/blog/og/${post.slug}.png`}
+                      alt=""
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      loading={idx < 3 ? 'eager' : 'lazy'}
+                      decoding="async"
+                    />
+                  </div>
+                  <div className="p-6 flex-1 min-w-0">
+                    <div className="flex items-center gap-3 mb-3 flex-wrap">
+                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full"
+                        style={{ background: `${post.categoryColor}14`, color: post.categoryColor, border: `1px solid ${post.categoryColor}25` }}>
+                        {post.category}
+                      </span>
+                      <span className="text-xs text-kmf-text-tertiary">{post.date}</span>
+                      <span className="text-xs text-kmf-text-tertiary">· {post.readTime}</span>
+                    </div>
+                    <h2 className="text-lg font-bold text-kmf-text-primary mb-2 group-hover:text-kmf-accent transition-colors"
+                      style={{ letterSpacing: '-0.01em' }}>
+                      {searchQuery ? highlight(post.title, searchQuery) : post.title}
+                    </h2>
+                    <p className="text-sm text-kmf-text-tertiary leading-relaxed">
+                      {searchQuery ? highlight(post.excerpt, searchQuery) : post.excerpt}
+                    </p>
+                    <p className="text-xs text-kmf-accent mt-4 font-semibold">Read article →</p>
+                  </div>
                 </div>
-                <h2 className="text-lg font-bold text-kmf-text-primary mb-2 group-hover:text-kmf-accent transition-colors"
-                  style={{ letterSpacing: '-0.01em' }}>
-                  {post.title}
-                </h2>
-                <p className="text-sm text-kmf-text-tertiary leading-relaxed">{post.excerpt}</p>
-                <p className="text-xs text-kmf-accent mt-4 font-semibold">Read article →</p>
               </Link>
             ))}
           </div>

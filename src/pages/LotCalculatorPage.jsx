@@ -271,11 +271,18 @@ export default function LotCalculatorPage() {
     set('meta[property="og:description"]', 'content', PAGE_DESC);
     set('meta[property="og:image"]', 'content', OG_IMAGE);
     set('meta[property="og:type"]', 'content', 'website');
+    set('meta[name="twitter:card"]', 'content', 'summary_large_image');
+    set('meta[name="twitter:url"]', 'content', PAGE_URL);
+    set('meta[name="twitter:title"]', 'content', PAGE_TITLE);
+    set('meta[name="twitter:description"]', 'content', PAGE_DESC);
     set('meta[name="twitter:image"]', 'content', OG_IMAGE);
     return () => {
       document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';
       set('link[rel="canonical"]', 'href', 'https://kmfjournal.com/');
       set('meta[property="og:url"]', 'content', 'https://kmfjournal.com/');
+      set('meta[name="twitter:url"]', 'content', 'https://kmfjournal.com/');
+      set('meta[name="twitter:title"]', 'content', 'K.M.F. Trading Journal – Keep Moving Forward');
+      set('meta[name="twitter:description"]', 'content', 'Professional trading journal for forex, stocks & crypto. Track, analyze and improve your trading performance.');
     };
   }, []);
 

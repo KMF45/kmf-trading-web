@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../landing/Navbar';
 import Footer from '../Footer';
@@ -172,10 +172,13 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
 
   return (
     <>
+      <ReadingProgressBar />
       <Navbar />
       <StickyPlayBanner />
       <main className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
-        <article className="max-w-4xl mx-auto" itemScope itemType="https://schema.org/Article">
+        <div className="mx-auto xl:flex xl:justify-center xl:gap-8" style={{ maxWidth: 1200 }}>
+        <div className="w-full max-w-4xl mx-auto xl:mx-0 xl:min-w-0">
+        <article itemScope itemType="https://schema.org/Article">
           <nav className="mb-8 text-sm text-kmf-text-tertiary" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-kmf-accent transition-colors">Home</Link>
             <span className="mx-2">/</span>
@@ -183,15 +186,32 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
             <span className="mx-2">/</span>
             <span className="text-kmf-text-secondary">{title}</span>
           </nav>
-          <div className="flex items-center gap-3 mb-6 flex-wrap">
+          <div className="flex items-center gap-3 mb-5 flex-wrap">
             <span className="text-xs font-semibold px-3 py-1 rounded-full" style={{ background: `${categoryColor}18`, color: categoryColor, border: `1px solid ${categoryColor}28` }}>{category}</span>
-            <time className="text-xs text-kmf-text-tertiary" dateTime={dateISO}>{date}</time>
-            <span className="text-xs text-kmf-text-tertiary">· {readTime}</span>
             <LanguageSwitcher slug={slug} currentLang={lang} />
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-kmf-text-primary mb-6 leading-tight" style={{ letterSpacing: '-0.02em' }} itemProp="headline">{title}</h1>
-          <div className="mb-8">
-            <ShareButtons title={title} url={pageUrl} compact />
+          <div className="flex items-start sm:items-center justify-between flex-wrap gap-4 mb-8 pb-6" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+            <div className="flex items-center gap-3" itemProp="author" itemScope itemType="https://schema.org/Organization">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(135deg, rgba(79,195,247,0.28), rgba(0,200,83,0.2))', border: '1px solid rgba(79,195,247,0.35)' }} aria-hidden="true">
+                <span className="text-[10px] font-extrabold tracking-tight" style={{ color: '#E6F8FF' }}>KMF</span>
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-kmf-text-primary leading-tight">
+                  <Link to="/about" className="hover:text-kmf-accent transition-colors" itemProp="name">K.M.F. Dev Team</Link>
+                </p>
+                <p className="text-xs text-kmf-text-tertiary mt-0.5">
+                  <time dateTime={dateISO}>{date}</time> · {readTime}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-kmf-text-tertiary uppercase tracking-wider">Share:</span>
+              <ShareButtons title={title} url={pageUrl} compact />
+            </div>
+          </div>
+          <div className="mb-10 rounded-2xl overflow-hidden" style={{ aspectRatio: '1200 / 630', border: '1px solid rgba(255,255,255,0.06)', background: 'rgba(26,29,36,0.5)' }}>
+            <img src={ogImage} alt={title} className="w-full h-full object-cover" loading="eager" fetchpriority="high" itemProp="image" />
           </div>
           {children}
           <div className="rounded-xl p-5 mt-10 mb-4" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
@@ -220,8 +240,15 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
           )}
           <ArticleCTA />
         </article>
-        <div className="max-w-4xl mx-auto mt-12">
+        <div className="mt-12">
           <Link to="/blog" className="text-sm text-kmf-accent hover:text-kmf-accent-bright transition-colors">← Back to Blog</Link>
+        </div>
+        </div>
+        <aside className="hidden xl:block xl:w-[240px] xl:flex-shrink-0" aria-label="Article navigation">
+          <div className="sticky" style={{ top: 112 }}>
+            <TableOfContents />
+          </div>
+        </aside>
         </div>
       </main>
       <Footer />
@@ -265,12 +292,12 @@ function ShareButtons({ title, url, compact }) {
             style={{
               width: compact ? 32 : 36,
               height: compact ? 32 : 36,
-              background: 'rgba(255,255,255,0.06)',
-              border: '1px solid rgba(255,255,255,0.08)',
-              color: '#8899A6',
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.14)',
+              color: '#C7D3DD',
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = b.color; e.currentTarget.style.borderColor = `${b.color}40`; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = '#8899A6'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = b.color; e.currentTarget.style.borderColor = `${b.color}55`; e.currentTarget.style.background = `${b.color}12`; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = '#C7D3DD'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.14)'; e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; }}
           >
             <Icon style={{ fontSize: compact ? 13 : 15 }} />
           </a>
@@ -283,9 +310,9 @@ function ShareButtons({ title, url, compact }) {
         style={{
           width: compact ? 32 : 36,
           height: compact ? 32 : 36,
-          background: copied ? 'rgba(0,200,83,0.12)' : 'rgba(255,255,255,0.06)',
-          border: `1px solid ${copied ? 'rgba(0,200,83,0.25)' : 'rgba(255,255,255,0.08)'}`,
-          color: copied ? '#00C853' : '#8899A6',
+          background: copied ? 'rgba(0,200,83,0.15)' : 'rgba(255,255,255,0.08)',
+          border: `1px solid ${copied ? 'rgba(0,200,83,0.35)' : 'rgba(255,255,255,0.14)'}`,
+          color: copied ? '#00C853' : '#C7D3DD',
         }}
       >
         {copied ? <FaCheck style={{ fontSize: compact ? 12 : 14 }} /> : <FaLink style={{ fontSize: compact ? 12 : 14 }} />}
@@ -322,6 +349,150 @@ function ArticleCTA() {
         <Link to="/blog" className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors">More Articles</Link>
       </div>
     </div>
+  );
+}
+
+// Thin gradient progress bar fixed at the very top of the viewport
+function ReadingProgressBar() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const height = document.documentElement.scrollHeight - window.innerHeight;
+      if (height <= 0) { setProgress(0); return; }
+      const scrolled = (window.scrollY / height) * 100;
+      setProgress(Math.min(100, Math.max(0, scrolled)));
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  return (
+    <div
+      className="fixed top-0 left-0 right-0 z-[100] pointer-events-none"
+      style={{ height: 3 }}
+      aria-hidden="true"
+    >
+      <div
+        className="h-full"
+        style={{
+          width: `${progress}%`,
+          background: 'linear-gradient(90deg, #4FC3F7, #00C853)',
+          boxShadow: progress > 0 ? '0 0 10px rgba(79,195,247,0.55)' : 'none',
+          transition: 'width 80ms linear',
+        }}
+      />
+    </div>
+  );
+}
+
+// Auto-generated Table of Contents. Scans article H2s on mount, assigns slug IDs,
+// runs an IntersectionObserver-based scroll spy. Hidden when there are fewer than 2 headings.
+function TableOfContents() {
+  const [items, setItems] = useState([]);
+  const [activeId, setActiveId] = useState('');
+
+  useEffect(() => {
+    const slugify = (text) =>
+      text.toLowerCase().replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-').slice(0, 60);
+
+    // Defer one tick so article children are mounted + slugs from first pass don't collide
+    const raf = requestAnimationFrame(() => {
+      const used = new Set();
+      const headings = Array.from(document.querySelectorAll('main article h2'));
+      if (headings.length < 2) return;
+
+      const toc = headings.map((h) => {
+        let base = slugify(h.textContent || 'section');
+        let id = base || 'section';
+        let i = 2;
+        while (used.has(id) || (document.getElementById(id) && document.getElementById(id) !== h)) {
+          id = `${base}-${i++}`;
+        }
+        used.add(id);
+        h.id = id;
+        // Offset for sticky navbar when using hash scroll
+        h.style.scrollMarginTop = '96px';
+        return { id, text: h.textContent || '' };
+      });
+      setItems(toc);
+
+      // Scroll spy — heading is active while in upper portion of viewport
+      const spy = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) setActiveId(e.target.id);
+          });
+        },
+        { rootMargin: '-96px 0px -70% 0px', threshold: 0 }
+      );
+      headings.forEach((h) => spy.observe(h));
+
+      // Cleanup handled in outer effect return via window reference
+      window.__tocSpy = spy;
+    });
+
+    return () => {
+      cancelAnimationFrame(raf);
+      window.__tocSpy?.disconnect();
+      delete window.__tocSpy;
+    };
+  }, []);
+
+  const handleClick = (e, id) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', `#${id}`);
+      setActiveId(id);
+    }
+  };
+
+  if (items.length < 2) return null;
+
+  return (
+    <nav
+      aria-label="Table of contents"
+      className="rounded-2xl p-5"
+      style={{
+        background: 'rgba(26,29,36,0.6)',
+        border: '1px solid rgba(255,255,255,0.06)',
+        maxHeight: 'calc(100vh - 140px)',
+        overflowY: 'auto',
+      }}
+    >
+      <p className="text-[11px] font-bold uppercase tracking-widest mb-3" style={{ color: '#4FC3F7', letterSpacing: '0.08em' }}>
+        On this page
+      </p>
+      <ul className="space-y-1">
+        {items.map((item) => {
+          const active = activeId === item.id;
+          return (
+            <li key={item.id}>
+              <a
+                href={`#${item.id}`}
+                onClick={(e) => handleClick(e, item.id)}
+                className="block text-xs leading-snug transition-all"
+                style={{
+                  color: active ? '#4FC3F7' : 'rgba(184,202,212,0.72)',
+                  fontWeight: active ? 600 : 400,
+                  borderLeft: `2px solid ${active ? '#4FC3F7' : 'rgba(255,255,255,0.06)'}`,
+                  paddingLeft: 10,
+                  paddingTop: 5,
+                  paddingBottom: 5,
+                }}
+                onMouseEnter={(e) => { if (!active) e.currentTarget.style.color = '#F0F4FF'; }}
+                onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = 'rgba(184,202,212,0.72)'; }}
+              >
+                {item.text}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 }
 
@@ -391,38 +562,200 @@ export const Ul = ({ items }) => (
   </ul>
 );
 export const Callout = ({ title, children, color = '#4FC3F7' }) => (
-  <div className="rounded-xl p-5 my-6" style={{ background: `${color}0D`, border: `1px solid ${color}22` }}>
+  <div
+    className="rounded-xl p-5 my-6 relative overflow-hidden"
+    style={{
+      background: `${color}0D`,
+      border: `1px solid ${color}22`,
+      borderLeft: `3px solid ${color}`,
+    }}
+  >
     {title && <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color }}>{title}</p>}
     <div className="text-sm text-kmf-text-secondary leading-relaxed">{children}</div>
   </div>
 );
-export const Takeaways = ({ items }) => (
-  <div className="rounded-xl p-6 mt-10 mb-4" style={{ background: 'rgba(79,195,247,0.06)', border: '1px solid rgba(79,195,247,0.18)' }}>
-    <p className="text-xs font-bold text-kmf-accent uppercase tracking-widest mb-3">Key Takeaways</p>
-    <ul className="space-y-2">
-      {items.map((item, i) => (
-        <li key={i} className="flex gap-2 text-sm text-kmf-text-secondary">
-          <span style={{ color: '#4FC3F7', flexShrink: 0 }}>✓</span>{item}
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+
+function useInView(ref, { once = true, rootMargin = '0px 0px -60px 0px' } = {}) {
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    if (!ref.current) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            setInView(true);
+            if (once) io.disconnect();
+          } else if (!once) {
+            setInView(false);
+          }
+        });
+      },
+      { rootMargin, threshold: 0.1 }
+    );
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, [ref, once, rootMargin]);
+  return inView;
+}
+
+export const Takeaways = ({ items, title = 'Key Takeaways' }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  return (
+    <div
+      ref={ref}
+      className="rounded-2xl p-6 mt-10 mb-4"
+      style={{ background: 'rgba(79,195,247,0.05)', border: '1px solid rgba(79,195,247,0.18)' }}
+    >
+      <p className="text-xs font-bold text-kmf-accent uppercase tracking-widest mb-4">{title}</p>
+      <ul className="space-y-3">
+        {items.map((item, i) => (
+          <li
+            key={i}
+            className="flex gap-3 text-sm text-kmf-text-secondary leading-relaxed"
+            style={{
+              opacity: inView ? 1 : 0,
+              transform: inView ? 'translateX(0)' : 'translateX(-10px)',
+              transition: `opacity 0.45s ease ${i * 90}ms, transform 0.45s ease ${i * 90}ms`,
+            }}
+          >
+            <span style={{ color: '#4FC3F7', flexShrink: 0, marginTop: 2 }}>
+              <FaCheck style={{ fontSize: 12 }} />
+            </span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+// Colored cells: accept plain strings, or { value, color: 'green'|'red'|'cyan'|'gold' }
+const TD_COLORS = { green: '#00C853', red: '#FF5252', cyan: '#4FC3F7', gold: '#FFB300' };
 export const Table = ({ headers, rows }) => (
   <div className="overflow-x-auto rounded-xl my-6" style={{ border: '1px solid rgba(255,255,255,0.07)' }}>
     <table className="w-full text-sm">
       <thead>
-        <tr style={{ background: 'rgba(79,195,247,0.06)', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-          {headers.map(h => <th key={h} className="px-4 py-3 text-left font-semibold text-kmf-text-primary">{h}</th>)}
+        <tr style={{ background: 'rgba(79,195,247,0.07)' }}>
+          {headers.map(h => (
+            <th
+              key={h}
+              className="px-4 py-3 text-left"
+              style={{
+                fontSize: 11,
+                fontWeight: 700,
+                color: '#4FC3F7',
+                letterSpacing: '0.06em',
+                textTransform: 'uppercase',
+                borderBottom: '1px solid rgba(255,255,255,0.06)',
+              }}
+            >
+              {h}
+            </th>
+          ))}
         </tr>
       </thead>
       <tbody>
         {rows.map((row, i) => (
-          <tr key={i} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-            {row.map((cell, j) => <td key={j} className="px-4 py-3 text-kmf-text-secondary">{cell}</td>)}
+          <tr
+            key={i}
+            className="transition-colors"
+            style={{ borderBottom: i < rows.length - 1 ? '1px solid rgba(255,255,255,0.04)' : 'none' }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(79,195,247,0.03)')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
+          >
+            {row.map((cell, j) => {
+              const isObj = cell && typeof cell === 'object' && 'value' in cell;
+              const val = isObj ? cell.value : cell;
+              const col = isObj && cell.color ? TD_COLORS[cell.color] : null;
+              return (
+                <td
+                  key={j}
+                  className="px-4 py-3"
+                  style={{
+                    color: col || '#B8CAD4',
+                    fontWeight: col ? 600 : 400,
+                  }}
+                >
+                  {val}
+                </td>
+              );
+            })}
           </tr>
         ))}
       </tbody>
     </table>
   </div>
 );
+
+// Animated stats strip — 3+ stat boxes with count-up on viewport enter.
+// items: [{ value: number, decimals?: 0, suffix?: '%', prefix?: '$', label: string }]
+export const StatsStrip = ({ items }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  const cols = items.length;
+  return (
+    <div
+      ref={ref}
+      className="grid gap-3 my-8"
+      style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
+    >
+      {items.map((item, i) => (
+        <StatBox key={i} item={item} active={inView} delay={i * 120} />
+      ))}
+    </div>
+  );
+};
+
+function StatBox({ item, active, delay }) {
+  const { value, decimals = 0, suffix = '', prefix = '', label } = item;
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    if (!active) return;
+    const start = performance.now();
+    const duration = 1200;
+    const from = 0;
+    let raf;
+    const tick = (now) => {
+      const t = Math.min(1, (now - start - delay) / duration);
+      if (t < 0) { raf = requestAnimationFrame(tick); return; }
+      const eased = 1 - Math.pow(1 - t, 3);
+      setDisplay(from + (value - from) * eased);
+      if (t < 1) raf = requestAnimationFrame(tick);
+      else setDisplay(value);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [active, value, delay]);
+
+  return (
+    <div
+      className="rounded-2xl p-5 text-center transition-colors"
+      style={{
+        background: 'rgba(26,29,36,0.85)',
+        border: '1px solid rgba(255,255,255,0.07)',
+      }}
+      onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'rgba(79,195,247,0.25)')}
+      onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)')}
+    >
+      <div
+        style={{
+          fontSize: 32,
+          fontWeight: 800,
+          letterSpacing: '-0.03em',
+          lineHeight: 1.05,
+          background: 'linear-gradient(90deg, #4FC3F7, #03A9F4)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+        }}
+      >
+        {prefix}{display.toFixed(decimals)}{suffix}
+      </div>
+      <div style={{ fontSize: 11, color: '#8FB3C5', marginTop: 6, lineHeight: 1.45 }}>
+        {label}
+      </div>
+    </div>
+  );
+}
