@@ -19,55 +19,6 @@ const ro = {
       "articles": "Articole pe blog"
     }
   },
-  "beta": {
-    "badge": "Locuri limitate disponibile",
-    "heading1": "Devino Beta Tester.",
-    "heading2": "Primești Premium. Pe viață. Gratuit.",
-    "description": "Căutăm traderi serioși care să testeze K.M.F. Trading Journal înainte de lansarea publică. Modelează produsul cu feedback-ul tău — și în schimb, primești",
-    "descHighlight": "acces gratuit pe viață la toate funcțiile Premium",
-    "descEnd": ", pentru totdeauna.",
-    "perks": [
-      "Acces gratuit pe viață la Premium",
-      "Primul care testează fiecare funcție nouă",
-      "Linie directă cu echipa de dezvoltare"
-    ],
-    "namePlaceholder": "Numele tău",
-    "emailPlaceholder": "Adresa de email",
-    "submitBtn": "Aplică acum",
-    "sendingBtn": "Se trimite...",
-    "successTitle": "Cerere primită!",
-    "successSub": "Te vom contacta cu pașii următori în 24 de ore.",
-    "errorMsg": "Ceva nu a mers bine. Te rugăm să încerci din nou sau scrie-ne la contact@kmfjournal.com",
-    "errorName": "Numele trebuie să aibă cel puțin 2 caractere",
-    "errorEmail": "Te rugăm să introduci o adresă de email validă",
-    "modalTitle": "Aplică pentru acces Beta",
-    "emailLoginNote": "Folosește emailul cu care te vei loga",
-    "experienceLabel": "Experiență de trading",
-    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
-    "marketsLabel": "Piețe tranzacționate",
-    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
-    "journalLabel": "Metodă actuală de jurnal",
-    "journalOptions": ["Spreadsheet", "Altă aplicație", "Pe hârtie", "Niciuna"],
-    "activeTesterNote": "Pentru a păstra Premium gratuit, trebuie să fii un tester activ — oferă feedback și raportează bug-uri regulat.",
-    "closeBtn": "Închide",
-    "statBlocks": [
-      {
-        "label": "Acces pe viață",
-        "value": "GRATUIT",
-        "sub": "toate funcțiile premium"
-      },
-      {
-        "label": "Acces timpuriu",
-        "value": "100%",
-        "sub": "fiecare versiune nouă"
-      },
-      {
-        "label": "Locuri disponibile",
-        "value": "7",
-        "sub": "acces beta limitat"
-      }
-    ]
-  },
   "whyKmf": {
     "badge": "De ce KMF?",
     "heading1": "Construit altfel.",

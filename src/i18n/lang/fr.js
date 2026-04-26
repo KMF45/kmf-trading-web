@@ -19,55 +19,6 @@ const fr = {
       "articles": "Articles de blog"
     }
   },
-  "beta": {
-    "badge": "Places limitées",
-    "heading1": "Devenez bêta testeur.",
-    "heading2": "Obtenez Premium. À vie. Gratuit.",
-    "description": "Nous recherchons des traders sérieux pour tester K.M.F. Trading Journal avant le lancement public. Façonnez le produit avec vos retours — et en échange, obtenez",
-    "descHighlight": "l'accès gratuit à vie à toutes les fonctionnalités Premium",
-    "descEnd": ", pour toujours.",
-    "perks": [
-      "Accès gratuit à vie au Premium",
-      "Premier à tester chaque nouvelle fonctionnalité",
-      "Ligne directe avec l'équipe de développement"
-    ],
-    "namePlaceholder": "Votre nom",
-    "emailPlaceholder": "Adresse email",
-    "submitBtn": "Postuler maintenant",
-    "sendingBtn": "Envoi en cours...",
-    "successTitle": "Candidature reçue !",
-    "successSub": "Nous vous contacterons avec les prochaines étapes sous 24 heures.",
-    "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@kmfjournal.com",
-    "errorName": "Le nom doit contenir au moins 2 caractères",
-    "errorEmail": "Veuillez entrer une adresse email valide",
-    "modalTitle": "Postuler pour l'accès Bêta",
-    "emailLoginNote": "Utilisez l'email avec lequel vous vous connecterez",
-    "experienceLabel": "Expérience de trading",
-    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
-    "marketsLabel": "Marchés tradés",
-    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
-    "journalLabel": "Méthode de journal actuelle",
-    "journalOptions": ["Spreadsheet", "Autre application", "Papier", "Aucune"],
-    "activeTesterNote": "Pour conserver le Premium gratuit, vous devez être un testeur actif — fournissez des retours et signalez les bugs régulièrement.",
-    "closeBtn": "Fermer",
-    "statBlocks": [
-      {
-        "label": "Accès à vie",
-        "value": "GRATUIT",
-        "sub": "toutes les fonctionnalités premium"
-      },
-      {
-        "label": "Accès anticipé",
-        "value": "100%",
-        "sub": "chaque nouvelle version"
-      },
-      {
-        "label": "Places disponibles",
-        "value": "7",
-        "sub": "accès bêta limité"
-      }
-    ]
-  },
   "whyKmf": {
     "badge": "Pourquoi KMF ?",
     "heading1": "Conçu différemment.",

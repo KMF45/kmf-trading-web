@@ -18,13 +18,5 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
-    // Beta signups from landing page — anyone can create, nobody can read/update/delete
-    match /betaSignups/{docId} {
-      allow create: if request.resource.data.keys().hasAll(['email', 'source', 'createdAt'])
-                    && request.resource.data.email is string
-                    && request.resource.data.email.size() > 0
-                    && request.resource.data.email.size() < 256;
-      allow read, update, delete: if false;
-    }
   }
 }

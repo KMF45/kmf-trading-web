@@ -19,55 +19,6 @@ const en = {
       "articles": "Blog Articles"
     }
   },
-  "beta": {
-    "badge": "Limited Spots Available",
-    "heading1": "Become a Beta Tester.",
-    "heading2": "Get Premium. Forever. Free.",
-    "description": "We're looking for serious traders to test K.M.F. Trading Journal before the public launch. Shape the product with your feedback — and in return, get",
-    "descHighlight": "free lifetime access to all Premium features",
-    "descEnd": ", forever.",
-    "perks": [
-      "Free lifetime access to Premium",
-      "First to try every new feature",
-      "Direct line to the dev team"
-    ],
-    "namePlaceholder": "Your name",
-    "emailPlaceholder": "Email address",
-    "submitBtn": "Apply Now",
-    "sendingBtn": "Sending...",
-    "successTitle": "Application received!",
-    "successSub": "We'll reach out with next steps within 24 hours.",
-    "errorMsg": "Something went wrong. Please try again or email us at contact@kmfjournal.com",
-    "errorName": "Name must be at least 2 characters",
-    "errorEmail": "Please enter a valid email address",
-    "modalTitle": "Apply for Beta Access",
-    "emailLoginNote": "Use the email you'll log in with",
-    "experienceLabel": "Trading Experience",
-    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
-    "marketsLabel": "Markets You Trade",
-    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
-    "journalLabel": "Current Journal Method",
-    "journalOptions": ["Spreadsheet", "Another App", "Paper", "None"],
-    "activeTesterNote": "To keep free Premium, you must be an active tester — provide feedback and report bugs regularly.",
-    "closeBtn": "Close",
-    "statBlocks": [
-      {
-        "label": "Lifetime Access",
-        "value": "FREE",
-        "sub": "all premium features"
-      },
-      {
-        "label": "Early Access",
-        "value": "100%",
-        "sub": "every new release"
-      },
-      {
-        "label": "Spots Available",
-        "value": "7",
-        "sub": "limited beta access"
-      }
-    ]
-  },
   "whyKmf": {
     "badge": "Why KMF?",
     "heading1": "Built Different.",

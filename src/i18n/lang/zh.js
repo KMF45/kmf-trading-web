@@ -19,55 +19,6 @@ const zh = {
       "articles": "博客文章"
     }
   },
-  "beta": {
-    "badge": "名额有限",
-    "heading1": "成为 Beta 测试者。",
-    "heading2": "永久免费获得 Premium。",
-    "description": "我们正在寻找认真的交易者，在 K.M.F. Trading Journal 正式发布前参与测试。用你的反馈塑造产品——作为回报，获得",
-    "descHighlight": "所有 Premium 功能的终身免费使用权",
-    "descEnd": "，永久有效。",
-    "perks": [
-      "终身免费使用 Premium",
-      "优先体验每个新功能",
-      "与开发团队直接沟通"
-    ],
-    "namePlaceholder": "你的名字",
-    "emailPlaceholder": "邮箱地址",
-    "submitBtn": "立即申请",
-    "sendingBtn": "发送中...",
-    "successTitle": "申请已收到！",
-    "successSub": "我们将在 24 小时内与你联系。",
-    "errorMsg": "出了点问题。请重试或发送邮件至 contact@kmfjournal.com",
-    "errorName": "姓名至少需要2个字符",
-    "errorEmail": "请输入有效的电子邮件地址",
-    "modalTitle": "申请 Beta 访问",
-    "emailLoginNote": "请使用你将用于登录的邮箱",
-    "experienceLabel": "交易经验",
-    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
-    "marketsLabel": "交易市场",
-    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
-    "journalLabel": "当前记录方式",
-    "journalOptions": ["Spreadsheet", "其他应用", "纸质", "无"],
-    "activeTesterNote": "为保持免费 Premium，你必须是活跃的测试者 — 定期提供反馈并报告问题。",
-    "closeBtn": "关闭",
-    "statBlocks": [
-      {
-        "label": "终身使用",
-        "value": "免费",
-        "sub": "全部 premium 功能"
-      },
-      {
-        "label": "抢先体验",
-        "value": "100%",
-        "sub": "每个新版本"
-      },
-      {
-        "label": "剩余名额",
-        "value": "7",
-        "sub": "限量 beta 名额"
-      }
-    ]
-  },
   "whyKmf": {
     "badge": "为什么选择 KMF？",
     "heading1": "与众不同。",

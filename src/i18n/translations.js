@@ -20,45 +20,6 @@ export const translations = {
         "articles": "Blog Articles"
       }
     },
-    "beta": {
-      "badge": "Limited Spots Available",
-      "heading1": "Become a Beta Tester.",
-      "heading2": "Get Premium. Forever. Free.",
-      "description": "We're looking for serious traders to test K.M.F. Trading Journal before the public launch. Shape the product with your feedback — and in return, get",
-      "descHighlight": "free lifetime access to all Premium features",
-      "descEnd": ", forever.",
-      "perks": [
-        "Free lifetime access to Premium",
-        "First to try every new feature",
-        "Direct line to the dev team"
-      ],
-      "namePlaceholder": "Your name",
-      "emailPlaceholder": "Email address",
-      "submitBtn": "Apply Now",
-      "sendingBtn": "Sending...",
-      "successTitle": "Application received!",
-      "successSub": "We'll reach out with next steps within 24 hours.",
-      "errorMsg": "Something went wrong. Please try again or email us at contact@kmfjournal.com",
-      "errorName": "Name must be at least 2 characters",
-      "errorEmail": "Please enter a valid email address",
-      "statBlocks": [
-        {
-          "label": "Lifetime Access",
-          "value": "FREE",
-          "sub": "all premium features"
-        },
-        {
-          "label": "Early Access",
-          "value": "100%",
-          "sub": "every new release"
-        },
-        {
-          "label": "Spots Available",
-          "value": "7",
-          "sub": "limited beta access"
-        }
-      ]
-    },
     "whyKmf": {
       "badge": "Why KMF?",
       "heading1": "Built Different.",
@@ -422,45 +383,6 @@ export const translations = {
         "languages": "Limbi",
         "articles": "Articole pe blog"
       }
-    },
-    "beta": {
-      "badge": "Locuri limitate disponibile",
-      "heading1": "Devino Beta Tester.",
-      "heading2": "Primești Premium. Pe viață. Gratuit.",
-      "description": "Căutăm traderi serioși care să testeze K.M.F. Trading Journal înainte de lansarea publică. Modelează produsul cu feedback-ul tău — și în schimb, primești",
-      "descHighlight": "acces gratuit pe viață la toate funcțiile Premium",
-      "descEnd": ", pentru totdeauna.",
-      "perks": [
-        "Acces gratuit pe viață la Premium",
-        "Primul care testează fiecare funcție nouă",
-        "Linie directă cu echipa de dezvoltare"
-      ],
-      "namePlaceholder": "Numele tău",
-      "emailPlaceholder": "Adresa de email",
-      "submitBtn": "Aplică acum",
-      "sendingBtn": "Se trimite...",
-      "successTitle": "Cerere primită!",
-      "successSub": "Te vom contacta cu pașii următori în 24 de ore.",
-      "errorMsg": "Ceva nu a mers bine. Te rugăm să încerci din nou sau scrie-ne la contact@kmfjournal.com",
-      "errorName": "Numele trebuie să aibă cel puțin 2 caractere",
-      "errorEmail": "Te rugăm să introduci o adresă de email validă",
-      "statBlocks": [
-        {
-          "label": "Acces pe viață",
-          "value": "GRATUIT",
-          "sub": "toate funcțiile premium"
-        },
-        {
-          "label": "Acces timpuriu",
-          "value": "100%",
-          "sub": "fiecare versiune nouă"
-        },
-        {
-          "label": "Locuri disponibile",
-          "value": "7",
-          "sub": "acces beta limitat"
-        }
-      ]
     },
     "whyKmf": {
       "badge": "De ce KMF?",
@@ -826,45 +748,6 @@ export const translations = {
         "articles": "Articles de blog"
       }
     },
-    "beta": {
-      "badge": "Places limitées",
-      "heading1": "Devenez bêta testeur.",
-      "heading2": "Obtenez Premium. À vie. Gratuit.",
-      "description": "Nous recherchons des traders sérieux pour tester K.M.F. Trading Journal avant le lancement public. Façonnez le produit avec vos retours — et en échange, obtenez",
-      "descHighlight": "l'accès gratuit à vie à toutes les fonctionnalités Premium",
-      "descEnd": ", pour toujours.",
-      "perks": [
-        "Accès gratuit à vie au Premium",
-        "Premier à tester chaque nouvelle fonctionnalité",
-        "Ligne directe avec l'équipe de développement"
-      ],
-      "namePlaceholder": "Votre nom",
-      "emailPlaceholder": "Adresse email",
-      "submitBtn": "Postuler maintenant",
-      "sendingBtn": "Envoi en cours...",
-      "successTitle": "Candidature reçue !",
-      "successSub": "Nous vous contacterons avec les prochaines étapes sous 24 heures.",
-      "errorMsg": "Une erreur est survenue. Veuillez réessayer ou nous écrire à contact@kmfjournal.com",
-      "errorName": "Le nom doit contenir au moins 2 caractères",
-      "errorEmail": "Veuillez entrer une adresse email valide",
-      "statBlocks": [
-        {
-          "label": "Accès à vie",
-          "value": "GRATUIT",
-          "sub": "toutes les fonctionnalités premium"
-        },
-        {
-          "label": "Accès anticipé",
-          "value": "100%",
-          "sub": "chaque nouvelle version"
-        },
-        {
-          "label": "Places disponibles",
-          "value": "7",
-          "sub": "accès bêta limité"
-        }
-      ]
-    },
     "whyKmf": {
       "badge": "Pourquoi KMF ?",
       "heading1": "Conçu différemment.",
@@ -1228,45 +1111,6 @@ export const translations = {
         "languages": "Языки",
         "articles": "Статьи в блоге"
       }
-    },
-    "beta": {
-      "badge": "Количество мест ограничено",
-      "heading1": "Станьте бета-тестером.",
-      "heading2": "Получите Premium. Навсегда. Бесплатно.",
-      "description": "Мы ищем серьёзных трейдеров для тестирования K.M.F. Trading Journal перед публичным запуском. Влияйте на продукт своими отзывами — а взамен получите",
-      "descHighlight": "бесплатный пожизненный доступ ко всем Premium-функциям",
-      "descEnd": ", навсегда.",
-      "perks": [
-        "Бесплатный пожизненный доступ к Premium",
-        "Первый доступ к каждой новой функции",
-        "Прямая связь с командой разработки"
-      ],
-      "namePlaceholder": "Ваше имя",
-      "emailPlaceholder": "Email адрес",
-      "submitBtn": "Подать заявку",
-      "sendingBtn": "Отправка...",
-      "successTitle": "Заявка получена!",
-      "successSub": "Мы свяжемся с вами в течение 24 часов.",
-      "errorMsg": "Что-то пошло не так. Попробуйте снова или напишите нам на contact@kmfjournal.com",
-      "errorName": "Имя должно содержать не менее 2 символов",
-      "errorEmail": "Пожалуйста, введите действительный адрес электронной почты",
-      "statBlocks": [
-        {
-          "label": "Пожизненный доступ",
-          "value": "БЕСПЛАТНО",
-          "sub": "все premium-функции"
-        },
-        {
-          "label": "Ранний доступ",
-          "value": "100%",
-          "sub": "каждый новый релиз"
-        },
-        {
-          "label": "Свободных мест",
-          "value": "7",
-          "sub": "ограниченный бета-доступ"
-        }
-      ]
     },
     "whyKmf": {
       "badge": "Почему KMF?",
@@ -1632,45 +1476,6 @@ export const translations = {
         "articles": "ブログ記事"
       }
     },
-    "beta": {
-      "badge": "残り枠わずか",
-      "heading1": "ベータテスターになろう。",
-      "heading2": "Premiumを無料で。永久に。",
-      "description": "K.M.F. Trading Journalの正式リリース前にテストしてくれる本気のトレーダーを探しています。フィードバックで製品を一緒に作り上げましょう。その見返りとして、",
-      "descHighlight": "全Premium機能への永久無料アクセス",
-      "descEnd": "をプレゼントします。",
-      "perks": [
-        "Premium永久無料アクセス",
-        "すべての新機能をいち早く体験",
-        "開発チームとの直接コミュニケーション"
-      ],
-      "namePlaceholder": "お名前",
-      "emailPlaceholder": "メールアドレス",
-      "submitBtn": "応募する",
-      "sendingBtn": "送信中...",
-      "successTitle": "応募を受け付けました！",
-      "successSub": "24時間以内に次のステップをご連絡します。",
-      "errorMsg": "エラーが発生しました。もう一度お試しいただくか、contact@kmfjournal.com までご連絡ください。",
-      "errorName": "名前は2文字以上で入力してください",
-      "errorEmail": "有効なメールアドレスを入力してください",
-      "statBlocks": [
-        {
-          "label": "永久アクセス",
-          "value": "無料",
-          "sub": "全premium機能"
-        },
-        {
-          "label": "早期アクセス",
-          "value": "100%",
-          "sub": "すべての新リリース"
-        },
-        {
-          "label": "残り枠",
-          "value": "7",
-          "sub": "限定ベータアクセス"
-        }
-      ]
-    },
     "whyKmf": {
       "badge": "なぜKMF？",
       "heading1": "他とは違う。",
@@ -2035,45 +1840,6 @@ export const translations = {
         "articles": "Blog-Artikel"
       }
     },
-    "beta": {
-      "badge": "Begrenzte Plätze verfügbar",
-      "heading1": "Werde Beta-Tester.",
-      "heading2": "Erhalte Premium. Für immer. Kostenlos.",
-      "description": "Wir suchen ernsthafte Trader, die K.M.F. Trading Journal vor dem öffentlichen Launch testen. Gestalte das Produkt mit deinem Feedback mit — und erhalte dafür",
-      "descHighlight": "kostenlosen lebenslangen Zugang zu allen Premium-Funktionen",
-      "descEnd": ", für immer.",
-      "perks": [
-        "Kostenloser lebenslanger Premium-Zugang",
-        "Erster Zugang zu jeder neuen Funktion",
-        "Direkter Draht zum Entwicklerteam"
-      ],
-      "namePlaceholder": "Dein Name",
-      "emailPlaceholder": "E-Mail-Adresse",
-      "submitBtn": "Jetzt bewerben",
-      "sendingBtn": "Wird gesendet...",
-      "successTitle": "Bewerbung erhalten!",
-      "successSub": "Wir melden uns innerhalb von 24 Stunden mit den nächsten Schritten.",
-      "errorMsg": "Etwas ist schiefgelaufen. Bitte versuche es erneut oder schreibe uns an contact@kmfjournal.com",
-      "errorName": "Der Name muss mindestens 2 Zeichen lang sein",
-      "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein",
-      "statBlocks": [
-        {
-          "label": "Lebenslanger Zugang",
-          "value": "KOSTENLOS",
-          "sub": "alle Premium-Funktionen"
-        },
-        {
-          "label": "Early Access",
-          "value": "100%",
-          "sub": "jedes neue Release"
-        },
-        {
-          "label": "Verfügbare Plätze",
-          "value": "7",
-          "sub": "begrenzter Beta-Zugang"
-        }
-      ]
-    },
     "whyKmf": {
       "badge": "Warum KMF?",
       "heading1": "Anders gebaut.",
@@ -2437,45 +2203,6 @@ export const translations = {
         "languages": "语言",
         "articles": "博客文章"
       }
-    },
-    "beta": {
-      "badge": "名额有限",
-      "heading1": "成为 Beta 测试者。",
-      "heading2": "永久免费获得 Premium。",
-      "description": "我们正在寻找认真的交易者，在 K.M.F. Trading Journal 正式发布前参与测试。用你的反馈塑造产品——作为回报，获得",
-      "descHighlight": "所有 Premium 功能的终身免费使用权",
-      "descEnd": "，永久有效。",
-      "perks": [
-        "终身免费使用 Premium",
-        "优先体验每个新功能",
-        "与开发团队直接沟通"
-      ],
-      "namePlaceholder": "你的名字",
-      "emailPlaceholder": "邮箱地址",
-      "submitBtn": "立即申请",
-      "sendingBtn": "发送中...",
-      "successTitle": "申请已收到！",
-      "successSub": "我们将在 24 小时内与你联系。",
-      "errorMsg": "出了点问题。请重试或发送邮件至 contact@kmfjournal.com",
-      "errorName": "姓名至少需要2个字符",
-      "errorEmail": "请输入有效的电子邮件地址",
-      "statBlocks": [
-        {
-          "label": "终身使用",
-          "value": "免费",
-          "sub": "全部 premium 功能"
-        },
-        {
-          "label": "抢先体验",
-          "value": "100%",
-          "sub": "每个新版本"
-        },
-        {
-          "label": "剩余名额",
-          "value": "7",
-          "sub": "限量 beta 名额"
-        }
-      ]
     },
     "whyKmf": {
       "badge": "为什么选择 KMF？",

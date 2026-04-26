@@ -19,55 +19,6 @@ const ja = {
       "articles": "ブログ記事"
     }
   },
-  "beta": {
-    "badge": "残り枠わずか",
-    "heading1": "ベータテスターになろう。",
-    "heading2": "Premiumを無料で。永久に。",
-    "description": "K.M.F. Trading Journalの正式リリース前にテストしてくれる本気のトレーダーを探しています。フィードバックで製品を一緒に作り上げましょう。その見返りとして、",
-    "descHighlight": "全Premium機能への永久無料アクセス",
-    "descEnd": "をプレゼントします。",
-    "perks": [
-      "Premium永久無料アクセス",
-      "すべての新機能をいち早く体験",
-      "開発チームとの直接コミュニケーション"
-    ],
-    "namePlaceholder": "お名前",
-    "emailPlaceholder": "メールアドレス",
-    "submitBtn": "応募する",
-    "sendingBtn": "送信中...",
-    "successTitle": "応募を受け付けました！",
-    "successSub": "24時間以内に次のステップをご連絡します。",
-    "errorMsg": "エラーが発生しました。もう一度お試しいただくか、contact@kmfjournal.com までご連絡ください。",
-    "errorName": "名前は2文字以上で入力してください",
-    "errorEmail": "有効なメールアドレスを入力してください",
-    "modalTitle": "ベータアクセスに申し込む",
-    "emailLoginNote": "ログインに使用するメールアドレスを入力してください",
-    "experienceLabel": "トレーディング経験",
-    "experienceOptions": ["Beginner", "Intermediate", "Advanced"],
-    "marketsLabel": "取引市場",
-    "marketsOptions": ["Forex", "Stocks", "Crypto", "Futures", "Options"],
-    "journalLabel": "現在のジャーナル方法",
-    "journalOptions": ["Spreadsheet", "他のアプリ", "紙", "なし"],
-    "activeTesterNote": "無料Premiumを維持するには、アクティブなテスターである必要があります — 定期的にフィードバックとバグ報告をお願いします。",
-    "closeBtn": "閉じる",
-    "statBlocks": [
-      {
-        "label": "永久アクセス",
-        "value": "無料",
-        "sub": "全premium機能"
-      },
-      {
-        "label": "早期アクセス",
-        "value": "100%",
-        "sub": "すべての新リリース"
-      },
-      {
-        "label": "残り枠",
-        "value": "7",
-        "sub": "限定ベータアクセス"
-      }
-    ]
-  },
   "whyKmf": {
     "badge": "なぜKMF？",
     "heading1": "他とは違う。",
