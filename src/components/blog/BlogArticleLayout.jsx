@@ -99,7 +99,7 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       description: metaDescription,
       datePublished: dateISO,
       dateModified: dateModified || dateISO,
-      author: { '@type': 'Organization', name: 'K.M.F. Dev Team', url: `${SITE}/about` },
+      author: { '@type': 'Organization', name: 'K.M.F. Trading Research', url: `${SITE}/about` },
       publisher: { '@type': 'Organization', name: 'K.M.F. Trading Journal', url: SITE, logo: { '@type': 'ImageObject', url: `${SITE}/logo.png` } },
       image: ogImage,
       url: pageUrl,
@@ -240,7 +240,7 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
               </div>
               <div className="min-w-0">
                 <p className="text-sm font-semibold text-kmf-text-primary leading-tight">
-                  <Link to="/about" className="hover:text-kmf-accent transition-colors" itemProp="name">K.M.F. Dev Team</Link>
+                  <Link to="/about" className="hover:text-kmf-accent transition-colors" itemProp="name">K.M.F. Trading Research</Link>
                 </p>
                 <p className="text-xs text-kmf-text-tertiary mt-0.5">
                   <time dateTime={dateISO}>{date}</time> · {readTime}
@@ -283,7 +283,7 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
             </div>
             <div className="min-w-0">
               <p className="text-sm font-bold text-kmf-text-primary leading-tight">
-                <Link to="/about" className="hover:text-kmf-accent transition-colors">K.M.F. Dev Team</Link>
+                <Link to="/about" className="hover:text-kmf-accent transition-colors">K.M.F. Trading Research</Link>
               </p>
               <p
                 className="mt-1 mb-2"

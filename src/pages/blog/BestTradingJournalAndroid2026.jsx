@@ -57,7 +57,7 @@ export default function BestTradingJournalAndroid2026() {
       description: PAGE_DESC,
       datePublished: '2026-02-20',
       dateModified: '2026-02-27',
-      author: { '@type': 'Organization', name: 'K.M.F. Dev Team', url: SITE },
+      author: { '@type': 'Organization', name: 'K.M.F. Trading Research', url: SITE },
       publisher: { '@type': 'Organization', name: 'K.M.F. Trading Journal', url: SITE, logo: { '@type': 'ImageObject', url: `${SITE}/logo.png` } },
       image: OG_IMAGE,
       url: PAGE_URL,
