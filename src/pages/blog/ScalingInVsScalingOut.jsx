@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { ScalingOutEquityCurve } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -32,6 +32,12 @@ export default function ScalingInVsScalingOut() {
         Most trading education focuses on entries and exits as binary events: you are in or you are out. But in practice, many traders manage positions in pieces — adding to a position as it develops (scaling in) or taking partial profits along the way (scaling out). Both methods change your risk profile in ways that are not immediately obvious, and getting the math wrong can turn a winning strategy into a losing one.
       </Intro>
 
+      <StatsStrip items={[
+        { value: 67, decimals: 0, suffix: '%', label: <>expectancy lost when<br />scaling out a 3:1 strategy</> },
+        { value: 100, decimals: 0, suffix: '+', label: <>trades minimum before<br />adding position complexity</> },
+        { value: 1, decimals: 0, suffix: '%', label: <>cumulative risk cap<br />across all scale-ins</> },
+      ]} />
+
       <H2>Scaling In: Adding to Your Position</H2>
       <P>
         Scaling in means entering a position in multiple stages rather than all at once. There are two fundamentally different versions of this, and confusing them is where accounts get destroyed.
@@ -56,11 +62,11 @@ export default function ScalingInVsScalingOut() {
       <Table
         headers={['Action', 'Entry Price', 'Position Size', 'Total Exposure', 'Loss if Price Hits $90']}
         rows={[
-          ['Initial buy', '$100', '100 shares', '$10,000', '-$1,000 (1% of $100K acct)'],
-          ['Add at $97', '$97', '100 shares', '$19,700', '-$1,600 (1.6%)'],
-          ['Add at $94', '$94', '100 shares', '$29,100', '-$1,900 (1.9%)'],
-          ['Add at $91', '$91', '100 shares', '$38,200', '-$2,000 (2.0%)'],
-          ['Price hits $90', '—', '400 shares total', '$38,200', '-$2,200 (2.2%)'],
+          ['Initial buy', '$100', '100 shares', '$10,000', { value: '-$1,000 (1% of $100K acct)', color: 'green' }],
+          ['Add at $97', '$97', '100 shares', '$19,700', { value: '-$1,600 (1.6%)', color: 'gold' }],
+          ['Add at $94', '$94', '100 shares', '$29,100', { value: '-$1,900 (1.9%)', color: 'gold' }],
+          ['Add at $91', '$91', '100 shares', '$38,200', { value: '-$2,000 (2.0%)', color: 'red' }],
+          ['Price hits $90', '—', '400 shares total', '$38,200', { value: '-$2,200 (2.2%)', color: 'red' }],
         ]}
       />
       <P>

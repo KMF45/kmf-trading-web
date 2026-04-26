@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -30,6 +30,12 @@ export default function ConfidenceVsOverconfidence() {
       <Intro>
         Confidence is essential in trading. Without it, you hesitate on valid setups, exit too early, and second-guess every decision. But confidence has a dark twin — overconfidence — and the line between them is almost invisible in real time. The trader who sizes up after four consecutive wins feels exactly the same as the trader who trusts a well-tested system. The difference only becomes clear when the next loss arrives.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 100, decimals: 0, suffix: '+', label: <>trades needed before<br />a verified edge is real</> },
+        { value: 5, decimals: 0, label: <>consecutive wins where<br />process should tighten, not loosen</> },
+        { value: 1, decimals: 0, suffix: '%', label: <>fixed risk per trade —<br />constant, regardless of streak</> },
+      ]} />
 
       <H2>Confidence: Built on Evidence</H2>
       <P>
@@ -72,13 +78,13 @@ export default function ConfidenceVsOverconfidence() {
       <Table
         headers={['Behavior', 'Confident Trader', 'Overconfident Trader']}
         rows={[
-          ['Position sizing', 'Follows the same risk rules regardless of recent results', 'Increases size after wins, "I\'m on fire"'],
-          ['Pre-trade checklist', 'Completes it every time, no exceptions', 'Skips it — "I can feel this one"'],
-          ['Reaction to a loss', 'Reviews the process, not the outcome', 'Blames the market or bad luck'],
-          ['Sample size awareness', 'Knows edge requires 50–100+ trades to validate', 'Trusts a pattern after 5–10 trades'],
-          ['New instruments', 'Tests on demo or small size before committing', 'Jumps in with full size — "trading is trading"'],
-          ['Conviction tracking', 'Records conviction level and compares with results', 'Does not track — relies on gut feeling'],
-          ['Risk management', 'Treats rules as non-negotiable', 'Treats rules as guidelines to override when "sure"'],
+          ['Position sizing', { value: 'Follows the same risk rules regardless of recent results', color: 'green' }, { value: 'Increases size after wins, "I\'m on fire"', color: 'red' }],
+          ['Pre-trade checklist', { value: 'Completes it every time, no exceptions', color: 'green' }, { value: 'Skips it — "I can feel this one"', color: 'red' }],
+          ['Reaction to a loss', { value: 'Reviews the process, not the outcome', color: 'green' }, { value: 'Blames the market or bad luck', color: 'red' }],
+          ['Sample size awareness', { value: 'Knows edge requires 50–100+ trades to validate', color: 'green' }, { value: 'Trusts a pattern after 5–10 trades', color: 'red' }],
+          ['New instruments', { value: 'Tests on demo or small size before committing', color: 'green' }, { value: 'Jumps in with full size — "trading is trading"', color: 'red' }],
+          ['Conviction tracking', { value: 'Records conviction level and compares with results', color: 'green' }, { value: 'Does not track — relies on gut feeling', color: 'red' }],
+          ['Risk management', { value: 'Treats rules as non-negotiable', color: 'green' }, { value: 'Treats rules as guidelines to override when "sure"', color: 'red' }],
         ]}
       />
 

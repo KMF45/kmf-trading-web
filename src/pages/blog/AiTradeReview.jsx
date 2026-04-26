@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function AiTradeReview() {
       <Intro>
         AI tools like ChatGPT and Claude have become remarkably good at pattern recognition, data analysis, and identifying blind spots in decision-making. Traders who are still doing manual-only reviews are leaving significant edge on the table. But there is a critical distinction between using AI as an analytical tool and using AI as a decision-maker. The first makes you a better trader. The second makes you a dependent one. Here is how to use AI for trade review correctly.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 30, decimals: 0, suffix: 's', label: <>AI summary of a week<br />vs. 45 minutes manually</> },
+        { value: 200, decimals: 0, suffix: '+', label: <>trades AI can pattern-match<br />beyond human bandwidth</> },
+        { value: 0, decimals: 0, label: <>real-time decisions<br />you should outsource to AI</> },
+      ]} />
 
       <H2>What AI Is Genuinely Good At</H2>
       <P>

@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function CryptoVsForexJournaling() {
       <Intro>
         You've been trading EUR/USD for eight months. Your system works. 1% risk per trade, 30-pip stop loss, clean entries off the 1-hour chart. Then a friend shows you his BTC/USD account — up 40% in three weeks. You open a crypto account, apply the same rules, and within five days you've taken three stop losses that felt like they came out of nowhere. Your 30-pip stop that works perfectly on EUR/USD gets hunted by a single 4-minute candle on Bitcoin. Same rules. Completely different result. Welcome to the most expensive lesson in cross-market trading.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 7, decimals: 0, suffix: '×', label: <>typical crypto volatility<br />vs. major forex pairs</> },
+        { value: 1.5, decimals: 1, suffix: '× ATR', label: <>universal stop sizing —<br />works across both markets</> },
+        { value: 24, decimals: 0, suffix: '/7', label: <>crypto market hours —<br />no overnight safety net</> },
+      ]} />
 
       <H2>Same Charts, Different Games</H2>
       <P>

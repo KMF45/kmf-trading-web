@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function MondayEffectTrading() {
       <Intro>
         Every Monday, thousands of traders sit down at their screens with the same thought: "New week, fresh start, let's make it count." They are primed for action. They have spent the weekend reading analysis, watching YouTube breakdowns, marking up charts. They feel prepared. They feel motivated. And they proceed to take their worst trades of the week. This is not a coincidence. It is a predictable pattern driven by both market structure and human psychology — and understanding it can immediately improve your weekly performance.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 50, decimals: 0, suffix: '%', label: <>typical Monday position-size cut<br />for the lower-liquidity session</> },
+        { value: 48, decimals: 0, suffix: 'h', label: <>weekend gap window of news<br />that can invalidate Friday levels</> },
+        { value: 3, decimals: 0, label: <>top quality days of the week:<br />Tuesday, Wednesday, Thursday</> },
+      ]} />
 
       <H2>The Structural Problem: Monday Markets Are Different</H2>
       <P>
@@ -79,11 +85,11 @@ export default function MondayEffectTrading() {
       <Table
         headers={['Metric', 'Monday', 'Tuesday–Thursday', 'Friday']}
         rows={[
-          ['Average volume', 'Below average', 'Highest', 'Declining afternoon'],
-          ['Average spread', 'Widest', 'Tightest', 'Moderate'],
-          ['False breakout frequency', 'Highest', 'Lowest', 'Moderate'],
-          ['Retail trader activity', 'Highest (FOMO)', 'Moderate', 'Low (week fatigue)'],
-          ['Quality setups', 'Fewest', 'Most', 'Moderate'],
+          ['Average volume', { value: 'Below average', color: 'red' }, { value: 'Highest', color: 'green' }, { value: 'Declining afternoon', color: 'gold' }],
+          ['Average spread', { value: 'Widest', color: 'red' }, { value: 'Tightest', color: 'green' }, { value: 'Moderate', color: 'gold' }],
+          ['False breakout frequency', { value: 'Highest', color: 'red' }, { value: 'Lowest', color: 'green' }, { value: 'Moderate', color: 'gold' }],
+          ['Retail trader activity', { value: 'Highest (FOMO)', color: 'red' }, { value: 'Moderate', color: 'gold' }, { value: 'Low (week fatigue)', color: 'cyan' }],
+          ['Quality setups', { value: 'Fewest', color: 'red' }, { value: 'Most', color: 'green' }, { value: 'Moderate', color: 'gold' }],
         ]}
       />
       <P>

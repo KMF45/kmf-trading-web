@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -31,6 +31,12 @@ export default function WhatIsKmfTradingJournal() {
       <Intro>
         Two years ago, we were exactly where you are now. Trading forex and crypto, trying to improve, and using a combination of Excel spreadsheets, screenshots saved in random folders, and notes typed into our phones at 2 AM after a bad session. We tried every journal app on the market. Some wanted $20–30 per month and required broker access. Others had no mobile app at all. A few cost hundreds of dollars upfront and ran on desktop only. None of them tracked psychology. None of them worked offline. None of them felt like they were built by people who actually sit in front of charts every day. So we built K.M.F.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 30, decimals: 0, suffix: 's', label: <>typical time to log a trade<br />in K.M.F. — habit-friendly</> },
+        { value: 7, decimals: 0, label: <>languages supported<br />on the free tier</> },
+        { value: 4, decimals: 0, label: <>tilt-detection levels<br />running on every entry</> },
+      ]} />
 
       <H2>What K.M.F. Actually Is</H2>
       <P>
@@ -204,26 +210,26 @@ export default function WhatIsKmfTradingJournal() {
       <Table
         headers={['Feature', 'Free', 'Premium']}
         rows={[
-          ['Trade logging', '15 trades', 'Unlimited'],
-          ['Trade history & search', 'Yes', 'Yes'],
-          ['Win rate & basic P/L', 'Yes', 'Yes'],
-          ['Lot size calculator', 'Yes', 'Yes'],
-          ['Pre-trade checklist', 'Yes', 'Yes'],
-          ['Trading diary', 'Yes', 'Yes'],
-          ['Offline access', 'Yes', 'Yes'],
-          ['7 languages', 'Yes', 'Yes'],
-          ['Advanced statistics', 'No', 'Yes — profit factor, expectancy, R-multiple, drawdown, equity curve'],
-          ['Cloud sync & backup', 'Yes', 'Yes'],
-          ['Emotion tracking & tilt detection', 'No', 'Yes'],
-          ['Trader personality profile', 'No', 'Yes'],
-          ['Honesty Mirror', 'No', 'Yes'],
-          ['Weekly review & goals', 'No', 'Yes'],
-          ['Achievements & XP', 'No', 'Yes'],
-          ['Session analysis', 'No', 'Yes — Asian, London, NY'],
-          ['Screenshot upload', 'No', 'Yes'],
-          ['Export (CSV/JSON/PDF)', 'No', 'Yes'],
-          ['Smart notifications', 'No', 'Yes'],
-          ['Priority support', 'No', 'Yes'],
+          ['Trade logging', { value: '15 trades', color: 'gold' }, { value: 'Unlimited', color: 'green' }],
+          ['Trade history & search', { value: 'Yes', color: 'green' }, { value: 'Yes', color: 'green' }],
+          ['Win rate & basic P/L', { value: 'Yes', color: 'green' }, { value: 'Yes', color: 'green' }],
+          ['Lot size calculator', { value: 'Yes', color: 'green' }, { value: 'Yes', color: 'green' }],
+          ['Pre-trade checklist', { value: 'Yes', color: 'green' }, { value: 'Yes', color: 'green' }],
+          ['Trading diary', { value: 'Yes', color: 'green' }, { value: 'Yes', color: 'green' }],
+          ['Offline access', { value: 'Yes', color: 'green' }, { value: 'Yes', color: 'green' }],
+          ['7 languages', { value: 'Yes', color: 'green' }, { value: 'Yes', color: 'green' }],
+          ['Advanced statistics', { value: 'No', color: 'red' }, { value: 'Yes — profit factor, expectancy, R-multiple, drawdown, equity curve', color: 'green' }],
+          ['Cloud sync & backup', { value: 'Yes', color: 'green' }, { value: 'Yes', color: 'green' }],
+          ['Emotion tracking & tilt detection', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
+          ['Trader personality profile', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
+          ['Honesty Mirror', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
+          ['Weekly review & goals', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
+          ['Achievements & XP', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
+          ['Session analysis', { value: 'No', color: 'red' }, { value: 'Yes — Asian, London, NY', color: 'green' }],
+          ['Screenshot upload', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
+          ['Export (CSV/JSON/PDF)', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
+          ['Smart notifications', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
+          ['Priority support', { value: 'No', color: 'red' }, { value: 'Yes', color: 'green' }],
         ]}
       />
       <P>

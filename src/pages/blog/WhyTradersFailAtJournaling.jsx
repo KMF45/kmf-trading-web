@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function WhyTradersFailAtJournaling() {
       <Intro>
         Almost every trading educator, mentor, and profitable trader says the same thing: keep a trading journal. And almost every retail trader who tries it quits within three weeks. The gap between knowing journaling works and actually doing it consistently is enormous — and it is not a discipline problem. It is a design problem. The way most traders approach journaling is fundamentally set up to fail.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 60, decimals: 0, suffix: 's', label: <>maximum time per entry<br />before friction kills the habit</> },
+        { value: 3, decimals: 0, label: <>essential fields: setup,<br />emotion, plan-followed</> },
+        { value: 30, decimals: 0, suffix: '+', label: <>trades before adding<br />complexity to the template</> },
+      ]} />
 
       <H2>The 5 Psychological Barriers That Kill Journaling</H2>
 

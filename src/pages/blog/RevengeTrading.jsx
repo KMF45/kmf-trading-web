@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { RevengeTradingEquityCurve } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -31,6 +31,12 @@ export default function RevengeTrading() {
       <Intro>
         Revenge trading is the act of taking impulsive trades with the primary motivation of recovering money lost in a previous trade — not because a valid setup exists. It is one of the most destructive patterns in retail trading, and it is almost universal. Nearly every trader has done it. The ones who survive long term are the ones who learn to stop.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 2, decimals: 0, suffix: '×', label: <>loss aversion ratio<br />(Kahneman & Tversky)</> },
+        { value: 30, decimals: 0, suffix: ' min', label: <>mandatory pause<br />after a losing trade</> },
+        { value: 50, decimals: 0, suffix: '%', label: <>position size reduction<br />after consecutive losses</> },
+      ]} />
 
       <H2>The Psychology Behind It</H2>
       <P>

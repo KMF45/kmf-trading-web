@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { ExpectancyComparisonChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -30,6 +30,12 @@ export default function TradingExpectancyExplained() {
       <Intro>
         What if you could know, with mathematical certainty, whether your trading strategy will make money over the long term — before you have traded it for years? Expectancy is the formula that gives you exactly that. It is the single number that summarizes the profitability of any strategy, and every serious trader should be able to calculate it from their trade history within minutes.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 0.5, decimals: 1, suffix: 'R', label: <>per trade — threshold<br />for a strong edge</> },
+        { value: 100, decimals: 0, suffix: '+', label: <>trades needed<br />for reliable expectancy</> },
+        { value: 50, decimals: 0, suffix: '%', label: <>win rate is irrelevant<br />without R:R context</> },
+      ]} />
 
       <H2>What Is Expectancy?</H2>
       <P>
@@ -83,12 +89,12 @@ export default function TradingExpectancyExplained() {
       <Table
         headers={['Win Rate', 'Avg Win', 'Avg Loss', 'Expectancy', 'Assessment']}
         rows={[
-          ['60%', '$150', '$100', '+$50/trade', 'Good — balanced approach'],
-          ['40%', '$300', '$100', '+$80/trade', 'Excellent — high R:R, low win rate'],
-          ['70%', '$80', '$100', '-$4/trade', 'Losing — commissions make it worse'],
-          ['35%', '$250', '$100', '+$22.50/trade', 'Viable — trend following profile'],
-          ['55%', '$120', '$150', '-$1.50/trade', 'Slightly negative — improve R:R'],
-          ['50%', '$200', '$100', '+$50/trade', 'Good — standard 2:1 R:R'],
+          ['60%', '$150', '$100', { value: '+$50/trade', color: 'green' }, { value: 'Good — balanced approach', color: 'green' }],
+          ['40%', '$300', '$100', { value: '+$80/trade', color: 'green' }, { value: 'Excellent — high R:R, low win rate', color: 'green' }],
+          ['70%', '$80', '$100', { value: '-$4/trade', color: 'red' }, { value: 'Losing — commissions make it worse', color: 'red' }],
+          ['35%', '$250', '$100', { value: '+$22.50/trade', color: 'cyan' }, { value: 'Viable — trend following profile', color: 'cyan' }],
+          ['55%', '$120', '$150', { value: '-$1.50/trade', color: 'red' }, { value: 'Slightly negative — improve R:R', color: 'red' }],
+          ['50%', '$200', '$100', { value: '+$50/trade', color: 'green' }, { value: 'Good — standard 2:1 R:R', color: 'green' }],
         ]}
       />
 

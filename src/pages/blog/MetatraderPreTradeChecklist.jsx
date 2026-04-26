@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -41,6 +41,12 @@ export default function MetatraderPreTradeChecklist() {
       <P>
         This guide is different. Five items. Under 60 seconds. Specific to how MetaTrader (MT4/MT5) and cTrader actually work — with the exact buttons, tools, and calculations you need to use on each platform. No theory. No "consider your emotional state" (that is important, but it belongs in your journal, not in a 60-second checklist). Just five concrete checks that prevent the five most common trading mistakes.
       </P>
+
+      <StatsStrip items={[
+        { value: 5, decimals: 0, label: <>checklist items —<br />the sweet-spot for compliance</> },
+        { value: 60, decimals: 0, suffix: 's', label: <>maximum time before<br />pressure makes you skip it</> },
+        { value: 2, decimals: 0, suffix: 'R', label: <>minimum target — 1:2 R:R<br />or skip the trade</> },
+      ]} />
 
       <Divider />
 
@@ -146,11 +152,11 @@ export default function MetatraderPreTradeChecklist() {
       <Table
         headers={['#', 'Check', 'Time', 'If No']}
         rows={[
-          ['1', 'Higher TF context supports trade direction?', '10 sec', 'Skip or need strong counter-trend reason'],
-          ['2', 'Can I describe my entry trigger in one sentence?', '10 sec', 'No trigger = no trade'],
-          ['3', 'Stop loss at structural invalidation + buffer?', '15 sec', 'Find the right level or skip'],
-          ['4', 'Position size calculated with a tool (not mental math)?', '15 sec', 'Calculate properly first'],
-          ['5', 'Risk:reward minimum 1:2 confirmed on chart?', '10 sec', 'Skip — the math says no'],
+          ['1', 'Higher TF context supports trade direction?', '10 sec', { value: 'Skip or need strong counter-trend reason', color: 'red' }],
+          ['2', 'Can I describe my entry trigger in one sentence?', '10 sec', { value: 'No trigger = no trade', color: 'red' }],
+          ['3', 'Stop loss at structural invalidation + buffer?', '15 sec', { value: 'Find the right level or skip', color: 'gold' }],
+          ['4', 'Position size calculated with a tool (not mental math)?', '15 sec', { value: 'Calculate properly first', color: 'gold' }],
+          ['5', 'Risk:reward minimum 1:2 confirmed on chart?', '10 sec', { value: 'Skip — the math says no', color: 'red' }],
         ]}
       />
       <P>

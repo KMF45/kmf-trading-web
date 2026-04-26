@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function ExcelVsTradingJournal() {
       <Intro>
         Let's start with a confession. We get it. Excel feels like control. You built that spreadsheet yourself, cell by cell, with your own formulas and your own color-coding system. Green for wins, red for losses, that one conditional formatting rule that took you 45 minutes to figure out. It's your baby. It works. Mostly. Except for that one time the SUM formula grabbed an extra row and you thought you were profitable for three weeks when you actually weren't. But we don't talk about that.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 88, decimals: 0, suffix: '%', label: <>of spreadsheets contain<br />formula errors (Panko study)</> },
+        { value: 26, decimals: 0, suffix: 'h', label: <>per year spent maintaining<br />a self-built journal sheet</> },
+        { value: 5, decimals: 0, suffix: '%', label: <>typical win-rate distortion<br />from a single bad cell</> },
+      ]} />
 
       <H2>The Excel Trading Journal: A Love Story</H2>
       <P>
@@ -116,20 +122,20 @@ export default function ExcelVsTradingJournal() {
       <Table
         headers={['Feature', 'Excel / Google Sheets', 'Dedicated Journal App']}
         rows={[
-          ['Price', 'Free', 'Free (core) / $5.99/mo Premium'],
-          ['Setup time', '2-4 hours (building formulas)', '0 minutes — log your first trade'],
-          ['Win rate calculation', 'Manual formula', 'Automatic'],
-          ['Profit factor', 'Manual formula', 'Automatic'],
-          ['R-multiple tracking', 'Manual formula + custom column', 'Automatic per trade'],
-          ['Expectancy', 'Complex formula', 'Automatic'],
-          ['P/L by session', 'Pivot table', 'Built-in chart'],
-          ['Emotion tracking', 'Free-text column (unused after week 1)', 'Structured with correlation analysis'],
-          ['Tilt detection', 'Not possible', 'Automatic warnings'],
-          ['Mobile logging', 'Painful', 'Native app, 60 seconds'],
-          ['Discipline score', 'Not possible', 'Tracked per trade and per week'],
-          ['Data consistency', 'Depends on your discipline', 'Enforced by design'],
-          ['Backup & sync', 'Manual (or Google auto-save)', 'Cloud sync automatic'],
-          ['Error risk', 'High (88% of spreadsheets have errors)', 'None (calculated from raw data)'],
+          ['Price', { value: 'Free', color: 'green' }, 'Free (core) / $5.99/mo Premium'],
+          ['Setup time', { value: '2-4 hours (building formulas)', color: 'red' }, { value: '0 minutes — log your first trade', color: 'green' }],
+          ['Win rate calculation', { value: 'Manual formula', color: 'gold' }, { value: 'Automatic', color: 'green' }],
+          ['Profit factor', { value: 'Manual formula', color: 'gold' }, { value: 'Automatic', color: 'green' }],
+          ['R-multiple tracking', { value: 'Manual formula + custom column', color: 'gold' }, { value: 'Automatic per trade', color: 'green' }],
+          ['Expectancy', { value: 'Complex formula', color: 'red' }, { value: 'Automatic', color: 'green' }],
+          ['P/L by session', { value: 'Pivot table', color: 'gold' }, { value: 'Built-in chart', color: 'green' }],
+          ['Emotion tracking', { value: 'Free-text column (unused after week 1)', color: 'red' }, { value: 'Structured with correlation analysis', color: 'green' }],
+          ['Tilt detection', { value: 'Not possible', color: 'red' }, { value: 'Automatic warnings', color: 'green' }],
+          ['Mobile logging', { value: 'Painful', color: 'red' }, { value: 'Native app, 60 seconds', color: 'green' }],
+          ['Discipline score', { value: 'Not possible', color: 'red' }, { value: 'Tracked per trade and per week', color: 'green' }],
+          ['Data consistency', { value: 'Depends on your discipline', color: 'red' }, { value: 'Enforced by design', color: 'green' }],
+          ['Backup & sync', { value: 'Manual (or Google auto-save)', color: 'gold' }, { value: 'Cloud sync automatic', color: 'green' }],
+          ['Error risk', { value: 'High (88% of spreadsheets have errors)', color: 'red' }, { value: 'None (calculated from raw data)', color: 'green' }],
         ]}
       />
 

@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -37,6 +37,12 @@ export default function PositionSizingGuide() {
       <Intro>
         Take two traders with identical strategies, identical setups, identical entry and exit points. One grows their account consistently for years. The other blows up within months. The difference is almost always position sizing. Position sizing is the single most important variable you directly control in trading — and it is the one most consistently underestimated by beginners.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 1, decimals: 0, suffix: '%', label: <>standard risk per trade<br />used by professionals</> },
+        { value: 0.5, decimals: 1, suffix: '%', label: <>recommended for beginners<br />until 50+ trades validated</> },
+        { value: 10, decimals: 0, suffix: '$', label: <>per pip on a standard lot<br />(forex, USD-quoted pairs)</> },
+      ]} />
 
       <H2>The Fundamental Formula</H2>
       <P>
@@ -110,12 +116,12 @@ export default function PositionSizingGuide() {
       <Table
         headers={['Account Size', 'Risk %', 'Risk Amount', 'Stop Distance', 'Position Size (units)']}
         rows={[
-          ['$5,000', '1%', '$50', '$2.00 (stocks)', '25 shares'],
-          ['$10,000', '1%', '$100', '$2.00 (stocks)', '50 shares'],
-          ['$25,000', '1%', '$250', '$2.00 (stocks)', '125 shares'],
-          ['$10,000', '1%', '$100', '50 pips (forex)', '0.20 lots'],
-          ['$10,000', '0.5%', '$50', '50 pips (forex)', '0.10 lots'],
-          ['$10,000', '2%', '$200', '50 pips (forex)', '0.40 lots'],
+          ['$5,000', { value: '1%', color: 'green' }, '$50', '$2.00 (stocks)', { value: '25 shares', color: 'cyan' }],
+          ['$10,000', { value: '1%', color: 'green' }, '$100', '$2.00 (stocks)', { value: '50 shares', color: 'cyan' }],
+          ['$25,000', { value: '1%', color: 'green' }, '$250', '$2.00 (stocks)', { value: '125 shares', color: 'cyan' }],
+          ['$10,000', { value: '1%', color: 'green' }, '$100', '50 pips (forex)', { value: '0.20 lots', color: 'cyan' }],
+          ['$10,000', { value: '0.5%', color: 'green' }, '$50', '50 pips (forex)', { value: '0.10 lots', color: 'cyan' }],
+          ['$10,000', { value: '2%', color: 'gold' }, '$200', '50 pips (forex)', { value: '0.40 lots', color: 'gold' }],
         ]}
       />
 

@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { RiskRuleEquityCurve } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -31,6 +31,12 @@ export default function OnePercentRiskRule() {
         Most retail traders who blow their accounts do not lose because of a bad strategy. They lose because of bad risk management. They find a setup they love, size in too large, and one trade — or one bad week — takes out 30%, 50%, or all of their capital. The 1% risk rule is the simplest, most reliable defense against that outcome.
       </Intro>
 
+      <StatsStrip items={[
+        { value: 1, decimals: 0, suffix: '%', label: <>max risk per trade<br />(industry standard)</> },
+        { value: 100, decimals: 0, suffix: '%', label: <>gain needed to recover<br />from a 50% drawdown</> },
+        { value: 50, decimals: 0, suffix: '+', label: <>trades to validate<br />a strategy works</> },
+      ]} />
+
       <H2>What Is the 1% Risk Rule?</H2>
       <P>
         The 1% risk rule states that on any single trade, you should never risk more than 1% of your total trading account. Risk here means the maximum amount you are willing to lose if the trade goes entirely against you and hits your stop loss.
@@ -49,10 +55,10 @@ export default function OnePercentRiskRule() {
       <Table
         headers={['Consecutive Losses', '1% Risk', '2% Risk', '5% Risk', '10% Risk']}
         rows={[
-          ['5 losses', '-4.9%', '-9.6%', '-22.6%', '-41.0%'],
-          ['10 losses', '-9.6%', '-18.3%', '-40.1%', '-65.1%'],
-          ['15 losses', '-14.0%', '-26.1%', '-53.7%', '-79.4%'],
-          ['20 losses', '-18.2%', '-33.2%', '-64.2%', '-87.8%'],
+          ['5 losses', { value: '-4.9%', color: 'green' }, { value: '-9.6%', color: 'cyan' }, { value: '-22.6%', color: 'gold' }, { value: '-41.0%', color: 'red' }],
+          ['10 losses', { value: '-9.6%', color: 'green' }, { value: '-18.3%', color: 'cyan' }, { value: '-40.1%', color: 'red' }, { value: '-65.1%', color: 'red' }],
+          ['15 losses', { value: '-14.0%', color: 'cyan' }, { value: '-26.1%', color: 'gold' }, { value: '-53.7%', color: 'red' }, { value: '-79.4%', color: 'red' }],
+          ['20 losses', { value: '-18.2%', color: 'cyan' }, { value: '-33.2%', color: 'gold' }, { value: '-64.2%', color: 'red' }, { value: '-87.8%', color: 'red' }],
         ]}
       />
 

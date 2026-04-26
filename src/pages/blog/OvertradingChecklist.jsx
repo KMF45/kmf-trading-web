@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function OvertradingChecklist() {
       <Intro>
         Overtrading is not about taking a lot of trades. Some strategies require high frequency. Overtrading is about taking trades that your strategy did not generate — trades driven by boredom, frustration, fear of missing out, or the compulsion to recover losses. The dangerous part is that tilt rarely announces itself. You do not sit down and decide to overtrade. It creeps in gradually, and by the time you notice, the damage is already significant.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 8, decimals: 0, label: <>warning signs of tilt<br />you should monitor every session</> },
+        { value: 4, decimals: 0, label: <>tilt-detection levels<br />KMF tracks automatically</> },
+        { value: 30, decimals: 0, suffix: ' min', label: <>cortisol clearance after<br />closing the platform</> },
+      ]} />
 
       <H2>The 8 Warning Signs</H2>
 

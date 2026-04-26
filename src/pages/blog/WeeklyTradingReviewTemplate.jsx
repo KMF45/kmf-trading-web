@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -37,6 +37,12 @@ export default function WeeklyTradingReviewTemplate() {
       <Intro>
         The difference between traders who improve and traders who repeat the same mistakes month after month is almost always the same: one group reviews their performance systematically, and the other does not. A weekly trading review is not optional for serious development. It is the mechanism through which patterns become visible, mistakes become lessons, and lessons become habits.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 5, decimals: 0, label: <>review areas: stats, discipline,<br />process, psychology, goals</> },
+        { value: 1, decimals: 0, label: <>improvement focus per week —<br />compounds to 50 per year</> },
+        { value: 30, decimals: 0, suffix: ' min', label: <>weekly review window —<br />enough for patterns, not noise</> },
+      ]} />
 
       <H2>Why Weekly — Not Daily</H2>
       <P>

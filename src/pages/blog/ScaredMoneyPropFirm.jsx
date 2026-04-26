@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { ScaredMoneyChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -39,6 +39,12 @@ export default function ScaredMoneyPropFirm() {
         You passed the challenge. You got funded. $100,000 of someone else's capital, sitting in your MetaTrader account, waiting for you to trade it like you traded during the evaluation. Except now, every pip feels different. Your mouse hovers over the buy button for 30 seconds instead of 3. You close a winner at +12 pips instead of letting it run to the 40-pip target because "at least I did not lose." You check the balance after every trade — sometimes mid-trade. Congratulations: you are officially trading with scared money, and it is about to cost you the account.
       </Intro>
 
+      <StatsStrip items={[
+        { value: 50, decimals: 0, suffix: '%', label: <>of firm's daily limit —<br />the personal stop you should use</> },
+        { value: 3, decimals: 0, label: <>consecutive losses before<br />closing the platform</> },
+        { value: 4, decimals: 0, suffix: 'h', label: <>cooldown minimum after<br />a tilt-triggered stop</> },
+      ]} />
+
       <H2>What "Scared Money" Actually Looks Like</H2>
       <P>
         Scared money is not about being cautious. Caution is good — it means you have a plan and you are respecting your risk limits. Scared money is different. It is when fear becomes the primary decision-making engine, overriding the strategy that got you funded in the first place.
@@ -49,12 +55,12 @@ export default function ScaredMoneyPropFirm() {
       <Table
         headers={['Behavior', 'Cautious (Healthy)', 'Scared Money (Destructive)']}
         rows={[
-          ['Entry timing', 'Wait for full setup confirmation', 'Hesitate even when setup is perfect'],
-          ['Stop placement', 'Structural, pre-calculated', 'Tighter than strategy requires "just in case"'],
-          ['Take profit', 'At pre-defined target', 'Close early because "profit is profit"'],
-          ['After a loss', 'Review, then continue per plan', 'Skip next 3 valid setups out of fear'],
-          ['Balance checking', 'End of session', 'After every trade, sometimes mid-trade'],
-          ['Position size', 'Per risk model', 'Smaller than plan because "what if"'],
+          ['Entry timing', { value: 'Wait for full setup confirmation', color: 'green' }, { value: 'Hesitate even when setup is perfect', color: 'red' }],
+          ['Stop placement', { value: 'Structural, pre-calculated', color: 'green' }, { value: 'Tighter than strategy requires "just in case"', color: 'red' }],
+          ['Take profit', { value: 'At pre-defined target', color: 'green' }, { value: 'Close early because "profit is profit"', color: 'red' }],
+          ['After a loss', { value: 'Review, then continue per plan', color: 'green' }, { value: 'Skip next 3 valid setups out of fear', color: 'red' }],
+          ['Balance checking', { value: 'End of session', color: 'green' }, { value: 'After every trade, sometimes mid-trade', color: 'red' }],
+          ['Position size', { value: 'Per risk model', color: 'green' }, { value: 'Smaller than plan because "what if"', color: 'red' }],
         ]}
       />
 

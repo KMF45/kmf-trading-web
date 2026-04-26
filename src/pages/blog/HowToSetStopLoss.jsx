@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -37,6 +37,12 @@ export default function HowToSetStopLoss() {
       <Intro>
         A poorly placed stop loss is often worse than no stop loss at all. Not because the concept of a stop loss is wrong, but because stops placed in the wrong location consistently stop you out of trades that would have been profitable — while providing false security that you have managed your risk. Stop loss placement is a skill, and most retail traders have never been taught it properly.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 1.5, decimals: 1, suffix: '×', label: <>ATR multiplier — standard<br />for volatility-based stops</> },
+        { value: 14, decimals: 0, label: <>periods — default ATR<br />window for stop sizing</> },
+        { value: 1, decimals: 0, suffix: 'R', label: <>profit before considering<br />a move to breakeven</> },
+      ]} />
 
       <H2>The Two Fundamental Mistakes</H2>
       <H3>Too tight</H3>

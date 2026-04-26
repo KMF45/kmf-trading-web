@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -30,6 +30,12 @@ export default function PropFirmDailyDrawdown() {
         You studied for weeks. You practiced on demo. You passed Phase 1 with a beautiful equity curve. Phase 2 — also passed. The email arrives: "Congratulations, your funded account is ready." You feel like you've made it. You're a professional now. Six trading days later, you get another email: "Your account has been terminated due to a daily drawdown violation." You stare at the screen. You're not sure if you want to cry, throw the laptop, or both. The worst part? It wasn't a bad trade that killed you. It was three medium trades, back to back, on a Tuesday afternoon when you were frustrated about the first one. Welcome to the daily drawdown club. Almost everyone joins at least once.
       </Intro>
 
+      <StatsStrip items={[
+        { value: 5, decimals: 0, suffix: '%', label: <>typical daily drawdown<br />limit at most prop firms</> },
+        { value: 3, decimals: 0, suffix: '%', label: <>personal daily stop<br />(60% of firm's limit)</> },
+        { value: 3, decimals: 0, label: <>maximum trades per day<br />for funded account safety</> },
+      ]} />
+
       <H2>What Is the Daily Drawdown Rule (And Why Does It Exist)?</H2>
       <P>
         If you're new to prop firms — also called proprietary trading firms — here's the short version: these companies give you their money to trade with. In return, they take a percentage of your profits. The catch? You have to follow their rules, or they take the account away. Simple deal.
@@ -40,11 +46,11 @@ export default function PropFirmDailyDrawdown() {
       <Table
         headers={['Prop Firm', 'Daily Drawdown Limit', 'Calculation Method']}
         rows={[
-          ['FTMO', '5%', 'Based on start-of-day balance (or equity, whichever is higher)'],
-          ['MyFundedFX', '5%', 'Based on start-of-day balance'],
-          ['The Funded Trader', '5%', 'Based on initial account balance'],
-          ['True Forex Funds', '5%', 'Based on start-of-day equity'],
-          ['E8 Funding', '5%', 'Based on start-of-day balance'],
+          ['FTMO', { value: '5%', color: 'gold' }, 'Based on start-of-day balance (or equity, whichever is higher)'],
+          ['MyFundedFX', { value: '5%', color: 'gold' }, 'Based on start-of-day balance'],
+          ['The Funded Trader', { value: '5%', color: 'gold' }, 'Based on initial account balance'],
+          ['True Forex Funds', { value: '5%', color: 'gold' }, 'Based on start-of-day equity'],
+          ['E8 Funding', { value: '5%', color: 'gold' }, 'Based on start-of-day balance'],
         ]}
       />
       <P>

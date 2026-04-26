@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function WhyTradersBreakRules() {
       <Intro>
         Almost every serious trader has a written trading plan. They have spent time defining their setups, their risk rules, their entry and exit criteria. And almost every serious trader regularly violates that plan. Not because they forgot the rules. Not because they think the rules are wrong. But because something in the moment overrides the rules — and understanding exactly what that something is, is the first step to stopping it.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 5, decimals: 0, label: <>most-broken rules: entry,<br />stop, size, no-trade days, exit</> },
+        { value: 2, decimals: 0, label: <>cognitive systems<br />(Kahneman: fast vs slow)</> },
+        { value: 1, decimals: 0, label: <>checklist between<br />impulse and order entry</> },
+      ]} />
 
       <H2>The Brain Behind the Breakdown: System 1 vs System 2</H2>
       <P>

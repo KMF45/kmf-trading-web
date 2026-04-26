@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function TenQuestionsAfterEveryTrade() {
       <Intro>
         The average retail trader closes a trade, checks the profit or loss number, and moves on. Maybe they feel good. Maybe they feel frustrated. And then they repeat the same patterns next week, next month, and next year. The traders who improve rapidly do something different: they interrogate every trade with specific, structured questions that separate what happened from why it happened.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 10, decimals: 0, label: <>structured questions<br />after every closed trade</> },
+        { value: 2, decimals: 0, suffix: ' min', label: <>total review time<br />for the full set of 10</> },
+        { value: 7, decimals: 0, label: <>emotional rating threshold<br />(1–10) — below = degraded process</> },
+      ]} />
 
       <H2>Why Post-Trade Review Matters</H2>
       <P>

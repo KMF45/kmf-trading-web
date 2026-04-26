@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { BreakevenExpectancyChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -39,6 +39,12 @@ export default function BreakevenStopTooEarly() {
         You know the feeling. Price moves 15 pips in your direction. Your heart rate goes up — not because you are losing, but because you are winning and you are terrified of giving it back. So you do the thing every trading book tells you is "smart risk management": you move your stop loss to breakeven. Price wiggles. Touches your entry. You are out at zero. Then you watch in agony as it runs 80 pips to your original take profit without you on board. You did not lose money. But you lost something worse: a winner you earned and then threw away because your hands were shaking.
       </Intro>
 
+      <StatsStrip items={[
+        { value: 80, decimals: 0, suffix: '%', label: <>expectancy lost moving<br />to BE at +0.5R on a 3:1 strategy</> },
+        { value: 1, decimals: 0, suffix: 'R', label: <>minimum profit before<br />any stop adjustment</> },
+        { value: 30, decimals: 0, suffix: '+', label: <>BE-tagged trades needed<br />to see the real cost</> },
+      ]} />
+
       <H2>The Breakeven Illusion</H2>
       <P>
         Moving your stop to breakeven feels like the most responsible thing you can do. You "locked in" a risk-free trade. You "protected your capital." Every forum post and YouTube guru praises it: "Never let a winner turn into a loser."
@@ -64,9 +70,9 @@ export default function BreakevenStopTooEarly() {
       <Table
         headers={['Scenario', 'Outcome', 'Frequency', 'Contribution']}
         rows={[
-          ['Full winner (3R)', 'Price reaches TP without retesting entry', '24% of trades', '+0.72R'],
-          ['Breakeven stop', 'Price retests entry, stops you out, then runs to TP', '16% of trades', '+0.00R'],
-          ['Loser (-1R)', 'Trade never moves enough to trigger BE move', '60% of trades', '-0.60R'],
+          ['Full winner (3R)', 'Price reaches TP without retesting entry', '24% of trades', { value: '+0.72R', color: 'green' }],
+          ['Breakeven stop', 'Price retests entry, stops you out, then runs to TP', '16% of trades', { value: '+0.00R', color: 'gold' }],
+          ['Loser (-1R)', 'Trade never moves enough to trigger BE move', '60% of trades', { value: '-0.60R', color: 'red' }],
         ]}
       />
       <P>

@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function GhostTrades() {
       <Intro>
         Tuesday, 9:47 AM. You're watching GBP/USD on the 1-hour chart. Clean pullback into the 50 EMA. The 15-minute shows a bullish engulfing candle with rising volume. Your checklist says take it. Your gut says wait. You watch one more candle. Then another. Fifteen minutes later, price has moved 35 pips without you. You stare at the screen and whisper what every trader has whispered at least once: "I knew it." That trade just became a ghost — and it's going to haunt you for the rest of the week.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 10, decimals: 0, suffix: 'R', label: <>typical "execution tax" lost<br />when you skip half your setups</> },
+        { value: 31, decimals: 0, label: <>setups in a month — average<br />retail trader logs only 18</> },
+        { value: 1, decimals: 0, label: <>checklist between hesitation<br />and unnecessary ghost trades</> },
+      ]} />
 
       <H2>What Is a Ghost Trade?</H2>
       <P>

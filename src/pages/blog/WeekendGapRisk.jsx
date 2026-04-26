@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -30,6 +30,12 @@ export default function WeekendGapRisk() {
         You set your stop loss at -1% on Friday afternoon. You close your laptop and enjoy the weekend. On Monday morning, you open your platform and discover your position opened at -3.5%, blowing through your stop as if it did not exist. Your stop loss order was there — the market simply jumped over it. This is weekend gap risk, and it is one of the least understood dangers in retail trading.
       </Intro>
 
+      <StatsStrip items={[
+        { value: 48, decimals: 0, suffix: 'h', label: <>weekend window where<br />news moves while markets close</> },
+        { value: 50, decimals: 0, suffix: '%', label: <>position-size reduction<br />recommended for weekend holds</> },
+        { value: 52, decimals: 0, label: <>weekend gap exposures<br />accumulated per year</> },
+      ]} />
+
       <H2>What Causes Weekend Gaps?</H2>
       <P>
         Most financial markets close for approximately 48 hours every weekend. But the world does not pause. Geopolitical events, central bank announcements, natural disasters, corporate earnings surprises, and political elections all continue while the forex, stock, and commodity markets sit idle. When these markets reopen on Sunday evening (forex) or Monday morning (equities), all of the accumulated information resolves instantly into a new price — often significantly different from Friday's close.
@@ -57,13 +63,13 @@ export default function WeekendGapRisk() {
       <Table
         headers={['Instrument', 'Average Gap Size', 'Large Gap (Top 5%)', 'Gap Frequency']}
         rows={[
-          ['EUR/USD', '10–20 pips', '50–100+ pips', 'Most weekends'],
-          ['GBP/JPY', '25–50 pips', '100–200+ pips', 'Most weekends'],
-          ['USD/JPY', '15–30 pips', '60–150+ pips', 'Most weekends'],
-          ['Gold (XAU/USD)', '$3–8', '$15–40+', 'Most weekends'],
-          ['S&P 500 (ES)', '0.3–0.8%', '1.5–3%+', 'Most weekends'],
-          ['Bitcoin (BTC)', 'No gap (24/7)', 'No gap (24/7)', 'N/A — continuous'],
-          ['Individual stocks', '0.5–2%', '5–15%+ (earnings)', 'Varies by catalyst'],
+          ['EUR/USD', { value: '10–20 pips', color: 'cyan' }, { value: '50–100+ pips', color: 'gold' }, 'Most weekends'],
+          ['GBP/JPY', { value: '25–50 pips', color: 'gold' }, { value: '100–200+ pips', color: 'red' }, 'Most weekends'],
+          ['USD/JPY', { value: '15–30 pips', color: 'cyan' }, { value: '60–150+ pips', color: 'gold' }, 'Most weekends'],
+          ['Gold (XAU/USD)', { value: '$3–8', color: 'gold' }, { value: '$15–40+', color: 'red' }, 'Most weekends'],
+          ['S&P 500 (ES)', { value: '0.3–0.8%', color: 'cyan' }, { value: '1.5–3%+', color: 'gold' }, 'Most weekends'],
+          ['Bitcoin (BTC)', { value: 'No gap (24/7)', color: 'green' }, { value: 'No gap (24/7)', color: 'green' }, 'N/A — continuous'],
+          ['Individual stocks', { value: '0.5–2%', color: 'gold' }, { value: '5–15%+ (earnings)', color: 'red' }, 'Varies by catalyst'],
         ]}
       />
 

@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function PropFirmJournal() {
       <Intro>
         You spent two weeks passing Phase 1. Another two weeks grinding through Phase 2. You finally get the funded account — $50,000, real money, real rules. On day four, you take a slightly oversized position on GBP/JPY. It goes against you 80 pips. You're down 3.2% on the day. The daily drawdown limit is 4%. One more bad candle and it's over. Everything you worked for — gone in four days. This isn't a hypothetical. This is the most common prop firm story in existence.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 4, decimals: 0, suffix: '%', label: <>typical daily drawdown<br />limit on funded accounts</> },
+        { value: 60, decimals: 0, suffix: '%', label: <>of firm's daily limit —<br />your personal hard stop</> },
+        { value: 1.5, decimals: 1, suffix: '%', label: <>maximum risk per trade<br />on a prop firm account</> },
+      ]} />
 
       <H2>Why Prop Firms Are Different</H2>
       <P>

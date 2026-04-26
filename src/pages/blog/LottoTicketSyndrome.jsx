@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { LottoTicketChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -39,6 +39,12 @@ export default function LottoTicketSyndrome() {
         Monday morning. Two clean trades, both hit take profit. +$475. You feel good — not reckless, just good. Tuesday, another winner. +$410. You are up almost a thousand dollars and the week is only half done. Now here is where it gets dangerous. Wednesday morning, you see a setup that is... okay. Not great. But you are on a streak. You know what your brain whispers? "You are playing with house money now. You can afford to take a bigger shot." So instead of your normal 1% risk, you go 2.5%. The trade goes against you. -$625 in a single candle. Thursday you try to make it back — 3.5% risk this time. Another loss. -$1,050. In 48 hours, you went from "best week ever" to "worse than where I started." Welcome to the Lotto Ticket Syndrome.
       </Intro>
 
+      <StatsStrip items={[
+        { value: 6.25, decimals: 2, suffix: '%', label: <>probability of 4 wins<br />in a row at 50% win rate</> },
+        { value: 3, decimals: 0, suffix: '%', label: <>daily gain that should<br />trigger a session stop</> },
+        { value: 24, decimals: 0, suffix: 'h', label: <>dopamine normalization<br />after a big win</> },
+      ]} />
+
       <H2>The Dopamine Trap</H2>
       <P>
         When you win a trade, your brain releases dopamine — the same neurotransmitter triggered by gambling wins, social media likes, and yes, winning lottery tickets. Dopamine does not make you feel "happy." It makes you feel <strong>certain</strong>. It creates a subjective experience of competence and control that has nothing to do with your actual skill level.
@@ -63,10 +69,10 @@ export default function LottoTicketSyndrome() {
       <Table
         headers={['Stage', 'What Happens', 'What You Tell Yourself']}
         rows={[
-          ['1. Validation', 'First 2-3 wins confirm your analysis', '"My strategy is working perfectly right now"'],
-          ['2. Elevation', 'Risk increases "just a little"', '"I will go 1.5% instead of 1% — I have a buffer"'],
-          ['3. Invincibility', 'Rules loosen, setups get weaker', '"I can feel the market today. I am in the zone."'],
-          ['4. Crater', 'One oversized loss, then panic trades', '"I just need one trade to get back to where I was"'],
+          ['1. Validation', { value: 'First 2-3 wins confirm your analysis', color: 'green' }, '"My strategy is working perfectly right now"'],
+          ['2. Elevation', { value: 'Risk increases "just a little"', color: 'gold' }, '"I will go 1.5% instead of 1% — I have a buffer"'],
+          ['3. Invincibility', { value: 'Rules loosen, setups get weaker', color: 'red' }, '"I can feel the market today. I am in the zone."'],
+          ['4. Crater', { value: 'One oversized loss, then panic trades', color: 'red' }, '"I just need one trade to get back to where I was"'],
         ]}
       />
       <P>

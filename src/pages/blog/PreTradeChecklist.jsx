@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -42,6 +42,12 @@ export default function PreTradeChecklist() {
       <Intro>
         Before every commercial flight, pilots work through a standardized pre-flight checklist — not because experienced pilots have forgotten how planes work, but because checklists systematically prevent the class of error caused by overconfidence, distraction, or time pressure. Before complex surgeries, operating teams run verbal checklists that have demonstrably reduced preventable deaths. Trading is a domain of consequential decisions made under uncertainty and emotional pressure. The case for checklists is the same.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 10, decimals: 0, label: <>checklist items covering<br />setup, risk, and psychology</> },
+        { value: 1.5, decimals: 1, suffix: ':1', label: <>minimum risk-to-reward<br />before a trade qualifies</> },
+        { value: 7, decimals: 0, label: <>minimum emotional rating<br />(1–10) before entry</> },
+      ]} />
 
       <H2>Why Checklists Work in Trading</H2>
       <P>
@@ -117,9 +123,9 @@ export default function PreTradeChecklist() {
       <Table
         headers={['Category', 'Focus', 'Example Questions']}
         rows={[
-          ['Technical', 'Is the setup valid?', 'Setup criteria, higher timeframe alignment, R:R ratio, news events'],
-          ['Risk', 'Is the risk managed?', 'Position size calculation, stop loss logic, account risk %'],
-          ['Psychological', 'Am I in the right state?', 'Emotional rating, boredom/FOMO check, loss acceptance'],
+          [{ value: 'Technical', color: 'cyan' }, 'Is the setup valid?', 'Setup criteria, higher timeframe alignment, R:R ratio, news events'],
+          [{ value: 'Risk', color: 'green' }, 'Is the risk managed?', 'Position size calculation, stop loss logic, account risk %'],
+          [{ value: 'Psychological', color: 'gold' }, 'Am I in the right state?', 'Emotional rating, boredom/FOMO check, loss acceptance'],
         ]}
       />
 

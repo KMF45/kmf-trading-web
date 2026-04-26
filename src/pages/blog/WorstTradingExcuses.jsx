@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function WorstTradingExcuses() {
       <Intro>
         Every trader has a collection of excuses. They sound reasonable in the moment, they protect the ego after a loss, and they feel like legitimate analysis. But they are not analysis. They are defense mechanisms that prevent you from seeing the actual problem — which is almost always you, not the market. Here are the seven worst offenders, why they are complete nonsense, and what your journal data actually reveals when you stop hiding behind them.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 7, decimals: 0, label: <>recurring excuses that hide<br />the real performance gap</> },
+        { value: 30, decimals: 0, suffix: '+', label: <>trades needed before<br />your patterns become undeniable</> },
+        { value: 1, decimals: 0, label: <>checklist between you<br />and every excuse you'd invent</> },
+      ]} />
 
       <H2>Excuse #1: "The Market Was Manipulated"</H2>
       <P>

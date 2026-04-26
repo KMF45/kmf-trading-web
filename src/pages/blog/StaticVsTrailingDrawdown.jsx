@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { DrawdownComparisonChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -43,6 +43,12 @@ export default function StaticVsTrailingDrawdown() {
       <P>
         Trailing drawdown happened. And if you do not understand the difference between trailing and static drawdown — really understand it, not just "I read the rules" understand it — you are going to join him. It is the single most misunderstood rule in prop firm trading, and it has killed more funded accounts than bad strategies, bad luck, and bad psychology combined.
       </P>
+
+      <StatsStrip items={[
+        { value: 5, decimals: 0, suffix: '%', label: <>typical max drawdown<br />on prop firm accounts</> },
+        { value: 60, decimals: 0, suffix: '%', label: <>of buffer to use as<br />a personal safety margin</> },
+        { value: 100, decimals: 0, suffix: 'K', prefix: '$', label: <>standard funded account<br />size in this analysis</> },
+      ]} />
 
       <Divider />
 
@@ -96,11 +102,11 @@ export default function StaticVsTrailingDrawdown() {
       <Table
         headers={['Balance', 'Static Limit (10%)', 'Static Buffer', 'Trailing Limit (5%)', 'Trailing Buffer']}
         rows={[
-          ['$100,000', '$90,000', '$10,000', '$95,000', '$5,000'],
-          ['$103,000', '$90,000', '$13,000', '$97,850', '$5,150'],
-          ['$106,000', '$90,000', '$16,000', '$100,700', '$5,300'],
-          ['$108,000', '$90,000', '$18,000', '$102,600', '$5,400'],
-          ['$104,000 (pullback)', '$90,000', '$14,000', '$102,600', '$1,400'],
+          ['$100,000', '$90,000', { value: '$10,000', color: 'green' }, '$95,000', { value: '$5,000', color: 'gold' }],
+          ['$103,000', '$90,000', { value: '$13,000', color: 'green' }, '$97,850', { value: '$5,150', color: 'gold' }],
+          ['$106,000', '$90,000', { value: '$16,000', color: 'green' }, '$100,700', { value: '$5,300', color: 'gold' }],
+          ['$108,000', '$90,000', { value: '$18,000', color: 'green' }, '$102,600', { value: '$5,400', color: 'gold' }],
+          ['$104,000 (pullback)', '$90,000', { value: '$14,000', color: 'green' }, '$102,600', { value: '$1,400', color: 'red' }],
         ]}
       />
       <P>
@@ -132,11 +138,11 @@ export default function StaticVsTrailingDrawdown() {
       <Table
         headers={['Time', 'Action', 'Balance', 'Equity', 'Trailing Limit (Equity)', 'Buffer']}
         rows={[
-          ['9:30 AM', 'Session start', '$100,000', '$100,000', '$95,000', '$5,000'],
-          ['10:15 AM', 'Buy EUR/USD, floating +$2,800', '$100,000', '$102,800', '$97,660', '$5,140'],
-          ['11:00 AM', 'Trade pulls back, floating +$400', '$100,000', '$100,400', '$97,660', '$2,740'],
-          ['11:30 AM', 'Close at breakeven', '$100,000', '$100,000', '$97,660', '$2,340'],
-          ['12:00 PM', 'Next trade, loss -$1,200', '$98,800', '$98,800', '$97,660', '$1,140'],
+          ['9:30 AM', 'Session start', '$100,000', '$100,000', '$95,000', { value: '$5,000', color: 'gold' }],
+          ['10:15 AM', 'Buy EUR/USD, floating +$2,800', '$100,000', '$102,800', '$97,660', { value: '$5,140', color: 'gold' }],
+          ['11:00 AM', 'Trade pulls back, floating +$400', '$100,000', '$100,400', '$97,660', { value: '$2,740', color: 'red' }],
+          ['11:30 AM', 'Close at breakeven', '$100,000', '$100,000', '$97,660', { value: '$2,340', color: 'red' }],
+          ['12:00 PM', 'Next trade, loss -$1,200', '$98,800', '$98,800', '$97,660', { value: '$1,140', color: 'red' }],
         ]}
       />
       <P>
@@ -195,12 +201,12 @@ export default function StaticVsTrailingDrawdown() {
       <Table
         headers={['', 'Static Drawdown', 'Trailing Drawdown']}
         rows={[
-          ['Limit based on', 'Initial balance', 'Highest balance reached'],
-          ['Moves up when you profit?', 'No — stays fixed', 'Yes — ratchets up permanently'],
-          ['Buffer after a winning streak', 'Increases', 'Barely increases (or decreases relatively)'],
-          ['Difficulty level', 'Predictable', 'Progressively harder'],
-          ['Best strategy', 'Normal trading, let it compound', 'Small, consistent profits, lock in gains early'],
-          ['Biggest killer', 'Revenge trading after losses', 'Normal pullback after a winning streak'],
+          ['Limit based on', { value: 'Initial balance', color: 'green' }, { value: 'Highest balance reached', color: 'gold' }],
+          ['Moves up when you profit?', { value: 'No — stays fixed', color: 'green' }, { value: 'Yes — ratchets up permanently', color: 'red' }],
+          ['Buffer after a winning streak', { value: 'Increases', color: 'green' }, { value: 'Barely increases (or decreases relatively)', color: 'red' }],
+          ['Difficulty level', { value: 'Predictable', color: 'green' }, { value: 'Progressively harder', color: 'red' }],
+          ['Best strategy', { value: 'Normal trading, let it compound', color: 'cyan' }, { value: 'Small, consistent profits, lock in gains early', color: 'cyan' }],
+          ['Biggest killer', { value: 'Revenge trading after losses', color: 'red' }, { value: 'Normal pullback after a winning streak', color: 'red' }],
         ]}
       />
 

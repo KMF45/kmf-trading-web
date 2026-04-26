@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { RMultipleDistribution } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -30,6 +30,12 @@ export default function RMultipleExplained() {
       <Intro>
         Most traders evaluate their trades by looking at the dollar profit or loss. But dollar P/L is one of the least informative metrics available to you. A $500 win might be a terrible trade. A $50 loss might be an excellent trade. R-multiple is the metric that reveals the truth — it measures not what you made or lost, but how well you executed relative to the risk you accepted.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 0.5, decimals: 1, suffix: 'R', label: <>average per-trade target<br />for a viable edge</> },
+        { value: 2, decimals: 0, suffix: 'R', label: <>typical planned target<br />on a 1:2 R:R setup</> },
+        { value: 30, decimals: 0, suffix: '+', label: <>trades minimum<br />before judging a strategy</> },
+      ]} />
 
       <H2>What Is R?</H2>
       <P>
@@ -86,12 +92,12 @@ export default function RMultipleExplained() {
       <Table
         headers={['Win Rate', 'Avg R-Win', 'Avg R-Loss', 'Expectancy (R)']}
         rows={[
-          ['50%', '+2.0R', '-1.0R', '+0.50R per trade'],
-          ['40%', '+3.0R', '-1.0R', '+0.60R per trade'],
-          ['60%', '+1.5R', '-1.0R', '+0.50R per trade'],
-          ['35%', '+2.0R', '-1.0R', '+0.05R per trade (barely viable)'],
-          ['70%', '+0.8R', '-1.0R', '-0.04R per trade (losing)'],
-          ['45%', '+1.8R', '-1.0R', '+0.26R per trade'],
+          ['50%', '+2.0R', '-1.0R', { value: '+0.50R per trade', color: 'green' }],
+          ['40%', '+3.0R', '-1.0R', { value: '+0.60R per trade', color: 'green' }],
+          ['60%', '+1.5R', '-1.0R', { value: '+0.50R per trade', color: 'green' }],
+          ['35%', '+2.0R', '-1.0R', { value: '+0.05R per trade (barely viable)', color: 'gold' }],
+          ['70%', '+0.8R', '-1.0R', { value: '-0.04R per trade (losing)', color: 'red' }],
+          ['45%', '+1.8R', '-1.0R', { value: '+0.26R per trade', color: 'cyan' }],
         ]}
       />
 

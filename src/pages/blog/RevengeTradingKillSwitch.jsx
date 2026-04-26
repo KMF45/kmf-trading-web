@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { ConsecutiveLossImpact } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -42,6 +42,12 @@ export default function RevengeTradingKillSwitch() {
       <P>
         This article is different from our <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">overview of revenge trading psychology</Link> and our <Link to="/blog/tilt-recovery-protocol" className="text-kmf-accent hover:underline">tilt recovery protocol</Link>. Those explain the why. This one is the how — a concrete, pre-programmed set of rules that you build when you are calm and rational, and then follow mechanically when you are not. Think of it as an emergency procedure. Pilots do not figure out what to do during an engine fire in real time. They follow a checklist that was written by people who were not currently panicking.
       </P>
+
+      <StatsStrip items={[
+        { value: 4, decimals: 0, suffix: 'h', label: <>cortisol clearance time<br />after a stressful loss</> },
+        { value: 2, decimals: 0, label: <>consecutive losses before<br />the kill switch triggers</> },
+        { value: 60, decimals: 0, suffix: '%', label: <>of baseline decision quality<br />after the second loss</> },
+      ]} />
 
       <Divider />
 

@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function GoodLossVsBadWin() {
       <Intro>
         Wednesday. You take a short on USD/CAD. Perfect structure break on the 1-hour, confirmation on the 15-minute, stop loss placed above the last swing high. Risk-to-reward is 2.5:1. Price moves 15 pips in your direction, then reverses. It takes out your stop. -$320. You feel sick. But this was a textbook trade. Now look at Thursday. You're scrolling through charts, bored, no real setup. You open a long on AUD/USD because "it looks oversold." No stop loss set. Price bounces 40 pips. You take profit. +$480. You feel great. But this was gambling. The loss made you a better trader. The win made you a more dangerous one.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 4, decimals: 0, label: <>quadrants in the process<br />× outcome evaluation matrix</> },
+        { value: 5, decimals: 0, label: <>execution rating per trade<br />(process, not P/L)</> },
+        { value: 4.2, decimals: 1, label: <>discipline score that beats<br />a 2.1 score regardless of P/L</> },
+      ]} />
 
       <H2>The Trap of P/L Thinking</H2>
       <P>

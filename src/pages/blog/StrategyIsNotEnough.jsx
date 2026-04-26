@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function StrategyIsNotEnough() {
       <Intro>
         Somewhere right now, a trader is paying $997 for a course that promises "the exact strategy I used to turn $500 into $50,000." He's going to study it for a week. He's going to backtest it for three days. He's going to go live on Monday with absolute confidence. And by Friday, he'll be down 12% and convinced the guru lied to him. The guru didn't lie. The strategy probably works. The problem is that the strategy was never the thing that mattered most.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 20, decimals: 0, suffix: '%', label: <>strategy's contribution<br />to long-term profitability</> },
+        { value: 80, decimals: 0, suffix: '%', label: <>execution, psychology, habits,<br />and risk discipline combined</> },
+        { value: 65, decimals: 0, suffix: '%', label: <>typical plan-adherence rate<br />on tracked retail traders</> },
+      ]} />
 
       <H2>The Experiment That Proves Strategy Isn't Enough</H2>
       <P>
@@ -169,13 +175,13 @@ export default function StrategyIsNotEnough() {
       <Table
         headers={['', 'Strategy Shopper', 'Process Builder']}
         rows={[
-          ['Core belief', '"I haven\'t found the right system yet"', '"My system is fine — my execution needs work"'],
-          ['After a losing week', 'Searches for a new strategy', 'Reviews journal for execution errors'],
-          ['Spends money on', 'Courses, signals, indicators', 'Journal tools, coaching, psychology books'],
-          ['Time allocation', '80% studying strategies, 20% trading', '20% strategy, 80% execution and review'],
-          ['After 1 year', '10+ strategies tried, same results', '1 strategy mastered, improving results'],
-          ['Main enemy', '"The market is manipulated"', '"I deviated from my plan 4 times this week"'],
-          ['Journal usage', 'Doesn\'t have one / abandoned it', 'Uses it daily, reviews weekly'],
+          ['Core belief', { value: '"I haven\'t found the right system yet"', color: 'red' }, { value: '"My system is fine — my execution needs work"', color: 'green' }],
+          ['After a losing week', { value: 'Searches for a new strategy', color: 'red' }, { value: 'Reviews journal for execution errors', color: 'green' }],
+          ['Spends money on', { value: 'Courses, signals, indicators', color: 'red' }, { value: 'Journal tools, coaching, psychology books', color: 'green' }],
+          ['Time allocation', { value: '80% studying strategies, 20% trading', color: 'red' }, { value: '20% strategy, 80% execution and review', color: 'green' }],
+          ['After 1 year', { value: '10+ strategies tried, same results', color: 'red' }, { value: '1 strategy mastered, improving results', color: 'green' }],
+          ['Main enemy', { value: '"The market is manipulated"', color: 'red' }, { value: '"I deviated from my plan 4 times this week"', color: 'green' }],
+          ['Journal usage', { value: 'Doesn\'t have one / abandoned it', color: 'red' }, { value: 'Uses it daily, reviews weekly', color: 'green' }],
         ]}
       />
       <P>

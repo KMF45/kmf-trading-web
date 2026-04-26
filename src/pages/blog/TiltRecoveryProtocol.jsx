@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -37,6 +37,12 @@ export default function TiltRecoveryProtocol() {
       <Intro>
         The 60 minutes after a significant trading loss are the most dangerous period in a trader's day. Cortisol and adrenaline are elevated, rational processing is impaired, and the emotional brain is screaming for immediate action — usually in the form of a revenge trade. What separates professionals from amateurs is not that professionals avoid big losses. It is that they have a rehearsed protocol for what happens next. This is that protocol.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 60, decimals: 0, suffix: 's', label: <>to close the platform —<br />the highest-risk window</> },
+        { value: 50, decimals: 0, suffix: '%', label: <>position size reduction<br />if you re-enter the same day</> },
+        { value: 7, decimals: 0, label: <>minimum emotional rating<br />(1–10) before re-entering</> },
+      ]} />
 
       <H2>Minute 0–5: Close Everything and Reset Physically</H2>
       <P>
@@ -78,10 +84,10 @@ export default function TiltRecoveryProtocol() {
       <Table
         headers={['Aspect', 'Good Loss', 'Bad Loss']}
         rows={[
-          ['Setup', 'Matched documented criteria', 'Outside strategy or forced'],
-          ['Position size', 'Within risk rules', 'Oversized or emotional sizing'],
-          ['Stop loss', 'At logical level, untouched', 'Moved, widened, or absent'],
-          ['Lesson', 'None needed — variance', 'Specific rule to add or enforce'],
+          ['Setup', { value: 'Matched documented criteria', color: 'green' }, { value: 'Outside strategy or forced', color: 'red' }],
+          ['Position size', { value: 'Within risk rules', color: 'green' }, { value: 'Oversized or emotional sizing', color: 'red' }],
+          ['Stop loss', { value: 'At logical level, untouched', color: 'green' }, { value: 'Moved, widened, or absent', color: 'red' }],
+          ['Lesson', { value: 'None needed — variance', color: 'cyan' }, { value: 'Specific rule to add or enforce', color: 'gold' }],
         ]}
       />
 

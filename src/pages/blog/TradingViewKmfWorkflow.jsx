@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function TradingViewKmfWorkflow() {
       <Intro>
         Here's a scene that plays out in thousands of trading rooms every day: you spot a beautiful setup on TradingView. Clean structure, perfect confluence, textbook entry. You switch to your broker, place the trade, and then... that's it. No record. No note. No screenshot. Three weeks later, you can't remember why you entered, what your plan was, or what happened. You just know you lost $340 and you're pretty sure the market is rigged. Sound familiar? Let's fix that.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 3, decimals: 0, label: <>tools, one workflow:<br />analyze, execute, review</> },
+        { value: 60, decimals: 0, suffix: 's', label: <>journal entry window<br />while context stays fresh</> },
+        { value: 20, decimals: 0, suffix: ' min', label: <>weekly review that turns<br />trades into compounding insight</> },
+      ]} />
 
       <H2>Why Most Traders Have a Workflow Problem, Not a Strategy Problem</H2>
       <P>

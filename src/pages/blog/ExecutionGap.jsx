@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +29,12 @@ export default function ExecutionGap() {
       <Intro>
         You sit down on a Sunday, backtest your strategy across 200 trades, and the numbers are beautiful. 68% win rate. 1.9 profit factor. Positive expectancy. You feel confident — this is it, this is the edge. Monday morning arrives. EUR/USD prints your exact setup. Textbook entry. And your finger hovers over the Buy button... but doesn't click. The candle moves. The setup is gone. You watch it hit your take profit target without you on board. Sound familiar?
       </Intro>
+
+      <StatsStrip items={[
+        { value: 60, decimals: 0, suffix: '%', label: <>strategy at 100% execution beats<br />a 75% strategy at 50% execution</> },
+        { value: 5, decimals: 0, suffix: 's', label: <>decision window before<br />hesitation invents excuses</> },
+        { value: 50, decimals: 0, suffix: '%', label: <>typical position-size cut<br />while building execution trust</> },
+      ]} />
 
       <H2>The Gap Nobody Talks About</H2>
       <P>

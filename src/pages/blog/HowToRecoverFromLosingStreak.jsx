@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { Link } from 'react-router-dom';
 
@@ -30,6 +30,12 @@ export default function HowToRecoverFromLosingStreak() {
         Losing streaks are not a sign that you have failed. They are a mathematical certainty — an inevitable feature of any strategy that operates under uncertainty. Even the most profitable systems will produce extended runs of losses. The traders who survive and thrive long-term are not the ones who never lose streaks. They are the ones who have a clear, rehearsed response when a losing streak arrives.
       </Intro>
 
+      <StatsStrip items={[
+        { value: 32, decimals: 0, suffix: '%', label: <>chance of an 8-loss streak<br />over 200 trades at 60% win rate</> },
+        { value: 50, decimals: 0, suffix: '%', label: <>position size reduction<br />after 3–4 consecutive losses</> },
+        { value: 80, decimals: 0, suffix: '%', label: <>rule-following threshold<br />that signals normal variance</> },
+      ]} />
+
       <H2>The Math: Why Losing Streaks Are Inevitable</H2>
       <P>
         Consider a strategy with a 60% win rate — that is, 6 out of every 10 trades are winners. This sounds comfortable. But the probability that this strategy produces 8 or more consecutive losses at some point over 200 trades is surprisingly high: approximately 32%. Over 500 trades, it is almost certain to occur at least once.
@@ -59,9 +65,9 @@ export default function HowToRecoverFromLosingStreak() {
       <Table
         headers={['Normal Risk %', 'Reduced Risk (50%)', 'Further Reduced (25%)', 'When to Apply']}
         rows={[
-          ['1.0%', '0.5%', '0.25%', 'After 3–4 consecutive losses'],
-          ['2.0%', '1.0%', '0.5%', 'After 4–5 consecutive losses'],
-          ['0.5%', '0.25%', '0.125%', 'After 5+ consecutive losses'],
+          [{ value: '1.0%', color: 'green' }, { value: '0.5%', color: 'cyan' }, { value: '0.25%', color: 'gold' }, 'After 3–4 consecutive losses'],
+          [{ value: '2.0%', color: 'gold' }, { value: '1.0%', color: 'green' }, { value: '0.5%', color: 'cyan' }, 'After 4–5 consecutive losses'],
+          [{ value: '0.5%', color: 'green' }, { value: '0.25%', color: 'cyan' }, { value: '0.125%', color: 'gold' }, 'After 5+ consecutive losses'],
         ]}
       />
 

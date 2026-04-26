@@ -1,5 +1,5 @@
 import BlogArticleLayout, {
-  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider
+  Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../components/blog/BlogArticleLayout';
 import { ProspectTheoryChart } from '../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
@@ -38,6 +38,12 @@ export default function ProspectTheoryTrading() {
       <Intro>
         Here is a game. I offer you two choices. Choice A: I give you $500 right now, guaranteed. Choice B: I flip a coin — heads you get $1,100, tails you get nothing. The expected value of Choice B is $550 — mathematically better than A. But you would take the $500. Almost everyone does. Now the reverse: you owe me $500. Choice A: pay $500 right now. Choice B: flip a coin — heads you owe nothing, tails you owe $1,100. Now most people pick the gamble. Same math, opposite decisions. This is not a logic puzzle. This is your brain. And it is the same brain that trades your money.
       </Intro>
+
+      <StatsStrip items={[
+        { value: 2.25, decimals: 2, suffix: '×', label: <>loss-aversion ratio<br />(Kahneman & Tversky, 1979)</> },
+        { value: 50, decimals: 0, suffix: '%', label: <>more likely to sell winners<br />than losers (disposition effect)</> },
+        { value: 47, decimals: 0, suffix: '%', label: <>average overshoot of loss<br />when using "mental stops"</> },
+      ]} />
 
       <H2>Prospect Theory: The Discovery That Won a Nobel Prize</H2>
       <P>
@@ -98,10 +104,10 @@ export default function ProspectTheoryTrading() {
         headers={['Metric', 'As Designed', 'With Prospect Theory Bias']}
         rows={[
           ['Win rate', '45%', '55% (more small wins from early exits)'],
-          ['Average winner', '2.5R', '0.9R (closed early)'],
-          ['Average loser', '-1.0R', '-1.8R (held too long, widened stops)'],
-          ['Expectancy', '+0.575R per trade', '-0.31R per trade'],
-          ['After 100 trades', '+$5,750', '-$3,100'],
+          ['Average winner', { value: '2.5R', color: 'green' }, { value: '0.9R (closed early)', color: 'red' }],
+          ['Average loser', { value: '-1.0R', color: 'green' }, { value: '-1.8R (held too long, widened stops)', color: 'red' }],
+          ['Expectancy', { value: '+0.575R per trade', color: 'green' }, { value: '-0.31R per trade', color: 'red' }],
+          ['After 100 trades', { value: '+$5,750', color: 'green' }, { value: '-$3,100', color: 'red' }],
         ]}
       />
       <P>
