@@ -6,6 +6,7 @@ import { FaXTwitter, FaRedditAlien, FaWhatsapp, FaLinkedinIn, FaLink, FaCheck } 
 import { FaGooglePlay } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
 import blogTranslations from '../../i18n/blogTranslations';
+import BlogCoverArt from './BlogCoverArt';
 
 const SITE = 'https://kmfjournal.com';
 const DEFAULTS = {
@@ -175,7 +176,48 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       <ReadingProgressBar />
       <Navbar />
       <StickyPlayBanner />
-      <main className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
+
+      {/* Full-width Hero with cover art (matches design article.html) */}
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ height: 'clamp(280px, 45vw, 460px)', marginTop: 64 }}
+      >
+        <div className="absolute inset-0">
+          <BlogCoverArt category={category} />
+        </div>
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(15,17,21,0.15) 0%, rgba(15,17,21,0.55) 60%, #0F1115 100%)',
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 right-0"
+          style={{ paddingBottom: 36 }}
+        >
+          <div className="mx-auto px-4 sm:px-6" style={{ maxWidth: 1200 }}>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span
+                className="text-[11px] font-bold px-3 py-1 rounded-full"
+                style={{
+                  background: `${categoryColor}24`,
+                  color: categoryColor,
+                  border: `1px solid ${categoryColor}40`,
+                  backdropFilter: 'blur(8px)',
+                }}
+              >
+                {category}
+              </span>
+              <span className="text-xs text-kmf-text-tertiary">{date}</span>
+              <span className="text-xs text-kmf-text-tertiary">·</span>
+              <span className="text-xs text-kmf-text-tertiary">{readTime}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main className="bg-kmf-bg min-h-screen pb-20 px-4 sm:px-6" style={{ paddingTop: 32 }}>
         <div className="mx-auto xl:flex xl:justify-center xl:gap-8" style={{ maxWidth: 1200 }}>
         <div className="w-full max-w-4xl mx-auto xl:mx-0 xl:min-w-0">
         <article itemScope itemType="https://schema.org/Article">
@@ -210,14 +252,48 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
               <ShareButtons title={title} url={pageUrl} compact />
             </div>
           </div>
-          <div className="mb-10 rounded-2xl overflow-hidden" style={{ aspectRatio: '1200 / 630', border: '1px solid rgba(255,255,255,0.06)', background: 'rgba(26,29,36,0.5)' }}>
-            <img src={ogImage} alt={title} className="w-full h-full object-cover" loading="eager" fetchpriority="high" itemProp="image" />
-          </div>
+          <meta itemProp="image" content={ogImage} />
           {children}
           <div className="rounded-xl p-5 mt-10 mb-4" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
               <p className="text-sm text-kmf-text-secondary">Found this useful? Share it with a fellow trader.</p>
               <ShareButtons title={title} url={pageUrl} />
+            </div>
+          </div>
+
+          {/* Author box (matches design .author-box) */}
+          <div
+            className="rounded-2xl p-6 mt-10 mb-4 flex gap-4 items-start"
+            style={{ background: 'rgba(26,29,36,0.85)', border: '1px solid rgba(255,255,255,0.07)' }}
+          >
+            <div
+              className="rounded-full flex items-center justify-center flex-shrink-0"
+              style={{
+                width: 60,
+                height: 60,
+                background: 'linear-gradient(135deg, #4FC3F7, #26C6DA)',
+                color: '#0F1115',
+                fontSize: 22,
+                fontWeight: 800,
+                filter: 'drop-shadow(0 0 10px rgba(79,195,247,0.3))',
+              }}
+              aria-hidden="true"
+            >
+              K
+            </div>
+            <div className="min-w-0">
+              <p className="text-sm font-bold text-kmf-text-primary leading-tight">
+                <Link to="/about" className="hover:text-kmf-accent transition-colors">K.M.F. Dev Team</Link>
+              </p>
+              <p
+                className="mt-1 mb-2"
+                style={{ color: '#4FC3F7', fontSize: 10, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}
+              >
+                Trading Education
+              </p>
+              <p className="text-[13px] text-kmf-text-secondary leading-relaxed">
+                The K.M.F. team builds tools and writes content for serious traders — focused on evidence-based psychology, risk management, and performance analysis.
+              </p>
             </div>
           </div>
           {relatedArticles.length > 0 && (
@@ -452,41 +528,60 @@ function TableOfContents() {
 
   if (items.length < 2) return null;
 
+  const activeIdx = items.findIndex((it) => it.id === activeId);
+
   return (
     <nav
       aria-label="Table of contents"
       className="rounded-2xl p-5"
       style={{
-        background: 'rgba(26,29,36,0.6)',
-        border: '1px solid rgba(255,255,255,0.06)',
+        background: 'rgba(26,29,36,0.85)',
+        border: '1px solid rgba(255,255,255,0.07)',
         maxHeight: 'calc(100vh - 140px)',
         overflowY: 'auto',
       }}
     >
-      <p className="text-[11px] font-bold uppercase tracking-widest mb-3" style={{ color: '#4FC3F7', letterSpacing: '0.08em' }}>
+      <p className="text-[10px] font-bold uppercase tracking-widest mb-3" style={{ color: '#6B7D87', letterSpacing: '0.1em' }}>
         On this page
       </p>
-      <ul className="space-y-1">
-        {items.map((item) => {
+      <ul className="flex flex-col gap-px">
+        {items.map((item, idx) => {
           const active = activeId === item.id;
+          const done = activeIdx >= 0 && idx < activeIdx;
+          const accent = active || done ? '#4FC3F7' : 'rgba(184,202,212,0.55)';
           return (
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
                 onClick={(e) => handleClick(e, item.id)}
-                className="block text-xs leading-snug transition-all"
+                className="flex items-center gap-2 transition-all rounded-lg"
                 style={{
-                  color: active ? '#4FC3F7' : 'rgba(184,202,212,0.72)',
+                  fontSize: 12,
+                  lineHeight: 1.4,
+                  color: active ? '#4FC3F7' : done ? 'rgba(143,179,197,0.65)' : 'rgba(143,179,197,0.85)',
                   fontWeight: active ? 600 : 400,
-                  borderLeft: `2px solid ${active ? '#4FC3F7' : 'rgba(255,255,255,0.06)'}`,
-                  paddingLeft: 10,
-                  paddingTop: 5,
-                  paddingBottom: 5,
+                  borderLeft: `2px solid ${active ? '#4FC3F7' : 'transparent'}`,
+                  background: active ? 'rgba(79,195,247,0.06)' : 'transparent',
+                  padding: '7px 10px',
                 }}
-                onMouseEnter={(e) => { if (!active) e.currentTarget.style.color = '#F0F4FF'; }}
-                onMouseLeave={(e) => { if (!active) e.currentTarget.style.color = 'rgba(184,202,212,0.72)'; }}
+                onMouseEnter={(e) => { if (!active) { e.currentTarget.style.color = '#4FC3F7'; e.currentTarget.style.background = 'rgba(79,195,247,0.06)'; } }}
+                onMouseLeave={(e) => { if (!active) { e.currentTarget.style.color = done ? 'rgba(143,179,197,0.65)' : 'rgba(143,179,197,0.85)'; e.currentTarget.style.background = 'transparent'; } }}
               >
-                {item.text}
+                <span className="flex-1">{item.text}</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" style={{ flexShrink: 0, marginLeft: 'auto' }}>
+                  <circle cx="6" cy="6" r="5" fill="none" stroke="rgba(79,195,247,0.2)" strokeWidth="2" />
+                  <circle
+                    cx="6" cy="6" r="5"
+                    fill="none"
+                    stroke={accent}
+                    strokeWidth="2"
+                    strokeDasharray={Math.PI * 10}
+                    strokeDashoffset={done ? 0 : Math.PI * 10}
+                    strokeLinecap="round"
+                    transform="rotate(-90 6 6)"
+                    style={{ transition: 'stroke-dashoffset 0.4s ease' }}
+                  />
+                </svg>
               </a>
             </li>
           );
@@ -540,7 +635,16 @@ export const Intro = ({ children }) => (
   <p className="text-lg text-kmf-text-secondary leading-relaxed mb-10" style={{ borderLeft: '3px solid rgba(79,195,247,0.35)', paddingLeft: '1.25rem' }}>{children}</p>
 );
 export const H2 = ({ children }) => (
-  <h2 className="text-2xl font-bold text-kmf-text-primary mt-10 mb-4" style={{ letterSpacing: '-0.01em' }}>{children}</h2>
+  <h2
+    className="text-2xl font-bold text-kmf-text-primary mt-12 mb-4"
+    style={{
+      letterSpacing: '-0.01em',
+      paddingBottom: '12px',
+      borderBottom: '1px solid rgba(255,255,255,0.06)',
+    }}
+  >
+    {children}
+  </h2>
 );
 export const H3 = ({ children }) => (
   <h3 className="text-lg font-bold text-kmf-text-primary mt-6 mb-3">{children}</h3>

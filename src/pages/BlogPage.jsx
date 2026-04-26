@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
+import BlogCoverArt from '../components/blog/BlogCoverArt';
 
 export const posts = [
   {
@@ -503,27 +504,70 @@ export default function BlogPage() {
     };
   }, []);
 
+  // Category counts for filter pills
+  const categoryCounts = useMemo(() => {
+    const counts = {};
+    posts.forEach((p) => { counts[p.category] = (counts[p.category] || 0) + 1; });
+    return counts;
+  }, []);
+
+  const CATEGORY_FILTERS = [
+    { label: 'Psychology', slug: 'psychology', color: '#CE93D8' },
+    { label: 'Risk Management', slug: 'risk-management', color: '#00C853' },
+    { label: 'Statistics', slug: 'statistics', color: '#4FC3F7' },
+    { label: 'Improvement', slug: 'improvement', color: '#FFB300' },
+    { label: 'Discipline', slug: 'discipline', color: '#FFB300' },
+    { label: 'App Reviews', slug: 'app-reviews', color: '#4FC3F7' },
+  ];
+
   return (
     <>
       <Navbar />
       <main id="main-content" className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="mx-auto" style={{ maxWidth: 1200 }}>
 
-          {/* Header */}
-          <div className="mb-12">
-            <Link to="/" className="text-sm text-kmf-text-tertiary hover:text-kmf-accent transition-colors">
-              ← Back to home
-            </Link>
-            <h1 className="text-4xl font-bold text-kmf-text-primary mt-6 mb-3" style={{ letterSpacing: '-0.02em' }}>
-              Blog
+          {/* Back link */}
+          <Link to="/" className="text-sm text-kmf-text-tertiary hover:text-kmf-accent transition-colors">
+            ← Back to home
+          </Link>
+
+          {/* Hero Header */}
+          <div className="text-center mt-8 mb-10">
+            <span
+              className="inline-block text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full mb-5"
+              style={{
+                color: '#4FC3F7',
+                background: 'rgba(79,195,247,0.08)',
+                border: '1px solid rgba(79,195,247,0.22)',
+              }}
+            >
+              ✦ Trading Education
+            </span>
+            <h1
+              className="font-bold mb-4 mx-auto"
+              style={{
+                fontSize: 'clamp(2rem, 5vw, 3rem)',
+                lineHeight: 1.1,
+                letterSpacing: '-0.025em',
+                maxWidth: 760,
+                background: 'linear-gradient(135deg, #F0F4FF 0%, #4FC3F7 60%, #81D4FA 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Learn to trade smarter every day
             </h1>
-            <p className="text-kmf-text-tertiary">
-              Trading insights, app guides, and tips for serious traders.
+            <p
+              className="text-kmf-text-tertiary mx-auto"
+              style={{ maxWidth: 580, fontSize: 16, lineHeight: 1.6 }}
+            >
+              Honest, no-fluff articles on psychology, risk management, statistics, and the daily discipline that separates pros from amateurs.
             </p>
           </div>
 
           {/* Search */}
-          <div ref={searchRef} className="relative mb-6">
+          <div ref={searchRef} className="relative mb-6 mx-auto" style={{ maxWidth: 520 }}>
             <div className="relative">
               <svg
                 className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
@@ -634,14 +678,31 @@ export default function BlogPage() {
             )}
           </div>
 
-          {/* Category filters */}
-          <div className="flex flex-wrap gap-2 mb-6 text-xs">
-            <Link to="/blog/category/psychology" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(206,147,216,0.08)', color: '#CE93D8', border: '1px solid rgba(206,147,216,0.15)' }}>Psychology</Link>
-            <Link to="/blog/category/risk-management" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(0,200,83,0.08)', color: '#00C853', border: '1px solid rgba(0,200,83,0.15)' }}>Risk Management</Link>
-            <Link to="/blog/category/statistics" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(79,195,247,0.08)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.15)' }}>Statistics</Link>
-            <Link to="/blog/category/improvement" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(255,179,0,0.08)', color: '#FFB300', border: '1px solid rgba(255,179,0,0.15)' }}>Improvement</Link>
-            <Link to="/blog/category/discipline" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(255,179,0,0.08)', color: '#FFB300', border: '1px solid rgba(255,179,0,0.15)' }}>Discipline</Link>
-            <Link to="/blog/category/app-reviews" className="px-3 py-1.5 rounded-full transition-colors" style={{ background: 'rgba(79,195,247,0.08)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.15)' }}>App Reviews</Link>
+          {/* Category filters with counts */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8 text-xs">
+            {CATEGORY_FILTERS.map((c) => {
+              const count = categoryCounts[c.label] || 0;
+              return (
+                <Link
+                  key={c.slug}
+                  to={`/blog/category/${c.slug}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all hover:-translate-y-0.5"
+                  style={{
+                    background: `${c.color}10`,
+                    color: c.color,
+                    border: `1px solid ${c.color}28`,
+                  }}
+                >
+                  <span className="font-semibold">{c.label}</span>
+                  <span
+                    className="text-[10px] font-bold px-1.5 rounded-full"
+                    style={{ background: `${c.color}1F`, color: c.color }}
+                  >
+                    {count}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
 
           {/* Internal links for SEO */}
@@ -682,51 +743,88 @@ export default function BlogPage() {
             </div>
           )}
 
-          {/* Posts */}
-          <div className="space-y-5">
-            {filteredPosts.map((post, idx) => (
-              <Link
-                key={post.slug}
-                to={`/blog/${post.slug}`}
-                className="block rounded-2xl border overflow-hidden transition-all duration-200 group"
-                style={{ background: 'rgba(26,29,36,0.85)', borderColor: 'rgba(255,255,255,0.07)' }}
-                onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(79,195,247,0.22)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; }}
-              >
-                <div className="flex flex-col md:flex-row">
+          {/* Posts — card grid (Layout A) */}
+          <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {filteredPosts.map((post, idx) => {
+              const featured = idx === 0 && !searchQuery;
+              return (
+                <Link
+                  key={post.slug}
+                  to={`/blog/${post.slug}`}
+                  className={`group rounded-2xl border overflow-hidden transition-all duration-200 hover:-translate-y-0.5 ${
+                    featured ? 'lg:col-span-2 lg:flex lg:flex-row' : 'flex flex-col'
+                  }`}
+                  style={{
+                    background: 'rgba(26,29,36,0.85)',
+                    borderColor: 'rgba(255,255,255,0.07)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(79,195,247,0.28)';
+                    e.currentTarget.style.boxShadow = '0 12px 32px rgba(79,195,247,0.08)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  {/* Cover */}
                   <div
-                    className="md:w-72 md:flex-shrink-0 overflow-hidden relative"
-                    style={{ aspectRatio: '1200 / 630', background: 'rgba(15,17,21,0.6)' }}
+                    className={`overflow-hidden relative flex-shrink-0 ${
+                      featured ? 'lg:w-[55%]' : 'w-full'
+                    }`}
+                    style={{
+                      aspectRatio: featured ? 'auto' : '16 / 9',
+                      minHeight: featured ? 280 : undefined,
+                      background: 'rgba(15,17,21,0.6)',
+                    }}
                   >
-                    <img
-                      src={`/blog/og/${post.slug}.png`}
-                      alt=""
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      loading={idx < 3 ? 'eager' : 'lazy'}
-                      decoding="async"
-                    />
+                    <div className="w-full h-full transition-transform duration-500 group-hover:scale-[1.03]">
+                      <BlogCoverArt category={post.category} />
+                    </div>
                   </div>
-                  <div className="p-6 flex-1 min-w-0">
-                    <div className="flex items-center gap-3 mb-3 flex-wrap">
-                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full"
-                        style={{ background: `${post.categoryColor}14`, color: post.categoryColor, border: `1px solid ${post.categoryColor}25` }}>
+
+                  {/* Body */}
+                  <div className={`p-6 flex flex-col flex-1 min-w-0 ${featured ? 'lg:p-8 lg:justify-center' : ''}`}>
+                    <div className="flex items-center gap-2 mb-3 flex-wrap">
+                      <span
+                        className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full"
+                        style={{
+                          background: `${post.categoryColor}14`,
+                          color: post.categoryColor,
+                          border: `1px solid ${post.categoryColor}25`,
+                        }}
+                      >
                         {post.category}
                       </span>
-                      <span className="text-xs text-kmf-text-tertiary">{post.date}</span>
-                      <span className="text-xs text-kmf-text-tertiary">· {post.readTime}</span>
+                      <span className="text-[11px] text-kmf-text-tertiary">{post.date}</span>
+                      <span className="text-[11px] text-kmf-text-tertiary">· {post.readTime}</span>
                     </div>
-                    <h2 className="text-lg font-bold text-kmf-text-primary mb-2 group-hover:text-kmf-accent transition-colors"
-                      style={{ letterSpacing: '-0.01em' }}>
+                    <h2
+                      className={`font-bold text-kmf-text-primary mb-2 group-hover:text-kmf-accent transition-colors ${
+                        featured ? 'text-2xl' : 'text-base'
+                      }`}
+                      style={{ letterSpacing: '-0.01em', lineHeight: 1.25 }}
+                    >
                       {searchQuery ? highlight(post.title, searchQuery) : post.title}
                     </h2>
-                    <p className="text-sm text-kmf-text-tertiary leading-relaxed">
+                    <p
+                      className={`text-kmf-text-tertiary leading-relaxed ${
+                        featured ? 'text-sm' : 'text-[13px]'
+                      }`}
+                      style={{
+                        display: '-webkit-box',
+                        WebkitLineClamp: featured ? 4 : 3,
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
+                      }}
+                    >
                       {searchQuery ? highlight(post.excerpt, searchQuery) : post.excerpt}
                     </p>
                     <p className="text-xs text-kmf-accent mt-4 font-semibold">Read article →</p>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
 
         </div>
