@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 const PAGE_TITLE = 'Win Rate vs R:R Matrix — Find Your Profitable Zone | K.M.F.';
 const PAGE_DESC = 'Interactive heatmap showing every combination of win rate and reward:risk ratio. Instantly see which setups are profitable and where your trading strategy sits on the profitability spectrum.';
 const PAGE_URL = 'https://kmfjournal.com/tools/win-rate-rr-matrix';
-const OG_IMAGE = 'https://kmfjournal.com/og/win-rate-rr-matrix.jpg';
+const OG_IMAGE = 'https://kmfjournal.com/tools/og/win-rate-rr-matrix.png';
 
 // Win rate columns: 20% → 80% (step 5)
 const WIN_RATES = [20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80];
@@ -95,12 +95,16 @@ export default function WinRateRRMatrixPage() {
     setMeta('property', 'og:title', PAGE_TITLE);
     setMeta('property', 'og:description', PAGE_DESC);
     setMeta('property', 'og:image', OG_IMAGE);
+    setMeta('property', 'og:image:width', '1200');
+    setMeta('property', 'og:image:height', '630');
+    setMeta('property', 'og:image:alt', 'Win Rate vs R:R Matrix — Find Your Profitable Zone');
     setMeta('property', 'og:url', PAGE_URL);
     setMeta('property', 'og:type', 'website');
     setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:title', PAGE_TITLE);
     setMeta('name', 'twitter:description', PAGE_DESC);
     setMeta('name', 'twitter:image', OG_IMAGE);
+    setMeta('name', 'twitter:image:alt', 'Win Rate vs R:R Matrix — Find Your Profitable Zone');
 
     let link = document.querySelector('link[rel="canonical"]');
     if (!link) { link = document.createElement('link'); link.setAttribute('rel', 'canonical'); document.head.appendChild(link); }

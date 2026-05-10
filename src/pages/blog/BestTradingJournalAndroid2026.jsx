@@ -33,12 +33,16 @@ export default function BestTradingJournalAndroid2026() {
     setMeta('og:title', PAGE_TITLE, 'property');
     setMeta('og:description', PAGE_DESC, 'property');
     setMeta('og:image', OG_IMAGE, 'property');
+    setMeta('og:image:width', '1200', 'property');
+    setMeta('og:image:height', '630', 'property');
+    setMeta('og:image:alt', PAGE_TITLE, 'property');
 
     // Twitter
     setMeta('twitter:url', PAGE_URL, 'name');
     setMeta('twitter:title', PAGE_TITLE, 'name');
     setMeta('twitter:description', PAGE_DESC, 'name');
     setMeta('twitter:image', OG_IMAGE, 'name');
+    setMeta('twitter:image:alt', PAGE_TITLE, 'name');
 
     // JSON-LD helper: skip if already exists (from prerender)
     const injectLd = (id, data) => {
@@ -92,10 +96,14 @@ export default function BestTradingJournalAndroid2026() {
       setMeta('og:title', 'K.M.F. Trading Journal – Professional Trade Tracking & Analysis', 'property');
       setMeta('og:description', 'Track your trades, analyze performance with advanced statistics, manage risk with a lot calculator, and improve your trading discipline. Free for Android.', 'property');
       setMeta('og:image', `${SITE}/logo.png`, 'property');
+      setMeta('og:image:width', '512', 'property');
+      setMeta('og:image:height', '512', 'property');
+      setMeta('og:image:alt', 'K.M.F. Trading Journal logo', 'property');
       setMeta('twitter:url', `${SITE}/`, 'name');
       setMeta('twitter:title', 'K.M.F. Trading Journal – Keep Moving Forward', 'name');
       setMeta('twitter:description', 'Professional trading journal for forex, stocks & crypto. Track, analyze and improve your trading performance.', 'name');
       setMeta('twitter:image', `${SITE}/logo.png`, 'name');
+      setMeta('twitter:image:alt', 'K.M.F. Trading Journal logo', 'name');
       document.getElementById('ld-article')?.remove();
       document.getElementById('ld-faq')?.remove();
       document.getElementById('ld-breadcrumb')?.remove();

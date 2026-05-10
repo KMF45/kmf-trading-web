@@ -62,6 +62,7 @@ const tools = [
   { slug: 'lot-size-calculator', title: 'Free Lot Size Calculator\n340+ Instruments\nReal-Time Exchange Rates', category: 'Trading Tool', color: '#4FC3F7' },
   { slug: 'risk-of-ruin', title: 'Risk of Ruin Calculator\nMonte Carlo Simulation\nKnow Before You Blow', category: 'Trading Tool', color: '#FF5252' },
   { slug: 'win-rate-rr-matrix', title: 'Win Rate vs R:R Matrix\nFind Your Profitable Zone\nInstant Expectancy Heatmap', category: 'Trading Tool', color: '#00C853' },
+  { slug: 'compound-calculator', title: 'KMF Compound Vision\nTrading Compound Growth\nVisualize Your Equity Curve', category: 'Trading Tool', color: '#FFB300' },
 ];
 
 function hexToRgb(hex) {

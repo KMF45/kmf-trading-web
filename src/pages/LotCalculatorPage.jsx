@@ -270,12 +270,16 @@ export default function LotCalculatorPage() {
     set('meta[property="og:title"]', 'content', PAGE_TITLE);
     set('meta[property="og:description"]', 'content', PAGE_DESC);
     set('meta[property="og:image"]', 'content', OG_IMAGE);
+    set('meta[property="og:image:width"]', 'content', '1200');
+    set('meta[property="og:image:height"]', 'content', '630');
+    set('meta[property="og:image:alt"]', 'content', 'Free Lot Size Calculator — 340+ Instruments');
     set('meta[property="og:type"]', 'content', 'website');
     set('meta[name="twitter:card"]', 'content', 'summary_large_image');
     set('meta[name="twitter:url"]', 'content', PAGE_URL);
     set('meta[name="twitter:title"]', 'content', PAGE_TITLE);
     set('meta[name="twitter:description"]', 'content', PAGE_DESC);
     set('meta[name="twitter:image"]', 'content', OG_IMAGE);
+    set('meta[name="twitter:image:alt"]', 'content', 'Free Lot Size Calculator — 340+ Instruments');
     return () => {
       document.title = 'K.M.F. Trading Journal – Track Trades, Analyze Performance & Improve Your Strategy';
       set('link[rel="canonical"]', 'href', 'https://kmfjournal.com/');

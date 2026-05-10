@@ -74,12 +74,16 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
     setMeta('og:title', pageTitle, 'property');
     setMeta('og:description', metaDescription || DEFAULTS.ogDescription, 'property');
     setMeta('og:image', ogImage, 'property');
+    setMeta('og:image:width', '1200', 'property');
+    setMeta('og:image:height', '630', 'property');
+    setMeta('og:image:alt', pageTitle, 'property');
 
     // Twitter
     setMeta('twitter:url', pageUrl, 'name');
     setMeta('twitter:title', pageTitle, 'name');
     setMeta('twitter:description', metaDescription || DEFAULTS.twitterDescription, 'name');
     setMeta('twitter:image', ogImage, 'name');
+    setMeta('twitter:image:alt', pageTitle, 'name');
 
     // JSON-LD helper: only create if not already present (avoids duplicates after prerender)
     const addLd = (id, data) => {
@@ -155,10 +159,14 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
       setMeta('og:title', DEFAULTS.ogTitle, 'property');
       setMeta('og:description', DEFAULTS.ogDescription, 'property');
       setMeta('og:image', DEFAULTS.ogImage, 'property');
+      setMeta('og:image:width', '512', 'property');
+      setMeta('og:image:height', '512', 'property');
+      setMeta('og:image:alt', 'K.M.F. Trading Journal logo', 'property');
       setMeta('twitter:url', DEFAULTS.ogUrl, 'name');
       setMeta('twitter:title', DEFAULTS.twitterTitle, 'name');
       setMeta('twitter:description', DEFAULTS.twitterDescription, 'name');
       setMeta('twitter:image', DEFAULTS.ogImage, 'name');
+      setMeta('twitter:image:alt', 'K.M.F. Trading Journal logo', 'name');
       // Remove JSON-LD
       document.getElementById('ld-article')?.remove();
       document.getElementById('ld-breadcrumb')?.remove();

@@ -321,12 +321,16 @@ export default function CompoundCalculatorPage() {
     setMeta('property', 'og:title', PAGE_TITLE);
     setMeta('property', 'og:description', PAGE_DESC);
     setMeta('property', 'og:image', OG_IMAGE);
+    setMeta('property', 'og:image:width', '1200');
+    setMeta('property', 'og:image:height', '630');
+    setMeta('property', 'og:image:alt', 'KMF Compound Vision — Trading Compound Growth Calculator');
     setMeta('property', 'og:url', PAGE_URL);
     setMeta('property', 'og:type', 'website');
     setMeta('name', 'twitter:card', 'summary_large_image');
     setMeta('name', 'twitter:title', PAGE_TITLE);
     setMeta('name', 'twitter:description', PAGE_DESC);
     setMeta('name', 'twitter:image', OG_IMAGE);
+    setMeta('name', 'twitter:image:alt', 'KMF Compound Vision — Trading Compound Growth Calculator');
 
     let link = document.querySelector('link[rel="canonical"]');
     if (!link) { link = document.createElement('link'); link.setAttribute('rel', 'canonical'); document.head.appendChild(link); }
