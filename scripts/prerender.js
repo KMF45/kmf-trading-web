@@ -78,6 +78,8 @@ const routes = [
   '/blog/scared-money-prop-firm',
   '/blog/lotto-ticket-syndrome',
   '/blog/prospect-theory-trading',
+  '/blog/is-100-enough-to-start-forex',
+  '/blog/trading-vs-gambling',
 ];
 
 // Simple static file server that falls back to index.html (SPA)

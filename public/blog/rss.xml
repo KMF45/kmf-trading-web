@@ -5,13 +5,31 @@
     <link>https://kmfjournal.com/blog</link>
     <description>Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kmfjournal.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://kmfjournal.com/logo.png</url>
       <title>K.M.F. Trading Journal Blog</title>
       <link>https://kmfjournal.com/blog</link>
     </image>
+
+    <item>
+      <title>Is $100 Enough to Trade Forex? The Brutal Truth</title>
+      <link>https://kmfjournal.com/blog/is-100-enough-to-start-forex</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/is-100-enough-to-start-forex</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <category>Risk Management</category>
+      <description>Can you really trade forex with $100? The math is brutal: at 1% risk you can only risk $1 per trade, and even at 5% monthly compound you end the year at $179. What $100 is actually good for.</description>
+    </item>
+
+    <item>
+      <title>When Trading Becomes Gambling (And How to Avoid It)</title>
+      <link>https://kmfjournal.com/blog/trading-vs-gambling</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/trading-vs-gambling</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <category>Psychology</category>
+      <description>Where does trading end and gambling begin? The line is sharper than you think — and it runs straight through your journal. Without measured expectancy, you are not trading. You are betting.</description>
+    </item>
 
     <item>
       <title>Ce este K.M.F. Trading Journal? Aplicatia construita de traderi care s-au saturat de spreadsheet-uri</title>

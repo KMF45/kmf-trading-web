@@ -356,6 +356,24 @@ export const posts = [
     readTime: '10 min read',
     categoryColor: '#CE93D8',
   },
+  {
+    slug: 'is-100-enough-to-start-forex',
+    title: 'Is $100 Enough to Trade Forex? The Brutal Truth',
+    excerpt: 'Can you really trade forex with $100? The math is brutal: at 1% risk you can only risk $1 per trade, and even at 5% monthly compound you end the year at $179. What $100 is actually good for.',
+    category: 'Risk Management',
+    date: 'May 13, 2026',
+    readTime: '9 min read',
+    categoryColor: '#00C853',
+  },
+  {
+    slug: 'trading-vs-gambling',
+    title: 'When Trading Becomes Gambling (And How to Avoid It)',
+    excerpt: 'Where does trading end and gambling begin? The line is sharper than you think — and it runs straight through your journal. Without measured expectancy, you are not trading. You are betting.',
+    category: 'Psychology',
+    date: 'May 13, 2026',
+    readTime: '9 min read',
+    categoryColor: '#CE93D8',
+  },
 ];
 
 // Fuzzy-ish match: higher score = better match

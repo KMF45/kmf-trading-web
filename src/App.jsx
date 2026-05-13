@@ -49,6 +49,8 @@ const BreakevenStopTooEarly = lazy(() => import('./pages/blog/BreakevenStopTooEa
 const ScaredMoneyPropFirm = lazy(() => import('./pages/blog/ScaredMoneyPropFirm'));
 const LottoTicketSyndrome = lazy(() => import('./pages/blog/LottoTicketSyndrome'));
 const ProspectTheoryTrading = lazy(() => import('./pages/blog/ProspectTheoryTrading'));
+const IsHundredDollarsEnoughForex = lazy(() => import('./pages/blog/IsHundredDollarsEnoughForex'));
+const TradingVsGambling = lazy(() => import('./pages/blog/TradingVsGambling'));
 const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTradingJournalRo'));
 
 // LiquidHours legal pages
@@ -129,6 +131,8 @@ function App() {
           <Route path="/blog/scared-money-prop-firm" element={<ScaredMoneyPropFirm />} />
           <Route path="/blog/lotto-ticket-syndrome" element={<LottoTicketSyndrome />} />
           <Route path="/blog/prospect-theory-trading" element={<ProspectTheoryTrading />} />
+          <Route path="/blog/is-100-enough-to-start-forex" element={<IsHundredDollarsEnoughForex />} />
+          <Route path="/blog/trading-vs-gambling" element={<TradingVsGambling />} />
 
           {/* Tools */}
           <Route path="/tools/lot-size-calculator" element={<LotCalculatorPage />} />
