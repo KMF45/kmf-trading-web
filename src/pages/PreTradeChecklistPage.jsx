@@ -345,6 +345,7 @@ export default function PreTradeChecklistPage() {
   const checkedItems = state.categories.reduce((n, c) => n + c.items.filter(i => i.checked).length, 0);
   const progress = totalItems > 0 ? (checkedItems / totalItems) * 100 : 0;
   const isEmpty = state.categories.length === 0;
+  const allChecked = totalItems > 0 && checkedItems === totalItems;
 
   /* ─── Actions ─── */
   const handleShare = useCallback(() => {
@@ -407,16 +408,16 @@ export default function PreTradeChecklistPage() {
       <main id="main-content" className="pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
 
-          {/* Header */}
-          <div className="text-center mb-8 print:mb-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4 print:hidden" style={{ background: 'rgba(79,195,247,0.1)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.2)' }}>
+          {/* Header — screen only */}
+          <div className="text-center mb-8 print:hidden">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: 'rgba(79,195,247,0.1)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.2)' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               Free Trading Tool
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-3">
               <span className="bg-gradient-to-r from-kmf-accent to-cyan-300 bg-clip-text text-transparent">Pre-Trade Checklist Builder</span>
             </h1>
-            <p className="text-kmf-text-secondary max-w-2xl mx-auto text-base print:hidden">
+            <p className="text-kmf-text-secondary max-w-2xl mx-auto text-base">
               Build your own pre-trade checklist. Pick a starter, add suggestions, or write your own items.
               Auto-saved locally, shareable via link, and printable as a PDF.
             </p>
@@ -479,10 +480,13 @@ export default function PreTradeChecklistPage() {
             </div>
           )}
 
-          {/* Print-only header */}
-          <div className="hidden print:block mb-6 text-black">
-            <h2 className="text-2xl font-bold">Pre-Trade Checklist</h2>
-            <p className="text-sm">From kmfjournal.com</p>
+          {/* Print-only header: logo + small title */}
+          <div className="hidden print:flex items-center gap-3 mb-5">
+            <img src="/logo-80.png" alt="KMF" width="36" height="36" style={{ width: 36, height: 36 }} />
+            <div>
+              <h2 className="text-base font-bold leading-tight" style={{ color: '#000' }}>Pre-Trade Checklist</h2>
+              <p className="text-[10px]" style={{ color: '#666' }}>kmfjournal.com</p>
+            </div>
           </div>
 
           {/* Builder + Library layout */}
@@ -490,6 +494,23 @@ export default function PreTradeChecklistPage() {
 
             {/* Builder (2 cols on lg) */}
             <div className="lg:col-span-2">
+              {allChecked && (
+                <div className="rounded-2xl p-5 mb-4 text-center print:hidden animate-fadeIn" style={{
+                  background: 'linear-gradient(135deg, rgba(0,200,83,0.14), rgba(79,195,247,0.06))',
+                  border: '1px solid rgba(0,200,83,0.32)',
+                  boxShadow: '0 0 32px rgba(0,200,83,0.12)',
+                }}>
+                  <div className="inline-flex items-center gap-3 mb-1">
+                    <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ background: '#00C853' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold" style={{ color: '#00E676' }}>All clear — you're cleared to trade</h3>
+                  </div>
+                  <p className="text-sm text-kmf-text-secondary mt-2 max-w-md mx-auto">
+                    {totalItems} of {totalItems} checks done. Trade the plan you just verified — not your mood.
+                  </p>
+                </div>
+              )}
               {state.categories.map((cat, catIdx) => (
                 <CategoryBlock
                   key={cat.id}
@@ -670,14 +691,43 @@ export default function PreTradeChecklistPage() {
 
       <Footer />
 
-      {/* Print stylesheet */}
+      {/* Print stylesheet — strip browser injection, blackout text, empty checkboxes */}
       <style>{`
+        @page { size: A4; margin: 0; }
         @media print {
-          body { background: white !important; color: black !important; }
+          html, body { margin: 0 !important; padding: 0 !important; background: white !important; }
+          main#main-content { padding: 1.2cm 1.5cm !important; }
           .bg-kmf-bg { background: white !important; }
-          .text-kmf-text-primary, .text-kmf-text-secondary, .text-kmf-text-tertiary, .text-kmf-accent { color: black !important; }
-          .bg-clip-text { -webkit-text-fill-color: black !important; }
+          /* All text → solid black for paper visibility */
+          .text-kmf-text-primary, .text-kmf-text-secondary, .text-kmf-text-tertiary, .text-kmf-accent,
+          h1, h2, h3, h4, h5, p, span, li, button { color: #000 !important; }
+          .bg-clip-text { -webkit-text-fill-color: #000 !important; }
           nav, footer { display: none !important; }
+          /* Empty checkbox squares (user ticks on paper) */
+          .print-checkbox {
+            border: 1.5px solid #000 !important;
+            background: white !important;
+            width: 14px !important;
+            height: 14px !important;
+            border-radius: 2px !important;
+            box-shadow: none !important;
+          }
+          .print-checkbox-mark { display: none !important; }
+          /* Item text → always solid black, no strikethrough, full opacity */
+          .print-item-text {
+            color: #000 !important;
+            text-decoration: none !important;
+            opacity: 1 !important;
+            font-size: 11pt !important;
+          }
+          /* Category title → solid black, slightly bigger */
+          .print-cat-title {
+            color: #000 !important;
+            font-size: 12pt !important;
+            margin-bottom: 6px !important;
+          }
+          /* Tighter spacing for paper density */
+          section { page-break-inside: avoid; }
         }
       `}</style>
     </div>
@@ -705,7 +755,7 @@ function CategoryBlock({
             onSubmit={(name) => { renameCategory(cat.id, name); setEditing(null); }}
           />
         ) : (
-          <h3 className="text-sm font-semibold uppercase tracking-wider text-kmf-accent flex-1 print:text-black">{cat.name}</h3>
+          <h3 className="print-cat-title text-sm font-semibold uppercase tracking-wider text-kmf-accent flex-1">{cat.name}</h3>
         )}
         {!renamingThis && (
           <div className="flex items-center gap-1 print:hidden">
@@ -724,14 +774,14 @@ function CategoryBlock({
             <li key={it.id} className="group flex items-start gap-2 print:py-1">
               <button
                 onClick={() => toggleItem(cat.id, it.id)}
-                className="shrink-0 mt-0.5 w-5 h-5 rounded border transition-all flex items-center justify-center print:border-black"
+                className="print-checkbox shrink-0 mt-0.5 w-5 h-5 rounded border transition-all flex items-center justify-center"
                 style={{
                   background: it.checked ? '#4FC3F7' : 'transparent',
                   borderColor: it.checked ? '#4FC3F7' : 'rgba(255,255,255,0.2)',
                 }}
                 aria-label={it.checked ? 'Uncheck' : 'Check'}
               >
-                {it.checked && <span className="text-[#0F1115] text-xs font-bold leading-none">✓</span>}
+                {it.checked && <span className="print-checkbox-mark text-[#0F1115] text-xs font-bold leading-none">✓</span>}
               </button>
               {isEditing ? (
                 <div className="flex-1">
@@ -745,7 +795,7 @@ function CategoryBlock({
                 <>
                   <span
                     onDoubleClick={() => setEditing({ catId: cat.id, itemId: it.id })}
-                    className="flex-1 text-sm leading-snug cursor-pointer print:text-black"
+                    className="print-item-text flex-1 text-sm leading-snug cursor-pointer"
                     style={{
                       color: it.checked ? '#8FB3C5' : '#E0E0E0',
                       textDecoration: it.checked ? 'line-through' : 'none',
