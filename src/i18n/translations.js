@@ -354,7 +354,7 @@ export const translations = {
       ]
     },
     "footer": {
-      "description": "Professional trading journal for serious traders. Track, analyze, and improve your trading performance.",
+      "description": "Mobile-first trading journal that tracks how you trade, not just what you trade.",
       "quickLinks": "Quick Links",
       "fromBlog": "From the Blog",
       "legal": "Legal",

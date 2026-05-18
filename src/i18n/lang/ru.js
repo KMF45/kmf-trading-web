@@ -9,14 +9,13 @@ const ru = {
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
-    "subtitle": "Профессиональный торговый дневник для трейдеров на форекс, акциях и криптовалюте. Записывайте сделки, анализируйте результаты, работайте над психологией и получайте достижения по мере роста.",
+    "subtitle": "The only mobile-first trading journal that tracks how you trade, not just what you trade. Tilt detection, personality profiling. No broker API. No data leaks.",
     "ctaPrimary": "Скачать в Google Play",
     "ctaSecondary": "Обзор возможностей",
     "stats": {
       "trades": "Сделок записано",
       "instruments": "Инструменты",
-      "languages": "Языки",
-      "articles": "Статьи в блоге"
+      "languages": "Языки"
     }
   },
   "whyKmf": {
@@ -353,7 +352,7 @@ const ru = {
     ]
   },
   "footer": {
-    "description": "Профессиональный торговый дневник для серьёзных трейдеров. Записывайте, анализируйте и улучшайте свои торговые результаты.",
+    "description": "Mobile-first trading journal that tracks how you trade, not just what you trade.",
     "quickLinks": "Быстрые ссылки",
     "fromBlog": "Из блога",
     "legal": "Юридическая информация",

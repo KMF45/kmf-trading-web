@@ -9,14 +9,13 @@ const ja = {
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
-    "subtitle": "FX・株式・暗号資産トレーダーのためのプロフェッショナルトレード日誌。取引を記録し、パフォーマンスを分析し、心理をマスターし、上達とともに実績を解除しましょう。",
+    "subtitle": "The only mobile-first trading journal that tracks how you trade, not just what you trade. Tilt detection, personality profiling. No broker API. No data leaks.",
     "ctaPrimary": "Google Playでダウンロード",
     "ctaSecondary": "機能を見る",
     "stats": {
       "trades": "記録されたトレード数",
       "instruments": "銘柄",
-      "languages": "対応言語",
-      "articles": "ブログ記事"
+      "languages": "対応言語"
     }
   },
   "whyKmf": {
@@ -353,7 +352,7 @@ const ja = {
     ]
   },
   "footer": {
-    "description": "本気のトレーダーのためのプロフェッショナルトレード日誌。トレードの記録・分析・改善をサポートします。",
+    "description": "Mobile-first trading journal that tracks how you trade, not just what you trade.",
     "quickLinks": "クイックリンク",
     "fromBlog": "ブログから",
     "legal": "法的情報",

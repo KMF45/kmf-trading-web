@@ -9,14 +9,13 @@ const fr = {
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
-    "subtitle": "Journal de trading professionnel pour les traders forex, actions et crypto. Suivez vos trades, analysez vos performances, maîtrisez votre psychologie et débloquez des récompenses au fil de votre progression.",
+    "subtitle": "The only mobile-first trading journal that tracks how you trade, not just what you trade. Tilt detection, personality profiling. No broker API. No data leaks.",
     "ctaPrimary": "Télécharger sur Google Play",
     "ctaSecondary": "Découvrir les fonctionnalités",
     "stats": {
       "trades": "Trades enregistrés",
       "instruments": "Instruments",
-      "languages": "Langues",
-      "articles": "Articles de blog"
+      "languages": "Langues"
     }
   },
   "whyKmf": {
@@ -353,7 +352,7 @@ const fr = {
     ]
   },
   "footer": {
-    "description": "Journal de trading professionnel pour les traders sérieux. Suivez, analysez et améliorez vos performances de trading.",
+    "description": "Mobile-first trading journal that tracks how you trade, not just what you trade.",
     "quickLinks": "Liens rapides",
     "fromBlog": "Du blog",
     "legal": "Mentions légales",

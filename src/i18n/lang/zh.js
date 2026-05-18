@@ -9,14 +9,13 @@ const zh = {
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
-    "subtitle": "专为外汇、股票和加密货币交易者打造的专业交易日志。记录交易、分析表现、掌握心理、在进步中获得成就。",
+    "subtitle": "The only mobile-first trading journal that tracks how you trade, not just what you trade. Tilt detection, personality profiling. No broker API. No data leaks.",
     "ctaPrimary": "在 Google Play 下载",
     "ctaSecondary": "探索功能",
     "stats": {
       "trades": "已记录交易",
       "instruments": "交易品种",
-      "languages": "语言",
-      "articles": "博客文章"
+      "languages": "语言"
     }
   },
   "whyKmf": {
@@ -353,7 +352,7 @@ const zh = {
     ]
   },
   "footer": {
-    "description": "为认真的交易者打造的专业交易日志。记录、分析并提升你的交易表现。",
+    "description": "Mobile-first trading journal that tracks how you trade, not just what you trade.",
     "quickLinks": "快速链接",
     "fromBlog": "博客精选",
     "legal": "法律信息",

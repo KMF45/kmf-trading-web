@@ -9,14 +9,13 @@ const en = {
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
-    "subtitle": "Professional trading journal for forex, stocks and crypto traders. Track trades, analyze performance, master your psychology, and earn achievements as you improve.",
+    "subtitle": "The only mobile-first trading journal that tracks how you trade, not just what you trade. Tilt detection, personality profiling. No broker API. No data leaks.",
     "ctaPrimary": "Download on Google Play",
     "ctaSecondary": "Explore Features",
     "stats": {
       "trades": "Trades Tracked",
       "instruments": "Instruments",
-      "languages": "Languages",
-      "articles": "Blog Articles"
+      "languages": "Languages"
     }
   },
   "whyKmf": {
@@ -353,7 +352,7 @@ const en = {
     ]
   },
   "footer": {
-    "description": "Professional trading journal for serious traders. Track, analyze, and improve your trading performance.",
+    "description": "Mobile-first trading journal that tracks how you trade, not just what you trade.",
     "quickLinks": "Quick Links",
     "fromBlog": "From the Blog",
     "legal": "Legal",

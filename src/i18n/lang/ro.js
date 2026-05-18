@@ -9,14 +9,13 @@ const ro = {
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
-    "subtitle": "Jurnal de trading profesional pentru traderi de forex, acțiuni și crypto. Înregistrează trade-uri, analizează performanța, stăpânește-ți psihologia și deblochează realizări pe măsură ce progresezi.",
+    "subtitle": "The only mobile-first trading journal that tracks how you trade, not just what you trade. Tilt detection, personality profiling. No broker API. No data leaks.",
     "ctaPrimary": "Descarcă de pe Google Play",
     "ctaSecondary": "Descoperă funcționalitățile",
     "stats": {
       "trades": "Trade-uri înregistrate",
       "instruments": "Instrumente",
-      "languages": "Limbi",
-      "articles": "Articole pe blog"
+      "languages": "Limbi"
     }
   },
   "whyKmf": {
@@ -353,7 +352,7 @@ const ro = {
     ]
   },
   "footer": {
-    "description": "Jurnal de trading profesional pentru traderi serioși. Urmărește, analizează și îmbunătățește-ți performanța de trading.",
+    "description": "Mobile-first trading journal that tracks how you trade, not just what you trade.",
     "quickLinks": "Linkuri rapide",
     "fromBlog": "De pe blog",
     "legal": "Legal",

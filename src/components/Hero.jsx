@@ -55,7 +55,6 @@ const Hero = () => {
     { value: '10,000+', label: t('hero.stats.trades') },
     { value: '22',      label: t('hero.stats.instruments') },
     { value: '7',       label: t('hero.stats.languages') },
-    { value: '39',      label: t('hero.stats.articles') },
   ];
 
   return (
@@ -130,7 +129,7 @@ const Hero = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 pt-8 border-t border-kmf-accent/10 w-full max-w-2xl mx-auto">
+        <div className="grid grid-cols-3 gap-6 sm:gap-12 pt-8 border-t border-kmf-accent/10 w-full max-w-xl mx-auto">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
               <p className="text-2xl font-bold gradient-text">{s.value}</p>

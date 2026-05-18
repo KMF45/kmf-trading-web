@@ -9,14 +9,13 @@ const de = {
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
-    "subtitle": "Professionelles Trading-Tagebuch für Forex-, Aktien- und Krypto-Trader. Trades erfassen, Performance analysieren, Psychologie meistern und Erfolge freischalten.",
+    "subtitle": "The only mobile-first trading journal that tracks how you trade, not just what you trade. Tilt detection, personality profiling. No broker API. No data leaks.",
     "ctaPrimary": "Im Google Play herunterladen",
     "ctaSecondary": "Funktionen entdecken",
     "stats": {
       "trades": "Erfasste Trades",
       "instruments": "Instrumente",
-      "languages": "Sprachen",
-      "articles": "Blog-Artikel"
+      "languages": "Sprachen"
     }
   },
   "whyKmf": {
@@ -353,7 +352,7 @@ const de = {
     ]
   },
   "footer": {
-    "description": "Professionelles Trading-Tagebuch für ernsthafte Trader. Erfasse, analysiere und verbessere deine Trading-Performance.",
+    "description": "Mobile-first trading journal that tracks how you trade, not just what you trade.",
     "quickLinks": "Schnellzugriff",
     "fromBlog": "Aus dem Blog",
     "legal": "Rechtliches",
