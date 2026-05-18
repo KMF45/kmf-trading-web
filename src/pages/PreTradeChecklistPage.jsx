@@ -97,6 +97,7 @@ function downloadJson(state) {
 export default function PreTradeChecklistPage() {
   const [state, setState] = useState({ categories: [] });
   const [loaded, setLoaded] = useState(false);
+  const [started, setStarted] = useState(false);
   const [librarySearch, setLibrarySearch] = useState('');
   const [libraryFilter, setLibraryFilter] = useState('all');
   const [editing, setEditing] = useState(null); // { catId, itemId } | { catId, kind: 'rename' } | null
@@ -116,6 +117,7 @@ export default function PreTradeChecklistPage() {
         const loadedState = decodeChecklist(c);
         if (loadedState) {
           setState(loadedState);
+          setStarted(true);
           setLoaded(true);
           return;
         }
@@ -125,8 +127,10 @@ export default function PreTradeChecklistPage() {
         const parsed = JSON.parse(saved);
         if (parsed && Array.isArray(parsed.categories)) {
           setState(parsed);
+          if (parsed.categories.length > 0) setStarted(true);
         }
       }
+      if (localStorage.getItem('kmf_pretrade_started') === '1') setStarted(true);
     } catch { /* fall through to empty state */ }
     setLoaded(true);
   }, []);
@@ -300,8 +304,21 @@ export default function PreTradeChecklistPage() {
       if (!confirm('Loading this template will replace your current checklist. Continue?')) return;
     }
     setState(templateToState(template));
+    setStarted(true);
+    try { localStorage.setItem('kmf_pretrade_started', '1'); } catch { /* */ }
     setShowTemplates(false);
   }, [state.categories.length]);
+
+  /* Quick add for empty-started state: create a default category and open item input */
+  const handleAddFirstItem = useCallback(() => {
+    const defaultName = 'My Checks';
+    let targetId = state.categories.find(c => c.name.toLowerCase() === defaultName.toLowerCase())?.id;
+    if (!targetId) {
+      targetId = uid('cat-');
+      setState(prev => ({ categories: [...prev.categories, { id: targetId, name: defaultName, items: [] }] }));
+    }
+    setAddingToCat(targetId);
+  }, [state.categories]);
 
   const resetChecks = useCallback(() => {
     setState(prev => ({
@@ -312,7 +329,8 @@ export default function PreTradeChecklistPage() {
   const resetAll = useCallback(() => {
     if (!confirm('Delete the entire checklist? This cannot be undone (unless you exported it).')) return;
     setState({ categories: [] });
-    try { localStorage.removeItem(STORAGE_KEY); } catch { /* */ }
+    setStarted(false);
+    try { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem('kmf_pretrade_started'); } catch { /* */ }
   }, []);
 
   /* ─── Library helpers ─── */
@@ -423,8 +441,8 @@ export default function PreTradeChecklistPage() {
             </p>
           </div>
 
-          {/* First-time onboarding */}
-          {isEmpty && loaded && (
+          {/* First-time onboarding — only when user has NOT picked anything yet */}
+          {!started && loaded && (
             <div className="rounded-2xl p-6 mb-8 print:hidden" style={{ background: 'rgba(79,195,247,0.04)', border: '1px solid rgba(79,195,247,0.15)' }}>
               <h2 className="text-lg font-semibold mb-3 text-kmf-text-primary">Start with a template or from scratch</h2>
               <p className="text-sm text-kmf-text-tertiary mb-5">
@@ -489,11 +507,42 @@ export default function PreTradeChecklistPage() {
             </div>
           </div>
 
-          {/* Builder + Library layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 print:block">
+          {/* Builder + Library layout — only after user has chosen a starting point */}
+          <div className={`grid grid-cols-1 ${started ? 'lg:grid-cols-3' : ''} gap-6 print:block`}>
 
-            {/* Builder (2 cols on lg) */}
-            <div className="lg:col-span-2">
+            {/* Builder (2 cols on lg when library is visible) */}
+            <div className={started ? 'lg:col-span-2' : ''}>
+              {/* Empty-started state: user clicked "Start from scratch" — show clear next-steps */}
+              {started && isEmpty && (
+                <div className="rounded-2xl p-8 text-center print:hidden" style={{
+                  background: 'rgba(79,195,247,0.04)',
+                  border: '1px dashed rgba(79,195,247,0.25)',
+                }}>
+                  <h3 className="text-lg font-semibold mb-2 text-kmf-text-primary">Your checklist is empty</h3>
+                  <p className="text-sm text-kmf-text-tertiary mb-5 max-w-md mx-auto">
+                    Add a category to organize your checks, jump straight to your first item, or pick from the suggestion library {''}
+                    <span className="lg:inline hidden">on the right</span>
+                    <span className="lg:hidden inline">below</span>.
+                  </p>
+                  <div className="flex flex-wrap gap-3 justify-center">
+                    <button
+                      onClick={() => setAddingToCat('new')}
+                      className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1.5"
+                      style={{ background: '#4FC3F7', color: '#0F1115' }}
+                    ><span className="text-base">+</span> Add category</button>
+                    <button
+                      onClick={handleAddFirstItem}
+                      className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1.5"
+                      style={{ background: 'rgba(255,255,255,0.05)', color: '#E0E0E0', border: '1px solid rgba(255,255,255,0.12)' }}
+                    ><span className="text-base">+</span> Add item</button>
+                  </div>
+                  <button
+                    onClick={() => setShowTemplates(true)}
+                    className="mt-5 text-xs text-kmf-text-tertiary hover:text-kmf-accent transition-colors underline"
+                  >Load a template instead</button>
+                </div>
+              )}
+
               {allChecked && (
                 <div className="rounded-2xl p-5 mb-4 text-center print:hidden animate-fadeIn" style={{
                   background: 'linear-gradient(135deg, rgba(0,200,83,0.14), rgba(79,195,247,0.06))',
@@ -551,7 +600,8 @@ export default function PreTradeChecklistPage() {
               )}
             </div>
 
-            {/* Library sidebar */}
+            {/* Library sidebar — only after user has started (picked a template) */}
+            {started && (
             <aside className="print:hidden">
               <div className="rounded-2xl p-4 sticky top-24" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}>
                 <h2 className="text-sm font-semibold text-kmf-text-primary uppercase tracking-wider mb-3">Suggestion Library</h2>
@@ -611,6 +661,7 @@ export default function PreTradeChecklistPage() {
                 </div>
               </div>
             </aside>
+            )}
           </div>
 
           {/* CTA — only when not empty and not in print */}
