@@ -438,11 +438,13 @@ export default function LotCalculatorPage() {
                   </div>
                 </div>
 
-                {/* Rate status */}
-                <div className="flex items-center gap-2 text-xs text-kmf-text-tertiary">
-                  <div className={`w-2 h-2 rounded-full ${rateSource === 'live' ? 'bg-green-400' : rateSource === 'fallback' ? 'bg-yellow-400' : 'bg-yellow-400 animate-pulse'}`} />
-                  {rateSource === 'live' ? 'Live exchange rates (cached 1h)' : rateSource === 'fallback' ? 'Using fallback rates — API unavailable' : 'Loading exchange rates...'}
-                </div>
+                {/* Rate status — hidden on fallback (don't advertise unreliable rates) */}
+                {rateSource !== 'fallback' && (
+                  <div className="flex items-center gap-2 text-xs text-kmf-text-tertiary">
+                    <div className={`w-2 h-2 rounded-full ${rateSource === 'live' ? 'bg-green-400' : 'bg-yellow-400 animate-pulse'}`} />
+                    {rateSource === 'live' ? 'Live exchange rates (cached 1h)' : 'Loading exchange rates...'}
+                  </div>
+                )}
               </div>
 
               {/* RIGHT: Results */}
