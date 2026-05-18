@@ -109,22 +109,6 @@ function SymbolPickerPanel({ selected, onSelect, onClose }) {
     return () => document.removeEventListener('mousedown', handler);
   }, [onClose]);
 
-  const handleKeyDown = useCallback((e) => {
-    if (e.key === 'ArrowDown') { e.preventDefault(); setHighlightIdx(i => Math.min(i + 1, filtered.length - 1)); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); setHighlightIdx(i => Math.max(i - 1, 0)); }
-    else if (e.key === 'Enter' && highlightIdx >= 0 && filtered[highlightIdx]) { onSelect(filtered[highlightIdx]); onClose(); }
-    else if (e.key === 'Escape') onClose();
-  }, [filtered, highlightIdx, onSelect, onClose]);
-
-  useEffect(() => { setHighlightIdx(-1); }, [search, activeTab]);
-
-  useEffect(() => {
-    if (highlightIdx >= 0 && listRef.current) {
-      const el = listRef.current.children[highlightIdx];
-      if (el) el.scrollIntoView({ block: 'nearest' });
-    }
-  }, [highlightIdx]);
-
   const toggleFav = (symbol) => {
     const next = favorites.includes(symbol) ? favorites.filter(s => s !== symbol) : [...favorites, symbol];
     setFavorites(next);
@@ -143,6 +127,22 @@ function SymbolPickerPanel({ selected, onSelect, onClose }) {
     }
     return list;
   }, [search, activeTab, favorites]);
+
+  const handleKeyDown = useCallback((e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); setHighlightIdx(i => Math.min(i + 1, filtered.length - 1)); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setHighlightIdx(i => Math.max(i - 1, 0)); }
+    else if (e.key === 'Enter' && highlightIdx >= 0 && filtered[highlightIdx]) { onSelect(filtered[highlightIdx]); onClose(); }
+    else if (e.key === 'Escape') onClose();
+  }, [filtered, highlightIdx, onSelect, onClose]);
+
+  useEffect(() => { setHighlightIdx(-1); }, [search, activeTab]);
+
+  useEffect(() => {
+    if (highlightIdx >= 0 && listRef.current) {
+      const el = listRef.current.children[highlightIdx];
+      if (el) el.scrollIntoView({ block: 'nearest' });
+    }
+  }, [highlightIdx]);
 
   return (
     <div ref={panelRef} className="absolute z-50 left-0 right-0 mt-2 rounded-2xl overflow-hidden animate-fadeIn flex flex-col" style={{ background: 'rgba(15,17,21,0.98)', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(16px)', maxHeight: 420 }}>
