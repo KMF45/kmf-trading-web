@@ -518,28 +518,43 @@ export default function PreTradeChecklistPage() {
                   background: 'rgba(79,195,247,0.04)',
                   border: '1px dashed rgba(79,195,247,0.25)',
                 }}>
-                  <h3 className="text-lg font-semibold mb-2 text-kmf-text-primary">Your checklist is empty</h3>
-                  <p className="text-sm text-kmf-text-tertiary mb-5 max-w-md mx-auto">
-                    Add a category to organize your checks, jump straight to your first item, or pick from the suggestion library {''}
-                    <span className="lg:inline hidden">on the right</span>
-                    <span className="lg:hidden inline">below</span>.
-                  </p>
-                  <div className="flex flex-wrap gap-3 justify-center">
-                    <button
-                      onClick={() => setAddingToCat('new')}
-                      className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1.5"
-                      style={{ background: '#4FC3F7', color: '#0F1115' }}
-                    ><span className="text-base">+</span> Add category</button>
-                    <button
-                      onClick={handleAddFirstItem}
-                      className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1.5"
-                      style={{ background: 'rgba(255,255,255,0.05)', color: '#E0E0E0', border: '1px solid rgba(255,255,255,0.12)' }}
-                    ><span className="text-base">+</span> Add item</button>
-                  </div>
-                  <button
-                    onClick={() => setShowTemplates(true)}
-                    className="mt-5 text-xs text-kmf-text-tertiary hover:text-kmf-accent transition-colors underline"
-                  >Load a template instead</button>
+                  {addingToCat === 'new' ? (
+                    <>
+                      <h3 className="text-sm font-semibold mb-3 text-kmf-text-primary uppercase tracking-wider">Name your first category</h3>
+                      <div className="max-w-md mx-auto">
+                        <InlineAddInput
+                          placeholder="e.g., Setup, Risk, Psychology"
+                          onCancel={() => setAddingToCat(null)}
+                          onSubmit={(name) => { addCategory(name); setAddingToCat(null); }}
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <h3 className="text-lg font-semibold mb-2 text-kmf-text-primary">Your checklist is empty</h3>
+                      <p className="text-sm text-kmf-text-tertiary mb-5 max-w-md mx-auto">
+                        Add a category to organize your checks, jump straight to your first item, or pick from the suggestion library {''}
+                        <span className="lg:inline hidden">on the right</span>
+                        <span className="lg:hidden inline">below</span>.
+                      </p>
+                      <div className="flex flex-wrap gap-3 justify-center">
+                        <button
+                          onClick={() => setAddingToCat('new')}
+                          className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1.5"
+                          style={{ background: '#4FC3F7', color: '#0F1115' }}
+                        ><span className="text-base">+</span> Add category</button>
+                        <button
+                          onClick={handleAddFirstItem}
+                          className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1.5"
+                          style={{ background: 'rgba(255,255,255,0.05)', color: '#E0E0E0', border: '1px solid rgba(255,255,255,0.12)' }}
+                        ><span className="text-base">+</span> Add item</button>
+                      </div>
+                      <button
+                        onClick={() => setShowTemplates(true)}
+                        className="mt-5 text-xs text-kmf-text-tertiary hover:text-kmf-accent transition-colors underline"
+                      >Load a template instead</button>
+                    </>
+                  )}
                 </div>
               )}
 
