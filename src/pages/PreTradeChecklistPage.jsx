@@ -481,11 +481,11 @@ export default function PreTradeChecklistPage() {
           )}
 
           {/* Print-only header: logo + small title */}
-          <div className="hidden print:flex items-center gap-3 mb-5">
-            <img src="/logo-80.png" alt="KMF" width="36" height="36" style={{ width: 36, height: 36 }} />
+          <div className="hidden print:flex items-center gap-2 mb-4">
+            <img className="print-logo" src="/logo-80.png" alt="KMF" width="28" height="28" style={{ width: 28, height: 28 }} />
             <div>
-              <h2 className="text-base font-bold leading-tight" style={{ color: '#000' }}>Pre-Trade Checklist</h2>
-              <p className="text-[10px]" style={{ color: '#666' }}>kmfjournal.com</p>
+              <h2 className="print-header-title font-bold leading-tight" style={{ color: '#000' }}>Pre-Trade Checklist</h2>
+              <p className="print-header-sub" style={{ color: '#555' }}>kmfjournal.com</p>
             </div>
           </div>
 
@@ -695,39 +695,66 @@ export default function PreTradeChecklistPage() {
       <style>{`
         @page { size: A4; margin: 0; }
         @media print {
-          html, body { margin: 0 !important; padding: 0 !important; background: white !important; }
-          main#main-content { padding: 1.2cm 1.5cm !important; }
+          html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background: white !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          main#main-content { padding: 0.9cm 1.2cm !important; }
           .bg-kmf-bg { background: white !important; }
-          /* All text → solid black for paper visibility */
+          /* All text → solid black */
           .text-kmf-text-primary, .text-kmf-text-secondary, .text-kmf-text-tertiary, .text-kmf-accent,
           h1, h2, h3, h4, h5, p, span, li, button { color: #000 !important; }
           .bg-clip-text { -webkit-text-fill-color: #000 !important; }
           nav, footer { display: none !important; }
-          /* Empty checkbox squares (user ticks on paper) */
+          /* Logo → solid black silhouette regardless of source color */
+          .print-logo {
+            filter: brightness(0) !important;
+            width: 22pt !important;
+            height: 22pt !important;
+          }
+          /* Header text smaller */
+          .print-header-title { font-size: 10pt !important; }
+          .print-header-sub { font-size: 6.5pt !important; color: #555 !important; }
+          /* Empty checkbox squares — small, crisp, printable */
           .print-checkbox {
-            border: 1.5px solid #000 !important;
+            border: 1px solid #000 !important;
             background: white !important;
-            width: 14px !important;
-            height: 14px !important;
-            border-radius: 2px !important;
+            width: 9pt !important;
+            height: 9pt !important;
+            min-width: 9pt !important;
+            border-radius: 1.5px !important;
             box-shadow: none !important;
+            margin-top: 1pt !important;
           }
           .print-checkbox-mark { display: none !important; }
-          /* Item text → always solid black, no strikethrough, full opacity */
+          /* Item text — small, dense, solid black */
           .print-item-text {
             color: #000 !important;
             text-decoration: none !important;
             opacity: 1 !important;
-            font-size: 11pt !important;
+            font-size: 8pt !important;
+            line-height: 1.35 !important;
           }
-          /* Category title → solid black, slightly bigger */
+          /* Category title — compact uppercase */
           .print-cat-title {
             color: #000 !important;
-            font-size: 12pt !important;
-            margin-bottom: 6px !important;
+            font-size: 8.5pt !important;
+            margin-bottom: 3pt !important;
+            letter-spacing: 0.04em !important;
           }
-          /* Tighter spacing for paper density */
-          section { page-break-inside: avoid; }
+          /* Tight section spacing, kill card backgrounds */
+          section {
+            page-break-inside: avoid;
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+            margin-bottom: 6pt !important;
+          }
+          ul { margin: 0 !important; }
+          li { padding: 0.5pt 0 !important; }
         }
       `}</style>
     </div>
