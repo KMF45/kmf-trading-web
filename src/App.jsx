@@ -62,6 +62,7 @@ const LotCalculatorPage = lazy(() => import('./pages/LotCalculatorPage'));
 const RiskOfRuinPage = lazy(() => import('./pages/RiskOfRuinPage'));
 const WinRateRRMatrixPage = lazy(() => import('./pages/WinRateRRMatrixPage'));
 const CompoundCalculatorPage = lazy(() => import('./pages/CompoundCalculatorPage'));
+const PreTradeChecklistPage = lazy(() => import('./pages/PreTradeChecklistPage'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -139,6 +140,7 @@ function App() {
           <Route path="/tools/risk-of-ruin" element={<RiskOfRuinPage />} />
           <Route path="/tools/win-rate-rr-matrix" element={<WinRateRRMatrixPage />} />
           <Route path="/tools/compound-calculator" element={<CompoundCalculatorPage />} />
+          <Route path="/tools/pre-trade-checklist" element={<PreTradeChecklistPage />} />
 
           {/* Translated articles */}
           <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />

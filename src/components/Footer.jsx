@@ -160,6 +160,15 @@ const Footer = () => {
                   Compound Calculator
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/tools/pre-trade-checklist"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200"
+                >
+                  Pre-Trade Checklist
+                </Link>
+              </li>
             </ul>
           </div>
 

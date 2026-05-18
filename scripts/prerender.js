@@ -33,6 +33,7 @@ const routes = [
   '/tools/risk-of-ruin',
   '/tools/win-rate-rr-matrix',
   '/tools/compound-calculator',
+  '/tools/pre-trade-checklist',
   // LiquidHours legal
   '/liquidhours/privacy-policy',
   '/liquidhours/terms-of-use',

@@ -151,11 +151,22 @@ const ResourcesDropdown = () => {
             to="/tools/compound-calculator"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+            style={{ borderBottom: '1px solid rgba(79,195,247,0.08)' }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
               <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/>
             </svg>
             Compound Calculator
+          </Link>
+          <Link
+            to="/tools/pre-trade-checklist"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            Pre-Trade Checklist
           </Link>
         </div>
       )}
@@ -245,6 +256,7 @@ const Navbar = () => {
                 <Link to="/tools/risk-of-ruin" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Risk of Ruin Calculator</Link>
                 <Link to="/tools/win-rate-rr-matrix" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Win Rate vs R:R Matrix</Link>
                 <Link to="/tools/compound-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Compound Calculator</Link>
+                <Link to="/tools/pre-trade-checklist" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Pre-Trade Checklist</Link>
               </div>
             </div>
           )}
