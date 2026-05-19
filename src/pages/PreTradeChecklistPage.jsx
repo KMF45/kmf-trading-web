@@ -472,16 +472,16 @@ export default function PreTradeChecklistPage() {
           {/* Top action bar */}
           {!isEmpty && (
             <div className="flex flex-wrap items-center gap-2 mb-6 print:hidden">
-              <button onClick={() => setShowTemplates(true)} className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors hover:bg-kmf-accent/10" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#8FB3C5' }}>Load template</button>
-              <button onClick={handleShare} className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors hover:bg-kmf-accent/10" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#8FB3C5' }}>Share link</button>
-              <button onClick={handleCopyText} className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors hover:bg-kmf-accent/10" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#8FB3C5' }}>{textCopied ? 'Copied!' : 'Copy as text'}</button>
-              <button onClick={handlePrint} className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors hover:bg-kmf-accent/10" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#8FB3C5' }}>Print / PDF</button>
-              <button onClick={() => downloadJson(state)} className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors hover:bg-kmf-accent/10" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#8FB3C5' }}>Export JSON</button>
-              <button onClick={() => importInputRef.current?.click()} className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors hover:bg-kmf-accent/10" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#8FB3C5' }}>Import JSON</button>
+              <ActionButton onClick={() => setShowTemplates(true)} icon={<IconLayers />} label="Load template" />
+              <ActionButton onClick={handleShare} icon={<IconLink />} label="Share link" />
+              <ActionButton onClick={handleCopyText} icon={<IconCopy />} label={textCopied ? 'Copied!' : 'Copy as text'} active={textCopied} />
+              <ActionButton onClick={handlePrint} icon={<IconPrint />} label="Print / PDF" />
+              <ActionButton onClick={() => downloadJson(state)} icon={<IconDownload />} label="Export JSON" />
+              <ActionButton onClick={() => importInputRef.current?.click()} icon={<IconUpload />} label="Import JSON" />
               <input ref={importInputRef} type="file" accept="application/json,.json" onChange={handleImport} className="hidden" />
               <div className="flex-1" />
-              <button onClick={resetChecks} className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors" style={{ background: 'rgba(255,179,0,0.08)', border: '1px solid rgba(255,179,0,0.2)', color: '#FFB300' }} title="Uncheck all items (keeps structure)">Reset checks</button>
-              <button onClick={resetAll} className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors" style={{ background: 'rgba(255,82,82,0.08)', border: '1px solid rgba(255,82,82,0.2)', color: '#FF5252' }} title="Delete the entire checklist">Reset all</button>
+              <ActionButton onClick={resetChecks} icon={<IconRefresh />} label="Reset checks" tone="warn" title="Uncheck all items (keeps structure)" />
+              <ActionButton onClick={resetAll} icon={<IconTrash />} label="Reset all" tone="danger" title="Delete the entire checklist" />
             </div>
           )}
 
@@ -983,3 +983,83 @@ function IconBtn({ children, onClick, disabled, title, danger }) {
     >{children}</button>
   );
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ACTION BUTTON (top toolbar — prominent, icon + label)
+   ═══════════════════════════════════════════════════════════════════════════ */
+const ACTION_TONES = {
+  default: {
+    bg: 'rgba(255,255,255,0.06)',
+    bgHover: 'rgba(79,195,247,0.14)',
+    border: 'rgba(255,255,255,0.12)',
+    borderHover: 'rgba(79,195,247,0.4)',
+    color: '#D8E1EA',
+    colorHover: '#4FC3F7',
+  },
+  active: {
+    bg: 'rgba(0,200,83,0.14)',
+    bgHover: 'rgba(0,200,83,0.18)',
+    border: 'rgba(0,200,83,0.4)',
+    borderHover: 'rgba(0,200,83,0.5)',
+    color: '#80E5A4',
+    colorHover: '#80E5A4',
+  },
+  warn: {
+    bg: 'rgba(255,179,0,0.1)',
+    bgHover: 'rgba(255,179,0,0.18)',
+    border: 'rgba(255,179,0,0.35)',
+    borderHover: 'rgba(255,179,0,0.55)',
+    color: '#FFB300',
+    colorHover: '#FFD54F',
+  },
+  danger: {
+    bg: 'rgba(255,82,82,0.1)',
+    bgHover: 'rgba(255,82,82,0.18)',
+    border: 'rgba(255,82,82,0.35)',
+    borderHover: 'rgba(255,82,82,0.55)',
+    color: '#FF5252',
+    colorHover: '#FF8A80',
+  },
+};
+
+function ActionButton({ icon, label, onClick, tone = 'default', active, title }) {
+  const t = ACTION_TONES[active ? 'active' : tone] || ACTION_TONES.default;
+  return (
+    <button
+      onClick={onClick}
+      title={title}
+      className="flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-150"
+      style={{
+        background: t.bg,
+        border: `1px solid ${t.border}`,
+        color: t.color,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = t.bgHover;
+        e.currentTarget.style.borderColor = t.borderHover;
+        e.currentTarget.style.color = t.colorHover;
+        e.currentTarget.style.transform = 'translateY(-1px)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = t.bg;
+        e.currentTarget.style.borderColor = t.border;
+        e.currentTarget.style.color = t.color;
+        e.currentTarget.style.transform = 'translateY(0)';
+      }}
+    >
+      <span className="shrink-0 inline-flex">{icon}</span>
+      <span>{label}</span>
+    </button>
+  );
+}
+
+/* ─── Icons (Material-style, 16px) ─── */
+const iconProps = { width: 16, height: 16, viewBox: '0 0 24 24', fill: 'currentColor' };
+const IconLayers = () => <svg {...iconProps}><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg>;
+const IconLink = () => <svg {...iconProps}><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>;
+const IconCopy = () => <svg {...iconProps}><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>;
+const IconPrint = () => <svg {...iconProps}><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>;
+const IconDownload = () => <svg {...iconProps}><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>;
+const IconUpload = () => <svg {...iconProps}><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>;
+const IconRefresh = () => <svg {...iconProps}><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>;
+const IconTrash = () => <svg {...iconProps}><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>;
