@@ -480,8 +480,8 @@ export default function PreTradeChecklistPage() {
               <ActionButton onClick={() => importInputRef.current?.click()} icon={<IconUpload />} label="Import JSON" />
               <input ref={importInputRef} type="file" accept="application/json,.json" onChange={handleImport} className="hidden" />
               <div className="flex-1" />
-              <ActionButton onClick={resetChecks} icon={<IconRefresh />} label="Reset checks" tone="warn" title="Uncheck all items (keeps structure)" />
-              <ActionButton onClick={resetAll} icon={<IconTrash />} label="Reset all" tone="danger" title="Delete the entire checklist" />
+              <ActionButton onClick={resetChecks} icon={<IconRefresh />} label="Reset checks" tone="warn" size="sm" title="Uncheck all items (keeps structure)" />
+              <ActionButton onClick={resetAll} icon={<IconTrash />} label="Reset all" tone="danger" size="sm" title="Delete the entire checklist" />
             </div>
           )}
 
@@ -1022,13 +1022,14 @@ const ACTION_TONES = {
   },
 };
 
-function ActionButton({ icon, label, onClick, tone = 'default', active, title }) {
+function ActionButton({ icon, label, onClick, tone = 'default', active, title, size }) {
   const t = ACTION_TONES[active ? 'active' : tone] || ACTION_TONES.default;
+  const isSm = size === 'sm';
   return (
     <button
       onClick={onClick}
       title={title}
-      className="flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-150"
+      className={`flex items-center rounded-lg font-semibold transition-all duration-150 ${isSm ? 'gap-1.5 px-2.5 py-1.5 text-xs' : 'gap-2 px-3.5 py-2 text-sm'}`}
       style={{
         background: t.bg,
         border: `1px solid ${t.border}`,
@@ -1047,7 +1048,7 @@ function ActionButton({ icon, label, onClick, tone = 'default', active, title })
         e.currentTarget.style.transform = 'translateY(0)';
       }}
     >
-      <span className="shrink-0 inline-flex">{icon}</span>
+      <span className={`shrink-0 inline-flex ${isSm ? '[&_svg]:w-3 [&_svg]:h-3' : ''}`}>{icon}</span>
       <span>{label}</span>
     </button>
   );
