@@ -76,4 +76,35 @@
     from { opacity: 0; transform: translateY(8px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+
+  /* ── HowItWorks brand outro ── */
+  @keyframes kmf-outro-logo-pop {
+    0%   { opacity: 0; transform: scale(0.5) rotate(-30deg); }
+    60%  { opacity: 1; transform: scale(1.08) rotate(5deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0); }
+  }
+  @keyframes kmf-outro-title-slide {
+    0%   { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes kmf-outro-shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+  @keyframes kmf-outro-sub-slide {
+    0%   { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 0.95; transform: translateY(0); }
+  }
+  @keyframes kmf-outro-cta-slide {
+    0%   { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 0.85; transform: translateY(0); }
+  }
+  @keyframes kmf-outro-bg-rotate {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+    50%      { transform: translate(-50%, -50%) rotate(180deg); }
+  }
+  @keyframes kmf-phone-float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
 }
