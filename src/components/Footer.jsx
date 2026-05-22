@@ -219,10 +219,41 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-kmf-accent/20 pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
             <p className="text-kmf-text-tertiary text-sm text-center sm:text-left">
               © {currentYear} {t('footer.copyright')}
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="https://saashunt.best/projects/k-m-f-trading-journal"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="SaasHunt Top 1 Daily Winner"
+                className="inline-block transition-opacity duration-200 hover:opacity-90"
+              >
+                <img
+                  src="https://saashunt.best/images/badges/top1-dark.svg"
+                  alt="SaasHunt Top 1 Daily Winner"
+                  style={{ width: 195, height: 'auto' }}
+                  loading="lazy"
+                />
+              </a>
+              <a
+                href="https://www.producthunt.com/products/k-m-f-trading-journal?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-k-m-f-trading-journal"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="K.M.F. Trading Journal on Product Hunt"
+                className="inline-block transition-opacity duration-200 hover:opacity-90"
+              >
+                <img
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1147064&theme=dark&t=1779440854665"
+                  alt="K.M.F. Trading Journal - Track every trade. Find what works. Trade better. | Product Hunt"
+                  width="250"
+                  height="54"
+                  loading="lazy"
+                />
+              </a>
+            </div>
           </div>
         </div>
 
