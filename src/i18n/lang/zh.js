@@ -162,25 +162,27 @@ const zh = {
   "howItWorks": {
     "badge": "简单流程",
     "heading": "如何使用",
-    "subtitle": "三个步骤——从原始交易到真正的洞察。",
+    "subtitle": "看 K.M.F. 如何把每一笔交易变成你下一个 edge。",
     "cta": "立即开始记录",
-    "steps": [
-      {
-        "title": "记录交易",
-        "description": "输入品种、entry price、SL/TP、lot size，勾选交易前检查清单。只需不到 30 秒。",
-        "detail": "品种自动补全 · SL/TP 验证 · 交易前检查清单"
-      },
-      {
-        "title": "分析表现",
-        "description": "查看 win rate、profit factor、R-multiple、drawdown、情绪模式和交易者性格画像——全部自动计算。",
-        "detail": "Win Rate · Profit Factor · Emotions · Personality Profile"
-      },
-      {
-        "title": "提升优势",
-        "description": "完成每周复盘、设定目标、赚取 XP、解锁成就、晋升交易者等级。见证你的纪律和盈利能力持续增长。",
-        "detail": "Weekly Review · Goals · Achievements · Trader Tiers"
-      }
-    ]
+    "demo": {
+      "titlePart1": "你的交易。",
+      "titleAccent": "几秒钟即可记录。",
+      "intro": "Quick Mode 让交易日志零摩擦，让你专注于市场，而不是流程。",
+      "features": [
+        {
+          "title": "在情绪介入前记录",
+          "desc": "趁印象新鲜捕获每一笔交易 — 不找借口，不漏掉任何一笔。"
+        },
+        {
+          "title": "立刻看到真实风险敞口",
+          "desc": "下单前清楚自己在承担什么风险 — 不再犹豫。"
+        },
+        {
+          "title": "建立一致性，而不只是连胜",
+          "desc": "XP 让你持续记录 — 每日积累，复利成真正的 edge。"
+        }
+      ]
+    }
   },
   "testimonials": {
     "badge": "交易者好评",
@@ -358,7 +360,15 @@ const zh = {
     "legal": "法律信息",
     "privacy": "隐私政策",
     "terms": "服务条款",
+    "cookiePrefs": "Cookie 偏好设置",
     "copyright": "K.M.F. Trading Journal. All rights reserved."
+  },
+  "consent": {
+    "title": "我们重视你的隐私",
+    "body": "我们使用分析 Cookie 来了解访客如何使用网站。你可以接受或拒绝 — 选择会被记住。",
+    "accept": "接受",
+    "reject": "拒绝",
+    "learnMore": "了解更多"
   }
 };
 

@@ -34,6 +34,9 @@ const routes = [
   '/tools/win-rate-rr-matrix',
   '/tools/compound-calculator',
   '/tools/pre-trade-checklist',
+  // Legal
+  '/privacy-policy',
+  '/terms-of-service',
   // LiquidHours legal
   '/liquidhours/privacy-policy',
   '/liquidhours/terms-of-use',

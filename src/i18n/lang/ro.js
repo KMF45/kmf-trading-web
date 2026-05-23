@@ -162,25 +162,27 @@ const ro = {
   "howItWorks": {
     "badge": "Flux simplu de lucru",
     "heading": "Cum funcționează",
-    "subtitle": "Trei pași — de la un trade brut la informații reale.",
+    "subtitle": "Vezi cum K.M.F. transformă fiecare trade în următorul tău edge.",
     "cta": "Începe să jurnalizezi acum",
-    "steps": [
-      {
-        "title": "Înregistrează trade-ul",
-        "description": "Introdu instrumentul, entry price, SL/TP, lot size și bifează checklist-ul pre-trade. Durează sub 30 de secunde.",
-        "detail": "Autocompletare instrument · Validare SL/TP · Checklist pre-trade"
-      },
-      {
-        "title": "Analizează performanța",
-        "description": "Vizualizează win rate, profit factor, R-multiple, drawdown, pattern-uri emoționale și profilul tău de trader — toate calculate automat.",
-        "detail": "Win Rate · Profit Factor · Emoții · Personality Profile"
-      },
-      {
-        "title": "Îmbunătățește-ți avantajul",
-        "description": "Completează evaluări săptămânale, stabilește obiective, câștigă XP, deblochează realizări și urcă prin nivelurile de trader. Privește cum îți cresc disciplina și profitabilitatea.",
-        "detail": "Evaluare săptămânală · Obiective · Realizări · Trader Tiers"
-      }
-    ]
+    "demo": {
+      "titlePart1": "Trade-ul tău.",
+      "titleAccent": "Notat în câteva secunde.",
+      "intro": "Quick Mode elimină frecarea din journaling ca să rămâi concentrat pe piață, nu pe proces.",
+      "features": [
+        {
+          "title": "Notează înainte să intre emoția",
+          "desc": "Captează fiecare trade cât e proaspăt — fără scuze, fără înregistrări lipsă."
+        },
+        {
+          "title": "Vezi expunerea reală instant",
+          "desc": "Știi exact ce riști înainte de a confirma — fără ezitări."
+        },
+        {
+          "title": "Construiește consistență, nu doar streak-uri",
+          "desc": "XP te ține în ritm — repetiții zilnice care compun un edge real."
+        }
+      ]
+    }
   },
   "testimonials": {
     "badge": "Traderii adoră aplicația",
@@ -358,7 +360,15 @@ const ro = {
     "legal": "Legal",
     "privacy": "Politica de confidențialitate",
     "terms": "Termeni și condiții",
+    "cookiePrefs": "Preferințe cookie",
     "copyright": "K.M.F. Trading Journal. Toate drepturile rezervate."
+  },
+  "consent": {
+    "title": "Apreciem confidențialitatea ta",
+    "body": "Folosim cookie-uri pentru analytics ca să înțelegem cum este folosit site-ul. Poți accepta sau refuza — alegerea ta e reținută.",
+    "accept": "Accept",
+    "reject": "Refuz",
+    "learnMore": "Află mai mult"
   }
 };
 

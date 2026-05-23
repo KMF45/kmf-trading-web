@@ -162,25 +162,27 @@ const de = {
   "howItWorks": {
     "badge": "Einfacher Workflow",
     "heading": "So funktioniert es",
-    "subtitle": "Drei Schritte — vom rohen Trade zur echten Erkenntnis.",
+    "subtitle": "Sieh, wie K.M.F. jeden Trade in deinen nächsten Edge verwandelt.",
     "cta": "Jetzt mit dem Journaling starten",
-    "steps": [
-      {
-        "title": "Trade erfassen",
-        "description": "Instrument, entry price, SL/TP, lot size eingeben und die Pre-Trade-Checkliste abhaken. Dauert unter 30 Sekunden.",
-        "detail": "Instrumenten-Autocomplete · SL/TP-Validierung · Pre-Trade-Checkliste"
-      },
-      {
-        "title": "Performance analysieren",
-        "description": "Win rate, profit factor, R-multiple, drawdown, Emotionsmuster und dein Trader-Persönlichkeitsprofil — alles automatisch berechnet.",
-        "detail": "Win Rate · Profit Factor · Emotions · Personality Profile"
-      },
-      {
-        "title": "Deinen Edge verbessern",
-        "description": "Wöchentliche Reviews abschließen, Ziele setzen, XP verdienen, Erfolge freischalten und in Trader-Rängen aufsteigen. Beobachte, wie Disziplin und Profitabilität wachsen.",
-        "detail": "Weekly Review · Goals · Achievements · Trader Tiers"
-      }
-    ]
+    "demo": {
+      "titlePart1": "Dein Trade.",
+      "titleAccent": "In Sekunden festgehalten.",
+      "intro": "Quick Mode nimmt die Reibung aus dem Journaling — bleib fokussiert auf den Markt, nicht auf den Prozess.",
+      "features": [
+        {
+          "title": "Festhalten, bevor Emotionen einsetzen",
+          "desc": "Erfasse jeden Trade, solange er frisch ist — keine Ausreden, keine Lücken."
+        },
+        {
+          "title": "Sieh dein echtes Risiko sofort",
+          "desc": "Wisse, was du riskierst, bevor du bestätigst — kein Zögern."
+        },
+        {
+          "title": "Baue Konstanz, nicht nur Streaks",
+          "desc": "XP hält dich am Loggen — tägliche Wiederholungen, die zu einem echten Edge werden."
+        }
+      ]
+    }
   },
   "testimonials": {
     "badge": "Trader lieben es",
@@ -358,7 +360,15 @@ const de = {
     "legal": "Rechtliches",
     "privacy": "Datenschutzrichtlinie",
     "terms": "Nutzungsbedingungen",
+    "cookiePrefs": "Cookie-Einstellungen",
     "copyright": "K.M.F. Trading Journal. Alle Rechte vorbehalten."
+  },
+  "consent": {
+    "title": "Wir schätzen deine Privatsphäre",
+    "body": "Wir verwenden Analyse-Cookies, um zu verstehen, wie Besucher die Website nutzen. Du kannst akzeptieren oder ablehnen — deine Wahl wird gespeichert.",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen",
+    "learnMore": "Mehr erfahren"
   }
 };
 

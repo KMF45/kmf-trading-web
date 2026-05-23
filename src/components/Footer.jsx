@@ -2,6 +2,7 @@ import { FaEnvelope, FaInstagram, FaTiktok, FaReddit } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
+import { openCookieBanner } from './CookieConsent';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -197,22 +198,32 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-kmf-text-primary mt-6 mb-3">{t('footer.legal')}</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="/privacy-policy.html"
+                <Link
+                  to="/privacy-policy"
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                            inline-block hover:translate-x-1 duration-200"
                 >
                   {t('footer.privacy')}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/terms-of-service.html"
+                <Link
+                  to="/terms-of-service"
                   className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
                            inline-block hover:translate-x-1 duration-200"
                 >
                   {t('footer.terms')}
-                </a>
+                </Link>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={openCookieBanner}
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200 bg-transparent border-0 p-0 cursor-pointer text-left"
+                >
+                  {t('footer.cookiePrefs')}
+                </button>
               </li>
             </ul>
           </div>

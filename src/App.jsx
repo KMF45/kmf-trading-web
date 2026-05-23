@@ -5,6 +5,7 @@ import { LanguageProvider } from './i18n/LanguageContext';
 // Eagerly loaded (landing page - first paint)
 import LandingPage from './pages/LandingPage';
 import NotFoundPage from './pages/NotFoundPage';
+import CookieConsent from './components/CookieConsent';
 
 // Blog - lazy loaded
 const BlogPage = lazy(() => import('./pages/BlogPage'));
@@ -53,7 +54,9 @@ const IsHundredDollarsEnoughForex = lazy(() => import('./pages/blog/IsHundredDol
 const TradingVsGambling = lazy(() => import('./pages/blog/TradingVsGambling'));
 const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTradingJournalRo'));
 
-// LiquidHours legal pages
+// Legal pages
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
+const TermsOfServicePage = lazy(() => import('./pages/TermsOfServicePage'));
 const LHPrivacyPolicy = lazy(() => import('./pages/liquidhours/PrivacyPolicyPage'));
 const LHTermsOfUse = lazy(() => import('./pages/liquidhours/TermsOfUsePage'));
 
@@ -145,6 +148,10 @@ function App() {
           {/* Translated articles */}
           <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />
 
+          {/* Legal */}
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+
           {/* LiquidHours legal */}
           <Route path="/liquidhours/privacy-policy" element={<LHPrivacyPolicy />} />
           <Route path="/liquidhours/terms-of-use" element={<LHTermsOfUse />} />
@@ -153,6 +160,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
+      <CookieConsent />
       </LanguageProvider>
     </Router>
   );

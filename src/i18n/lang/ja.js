@@ -162,25 +162,27 @@ const ja = {
   "howItWorks": {
     "badge": "シンプルなワークフロー",
     "heading": "使い方",
-    "subtitle": "3ステップ — 生のトレードから本物の洞察へ。",
+    "subtitle": "K.M.F.が、あらゆるトレードを次のedgeに変える仕組み。",
     "cta": "今すぐジャーナリングを始める",
-    "steps": [
-      {
-        "title": "トレードを記録する",
-        "description": "銘柄、entry price、SL/TP、lot sizeを入力し、トレード前チェックリストにチェック。30秒もかかりません。",
-        "detail": "銘柄オートコンプリート · SL/TPバリデーション · トレード前チェックリスト"
-      },
-      {
-        "title": "パフォーマンスを分析する",
-        "description": "Win rate、profit factor、R-multiple、drawdown、感情パターン、トレーダー性格プロファイル — すべて自動計算で確認。",
-        "detail": "Win Rate · Profit Factor · Emotions · Personality Profile"
-      },
-      {
-        "title": "エッジを磨く",
-        "description": "ウィークリーレビューを完了し、目標を設定し、XPを獲得し、実績を解除し、トレーダーティアを上げましょう。規律と収益性の成長を実感してください。",
-        "detail": "Weekly Review · Goals · Achievements · Trader Tiers"
-      }
-    ]
+    "demo": {
+      "titlePart1": "あなたのトレード。",
+      "titleAccent": "数秒で記録。",
+      "intro": "Quick Modeで記録の手間を最小化。プロセスではなく、相場に集中できます。",
+      "features": [
+        {
+          "title": "感情が入る前に記録",
+          "desc": "新鮮なうちにすべてのトレードを残す — 言い訳も漏れもなし。"
+        },
+        {
+          "title": "リアルなリスクを即座に確認",
+          "desc": "確定する前に何をリスクにさらしているかが分かる — 迷いゼロ。"
+        },
+        {
+          "title": "連続記録ではなく、一貫性を築く",
+          "desc": "XPがログを継続させる — 毎日の積み重ねが本物のedgeに。"
+        }
+      ]
+    }
   },
   "testimonials": {
     "badge": "トレーダーに好評",
@@ -358,7 +360,15 @@ const ja = {
     "legal": "法的情報",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
+    "cookiePrefs": "Cookie 設定",
     "copyright": "K.M.F. Trading Journal. All rights reserved."
+  },
+  "consent": {
+    "title": "あなたのプライバシーを大切にします",
+    "body": "サイトの利用状況を把握するため、分析用 Cookie を使用しています。承諾または拒否を選べます — あなたの選択は記憶されます。",
+    "accept": "承諾",
+    "reject": "拒否",
+    "learnMore": "詳細"
   }
 };
 

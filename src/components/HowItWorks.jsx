@@ -3,38 +3,27 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const OUTRO_DURATION_MS = 2800;
 
-const FEATURES = [
-  {
-    title: 'Log before emotion kicks in',
-    desc: "Capture every trade while it's fresh — no excuses, no missing entries.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
-        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'See your real exposure instantly',
-    desc: "Know what you're risking before you commit — no second-guessing.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm3-4H7v-2h8v2zm0-4H7V7h8v2z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Build consistency, not just streaks',
-    desc: 'XP keeps you logging — daily reps that compound into a real edge.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
-        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-      </svg>
-    ),
-  },
+const FEATURE_ICONS = [
+  (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+    </svg>
+  ),
+  (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm3-4H7v-2h8v2zm0-4H7V7h8v2z" />
+    </svg>
+  ),
+  (
+    <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+    </svg>
+  ),
 ];
 
 const HowItWorks = () => {
   const { t } = useLanguage();
+  const features = t('howItWorks.demo.features');
 
   const videoRef = useRef(null);
   const outroTimerRef = useRef(null);
@@ -103,7 +92,7 @@ const HowItWorks = () => {
                 color: '#fff',
               }}
             >
-              Your trade.{' '}
+              {t('howItWorks.demo.titlePart1')}{' '}
               <span
                 style={{
                   backgroundImage: 'linear-gradient(135deg, #4FC3F7, #E8E0D0)',
@@ -112,18 +101,18 @@ const HowItWorks = () => {
                   backgroundClip: 'text',
                 }}
               >
-                Logged in seconds.
+                {t('howItWorks.demo.titleAccent')}
               </span>
             </h3>
             <p
               className="mb-7"
               style={{ fontSize: 17, color: '#B8CAD4', lineHeight: 1.6, maxWidth: 480 }}
             >
-              Quick Mode removes friction from journaling so you can stay focused on the market, not the process.
+              {t('howItWorks.demo.intro')}
             </p>
 
             <ul className="flex flex-col gap-4 mb-8">
-              {FEATURES.map((f, i) => (
+              {features.map((f, i) => (
                 <li key={i} className="flex gap-3 items-start">
                   <span
                     className="flex items-center justify-center flex-shrink-0"
@@ -136,7 +125,7 @@ const HowItWorks = () => {
                       color: '#4FC3F7',
                     }}
                   >
-                    {f.icon}
+                    {FEATURE_ICONS[i]}
                   </span>
                   <div className="flex-1 min-w-0">
                     <strong className="block text-sm font-bold text-white mb-0.5">

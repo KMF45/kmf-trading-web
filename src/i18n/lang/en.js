@@ -162,25 +162,27 @@ const en = {
   "howItWorks": {
     "badge": "Simple Workflow",
     "heading": "How It Works",
-    "subtitle": "Three steps — from a raw trade to real insight.",
+    "subtitle": "See how K.M.F. turns every trade into your next edge.",
     "cta": "Start Journaling Now",
-    "steps": [
-      {
-        "title": "Log Your Trade",
-        "description": "Enter instrument, entry price, SL/TP, lot size, and tick your pre-trade checklist. Takes under 30 seconds.",
-        "detail": "Instrument autocomplete · SL/TP validation · Pre-trade checklist"
-      },
-      {
-        "title": "Analyze Performance",
-        "description": "View win rate, profit factor, R-multiple, drawdown, emotion patterns, and your trader personality profile — all computed automatically.",
-        "detail": "Win Rate · Profit Factor · Emotions · Personality Profile"
-      },
-      {
-        "title": "Improve Your Edge",
-        "description": "Complete weekly reviews, set goals, earn XP, unlock achievements, and climb trader tiers. Watch your discipline and profitability grow.",
-        "detail": "Weekly Review · Goals · Achievements · Trader Tiers"
-      }
-    ]
+    "demo": {
+      "titlePart1": "Your trade.",
+      "titleAccent": "Logged in seconds.",
+      "intro": "Quick Mode removes friction from journaling so you can stay focused on the market, not the process.",
+      "features": [
+        {
+          "title": "Log before emotion kicks in",
+          "desc": "Capture every trade while it's fresh — no excuses, no missing entries."
+        },
+        {
+          "title": "See your real exposure instantly",
+          "desc": "Know what you're risking before you commit — no second-guessing."
+        },
+        {
+          "title": "Build consistency, not just streaks",
+          "desc": "XP keeps you logging — daily reps that compound into a real edge."
+        }
+      ]
+    }
   },
   "testimonials": {
     "badge": "Traders Love It",
@@ -358,7 +360,15 @@ const en = {
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
+    "cookiePrefs": "Cookie Preferences",
     "copyright": "K.M.F. Trading Journal. All rights reserved."
+  },
+  "consent": {
+    "title": "We value your privacy",
+    "body": "We use cookies for analytics to understand how visitors use the site. You can accept or reject — your choice is remembered.",
+    "accept": "Accept",
+    "reject": "Reject",
+    "learnMore": "Learn more"
   }
 };
 

@@ -162,25 +162,27 @@ const fr = {
   "howItWorks": {
     "badge": "Flux de travail simple",
     "heading": "Comment ça marche",
-    "subtitle": "Trois étapes — d'un trade brut à de vraies informations.",
+    "subtitle": "Voyez comment K.M.F. transforme chaque trade en votre prochain edge.",
     "cta": "Commencer à journaliser",
-    "steps": [
-      {
-        "title": "Enregistrez votre trade",
-        "description": "Entrez l'instrument, l'entry price, le SL/TP, le lot size et cochez votre checklist pré-trade. Moins de 30 secondes.",
-        "detail": "Autocomplétion d'instrument · Validation SL/TP · Checklist pré-trade"
-      },
-      {
-        "title": "Analysez la performance",
-        "description": "Consultez le win rate, le profit factor, le R-multiple, le drawdown, les schémas émotionnels et votre profil de trader — tout calculé automatiquement.",
-        "detail": "Win Rate · Profit Factor · Émotions · Personality Profile"
-      },
-      {
-        "title": "Améliorez votre edge",
-        "description": "Complétez les bilans hebdomadaires, fixez des objectifs, gagnez des XP, débloquez des récompenses et grimpez les niveaux de trader. Observez votre discipline et votre rentabilité progresser.",
-        "detail": "Bilan hebdomadaire · Objectifs · Récompenses · Trader Tiers"
-      }
-    ]
+    "demo": {
+      "titlePart1": "Votre trade.",
+      "titleAccent": "Noté en quelques secondes.",
+      "intro": "Quick Mode supprime la friction du journaling pour que vous restiez concentré sur le marché, pas sur le processus.",
+      "features": [
+        {
+          "title": "Notez avant que l'émotion prenne le dessus",
+          "desc": "Capturez chaque trade tant qu'il est frais — pas d'excuses, pas d'oublis."
+        },
+        {
+          "title": "Voyez votre exposition réelle instantanément",
+          "desc": "Sachez ce que vous risquez avant de valider — aucune hésitation."
+        },
+        {
+          "title": "Construisez de la constance, pas juste des séries",
+          "desc": "L'XP vous fait continuer — des répétitions quotidiennes qui composent un vrai edge."
+        }
+      ]
+    }
   },
   "testimonials": {
     "badge": "Les traders adorent",
@@ -358,7 +360,15 @@ const fr = {
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
+    "cookiePrefs": "Préférences cookies",
     "copyright": "K.M.F. Trading Journal. Tous droits réservés."
+  },
+  "consent": {
+    "title": "Nous respectons votre vie privée",
+    "body": "Nous utilisons des cookies analytiques pour comprendre comment les visiteurs utilisent le site. Vous pouvez accepter ou refuser — votre choix est mémorisé.",
+    "accept": "Accepter",
+    "reject": "Refuser",
+    "learnMore": "En savoir plus"
   }
 };
 
