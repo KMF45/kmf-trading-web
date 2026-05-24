@@ -57,6 +57,7 @@ const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTr
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsOfServicePage = lazy(() => import('./pages/TermsOfServicePage'));
+const UnsubscribePage = lazy(() => import('./pages/UnsubscribePage'));
 const LHPrivacyPolicy = lazy(() => import('./pages/liquidhours/PrivacyPolicyPage'));
 const LHTermsOfUse = lazy(() => import('./pages/liquidhours/TermsOfUsePage'));
 
@@ -151,6 +152,7 @@ function App() {
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+          <Route path="/unsubscribe" element={<UnsubscribePage />} />
 
           {/* LiquidHours legal */}
           <Route path="/liquidhours/privacy-policy" element={<LHPrivacyPolicy />} />
