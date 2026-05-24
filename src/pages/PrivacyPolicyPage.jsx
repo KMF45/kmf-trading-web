@@ -23,7 +23,7 @@ const PrivacyPolicyPage = () => {
         </div>
 
         <h2 style={styles.h2}>1. Introduction &amp; Scope</h2>
-        <p style={styles.text}>K.M.F. Development ("we", "us", or "our") operates:</p>
+        <p style={styles.text}>The K.M.F. Trading Journal is developed and operated by <strong style={styles.strong}>Ionel Aanei</strong>, an individual developer (sole trader) based in Romania ("we", "us", or "our"). This Privacy Policy covers:</p>
         <ul style={styles.ul}>
           <li style={styles.li}><span style={styles.pillWeb}>WEB</span> The website at <a style={styles.link} href="https://kmfjournal.com">kmfjournal.com</a> (the "Website").</li>
           <li style={styles.li}><span style={styles.pillApp}>APP</span> The K.M.F. Trading Journal mobile application on Google Play (the "App").</li>
@@ -32,7 +32,7 @@ const PrivacyPolicyPage = () => {
 
         <h2 style={styles.h2}>2. Contact &amp; Controller</h2>
         <p style={styles.text}>
-          <strong style={styles.strong}>Data Controller:</strong> K.M.F. Development<br />
+          <strong style={styles.strong}>Data Controller:</strong> Ionel Aanei (individual developer)<br />
           <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Location:</strong> Romania (European Union)
         </p>
@@ -339,7 +339,7 @@ const PrivacyPolicyPage = () => {
         <p style={styles.text}>For questions about this Privacy Policy or to exercise your data rights:</p>
         <p style={styles.text}>
           <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
-          <strong style={styles.strong}>Controller:</strong> K.M.F. Development<br />
+          <strong style={styles.strong}>Controller:</strong> Ionel Aanei (individual developer)<br />
           <strong style={styles.strong}>Location:</strong> Romania (European Union)
         </p>
         <p style={styles.text}>We will respond within 30 days.</p>

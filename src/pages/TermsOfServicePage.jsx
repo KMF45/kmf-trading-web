@@ -23,7 +23,7 @@ const TermsOfServicePage = () => {
         </div>
 
         <p style={styles.text}>
-          These Terms of Service ("Terms") constitute a legally binding agreement between you and K.M.F. Development ("we", "us", or "our") concerning your use of:
+          These Terms of Service ("Terms") constitute a legally binding agreement between you and Ionel Aanei, an individual developer (sole trader) based in Romania ("we", "us", or "our"), concerning your use of:
         </p>
         <ul style={styles.ul}>
           <li style={styles.li}><span style={styles.pillWeb}>WEB</span> The website at <a style={styles.link} href="https://kmfjournal.com">kmfjournal.com</a> (the "Website")</li>
@@ -105,7 +105,7 @@ const TermsOfServicePage = () => {
         <p style={styles.text}>Violation may result in immediate suspension or termination of your account, legal action where applicable, and reporting to appropriate authorities.</p>
 
         <h2 style={styles.h2}>5. Intellectual Property</h2>
-        <p style={styles.text}>The Website and App — including all content, designs, logos, blog articles, calculator implementations, code, text, and graphics — is the property of K.M.F. Development and is protected by international copyright, trademark, and other intellectual property laws.</p>
+        <p style={styles.text}>The Website and App — including all content, designs, logos, blog articles, calculator implementations, code, text, and graphics — is the property of Ionel Aanei and is protected by international copyright, trademark, and other intellectual property laws.</p>
         <p style={styles.text}>We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for personal purposes and to read the Website's content. You may not:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>Copy, modify, or distribute the App or any part of it</li>
@@ -154,7 +154,7 @@ const TermsOfServicePage = () => {
 
         <h2 style={styles.h2}>9. Limitation of Liability</h2>
         <p style={styles.text}>
-          <strong style={styles.strong}>To the maximum extent permitted by law, K.M.F. Development is not liable for any:</strong>
+          <strong style={styles.strong}>To the maximum extent permitted by law, Ionel Aanei is not liable for any:</strong>
         </p>
         <ul style={styles.ul}>
           <li style={styles.li}>Trading losses or financial damages of any kind</li>
@@ -179,7 +179,7 @@ const TermsOfServicePage = () => {
 
         <h2 style={styles.h2}>11. Indemnification</h2>
         <p style={styles.text}>
-          You agree to indemnify, defend, and hold harmless K.M.F. Development and our affiliates from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the Website or App, your violation of these Terms, your violation of any law or third-party rights, or your trading activities and decisions.
+          You agree to indemnify, defend, and hold harmless Ionel Aanei from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the Website or App, your violation of these Terms, your violation of any law or third-party rights, or your trading activities and decisions.
         </p>
 
         <h2 style={styles.h2}>12. Termination</h2>
@@ -209,7 +209,7 @@ const TermsOfServicePage = () => {
 
         <h2 style={styles.h2}>15. Miscellaneous</h2>
         <p style={styles.text}>
-          <strong style={styles.strong}>Entire Agreement:</strong> These Terms, together with our Privacy Policy, constitute the entire agreement between you and K.M.F. Development.<br />
+          <strong style={styles.strong}>Entire Agreement:</strong> These Terms, together with our Privacy Policy, constitute the entire agreement between you and Ionel Aanei.<br />
           <strong style={styles.strong}>Severability:</strong> If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full effect.<br />
           <strong style={styles.strong}>Waiver:</strong> Our failure to enforce any provision does not constitute a waiver of that provision.<br />
           <strong style={styles.strong}>Assignment:</strong> You may not assign or transfer these Terms. We may assign our rights and obligations without your consent.
@@ -219,7 +219,7 @@ const TermsOfServicePage = () => {
         <p style={styles.text}>For questions about these Terms:</p>
         <p style={styles.text}>
           <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
-          <strong style={styles.strong}>Developer:</strong> K.M.F. Development<br />
+          <strong style={styles.strong}>Developer:</strong> Ionel Aanei (individual developer)<br />
           <strong style={styles.strong}>Location:</strong> Romania (European Union)
         </p>
         <p style={styles.text}>We will respond within 30 days.</p>
