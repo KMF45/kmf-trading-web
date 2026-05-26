@@ -19,7 +19,7 @@ const TermsOfServicePage = () => {
         <div style={{ textAlign: 'center', marginBottom: 40 }}>
           <h1 style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Terms of Service</h1>
           <p style={{ fontSize: 14, color: '#4FC3F7', fontWeight: 600 }}>K.M.F. Trading Journal — Website &amp; Mobile App</p>
-          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Last updated: May 23, 2026</p>
+          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Last updated: May 26, 2026</p>
         </div>
 
         <p style={styles.text}>
@@ -83,6 +83,7 @@ const TermsOfServicePage = () => {
           <li style={styles.li}>Be at least 18 years of age (or legal age in your jurisdiction)</li>
           <li style={styles.li}>Agree to these Terms and our Privacy Policy</li>
         </ul>
+        <p style={styles.text}>By creating an account, you agree that we may send service-critical (transactional) emails and one product follow-up email to your registered address. You can opt out of the follow-up email at any time via the one-click unsubscribe link it contains, without affecting transactional emails. See our <a style={styles.link} href="/privacy-policy">Privacy Policy</a> for details.</p>
 
         <h3 style={styles.h3}>4.2 Account Security</h3>
         <p style={styles.text}>You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account. Notify us immediately of any unauthorized access. We are not liable for any loss or damage resulting from your failure to protect your account information.</p>

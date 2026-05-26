@@ -19,7 +19,7 @@ const PrivacyPolicyPage = () => {
         <div style={{ textAlign: 'center', marginBottom: 40 }}>
           <h1 style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Privacy Policy</h1>
           <p style={{ fontSize: 14, color: '#4FC3F7', fontWeight: 600 }}>K.M.F. Trading Journal — Website &amp; Mobile App</p>
-          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Last updated: May 23, 2026</p>
+          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Last updated: May 26, 2026</p>
         </div>
 
         <h2 style={styles.h2}>1. Introduction &amp; Scope</h2>
@@ -144,6 +144,7 @@ const PrivacyPolicyPage = () => {
           <li style={styles.li}>Email address (required for authentication)</li>
           <li style={styles.li}>Password (hashed by Firebase Authentication — never stored in plain text)</li>
         </ul>
+        <p style={styles.text}>To manage your account and email communications, we also store: your selected app language, your signup date, flags and timestamps tracking which emails have been sent to you, your unsubscribe status, and a unique unsubscribe token used to securely process one-click opt-out links.</p>
 
         <p style={styles.text}><strong style={styles.strong}>The App does NOT collect:</strong></p>
         <ul style={styles.ul}>
@@ -200,6 +201,7 @@ const PrivacyPolicyPage = () => {
               <tr><td style={styles.td}>Account email &amp; password</td><td style={styles.td}><span style={styles.pillApp}>APP</span></td><td style={styles.td}>Contract performance — Art. 6(1)(b)</td></tr>
               <tr><td style={styles.td}>Trading data &amp; notes</td><td style={styles.td}><span style={styles.pillApp}>APP</span></td><td style={styles.td}>Contract performance — Art. 6(1)(b)</td></tr>
               <tr><td style={styles.td}>App analytics &amp; crash reports</td><td style={styles.td}><span style={styles.pillApp}>APP</span></td><td style={styles.td}>Legitimate interest — Art. 6(1)(f)</td></tr>
+              <tr><td style={styles.td}>Email communications (welcome + 7-day follow-up)</td><td style={styles.td}><span style={styles.pillApp}>APP</span></td><td style={styles.td}>Legitimate interest — Art. 6(1)(f), with one-click opt-out</td></tr>
               <tr><td style={styles.td}>Website analytics (GA4)</td><td style={styles.td}><span style={styles.pillWeb}>WEB</span></td><td style={styles.td}>Consent — Art. 6(1)(a)</td></tr>
               <tr><td style={styles.td}>Website third-party badges/APIs</td><td style={styles.td}><span style={styles.pillWeb}>WEB</span></td><td style={styles.td}>Legitimate interest — Art. 6(1)(f)</td></tr>
               <tr><td style={styles.td}>localStorage settings</td><td style={styles.td}><span style={styles.pillWeb}>WEB</span></td><td style={styles.td}>Legitimate interest</td></tr>
@@ -234,11 +236,19 @@ const PrivacyPolicyPage = () => {
 
         <p style={styles.text}><strong style={styles.strong}>We do NOT use your data for:</strong></p>
         <ul style={styles.ul}>
-          <li style={styles.li}>Marketing or advertising purposes</li>
-          <li style={styles.li}>Selling to third parties</li>
+          <li style={styles.li}>Third-party advertising networks or ad targeting</li>
+          <li style={styles.li}>Selling or renting your data to third parties</li>
           <li style={styles.li}>Unrelated commercial purposes</li>
           <li style={styles.li}>Cross-site or cross-device tracking beyond what you explicitly consent to</li>
         </ul>
+
+        <h3 style={styles.h3}>8.4 Email Communications <span style={styles.pillApp}>APP</span></h3>
+        <p style={styles.text}>When you create an account in the App, we may send the following emails to your registered address:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><strong style={styles.strong}>Transactional emails</strong> — a welcome email when your account is created, plus service-critical messages (e.g. email verification, password reset, important policy changes). These are necessary to operate your account and cannot be opted out of while your account is active.</li>
+          <li style={styles.li}><strong style={styles.strong}>One product follow-up email</strong> — approximately 7 days after signup, inviting you to leave a review or share feedback. This is the only promotional email we send.</li>
+        </ul>
+        <p style={styles.text}>Every promotional email includes a <strong style={styles.strong}>one-click unsubscribe link</strong> (<a style={styles.link} href="https://kmfjournal.com/unsubscribe">kmfjournal.com/unsubscribe</a>). Unsubscribing stops promotional emails only — it does not affect transactional or security emails, and does not delete your account.</p>
 
         <h2 style={styles.h2}>9. App Third-Party Services <span style={styles.pillApp}>APP</span></h2>
         <ul style={styles.ul}>
@@ -309,6 +319,7 @@ const PrivacyPolicyPage = () => {
 
         <h3 style={styles.h3}>11.5 Right to Object</h3>
         <p style={styles.text}>You can object to processing for analytics or legitimate-interest-based processing by rejecting cookies (Web) or by discontinuing use and deleting your account (App).</p>
+        <p style={styles.text}><span style={styles.pillApp}>APP</span> You can also unsubscribe from our product follow-up email at any time using the one-click link in that email or at <a style={styles.link} href="https://kmfjournal.com/unsubscribe">kmfjournal.com/unsubscribe</a>. This stops promotional emails without deleting your account or affecting transactional/security emails.</p>
 
         <h3 style={styles.h3}>11.6 Right to Withdraw Consent</h3>
         <p style={styles.text}>You can withdraw consent at any time. For Website analytics, use "Cookie Preferences" in the footer. For App data, delete your account.</p>
