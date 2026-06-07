@@ -232,7 +232,7 @@ const Footer = () => {
         <div className="border-t border-kmf-accent/20 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
             <a
-              href="https://onalyse.vercel.app/ro/scan/kmfjournal.com?ref=badge"
+              href="https://onalyse.vercel.app/en/scan/kmfjournal.com?ref=badge"
               target="_blank"
               rel="noopener noreferrer"
               title="Onalyse Website Score"
