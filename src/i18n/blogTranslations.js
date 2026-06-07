@@ -5,6 +5,10 @@ const blogTranslations = {
     en: '/blog/what-is-kmf-trading-journal',
     ro: '/blog/ro/what-is-kmf-trading-journal',
   },
+  'trading-vs-gambling': {
+    en: '/blog/trading-vs-gambling',
+    ro: '/blog/ro/trading-vs-gambling',
+  },
 };
 
 export default blogTranslations;

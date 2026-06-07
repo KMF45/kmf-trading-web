@@ -1,16 +1,28 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
+
+const META = {
+  en: {
+    title: 'Terms of Service — K.M.F. Trading Journal',
+    desc: 'Terms of Service for K.M.F. Trading Journal — covers the kmfjournal.com website and the Android app. Plain language. Romanian law.',
+  },
+  ro: {
+    title: 'Termeni și Condiții — K.M.F. Trading Journal',
+    desc: 'Termenii și condițiile pentru K.M.F. Trading Journal — acoperă site-ul kmfjournal.com și aplicația de Android. Limbaj simplu. Lege română.',
+  },
+};
 
 const TermsOfServicePage = () => {
+  const { lang } = useLanguage();
+
   useEffect(() => {
-    document.title = 'Terms of Service — K.M.F. Trading Journal';
+    const m = META[lang] || META.en;
+    document.title = m.title;
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) {
-      desc.setAttribute(
-        'content',
-        'Terms of Service for K.M.F. Trading Journal — covers the kmfjournal.com website and the Android app. Plain language. Romanian law.'
-      );
-    }
-  }, []);
+    if (desc) desc.setAttribute('content', m.desc);
+  }, [lang]);
+
+  if (lang === 'ro') return <TermsOfServiceRo />;
 
   return (
     <div style={{ minHeight: '100vh', background: '#0F1115', color: '#E0E0E0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
@@ -228,6 +240,224 @@ const TermsOfServicePage = () => {
     </div>
   );
 };
+
+function TermsOfServiceRo() {
+  return (
+    <div style={{ minHeight: '100vh', background: '#0F1115', color: '#E0E0E0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 20px 80px' }}>
+        {/* Header */}
+        <div style={{ textAlign: 'center', marginBottom: 40 }}>
+          <h1 style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Termeni și Condiții</h1>
+          <p style={{ fontSize: 14, color: '#4FC3F7', fontWeight: 600 }}>K.M.F. Trading Journal — Site &amp; Aplicație mobilă</p>
+          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Ultima actualizare: 26 mai 2026</p>
+        </div>
+
+        <p style={styles.text}>
+          Acești Termeni și Condiții („Termenii") formează un acord obligatoriu din punct de vedere legal între tine și Ionel Aanei, dezvoltator individual (persoană fizică) din România („noi" sau „al nostru"), privind folosirea:
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Site-ul de la <a style={styles.link} href="https://kmfjournal.com">kmfjournal.com</a> („Site-ul")</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> Aplicația mobilă K.M.F. Trading Journal din Google Play („Aplicația")</li>
+        </ul>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Folosind Site-ul sau Aplicația, ești de acord să respecți acești Termeni. Dacă nu ești de acord, nu le folosi.</strong>
+        </p>
+
+        <h2 style={styles.h2}>1. Descrierea Serviciului</h2>
+        <p style={styles.text}>
+          K.M.F. Trading Journal este un instrument de urmărire și analiză a performanței în trading. Site-ul oferă informații de prezentare, articole de blog, calculatoare gratuite și Politica de Confidențialitate / Termenii. Aplicația îți permite să loghezi trade-uri, să analizezi performanța, să folosești checklist-uri pre-trade, să generezi rapoarte PDF și să sincronizezi datele între dispozitive.
+        </p>
+        <p style={styles.text}>Ambele sunt oferite „ca atare" și sunt destinate doar pentru ținerea personală a evidenței trade-urilor, educație și analiză.</p>
+
+        <h2 style={styles.h2}>2. Nu Este Sfat Financiar</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>K.M.F. Trading Journal este doar un instrument de urmărire, analiză și educație. Nu oferim sfaturi financiare, recomandări de investiții sau semnale de trading.</strong>
+        </p>
+        <p style={styles.text}>Tot conținutul — articole de blog, rezultate ale calculatoarelor, statistici din Aplicație, Pre-Trade Checklist, instrumentul Risk of Ruin — are <strong style={styles.strong}>scop pur informativ și educativ</strong>.</p>
+        <p style={styles.text}>Recunoști că:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Trading-ul implică un risc mare de pierdere și poate să nu fie potrivit pentru toți investitorii.</li>
+          <li style={styles.li}>Poți pierde tot capitalul investit sau chiar mai mult.</li>
+          <li style={styles.li}>Performanța din trecut nu garantează rezultate viitoare.</li>
+          <li style={styles.li}>Ești singurul responsabil pentru toate deciziile de trading.</li>
+          <li style={styles.li}>Nu suntem consultanți financiari, brokeri sau dealeri autorizați.</li>
+          <li style={styles.li}>Ar trebui să consulți un profesionist financiar calificat înainte să iei decizii de investiții.</li>
+          <li style={styles.li}>Nu garantăm acuratețea sau exhaustivitatea niciunui calculator, statistici sau conținut educativ.</li>
+          <li style={styles.li}>Ar trebui să tranzacționezi doar cu bani pe care îți permiți să-i pierzi.</li>
+        </ul>
+
+        <h2 style={styles.h2}>3. Folosirea Site-ului <span style={styles.pillWeb}>WEB</span></h2>
+
+        <h3 style={styles.h3}>3.1 Fără Cont</h3>
+        <p style={styles.text}>Site-ul este accesibil public. Nu e nevoie de cont, înregistrare sau plată ca să citești conținutul, să folosești calculatoarele sau să citești blogul.</p>
+
+        <h3 style={styles.h3}>3.2 Instrumente Gratuite</h3>
+        <p style={styles.text}>Calculatoarele de pe Site (Lot Size, Risk of Ruin, Win Rate vs R:R Matrix, Compound, Pre-Trade Checklist) sunt gratuite. Toate calculele se fac în browserul tău. Rezultatele sunt doar informative și nu reprezintă sfaturi de investiții.</p>
+
+        <h3 style={styles.h3}>3.3 Folosire Acceptabilă</h3>
+        <p style={styles.text}>Poți folosi Site-ul în scopuri personale, necomerciale. Ești de acord să nu:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Extragi sau copiezi conținut prin mijloace automate fără permisiune</li>
+          <li style={styles.li}>Republici articolele de blog sau rezultatele calculatoarelor ca fiind munca ta</li>
+          <li style={styles.li}>Încerci să afectezi funcționarea Site-ului</li>
+          <li style={styles.li}>Folosești Site-ul într-un mod care încalcă legile aplicabile</li>
+        </ul>
+
+        <h2 style={styles.h2}>4. Contul și Folosirea Aplicației <span style={styles.pillApp}>APP</span></h2>
+
+        <h3 style={styles.h3}>4.1 Crearea Contului</h3>
+        <p style={styles.text}>Ca să folosești Aplicația, trebuie să:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Oferi o adresă de email validă</li>
+          <li style={styles.li}>Creezi o parolă sigură</li>
+          <li style={styles.li}>Ai cel puțin 18 ani (sau vârsta legală din jurisdicția ta)</li>
+          <li style={styles.li}>Fii de acord cu acești Termeni și cu Politica noastră de Confidențialitate</li>
+        </ul>
+        <p style={styles.text}>Creând un cont, ești de acord să-ți trimitem email-uri esențiale pentru serviciu (tranzacționale) și un singur email de follow-up despre produs la adresa înregistrată. Te poți dezabona oricând de la email-ul de follow-up prin linkul de dezabonare cu un click pe care îl conține, fără să afecteze email-urile tranzacționale. Vezi <a style={styles.link} href="/privacy-policy">Politica de Confidențialitate</a> pentru detalii.</p>
+
+        <h3 style={styles.h3}>4.2 Securitatea Contului</h3>
+        <p style={styles.text}>Ești responsabil să păstrezi confidențialitatea datelor tale de cont și pentru toate activitățile din contul tău. Anunță-ne imediat dacă observi acces neautorizat. Nu suntem răspunzători pentru nicio pierdere sau daună rezultată din faptul că nu ți-ai protejat datele de cont.</p>
+
+        <h3 style={styles.h3}>4.3 Folosirea Acceptabilă a Aplicației</h3>
+        <p style={styles.text}>Poți folosi Aplicația doar pentru ținerea personală, necomercială a evidenței trade-urilor și pentru analiză. Ești de acord să NU:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Folosești Aplicația în vreun scop ilegal</li>
+          <li style={styles.li}>Faci reverse engineering, decompilezi sau dezasamblezi Aplicația</li>
+          <li style={styles.li}>Afectezi sau perturbi funcționarea Aplicației sau serverele</li>
+          <li style={styles.li}>Folosești scripturi automate, boți sau unelte similare fără autorizare</li>
+          <li style={styles.li}>Împarți datele tale de cont cu alții</li>
+          <li style={styles.li}>Încarci cod rău intenționat, viruși sau conținut dăunător</li>
+          <li style={styles.li}>Abuzezi, hărțuiești sau faci rău altor utilizatori</li>
+          <li style={styles.li}>Încalci drepturile vreunui terț</li>
+          <li style={styles.li}>Folosești Aplicația ca să oferi servicii comerciale către terți</li>
+        </ul>
+
+        <h3 style={styles.h3}>4.4 Consecințele Încălcării</h3>
+        <p style={styles.text}>Încălcarea poate duce la suspendarea sau închiderea imediată a contului tău, la acțiuni legale acolo unde se aplică și la raportarea către autoritățile competente.</p>
+
+        <h2 style={styles.h2}>5. Proprietate Intelectuală</h2>
+        <p style={styles.text}>Site-ul și Aplicația — inclusiv tot conținutul, designul, logo-urile, articolele de blog, implementările calculatoarelor, codul, textul și grafica — sunt proprietatea lui Ionel Aanei și sunt protejate de legile internaționale privind drepturile de autor, mărcile comerciale și alte legi de proprietate intelectuală.</p>
+        <p style={styles.text}>Îți acordăm o licență limitată, neexclusivă, netransferabilă și revocabilă de a folosi Aplicația în scopuri personale și de a citi conținutul Site-ului. Nu ai voie să:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Copiezi, modifici sau distribui Aplicația sau orice parte din ea</li>
+          <li style={styles.li}>Faci reverse engineering, decompilezi sau dezasamblezi Aplicația</li>
+          <li style={styles.li}>Folosești designul, brandul sau conținutul nostru în scopuri comerciale</li>
+          <li style={styles.li}>Creezi lucrări derivate pe baza Aplicației sau a Site-ului</li>
+        </ul>
+        <p style={styles.text}>
+          Rămâi proprietarul tuturor datelor de trading, notițelor și conținutului pe care le creezi în Aplicație („Conținutul Tău"). Folosind Aplicația, ne acorzi o licență de a stoca, procesa și afișa Conținutul Tău doar în scopul de a oferi funcționalitatea Aplicației. Nu vom partaja, vinde sau folosi Conținutul Tău în alt scop, cu excepția cazurilor cerute de lege.
+        </p>
+
+        <h2 style={styles.h2}>6. Abonamente și Plăți <span style={styles.pillApp}>APP</span></h2>
+        <p style={styles.text}>Aplicația oferă atât funcții gratuite, cât și funcții Premium disponibile prin abonament.</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Abonamentele sunt facturate prin Google Play</li>
+          <li style={styles.li}>Abonamentele se reînnoiesc automat dacă nu sunt anulate</li>
+          <li style={styles.li}>Poți anula oricând din setările Google Play</li>
+          <li style={styles.li}>Fără rambursări pentru perioade parțiale (în limita politicii de rambursare Google Play)</li>
+          <li style={styles.li}>Prețurile se pot schimba cu notificare prealabilă</li>
+        </ul>
+        <p style={styles.text}>Toate plățile sunt procesate de Google Play. Nu stocăm și nu avem acces la informațiile tale de plată.</p>
+
+        <h2 style={styles.h2}>7. Date și Confidențialitate</h2>
+        <p style={styles.text}>Folosirea Site-ului și a Aplicației este guvernată și de <a style={styles.link} href="/privacy-policy">Politica de Confidențialitate</a>, care este inclusă în acești Termeni prin referință.</p>
+        <p style={styles.text}>Puncte cheie:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Site-ul nu colectează date personale direct. Cookie-urile de analiză se încarcă doar după consimțământ explicit.</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> Aplicația colectează datele necesare pentru a oferi funcționalitatea (email, date de trading, analiză).</li>
+          <li style={styles.li}>Datele din Aplicație sunt stocate în Uniunea Europeană (regiunea eur3).</li>
+          <li style={styles.li}>Nu vindem datele tale către terți.</li>
+          <li style={styles.li}>Poți cere oricând ștergerea contului și a datelor tale.</li>
+        </ul>
+
+        <h2 style={styles.h2}>8. Renunțarea la Garanții</h2>
+        <p style={styles.text}>
+          Site-ul și Aplicația sunt oferite <strong style={styles.strong}>„ca atare"</strong> și <strong style={styles.strong}>„în limita disponibilității"</strong>, fără garanții de niciun fel, fie ele explicite sau implicite, inclusiv:
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Garanții implicite de vandabilitate</li>
+          <li style={styles.li}>Potrivire pentru un scop anume</li>
+          <li style={styles.li}>Acuratețea sau fiabilitatea calculelor, statisticilor sau conținutului educativ</li>
+          <li style={styles.li}>Funcționare neîntreruptă sau fără erori</li>
+          <li style={styles.li}>Corectarea promptă a defectelor</li>
+          <li style={styles.li}>Păstrarea permanentă a vreunor date (deși implementăm măsuri de backup)</li>
+        </ul>
+
+        <h2 style={styles.h2}>9. Limitarea Răspunderii</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>În măsura maximă permisă de lege, Ionel Aanei nu este răspunzător pentru niciun fel de:</strong>
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Pierderi din trading sau daune financiare de orice fel</li>
+          <li style={styles.li}>Profituri pierdute sau oportunități de afaceri ratate</li>
+          <li style={styles.li}>Pierderea sau coruperea datelor (deși implementăm backup-uri)</li>
+          <li style={styles.li}>Daune indirecte, incidentale, consecvente, speciale sau punitive</li>
+          <li style={styles.li}>Daune rezultate din accesul neautorizat la contul tău</li>
+          <li style={styles.li}>Daune cauzate de servicii terțe (Firebase, Google Cloud, Google Analytics, Google Play, Twelve Data)</li>
+        </ul>
+        <p style={styles.text}>Această limitare se aplică indiferent de temeiul răspunderii (contract, delict, neglijență sau altele), chiar dacă am fost avertizați despre posibilitatea unor astfel de daune.</p>
+        <p style={styles.text}>Răspunderea noastră totală față de tine pentru toate revendicările nu va depăși sumele totale plătite de tine către noi în cele douăsprezece (12) luni dinaintea revendicării. Pentru utilizatorii Site-ului care nu ne-au plătit nimic, răspunderea noastră maximă este limitată la 100 €.</p>
+
+        <h2 style={styles.h2}>10. Responsabilitatea Utilizatorului</h2>
+        <p style={styles.text}>Recunoști că:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Ești singurul responsabil pentru deciziile tale de trading.</li>
+          <li style={styles.li}>Nu avem niciun control asupra piețelor financiare.</li>
+          <li style={styles.li}>Statisticile Aplicației și rezultatele calculatoarelor se bazează pe datele pe care le oferi TU.</li>
+          <li style={styles.li}>Ar trebui să verifici toate calculele independent.</li>
+          <li style={styles.li}>Ar trebui să-ți faci backup la datele importante.</li>
+        </ul>
+
+        <h2 style={styles.h2}>11. Despăgubire</h2>
+        <p style={styles.text}>
+          Ești de acord să despăgubești, să aperi și să-l protejezi pe Ionel Aanei de orice revendicări, daune, pierderi, răspunderi și cheltuieli (inclusiv onorarii legale) care apar din folosirea Site-ului sau a Aplicației, din încălcarea acestor Termeni, din încălcarea vreunei legi sau a drepturilor unui terț, sau din activitățile și deciziile tale de trading.
+        </p>
+
+        <h2 style={styles.h2}>12. Încetare</h2>
+
+        <h3 style={styles.h3}>12.1 Încetarea de Către Tine</h3>
+        <p style={styles.text}>Îți poți închide oricând contul din Aplicație:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Folosind funcția „Șterge Contul" din Setările Aplicației</li>
+          <li style={styles.li}>Contactându-ne la <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+        </ul>
+        <p style={styles.text}>Pentru Site, poți să nu-l mai vizitezi oricând, fără notificare.</p>
+
+        <h3 style={styles.h3}>12.2 Încetarea de Către Noi</h3>
+        <p style={styles.text}>Putem suspenda sau închide contul tău imediat, fără notificare, dacă încalci acești Termeni, te implici în activități frauduloase sau ilegale, abuzezi Aplicația sau alți utilizatori, sau acolo unde legea o cere. Putem de asemenea să întrerupem Aplicația cu o notificare rezonabilă.</p>
+
+        <h2 style={styles.h2}>13. Modificări ale Termenilor</h2>
+        <p style={styles.text}>Putem modifica acești Termeni oricând. Te vom anunța despre schimbările importante actualizând data „Ultima actualizare", afișând o notificare în Aplicație sau trimițând un email la adresa ta înregistrată (pentru schimbări importante de cont). Continuarea folosirii după ce schimbările sunt publicate înseamnă acceptarea Termenilor modificați.</p>
+
+        <h2 style={styles.h2}>14. Legea Aplicabilă și Disputele</h2>
+        <p style={styles.text}>Acești Termeni sunt guvernați de legile României, fără a ține cont de principiile privind conflictul de legi.</p>
+        <p style={styles.text}>Orice dispută va fi rezolvată prin (în această ordine):</p>
+        <ol style={{ ...styles.ul, listStyleType: 'decimal' }}>
+          <li style={styles.li}>Negocieri de bună credință între părți</li>
+          <li style={styles.li}>Mediere, dacă negocierile eșuează</li>
+          <li style={styles.li}>Instanțele din România, dacă medierea eșuează</li>
+        </ol>
+
+        <h2 style={styles.h2}>15. Diverse</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Acordul Complet:</strong> Acești Termeni, împreună cu Politica de Confidențialitate, formează acordul complet dintre tine și Ionel Aanei.<br />
+          <strong style={styles.strong}>Separabilitate:</strong> Dacă vreo prevedere din acești Termeni este găsită invalidă sau inaplicabilă, restul prevederilor rămân pe deplin în vigoare.<br />
+          <strong style={styles.strong}>Renunțare:</strong> Faptul că nu aplicăm o prevedere nu înseamnă că renunțăm la ea.<br />
+          <strong style={styles.strong}>Cesiune:</strong> Tu nu poți cesiona sau transfera acești Termeni. Noi putem cesiona drepturile și obligațiile noastre fără acordul tău.
+        </p>
+
+        <h2 style={styles.h2}>16. Contact</h2>
+        <p style={styles.text}>Pentru întrebări despre acești Termeni:</p>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Dezvoltator:</strong> Ionel Aanei (dezvoltator individual)<br />
+          <strong style={styles.strong}>Locație:</strong> România (Uniunea Europeană)
+        </p>
+        <p style={styles.text}>Vom răspunde în termen de 30 de zile.</p>
+      </div>
+    </div>
+  );
+}
 
 const styles = {
   h2: { fontSize: 20, fontWeight: 700, color: '#fff', marginTop: 36, marginBottom: 12 },

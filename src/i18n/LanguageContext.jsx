@@ -16,13 +16,30 @@ const loaders = {
 
 const LanguageContext = createContext();
 
+// Detect the visitor's preferred language from the browser.
+// Only used on first visit (no saved choice). Unsupported → English.
+function detectBrowserLang() {
+  if (typeof navigator === 'undefined') return 'en';
+  try {
+    const navLangs = navigator.languages && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language];
+    for (const l of navLangs) {
+      if (!l) continue;
+      const code = l.toLowerCase().split('-')[0]; // 'de-DE' → 'de', 'zh-CN' → 'zh'
+      if (LANGS.includes(code)) return code;
+    }
+  } catch {}
+  return 'en';
+}
+
 export const LanguageProvider = ({ children }) => {
   const [lang, setLangState] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved && LANGS.includes(saved)) return saved;
+      if (saved && LANGS.includes(saved)) return saved; // manual choice always wins
     } catch {}
-    return 'en';
+    return detectBrowserLang();
   });
 
   // Cache loaded translations

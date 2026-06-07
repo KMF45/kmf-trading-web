@@ -42,6 +42,7 @@ const routes = [
   '/liquidhours/terms-of-use',
   // Translated articles
   '/blog/ro/what-is-kmf-trading-journal',
+  '/blog/ro/trading-vs-gambling',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

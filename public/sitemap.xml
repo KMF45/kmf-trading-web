@@ -308,9 +308,21 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/trading-vs-gambling</loc>
-    <lastmod>2026-05-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/trading-vs-gambling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/trading-vs-gambling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/trading-vs-gambling"/>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/trading-vs-gambling</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/trading-vs-gambling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/trading-vs-gambling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/trading-vs-gambling"/>
+    <lastmod>2026-06-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/category/psychology</loc>

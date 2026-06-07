@@ -1,16 +1,28 @@
 import { useEffect } from 'react';
+import { useLanguage } from '../i18n/LanguageContext';
+
+const META = {
+  en: {
+    title: 'Privacy Policy — K.M.F. Trading Journal',
+    desc: 'Privacy Policy for K.M.F. Trading Journal — covers the kmfjournal.com website and the Android app. GDPR-compliant. Cookie usage and third-party services explained in plain language.',
+  },
+  ro: {
+    title: 'Politică de Confidențialitate — K.M.F. Trading Journal',
+    desc: 'Politica de Confidențialitate pentru K.M.F. Trading Journal — acoperă site-ul kmfjournal.com și aplicația de Android. Conformă GDPR. Folosirea cookie-urilor și serviciile terțe explicate în limbaj simplu.',
+  },
+};
 
 const PrivacyPolicyPage = () => {
+  const { lang } = useLanguage();
+
   useEffect(() => {
-    document.title = 'Privacy Policy — K.M.F. Trading Journal';
+    const m = META[lang] || META.en;
+    document.title = m.title;
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) {
-      desc.setAttribute(
-        'content',
-        'Privacy Policy for K.M.F. Trading Journal — covers the kmfjournal.com website and the Android app. GDPR-compliant. Cookie usage and third-party services explained in plain language.'
-      );
-    }
-  }, []);
+    if (desc) desc.setAttribute('content', m.desc);
+  }, [lang]);
+
+  if (lang === 'ro') return <PrivacyPolicyRo />;
 
   return (
     <div style={{ minHeight: '100vh', background: '#0F1115', color: '#E0E0E0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
@@ -358,6 +370,354 @@ const PrivacyPolicyPage = () => {
     </div>
   );
 };
+
+function PrivacyPolicyRo() {
+  return (
+    <div style={{ minHeight: '100vh', background: '#0F1115', color: '#E0E0E0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 20px 80px' }}>
+        {/* Header */}
+        <div style={{ textAlign: 'center', marginBottom: 40 }}>
+          <h1 style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Politică de Confidențialitate</h1>
+          <p style={{ fontSize: 14, color: '#4FC3F7', fontWeight: 600 }}>K.M.F. Trading Journal — Site &amp; Aplicație mobilă</p>
+          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Ultima actualizare: 26 mai 2026</p>
+        </div>
+
+        <h2 style={styles.h2}>1. Introducere și Domeniu de Aplicare</h2>
+        <p style={styles.text}>K.M.F. Trading Journal este dezvoltat și operat de <strong style={styles.strong}>Ionel Aanei</strong>, dezvoltator individual (persoană fizică) din România („noi" sau „al nostru"). Această Politică de Confidențialitate acoperă:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Site-ul de la <a style={styles.link} href="https://kmfjournal.com">kmfjournal.com</a> („Site-ul").</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> Aplicația mobilă K.M.F. Trading Journal din Google Play („Aplicația").</li>
+        </ul>
+        <p style={styles.text}>Această politică acoperă ATÂT Site-ul, cât și Aplicația. Fiecare secțiune arată la care se aplică. Folosind oricare dintre ele, ești de acord cu colectarea și folosirea informațiilor descrise mai jos.</p>
+
+        <h2 style={styles.h2}>2. Contact și Operator de Date</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Operator de date:</strong> Ionel Aanei (dezvoltator individual)<br />
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Locație:</strong> România (Uniunea Europeană)
+        </p>
+
+        <h2 style={styles.h2}>3. Informații Colectate pe Site <span style={styles.pillWeb}>WEB</span></h2>
+
+        <h3 style={styles.h3}>3.1 Fără Date Personale Directe</h3>
+        <p style={styles.text}>Site-ul nu are formular de înregistrare, formular de contact, newsletter sau procesare de plăți. Nu colectăm numele, email-ul, parola, adresa sau vreun identificator personal prin Site-ul în sine.</p>
+
+        <h3 style={styles.h3}>3.2 Analiză (doar cu consimțământul tău)</h3>
+        <p style={styles.text}>Dacă apeși <strong style={styles.strong}>„Accept"</strong> pe banner-ul de consimțământ pentru cookie-uri, încărcăm Google Analytics 4 (GA4) ca să colectăm statistici anonime de folosire:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Paginile vizitate și timpul petrecut pe pagină</li>
+          <li style={styles.li}>Tipul de browser, sistemul de operare, categoria de dispozitiv</li>
+          <li style={styles.li}>Locația aproximativă (doar țară/regiune — IP-ul e anonimizat prin <code style={styles.code}>anonymize_ip</code>)</li>
+          <li style={styles.li}>Sursa de referință (ce site te-a adus aici)</li>
+          <li style={styles.li}>Evenimente: click-uri pe butoane, folosirea calculatoarelor, schimbarea limbii</li>
+        </ul>
+        <p style={styles.text}>Dacă apeși <strong style={styles.strong}>„Refuz"</strong> sau browserul tău trimite un semnal Do Not Track, GA4 <strong style={styles.strong}>nu este încărcat</strong> și niciun cookie de analiză nu este setat.</p>
+
+        <h3 style={styles.h3}>3.3 Cookie-uri Setate de Site</h3>
+        <div style={{ overflowX: 'auto', marginBottom: 24 }}>
+          <table style={styles.table}>
+            <thead>
+              <tr>
+                <th style={styles.th}>Cookie</th>
+                <th style={styles.th}>Scop</th>
+                <th style={styles.th}>Păstrare</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style={styles.td}><code style={styles.code}>_ga</code></td><td style={styles.td}>Identificator de utilizator Google Analytics 4</td><td style={styles.td}>2 ani</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>_ga_CTE9Y21S1L</code></td><td style={styles.td}>Starea sesiunii GA4</td><td style={styles.td}>2 ani</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style={styles.text}>Ambele cookie-uri sunt setate doar după ce apeși Accept. Îți poți schimba alegerea oricând prin linkul <strong style={styles.strong}>„Cookie Preferences"</strong> din subsolul Site-ului.</p>
+
+        <h3 style={styles.h3}>3.4 Stocare Locală în Browserul Tău</h3>
+        <p style={styles.text}>Site-ul stochează o cantitate mică de date în localStorage-ul browserului tău ca să-ți păstreze setările între vizite. Aceste date <strong style={styles.strong}>nu părăsesc niciodată dispozitivul tău</strong> și nu ne sunt accesibile:</p>
+        <div style={{ overflowX: 'auto', marginBottom: 24 }}>
+          <table style={styles.table}>
+            <thead>
+              <tr>
+                <th style={styles.th}>Cheie</th>
+                <th style={styles.th}>Scop</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style={styles.td}><code style={styles.code}>kmf-lang</code></td><td style={styles.td}>Limba de interfață aleasă de tine</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>kmf_consent_v1</code></td><td style={styles.td}>Decizia ta privind consimțământul pentru cookie-uri</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>kmf_exchange_rates</code></td><td style={styles.td}>Cursuri USD salvate pentru Lot Size Calculator (reîmprospătate orar)</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>kmf_pretrade_v1</code></td><td style={styles.td}>Conținutul tău personalizat din Pre-Trade Checklist</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>kmf_pretrade_started</code></td><td style={styles.td}>Marcaj care reține dacă ai început un checklist</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>kmf_fav_symbols</code></td><td style={styles.td}>Simbolurile tale de trading favorite din Lot Size Calculator</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style={styles.text}>Poți șterge aceste date oricând prin opțiunea „Șterge datele site-ului" din browserul tău.</p>
+
+        <h2 style={styles.h2}>4. Servicii Terțe Folosite de Site <span style={styles.pillWeb}>WEB</span></h2>
+        <p style={styles.text}>Site-ul încarcă resurse sau date de la următorii terți. Fiecare poate primi adresa ta IP ca parte a cererii HTTP standard:</p>
+        <div style={{ overflowX: 'auto', marginBottom: 24 }}>
+          <table style={styles.table}>
+            <thead>
+              <tr>
+                <th style={styles.th}>Serviciu</th>
+                <th style={styles.th}>Scop</th>
+                <th style={styles.th}>Politică de Confidențialitate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={styles.td}>Google Analytics 4 (Google LLC)</td>
+                <td style={styles.td}>Analiză anonimizată (după consimțământ)</td>
+                <td style={styles.td}><a style={styles.link} href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a></td>
+              </tr>
+              <tr>
+                <td style={styles.td}>SaasHunt (saashunt.best)</td>
+                <td style={styles.td}>Imaginea badge „Top 1 Daily Winner" din subsol</td>
+                <td style={styles.td}>—</td>
+              </tr>
+              <tr>
+                <td style={styles.td}>Product Hunt (producthunt.com)</td>
+                <td style={styles.td}>Imaginea badge „Featured" din subsol</td>
+                <td style={styles.td}><a style={styles.link} href="https://www.producthunt.com/legal/privacy" target="_blank" rel="noopener noreferrer">PH</a></td>
+              </tr>
+              <tr>
+                <td style={styles.td}>ExchangeRate-API (open.er-api.com)</td>
+                <td style={styles.td}>Cursuri USD pentru Lot Size Calculator</td>
+                <td style={styles.td}><a style={styles.link} href="https://www.exchangerate-api.com/privacy-policy" target="_blank" rel="noopener noreferrer">ER-API</a></td>
+              </tr>
+              <tr>
+                <td style={styles.td}>Google Play (play.google.com)</td>
+                <td style={styles.td}>Ținta linkului „Download on Google Play" și badge-ul</td>
+                <td style={styles.td}><a style={styles.link} href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style={styles.text}>Site-ul <strong style={styles.strong}>NU</strong> folosește: Facebook Pixel, rețele de publicitate, pixeli de retargeting, scripturi de social plugin, Hotjar, Sentry, PostHog sau trackere similare.</p>
+
+        <h2 style={styles.h2}>5. Informații Colectate de Aplicația Mobilă <span style={styles.pillApp}>APP</span></h2>
+        <p style={styles.text}>Aplicația mobilă colectează mai multe date decât Site-ul fiindcă funcționează pe bază de cont. Următoarele se aplică doar după ce îți creezi un cont și te loghezi.</p>
+
+        <h3 style={styles.h3}>5.1 Informații Personale</h3>
+        <p style={styles.text}>Când îți creezi un cont, Aplicația colectează:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Adresa de email (necesară pentru autentificare)</li>
+          <li style={styles.li}>Parola (criptată de Firebase Authentication — niciodată stocată în text simplu)</li>
+        </ul>
+        <p style={styles.text}>Ca să-ți gestionăm contul și comunicările prin email, mai stocăm: limba aleasă în aplicație, data înregistrării, marcaje și momente care urmăresc ce email-uri ți-au fost trimise, statusul de dezabonare și un token unic de dezabonare folosit ca să procesăm în siguranță linkurile de dezabonare cu un click.</p>
+
+        <p style={styles.text}><strong style={styles.strong}>Aplicația NU colectează:</strong></p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Numele tău (decât dacă îl oferi voluntar)</li>
+          <li style={styles.li}>Adresa fizică</li>
+          <li style={styles.li}>Numărul de telefon</li>
+          <li style={styles.li}>Informații de plată (gestionate de Google Play)</li>
+          <li style={styles.li}>Poze personale (doar capturile legate de trade-uri pe care le încarci)</li>
+        </ul>
+
+        <h3 style={styles.h3}>5.2 Date de Trading</h3>
+        <p style={styles.text}>Ca să ofere funcționalitatea Aplicației, aceasta stochează:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Detalii despre trade-uri (instrument, entry price, exit price, lot size, profit/loss)</li>
+          <li style={styles.li}>Notițe la trade-uri, rating-uri și evaluări emoționale pre/post-trade</li>
+          <li style={styles.li}>Răspunsurile din pre-trade checklist</li>
+          <li style={styles.li}>Răspunsurile din review-ul săptămânal</li>
+          <li style={styles.li}>Pozele/capturile pe care le atașezi la trade-uri</li>
+          <li style={styles.li}>Informații despre soldul contului (introduse de tine)</li>
+          <li style={styles.li}>Momente de timp pentru toate activitățile</li>
+        </ul>
+
+        <h3 style={styles.h3}>5.3 Date Tehnice și de Folosire</h3>
+        <p style={styles.text}>Aplicația colectează automat prin Firebase Analytics și Crashlytics:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Modelul dispozitivului și versiunea sistemului de operare</li>
+          <li style={styles.li}>Versiunea aplicației</li>
+          <li style={styles.li}>Adresa IP (temporar, pentru autentificare)</li>
+          <li style={styles.li}>Logurile de crash și rapoartele de eroare</li>
+          <li style={styles.li}>Analiză de folosire (ecrane vizitate, funcții folosite, durata sesiunii)</li>
+          <li style={styles.li}>Identificatori unici de dispozitiv</li>
+        </ul>
+
+        <h2 style={styles.h2}>6. Decizii Automate și Profilare <span style={styles.pillApp}>APP</span></h2>
+        <p style={styles.text}>Aplicația folosește analiză automată pe datele pe care le oferi ca să genereze concluzii pentru uzul tău. Niciuna dintre aceste decizii nu are efecte legale sau semnificative asupra ta — sunt doar orientative.</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><strong style={styles.strong}>Trader Personality Profile:</strong> Îți clasifică comportamentul în arhetipuri (Sniper, Robot, Momentum Rider, Wave Rider, Gambler, Revenge Trader) pe baza pattern-urilor din trade-uri. Calculat local și stocat cu contul tău.</li>
+          <li style={styles.li}><strong style={styles.strong}>Tilt Detection:</strong> Un sistem de avertizare pe 4 niveluri care semnalează posibilul trading emoțional pe baza pierderilor recente și a emoțiilor raportate de tine. Declanșează avertismente în aplicație; tu rămâi în control total asupra fiecărui trade.</li>
+          <li style={styles.li}><strong style={styles.strong}>Honesty Mirror:</strong> Corelează rating-urile pe care le dai calității trade-urilor cu profit/loss-ul real ca să identifice supraîncrederea sau subîncrederea sistematică.</li>
+        </ul>
+        <p style={styles.text}>Conform Articolului 22 din GDPR, ai dreptul să ceri o evaluare umană a oricărei decizii automate.</p>
+
+        <h2 style={styles.h2}>7. Temei Legal pentru Prelucrare (GDPR Articolul 6)</h2>
+        <div style={{ overflowX: 'auto', marginBottom: 24 }}>
+          <table style={styles.table}>
+            <thead>
+              <tr>
+                <th style={styles.th}>Date</th>
+                <th style={styles.th}>Aplicabilitate</th>
+                <th style={styles.th}>Temei Legal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style={styles.td}>Email-ul și parola contului</td><td style={styles.td}><span style={styles.pillApp}>APP</span></td><td style={styles.td}>Executarea contractului — Art. 6(1)(b)</td></tr>
+              <tr><td style={styles.td}>Datele de trading și notițele</td><td style={styles.td}><span style={styles.pillApp}>APP</span></td><td style={styles.td}>Executarea contractului — Art. 6(1)(b)</td></tr>
+              <tr><td style={styles.td}>Analiza și rapoartele de crash din aplicație</td><td style={styles.td}><span style={styles.pillApp}>APP</span></td><td style={styles.td}>Interes legitim — Art. 6(1)(f)</td></tr>
+              <tr><td style={styles.td}>Comunicări prin email (welcome + follow-up la 7 zile)</td><td style={styles.td}><span style={styles.pillApp}>APP</span></td><td style={styles.td}>Interes legitim — Art. 6(1)(f), cu dezabonare cu un click</td></tr>
+              <tr><td style={styles.td}>Analiza Site-ului (GA4)</td><td style={styles.td}><span style={styles.pillWeb}>WEB</span></td><td style={styles.td}>Consimțământ — Art. 6(1)(a)</td></tr>
+              <tr><td style={styles.td}>Badge-uri/API-uri terțe pe Site</td><td style={styles.td}><span style={styles.pillWeb}>WEB</span></td><td style={styles.td}>Interes legitim — Art. 6(1)(f)</td></tr>
+              <tr><td style={styles.td}>Setări în localStorage</td><td style={styles.td}><span style={styles.pillWeb}>WEB</span></td><td style={styles.td}>Interes legitim</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style={styles.h2}>8. Cum Folosim Informațiile Tale</h2>
+
+        <h3 style={styles.h3}>8.1 Ca Să Oferim Funcționalitatea <span style={styles.pillApp}>APP</span></h3>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Să-ți autentificăm contul</li>
+          <li style={styles.li}>Să stocăm și să sincronizăm datele tale de trading între dispozitive</li>
+          <li style={styles.li}>Să calculăm statistici de trading și indicatori de performanță</li>
+          <li style={styles.li}>Să generăm rapoarte PDF</li>
+          <li style={styles.li}>Să-ți afișăm istoricul de trading și analiza</li>
+        </ul>
+
+        <h3 style={styles.h3}>8.2 Ca Să Îmbunătățim Serviciul <span style={styles.pillWeb}>WEB</span> <span style={styles.pillApp}>APP</span></h3>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Să analizăm tiparele de folosire ca să îmbunătățim funcțiile</li>
+          <li style={styles.li}>Să identificăm și să reparăm bug-uri și crash-uri</li>
+          <li style={styles.li}>Să optimizăm performanța</li>
+        </ul>
+
+        <h3 style={styles.h3}>8.3 Ca Să Comunicăm cu Tine</h3>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Să răspundem la cererile tale de suport</li>
+          <li style={styles.li}>Să trimitem actualizări importante despre Aplicație (dacă e nevoie)</li>
+          <li style={styles.li}>Să te anunțăm despre schimbări de politică</li>
+        </ul>
+
+        <p style={styles.text}><strong style={styles.strong}>NU folosim datele tale pentru:</strong></p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Rețele de publicitate terțe sau targetare de reclame</li>
+          <li style={styles.li}>Vânzarea sau închirierea datelor tale către terți</li>
+          <li style={styles.li}>Scopuri comerciale fără legătură</li>
+          <li style={styles.li}>Urmărire între site-uri sau între dispozitive dincolo de ce accepți explicit</li>
+        </ul>
+
+        <h3 style={styles.h3}>8.4 Comunicări prin Email <span style={styles.pillApp}>APP</span></h3>
+        <p style={styles.text}>Când îți creezi un cont în Aplicație, putem trimite următoarele email-uri la adresa ta înregistrată:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><strong style={styles.strong}>Email-uri tranzacționale</strong> — un email de bun venit când contul tău e creat, plus mesaje esențiale pentru serviciu (ex. verificarea email-ului, resetarea parolei, schimbări importante de politică). Acestea sunt necesare ca să-ți funcționeze contul și nu poți renunța la ele cât timp contul e activ.</li>
+          <li style={styles.li}><strong style={styles.strong}>Un singur email de follow-up despre produs</strong> — la aproximativ 7 zile după înregistrare, care te invită să lași o recenzie sau să oferi feedback. Acesta e singurul email promoțional pe care îl trimitem.</li>
+        </ul>
+        <p style={styles.text}>Fiecare email promoțional include un <strong style={styles.strong}>link de dezabonare cu un click</strong> (<a style={styles.link} href="https://kmfjournal.com/unsubscribe">kmfjournal.com/unsubscribe</a>). Dezabonarea oprește doar email-urile promoționale — nu afectează email-urile tranzacționale sau de securitate și nu îți șterge contul.</p>
+
+        <h2 style={styles.h2}>9. Servicii Terțe ale Aplicației <span style={styles.pillApp}>APP</span></h2>
+        <ul style={styles.ul}>
+          <li style={styles.li}>
+            <strong style={styles.strong}>Google Firebase (Google LLC)</strong> — Autentificare, bază de date cloud (Firestore), stocare de fișiere, analiză, raportare de crash-uri. Confidențialitate: <a style={styles.link} href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>
+          </li>
+          <li style={styles.li}>
+            <strong style={styles.strong}>Twelve Data (Twelve Data Inc.)</strong> — Prețuri de piață în timp real și cursuri valutare în Aplicație. Date partajate: simbolurile de trading cerute, adresa IP. Nu se partajează date personale sau de trading. Confidențialitate: <a style={styles.link} href="https://twelvedata.com/privacy-policy" target="_blank" rel="noopener noreferrer">twelvedata.com/privacy-policy</a>
+          </li>
+        </ul>
+        <p style={styles.text}>Putem de asemenea dezvălui informații dacă legea o cere sau ca răspuns la cereri valide ale autorităților publice.</p>
+
+        <h2 style={styles.h2}>10. Stocarea, Păstrarea și Securitatea Datelor</h2>
+
+        <h3 style={styles.h3}>10.1 Locul de Stocare</h3>
+        <p style={styles.text}><span style={styles.pillApp}>APP</span> Datele de cont, datele de trading și analiza din Aplicație sunt stocate pe servere Google Cloud din Uniunea Europeană (regiunea eur3), conform standardelor GDPR.</p>
+        <p style={styles.text}><span style={styles.pillWeb}>WEB</span> Datele de analiză ale Site-ului (dacă accepți) sunt procesate de Google Analytics, care poate transfera date pe servere Google din Statele Unite conform cadrului EU–US Data Privacy Framework. Datele din localStorage rămân complet pe dispozitivul tău.</p>
+
+        <h3 style={styles.h3}>10.2 Perioade de Păstrare</h3>
+        <div style={{ overflowX: 'auto', marginBottom: 24 }}>
+          <table style={styles.table}>
+            <thead>
+              <tr>
+                <th style={styles.th}>Date</th>
+                <th style={styles.th}>Păstrare</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style={styles.td}>Datele de cont și de trading din Aplicație</td><td style={styles.td}>Până când îți ștergi contul</td></tr>
+              <tr><td style={styles.td}>Loguri de crash din Aplicație (Crashlytics)</td><td style={styles.td}>90 de zile, apoi agregate și anonimizate</td></tr>
+              <tr><td style={styles.td}>Evenimente de analiză din Aplicație</td><td style={styles.td}>14 luni (implicit Firebase)</td></tr>
+              <tr><td style={styles.td}>Date GA4 la nivel de utilizator</td><td style={styles.td}>14 luni</td></tr>
+              <tr><td style={styles.td}>Cookie-uri GA4 din browserul tău</td><td style={styles.td}>2 ani (sau până le refuzi/ștergi)</td></tr>
+              <tr><td style={styles.td}>Intrări în localStorage</td><td style={styles.td}>Până când ștergi datele browserului sau schimbi setările</td></tr>
+              <tr><td style={styles.td}>Copii de backup</td><td style={styles.td}>Până la 30 de zile după ștergere</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style={styles.h3}>10.3 Măsuri de Securitate</h3>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Criptare în tranzit (HTTPS/TLS)</li>
+          <li style={styles.li}>Criptare în repaus (Firebase Firestore criptat implicit)</li>
+          <li style={styles.li}>Autentificare sigură (Firebase Authentication)</li>
+          <li style={styles.li}>Criptarea parolei (parola ta nu e niciodată stocată în text simplu)</li>
+          <li style={styles.li}>Actualizări de securitate regulate</li>
+        </ul>
+        <p style={styles.text}>Totuși, nicio metodă de transmitere sau stocare nu e 100% sigură. Deși ne străduim să-ți protejăm informațiile, nu putem garanta o securitate absolută.</p>
+
+        <h2 style={styles.h2}>11. Drepturile Tale Asupra Datelor Conform GDPR</h2>
+
+        <h3 style={styles.h3}>11.1 Dreptul de Acces</h3>
+        <p style={styles.text}><span style={styles.pillApp}>APP</span> Poți accesa oricând toate datele tale din Aplicație. <span style={styles.pillWeb}>WEB</span> Pentru datele de pe Site, contactează-ne — avem foarte puține (în principal analiză anonimizată, dacă ai acceptat).</p>
+
+        <h3 style={styles.h3}>11.2 Dreptul de Rectificare</h3>
+        <p style={styles.text}>Poți edita sau corecta datele tale de trading, notițele și setările în Aplicație.</p>
+
+        <h3 style={styles.h3}>11.3 Dreptul de Ștergere („Dreptul de a Fi Uitat")</h3>
+        <p style={styles.text}>Poți cere ștergerea contului tău și a tuturor datelor asociate:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Folosind funcția „Șterge Contul" din Setările Aplicației</li>
+          <li style={styles.li}>Contactându-ne la <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+        </ul>
+        <p style={styles.text}><span style={styles.pillWeb}>WEB</span> Pentru cookie-urile/analiza Site-ului, apasă „Refuz" în banner-ul de cookie-uri sau folosește „Cookie Preferences" din subsol.</p>
+
+        <h3 style={styles.h3}>11.4 Dreptul la Portabilitatea Datelor</h3>
+        <p style={styles.text}>Îți poți exporta datele de trading prin funcția de export integrată (PDF, plus CSV/JSON pentru utilizatorii Premium).</p>
+
+        <h3 style={styles.h3}>11.5 Dreptul de Opoziție</h3>
+        <p style={styles.text}>Te poți opune prelucrării pentru analiză sau prelucrării bazate pe interes legitim refuzând cookie-urile (Web) sau încetând folosirea și ștergând contul (App).</p>
+        <p style={styles.text}><span style={styles.pillApp}>APP</span> Te poți de asemenea dezabona oricând de la email-ul nostru de follow-up folosind linkul cu un click din acel email sau la <a style={styles.link} href="https://kmfjournal.com/unsubscribe">kmfjournal.com/unsubscribe</a>. Asta oprește email-urile promoționale fără să-ți șteargă contul sau să afecteze email-urile tranzacționale/de securitate.</p>
+
+        <h3 style={styles.h3}>11.6 Dreptul de a Retrage Consimțământul</h3>
+        <p style={styles.text}>Îți poți retrage consimțământul oricând. Pentru analiza Site-ului, folosește „Cookie Preferences" din subsol. Pentru datele din Aplicație, șterge-ți contul.</p>
+
+        <h3 style={styles.h3}>11.7 Dreptul de a Depune o Plângere la o Autoritate de Supraveghere</h3>
+        <p style={styles.text}>Dacă crezi că drepturile tale asupra datelor au fost încălcate, ai dreptul să depui o plângere la o Autoritate de Protecție a Datelor. În România, aceasta este:</p>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong><br />
+          <a style={styles.link} href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">dataprotection.ro</a>
+        </p>
+        <p style={styles.text}>Dacă locuiești în alt stat membru UE, poți depune plângerea la autoritatea locală de protecție a datelor.</p>
+        <p style={styles.text}>Ca să-ți exerciți oricare dintre aceste drepturi, contactează-ne la <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>. Vom răspunde în termen de 30 de zile.</p>
+
+        <h2 style={styles.h2}>12. Confidențialitatea Copiilor și Cerința de Vârstă</h2>
+        <p style={styles.text}><span style={styles.pillApp}>APP</span> Aplicația este destinată utilizatorilor de 18 ani și peste. Nu colectăm cu bună știință informații de la persoane sub 18 ani.</p>
+        <p style={styles.text}><span style={styles.pillWeb}>WEB</span> Site-ul este accesibil public (fără înregistrare) și nu colectează cu bună știință date personale de la nimeni, inclusiv minori. Recomandăm supravegherea părintească pentru copiii care citesc conținut financiar.</p>
+        <p style={styles.text}>Dacă ești părinte sau tutore și crezi că copilul tău ne-a oferit informații personale, te rugăm să ne contactezi și vom șterge acele informații.</p>
+
+        <h2 style={styles.h2}>13. Transferuri Internaționale de Date</h2>
+        <p style={styles.text}><span style={styles.pillApp}>APP</span> Datele din Aplicație sunt stocate în UE (regiunea eur3). Acolo unde Google Firebase rutează trafic în afara UE, se aplică clauze contractuale standard.</p>
+        <p style={styles.text}><span style={styles.pillWeb}>WEB</span> Google Analytics poate transfera datele de analiză ale Site-ului în SUA conform cadrului EU–US Data Privacy Framework, pe care Comisia Europeană l-a considerat ca oferind un nivel adecvat de protecție.</p>
+
+        <h2 style={styles.h2}>14. Modificări ale Acestei Politici</h2>
+        <p style={styles.text}>Putem actualiza această Politică de Confidențialitate din când în când. Vom publica noua versiune la <a style={styles.link} href="https://kmfjournal.com/privacy-policy">kmfjournal.com/privacy-policy</a> și în Aplicație, și vom actualiza data „Ultima actualizare".</p>
+        <p style={styles.text}>Pentru schimbări importante care afectează modul în care prelucrăm datele tale, vom oferi o notificare vizibilă. Continuarea folosirii după ce schimbările sunt publicate înseamnă acceptare.</p>
+
+        <h2 style={styles.h2}>15. Contactează-ne</h2>
+        <p style={styles.text}>Pentru întrebări despre această Politică de Confidențialitate sau ca să-ți exerciți drepturile asupra datelor:</p>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Operator:</strong> Ionel Aanei (dezvoltator individual)<br />
+          <strong style={styles.strong}>Locație:</strong> România (Uniunea Europeană)
+        </p>
+        <p style={styles.text}>Vom răspunde în termen de 30 de zile.</p>
+      </div>
+    </div>
+  );
+}
 
 const styles = {
   h2: { fontSize: 20, fontWeight: 700, color: '#fff', marginTop: 36, marginBottom: 12 },
