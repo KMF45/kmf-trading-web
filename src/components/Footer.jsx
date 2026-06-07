@@ -231,10 +231,26 @@ const Footer = () => {
 
         <div className="border-t border-kmf-accent/20 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
-            <p className="text-kmf-text-tertiary text-sm text-center sm:text-left">
-              © {currentYear} {t('footer.copyright')}
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://onalyse.vercel.app/ro/scan/kmfjournal.com?ref=badge"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Onalyse Website Score"
+              className="inline-block transition-opacity duration-200 hover:opacity-90"
+            >
+              <img
+                src="https://onalyse.vercel.app/badge/kmfjournal.com.svg"
+                alt="Onalyse Score"
+                width="340"
+                height="104"
+                loading="lazy"
+              />
+            </a>
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <p className="text-kmf-text-tertiary text-sm text-center sm:text-left">
+                © {currentYear} {t('footer.copyright')}
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4">
               <a
                 href="https://saashunt.best/projects/k-m-f-trading-journal"
                 target="_blank"
@@ -264,6 +280,7 @@ const Footer = () => {
                   loading="lazy"
                 />
               </a>
+              </div>
             </div>
           </div>
         </div>
