@@ -42,7 +42,7 @@ const de = {
       {
         "title": "Kostenlos starten, mit Premium skalieren",
         "description": "Vollständiges Tagebuch, Lot-Size-Rechner, Checklisten, Cloud-Sync und Historie — komplett kostenlos. Upgrade auf Premium erst, wenn du erweiterte Statistiken und unbegrenzte Trades willst.",
-        "tag": "keine Kreditkarte nötig"
+        "tag": "jederzeit kündbar"
       }
     ]
   },
@@ -209,7 +209,7 @@ const de = {
     "badge": "Einfache Preise",
     "heading1": "Kostenlos starten.",
     "heading2": "Premium zum Dominieren.",
-    "subtitle": "Keine Kreditkarte nötig. Basis-Journaling ist für immer kostenlos. Teste Premium 7 Tage kostenlos.",
+    "subtitle": "Basis-Journaling ist für immer kostenlos. Teste Premium 7 Tage kostenlos.",
     "free": {
       "label": "Kostenlos",
       "period": "/ für immer",
@@ -257,7 +257,7 @@ const de = {
     ],
     "premiumFeatures": [
       "Alles aus dem kostenlosen Plan",
-      "14-tägige kostenlose Testphase",
+      "7-tägige kostenlose Testphase",
       "Unbegrenzte Trades",
       "Erweiterte Statistiken",
       "Wöchentliches Review & Ziele",
@@ -277,10 +277,10 @@ const de = {
   "download": {
     "badge": "Verfügbar im Google Play",
     "heading": "Jetzt herunterladen",
-    "subtitle": "K.M.F. Trading Journal ist im Google Play Store verfügbar. Starte noch heute mit dem Journaling deiner Trades — kostenloser Download mit 14-tägiger Premium-Testphase.",
+    "subtitle": "K.M.F. Trading Journal ist im Google Play Store verfügbar. Starte noch heute mit dem Journaling deiner Trades — kostenloser Download mit 7-tägiger Premium-Testphase.",
     "submitBtn": "Im Google Play herunterladen",
     "features": [
-      "Kostenloser Download — 14-tägiges Premium-Trial",
+      "Kostenloser Download — 7-tägiges Premium-Trial",
       "Emotionstracking & Psychologie-Tools",
       "Erfolge, XP & Trader-Ränge",
       "Offline-Funktionalität",
@@ -313,11 +313,11 @@ const de = {
       },
       {
         "question": "Ist K.M.F. Trading Journal kostenlos?",
-        "answer": "Ja. Kernfunktionen wie Trade-Erfassung (15 Trades), Historie, Lot-Size-Rechner, Checklisten, Cloud-Sync und Trading-Tagebuch sind kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — keine Kreditkarte nötig."
+        "answer": "Ja. Kernfunktionen wie Trade-Erfassung (15 Trades), Historie, Lot-Size-Rechner, Checklisten, Cloud-Sync und Trading-Tagebuch sind kostenlos. Premium schaltet unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Erfolge und mehr frei. Du kannst Premium 7 Tage kostenlos testen — kündige vor Ablauf und dir wird nichts berechnet."
       },
       {
-        "question": "Was ist die 14-tägige kostenlose Testphase?",
-        "answer": "Jeder neue Nutzer erhält 7 Tage vollen Premium-Zugang kostenlos. Du kannst alle Funktionen erkunden — unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Persönlichkeitsprofil, Erfolge, Cloud-Sync und Export — ohne Verpflichtung. Nach der Testphase behältst du den kostenlosen Zugang oder abonnierst Premium."
+        "question": "Was ist die 7-tägige kostenlose Testphase?",
+        "answer": "Jeder neue Nutzer erhält 7 Tage vollen Premium-Zugang kostenlos. Du kannst alle Funktionen erkunden — unbegrenzte Trades, erweiterte Statistiken, Emotionstracking, Persönlichkeitsprofil, Erfolge, Cloud-Sync und Export. Kündige jederzeit vor Ablauf der 7 Tage und dir wird nichts berechnet — du behältst einfach den kostenlosen Zugang. Wenn du nicht kündigst, läuft es als kostenpflichtiges Premium-Abo weiter."
       },
       {
         "question": "Welche Plattformen unterstützt K.M.F. Trading Journal?",

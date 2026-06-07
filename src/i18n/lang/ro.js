@@ -42,7 +42,7 @@ const ro = {
       {
         "title": "Gratuit la început, Premium pentru creștere",
         "description": "Jurnalizare completă, lot calculator, checklist-uri, cloud sync și istoric — complet gratuit. Treci la Premium doar când vrei statistici avansate și trade-uri nelimitate.",
-        "tag": "fără card bancar"
+        "tag": "anulează oricând"
       }
     ]
   },
@@ -209,7 +209,7 @@ const ro = {
     "badge": "Prețuri simple",
     "heading1": "Gratuit la început.",
     "heading2": "Premium pentru dominare.",
-    "subtitle": "Fără card bancar. Jurnalizarea de bază e gratuită pentru totdeauna. Încearcă Premium gratuit timp de 7 zile.",
+    "subtitle": "Jurnalizarea de bază e gratuită pentru totdeauna. Încearcă Premium gratuit timp de 7 zile.",
     "free": {
       "label": "Gratuit",
       "period": "/ pentru totdeauna",
@@ -313,11 +313,11 @@ const ro = {
       },
       {
         "question": "Este K.M.F. Trading Journal gratuit?",
-        "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (15 trade-uri), istoricul, lot calculator, checklist-urile, cloud sync și jurnalul de trading sunt gratuite. Premium deblochează trade-uri nelimitate, statistici avansate, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — fără card bancar."
+        "answer": "Da. Funcțiile de bază precum înregistrarea trade-urilor (15 trade-uri), istoricul, lot calculator, checklist-urile, cloud sync și jurnalul de trading sunt gratuite. Premium deblochează trade-uri nelimitate, statistici avansate, emotion tracking, realizări și altele. Poți încerca Premium gratuit timp de 7 zile — anulează înainte să expire și nu ți se ia niciun ban."
       },
       {
         "question": "Ce este perioada de probă gratuită de 7 zile?",
-        "answer": "Fiecare utilizator nou primește 7 zile de acces Premium complet, gratuit. Poți explora toate funcționalitățile — trade-uri nelimitate, statistici avansate, emotion tracking, profilul de personalitate, realizări, cloud sync și export — fără nicio obligație. După perioadă de probă, păstrezi accesul gratuit sau te abonezi pentru a rămâne Premium."
+        "answer": "Fiecare utilizator nou primește 7 zile de acces Premium complet, gratuit. Poți explora toate funcționalitățile — trade-uri nelimitate, statistici avansate, emotion tracking, profilul de personalitate, realizări, cloud sync și export. Anulează oricând înainte să expire cele 7 zile și nu ți se ia niciun ban — păstrezi pur și simplu accesul gratuit. Dacă nu anulezi, continuă ca abonament Premium plătit."
       },
       {
         "question": "Pe ce platforme este disponibil K.M.F. Trading Journal?",

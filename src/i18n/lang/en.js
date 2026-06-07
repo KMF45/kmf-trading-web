@@ -42,7 +42,7 @@ const en = {
       {
         "title": "Free to Start, Premium to Scale",
         "description": "Full journaling, lot calculator, checklists, cloud sync and history — completely free. Upgrade to Premium only when you want advanced stats and unlimited trades.",
-        "tag": "no credit card required"
+        "tag": "cancel anytime"
       }
     ]
   },
@@ -209,7 +209,7 @@ const en = {
     "badge": "Simple Pricing",
     "heading1": "Free to Start.",
     "heading2": "Premium to Dominate.",
-    "subtitle": "No credit card required. Core journaling is free forever. Try Premium free for 7 days.",
+    "subtitle": "Core journaling is free forever. Try Premium free for 7 days.",
     "free": {
       "label": "Free",
       "period": "/ forever",
@@ -313,11 +313,11 @@ const en = {
       },
       {
         "question": "Is K.M.F. Trading Journal free?",
-        "answer": "Yes. Core features like trade logging (15 trades), history, lot calculator, checklists, cloud sync, and a trading diary are free. Premium unlocks unlimited trades, advanced stats, emotion tracking, achievements, and more. You can try Premium free for 7 days — no credit card required."
+        "answer": "Yes. Core features like trade logging (15 trades), history, lot calculator, checklists, cloud sync, and a trading diary are free. Premium unlocks unlimited trades, advanced stats, emotion tracking, achievements, and more. You can try Premium free for 7 days — cancel before it ends and you won't be charged."
       },
       {
         "question": "What is the 7-day free trial?",
-        "answer": "Every new user gets 7 days of full Premium access for free. You can explore all features — unlimited trades, advanced statistics, emotion tracking, personality profile, achievements, cloud sync, and export — with no commitment. After the trial, you keep free-tier access or subscribe to stay Premium."
+        "answer": "Every new user gets 7 days of full Premium access for free. You can explore all features — unlimited trades, advanced statistics, emotion tracking, personality profile, achievements, cloud sync, and export. Cancel anytime before the 7 days end and you won't be charged — you'll simply keep free-tier access. If you don't cancel, it continues as a paid Premium subscription."
       },
       {
         "question": "What platforms does K.M.F. Trading Journal support?",

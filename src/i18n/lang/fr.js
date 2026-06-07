@@ -42,7 +42,7 @@ const fr = {
       {
         "title": "Gratuit pour commencer, Premium pour évoluer",
         "description": "Journalisation complète, lot calculator, checklist-s, cloud sync et historique — entièrement gratuit. Passez au Premium uniquement quand vous souhaitez les statistiques avancées et les trades illimités.",
-        "tag": "sans carte bancaire"
+        "tag": "annulable à tout moment"
       }
     ]
   },
@@ -209,7 +209,7 @@ const fr = {
     "badge": "Tarifs simples",
     "heading1": "Gratuit pour commencer.",
     "heading2": "Premium pour dominer.",
-    "subtitle": "Sans carte bancaire. La journalisation de base est gratuite pour toujours. Essayez Premium gratuitement pendant 7 jours.",
+    "subtitle": "La journalisation de base est gratuite pour toujours. Essayez Premium gratuitement pendant 7 jours.",
     "free": {
       "label": "Gratuit",
       "period": "/ pour toujours",
@@ -313,11 +313,11 @@ const fr = {
       },
       {
         "question": "K.M.F. Trading Journal est-il gratuit ?",
-        "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (15 trades), l'historique, le lot calculator, les checklists, le cloud sync et le journal de trading sont gratuits. Le Premium débloque les trades illimités, les statistiques avancées, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — sans carte bancaire."
+        "answer": "Oui. Les fonctionnalités de base comme l'enregistrement des trades (15 trades), l'historique, le lot calculator, les checklists, le cloud sync et le journal de trading sont gratuits. Le Premium débloque les trades illimités, les statistiques avancées, l'emotion tracking, les récompenses et plus encore. Vous pouvez essayer le Premium gratuitement pendant 7 jours — annulez avant la fin et vous ne serez pas facturé."
       },
       {
         "question": "Qu'est-ce que l'essai gratuit de 7 jours ?",
-        "answer": "Chaque nouvel utilisateur bénéficie de 7 jours d'accès Premium complet gratuit. Explorez toutes les fonctionnalités — trades illimités, statistiques avancées, emotion tracking, profil de personnalité, récompenses, cloud sync et export — sans engagement. Après l'essai, vous conservez l'accès gratuit ou vous vous abonnez pour rester Premium."
+        "answer": "Chaque nouvel utilisateur bénéficie de 7 jours d'accès Premium complet gratuit. Explorez toutes les fonctionnalités — trades illimités, statistiques avancées, emotion tracking, profil de personnalité, récompenses, cloud sync et export. Annulez à tout moment avant la fin des 7 jours et vous ne serez pas facturé — vous conservez simplement l'accès gratuit. Si vous n'annulez pas, l'abonnement Premium payant se poursuit."
       },
       {
         "question": "Sur quelles plateformes K.M.F. Trading Journal est-il disponible ?",
