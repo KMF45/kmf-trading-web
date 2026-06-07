@@ -6,6 +6,15 @@ import BlogCoverArt from '../components/blog/BlogCoverArt';
 
 export const posts = [
   {
+    slug: 'market-order-vs-limit-order',
+    title: 'Market Order vs Limit Order: The Hidden Cost That Quietly Drains Your Account',
+    excerpt: 'A market order pays the spread and slippage on every single trade — a permanent drag on your edge that never shows up on your commission statement. The real cost of each order type, and exactly when to use which.',
+    category: 'Risk Management',
+    date: 'June 7, 2026',
+    readTime: '8 min read',
+    categoryColor: '#00C853',
+  },
+  {
     slug: 'profit-factor-vs-win-rate',
     title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?',
     excerpt: 'Most traders obsess over win rate, but profit factor is a far better predictor of long-term success. See the math that reveals why a 70% win rate trader can be losing money while a 40% win rate trader thrives.',

@@ -5,13 +5,22 @@
     <link>https://kmfjournal.com/blog</link>
     <description>Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kmfjournal.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://kmfjournal.com/logo.png</url>
       <title>K.M.F. Trading Journal Blog</title>
       <link>https://kmfjournal.com/blog</link>
     </image>
+
+    <item>
+      <title>Market Order vs Limit Order: The Hidden Cost That Quietly Drains Your Account</title>
+      <link>https://kmfjournal.com/blog/market-order-vs-limit-order</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/market-order-vs-limit-order</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Risk Management</category>
+      <description>A market order pays the spread and slippage on every single trade — a permanent drag on your edge that never shows up on your commission statement. The real cost of each order type, and exactly when to use which.</description>
+    </item>
 
     <item>
       <title>Is $100 Enough to Trade Forex? The Brutal Truth</title>

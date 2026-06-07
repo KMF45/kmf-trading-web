@@ -42,6 +42,7 @@ const MondayEffectTrading = lazy(() => import('./pages/blog/MondayEffectTrading'
 const ConfidenceVsOverconfidence = lazy(() => import('./pages/blog/ConfidenceVsOverconfidence'));
 const WeekendGapRisk = lazy(() => import('./pages/blog/WeekendGapRisk'));
 const ScalingInVsScalingOut = lazy(() => import('./pages/blog/ScalingInVsScalingOut'));
+const MarketOrderVsLimitOrder = lazy(() => import('./pages/blog/MarketOrderVsLimitOrder'));
 const WhatIsKmfTradingJournal = lazy(() => import('./pages/blog/WhatIsKmfTradingJournal'));
 const StaticVsTrailingDrawdown = lazy(() => import('./pages/blog/StaticVsTrailingDrawdown'));
 const RevengeTradingKillSwitch = lazy(() => import('./pages/blog/RevengeTradingKillSwitch'));
@@ -128,6 +129,7 @@ function App() {
           <Route path="/blog/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidence />} />
           <Route path="/blog/weekend-gap-risk" element={<WeekendGapRisk />} />
           <Route path="/blog/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOut />} />
+          <Route path="/blog/market-order-vs-limit-order" element={<MarketOrderVsLimitOrder />} />
           <Route path="/blog/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournal />} />
           <Route path="/blog/static-vs-trailing-drawdown" element={<StaticVsTrailingDrawdown />} />
           <Route path="/blog/revenge-trading-kill-switch" element={<RevengeTradingKillSwitch />} />
