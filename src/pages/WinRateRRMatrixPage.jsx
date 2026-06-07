@@ -2,11 +2,121 @@ import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
+import { useLanguage } from '../i18n/LanguageContext';
 
-const PAGE_TITLE = 'Win Rate vs R:R Matrix — Find Your Profitable Zone | K.M.F.';
-const PAGE_DESC = 'Interactive heatmap showing every combination of win rate and reward:risk ratio. Instantly see which setups are profitable and where your trading strategy sits on the profitability spectrum.';
 const PAGE_URL = 'https://kmfjournal.com/tools/win-rate-rr-matrix';
 const OG_IMAGE = 'https://kmfjournal.com/tools/og/win-rate-rr-matrix.png';
+
+const T = {
+  en: {
+    pageTitle: 'Win Rate vs R:R Matrix — Find Your Profitable Zone | K.M.F.',
+    pageDesc: 'Interactive heatmap showing every combination of win rate and reward:risk ratio. Instantly see which setups are profitable and where your trading strategy sits on the profitability spectrum.',
+    ogAlt: 'Win Rate vs R:R Matrix — Find Your Profitable Zone',
+    badge: 'Free Trading Tool',
+    heroP: <>Every cell shows your <strong className="text-kmf-text-primary">expectancy per trade</strong>. Green = profitable long-term. Red = losing money no matter how disciplined you are.</>,
+    howToTitle: 'How to read this:',
+    howToBody: <>Find your win rate on the horizontal axis and your average R:R on the vertical axis. The cell where they meet shows your <strong className="text-kmf-text-primary">expectancy</strong> — how much you earn per $1 risked, on average. <strong className="text-kmf-accent">+0.5R</strong> means you gain $50 for every $100 risked over time. <strong style={{ color: '#FF5252' }}>−0.3R</strong> means you lose $30 per $100 risked — no strategy will save you.</>,
+    formula: 'Formula: Expectancy = (Win Rate × Avg Win) − (Loss Rate × Avg Loss). Loss is always normalized to 1R.',
+    yourStrategy: 'Your Strategy',
+    winRate: 'Win Rate',
+    avgRr: 'Average R:R',
+    wrHints: ['Low win rate — needs high R:R to be profitable', 'Below 50% — still profitable with good R:R', 'Solid win rate — even moderate R:R works', 'High win rate — can afford lower R:R targets'],
+    rrHints: ['Below 1:1 — win rate must be very high to compensate', 'Moderate — typical for scalpers, requires high win rate', 'Good R:R — gives you margin for lower win rate', 'Excellent R:R — even 30% win rate can be profitable'],
+    yourExpectancy: 'Your Expectancy',
+    perTrade: 'per trade',
+    resStrong: (v) => <><strong>Strong edge.</strong> On every $1,000 risked, you earn ~${v} on average.</>,
+    resSlight: (v) => <><strong>Slight edge.</strong> Profitable, but thin. Every $1,000 risked earns ~${v}. Improve R:R or win rate to widen the margin.</>,
+    resBreak: <><strong>Break-even.</strong> No edge. Commissions alone will make you unprofitable. Push R:R higher.</>,
+    resLosing: (v) => <><strong>Losing strategy.</strong> Every $1,000 risked loses ~${v}. No position sizing fix will save a negative expectancy.</>,
+    heatmap: 'Expectancy Heatmap',
+    legendLosing: 'Losing', legendBreak: 'Break-even', legendProfit: 'Profitable',
+    axisLabel: 'R:R ↓ / WR →',
+    tipWinRate: 'Win Rate:', tipRr: 'R:R:', tipExpectancy: 'Expectancy:', tipPer: 'Per $1,000 risked:',
+    edgeLabels: { strong: 'Strong edge', slight: 'Slight edge', breakeven: 'Break-even', weak: 'Weak negative', strongLose: 'Strong losing' },
+    cards: [
+      { title: 'The Win Rate Trap', body: 'A 70% win rate sounds impressive — but if your average loss is 3× bigger than your average win, you lose money. R:R is more important than win rate.' },
+      { title: 'The Break-Even Diagonal', body: 'The yellow cells form a diagonal line. This is the break-even frontier. Every combination on it earns nothing. You need to be above it to survive long-term.' },
+      { title: 'The Professional Zone', body: 'Most full-time traders operate between 40–55% win rate with 1.5:1–3:1 R:R. Boring? Yes. Sustainably profitable? Also yes.' },
+    ],
+    eduTitle: 'Why Most Traders Think About This Wrong',
+    eduP: [
+      <>Beginners fixate on win rate. They want to be "right" most of the time. But trading isn't a test — it's a business. The only metric that matters is: <strong className="text-kmf-text-primary">does your strategy make money over a large sample of trades?</strong></>,
+      <>That's what expectancy measures. It strips away all the noise — the hot streaks, the bad days, the lucky trades — and tells you what your strategy actually earns per unit of risk. A positive expectancy means the edge is real. A negative expectancy means no amount of discipline, psychology work, or risk management will save you.</>,
+      <><strong className="text-kmf-text-primary">The matrix above shows every possible combination.</strong> Notice how the green zone covers a wide diagonal band — there are many paths to profitability. A scalper with 70% win rate and 0.75:1 R:R is in the same green band as a swing trader with 35% win rate and 3:1 R:R. Different styles, same math.</>,
+      <>The red zone is unforgiving. Once you're there, no trick saves you. If you recognize your numbers in the red, the fix is one of two things: improve your entries (win rate) or improve your exits (R:R). Usually improving R:R is easier — it doesn't require you to be more "right," just more patient with winners and faster with losers.</>,
+    ],
+    eduNote: <>Don't know your win rate or R:R? That's exactly why a <Link to="/" className="text-kmf-accent hover:underline">trading journal</Link> exists. After 30–50 logged trades, you'll have statistically meaningful numbers — and you'll be able to find your exact cell in this matrix.</>,
+    linkRuinTitle: 'Risk of Ruin Calculator →',
+    linkRuinDesc: 'See if your account can survive long losing streaks',
+    linkLotTitle: 'Lot Size Calculator →',
+    linkLotDesc: 'Size your positions to match your target R:R',
+    ctaLine1: "Don't know your real win rate or R:R?",
+    ctaLine2: 'Track your trades. Your stats will find their cell automatically.',
+    ctaButton: 'Download Free on Google Play',
+    faqHeading: 'Frequently Asked Questions',
+    faq: [
+      { q: 'What does the matrix show?', a: 'Each cell shows the expectancy — how much you earn (or lose) on average per unit of risk. A value of +0.5R means for every $100 you risk, you gain $50 on average over many trades. Negative values mean you lose money long-term regardless of how selective you are.' },
+      { q: 'Why can a 40% win rate be profitable?', a: 'Because it depends on how much you make when you win vs lose. With a 40% win rate and 3:1 R:R, your expectancy is +0.6R — strongly profitable. You lose 60% of trades but your winners are 3× bigger than losers. This is why R:R matters more than win rate alone.' },
+      { q: 'Where do I find my win rate and R:R?', a: 'From your trading journal. Win rate = wins ÷ total trades × 100. R:R = average profit on winning trades ÷ average loss on losing trades. You need at least 30–50 trades for the numbers to be meaningful.' },
+      { q: 'What R:R should I target?', a: 'Most professional traders target at least 1.5:1. This gives you a comfortable buffer — you can be wrong 40% of the time and still be profitable. Higher R:R (2:1, 3:1) means you can afford an even lower win rate, which is realistic for swing and position traders.' },
+      { q: 'Is a green cell enough to be profitable?', a: "It's necessary but not sufficient. You also need consistent execution, proper position sizing, and enough trades for the statistics to play out. A strategy with +0.3R expectancy can still lose money short-term due to variance. But without positive expectancy, nothing else matters." },
+    ],
+  },
+  ro: {
+    pageTitle: 'Win Rate vs R:R Matrix — Găsește-ți Zona Profitabilă | K.M.F.',
+    pageDesc: 'Heatmap interactiv care arată fiecare combinație de win rate și raport reward:risk. Vezi instant ce setup-uri sunt profitabile și unde se află strategia ta pe spectrul profitabilității.',
+    ogAlt: 'Win Rate vs R:R Matrix — Găsește-ți Zona Profitabilă',
+    badge: 'Unealtă gratuită',
+    heroP: <>Fiecare celulă arată <strong className="text-kmf-text-primary">expectancy per trade</strong>. Verde = profitabil pe termen lung. Roșu = pierzi bani indiferent cât de disciplinat ești.</>,
+    howToTitle: 'Cum citești asta:',
+    howToBody: <>Găsește-ți win rate-ul pe axa orizontală și R:R-ul mediu pe axa verticală. Celula unde se întâlnesc arată <strong className="text-kmf-text-primary">expectancy-ul</strong> — cât câștigi în medie per $1 riscat. <strong className="text-kmf-accent">+0.5R</strong> înseamnă că primești $50 pentru fiecare $100 riscați, în timp. <strong style={{ color: '#FF5252' }}>−0.3R</strong> înseamnă că pierzi $30 per $100 riscați — nicio strategie nu te salvează.</>,
+    formula: 'Formula: Expectancy = (Win Rate × Câștig Mediu) − (Loss Rate × Pierdere Medie). Pierderea e mereu normalizată la 1R.',
+    yourStrategy: 'Strategia ta',
+    winRate: 'Win Rate',
+    avgRr: 'R:R Mediu',
+    wrHints: ['Win rate mic — are nevoie de R:R mare ca să fie profitabil', 'Sub 50% — încă profitabil cu un R:R bun', 'Win rate solid — merge chiar și cu R:R moderat', 'Win rate mare — îți permite ținte R:R mai mici'],
+    rrHints: ['Sub 1:1 — win rate-ul trebuie să fie foarte mare ca să compenseze', 'Moderat — tipic pentru scalperi, cere win rate mare', 'R:R bun — îți dă marjă pentru un win rate mai mic', 'R:R excelent — chiar și 30% win rate poate fi profitabil'],
+    yourExpectancy: 'Expectancy-ul tău',
+    perTrade: 'per trade',
+    resStrong: (v) => <><strong>Edge puternic.</strong> La fiecare $1.000 riscați, câștigi în medie ~${v}.</>,
+    resSlight: (v) => <><strong>Edge ușor.</strong> Profitabil, dar subțire. Fiecare $1.000 riscați aduc ~${v}. Îmbunătățește R:R-ul sau win rate-ul ca să lărgești marja.</>,
+    resBreak: <><strong>La break-even.</strong> Fără edge. Doar comisioanele te fac neprofitabil. Crește R:R-ul.</>,
+    resLosing: (v) => <><strong>Strategie pierzătoare.</strong> Fiecare $1.000 riscați pierd ~${v}. Niciun fix de position sizing nu salvează o expectancy negativă.</>,
+    heatmap: 'Heatmap Expectancy',
+    legendLosing: 'Pierzător', legendBreak: 'Break-even', legendProfit: 'Profitabil',
+    axisLabel: 'R:R ↓ / WR →',
+    tipWinRate: 'Win Rate:', tipRr: 'R:R:', tipExpectancy: 'Expectancy:', tipPer: 'Per $1.000 riscați:',
+    edgeLabels: { strong: 'Edge puternic', slight: 'Edge ușor', breakeven: 'Break-even', weak: 'Negativ ușor', strongLose: 'Pierzător puternic' },
+    cards: [
+      { title: 'Capcana Win Rate-ului', body: 'Un win rate de 70% sună impresionant — dar dacă pierderea ta medie e de 3× mai mare decât câștigul mediu, pierzi bani. R:R-ul e mai important decât win rate-ul.' },
+      { title: 'Diagonala de Break-Even', body: 'Celulele galbene formează o linie diagonală. Asta e frontiera de break-even. Orice combinație de pe ea nu câștigă nimic. Trebuie să fii deasupra ei ca să supraviețuiești pe termen lung.' },
+      { title: 'Zona Profesionistă', body: 'Cei mai mulți traderi full-time operează între 40–55% win rate cu R:R 1.5:1–3:1. Plictisitor? Da. Profitabil sustenabil? Tot da.' },
+    ],
+    eduTitle: 'De Ce Cei Mai Mulți Traderi Gândesc Greșit Asta',
+    eduP: [
+      <>Începătorii se fixează pe win rate. Vor să aibă „dreptate" de cele mai multe ori. Dar trading-ul nu e un test — e o afacere. Singura metrică ce contează e: <strong className="text-kmf-text-primary">strategia ta face bani pe un eșantion mare de trade-uri?</strong></>,
+      <>Asta măsoară expectancy. Curăță tot zgomotul — seriile bune, zilele proaste, trade-urile norocoase — și îți spune cât câștigă de fapt strategia ta per unitate de risc. O expectancy pozitivă înseamnă că edge-ul e real. O expectancy negativă înseamnă că nicio disciplină, muncă psihologică sau risk management nu te salvează.</>,
+      <><strong className="text-kmf-text-primary">Matricea de mai sus arată fiecare combinație posibilă.</strong> Observă cum zona verde acoperă o bandă diagonală largă — există multe drumuri spre profitabilitate. Un scalper cu 70% win rate și R:R 0.75:1 e în aceeași bandă verde ca un swing trader cu 35% win rate și R:R 3:1. Stiluri diferite, aceeași matematică.</>,
+      <>Zona roșie e neiertătoare. Odată ajuns acolo, niciun truc nu te salvează. Dacă îți recunoști cifrele în roșu, fix-ul e unul din două: îmbunătățește intrările (win rate) sau ieșirile (R:R). De obicei e mai ușor să îmbunătățești R:R-ul — nu îți cere să ai mai des „dreptate", doar să fii mai răbdător cu câștigurile și mai rapid cu pierderile.</>,
+    ],
+    eduNote: <>Nu-ți știi win rate-ul sau R:R-ul? Exact de asta există un <Link to="/" className="text-kmf-accent hover:underline">trading journal</Link>. După 30–50 de trade-uri logate, vei avea cifre semnificative statistic — și îți vei putea găsi celula exactă din această matrice.</>,
+    linkRuinTitle: 'Risk of Ruin Calculator →',
+    linkRuinDesc: 'Vezi dacă contul tău poate supraviețui seriilor lungi de pierderi',
+    linkLotTitle: 'Lot Size Calculator →',
+    linkLotDesc: 'Dimensionează-ți pozițiile ca să se potrivească cu R:R-ul țintă',
+    ctaLine1: 'Nu-ți știi win rate-ul sau R:R-ul real?',
+    ctaLine2: 'Loghează-ți trade-urile. Statisticile tale își vor găsi celula automat.',
+    ctaButton: 'Descarcă gratuit din Google Play',
+    faqHeading: 'Întrebări Frecvente',
+    faq: [
+      { q: 'Ce arată matricea?', a: 'Fiecare celulă arată expectancy — cât câștigi (sau pierzi) în medie per unitate de risc. O valoare de +0.5R înseamnă că pentru fiecare $100 riscați, câștigi în medie $50 pe multe trade-uri. Valorile negative înseamnă că pierzi bani pe termen lung, oricât de selectiv ai fi.' },
+      { q: 'De ce poate fi profitabil un win rate de 40%?', a: 'Fiindcă depinde de cât faci când câștigi vs când pierzi. Cu un win rate de 40% și R:R 3:1, expectancy-ul tău e +0.6R — puternic profitabil. Pierzi 60% din trade-uri, dar câștigurile sunt de 3× mai mari decât pierderile. De asta R:R-ul contează mai mult decât win rate-ul singur.' },
+      { q: 'Unde îmi găsesc win rate-ul și R:R-ul?', a: 'Din trading journal-ul tău. Win rate = câștiguri ÷ total trade-uri × 100. R:R = profitul mediu pe trade-urile câștigătoare ÷ pierderea medie pe cele pierzătoare. Ai nevoie de cel puțin 30–50 de trade-uri ca cifrele să însemne ceva.' },
+      { q: 'Ce R:R ar trebui să țintesc?', a: 'Cei mai mulți traderi profesioniști țintesc cel puțin 1.5:1. Asta îți dă o marjă confortabilă — poți greși 40% din timp și tot să fii profitabil. Un R:R mai mare (2:1, 3:1) înseamnă că îți permiți un win rate și mai mic, ceea ce e realist pentru swing și position traderi.' },
+      { q: 'E suficientă o celulă verde ca să fii profitabil?', a: 'E necesară, dar nu suficientă. Mai ai nevoie de execuție consecventă, position sizing corect și destule trade-uri ca statistica să se manifeste. O strategie cu expectancy +0.3R poate tot pierde bani pe termen scurt din cauza varianței. Dar fără expectancy pozitivă, nimic altceva nu contează.' },
+    ],
+  },
+};
 
 // Win rate columns: 20% → 80% (step 5)
 const WIN_RATES = [20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80];
@@ -35,47 +145,21 @@ function expectancyColor(e) {
   }
 }
 
-function ExpectancyLabel({ e }) {
-  const sign = e > 0 ? '+' : '';
-  const abs = Math.abs(e);
-  return (
-    <span className="font-bold tabular-nums" style={{ fontSize: 'clamp(9px, 1.1vw, 13px)' }}>
-      {sign}{e.toFixed(2)}R
-    </span>
-  );
-}
-
-const FAQ_ITEMS = [
-  {
-    q: 'What does the matrix show?',
-    a: 'Each cell shows the expectancy — how much you earn (or lose) on average per unit of risk. A value of +0.5R means for every $100 you risk, you gain $50 on average over many trades. Negative values mean you lose money long-term regardless of how selective you are.',
-  },
-  {
-    q: 'Why can a 40% win rate be profitable?',
-    a: 'Because it depends on how much you make when you win vs lose. With a 40% win rate and 3:1 R:R, your expectancy is +0.6R — strongly profitable. You lose 60% of trades but your winners are 3× bigger than losers. This is why R:R matters more than win rate alone.',
-  },
-  {
-    q: 'Where do I find my win rate and R:R?',
-    a: 'From your trading journal. Win rate = wins ÷ total trades × 100. R:R = average profit on winning trades ÷ average loss on losing trades. You need at least 30–50 trades for the numbers to be meaningful.',
-  },
-  {
-    q: 'What R:R should I target?',
-    a: 'Most professional traders target at least 1.5:1. This gives you a comfortable buffer — you can be wrong 40% of the time and still be profitable. Higher R:R (2:1, 3:1) means you can afford an even lower win rate, which is realistic for swing and position traders.',
-  },
-  {
-    q: 'Is a green cell enough to be profitable?',
-    a: 'It\'s necessary but not sufficient. You also need consistent execution, proper position sizing, and enough trades for the statistics to play out. A strategy with +0.3R expectancy can still lose money short-term due to variance. But without positive expectancy, nothing else matters.',
-  },
+const CARD_STYLES = [
+  { color: '#FF5252', bg: 'rgba(255,82,82,0.08)', border: 'rgba(255,82,82,0.2)', icon: '⚠' },
+  { color: '#4FC3F7', bg: 'rgba(79,195,247,0.08)', border: 'rgba(79,195,247,0.2)', icon: '⚡' },
+  { color: '#00E676', bg: 'rgba(0,230,118,0.08)', border: 'rgba(0,230,118,0.2)', icon: '✓' },
 ];
 
 export default function WinRateRRMatrixPage() {
+  const { lang } = useLanguage();
+  const t = T[lang] || T.en;
   const [winRate, setWinRate] = useState(50);
   const [rr, setRr] = useState(2.0);
   const [hoveredCell, setHoveredCell] = useState(null);
   const [revealed, setRevealed] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
   const matrixRef = useRef(null);
-  const animFrameRef = useRef(null);
 
   // Animate cells in on mount
   useEffect(() => {
@@ -83,28 +167,33 @@ export default function WinRateRRMatrixPage() {
     return () => clearTimeout(timer);
   }, []);
 
+  const winRateNum = useMemo(() => {
+    const n = parseFloat(winRate);
+    return isNaN(n) ? 50 : Math.min(99, Math.max(1, n));
+  }, [winRate]);
+
   // SEO
   useEffect(() => {
-    document.title = PAGE_TITLE;
+    document.title = t.pageTitle;
     const setMeta = (attr, val, content) => {
       let el = document.querySelector(`meta[${attr}="${val}"]`);
       if (!el) { el = document.createElement('meta'); el.setAttribute(attr, val); document.head.appendChild(el); }
       el.setAttribute('content', content);
     };
-    setMeta('name', 'description', PAGE_DESC);
-    setMeta('property', 'og:title', PAGE_TITLE);
-    setMeta('property', 'og:description', PAGE_DESC);
+    setMeta('name', 'description', t.pageDesc);
+    setMeta('property', 'og:title', t.pageTitle);
+    setMeta('property', 'og:description', t.pageDesc);
     setMeta('property', 'og:image', OG_IMAGE);
     setMeta('property', 'og:image:width', '1200');
     setMeta('property', 'og:image:height', '630');
-    setMeta('property', 'og:image:alt', 'Win Rate vs R:R Matrix — Find Your Profitable Zone');
+    setMeta('property', 'og:image:alt', t.ogAlt);
     setMeta('property', 'og:url', PAGE_URL);
     setMeta('property', 'og:type', 'website');
     setMeta('name', 'twitter:card', 'summary_large_image');
-    setMeta('name', 'twitter:title', PAGE_TITLE);
-    setMeta('name', 'twitter:description', PAGE_DESC);
+    setMeta('name', 'twitter:title', t.pageTitle);
+    setMeta('name', 'twitter:description', t.pageDesc);
     setMeta('name', 'twitter:image', OG_IMAGE);
-    setMeta('name', 'twitter:image:alt', 'Win Rate vs R:R Matrix — Find Your Profitable Zone');
+    setMeta('name', 'twitter:image:alt', t.ogAlt);
 
     let link = document.querySelector('link[rel="canonical"]');
     if (!link) { link = document.createElement('link'); link.setAttribute('rel', 'canonical'); document.head.appendChild(link); }
@@ -117,7 +206,7 @@ export default function WinRateRRMatrixPage() {
           '@type': 'WebApplication',
           name: 'Win Rate vs R:R Matrix',
           url: PAGE_URL,
-          description: PAGE_DESC,
+          description: t.pageDesc,
           applicationCategory: 'FinanceApplication',
           operatingSystem: 'All',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -125,7 +214,7 @@ export default function WinRateRRMatrixPage() {
         },
         {
           '@type': 'FAQPage',
-          mainEntity: FAQ_ITEMS.map(f => ({
+          mainEntity: t.faq.map(f => ({
             '@type': 'Question',
             name: f.q,
             acceptedAnswer: { '@type': 'Answer', text: f.a },
@@ -146,7 +235,7 @@ export default function WinRateRRMatrixPage() {
     script.textContent = JSON.stringify(jsonLd);
 
     return () => { script?.remove(); };
-  }, []);
+  }, [t]);
 
   // GA4 tracking
   const tracked = useRef(false);
@@ -156,11 +245,6 @@ export default function WinRateRRMatrixPage() {
       window.gtag?.('event', 'win_rate_rr_matrix_viewed', { win_rate: winRateNum, rr });
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  const winRateNum = useMemo(() => {
-    const n = parseFloat(winRate);
-    return isNaN(n) ? 50 : Math.min(99, Math.max(1, n));
-  }, [winRate]);
 
   const myExpectancy = useMemo(() => calcExpectancy(winRateNum, rr), [winRateNum, rr]);
 
@@ -188,6 +272,9 @@ export default function WinRateRRMatrixPage() {
   }, []);
 
   const myColor = expectancyColor(myExpectancy);
+  const wrVal = parseFloat(winRate) || 50;
+  const wrHint = wrVal < 35 ? t.wrHints[0] : wrVal < 50 ? t.wrHints[1] : wrVal < 65 ? t.wrHints[2] : t.wrHints[3];
+  const rrHint = rr < 0.8 ? t.rrHints[0] : rr < 1.5 ? t.rrHints[1] : rr < 2.5 ? t.rrHints[2] : t.rrHints[3];
 
   return (
     <div className="min-h-screen bg-kmf-bg text-kmf-text-primary">
@@ -203,14 +290,14 @@ export default function WinRateRRMatrixPage() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"/>
               </svg>
-              Free Trading Tool
+              {t.badge}
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               Win Rate vs{' '}
               <span className="gradient-text">R:R Matrix</span>
             </h1>
             <p className="text-kmf-text-secondary text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-              Every cell shows your <strong className="text-kmf-text-primary">expectancy per trade</strong>. Green = profitable long-term. Red = losing money no matter how disciplined you are.
+              {t.heroP}
             </p>
           </div>
 
@@ -226,10 +313,10 @@ export default function WinRateRRMatrixPage() {
               </div>
               <div>
                 <p className="text-kmf-text-secondary text-sm leading-relaxed">
-                  <strong className="text-kmf-text-primary">How to read this:</strong> Find your win rate on the horizontal axis and your average R:R on the vertical axis. The cell where they meet shows your <strong className="text-kmf-text-primary">expectancy</strong> — how much you earn per $1 risked, on average. <strong className="text-kmf-accent">+0.5R</strong> means you gain $50 for every $100 risked over time. <strong style={{ color: '#FF5252' }}>−0.3R</strong> means you lose $30 per $100 risked — no strategy will save you.
+                  <strong className="text-kmf-text-primary">{t.howToTitle}</strong> {t.howToBody}
                 </p>
                 <p className="text-kmf-text-tertiary text-xs mt-2">
-                  Formula: Expectancy = (Win Rate × Avg Win) − (Loss Rate × Avg Loss). Loss is always normalized to 1R.
+                  {t.formula}
                 </p>
               </div>
             </div>
@@ -238,13 +325,13 @@ export default function WinRateRRMatrixPage() {
           {/* Controls */}
           <div className="rounded-2xl p-6 mb-8"
             style={{ background: 'rgba(26,29,36,0.7)', border: '1px solid rgba(255,255,255,0.07)', animation: 'kmf-fadeIn 0.6s ease 0.15s both' }}>
-            <p className="text-sm font-semibold text-kmf-text-secondary mb-5 uppercase tracking-wider">Your Strategy</p>
+            <p className="text-sm font-semibold text-kmf-text-secondary mb-5 uppercase tracking-wider">{t.yourStrategy}</p>
             <div className="grid sm:grid-cols-2 gap-8">
 
               {/* Win Rate slider + input */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="text-sm font-medium text-kmf-text-primary">Win Rate</label>
+                  <label className="text-sm font-medium text-kmf-text-primary">{t.winRate}</label>
                   <div className="flex items-center gap-2">
                     <div className="flex items-center rounded-lg overflow-hidden"
                       style={{ border: '1px solid rgba(79,195,247,0.3)', background: 'rgba(79,195,247,0.07)' }}>
@@ -277,17 +364,14 @@ export default function WinRateRRMatrixPage() {
                   <span>1%</span><span>50%</span><span>99%</span>
                 </div>
                 <p className="text-xs text-kmf-text-tertiary mt-2">
-                  {(parseFloat(winRate) || 50) < 35 ? 'Low win rate — needs high R:R to be profitable'
-                    : (parseFloat(winRate) || 50) < 50 ? 'Below 50% — still profitable with good R:R'
-                    : (parseFloat(winRate) || 50) < 65 ? 'Solid win rate — even moderate R:R works'
-                    : 'High win rate — can afford lower R:R targets'}
+                  {wrHint}
                 </p>
               </div>
 
               {/* R:R slider */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="text-sm font-medium text-kmf-text-primary">Average R:R</label>
+                  <label className="text-sm font-medium text-kmf-text-primary">{t.avgRr}</label>
                   <div className="flex items-center gap-2">
                     <span className="text-2xl font-bold" style={{ color: '#4FC3F7' }}>1:{rr.toFixed(2)}</span>
                   </div>
@@ -303,10 +387,7 @@ export default function WinRateRRMatrixPage() {
                   <span>0.3</span><span>2.5</span><span>5.0</span>
                 </div>
                 <p className="text-xs text-kmf-text-tertiary mt-2">
-                  {rr < 0.8 ? 'Below 1:1 — win rate must be very high to compensate'
-                    : rr < 1.5 ? 'Moderate — typical for scalpers, requires high win rate'
-                    : rr < 2.5 ? 'Good R:R — gives you margin for lower win rate'
-                    : 'Excellent R:R — even 30% win rate can be profitable'}
+                  {rrHint}
                 </p>
               </div>
             </div>
@@ -316,23 +397,23 @@ export default function WinRateRRMatrixPage() {
               style={{ background: myExpectancy > 0 ? 'rgba(0,200,83,0.08)' : myExpectancy === 0 ? 'rgba(255,179,0,0.08)' : 'rgba(255,82,82,0.08)', border: `1px solid ${myColor.border}`, transition: 'all 0.3s ease' }}>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: myColor.text }}>
-                  Your Expectancy
+                  {t.yourExpectancy}
                 </p>
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl font-bold tabular-nums" style={{ color: myColor.text }}>
                     {myExpectancy > 0 ? '+' : ''}{myExpectancy.toFixed(3)}R
                   </span>
-                  <span className="text-sm text-kmf-text-tertiary">per trade</span>
+                  <span className="text-sm text-kmf-text-tertiary">{t.perTrade}</span>
                 </div>
               </div>
-              <div className="text-sm text-kmf-text-secondary max-w-xs">
+              <div className="text-sm text-kmf-text-secondary max-w-xs" style={{ color: myColor.text }}>
                 {myExpectancy > 0.5
-                  ? <><strong style={{ color: myColor.text }}>Strong edge.</strong> On every $1,000 risked, you earn ~${(myExpectancy * 1000).toFixed(0)} on average.</>
+                  ? t.resStrong((myExpectancy * 1000).toFixed(0))
                   : myExpectancy > 0
-                  ? <><strong style={{ color: myColor.text }}>Slight edge.</strong> Profitable, but thin. Every $1,000 risked earns ~${(myExpectancy * 1000).toFixed(0)}. Improve R:R or win rate to widen the margin.</>
+                  ? t.resSlight((myExpectancy * 1000).toFixed(0))
                   : myExpectancy === 0
-                  ? <><strong style={{ color: myColor.text }}>Break-even.</strong> No edge. Commissions alone will make you unprofitable. Push R:R higher.</>
-                  : <><strong style={{ color: myColor.text }}>Losing strategy.</strong> Every $1,000 risked loses ~${(Math.abs(myExpectancy) * 1000).toFixed(0)}. No position sizing fix will save a negative expectancy.</>
+                  ? t.resBreak
+                  : t.resLosing((Math.abs(myExpectancy) * 1000).toFixed(0))
                 }
               </div>
             </div>
@@ -345,16 +426,16 @@ export default function WinRateRRMatrixPage() {
 
             {/* Legend */}
             <div className="flex items-center justify-between px-5 py-4 border-b" style={{ borderColor: 'rgba(255,255,255,0.06)' }}>
-              <p className="text-sm font-semibold text-kmf-text-primary">Expectancy Heatmap</p>
+              <p className="text-sm font-semibold text-kmf-text-primary">{t.heatmap}</p>
               <div className="flex items-center gap-4 text-xs text-kmf-text-tertiary">
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3 h-3 rounded-sm inline-block" style={{ background: 'rgba(220,50,50,0.6)' }}></span> Losing
+                  <span className="w-3 h-3 rounded-sm inline-block" style={{ background: 'rgba(220,50,50,0.6)' }}></span> {t.legendLosing}
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3 h-3 rounded-sm inline-block" style={{ background: 'rgba(255,179,0,0.5)' }}></span> Break-even
+                  <span className="w-3 h-3 rounded-sm inline-block" style={{ background: 'rgba(255,179,0,0.5)' }}></span> {t.legendBreak}
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-3 h-3 rounded-sm inline-block" style={{ background: 'rgba(0,180,80,0.6)' }}></span> Profitable
+                  <span className="w-3 h-3 rounded-sm inline-block" style={{ background: 'rgba(0,180,80,0.6)' }}></span> {t.legendProfit}
                 </span>
               </div>
             </div>
@@ -365,7 +446,7 @@ export default function WinRateRRMatrixPage() {
                 {/* Column headers (Win Rate) */}
                 <div style={{ display: 'grid', gridTemplateColumns: '56px repeat(13, 1fr)', gap: 3, marginBottom: 4 }}>
                   <div className="text-xs text-kmf-text-tertiary text-center flex items-end justify-center pb-1">
-                    R:R ↓ / WR →
+                    {t.axisLabel}
                   </div>
                   {WIN_RATES.map(w => (
                     <div key={w}
@@ -380,28 +461,28 @@ export default function WinRateRRMatrixPage() {
                 </div>
 
                 {/* Rows */}
-                {RR_VALUES.map((rrVal, rowIdx) => (
-                  <div key={rrVal} style={{ display: 'grid', gridTemplateColumns: '56px repeat(13, 1fr)', gap: 3, marginBottom: 3 }}>
+                {RR_VALUES.map((rrRow, rowIdx) => (
+                  <div key={rrRow} style={{ display: 'grid', gridTemplateColumns: '56px repeat(13, 1fr)', gap: 3, marginBottom: 3 }}>
 
                     {/* Row header (R:R) */}
                     <div className="flex items-center justify-end pr-2 text-xs font-semibold"
                       style={{
-                        color: Math.abs(rrVal - rr) < 0.15 ? '#4FC3F7' : 'rgba(143,179,197,0.7)',
+                        color: Math.abs(rrRow - rr) < 0.15 ? '#4FC3F7' : 'rgba(143,179,197,0.7)',
                       }}>
-                      1:{rrVal}
+                      1:{rrRow}
                     </div>
 
                     {/* Cells */}
-                    {WIN_RATES.map((wrVal, colIdx) => {
-                      const e = calcExpectancy(wrVal, rrVal);
+                    {WIN_RATES.map((wr, colIdx) => {
+                      const e = calcExpectancy(wr, rrRow);
                       const colors = expectancyColor(e);
                       const isMarker = rowIdx === markerRow && colIdx === markerCol;
                       const isHovered = hoveredCell?.row === rowIdx && hoveredCell?.col === colIdx;
                       const delay = revealed ? 0 : (rowIdx * WIN_RATES.length + colIdx) * 12;
 
                       return (
-                        <div key={wrVal}
-                          onMouseEnter={() => setHoveredCell({ row: rowIdx, col: colIdx, e, wr: wrVal, rr: rrVal })}
+                        <div key={wr}
+                          onMouseEnter={() => setHoveredCell({ row: rowIdx, col: colIdx, e, wr, rr: rrRow })}
                           onMouseLeave={() => setHoveredCell(null)}
                           style={{
                             background: colors.bg,
@@ -453,12 +534,12 @@ export default function WinRateRRMatrixPage() {
             {hoveredCell && (
               <div className="mx-3 mb-3 rounded-xl px-4 py-3 flex flex-wrap gap-x-6 gap-y-1 items-center"
                 style={{ background: 'rgba(30,33,42,0.95)', border: '1px solid rgba(255,255,255,0.1)', animation: 'kmf-fadeIn 0.15s ease both' }}>
-                <span className="text-xs text-kmf-text-tertiary">Win Rate: <strong className="text-kmf-text-primary">{hoveredCell.wr}%</strong></span>
-                <span className="text-xs text-kmf-text-tertiary">R:R: <strong className="text-kmf-text-primary">1:{hoveredCell.rr}</strong></span>
-                <span className="text-xs text-kmf-text-tertiary">Expectancy: <strong style={{ color: expectancyColor(hoveredCell.e).text }}>{hoveredCell.e > 0 ? '+' : ''}{hoveredCell.e.toFixed(4)}R</strong></span>
-                <span className="text-xs text-kmf-text-tertiary">Per $1,000 risked: <strong style={{ color: expectancyColor(hoveredCell.e).text }}>{hoveredCell.e > 0 ? '+' : ''}${(hoveredCell.e * 1000).toFixed(0)}</strong></span>
+                <span className="text-xs text-kmf-text-tertiary">{t.tipWinRate} <strong className="text-kmf-text-primary">{hoveredCell.wr}%</strong></span>
+                <span className="text-xs text-kmf-text-tertiary">{t.tipRr} <strong className="text-kmf-text-primary">1:{hoveredCell.rr}</strong></span>
+                <span className="text-xs text-kmf-text-tertiary">{t.tipExpectancy} <strong style={{ color: expectancyColor(hoveredCell.e).text }}>{hoveredCell.e > 0 ? '+' : ''}{hoveredCell.e.toFixed(4)}R</strong></span>
+                <span className="text-xs text-kmf-text-tertiary">{t.tipPer} <strong style={{ color: expectancyColor(hoveredCell.e).text }}>{hoveredCell.e > 0 ? '+' : ''}${(hoveredCell.e * 1000).toFixed(0)}</strong></span>
                 <span className="text-xs ml-auto" style={{ color: expectancyColor(hoveredCell.e).text }}>
-                  {hoveredCell.e > 0.5 ? 'Strong edge' : hoveredCell.e > 0 ? 'Slight edge' : hoveredCell.e === 0 ? 'Break-even' : hoveredCell.e > -0.5 ? 'Weak negative' : 'Strong losing'}
+                  {hoveredCell.e > 0.5 ? t.edgeLabels.strong : hoveredCell.e > 0 ? t.edgeLabels.slight : hoveredCell.e === 0 ? t.edgeLabels.breakeven : hoveredCell.e > -0.5 ? t.edgeLabels.weak : t.edgeLabels.strongLose}
                 </span>
               </div>
             )}
@@ -466,35 +547,10 @@ export default function WinRateRRMatrixPage() {
 
           {/* Key insight cards */}
           <div className="grid sm:grid-cols-3 gap-4 mb-10" style={{ animation: 'kmf-fadeIn 0.6s ease 0.3s both' }}>
-            {[
-              {
-                color: '#FF5252',
-                bg: 'rgba(255,82,82,0.08)',
-                border: 'rgba(255,82,82,0.2)',
-                icon: '⚠',
-                title: 'The Win Rate Trap',
-                body: 'A 70% win rate sounds impressive — but if your average loss is 3× bigger than your average win, you lose money. R:R is more important than win rate.',
-              },
-              {
-                color: '#4FC3F7',
-                bg: 'rgba(79,195,247,0.08)',
-                border: 'rgba(79,195,247,0.2)',
-                icon: '⚡',
-                title: 'The Break-Even Diagonal',
-                body: 'The yellow cells form a diagonal line. This is the break-even frontier. Every combination on it earns nothing. You need to be above it to survive long-term.',
-              },
-              {
-                color: '#00E676',
-                bg: 'rgba(0,230,118,0.08)',
-                border: 'rgba(0,230,118,0.2)',
-                icon: '✓',
-                title: 'The Professional Zone',
-                body: 'Most full-time traders operate between 40–55% win rate with 1.5:1–3:1 R:R. Boring? Yes. Sustainably profitable? Also yes.',
-              },
-            ].map((card, i) => (
+            {t.cards.map((card, i) => (
               <div key={i} className="rounded-2xl p-5"
-                style={{ background: card.bg, border: `1px solid ${card.border}` }}>
-                <div className="text-2xl mb-3" style={{ color: card.color }}>{card.icon}</div>
+                style={{ background: CARD_STYLES[i].bg, border: `1px solid ${CARD_STYLES[i].border}` }}>
+                <div className="text-2xl mb-3" style={{ color: CARD_STYLES[i].color }}>{CARD_STYLES[i].icon}</div>
                 <h3 className="font-bold text-kmf-text-primary mb-2 text-sm">{card.title}</h3>
                 <p className="text-kmf-text-secondary text-xs leading-relaxed">{card.body}</p>
               </div>
@@ -504,23 +560,12 @@ export default function WinRateRRMatrixPage() {
           {/* Educational content */}
           <div className="rounded-2xl p-6 sm:p-8 mb-10"
             style={{ background: 'rgba(26,29,36,0.6)', border: '1px solid rgba(255,255,255,0.07)', animation: 'kmf-fadeIn 0.6s ease 0.35s both' }}>
-            <h2 className="text-xl font-bold text-kmf-text-primary mb-6">Why Most Traders Think About This Wrong</h2>
+            <h2 className="text-xl font-bold text-kmf-text-primary mb-6">{t.eduTitle}</h2>
 
             <div className="space-y-5 text-kmf-text-secondary text-sm leading-relaxed">
-              <p>
-                Beginners fixate on win rate. They want to be "right" most of the time. But trading isn't a test — it's a business. The only metric that matters is: <strong className="text-kmf-text-primary">does your strategy make money over a large sample of trades?</strong>
-              </p>
-              <p>
-                That's what expectancy measures. It strips away all the noise — the hot streaks, the bad days, the lucky trades — and tells you what your strategy actually earns per unit of risk. A positive expectancy means the edge is real. A negative expectancy means no amount of discipline, psychology work, or risk management will save you.
-              </p>
-              <p>
-                <strong className="text-kmf-text-primary">The matrix above shows every possible combination.</strong> Notice how the green zone covers a wide diagonal band — there are many paths to profitability. A scalper with 70% win rate and 0.75:1 R:R is in the same green band as a swing trader with 35% win rate and 3:1 R:R. Different styles, same math.
-              </p>
-              <p>
-                The red zone is unforgiving. Once you're there, no trick saves you. If you recognize your numbers in the red, the fix is one of two things: improve your entries (win rate) or improve your exits (R:R). Usually improving R:R is easier — it doesn't require you to be more "right," just more patient with winners and faster with losers.
-              </p>
+              {t.eduP.map((p, i) => <p key={i}>{p}</p>)}
               <p className="text-kmf-text-tertiary text-xs">
-                Don't know your win rate or R:R? That's exactly why a <Link to="/" className="text-kmf-accent hover:underline">trading journal</Link> exists. After 30–50 logged trades, you'll have statistically meaningful numbers — and you'll be able to find your exact cell in this matrix.
+                {t.eduNote}
               </p>
             </div>
           </div>
@@ -536,8 +581,8 @@ export default function WinRateRRMatrixPage() {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-kmf-text-primary text-sm group-hover:text-kmf-accent transition-colors">Risk of Ruin Calculator →</p>
-                <p className="text-xs text-kmf-text-tertiary mt-0.5">See if your account can survive long losing streaks</p>
+                <p className="font-semibold text-kmf-text-primary text-sm group-hover:text-kmf-accent transition-colors">{t.linkRuinTitle}</p>
+                <p className="text-xs text-kmf-text-tertiary mt-0.5">{t.linkRuinDesc}</p>
               </div>
             </Link>
             <Link to="/tools/lot-size-calculator" className="group rounded-2xl p-5 flex items-center gap-4 transition-all hover:scale-[1.02]"
@@ -549,8 +594,8 @@ export default function WinRateRRMatrixPage() {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-kmf-text-primary text-sm group-hover:text-kmf-accent transition-colors">Lot Size Calculator →</p>
-                <p className="text-xs text-kmf-text-tertiary mt-0.5">Size your positions to match your target R:R</p>
+                <p className="font-semibold text-kmf-text-primary text-sm group-hover:text-kmf-accent transition-colors">{t.linkLotTitle}</p>
+                <p className="text-xs text-kmf-text-tertiary mt-0.5">{t.linkLotDesc}</p>
               </div>
             </Link>
           </div>
@@ -558,8 +603,8 @@ export default function WinRateRRMatrixPage() {
           {/* CTA */}
           <div className="rounded-2xl p-6 text-center mb-10"
             style={{ background: 'linear-gradient(135deg, rgba(79,195,247,0.08) 0%, rgba(0,200,83,0.06) 100%)', border: '1px solid rgba(79,195,247,0.15)', animation: 'kmf-fadeIn 0.6s ease 0.45s both' }}>
-            <p className="text-kmf-text-secondary text-sm mb-1">Don't know your real win rate or R:R?</p>
-            <p className="text-kmf-text-primary font-semibold text-base mb-4">Track your trades. Your stats will find their cell automatically.</p>
+            <p className="text-kmf-text-secondary text-sm mb-1">{t.ctaLine1}</p>
+            <p className="text-kmf-text-primary font-semibold text-base mb-4">{t.ctaLine2}</p>
             <a href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal"
               target="_blank" rel="noopener noreferrer"
               onClick={() => window.gtag?.('event', 'play_store_click', { source: 'win_rate_rr_matrix_cta' })}
@@ -569,15 +614,15 @@ export default function WinRateRRMatrixPage() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.86l1.308.756c.884.512.884 1.791 0 2.303l-1.308.756-2.543-2.543 2.543-2.272zm-12.49-7.205L15.145 9.98l-2.302 2.302-8.635-8.64z"/>
               </svg>
-              Download Free on Google Play
+              {t.ctaButton}
             </a>
           </div>
 
           {/* FAQ */}
           <div style={{ animation: 'kmf-fadeIn 0.6s ease 0.5s both' }}>
-            <h2 className="text-xl font-bold text-kmf-text-primary mb-5">Frequently Asked Questions</h2>
+            <h2 className="text-xl font-bold text-kmf-text-primary mb-5">{t.faqHeading}</h2>
             <div className="space-y-3">
-              {FAQ_ITEMS.map((item, i) => (
+              {t.faq.map((item, i) => (
                 <div key={i} className="rounded-xl overflow-hidden"
                   style={{ background: 'rgba(26,29,36,0.7)', border: '1px solid rgba(255,255,255,0.07)' }}>
                   <button
