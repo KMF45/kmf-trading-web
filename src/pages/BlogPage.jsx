@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
 import BlogCoverArt from '../components/blog/BlogCoverArt';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export const posts = [
   {
@@ -426,7 +427,52 @@ function highlight(text, query) {
   }
 }
 
+const BLOG_UI = {
+  en: {
+    metaTitle: 'Blog | K.M.F. Trading Journal',
+    metaDesc: 'Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.',
+    backHome: '← Back to home',
+    badge: '✦ Trading Education',
+    h1: 'Learn to trade smarter every day',
+    subtitle: 'Honest, no-fluff articles on psychology, risk management, statistics, and the daily discipline that separates pros from amateurs.',
+    searchPlaceholder: 'Search articles — e.g. profit factor, stop loss, tilt…',
+    searchAria: 'Search articles',
+    clearAria: 'Clear search',
+    moreBelow: (n) => `${n} more result${n === 1 ? '' : 's'} below`,
+    noMatchA: 'No articles match ', noMatchB: '. Try a different term.',
+    linkFeatures: 'Features', linkPricing: 'Pricing', linkDownload: 'Download', linkFaq: 'FAQ',
+    noMatchShort: 'No articles match ',
+    showingA: 'Showing ', showingB: (n) => ` result${n === 1 ? '' : 's'} for `, showingC: '.',
+    emptyTitle: 'No matching articles',
+    emptyBody: 'Try searching for a broader term, or browse by category above.',
+    clearSearch: 'Clear search',
+    readArticle: 'Read article →',
+  },
+  ro: {
+    metaTitle: 'Blog | K.M.F. Trading Journal',
+    metaDesc: 'Idei de trading, ghiduri pentru aplicație și sfaturi pentru traderi serioși. Blogul K.M.F. Trading Journal.',
+    backHome: '← Înapoi acasă',
+    badge: '✦ Educație de Trading',
+    h1: 'Învață să tranzacționezi mai inteligent în fiecare zi',
+    subtitle: 'Articole oneste, fără umplutură, despre psihologie, risk management, statistici și disciplina zilnică ce desparte profesioniștii de amatori.',
+    searchPlaceholder: 'Caută articole — ex. profit factor, stop loss, tilt…',
+    searchAria: 'Caută articole',
+    clearAria: 'Șterge căutarea',
+    moreBelow: (n) => `încă ${n} ${n === 1 ? 'rezultat' : 'rezultate'} mai jos`,
+    noMatchA: 'Niciun articol nu se potrivește cu ', noMatchB: '. Încearcă alt termen.',
+    linkFeatures: 'Funcții', linkPricing: 'Prețuri', linkDownload: 'Descarcă', linkFaq: 'FAQ',
+    noMatchShort: 'Niciun articol nu se potrivește cu ',
+    showingA: 'Se afișează ', showingB: (n) => ` ${n === 1 ? 'rezultat' : 'rezultate'} pentru `, showingC: '.',
+    emptyTitle: 'Niciun articol potrivit',
+    emptyBody: 'Încearcă un termen mai general sau răsfoiește pe categorii mai sus.',
+    clearSearch: 'Șterge căutarea',
+    readArticle: 'Citește articolul →',
+  },
+};
+
 export default function BlogPage() {
+  const { lang } = useLanguage();
+  const ui = BLOG_UI[lang] || BLOG_UI.en;
   const [searchQuery, setSearchQuery] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);
@@ -475,11 +521,9 @@ export default function BlogPage() {
   }
 
   useEffect(() => {
-    document.title = 'Blog | K.M.F. Trading Journal';
+    document.title = ui.metaTitle;
     const desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content',
-      'Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.'
-    );
+    if (desc) desc.setAttribute('content', ui.metaDesc);
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) canonical.setAttribute('href', 'https://kmfjournal.com/blog');
     const ogUrl = document.querySelector('meta[property="og:url"]');
@@ -529,7 +573,7 @@ export default function BlogPage() {
       document.getElementById('ld-collection')?.remove();
       document.getElementById('ld-blog-breadcrumb')?.remove();
     };
-  }, []);
+  }, [ui]);
 
   // Category counts for filter pills
   const categoryCounts = useMemo(() => {
@@ -555,7 +599,7 @@ export default function BlogPage() {
 
           {/* Back link */}
           <Link to="/" className="text-sm text-kmf-text-tertiary hover:text-kmf-accent transition-colors">
-            ← Back to home
+            {ui.backHome}
           </Link>
 
           {/* Hero Header */}
@@ -568,7 +612,7 @@ export default function BlogPage() {
                 border: '1px solid rgba(79,195,247,0.22)',
               }}
             >
-              ✦ Trading Education
+              {ui.badge}
             </span>
             <h1
               className="font-bold mb-4 mx-auto"
@@ -583,13 +627,13 @@ export default function BlogPage() {
                 backgroundClip: 'text',
               }}
             >
-              Learn to trade smarter every day
+              {ui.h1}
             </h1>
             <p
               className="text-kmf-text-tertiary mx-auto"
               style={{ maxWidth: 580, fontSize: 16, lineHeight: 1.6 }}
             >
-              Honest, no-fluff articles on psychology, risk management, statistics, and the daily discipline that separates pros from amateurs.
+              {ui.subtitle}
             </p>
           </div>
 
@@ -612,14 +656,14 @@ export default function BlogPage() {
                 onChange={(e) => { setSearchQuery(e.target.value); setActiveIdx(0); setShowDropdown(true); }}
                 onFocus={() => setShowDropdown(true)}
                 onKeyDown={handleKeyDown}
-                placeholder="Search articles — e.g. profit factor, stop loss, tilt…"
+                placeholder={ui.searchPlaceholder}
                 className="w-full pl-11 pr-10 py-3 rounded-xl text-sm text-kmf-text-primary placeholder:text-kmf-text-tertiary/60 outline-none transition-all"
                 style={{
                   background: 'rgba(26,29,36,0.85)',
                   border: `1px solid ${searchQuery || showDropdown ? 'rgba(79,195,247,0.35)' : 'rgba(255,255,255,0.07)'}`,
                   boxShadow: searchQuery || showDropdown ? '0 0 0 3px rgba(79,195,247,0.08)' : 'none',
                 }}
-                aria-label="Search articles"
+                aria-label={ui.searchAria}
                 aria-autocomplete="list"
                 aria-expanded={showDropdown && autocomplete.length > 0}
               />
@@ -627,7 +671,7 @@ export default function BlogPage() {
                 <button
                   onClick={() => { setSearchQuery(''); setActiveIdx(0); inputRef.current?.focus(); }}
                   className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full flex items-center justify-center text-kmf-text-tertiary hover:text-kmf-text-primary hover:bg-white/5 transition-colors"
-                  aria-label="Clear search"
+                  aria-label={ui.clearAria}
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -686,7 +730,7 @@ export default function BlogPage() {
                     className="px-4 py-2 text-[11px] text-kmf-text-tertiary uppercase tracking-widest"
                     style={{ background: 'rgba(79,195,247,0.04)', borderTop: '1px solid rgba(255,255,255,0.04)' }}
                   >
-                    {filteredPosts.length - autocomplete.length} more result{filteredPosts.length - autocomplete.length === 1 ? '' : 's'} below
+                    {ui.moreBelow(filteredPosts.length - autocomplete.length)}
                   </div>
                 )}
               </div>
@@ -700,7 +744,7 @@ export default function BlogPage() {
                   border: '1px solid rgba(255,255,255,0.07)',
                 }}
               >
-                No articles match <strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>. Try a different term.
+                {ui.noMatchA}<strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>{ui.noMatchB}
               </div>
             )}
           </div>
@@ -734,18 +778,18 @@ export default function BlogPage() {
 
           {/* Internal links for SEO */}
           <div className="flex flex-wrap gap-3 mb-10 text-xs">
-            <Link to="/#features" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">Features</Link>
-            <Link to="/#pricing" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">Pricing</Link>
-            <Link to="/#download" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">Download</Link>
-            <Link to="/#faq" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">FAQ</Link>
+            <Link to="/#features" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">{ui.linkFeatures}</Link>
+            <Link to="/#pricing" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">{ui.linkPricing}</Link>
+            <Link to="/#download" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">{ui.linkDownload}</Link>
+            <Link to="/#faq" className="px-3 py-1.5 rounded-full bg-kmf-accent/8 text-kmf-text-tertiary hover:text-kmf-accent border border-kmf-accent/15 transition-colors">{ui.linkFaq}</Link>
           </div>
 
           {/* Results count */}
           {searchQuery && (
             <p className="text-xs text-kmf-text-tertiary mb-4">
               {filteredPosts.length === 0
-                ? <>No articles match <strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>.</>
-                : <>Showing <strong style={{ color: '#4FC3F7' }}>{filteredPosts.length}</strong> result{filteredPosts.length === 1 ? '' : 's'} for <strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>.</>
+                ? <>{ui.noMatchShort}<strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>.</>
+                : <>{ui.showingA}<strong style={{ color: '#4FC3F7' }}>{filteredPosts.length}</strong>{ui.showingB(filteredPosts.length)}<strong style={{ color: '#F0F4FF' }}>"{searchQuery}"</strong>{ui.showingC}</>
               }
             </p>
           )}
@@ -756,16 +800,16 @@ export default function BlogPage() {
               className="rounded-2xl p-8 text-center"
               style={{ background: 'rgba(26,29,36,0.85)', border: '1px dashed rgba(255,255,255,0.1)' }}
             >
-              <p className="text-kmf-text-primary font-semibold mb-2">No matching articles</p>
+              <p className="text-kmf-text-primary font-semibold mb-2">{ui.emptyTitle}</p>
               <p className="text-sm text-kmf-text-tertiary mb-4">
-                Try searching for a broader term, or browse by category above.
+                {ui.emptyBody}
               </p>
               <button
                 onClick={() => setSearchQuery('')}
                 className="text-xs font-semibold px-4 py-2 rounded-full transition-colors"
                 style={{ background: 'rgba(79,195,247,0.1)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.25)' }}
               >
-                Clear search
+                {ui.clearSearch}
               </button>
             </div>
           )}
@@ -847,7 +891,7 @@ export default function BlogPage() {
                     >
                       {searchQuery ? highlight(post.excerpt, searchQuery) : post.excerpt}
                     </p>
-                    <p className="text-xs text-kmf-accent mt-4 font-semibold">Read article →</p>
+                    <p className="text-xs text-kmf-accent mt-4 font-semibold">{ui.readArticle}</p>
                   </div>
                 </Link>
               );

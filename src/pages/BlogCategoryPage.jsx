@@ -3,6 +3,12 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
 import { posts } from './BlogPage';
+import { useLanguage } from '../i18n/LanguageContext';
+
+const UI = {
+  en: { home: 'Home', articles: 'articles', allArticles: 'All Articles', readArticle: 'Read article →' },
+  ro: { home: 'Acasă', articles: 'articole', allArticles: 'Toate articolele', readArticle: 'Citește articolul →' },
+};
 
 const CATEGORIES = {
   'psychology': { label: 'Psychology', color: '#CE93D8', desc: 'Master the mental game of trading. Articles on tilt, revenge trading, confidence, discipline, and the psychological patterns that separate winners from blowups.' },
@@ -19,6 +25,8 @@ function slugifyCategory(cat) {
 
 export default function BlogCategoryPage() {
   const { category } = useParams();
+  const { lang } = useLanguage();
+  const ui = UI[lang] || UI.en;
   const cat = CATEGORIES[category];
 
   if (!cat) return <Navigate to="/blog" replace />;
@@ -51,7 +59,7 @@ export default function BlogCategoryPage() {
       <main id="main-content" className="bg-kmf-bg min-h-screen pt-24 pb-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <nav className="mb-8 text-sm text-kmf-text-tertiary" aria-label="Breadcrumb">
-            <Link to="/" className="hover:text-kmf-accent transition-colors">Home</Link>
+            <Link to="/" className="hover:text-kmf-accent transition-colors">{ui.home}</Link>
             <span className="mx-2">/</span>
             <Link to="/blog" className="hover:text-kmf-accent transition-colors">Blog</Link>
             <span className="mx-2">/</span>
@@ -61,7 +69,7 @@ export default function BlogCategoryPage() {
           <div className="mb-10">
             <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4"
               style={{ background: `${cat.color}14`, color: cat.color, border: `1px solid ${cat.color}25` }}>
-              {filtered.length} articles
+              {filtered.length} {ui.articles}
             </span>
             <h1 className="text-4xl font-bold text-kmf-text-primary mb-3" style={{ letterSpacing: '-0.02em' }}>
               {cat.label}
@@ -83,7 +91,7 @@ export default function BlogCategoryPage() {
             ))}
             <Link to="/blog" className="px-3 py-1.5 rounded-full transition-colors"
               style={{ background: 'rgba(255,255,255,0.04)', color: '#8899A6', border: '1px solid rgba(255,255,255,0.08)' }}>
-              All Articles
+              {ui.allArticles}
             </Link>
           </div>
 
@@ -107,7 +115,7 @@ export default function BlogCategoryPage() {
                   {post.title}
                 </h2>
                 <p className="text-sm text-kmf-text-tertiary leading-relaxed">{post.excerpt}</p>
-                <p className="text-xs text-kmf-accent mt-4 font-semibold">Read article →</p>
+                <p className="text-xs text-kmf-accent mt-4 font-semibold">{ui.readArticle}</p>
               </Link>
             ))}
           </div>
