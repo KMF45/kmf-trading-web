@@ -4,12 +4,110 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
 import { LIBRARY_ITEMS, LIBRARY_CATEGORIES } from '../data/checklistLibrary';
 import { STARTER_TEMPLATES } from '../data/checklistTemplates';
+import { useLanguage } from '../i18n/LanguageContext';
 
-const PAGE_TITLE = 'Free Pre-Trade Checklist Builder — Personalized for Your Strategy | K.M.F.';
-const PAGE_DESC = 'Build your own pre-trade checklist for forex, stocks, crypto, or prop firm trading. Free, no signup. Customize items, save locally, share via link, export PDF.';
 const OG_IMAGE = 'https://kmfjournal.com/tools/og/pre-trade-checklist.png';
 const PAGE_URL = 'https://kmfjournal.com/tools/pre-trade-checklist';
 const STORAGE_KEY = 'kmf_pretrade_v1';
+
+const T = {
+  en: {
+    pageTitle: 'Free Pre-Trade Checklist Builder — Personalized for Your Strategy | K.M.F.',
+    pageDesc: 'Build your own pre-trade checklist for forex, stocks, crypto, or prop firm trading. Free, no signup. Customize items, save locally, share via link, export PDF.',
+    ogAlt: 'Free Pre-Trade Checklist Builder by K.M.F. Trading Journal',
+    badge: 'Free Trading Tool',
+    heroP: 'Build your own pre-trade checklist. Pick a starter, add suggestions, or write your own items. Auto-saved locally, shareable via link, and printable as a PDF.',
+    onboardTitle: 'Start with a template or from scratch',
+    onboardSub: 'Pick a starting point. You can rewrite, delete, reorder, or add items afterwards — nothing is locked.',
+    itemsCats: (items, cats) => `${items} items · ${cats} categories`,
+    actLoadTemplate: 'Load template', actShare: 'Share link', actCopyText: 'Copy as text', actCopied: 'Copied!',
+    actPrint: 'Print / PDF', actExport: 'Export JSON', actImport: 'Import JSON',
+    actResetChecks: 'Reset checks', actResetAll: 'Reset all',
+    titleResetChecks: 'Uncheck all items (keeps structure)', titleResetAll: 'Delete the entire checklist',
+    progress: 'Progress', checkedCount: (c, t) => `${c} / ${t} checked`,
+    printTitle: 'Pre-Trade Checklist',
+    nameFirstCat: 'Name your first category', firstCatPlaceholder: 'e.g., Setup, Risk, Psychology',
+    emptyTitle: 'Your checklist is empty',
+    emptyDescA: 'Add a category to organize your checks, jump straight to your first item, or pick from the suggestion library ',
+    emptyRight: 'on the right', emptyBelow: 'below',
+    addCategory: 'Add category', addItem: 'Add item', loadTemplateInstead: 'Load a template instead',
+    allClearTitle: "All clear — you're cleared to trade",
+    allClearBody: (t) => `${t} of ${t} checks done. Trade the plan you just verified — not your mood.`,
+    addCategoryDashed: '+ Add category', addItemSmall: '+ Add item',
+    catPlaceholder: 'Category name (e.g., Setup, Risk, Psychology)',
+    libTitle: 'Suggestion Library',
+    libSub: 'Click any item to add it to your checklist. It goes into the matching category (created if missing).',
+    libSearch: 'Search library…', libAllCats: 'All categories', libNoMatch: 'No suggestions match.',
+    libAdded: 'Already in your checklist (click to add again)', libClickAdd: 'Click to add',
+    ctaTitle: 'Run this checklist on every trade.',
+    ctaBody: 'K.M.F. Trading Journal includes a pre-trade checklist feature in the Android app. Track completion over time, see which items you skip most, and build the habit.',
+    ctaButton: 'Download K.M.F. on Google Play',
+    otherTools: 'Other free tools',
+    tplModalTitle: 'Load a starter template', tplModalWarn: 'Heads up: this replaces your current checklist. Export it first if you want to keep it.',
+    shareModalTitle: 'Share your checklist',
+    shareModalDesc: 'Anyone who opens this link gets a copy of your checklist they can edit on their side. Nothing is uploaded — the data lives in the URL.',
+    copyLink: 'Copy link', copiedClipboard: '✓ Copied to clipboard',
+    confirmDeleteCat: 'Delete this category and all its items?',
+    confirmLoadTpl: 'Loading this template will replace your current checklist. Continue?',
+    confirmResetAll: 'Delete the entire checklist? This cannot be undone (unless you exported it).',
+    confirmImport: 'Replace your current checklist with the imported one?',
+    alertBadFile: 'Could not read this file. Make sure it is a checklist JSON exported from this tool.',
+    catItemPlaceholder: 'New item — what should you check before entering?',
+    save: 'Save', cancel: 'Cancel',
+    tMoveCatUp: 'Move category up', tMoveCatDown: 'Move category down', tRenameCat: 'Rename category', tDeleteCat: 'Delete category',
+    tMoveUp: 'Move up', tMoveDown: 'Move down', tEdit: 'Edit', tDelete: 'Delete',
+    aUncheck: 'Uncheck', aCheck: 'Check', tDblEdit: 'Double-click to edit',
+    txtHeader: 'KMF Pre-Trade Checklist',
+  },
+  ro: {
+    pageTitle: 'Pre-Trade Checklist Builder Gratuit — Personalizat pentru Strategia Ta | K.M.F.',
+    pageDesc: 'Construiește-ți propriul checklist pre-trade pentru forex, acțiuni, crypto sau prop firm. Gratuit, fără înregistrare. Personalizează items, salvează local, distribuie prin link, exportă PDF.',
+    ogAlt: 'Pre-Trade Checklist Builder Gratuit de la K.M.F. Trading Journal',
+    badge: 'Unealtă gratuită',
+    heroP: 'Construiește-ți propriul checklist pre-trade. Alege un șablon de start, adaugă sugestii sau scrie-ți propriile items. Salvat automat local, distribuibil prin link și printabil ca PDF.',
+    onboardTitle: 'Începe cu un șablon sau de la zero',
+    onboardSub: 'Alege un punct de pornire. Poți rescrie, șterge, reordona sau adăuga items după aceea — nimic nu e blocat.',
+    itemsCats: (items, cats) => `${items} items · ${cats} categorii`,
+    actLoadTemplate: 'Încarcă șablon', actShare: 'Distribuie link', actCopyText: 'Copiază ca text', actCopied: 'Copiat!',
+    actPrint: 'Printează / PDF', actExport: 'Exportă JSON', actImport: 'Importă JSON',
+    actResetChecks: 'Resetează bifele', actResetAll: 'Resetează tot',
+    titleResetChecks: 'Debifează toate items (păstrează structura)', titleResetAll: 'Șterge tot checklist-ul',
+    progress: 'Progres', checkedCount: (c, t) => `${c} / ${t} bifate`,
+    printTitle: 'Pre-Trade Checklist',
+    nameFirstCat: 'Denumește prima categorie', firstCatPlaceholder: 'ex. Setup, Risc, Psihologie',
+    emptyTitle: 'Checklist-ul tău e gol',
+    emptyDescA: 'Adaugă o categorie ca să-ți organizezi bifele, sari direct la primul item sau alege din librăria de sugestii ',
+    emptyRight: 'din dreapta', emptyBelow: 'de mai jos',
+    addCategory: 'Adaugă categorie', addItem: 'Adaugă item', loadTemplateInstead: 'Încarcă un șablon în schimb',
+    allClearTitle: 'Totul clar — ai undă verde să tranzacționezi',
+    allClearBody: (t) => `${t} din ${t} bife făcute. Tranzacționează planul pe care tocmai l-ai verificat — nu starea ta.`,
+    addCategoryDashed: '+ Adaugă categorie', addItemSmall: '+ Adaugă item',
+    catPlaceholder: 'Nume categorie (ex. Setup, Risc, Psihologie)',
+    libTitle: 'Librărie de sugestii',
+    libSub: 'Apasă orice item ca să-l adaugi în checklist-ul tău. Intră în categoria potrivită (creată dacă lipsește).',
+    libSearch: 'Caută în librărie…', libAllCats: 'Toate categoriile', libNoMatch: 'Nicio sugestie nu se potrivește.',
+    libAdded: 'Deja în checklist-ul tău (apasă ca să adaugi din nou)', libClickAdd: 'Apasă ca să adaugi',
+    ctaTitle: 'Rulează acest checklist la fiecare trade.',
+    ctaBody: 'K.M.F. Trading Journal include o funcție de checklist pre-trade în aplicația de Android. Urmărește completarea în timp, vezi ce items sari cel mai des și construiește obiceiul.',
+    ctaButton: 'Descarcă K.M.F. din Google Play',
+    otherTools: 'Alte unelte gratuite',
+    tplModalTitle: 'Încarcă un șablon de start', tplModalWarn: 'Atenție: asta înlocuiește checklist-ul tău curent. Exportă-l întâi dacă vrei să-l păstrezi.',
+    shareModalTitle: 'Distribuie checklist-ul tău',
+    shareModalDesc: 'Oricine deschide acest link primește o copie a checklist-ului tău pe care o poate edita la el. Nimic nu se încarcă pe server — datele trăiesc în URL.',
+    copyLink: 'Copiază linkul', copiedClipboard: '✓ Copiat în clipboard',
+    confirmDeleteCat: 'Ștergi această categorie și toate items-urile ei?',
+    confirmLoadTpl: 'Încărcarea acestui șablon va înlocui checklist-ul tău curent. Continui?',
+    confirmResetAll: 'Ștergi tot checklist-ul? Asta nu se poate anula (decât dacă l-ai exportat).',
+    confirmImport: 'Înlocuiești checklist-ul curent cu cel importat?',
+    alertBadFile: 'Nu am putut citi acest fișier. Asigură-te că e un JSON de checklist exportat din această unealtă.',
+    catItemPlaceholder: 'Item nou — ce ar trebui să verifici înainte de intrare?',
+    save: 'Salvează', cancel: 'Anulează',
+    tMoveCatUp: 'Mută categoria în sus', tMoveCatDown: 'Mută categoria în jos', tRenameCat: 'Redenumește categoria', tDeleteCat: 'Șterge categoria',
+    tMoveUp: 'Mută în sus', tMoveDown: 'Mută în jos', tEdit: 'Editează', tDelete: 'Șterge',
+    aUncheck: 'Debifează', aCheck: 'Bifează', tDblEdit: 'Dublu-click pentru editare',
+    txtHeader: 'KMF Pre-Trade Checklist',
+  },
+};
 
 /* ─── ID generator (stable enough for React keys) ─── */
 let _id = 0;
@@ -95,6 +193,8 @@ function downloadJson(state) {
    MAIN PAGE
    ═══════════════════════════════════════════════════════════════════════════ */
 export default function PreTradeChecklistPage() {
+  const { lang } = useLanguage();
+  const t = T[lang] || T.en;
   const [state, setState] = useState({ categories: [] });
   const [loaded, setLoaded] = useState(false);
   const [started, setStarted] = useState(false);
@@ -143,26 +243,26 @@ export default function PreTradeChecklistPage() {
 
   /* ─── SEO meta + JSON-LD ─── */
   useEffect(() => {
-    document.title = PAGE_TITLE;
+    document.title = t.pageTitle;
     const setMeta = (attr, val, content) => {
       let el = document.querySelector(`meta[${attr}="${val}"]`);
       if (!el) { el = document.createElement('meta'); el.setAttribute(attr, val); document.head.appendChild(el); }
       el.setAttribute('content', content);
     };
-    setMeta('name', 'description', PAGE_DESC);
-    setMeta('property', 'og:title', PAGE_TITLE);
-    setMeta('property', 'og:description', PAGE_DESC);
+    setMeta('name', 'description', t.pageDesc);
+    setMeta('property', 'og:title', t.pageTitle);
+    setMeta('property', 'og:description', t.pageDesc);
     setMeta('property', 'og:image', OG_IMAGE);
     setMeta('property', 'og:image:width', '1200');
     setMeta('property', 'og:image:height', '630');
-    setMeta('property', 'og:image:alt', 'Free Pre-Trade Checklist Builder by K.M.F. Trading Journal');
+    setMeta('property', 'og:image:alt', t.ogAlt);
     setMeta('property', 'og:url', PAGE_URL);
     setMeta('property', 'og:type', 'website');
     setMeta('name', 'twitter:card', 'summary_large_image');
-    setMeta('name', 'twitter:title', PAGE_TITLE);
-    setMeta('name', 'twitter:description', PAGE_DESC);
+    setMeta('name', 'twitter:title', t.pageTitle);
+    setMeta('name', 'twitter:description', t.pageDesc);
     setMeta('name', 'twitter:image', OG_IMAGE);
-    setMeta('name', 'twitter:image:alt', 'Free Pre-Trade Checklist Builder by K.M.F. Trading Journal');
+    setMeta('name', 'twitter:image:alt', t.ogAlt);
 
     let link = document.querySelector('link[rel="canonical"]');
     if (!link) { link = document.createElement('link'); link.setAttribute('rel', 'canonical'); document.head.appendChild(link); }
@@ -175,7 +275,7 @@ export default function PreTradeChecklistPage() {
           '@type': 'WebApplication',
           name: 'KMF Pre-Trade Checklist Builder',
           url: PAGE_URL,
-          description: PAGE_DESC,
+          description: t.pageDesc,
           applicationCategory: 'FinanceApplication',
           operatingSystem: 'All',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -206,7 +306,7 @@ export default function PreTradeChecklistPage() {
     script.textContent = JSON.stringify(jsonLd);
 
     return () => { script?.remove(); };
-  }, []);
+  }, [t]);
 
   /* ─── Builder mutations ─── */
   const addItem = useCallback((categoryName, text) => {
@@ -234,7 +334,7 @@ export default function PreTradeChecklistPage() {
   }, []);
 
   const removeCategory = useCallback((catId) => {
-    if (!confirm('Delete this category and all its items?')) return;
+    if (!confirm(t.confirmDeleteCat)) return;
     setState(prev => ({ categories: prev.categories.filter(c => c.id !== catId) }));
   }, []);
 
@@ -301,7 +401,7 @@ export default function PreTradeChecklistPage() {
 
   const loadTemplate = useCallback((template) => {
     if (state.categories.length > 0) {
-      if (!confirm('Loading this template will replace your current checklist. Continue?')) return;
+      if (!confirm(t.confirmLoadTpl)) return;
     }
     setState(templateToState(template));
     setStarted(true);
@@ -327,7 +427,7 @@ export default function PreTradeChecklistPage() {
   }, []);
 
   const resetAll = useCallback(() => {
-    if (!confirm('Delete the entire checklist? This cannot be undone (unless you exported it).')) return;
+    if (!confirm(t.confirmResetAll)) return;
     setState({ categories: [] });
     setStarted(false);
     try { localStorage.removeItem(STORAGE_KEY); localStorage.removeItem('kmf_pretrade_started'); } catch { /* */ }
@@ -407,10 +507,10 @@ export default function PreTradeChecklistPage() {
             })),
           })),
         };
-        if (state.categories.length > 0 && !confirm('Replace your current checklist with the imported one?')) return;
+        if (state.categories.length > 0 && !confirm(t.confirmImport)) return;
         setState(newState);
       } catch {
-        alert('Could not read this file. Make sure it is a checklist JSON exported from this tool.');
+        alert(t.alertBadFile);
       } finally {
         if (importInputRef.current) importInputRef.current.value = '';
       }
@@ -430,23 +530,22 @@ export default function PreTradeChecklistPage() {
           <div className="text-center mb-8 print:hidden">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-4" style={{ background: 'rgba(79,195,247,0.1)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.2)' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Free Trading Tool
+              {t.badge}
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-3">
               <span className="bg-gradient-to-r from-kmf-accent to-cyan-300 bg-clip-text text-transparent">Pre-Trade Checklist Builder</span>
             </h1>
             <p className="text-kmf-text-secondary max-w-2xl mx-auto text-base">
-              Build your own pre-trade checklist. Pick a starter, add suggestions, or write your own items.
-              Auto-saved locally, shareable via link, and printable as a PDF.
+              {t.heroP}
             </p>
           </div>
 
           {/* First-time onboarding — only when user has NOT picked anything yet */}
           {!started && loaded && (
             <div className="rounded-2xl p-6 mb-8 print:hidden" style={{ background: 'rgba(79,195,247,0.04)', border: '1px solid rgba(79,195,247,0.15)' }}>
-              <h2 className="text-lg font-semibold mb-3 text-kmf-text-primary">Start with a template or from scratch</h2>
+              <h2 className="text-lg font-semibold mb-3 text-kmf-text-primary">{t.onboardTitle}</h2>
               <p className="text-sm text-kmf-text-tertiary mb-5">
-                Pick a starting point. You can rewrite, delete, reorder, or add items afterwards — nothing is locked.
+                {t.onboardSub}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {STARTER_TEMPLATES.map(tpl => (
@@ -460,7 +559,7 @@ export default function PreTradeChecklistPage() {
                     <div className="text-xs text-kmf-text-tertiary leading-relaxed">{tpl.description}</div>
                     {tpl.categories.length > 0 && (
                       <div className="text-[10px] text-kmf-text-tertiary mt-2 uppercase tracking-wider">
-                        {tpl.categories.reduce((n, c) => n + c.items.length, 0)} items · {tpl.categories.length} categories
+                        {t.itemsCats(tpl.categories.reduce((n, c) => n + c.items.length, 0), tpl.categories.length)}
                       </div>
                     )}
                   </button>
@@ -472,16 +571,16 @@ export default function PreTradeChecklistPage() {
           {/* Top action bar */}
           {!isEmpty && (
             <div className="flex flex-wrap items-center gap-2 mb-6 print:hidden">
-              <ActionButton onClick={() => setShowTemplates(true)} icon={<IconLayers />} label="Load template" />
-              <ActionButton onClick={handleShare} icon={<IconLink />} label="Share link" />
-              <ActionButton onClick={handleCopyText} icon={<IconCopy />} label={textCopied ? 'Copied!' : 'Copy as text'} active={textCopied} />
-              <ActionButton onClick={handlePrint} icon={<IconPrint />} label="Print / PDF" />
-              <ActionButton onClick={() => downloadJson(state)} icon={<IconDownload />} label="Export JSON" />
-              <ActionButton onClick={() => importInputRef.current?.click()} icon={<IconUpload />} label="Import JSON" />
+              <ActionButton onClick={() => setShowTemplates(true)} icon={<IconLayers />} label={t.actLoadTemplate} />
+              <ActionButton onClick={handleShare} icon={<IconLink />} label={t.actShare} />
+              <ActionButton onClick={handleCopyText} icon={<IconCopy />} label={textCopied ? t.actCopied : t.actCopyText} active={textCopied} />
+              <ActionButton onClick={handlePrint} icon={<IconPrint />} label={t.actPrint} />
+              <ActionButton onClick={() => downloadJson(state)} icon={<IconDownload />} label={t.actExport} />
+              <ActionButton onClick={() => importInputRef.current?.click()} icon={<IconUpload />} label={t.actImport} />
               <input ref={importInputRef} type="file" accept="application/json,.json" onChange={handleImport} className="hidden" />
               <div className="flex-1" />
-              <ActionButton onClick={resetChecks} icon={<IconRefresh />} label="Reset checks" tone="warn" size="sm" title="Uncheck all items (keeps structure)" />
-              <ActionButton onClick={resetAll} icon={<IconTrash />} label="Reset all" tone="danger" size="sm" title="Delete the entire checklist" />
+              <ActionButton onClick={resetChecks} icon={<IconRefresh />} label={t.actResetChecks} tone="warn" size="sm" title={t.titleResetChecks} />
+              <ActionButton onClick={resetAll} icon={<IconTrash />} label={t.actResetAll} tone="danger" size="sm" title={t.titleResetAll} />
             </div>
           )}
 
@@ -489,8 +588,8 @@ export default function PreTradeChecklistPage() {
           {!isEmpty && (
             <div className="mb-6 print:hidden">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase tracking-wider text-kmf-text-tertiary font-semibold">Progress</span>
-                <span className="text-xs text-kmf-text-secondary">{checkedItems} / {totalItems} checked</span>
+                <span className="text-xs uppercase tracking-wider text-kmf-text-tertiary font-semibold">{t.progress}</span>
+                <span className="text-xs text-kmf-text-secondary">{t.checkedCount(checkedItems, totalItems)}</span>
               </div>
               <div className="h-2 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
                 <div className="h-full transition-all duration-300" style={{ width: `${progress}%`, background: 'linear-gradient(90deg, #4FC3F7, #00C853)' }} />
@@ -502,7 +601,7 @@ export default function PreTradeChecklistPage() {
           <div className="hidden print:flex items-center gap-2 mb-4">
             <img className="print-logo" src="/logo-80.png" alt="KMF" width="28" height="28" style={{ width: 28, height: 28 }} />
             <div>
-              <h2 className="print-header-title font-bold leading-tight" style={{ color: '#000' }}>Pre-Trade Checklist</h2>
+              <h2 className="print-header-title font-bold leading-tight" style={{ color: '#000' }}>{t.printTitle}</h2>
               <p className="print-header-sub" style={{ color: '#555' }}>kmfjournal.com</p>
             </div>
           </div>
@@ -520,10 +619,11 @@ export default function PreTradeChecklistPage() {
                 }}>
                   {addingToCat === 'new' ? (
                     <>
-                      <h3 className="text-sm font-semibold mb-3 text-kmf-text-primary uppercase tracking-wider">Name your first category</h3>
+                      <h3 className="text-sm font-semibold mb-3 text-kmf-text-primary uppercase tracking-wider">{t.nameFirstCat}</h3>
                       <div className="max-w-md mx-auto">
                         <InlineAddInput
-                          placeholder="e.g., Setup, Risk, Psychology"
+                          t={t}
+                          placeholder={t.firstCatPlaceholder}
                           onCancel={() => setAddingToCat(null)}
                           onSubmit={(name) => { addCategory(name); setAddingToCat(null); }}
                         />
@@ -531,28 +631,28 @@ export default function PreTradeChecklistPage() {
                     </>
                   ) : (
                     <>
-                      <h3 className="text-lg font-semibold mb-2 text-kmf-text-primary">Your checklist is empty</h3>
+                      <h3 className="text-lg font-semibold mb-2 text-kmf-text-primary">{t.emptyTitle}</h3>
                       <p className="text-sm text-kmf-text-tertiary mb-5 max-w-md mx-auto">
-                        Add a category to organize your checks, jump straight to your first item, or pick from the suggestion library {''}
-                        <span className="lg:inline hidden">on the right</span>
-                        <span className="lg:hidden inline">below</span>.
+                        {t.emptyDescA}
+                        <span className="lg:inline hidden">{t.emptyRight}</span>
+                        <span className="lg:hidden inline">{t.emptyBelow}</span>.
                       </p>
                       <div className="flex flex-wrap gap-3 justify-center">
                         <button
                           onClick={() => setAddingToCat('new')}
                           className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1.5"
                           style={{ background: '#4FC3F7', color: '#0F1115' }}
-                        ><span className="text-base">+</span> Add category</button>
+                        ><span className="text-base">+</span> {t.addCategory}</button>
                         <button
                           onClick={handleAddFirstItem}
                           className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1.5"
                           style={{ background: 'rgba(255,255,255,0.05)', color: '#E0E0E0', border: '1px solid rgba(255,255,255,0.12)' }}
-                        ><span className="text-base">+</span> Add item</button>
+                        ><span className="text-base">+</span> {t.addItem}</button>
                       </div>
                       <button
                         onClick={() => setShowTemplates(true)}
                         className="mt-5 text-xs text-kmf-text-tertiary hover:text-kmf-accent transition-colors underline"
-                      >Load a template instead</button>
+                      >{t.loadTemplateInstead}</button>
                     </>
                   )}
                 </div>
@@ -568,16 +668,17 @@ export default function PreTradeChecklistPage() {
                     <div className="w-9 h-9 rounded-full flex items-center justify-center" style={{ background: '#00C853' }}>
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold" style={{ color: '#00E676' }}>All clear — you're cleared to trade</h3>
+                    <h3 className="text-lg sm:text-xl font-bold" style={{ color: '#00E676' }}>{t.allClearTitle}</h3>
                   </div>
                   <p className="text-sm text-kmf-text-secondary mt-2 max-w-md mx-auto">
-                    {totalItems} of {totalItems} checks done. Trade the plan you just verified — not your mood.
+                    {t.allClearBody(totalItems)}
                   </p>
                 </div>
               )}
               {state.categories.map((cat, catIdx) => (
                 <CategoryBlock
                   key={cat.id}
+                  t={t}
                   cat={cat}
                   isFirst={catIdx === 0}
                   isLast={catIdx === state.categories.length - 1}
@@ -600,7 +701,8 @@ export default function PreTradeChecklistPage() {
                 <div className="mt-2 print:hidden">
                   {addingToCat === 'new' ? (
                     <InlineAddInput
-                      placeholder="Category name (e.g., Setup, Risk, Psychology)"
+                      t={t}
+                      placeholder={t.catPlaceholder}
                       onCancel={() => setAddingToCat(null)}
                       onSubmit={(name) => { addCategory(name); setAddingToCat(null); }}
                     />
@@ -609,7 +711,7 @@ export default function PreTradeChecklistPage() {
                       onClick={() => setAddingToCat('new')}
                       className="w-full py-3 rounded-xl text-sm text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
                       style={{ background: 'rgba(255,255,255,0.02)', border: '1px dashed rgba(255,255,255,0.12)' }}
-                    >+ Add category</button>
+                    >{t.addCategoryDashed}</button>
                   )}
                 </div>
               )}
@@ -619,12 +721,12 @@ export default function PreTradeChecklistPage() {
             {started && (
             <aside className="print:hidden">
               <div className="rounded-2xl p-4 sticky top-24" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                <h2 className="text-sm font-semibold text-kmf-text-primary uppercase tracking-wider mb-3">Suggestion Library</h2>
-                <p className="text-xs text-kmf-text-tertiary mb-3">Click any item to add it to your checklist. It goes into the matching category (created if missing).</p>
+                <h2 className="text-sm font-semibold text-kmf-text-primary uppercase tracking-wider mb-3">{t.libTitle}</h2>
+                <p className="text-xs text-kmf-text-tertiary mb-3">{t.libSub}</p>
 
                 <input
                   type="text"
-                  placeholder="Search library…"
+                  placeholder={t.libSearch}
                   value={librarySearch}
                   onChange={(e) => setLibrarySearch(e.target.value)}
                   className="w-full rounded-lg px-3 py-2 text-sm text-kmf-text-primary outline-none mb-2 focus:ring-1 focus:ring-kmf-accent/40"
@@ -637,7 +739,7 @@ export default function PreTradeChecklistPage() {
                   className="w-full rounded-lg px-2 py-2 text-xs text-kmf-text-primary outline-none mb-3"
                   style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
                 >
-                  <option value="all">All categories</option>
+                  <option value="all">{t.libAllCats}</option>
                   {LIBRARY_CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
                 </select>
 
@@ -658,7 +760,7 @@ export default function PreTradeChecklistPage() {
                                 border: `1px solid ${added ? 'rgba(0,200,83,0.18)' : 'rgba(255,255,255,0.05)'}`,
                                 color: added ? '#80E5A4' : '#B8C5D0',
                               }}
-                              title={added ? 'Already in your checklist (click to add again)' : 'Click to add'}
+                              title={added ? t.libAdded : t.libClickAdd}
                             >
                               <span className="flex items-start gap-2">
                                 <span className="mt-0.5 shrink-0">{added ? '✓' : '+'}</span>
@@ -671,7 +773,7 @@ export default function PreTradeChecklistPage() {
                     </div>
                   ))}
                   {libraryByCategory.size === 0 && (
-                    <p className="text-xs text-kmf-text-tertiary italic">No suggestions match.</p>
+                    <p className="text-xs text-kmf-text-tertiary italic">{t.libNoMatch}</p>
                   )}
                 </div>
               </div>
@@ -682,9 +784,9 @@ export default function PreTradeChecklistPage() {
           {/* CTA — only when not empty and not in print */}
           {!isEmpty && (
             <div className="mt-12 rounded-2xl p-6 text-center print:hidden" style={{ background: 'linear-gradient(135deg, rgba(79,195,247,0.06), rgba(206,147,216,0.04))', border: '1px solid rgba(79,195,247,0.15)' }}>
-              <h3 className="text-lg font-semibold text-kmf-text-primary mb-2">Run this checklist on every trade.</h3>
+              <h3 className="text-lg font-semibold text-kmf-text-primary mb-2">{t.ctaTitle}</h3>
               <p className="text-sm text-kmf-text-tertiary mb-4 max-w-xl mx-auto">
-                K.M.F. Trading Journal includes a pre-trade checklist feature in the Android app. Track completion over time, see which items you skip most, and build the habit.
+                {t.ctaBody}
               </p>
               <a
                 href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal"
@@ -693,13 +795,13 @@ export default function PreTradeChecklistPage() {
                 onClick={() => window.gtag?.('event', 'play_store_click', { source: 'pretrade_checklist' })}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: 'white', boxShadow: '0 4px 16px rgba(255,179,0,0.25)' }}
-              >Download K.M.F. on Google Play</a>
+              >{t.ctaButton}</a>
             </div>
           )}
 
           {/* Other tools cross-link */}
           <div className="mt-12 print:hidden">
-            <h3 className="text-xs uppercase tracking-wider text-kmf-text-tertiary font-semibold mb-3 text-center">Other free tools</h3>
+            <h3 className="text-xs uppercase tracking-wider text-kmf-text-tertiary font-semibold mb-3 text-center">{t.otherTools}</h3>
             <div className="flex flex-wrap gap-2 justify-center">
               <Link to="/tools/lot-size-calculator" className="px-3 py-1.5 rounded-lg text-xs text-kmf-text-secondary hover:text-kmf-accent transition-colors" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Lot Size Calculator</Link>
               <Link to="/tools/risk-of-ruin" className="px-3 py-1.5 rounded-lg text-xs text-kmf-text-secondary hover:text-kmf-accent transition-colors" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}>Risk of Ruin</Link>
@@ -715,10 +817,10 @@ export default function PreTradeChecklistPage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 print:hidden" style={{ background: 'rgba(0,0,0,0.7)' }} onClick={() => setShowTemplates(false)}>
           <div className="rounded-2xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto" style={{ background: '#0F1115', border: '1px solid rgba(255,255,255,0.1)' }} onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold text-kmf-text-primary">Load a starter template</h2>
+              <h2 className="text-lg font-semibold text-kmf-text-primary">{t.tplModalTitle}</h2>
               <button onClick={() => setShowTemplates(false)} className="text-kmf-text-tertiary hover:text-kmf-accent text-2xl leading-none">×</button>
             </div>
-            <p className="text-sm text-kmf-text-tertiary mb-5">Heads up: this replaces your current checklist. Export it first if you want to keep it.</p>
+            <p className="text-sm text-kmf-text-tertiary mb-5">{t.tplModalWarn}</p>
             <div className="space-y-2">
               {STARTER_TEMPLATES.map(tpl => (
                 <button
@@ -741,16 +843,16 @@ export default function PreTradeChecklistPage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 print:hidden" style={{ background: 'rgba(0,0,0,0.7)' }} onClick={() => setShareUrl(null)}>
           <div className="rounded-2xl p-6 max-w-xl w-full" style={{ background: '#0F1115', border: '1px solid rgba(255,255,255,0.1)' }} onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold text-kmf-text-primary">Share your checklist</h2>
+              <h2 className="text-lg font-semibold text-kmf-text-primary">{t.shareModalTitle}</h2>
               <button onClick={() => setShareUrl(null)} className="text-kmf-text-tertiary hover:text-kmf-accent text-2xl leading-none">×</button>
             </div>
-            <p className="text-sm text-kmf-text-tertiary mb-3">Anyone who opens this link gets a copy of your checklist they can edit on their side. Nothing is uploaded — the data lives in the URL.</p>
+            <p className="text-sm text-kmf-text-tertiary mb-3">{t.shareModalDesc}</p>
             <div className="rounded-lg p-3 mb-3 text-xs break-all font-mono text-kmf-text-secondary" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>{shareUrl}</div>
             <button
               onClick={() => { navigator.clipboard?.writeText(shareUrl); setShareCopied(true); }}
               className="w-full px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors"
               style={{ background: shareCopied ? 'rgba(0,200,83,0.15)' : '#4FC3F7', color: shareCopied ? '#00C853' : '#0F1115', border: shareCopied ? '1px solid rgba(0,200,83,0.4)' : 'none' }}
-            >{shareCopied ? '✓ Copied to clipboard' : 'Copy link'}</button>
+            >{shareCopied ? t.copiedClipboard : t.copyLink}</button>
           </div>
         </div>
       )}
@@ -831,7 +933,7 @@ export default function PreTradeChecklistPage() {
    CATEGORY BLOCK
    ═══════════════════════════════════════════════════════════════════════════ */
 function CategoryBlock({
-  cat, isFirst, isLast,
+  t, cat, isFirst, isLast,
   editing, setEditing,
   addingToCat, setAddingToCat,
   addItem, editItem, removeItem, moveItem, toggleItem,
@@ -843,6 +945,7 @@ function CategoryBlock({
       <header className="flex items-center gap-2 mb-3 print:mb-1">
         {renamingThis ? (
           <InlineAddInput
+            t={t}
             initial={cat.name}
             onCancel={() => setEditing(null)}
             onSubmit={(name) => { renameCategory(cat.id, name); setEditing(null); }}
@@ -852,10 +955,10 @@ function CategoryBlock({
         )}
         {!renamingThis && (
           <div className="flex items-center gap-1 print:hidden">
-            <IconBtn onClick={() => moveCategory(cat.id, 'up')} disabled={isFirst} title="Move category up">↑</IconBtn>
-            <IconBtn onClick={() => moveCategory(cat.id, 'down')} disabled={isLast} title="Move category down">↓</IconBtn>
-            <IconBtn onClick={() => setEditing({ kind: 'rename', catId: cat.id })} title="Rename category">✎</IconBtn>
-            <IconBtn onClick={() => removeCategory(cat.id)} title="Delete category" danger>✕</IconBtn>
+            <IconBtn onClick={() => moveCategory(cat.id, 'up')} disabled={isFirst} title={t.tMoveCatUp}>↑</IconBtn>
+            <IconBtn onClick={() => moveCategory(cat.id, 'down')} disabled={isLast} title={t.tMoveCatDown}>↓</IconBtn>
+            <IconBtn onClick={() => setEditing({ kind: 'rename', catId: cat.id })} title={t.tRenameCat}>✎</IconBtn>
+            <IconBtn onClick={() => removeCategory(cat.id)} title={t.tDeleteCat} danger>✕</IconBtn>
           </div>
         )}
       </header>
@@ -872,13 +975,14 @@ function CategoryBlock({
                   background: it.checked ? '#4FC3F7' : 'transparent',
                   borderColor: it.checked ? '#4FC3F7' : 'rgba(255,255,255,0.2)',
                 }}
-                aria-label={it.checked ? 'Uncheck' : 'Check'}
+                aria-label={it.checked ? t.aUncheck : t.aCheck}
               >
                 {it.checked && <span className="print-checkbox-mark text-[#0F1115] text-xs font-bold leading-none">✓</span>}
               </button>
               {isEditing ? (
                 <div className="flex-1">
                   <InlineAddInput
+                    t={t}
                     initial={it.text}
                     onCancel={() => setEditing(null)}
                     onSubmit={(text) => { editItem(cat.id, it.id, text); setEditing(null); }}
@@ -894,13 +998,13 @@ function CategoryBlock({
                       textDecoration: it.checked ? 'line-through' : 'none',
                       opacity: it.checked ? 0.65 : 1,
                     }}
-                    title="Double-click to edit"
+                    title={t.tDblEdit}
                   >{it.text}</span>
                   <div className="flex items-center gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity print:hidden">
-                    <IconBtn onClick={() => moveItem(cat.id, it.id, 'up')} disabled={idx === 0} title="Move up">↑</IconBtn>
-                    <IconBtn onClick={() => moveItem(cat.id, it.id, 'down')} disabled={idx === cat.items.length - 1} title="Move down">↓</IconBtn>
-                    <IconBtn onClick={() => setEditing({ catId: cat.id, itemId: it.id })} title="Edit">✎</IconBtn>
-                    <IconBtn onClick={() => removeItem(cat.id, it.id)} title="Delete" danger>✕</IconBtn>
+                    <IconBtn onClick={() => moveItem(cat.id, it.id, 'up')} disabled={idx === 0} title={t.tMoveUp}>↑</IconBtn>
+                    <IconBtn onClick={() => moveItem(cat.id, it.id, 'down')} disabled={idx === cat.items.length - 1} title={t.tMoveDown}>↓</IconBtn>
+                    <IconBtn onClick={() => setEditing({ catId: cat.id, itemId: it.id })} title={t.tEdit}>✎</IconBtn>
+                    <IconBtn onClick={() => removeItem(cat.id, it.id)} title={t.tDelete} danger>✕</IconBtn>
                   </div>
                 </>
               )}
@@ -912,7 +1016,8 @@ function CategoryBlock({
       <div className="mt-3 print:hidden">
         {addingToCat === cat.id ? (
           <InlineAddInput
-            placeholder="New item — what should you check before entering?"
+            t={t}
+            placeholder={t.catItemPlaceholder}
             onCancel={() => setAddingToCat(null)}
             onSubmit={(text) => { addItem(cat.name, text); setAddingToCat(null); }}
           />
@@ -920,7 +1025,7 @@ function CategoryBlock({
           <button
             onClick={() => setAddingToCat(cat.id)}
             className="text-xs text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
-          >+ Add item</button>
+          >{t.addItemSmall}</button>
         )}
       </div>
     </section>
@@ -930,7 +1035,7 @@ function CategoryBlock({
 /* ═══════════════════════════════════════════════════════════════════════════
    INLINE INPUT (used for add + rename + edit)
    ═══════════════════════════════════════════════════════════════════════════ */
-function InlineAddInput({ initial = '', placeholder = '', onSubmit, onCancel }) {
+function InlineAddInput({ t, initial = '', placeholder = '', onSubmit, onCancel }) {
   const [v, setV] = useState(initial);
   const inputRef = useRef(null);
   useEffect(() => { inputRef.current?.focus(); inputRef.current?.select(); }, []);
@@ -954,11 +1059,11 @@ function InlineAddInput({ initial = '', placeholder = '', onSubmit, onCancel }) 
         onClick={() => onSubmit(v)}
         className="px-2 py-1.5 rounded-lg text-xs"
         style={{ background: 'rgba(79,195,247,0.15)', color: '#4FC3F7' }}
-      >Save</button>
+      >{t?.save ?? 'Save'}</button>
       <button
         onClick={onCancel}
         className="px-2 py-1.5 rounded-lg text-xs text-kmf-text-tertiary hover:text-kmf-accent"
-      >Cancel</button>
+      >{t?.cancel ?? 'Cancel'}</button>
     </div>
   );
 }
