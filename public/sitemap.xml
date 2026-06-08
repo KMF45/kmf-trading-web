@@ -320,9 +320,21 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/is-100-enough-to-start-forex</loc>
-    <lastmod>2026-05-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/is-100-enough-to-start-forex</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/trading-vs-gambling</loc>

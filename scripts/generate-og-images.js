@@ -60,6 +60,7 @@ const articles = [
   { slug: 'ro-what-is-kmf-trading-journal', title: 'Ce este K.M.F.\nTrading Journal?\nAplicatia construita de traderi', category: 'Recenzii Aplicatii', color: '#4FC3F7' },
   { slug: 'ro-trading-vs-gambling', title: 'Cand Trading-ul\nDevine Gambling\n(Si Cum Sa Eviti)', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-analysis-paralysis-trading', title: 'Analysis Paralysis:\nDe Ce Nu Poti\nApasa pe Tragaci', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-is-100-enough-to-start-forex', title: 'Sunt $100 de Ajuns\nca Sa Tranzactionezi\nForex?', category: 'Risk Management', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

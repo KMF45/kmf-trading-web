@@ -57,6 +57,7 @@ const TradingVsGambling = lazy(() => import('./pages/blog/TradingVsGambling'));
 const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTradingJournalRo'));
 const TradingVsGamblingRo = lazy(() => import('./pages/blog/ro/TradingVsGamblingRo'));
 const AnalysisParalysisTradingRo = lazy(() => import('./pages/blog/ro/AnalysisParalysisTradingRo'));
+const IsHundredDollarsEnoughForexRo = lazy(() => import('./pages/blog/ro/IsHundredDollarsEnoughForexRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -156,6 +157,7 @@ function App() {
           <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />
           <Route path="/blog/ro/trading-vs-gambling" element={<TradingVsGamblingRo />} />
           <Route path="/blog/ro/analysis-paralysis-trading" element={<AnalysisParalysisTradingRo />} />
+          <Route path="/blog/ro/is-100-enough-to-start-forex" element={<IsHundredDollarsEnoughForexRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

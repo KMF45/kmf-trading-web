@@ -13,6 +13,10 @@ const blogTranslations = {
     en: '/blog/analysis-paralysis-trading',
     ro: '/blog/ro/analysis-paralysis-trading',
   },
+  'is-100-enough-to-start-forex': {
+    en: '/blog/is-100-enough-to-start-forex',
+    ro: '/blog/ro/is-100-enough-to-start-forex',
+  },
 };
 
 export default blogTranslations;
