@@ -49,6 +49,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kmfjournal.com/blog/analysis-paralysis-trading</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kmfjournal.com/blog/market-order-vs-limit-order</loc>
     <lastmod>2026-06-07</lastmod>
     <changefreq>monthly</changefreq>

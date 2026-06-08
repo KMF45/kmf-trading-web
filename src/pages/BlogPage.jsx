@@ -7,6 +7,15 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 export const posts = [
   {
+    slug: 'analysis-paralysis-trading',
+    title: "Analysis Paralysis: Why You Can't Pull the Trigger (And How to Break Free)",
+    excerpt: "You see the setup. It's textbook. Your hand is on the mouse — and you freeze, then watch it run without you. Why you can't pull the trigger, what it really costs, and the system that gets you clicking again.",
+    category: 'Psychology',
+    date: 'June 8, 2026',
+    readTime: '9 min read',
+    categoryColor: '#CE93D8',
+  },
+  {
     slug: 'market-order-vs-limit-order',
     title: 'Market Order vs Limit Order: The Hidden Cost That Quietly Drains Your Account',
     excerpt: 'A market order pays the spread and slippage on every single trade — a permanent drag on your edge that never shows up on your commission statement. The real cost of each order type, and exactly when to use which.',

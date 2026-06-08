@@ -76,6 +76,7 @@ const routes = [
   '/blog/weekend-gap-risk',
   '/blog/scaling-in-vs-scaling-out',
   '/blog/market-order-vs-limit-order',
+  '/blog/analysis-paralysis-trading',
   '/blog/what-is-kmf-trading-journal',
   '/blog/static-vs-trailing-drawdown',
   '/blog/revenge-trading-kill-switch',
