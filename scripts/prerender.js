@@ -43,6 +43,7 @@ const routes = [
   // Translated articles
   '/blog/ro/what-is-kmf-trading-journal',
   '/blog/ro/trading-vs-gambling',
+  '/blog/ro/analysis-paralysis-trading',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

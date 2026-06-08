@@ -9,6 +9,10 @@ const blogTranslations = {
     en: '/blog/trading-vs-gambling',
     ro: '/blog/ro/trading-vs-gambling',
   },
+  'analysis-paralysis-trading': {
+    en: '/blog/analysis-paralysis-trading',
+    ro: '/blog/ro/analysis-paralysis-trading',
+  },
 };
 
 export default blogTranslations;

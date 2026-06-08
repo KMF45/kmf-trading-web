@@ -9,7 +9,7 @@ const zh = {
   },
   "hero": {
     "tagline": "KEEP MOVING FORWARD",
-    "subtitle": "The only mobile-first trading journal that tracks how you trade, not just what you trade. Tilt detection, personality profiling. No broker API. No data leaks.",
+    "subtitle": "唯一一款 mobile-first trading journal，记录你如何交易，而不只是你交易了什么。Tilt detection、personality profiling。无 broker API。无数据泄露。",
     "ctaPrimary": "在 Google Play 下载",
     "ctaSecondary": "探索功能",
     "stats": {
