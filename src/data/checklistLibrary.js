@@ -125,3 +125,124 @@ export const LIBRARY_ITEMS = [
   { id: 'stocks-borrow', category: 'Stocks-Specific', text: 'For short: borrow available and rate is acceptable' },
   { id: 'stocks-sector', category: 'Stocks-Specific', text: 'Sector trend aligns with my direction' },
 ];
+
+// ─── Romanian overlay (keyed by stable item id; trading terms kept English) ───
+const CATEGORY_RO = {
+  'Market Context': 'Context de Piață',
+  'Setup': 'Setup',
+  'Entry': 'Intrare',
+  'Risk': 'Risc',
+  'Psychology': 'Psihologie',
+  'Execution': 'Execuție',
+  'Post-Trade Plan': 'Plan Post-Trade',
+  'Prop Firm': 'Prop Firm',
+  'News Trading': 'Trading pe Știri',
+  'Scalping': 'Scalping',
+  'Swing & Position': 'Swing & Position',
+  'Crypto-Specific': 'Specific Crypto',
+  'Stocks-Specific': 'Specific Acțiuni',
+};
+
+const ITEMS_RO = {
+  'mkt-news-30': 'Fără știri high-impact în următoarele 30 de minute',
+  'mkt-news-2h': 'Fără știri high-impact în următoarele 2 ore',
+  'mkt-news-24h': 'Fără evenimente economice majore în următoarele 24 de ore',
+  'mkt-session': 'Tranzacționez într-o sesiune lichidă pentru acest instrument',
+  'mkt-spread': 'Spread-ul e normal (nu lărgit pre-știri sau de lichiditate mică)',
+  'mkt-volatility': 'Volatilitatea curentă (ATR) e în range-ul meu normal de trading',
+  'mkt-htf-bias': 'Bias-ul pe higher-timeframe (daily/weekly) e clar și notat',
+  'mkt-key-levels': 'Nivelurile cheie (S/R, supply/demand, VWAP) sunt marcate pe chart',
+
+  'setup-rules': 'Acest setup respectă regulile strategiei 100% — nu 80%',
+  'setup-htf-confirm': 'Direcția pe higher-timeframe confirmă direcția intrării mele',
+  'setup-confluence': 'Sunt prezente cel puțin 2 confluențe independente',
+  'setup-not-mid-range': 'Prețul nu e blocat la mijlocul range-ului, fără edge clar',
+  'setup-rationale': 'Pot descrie motivul intrării într-O singură frază',
+  'setup-screenshot-pre': 'Screenshot pre-intrare capturat (HTF + entry TF)',
+  'setup-no-chase': 'NU alerg după preț — setup-ul s-a format înainte să observ mișcarea',
+  'setup-prior-fail': 'Niciun setup eșuat anterior la exact acest nivel azi',
+
+  'entry-trigger': 'Un trigger specific de intrare s-a declanșat (nu doar „arată bine")',
+  'entry-limit-vs-market': 'Tipul de ordin ales conștient (limit vs market vs stop)',
+  'entry-slippage': 'Toleranța la slippage e acceptabilă pentru spread-ul curent',
+  'entry-time-of-day': 'Ora din zi se potrivește cu momentul când acest setup performează istoric',
+
+  'risk-1pct': 'Position size = 1% din cont sau mai puțin',
+  'risk-0_5pct': 'Position size = 0.5% din cont (mod conservator)',
+  'risk-sl-defined': 'Stop loss-ul e pre-definit, plasat la structură',
+  'risk-sl-immovable': 'NU voi muta stop loss-ul împotriva mea, orice ar fi',
+  'risk-rr-1-2': 'R:R e cel puțin 1:2 înainte să iau în calcul trade-ul',
+  'risk-rr-1-3': 'R:R e cel puțin 1:3 (mod strict)',
+  'risk-daily-dd': 'Daily drawdown-ul rămas e mai mare decât riscul acestui trade',
+  'risk-correlation': 'Nicio poziție corelată deschisă care îmi dublează expunerea reală',
+  'risk-lot-calc': 'Lot size verificat cu lot calculator-ul (fără calcule în cap)',
+  'risk-max-loss': 'Pierderea în dolari în cel mai rău caz e ceva ce pot suporta calm',
+
+  'psy-calm': 'Starea emoțională acum: calm și concentrat',
+  'psy-not-tilted': 'Nu sunt pe tilt, nu sunt în revenge, nu alerg după o pierdere anterioară',
+  'psy-not-fomo': 'Nu intru din FOMO (frica de a rata mișcarea)',
+  'psy-plan-driven': 'Acest trade e condus de plan, nu de „am nevoie de un trade acum"',
+  'psy-last-trade': 'Mi-am procesat complet ultimul trade (câștigat, pierdut sau pauză)',
+  'psy-break': 'Am luat măcar o pauză scurtă de la ultimul trade',
+  'psy-life-state': 'Nicio distragere majoră (lipsă de somn, ceartă, boală)',
+  'psy-walk-away': 'Sunt pregătit să mă ridic de la ecran după intrare',
+
+  'exec-tp-set': 'Take profit-ul e setat la un nivel logic (nu aleatoriu)',
+  'exec-triple-check': 'Entry, SL, TP și lot size verificate de trei ori — fără greșeli',
+  'exec-direction': 'Direcția Buy vs Sell e corectă (am apăsat butonul corect)',
+  'exec-account': 'Contul de trading corect selectat (live vs demo vs prop)',
+  'exec-instrument': 'Instrumentul corect selectat (ex. EURUSD vs EURJPY)',
+  'exec-screenshot': 'Screenshot post-intrare salvat pentru journal',
+  'exec-journal': 'Motivul trade-ului logat în journal înainte de execuție',
+
+  'plan-manage': 'Plan de management decis: set & forget, partials sau trail',
+  'plan-invalidation': 'Știu ce invalidează acest setup înainte să lovească SL-ul',
+  'plan-be-rule': 'Regulă de break-even definită (ex. mută la BE doar după +1R)',
+  'plan-partial': 'Niveluri de închidere parțială definite (sau explicit: fără partials)',
+  'plan-time-stop': 'Time stop definit dacă ăsta e un setup de momentum',
+
+  'prop-daily-dd': 'Acest trade mă ține sub limita de daily drawdown',
+  'prop-max-dd': 'Acest trade mă ține sub limita totală de max drawdown',
+  'prop-min-days': 'Cerința de zile minime de trading e pe drumul bun',
+  'prop-no-weekend': 'Fără holding interzis peste weekend (verifică regulile firmei)',
+  'prop-no-news': 'Fără news trading interzis (verifică regulile firmei)',
+  'prop-consistency': 'Riscul per trade e consecvent cu zilele anterioare (fără dublare)',
+
+  'news-decision': 'Decizie luată: tranzacționez prin / fade / stau deoparte — nu „văd ce se întâmplă"',
+  'news-spread-widen': 'Conștient de lărgirea spread-ului la momentul publicării',
+  'news-stop-runs': 'Conștient de probabile stop runs în ambele direcții',
+  'news-position-reduced': 'Position size redus pentru volatilitatea ridicată',
+
+  'scalp-spread-ratio': 'Spread-ul e sub 25% din distanța până la target',
+  'scalp-commission': 'Costul de comision luat în calcul în expectancy',
+  'scalp-execution-speed': 'Plasarea ordinului e rapidă — fără fâțâială pe trigger',
+  'scalp-no-revenge': 'Niciun revenge scalp după o pierdere în ultimele 5 minute',
+
+  'swing-overnight': 'Confortabil să țin poziția peste gap-urile overnight',
+  'swing-weekend': 'Confortabil să țin poziția peste weekend dacă e nevoie',
+  'swing-swap': 'Costul de swap/finanțare luat în calcul',
+  'swing-event-calendar': 'Niciun eveniment major (earnings, CPI, bancă centrală) în durata trade-ului',
+
+  'crypto-funding': 'Funding rate verificat (mai ales pentru perpetuals)',
+  'crypto-liquidation': 'Prețul de lichidare e departe de intrare dat fiind leverage-ul meu',
+  'crypto-exchange': 'Exchange-ul e cel potrivit pentru acest trade (spot vs perp)',
+  'crypto-weekend-ok': 'Conștient că crypto e 24/7 — am un plan dacă dorm peste volatilitate',
+
+  'stocks-earnings': 'Niciun raport de earnings în durata trade-ului',
+  'stocks-extended-hours': 'Conștient de riscul de extended-hours (gap-uri, lichiditate mică)',
+  'stocks-borrow': 'Pentru short: borrow disponibil și rata e acceptabilă',
+  'stocks-sector': 'Trendul sectorului se aliniază cu direcția mea',
+};
+
+export function getLibraryCategories(lang) {
+  return lang === 'ro' ? LIBRARY_CATEGORIES.map(c => CATEGORY_RO[c] || c) : LIBRARY_CATEGORIES;
+}
+
+export function getLibraryItems(lang) {
+  if (lang !== 'ro') return LIBRARY_ITEMS;
+  return LIBRARY_ITEMS.map(it => ({
+    ...it,
+    category: CATEGORY_RO[it.category] || it.category,
+    text: ITEMS_RO[it.id] || it.text,
+  }));
+}

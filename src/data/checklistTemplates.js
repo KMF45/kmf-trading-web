@@ -196,3 +196,140 @@ export const STARTER_TEMPLATES = [
     ],
   },
 ];
+
+// ─── Romanian templates (trading terms kept English; texts match the RO library) ───
+const STARTER_TEMPLATES_RO = [
+  {
+    id: 'blank',
+    name: 'Începe de la zero',
+    description: 'Checklist gol. Construiește-l cum vrei tu, din librăria de sugestii sau cu items proprii.',
+    categories: [],
+  },
+  {
+    id: 'forex-day',
+    name: 'Day Trader Forex',
+    description: 'Pentru FX intraday. Sesiunile London/NY, risc strâns, execuție rapidă.',
+    categories: [
+      { name: 'Context de Piață', items: [
+        'Fără știri high-impact în următoarele 30 de minute',
+        'Tranzacționez în sesiunea London sau NY',
+        'Spread-ul e normal (nu lărgit pre-știri sau de lichiditate mică)',
+      ] },
+      { name: 'Setup', items: [
+        'Acest setup respectă regulile strategiei 100% — nu 80%',
+        'Direcția pe higher-timeframe confirmă direcția intrării mele',
+        'Pot descrie motivul intrării într-O singură frază',
+      ] },
+      { name: 'Risc', items: [
+        'Position size = 1% din cont sau mai puțin',
+        'Stop loss-ul e pre-definit, plasat la structură',
+        'R:R e cel puțin 1:2 înainte să iau în calcul trade-ul',
+      ] },
+      { name: 'Psihologie', items: [
+        'Starea emoțională acum: calm și concentrat',
+        'Nu intru din FOMO (frica de a rata mișcarea)',
+      ] },
+      { name: 'Execuție', items: [
+        'Entry, SL, TP și lot size verificate de trei ori — fără greșeli',
+        'Motivul trade-ului logat în journal înainte de execuție',
+      ] },
+    ],
+  },
+  {
+    id: 'swing',
+    name: 'Swing Trader',
+    description: 'Dețineri de la câteva zile la câteva săptămâni, orice piață. Decizii HTF-first.',
+    categories: [
+      { name: 'Context de Piață', items: [
+        'Bias-ul pe higher-timeframe (daily/weekly) e clar și notat',
+        'Niciun eveniment major (earnings, CPI, bancă centrală) în durata trade-ului',
+      ] },
+      { name: 'Setup', items: [
+        'Sunt prezente cel puțin 2 confluențe independente',
+        'Nivelurile cheie (S/R, supply/demand) marcate pe chart',
+        'Pot descrie motivul intrării într-O singură frază',
+      ] },
+      { name: 'Risc', items: [
+        'Position size = 1% din cont sau mai puțin',
+        'Stop loss-ul e pre-definit, plasat la structură',
+        'R:R e cel puțin 1:3',
+        'Confortabil să țin poziția peste weekend dacă e nevoie',
+      ] },
+      { name: 'Plan Post-Trade', items: [
+        'Plan de management decis: set & forget, partials sau trail',
+        'Știu ce invalidează acest setup înainte să lovească SL-ul',
+        'Regulă de break-even definită (ex. mută la BE doar după +1R)',
+      ] },
+      { name: 'Psihologie', items: [
+        'NU alerg după preț — setup-ul s-a format înainte să observ mișcarea',
+        'Sunt pregătit să mă ridic de la ecran după intrare',
+      ] },
+    ],
+  },
+  {
+    id: 'prop-firm',
+    name: 'Provocare Prop Firm',
+    description: 'Pentru conturi funded. Regulile de drawdown domină fiecare decizie.',
+    categories: [
+      { name: 'Reguli Prop Firm', items: [
+        'Acest trade mă ține sub limita de daily drawdown',
+        'Acest trade mă ține sub limita totală de max drawdown',
+        'Riscul per trade e consecvent cu zilele anterioare (fără dublare)',
+        'Fără holding interzis peste weekend (verifică regulile firmei)',
+        'Fără news trading interzis (verifică regulile firmei)',
+      ] },
+      { name: 'Setup', items: [
+        'Acest setup respectă regulile strategiei 100% — nu 80%',
+        'Direcția pe higher-timeframe confirmă direcția intrării mele',
+      ] },
+      { name: 'Risc', items: [
+        'Position size = 0.5% din cont (mod conservator)',
+        'Stop loss-ul e pre-definit și de neclintit împotriva mea',
+        'R:R e cel puțin 1:2',
+        'Nicio poziție corelată deschisă care îmi dublează expunerea reală',
+      ] },
+      { name: 'Psihologie', items: [
+        'Nu încerc să „recuperez" după o zi proastă',
+        'Starea emoțională acum: calm și concentrat',
+      ] },
+      { name: 'Execuție', items: [
+        'Contul de trading corect selectat (prop, nu live sau demo)',
+        'Verificat de trei ori: direcție, size, SL, TP',
+      ] },
+    ],
+  },
+  {
+    id: 'crypto',
+    name: 'Trader Crypto',
+    description: 'Piețe 24/7, perps, funding rates, risc de gap cât dormi.',
+    categories: [
+      { name: 'Context de Piață', items: [
+        'Conștient că crypto e 24/7 — am un plan dacă dorm peste volatilitate',
+        'Niciun eveniment macro major în următoarele 24 de ore',
+      ] },
+      { name: 'Setup', items: [
+        'Acest setup respectă regulile strategiei 100% — nu 80%',
+        'Direcția pe higher-timeframe confirmă direcția intrării mele',
+        'Pot descrie motivul intrării într-O singură frază',
+      ] },
+      { name: 'Mecanică Crypto', items: [
+        'Funding rate verificat (mai ales pentru perpetuals)',
+        'Prețul de lichidare e departe de intrare dat fiind leverage-ul meu',
+        'Exchange-ul e cel potrivit pentru acest trade (spot vs perp)',
+      ] },
+      { name: 'Risc', items: [
+        'Position size = 1% din cont sau mai puțin',
+        'Stop loss-ul e pre-definit, plasat la structură',
+        'R:R e cel puțin 1:2',
+      ] },
+      { name: 'Psihologie', items: [
+        'Nu intru din FOMO (frica de a rata mișcarea)',
+        'Starea emoțională acum: calm și concentrat',
+      ] },
+    ],
+  },
+];
+
+export function getStarterTemplates(lang) {
+  return lang === 'ro' ? STARTER_TEMPLATES_RO : STARTER_TEMPLATES;
+}

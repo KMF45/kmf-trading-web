@@ -2,8 +2,8 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
-import { LIBRARY_ITEMS, LIBRARY_CATEGORIES } from '../data/checklistLibrary';
-import { STARTER_TEMPLATES } from '../data/checklistTemplates';
+import { getLibraryItems, getLibraryCategories } from '../data/checklistLibrary';
+import { getStarterTemplates } from '../data/checklistTemplates';
 import { useLanguage } from '../i18n/LanguageContext';
 
 const OG_IMAGE = 'https://kmfjournal.com/tools/og/pre-trade-checklist.png';
@@ -195,6 +195,9 @@ function downloadJson(state) {
 export default function PreTradeChecklistPage() {
   const { lang } = useLanguage();
   const t = T[lang] || T.en;
+  const LIBRARY_ITEMS = useMemo(() => getLibraryItems(lang), [lang]);
+  const LIBRARY_CATEGORIES = useMemo(() => getLibraryCategories(lang), [lang]);
+  const STARTER_TEMPLATES = useMemo(() => getStarterTemplates(lang), [lang]);
   const [state, setState] = useState({ categories: [] });
   const [loaded, setLoaded] = useState(false);
   const [started, setStarted] = useState(false);
@@ -447,7 +450,7 @@ export default function PreTradeChecklistPage() {
       if (q && !it.text.toLowerCase().includes(q) && !it.category.toLowerCase().includes(q)) return false;
       return true;
     });
-  }, [librarySearch, libraryFilter]);
+  }, [librarySearch, libraryFilter, LIBRARY_ITEMS]);
 
   const libraryByCategory = useMemo(() => {
     const map = new Map();
