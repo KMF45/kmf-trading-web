@@ -46,7 +46,7 @@ export default function AnalysisParalysisTradingRo() {
         Iată semnalul: <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>mai multe date nu te fac mai încrezător — îți dau mai multe motive să nu faci nimic.</strong> Un trader care ia o decizie restrânge opțiunile. Un trader în paralizie le tot lărgește: încă un indicator, încă un timeframe, un thread de pe forum, un „hai să dorm pe asta". Scopul a încetat să fie un trade bun. Scopul a devenit evitarea senzației de a greși.
       </P>
 
-      <Callout title="Reframe-ul incomod" color="#CE93D8">
+      <Callout title="Perspectiva incomodă" color="#CE93D8">
         Paralizia nu e prudență. E tine protejându-ți ego-ul, nu contul. Conservarea capitalului are un număr atașat — stop loss-ul tău, position size-ul tău. „Trebuie să fiu sigur întâi" nu are niciun număr. E infinit, exact de asta nu ajungi niciodată acolo.
       </Callout>
 
@@ -67,7 +67,7 @@ export default function AnalysisParalysisTradingRo() {
         „Iau setup-uri puternice la niveluri cheie" nu e o regulă. E o senzație. Și o senzație trebuie re-decisă de fiecare dată, live, sub presiune — exact cel mai prost moment posibil să faci judecăți de valoare. Dacă criteriile trăiesc doar în capul tău, fiecare trade devine un eseu cu răspuns deschis în loc de o căsuță da/nu.
       </P>
 
-      <H3>3. Ultima pierdere e încă în cameră</H3>
+      <H3>3. Ultima pierdere e încă proaspătă</H3>
       <P>
         Recency bias. Ai fost stopat de două ori săptămâna asta, așa că acum creierul tău supraevaluează pericolul trade-ului numărul trei — deși trei trade-uri sunt zgomot statistic și nu-ți spun nimic. Frica e reală; matematica din spatele ei e ficțiune.
       </P>
@@ -84,7 +84,7 @@ export default function AnalysisParalysisTradingRo() {
         Iată ce face paralizia atât de periculoasă: pare gratis. N-ai pierdut bani, deci unde e paguba? Dar trade-ul ratat e un cost real — doar că nu apare niciodată pe extras, așa că te ierți pentru el.
       </P>
       <P>
-        Mai rău, se compune într-un fel în care pierderile reale n-o fac. O pierdere pe care ai luat-o urmând planul îți construiește disciplină. Un câștigător pe care l-ai privit plecând fără tine face opusul — îi <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>învață creierul că ezitarea e sigură și acțiunea e înspăimântătoare</strong>, ceea ce te face să îngheți și mai tare data viitoare. Apoi vine partea cu adevărat distructivă: te frustrezi atât de tare privind cum a scăpat unul, încât sari în următorul trade fără niciun plan, doar ca să simți că „faci ceva". Paralizia și revenge trading-ul sunt două capete ale aceleiași frânghii rupte.
+        Mai rău, se compune într-un fel în care pierderile reale n-o fac. O pierdere pe care ai luat-o urmând planul îți construiește disciplină. Un câștigător pe care l-ai privit plecând fără tine face opusul — îi <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>învață creierul că ezitarea e sigură și acțiunea e înspăimântătoare</strong>, ceea ce te face să îngheți și mai tare data viitoare. Apoi vine partea cu adevărat distructivă: te frustrezi atât de tare privind cum a scăpat unul, încât sari în următorul trade fără niciun plan, doar ca să simți că „faci ceva". Paralizia și revenge trading-ul sunt două fețe ale aceleiași monede.
       </P>
 
       <Callout title="Ce plătești de fapt" color="#FFB300">
@@ -145,7 +145,7 @@ export default function AnalysisParalysisTradingRo() {
         Observă că două din cele trei fix-uri se întorc la mărime. Nu e o coincidență. Ezitarea e aproape mereu corpul tău spunându-ți că riscul e prea mare — chiar și când logica ta insistă că e ok. Sistemul tău nervos face un risk management pe care spreadsheet-ul tău nu-l face.
       </P>
       <P>
-        Onorează-l. Tranzacționează mai mic decât pare palpitant. Traderul care riscă 0.5% dă click fără dramă fiindcă downside-ul e trivial; traderul care riscă 5% agonizează pe fiecare intrare fiindcă downside-ul e durere reală — și apoi, paradoxal, ia trade-uri mai proaste ca să scape de tensiune. Dacă vrei să <em>vezi</em> de ce un risc mic și constant te ține în joc în timp ce swing-urile mari îl termină, <Link to="/tools/risk-of-ruin" className="text-kmf-accent underline hover:text-white transition-colors">Risk of Ruin calculator</Link> îl face imposibil de ignorat.
+        Onorează-l. Tranzacționează mai mic decât pare palpitant. Traderul care riscă 0.5% dă click fără dramă fiindcă ce are de pierdut e trivial; traderul care riscă 5% agonizează pe fiecare intrare fiindcă ce are de pierdut e durere reală — și apoi, paradoxal, ia trade-uri mai proaste ca să scape de tensiune. Dacă vrei să <em>vezi</em> de ce un risc mic și constant te ține în joc în timp ce swing-urile mari îl termină, <Link to="/tools/risk-of-ruin" className="text-kmf-accent underline hover:text-white transition-colors">Risk of Ruin calculator</Link> îl face imposibil de ignorat.
       </P>
 
       <Divider />

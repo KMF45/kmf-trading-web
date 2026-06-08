@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../landing/Navbar';
 import Footer from '../Footer';
 import { FaXTwitter, FaRedditAlien, FaWhatsapp, FaLinkedinIn, FaLink, FaCheck } from 'react-icons/fa6';
@@ -7,6 +7,7 @@ import { FaGooglePlay } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
 import blogTranslations from '../../i18n/blogTranslations';
 import BlogCoverArt from './BlogCoverArt';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const SITE = 'https://kmfjournal.com';
 const DEFAULTS = {
@@ -29,6 +30,20 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
   const langPath = lang !== 'en' ? `${lang}/` : '';
   const pageUrl = `${SITE}/blog/${langPath}${slug}`;
   const ogImage = `${SITE}/blog/og/${lang !== 'en' ? `${lang}-` : ''}${slug}.png`;
+
+  const { lang: uiLang } = useLanguage();
+  const navigate = useNavigate();
+
+  // Auto-route the visitor to the article in their own language when a
+  // translation exists. Skipped during prerender/bots (navigator.webdriver)
+  // so the prerendered HTML for each URL stays in its own language.
+  useEffect(() => {
+    if (typeof navigator !== 'undefined' && navigator.webdriver) return;
+    const tr = blogTranslations[slug];
+    if (tr && uiLang !== lang && tr[uiLang]) {
+      navigate(tr[uiLang], { replace: true });
+    }
+  }, [uiLang, lang, slug, navigate]);
 
   useEffect(() => {
     const pageTitle = metaTitle || `${title} | K.M.F. Trading Journal`;

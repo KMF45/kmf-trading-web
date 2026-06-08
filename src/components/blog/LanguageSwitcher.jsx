@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LANG_LABELS } from '../../i18n/LanguageContext';
+import { LANG_LABELS, useLanguage } from '../../i18n/LanguageContext';
 import blogTranslations from '../../i18n/blogTranslations';
 import { useState, useRef, useEffect } from 'react';
 
@@ -7,6 +7,7 @@ export default function LanguageSwitcher({ slug, currentLang = 'en' }) {
   const translations = blogTranslations[slug];
   if (!translations || Object.keys(translations).length <= 1) return null;
 
+  const { setLang } = useLanguage();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
 
@@ -52,7 +53,7 @@ export default function LanguageSwitcher({ slug, currentLang = 'en' }) {
               <Link
                 key={lang}
                 to={path}
-                onClick={() => setOpen(false)}
+                onClick={() => { setLang(lang); setOpen(false); }}
                 className="flex items-center gap-2 px-4 py-2.5 text-xs transition-colors"
                 style={{
                   color: isActive ? '#4FC3F7' : '#8899A6',

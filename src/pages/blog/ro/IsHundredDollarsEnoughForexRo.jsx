@@ -29,7 +29,7 @@ export default function IsHundredDollarsEnoughForexRo() {
       ]}
     >
       <Intro>
-        Deschide Instagram. Derulează 30 de secunde. Îl vei vedea — un puști de 19 ani într-un Lamborghini închiriat zicând că a transformat $100 în $10.000 în trei luni. Vinde un curs. Are 400.000 de followeri. Secțiunea de comentarii e plină de adolescenți care întreabă ce broker să folosească. Iată adevărul pe care nimeni nu-l monetizează: matematica unui cont forex de $100 e brutală, și n-are nimic de-a face cu strategia. Are de-a face cu aritmetica. Dacă faci vreodată bani din trading e o întrebare separată de „sunt $100 de ajuns". Așa că hai să facem întâi matematica, la lumina rece a zilei, și apoi să decidem pentru ce e bun de fapt $100.
+        Deschide Instagram. Derulează 30 de secunde. Îl vei vedea — un puști de 19 ani într-un Lamborghini închiriat zicând că a transformat $100 în $10.000 în trei luni. Vinde un curs. Are 400.000 de followeri. Secțiunea de comentarii e plină de adolescenți care întreabă ce broker să folosească. Iată adevărul din care nimeni nu face bani: matematica unui cont forex de $100 e brutală, și n-are nimic de-a face cu strategia. Are de-a face cu aritmetica. Dacă faci vreodată bani din trading e o întrebare separată de „sunt $100 de ajuns". Așa că hai să facem întâi matematica, la rece, și apoi să decidem pentru ce e bun de fapt $100.
       </Intro>
 
       <StatsStrip items={[
@@ -40,7 +40,7 @@ export default function IsHundredDollarsEnoughForexRo() {
 
       <H2>Promisiunea vs Matematica</H2>
       <P>
-        Pitch-ul e mereu același: cont mic, leverage mare, return-uri compuse, libertate financiară de Crăciun. Pitch-ul vinde cursuri fiindcă vinde o senzație — senzația că tu, cu $100 și un telefon, ești la un trade de breakout distanță de a-ți schimba viața. Pitch-ul lasă pe dinafară un detaliu. Matematica.
+        Pitch-ul e mereu același: cont mic, leverage mare, return-uri compuse, libertate financiară de Crăciun. Pitch-ul vinde cursuri fiindcă vinde o senzație — senzația că tu, cu $100 și un telefon, mai ai un singur trade de breakout până să-ți schimbi viața. Pitch-ul lasă pe dinafară un detaliu. Matematica.
       </P>
       <P>
         Hai să facem cifrele onest. Un cont de $100, tranzacționat cu risk management profesionist (1% per trade), poate risca maximum $1 per trade. Pe EUR/USD cu un micro lot standard (0.01 lots), un pip valorează aproximativ $0.10. Deci pierderea ta maximă per trade — la niveluri profesioniste de risc — îți cumpără un stop loss de vreo 10 pips.
@@ -133,7 +133,7 @@ export default function IsHundredDollarsEnoughForexRo() {
 
       <H2>Când $100 SUNT de Ajuns — Construit Skill, Nu Venit</H2>
       <P>
-        Iată reframe-ul pe care nimeni de pe Instagram nu ți-l va vinde: <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>$100 sunt de ajuns — dacă înțelegi pentru ce sunt.</strong>
+        Iată cealaltă perspectivă, pe care nimeni de pe Instagram nu ți-o va vinde: <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>$100 sunt de ajuns — dacă înțelegi pentru ce sunt.</strong>
       </P>
       <P>
         $100 sunt de ajuns pentru:
@@ -171,7 +171,7 @@ export default function IsHundredDollarsEnoughForexRo() {
         Sunt $100 de ajuns ca să începi forex? Da, ca să <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>începi</strong>. Nu, ca să <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>trăiești din asta</strong>. Matematica e neiertătoare — conturile mici nu pot genera matematic venit semnificativ într-un interval util, indiferent de strategia sau „secretul" pe care-l aplici. Oricine îți spune altceva îți vinde ceva.
       </P>
       <P>
-        Dar aceeași matematică are un avantaj tăcut. $100 e cel mai ieftin laborator de skill de pe Pământ. Pentru mai puțin decât o singură cină în oraș, poți învăța un meșteșug care — dacă rămâi la el câțiva ani — ar putea într-o zi să-ți plătească facturile. Cârligul e că drumul e lent, matematic și nesexy. De-aia nu-l vinde nimeni.
+        Dar aceeași matematică are un avantaj tăcut. $100 e cel mai ieftin laborator de skill de pe Pământ. Pentru mai puțin decât o singură cină în oraș, poți învăța un meșteșug care — dacă rămâi la el câțiva ani — ar putea într-o zi să-ți plătească facturile. Partea proastă e că drumul e lent, matematic și deloc spectaculos. De-aia nu-l vinde nimeni.
       </P>
       <P>
         Folosește cei $100. Jurnalizează fiecare trade. Calculează mărimile pozițiilor cu un <Link to="/tools/lot-size-calculator" className="text-kmf-accent underline hover:text-white transition-colors">Lot Size Calculator</Link> real, nu cu o senzație. Verifică-ți <Link to="/tools/risk-of-ruin" className="text-kmf-accent underline hover:text-white transition-colors">Risk of Ruin</Link> înainte de fiecare strategie. Și ignoră pozele cu Lambo. Nu ei sunt competiția ta. Competiția ta e versiunea ta care, peste doi ani, va avea date în loc de vise.

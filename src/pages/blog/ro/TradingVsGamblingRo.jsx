@@ -83,7 +83,7 @@ export default function TradingVsGamblingRo() {
 
       <H2>Cele 4 Semne Că Faci Gambling, Nu Trading</H2>
       <P>
-        Comportamentele nu mint. Iată cum arată un trader și un gambler în sălbăticie — chiar și când folosesc aceleași chart-uri:
+        Comportamentele nu mint. Iată cum arată un trader și un gambler în viața reală — chiar și când folosesc aceleași chart-uri:
       </P>
       <Table
         headers={['Comportament', 'Trader', 'Gambler']}
