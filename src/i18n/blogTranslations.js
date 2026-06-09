@@ -25,6 +25,10 @@ const blogTranslations = {
     en: '/blog/trading-expectancy-explained',
     ro: '/blog/ro/trading-expectancy-explained',
   },
+  '1-percent-risk-rule': {
+    en: '/blog/1-percent-risk-rule',
+    ro: '/blog/ro/1-percent-risk-rule',
+  },
 };
 
 export default blogTranslations;

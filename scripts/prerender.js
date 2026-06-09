@@ -47,6 +47,7 @@ const routes = [
   '/blog/ro/is-100-enough-to-start-forex',
   '/blog/ro/revenge-trading',
   '/blog/ro/trading-expectancy-explained',
+  '/blog/ro/1-percent-risk-rule',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

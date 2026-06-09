@@ -63,6 +63,7 @@ const articles = [
   { slug: 'ro-is-100-enough-to-start-forex', title: 'Sunt $100 de Ajuns\nca Sa Tranzactionezi\nForex?', category: 'Risk Management', color: '#00C853' },
   { slug: 'ro-revenge-trading', title: 'Revenge Trading:\nCe Este, De Ce Apare\nsi Cum Rupi Ciclul', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-trading-expectancy-explained', title: 'Trading Expectancy:\nFormula Care Iti Spune\nDaca Strategia Merge', category: 'Statistics', color: '#4FC3F7' },
+  { slug: 'ro-1-percent-risk-rule', title: 'Regula de 1% Risc:\nRegula Care Tine Traderii\nProfesionisti in Viata', category: 'Risk Management', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
