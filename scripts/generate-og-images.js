@@ -64,6 +64,7 @@ const articles = [
   { slug: 'ro-revenge-trading', title: 'Revenge Trading:\nCe Este, De Ce Apare\nsi Cum Rupi Ciclul', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-trading-expectancy-explained', title: 'Trading Expectancy:\nFormula Care Iti Spune\nDaca Strategia Merge', category: 'Statistics', color: '#4FC3F7' },
   { slug: 'ro-1-percent-risk-rule', title: 'Regula de 1% Risc:\nRegula Care Tine Traderii\nProfesionisti in Viata', category: 'Risk Management', color: '#00C853' },
+  { slug: 'ro-how-to-recover-from-losing-streak', title: 'Cum Iti Revii\nDintr-o Serie de Pierderi\nFara Sa-ti Distrugi Contul', category: 'Psihologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

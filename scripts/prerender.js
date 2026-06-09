@@ -48,6 +48,7 @@ const routes = [
   '/blog/ro/revenge-trading',
   '/blog/ro/trading-expectancy-explained',
   '/blog/ro/1-percent-risk-rule',
+  '/blog/ro/how-to-recover-from-losing-streak',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

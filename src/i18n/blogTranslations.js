@@ -29,6 +29,10 @@ const blogTranslations = {
     en: '/blog/1-percent-risk-rule',
     ro: '/blog/ro/1-percent-risk-rule',
   },
+  'how-to-recover-from-losing-streak': {
+    en: '/blog/how-to-recover-from-losing-streak',
+    ro: '/blog/ro/how-to-recover-from-losing-streak',
+  },
 };
 
 export default blogTranslations;
