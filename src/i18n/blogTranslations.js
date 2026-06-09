@@ -17,6 +17,10 @@ const blogTranslations = {
     en: '/blog/is-100-enough-to-start-forex',
     ro: '/blog/ro/is-100-enough-to-start-forex',
   },
+  'revenge-trading': {
+    en: '/blog/revenge-trading',
+    ro: '/blog/ro/revenge-trading',
+  },
 };
 
 export default blogTranslations;

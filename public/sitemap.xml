@@ -92,9 +92,21 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/revenge-trading</loc>
-    <lastmod>2026-03-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/revenge-trading"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/revenge-trading"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/revenge-trading"/>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/revenge-trading</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/revenge-trading"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/revenge-trading"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/revenge-trading"/>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/weekly-trading-review-template</loc>
