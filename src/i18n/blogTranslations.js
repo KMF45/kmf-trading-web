@@ -21,6 +21,10 @@ const blogTranslations = {
     en: '/blog/revenge-trading',
     ro: '/blog/ro/revenge-trading',
   },
+  'trading-expectancy-explained': {
+    en: '/blog/trading-expectancy-explained',
+    ro: '/blog/ro/trading-expectancy-explained',
+  },
 };
 
 export default blogTranslations;

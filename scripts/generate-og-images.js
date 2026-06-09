@@ -62,6 +62,7 @@ const articles = [
   { slug: 'ro-analysis-paralysis-trading', title: 'Analysis Paralysis:\nDe Ce Nu Poti\nApasa pe Tragaci', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-is-100-enough-to-start-forex', title: 'Sunt $100 de Ajuns\nca Sa Tranzactionezi\nForex?', category: 'Risk Management', color: '#00C853' },
   { slug: 'ro-revenge-trading', title: 'Revenge Trading:\nCe Este, De Ce Apare\nsi Cum Rupi Ciclul', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-trading-expectancy-explained', title: 'Trading Expectancy:\nFormula Care Iti Spune\nDaca Strategia Merge', category: 'Statistics', color: '#4FC3F7' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

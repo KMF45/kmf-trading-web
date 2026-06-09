@@ -59,6 +59,7 @@ const TradingVsGamblingRo = lazy(() => import('./pages/blog/ro/TradingVsGambling
 const AnalysisParalysisTradingRo = lazy(() => import('./pages/blog/ro/AnalysisParalysisTradingRo'));
 const IsHundredDollarsEnoughForexRo = lazy(() => import('./pages/blog/ro/IsHundredDollarsEnoughForexRo'));
 const RevengeTradingRo = lazy(() => import('./pages/blog/ro/RevengeTradingRo'));
+const TradingExpectancyExplainedRo = lazy(() => import('./pages/blog/ro/TradingExpectancyExplainedRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -160,6 +161,7 @@ function App() {
           <Route path="/blog/ro/analysis-paralysis-trading" element={<AnalysisParalysisTradingRo />} />
           <Route path="/blog/ro/is-100-enough-to-start-forex" element={<IsHundredDollarsEnoughForexRo />} />
           <Route path="/blog/ro/revenge-trading" element={<RevengeTradingRo />} />
+          <Route path="/blog/ro/trading-expectancy-explained" element={<TradingExpectancyExplainedRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

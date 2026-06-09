@@ -46,6 +46,7 @@ const routes = [
   '/blog/ro/analysis-paralysis-trading',
   '/blog/ro/is-100-enough-to-start-forex',
   '/blog/ro/revenge-trading',
+  '/blog/ro/trading-expectancy-explained',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',
