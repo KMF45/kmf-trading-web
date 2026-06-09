@@ -62,6 +62,9 @@ const RevengeTradingRo = lazy(() => import('./pages/blog/ro/RevengeTradingRo'));
 const TradingExpectancyExplainedRo = lazy(() => import('./pages/blog/ro/TradingExpectancyExplainedRo'));
 const OnePercentRiskRuleRo = lazy(() => import('./pages/blog/ro/OnePercentRiskRuleRo'));
 const HowToRecoverFromLosingStreakRo = lazy(() => import('./pages/blog/ro/HowToRecoverFromLosingStreakRo'));
+const ProfitFactorVsWinRateRo = lazy(() => import('./pages/blog/ro/ProfitFactorVsWinRateRo'));
+const PositionSizingGuideRo = lazy(() => import('./pages/blog/ro/PositionSizingGuideRo'));
+const HowToSetStopLossRo = lazy(() => import('./pages/blog/ro/HowToSetStopLossRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -166,6 +169,9 @@ function App() {
           <Route path="/blog/ro/trading-expectancy-explained" element={<TradingExpectancyExplainedRo />} />
           <Route path="/blog/ro/1-percent-risk-rule" element={<OnePercentRiskRuleRo />} />
           <Route path="/blog/ro/how-to-recover-from-losing-streak" element={<HowToRecoverFromLosingStreakRo />} />
+          <Route path="/blog/ro/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRateRo />} />
+          <Route path="/blog/ro/position-sizing-guide" element={<PositionSizingGuideRo />} />
+          <Route path="/blog/ro/how-to-set-stop-loss" element={<HowToSetStopLossRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

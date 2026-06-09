@@ -33,6 +33,18 @@ const blogTranslations = {
     en: '/blog/how-to-recover-from-losing-streak',
     ro: '/blog/ro/how-to-recover-from-losing-streak',
   },
+  'profit-factor-vs-win-rate': {
+    en: '/blog/profit-factor-vs-win-rate',
+    ro: '/blog/ro/profit-factor-vs-win-rate',
+  },
+  'position-sizing-guide': {
+    en: '/blog/position-sizing-guide',
+    ro: '/blog/ro/position-sizing-guide',
+  },
+  'how-to-set-stop-loss': {
+    en: '/blog/how-to-set-stop-loss',
+    ro: '/blog/ro/how-to-set-stop-loss',
+  },
 };
 
 export default blogTranslations;

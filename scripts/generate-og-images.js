@@ -65,6 +65,9 @@ const articles = [
   { slug: 'ro-trading-expectancy-explained', title: 'Trading Expectancy:\nFormula Care Iti Spune\nDaca Strategia Merge', category: 'Statistics', color: '#4FC3F7' },
   { slug: 'ro-1-percent-risk-rule', title: 'Regula de 1% Risc:\nRegula Care Tine Traderii\nProfesionisti in Viata', category: 'Risk Management', color: '#00C853' },
   { slug: 'ro-how-to-recover-from-losing-streak', title: 'Cum Iti Revii\nDintr-o Serie de Pierderi\nFara Sa-ti Distrugi Contul', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate:\nCare Metrica Prezice\nSuccesul in Trading?', category: 'Statistics', color: '#4FC3F7' },
+  { slug: 'ro-position-sizing-guide', title: 'Position Sizing:\nCat de Mult Ar Trebui\nSa Tranzactionezi?', category: 'Risk Management', color: '#00C853' },
+  { slug: 'ro-how-to-set-stop-loss', title: 'Cum Sa Setezi Corect\nun Stop Loss\n(Nu la Intamplare)', category: 'Risk Management', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
