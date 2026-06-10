@@ -410,7 +410,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/tilt-recovery-protocol</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/tilt-recovery-protocol"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/tilt-recovery-protocol"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/tilt-recovery-protocol"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/tilt-recovery-protocol</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/tilt-recovery-protocol"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/tilt-recovery-protocol"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/tilt-recovery-protocol"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -512,7 +524,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/breakeven-stop-too-early</loc>
-    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/breakeven-stop-too-early"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/breakeven-stop-too-early"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/breakeven-stop-too-early"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/breakeven-stop-too-early</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/breakeven-stop-too-early"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/breakeven-stop-too-early"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/breakeven-stop-too-early"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -524,7 +548,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/lotto-ticket-syndrome</loc>
-    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/lotto-ticket-syndrome"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/lotto-ticket-syndrome"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/lotto-ticket-syndrome"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/lotto-ticket-syndrome</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/lotto-ticket-syndrome"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/lotto-ticket-syndrome"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/lotto-ticket-syndrome"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

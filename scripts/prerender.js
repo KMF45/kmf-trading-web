@@ -64,6 +64,9 @@ const routes = [
   '/blog/ro/ghost-trades-journaling-missed-opportunities',
   '/blog/ro/prospect-theory-trading',
   '/blog/ro/confidence-vs-overconfidence',
+  '/blog/ro/tilt-recovery-protocol',
+  '/blog/ro/lotto-ticket-syndrome',
+  '/blog/ro/breakeven-stop-too-early',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

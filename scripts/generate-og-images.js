@@ -80,6 +80,9 @@ const articles = [
   { slug: 'ro-ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades:\nDe Ce Trade-urile Pe Care Le Sari\nTe Costa Mai Mult', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-prospect-theory-trading', title: 'De Ce Iti Inchizi Castigatorii\nPrea Devreme si Iti Lasi\nPierzatorii Sa Curga', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-confidence-vs-overconfidence', title: 'Incredere vs Supraincredere:\nLinia Care Separa Castigatorii\nde Conturile Distruse', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-tilt-recovery-protocol', title: 'Protocol de Recuperare din Tilt:\nCe Fac Traderii de Top\nin Primele 60 de Minute', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-lotto-ticket-syndrome', title: 'Sindromul Biletului de Loto:\nDe Ce Iti Maresti Riscul\nDupa un Castig Mare', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-breakeven-stop-too-early', title: 'Gap-ul de $0.01:\nDe Ce Iti Muti Stop-ul\nla Breakeven Prea Devreme', category: 'Psihologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

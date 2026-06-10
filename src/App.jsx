@@ -77,6 +77,9 @@ const ExecutionGapRo = lazy(() => import('./pages/blog/ro/ExecutionGapRo'));
 const GhostTradesRo = lazy(() => import('./pages/blog/ro/GhostTradesRo'));
 const ProspectTheoryTradingRo = lazy(() => import('./pages/blog/ro/ProspectTheoryTradingRo'));
 const ConfidenceVsOverconfidenceRo = lazy(() => import('./pages/blog/ro/ConfidenceVsOverconfidenceRo'));
+const TiltRecoveryProtocolRo = lazy(() => import('./pages/blog/ro/TiltRecoveryProtocolRo'));
+const LottoTicketSyndromeRo = lazy(() => import('./pages/blog/ro/LottoTicketSyndromeRo'));
+const BreakevenStopTooEarlyRo = lazy(() => import('./pages/blog/ro/BreakevenStopTooEarlyRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -196,6 +199,9 @@ function App() {
           <Route path="/blog/ro/ghost-trades-journaling-missed-opportunities" element={<GhostTradesRo />} />
           <Route path="/blog/ro/prospect-theory-trading" element={<ProspectTheoryTradingRo />} />
           <Route path="/blog/ro/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidenceRo />} />
+          <Route path="/blog/ro/tilt-recovery-protocol" element={<TiltRecoveryProtocolRo />} />
+          <Route path="/blog/ro/lotto-ticket-syndrome" element={<LottoTicketSyndromeRo />} />
+          <Route path="/blog/ro/breakeven-stop-too-early" element={<BreakevenStopTooEarlyRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

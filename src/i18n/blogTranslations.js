@@ -93,6 +93,18 @@ const blogTranslations = {
     en: '/blog/confidence-vs-overconfidence',
     ro: '/blog/ro/confidence-vs-overconfidence',
   },
+  'tilt-recovery-protocol': {
+    en: '/blog/tilt-recovery-protocol',
+    ro: '/blog/ro/tilt-recovery-protocol',
+  },
+  'lotto-ticket-syndrome': {
+    en: '/blog/lotto-ticket-syndrome',
+    ro: '/blog/ro/lotto-ticket-syndrome',
+  },
+  'breakeven-stop-too-early': {
+    en: '/blog/breakeven-stop-too-early',
+    ro: '/blog/ro/breakeven-stop-too-early',
+  },
 };
 
 export default blogTranslations;
