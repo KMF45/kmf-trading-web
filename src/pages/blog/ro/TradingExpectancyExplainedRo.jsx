@@ -15,7 +15,7 @@ export default function TradingExpectancyExplainedRo() {
       date="3 februarie 2026"
       dateISO="2026-02-03"
       readTime="6 min citire"
-      category="Statistics"
+      category="Statistici"
       categoryColor="#4FC3F7"
       relatedArticles={[
         { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },

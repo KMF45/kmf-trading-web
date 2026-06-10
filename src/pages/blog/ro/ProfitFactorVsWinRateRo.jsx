@@ -15,7 +15,7 @@ export default function ProfitFactorVsWinRateRo() {
       date="6 ianuarie 2026"
       dateISO="2026-01-06"
       readTime="7 min citire"
-      category="Statistics"
+      category="Statistici"
       categoryColor="#4FC3F7"
       relatedArticles={[
         { slug: 'trading-expectancy-explained', title: 'Trading Expectancy Explained: The Formula That Tells If Your Strategy Works', category: 'Statistics' },

@@ -799,6 +799,13 @@ export const CATEGORY_COVERS = {
   Improvement: CoverImprovement,
   Discipline: CoverDiscipline,
   'App Reviews': CoverAppReviews,
+  // Aliasuri RO — articolele traduse folosesc eticheta de categorie în română
+  Psihologie: CoverPsychology,
+  'Managementul Riscului': CoverRiskManagement,
+  Statistici: CoverStatistics,
+  Progres: CoverImprovement,
+  'Disciplină': CoverDiscipline,
+  'Recenzii Aplicatii': CoverAppReviews,
 };
 
 function BlogCoverArt({ category, className, style }) {

@@ -15,7 +15,7 @@ export default function OnePercentRiskRuleRo() {
       date="9 ianuarie 2026"
       dateISO="2026-01-09"
       readTime="6 min citire"
-      category="Risk Management"
+      category="Managementul Riscului"
       categoryColor="#00C853"
       relatedArticles={[
         { slug: 'prop-firm-trading-journal', title: 'Prop Firm Killers: How a Trading Journal Saves Your Funded Account', category: 'Risk Management' },

@@ -14,7 +14,7 @@ export default function CryptoVsForexJournalingRo() {
       date="26 februarie 2026"
       dateISO="2026-02-26"
       readTime="8 min citire"
-      category="Risk Management"
+      category="Managementul Riscului"
       categoryColor="#00C853"
       relatedArticles={[
         { slug: 'position-sizing-guide', title: 'Position Sizing Guide: How Much Should You Trade?', category: 'Risk Management' },

@@ -68,6 +68,9 @@ const HowToSetStopLossRo = lazy(() => import('./pages/blog/ro/HowToSetStopLossRo
 const RMultipleExplainedRo = lazy(() => import('./pages/blog/ro/RMultipleExplainedRo'));
 const CryptoVsForexJournalingRo = lazy(() => import('./pages/blog/ro/CryptoVsForexJournalingRo'));
 const WhyTradersBreakRulesRo = lazy(() => import('./pages/blog/ro/WhyTradersBreakRulesRo'));
+const GoodLossVsBadWinRo = lazy(() => import('./pages/blog/ro/GoodLossVsBadWinRo'));
+const WeekendGapRiskRo = lazy(() => import('./pages/blog/ro/WeekendGapRiskRo'));
+const PreTradeChecklistRo = lazy(() => import('./pages/blog/ro/PreTradeChecklistRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -178,6 +181,9 @@ function App() {
           <Route path="/blog/ro/r-multiple-explained" element={<RMultipleExplainedRo />} />
           <Route path="/blog/ro/crypto-vs-forex-journaling" element={<CryptoVsForexJournalingRo />} />
           <Route path="/blog/ro/why-traders-break-their-rules" element={<WhyTradersBreakRulesRo />} />
+          <Route path="/blog/ro/good-loss-vs-bad-win" element={<GoodLossVsBadWinRo />} />
+          <Route path="/blog/ro/weekend-gap-risk" element={<WeekendGapRiskRo />} />
+          <Route path="/blog/ro/pre-trade-checklist" element={<PreTradeChecklistRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

@@ -57,6 +57,18 @@ const blogTranslations = {
     en: '/blog/why-traders-break-their-rules',
     ro: '/blog/ro/why-traders-break-their-rules',
   },
+  'good-loss-vs-bad-win': {
+    en: '/blog/good-loss-vs-bad-win',
+    ro: '/blog/ro/good-loss-vs-bad-win',
+  },
+  'weekend-gap-risk': {
+    en: '/blog/weekend-gap-risk',
+    ro: '/blog/ro/weekend-gap-risk',
+  },
+  'pre-trade-checklist': {
+    en: '/blog/pre-trade-checklist',
+    ro: '/blog/ro/pre-trade-checklist',
+  },
 };
 
 export default blogTranslations;

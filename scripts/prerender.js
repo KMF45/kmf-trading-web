@@ -55,6 +55,9 @@ const routes = [
   '/blog/ro/r-multiple-explained',
   '/blog/ro/crypto-vs-forex-journaling',
   '/blog/ro/why-traders-break-their-rules',
+  '/blog/ro/good-loss-vs-bad-win',
+  '/blog/ro/weekend-gap-risk',
+  '/blog/ro/pre-trade-checklist',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

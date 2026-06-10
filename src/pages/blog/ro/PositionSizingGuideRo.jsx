@@ -15,7 +15,7 @@ export default function PositionSizingGuideRo() {
       dateISO="2026-02-10"
       dateModified="2026-03-22"
       readTime="7 min citire"
-      category="Risk Management"
+      category="Managementul Riscului"
       categoryColor="#00C853"
       relatedArticles={[
         { slug: 'crypto-vs-forex-journaling', title: 'Crypto vs Forex: Why Your Trading Journal Needs Different Rules for Each Market', category: 'Risk Management' },

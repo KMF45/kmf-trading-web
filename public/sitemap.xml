@@ -254,7 +254,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/pre-trade-checklist</loc>
-    <lastmod>2026-03-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/pre-trade-checklist"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/pre-trade-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/pre-trade-checklist"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -272,7 +284,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/good-loss-vs-bad-win</loc>
-    <lastmod>2026-04-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/good-loss-vs-bad-win</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -368,7 +392,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/weekend-gap-risk</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/weekend-gap-risk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

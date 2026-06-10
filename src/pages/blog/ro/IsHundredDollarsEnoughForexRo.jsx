@@ -14,7 +14,7 @@ export default function IsHundredDollarsEnoughForexRo() {
       date="13 mai 2026"
       dateISO="2026-05-13"
       readTime="9 min citire"
-      category="Risk Management"
+      category="Managementul Riscului"
       categoryColor="#00C853"
       relatedArticles={[
         { slug: 'trading-vs-gambling', title: 'When Trading Becomes Gambling (And How to Avoid It)', category: 'Psychology' },

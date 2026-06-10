@@ -15,7 +15,7 @@ export default function RMultipleExplainedRo() {
       date="20 ianuarie 2026"
       dateISO="2026-01-20"
       readTime="6 min citire"
-      category="Statistics"
+      category="Statistici"
       categoryColor="#4FC3F7"
       relatedArticles={[
         { slug: 'good-loss-vs-bad-win', title: 'Good Losses, Bad Wins: Why the Trade You\'re Proud of Might Be Your Worst', category: 'Improvement' },
