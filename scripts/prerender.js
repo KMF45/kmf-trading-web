@@ -67,6 +67,9 @@ const routes = [
   '/blog/ro/tilt-recovery-protocol',
   '/blog/ro/lotto-ticket-syndrome',
   '/blog/ro/breakeven-stop-too-early',
+  '/blog/ro/excel-vs-trading-journal-app',
+  '/blog/ro/ai-trade-review',
+  '/blog/ro/tradingview-kmf-workflow',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

@@ -374,13 +374,37 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/tradingview-kmf-workflow</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/tradingview-kmf-workflow"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/tradingview-kmf-workflow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/tradingview-kmf-workflow"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/tradingview-kmf-workflow</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/tradingview-kmf-workflow"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/tradingview-kmf-workflow"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/tradingview-kmf-workflow"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/excel-vs-trading-journal-app</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/excel-vs-trading-journal-app"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/excel-vs-trading-journal-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/excel-vs-trading-journal-app"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/excel-vs-trading-journal-app</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/excel-vs-trading-journal-app"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/excel-vs-trading-journal-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/excel-vs-trading-journal-app"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -434,7 +458,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/ai-trade-review</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/ai-trade-review"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/ai-trade-review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/ai-trade-review"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/ai-trade-review</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/ai-trade-review"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/ai-trade-review"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/ai-trade-review"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

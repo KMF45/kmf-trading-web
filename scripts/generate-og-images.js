@@ -83,6 +83,9 @@ const articles = [
   { slug: 'ro-tilt-recovery-protocol', title: 'Protocol de Recuperare din Tilt:\nCe Fac Traderii de Top\nin Primele 60 de Minute', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-lotto-ticket-syndrome', title: 'Sindromul Biletului de Loto:\nDe Ce Iti Maresti Riscul\nDupa un Castig Mare', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-breakeven-stop-too-early', title: 'Gap-ul de $0.01:\nDe Ce Iti Muti Stop-ul\nla Breakeven Prea Devreme', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-excel-vs-trading-journal-app', title: 'De Ce Excel Iti Omoara\nIncet Performanta\nde Trading', category: 'Progres', color: '#FFB300' },
+  { slug: 'ro-ai-trade-review', title: 'Cum Folosesti AI pentru\nReview-ul Trade-urilor\n(Fara Sa Pierzi Controlul)', category: 'Progres', color: '#FFB300' },
+  { slug: 'ro-tradingview-kmf-workflow', title: 'TradingView + K.M.F.:\nWorkflow-ul Perfect pentru\nun Trader Modern', category: 'Progres', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

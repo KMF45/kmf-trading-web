@@ -105,6 +105,18 @@ const blogTranslations = {
     en: '/blog/breakeven-stop-too-early',
     ro: '/blog/ro/breakeven-stop-too-early',
   },
+  'excel-vs-trading-journal-app': {
+    en: '/blog/excel-vs-trading-journal-app',
+    ro: '/blog/ro/excel-vs-trading-journal-app',
+  },
+  'ai-trade-review': {
+    en: '/blog/ai-trade-review',
+    ro: '/blog/ro/ai-trade-review',
+  },
+  'tradingview-kmf-workflow': {
+    en: '/blog/tradingview-kmf-workflow',
+    ro: '/blog/ro/tradingview-kmf-workflow',
+  },
 };
 
 export default blogTranslations;

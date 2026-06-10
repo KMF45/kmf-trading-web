@@ -80,6 +80,9 @@ const ConfidenceVsOverconfidenceRo = lazy(() => import('./pages/blog/ro/Confiden
 const TiltRecoveryProtocolRo = lazy(() => import('./pages/blog/ro/TiltRecoveryProtocolRo'));
 const LottoTicketSyndromeRo = lazy(() => import('./pages/blog/ro/LottoTicketSyndromeRo'));
 const BreakevenStopTooEarlyRo = lazy(() => import('./pages/blog/ro/BreakevenStopTooEarlyRo'));
+const ExcelVsTradingJournalRo = lazy(() => import('./pages/blog/ro/ExcelVsTradingJournalRo'));
+const AiTradeReviewRo = lazy(() => import('./pages/blog/ro/AiTradeReviewRo'));
+const TradingViewKmfWorkflowRo = lazy(() => import('./pages/blog/ro/TradingViewKmfWorkflowRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -202,6 +205,9 @@ function App() {
           <Route path="/blog/ro/tilt-recovery-protocol" element={<TiltRecoveryProtocolRo />} />
           <Route path="/blog/ro/lotto-ticket-syndrome" element={<LottoTicketSyndromeRo />} />
           <Route path="/blog/ro/breakeven-stop-too-early" element={<BreakevenStopTooEarlyRo />} />
+          <Route path="/blog/ro/excel-vs-trading-journal-app" element={<ExcelVsTradingJournalRo />} />
+          <Route path="/blog/ro/ai-trade-review" element={<AiTradeReviewRo />} />
+          <Route path="/blog/ro/tradingview-kmf-workflow" element={<TradingViewKmfWorkflowRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
