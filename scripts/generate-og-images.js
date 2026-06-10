@@ -68,6 +68,9 @@ const articles = [
   { slug: 'ro-profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate:\nCare Metrica Prezice\nSuccesul in Trading?', category: 'Statistics', color: '#4FC3F7' },
   { slug: 'ro-position-sizing-guide', title: 'Position Sizing:\nCat de Mult Ar Trebui\nSa Tranzactionezi?', category: 'Risk Management', color: '#00C853' },
   { slug: 'ro-how-to-set-stop-loss', title: 'Cum Sa Setezi Corect\nun Stop Loss\n(Nu la Intamplare)', category: 'Risk Management', color: '#00C853' },
+  { slug: 'ro-r-multiple-explained', title: 'R-Multiple Explicat:\nCum Masori Calitatea\nunui Trade', category: 'Statistics', color: '#4FC3F7' },
+  { slug: 'ro-crypto-vs-forex-journaling', title: 'Crypto vs Forex:\nReguli Diferite\npentru Fiecare Piata', category: 'Risk Management', color: '#00C853' },
+  { slug: 'ro-why-traders-break-their-rules', title: 'De Ce Iti Incalci\nPropriile Reguli\nde Trading', category: 'Psihologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

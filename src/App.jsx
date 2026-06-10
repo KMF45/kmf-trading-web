@@ -65,6 +65,9 @@ const HowToRecoverFromLosingStreakRo = lazy(() => import('./pages/blog/ro/HowToR
 const ProfitFactorVsWinRateRo = lazy(() => import('./pages/blog/ro/ProfitFactorVsWinRateRo'));
 const PositionSizingGuideRo = lazy(() => import('./pages/blog/ro/PositionSizingGuideRo'));
 const HowToSetStopLossRo = lazy(() => import('./pages/blog/ro/HowToSetStopLossRo'));
+const RMultipleExplainedRo = lazy(() => import('./pages/blog/ro/RMultipleExplainedRo'));
+const CryptoVsForexJournalingRo = lazy(() => import('./pages/blog/ro/CryptoVsForexJournalingRo'));
+const WhyTradersBreakRulesRo = lazy(() => import('./pages/blog/ro/WhyTradersBreakRulesRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -172,6 +175,9 @@ function App() {
           <Route path="/blog/ro/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRateRo />} />
           <Route path="/blog/ro/position-sizing-guide" element={<PositionSizingGuideRo />} />
           <Route path="/blog/ro/how-to-set-stop-loss" element={<HowToSetStopLossRo />} />
+          <Route path="/blog/ro/r-multiple-explained" element={<RMultipleExplainedRo />} />
+          <Route path="/blog/ro/crypto-vs-forex-journaling" element={<CryptoVsForexJournalingRo />} />
+          <Route path="/blog/ro/why-traders-break-their-rules" element={<WhyTradersBreakRulesRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

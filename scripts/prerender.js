@@ -52,6 +52,9 @@ const routes = [
   '/blog/ro/profit-factor-vs-win-rate',
   '/blog/ro/position-sizing-guide',
   '/blog/ro/how-to-set-stop-loss',
+  '/blog/ro/r-multiple-explained',
+  '/blog/ro/crypto-vs-forex-journaling',
+  '/blog/ro/why-traders-break-their-rules',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

@@ -45,6 +45,18 @@ const blogTranslations = {
     en: '/blog/how-to-set-stop-loss',
     ro: '/blog/ro/how-to-set-stop-loss',
   },
+  'r-multiple-explained': {
+    en: '/blog/r-multiple-explained',
+    ro: '/blog/ro/r-multiple-explained',
+  },
+  'crypto-vs-forex-journaling': {
+    en: '/blog/crypto-vs-forex-journaling',
+    ro: '/blog/ro/crypto-vs-forex-journaling',
+  },
+  'why-traders-break-their-rules': {
+    en: '/blog/why-traders-break-their-rules',
+    ro: '/blog/ro/why-traders-break-their-rules',
+  },
 };
 
 export default blogTranslations;

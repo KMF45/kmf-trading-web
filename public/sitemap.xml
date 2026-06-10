@@ -140,13 +140,37 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/r-multiple-explained</loc>
-    <lastmod>2026-04-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/r-multiple-explained"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/r-multiple-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/r-multiple-explained"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/r-multiple-explained</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/r-multiple-explained"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/r-multiple-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/r-multiple-explained"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/why-traders-break-their-rules</loc>
-    <lastmod>2026-04-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/why-traders-break-their-rules"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/why-traders-break-their-rules"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/why-traders-break-their-rules"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/why-traders-break-their-rules</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/why-traders-break-their-rules"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/why-traders-break-their-rules"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/why-traders-break-their-rules"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -260,7 +284,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/crypto-vs-forex-journaling</loc>
-    <lastmod>2026-04-28</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/crypto-vs-forex-journaling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/crypto-vs-forex-journaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/crypto-vs-forex-journaling"/>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/crypto-vs-forex-journaling</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/crypto-vs-forex-journaling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/crypto-vs-forex-journaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/crypto-vs-forex-journaling"/>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
