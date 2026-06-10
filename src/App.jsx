@@ -71,6 +71,9 @@ const WhyTradersBreakRulesRo = lazy(() => import('./pages/blog/ro/WhyTradersBrea
 const GoodLossVsBadWinRo = lazy(() => import('./pages/blog/ro/GoodLossVsBadWinRo'));
 const WeekendGapRiskRo = lazy(() => import('./pages/blog/ro/WeekendGapRiskRo'));
 const PreTradeChecklistRo = lazy(() => import('./pages/blog/ro/PreTradeChecklistRo'));
+const TenQuestionsAfterEveryTradeRo = lazy(() => import('./pages/blog/ro/TenQuestionsAfterEveryTradeRo'));
+const WeeklyTradingReviewTemplateRo = lazy(() => import('./pages/blog/ro/WeeklyTradingReviewTemplateRo'));
+const ExecutionGapRo = lazy(() => import('./pages/blog/ro/ExecutionGapRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -184,6 +187,9 @@ function App() {
           <Route path="/blog/ro/good-loss-vs-bad-win" element={<GoodLossVsBadWinRo />} />
           <Route path="/blog/ro/weekend-gap-risk" element={<WeekendGapRiskRo />} />
           <Route path="/blog/ro/pre-trade-checklist" element={<PreTradeChecklistRo />} />
+          <Route path="/blog/ro/10-questions-after-every-trade" element={<TenQuestionsAfterEveryTradeRo />} />
+          <Route path="/blog/ro/weekly-trading-review-template" element={<WeeklyTradingReviewTemplateRo />} />
+          <Route path="/blog/ro/execution-gap-backtest-vs-live-trading" element={<ExecutionGapRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

@@ -58,6 +58,9 @@ const routes = [
   '/blog/ro/good-loss-vs-bad-win',
   '/blog/ro/weekend-gap-risk',
   '/blog/ro/pre-trade-checklist',
+  '/blog/ro/10-questions-after-every-trade',
+  '/blog/ro/weekly-trading-review-template',
+  '/blog/ro/execution-gap-backtest-vs-live-trading',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

@@ -69,6 +69,18 @@ const blogTranslations = {
     en: '/blog/pre-trade-checklist',
     ro: '/blog/ro/pre-trade-checklist',
   },
+  '10-questions-after-every-trade': {
+    en: '/blog/10-questions-after-every-trade',
+    ro: '/blog/ro/10-questions-after-every-trade',
+  },
+  'weekly-trading-review-template': {
+    en: '/blog/weekly-trading-review-template',
+    ro: '/blog/ro/weekly-trading-review-template',
+  },
+  'execution-gap-backtest-vs-live-trading': {
+    en: '/blog/execution-gap-backtest-vs-live-trading',
+    ro: '/blog/ro/execution-gap-backtest-vs-live-trading',
+  },
 };
 
 export default blogTranslations;

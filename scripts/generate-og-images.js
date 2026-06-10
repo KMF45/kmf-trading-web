@@ -74,6 +74,9 @@ const articles = [
   { slug: 'ro-good-loss-vs-bad-win', title: 'Pierderi Bune, Castiguri\nProaste: De Ce Cel Mai Bun\nTrade Poate Fi Cel Mai Prost', category: 'Progres', color: '#FFB300' },
   { slug: 'ro-weekend-gap-risk', title: 'Riscul de Gap in Weekend:\nCum Iti Protejezi Pozitiile\nde Surpriza de Luni', category: 'Managementul Riscului', color: '#00C853' },
   { slug: 'ro-pre-trade-checklist', title: 'Pre-Trade Checklist:\n10 Lucruri de Verificat\nInainte de Fiecare Intrare', category: 'Disciplina', color: '#FFB300' },
+  { slug: 'ro-10-questions-after-every-trade', title: '10 Intrebari de Pus\nDupa Fiecare Trade', category: 'Progres', color: '#FFB300' },
+  { slug: 'ro-weekly-trading-review-template', title: 'Cum Faci un Review\nSaptamanal de Trading\n(Cu Template Complet)', category: 'Progres', color: '#FFB300' },
+  { slug: 'ro-execution-gap-backtest-vs-live-trading', title: 'Execution Gap:\nDe Ce Strategia Merge in Backtest\nDar Esueaza Live', category: 'Psihologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
