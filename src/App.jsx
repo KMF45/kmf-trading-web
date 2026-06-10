@@ -74,6 +74,9 @@ const PreTradeChecklistRo = lazy(() => import('./pages/blog/ro/PreTradeChecklist
 const TenQuestionsAfterEveryTradeRo = lazy(() => import('./pages/blog/ro/TenQuestionsAfterEveryTradeRo'));
 const WeeklyTradingReviewTemplateRo = lazy(() => import('./pages/blog/ro/WeeklyTradingReviewTemplateRo'));
 const ExecutionGapRo = lazy(() => import('./pages/blog/ro/ExecutionGapRo'));
+const GhostTradesRo = lazy(() => import('./pages/blog/ro/GhostTradesRo'));
+const ProspectTheoryTradingRo = lazy(() => import('./pages/blog/ro/ProspectTheoryTradingRo'));
+const ConfidenceVsOverconfidenceRo = lazy(() => import('./pages/blog/ro/ConfidenceVsOverconfidenceRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -190,6 +193,9 @@ function App() {
           <Route path="/blog/ro/10-questions-after-every-trade" element={<TenQuestionsAfterEveryTradeRo />} />
           <Route path="/blog/ro/weekly-trading-review-template" element={<WeeklyTradingReviewTemplateRo />} />
           <Route path="/blog/ro/execution-gap-backtest-vs-live-trading" element={<ExecutionGapRo />} />
+          <Route path="/blog/ro/ghost-trades-journaling-missed-opportunities" element={<GhostTradesRo />} />
+          <Route path="/blog/ro/prospect-theory-trading" element={<ProspectTheoryTradingRo />} />
+          <Route path="/blog/ro/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidenceRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

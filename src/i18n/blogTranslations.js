@@ -81,6 +81,18 @@ const blogTranslations = {
     en: '/blog/execution-gap-backtest-vs-live-trading',
     ro: '/blog/ro/execution-gap-backtest-vs-live-trading',
   },
+  'ghost-trades-journaling-missed-opportunities': {
+    en: '/blog/ghost-trades-journaling-missed-opportunities',
+    ro: '/blog/ro/ghost-trades-journaling-missed-opportunities',
+  },
+  'prospect-theory-trading': {
+    en: '/blog/prospect-theory-trading',
+    ro: '/blog/ro/prospect-theory-trading',
+  },
+  'confidence-vs-overconfidence': {
+    en: '/blog/confidence-vs-overconfidence',
+    ro: '/blog/ro/confidence-vs-overconfidence',
+  },
 };
 
 export default blogTranslations;

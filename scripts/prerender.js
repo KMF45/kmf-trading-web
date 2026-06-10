@@ -61,6 +61,9 @@ const routes = [
   '/blog/ro/10-questions-after-every-trade',
   '/blog/ro/weekly-trading-review-template',
   '/blog/ro/execution-gap-backtest-vs-live-trading',
+  '/blog/ro/ghost-trades-journaling-missed-opportunities',
+  '/blog/ro/prospect-theory-trading',
+  '/blog/ro/confidence-vs-overconfidence',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

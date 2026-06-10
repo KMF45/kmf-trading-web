@@ -77,6 +77,9 @@ const articles = [
   { slug: 'ro-10-questions-after-every-trade', title: '10 Intrebari de Pus\nDupa Fiecare Trade', category: 'Progres', color: '#FFB300' },
   { slug: 'ro-weekly-trading-review-template', title: 'Cum Faci un Review\nSaptamanal de Trading\n(Cu Template Complet)', category: 'Progres', color: '#FFB300' },
   { slug: 'ro-execution-gap-backtest-vs-live-trading', title: 'Execution Gap:\nDe Ce Strategia Merge in Backtest\nDar Esueaza Live', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades:\nDe Ce Trade-urile Pe Care Le Sari\nTe Costa Mai Mult', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-prospect-theory-trading', title: 'De Ce Iti Inchizi Castigatorii\nPrea Devreme si Iti Lasi\nPierzatorii Sa Curga', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-confidence-vs-overconfidence', title: 'Incredere vs Supraincredere:\nLinia Care Separa Castigatorii\nde Conturile Distruse', category: 'Psihologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
