@@ -89,6 +89,9 @@ const articles = [
   { slug: 'ro-strategy-is-not-enough', title: 'Mitul Strategiei Perfecte:\nDe Ce Acelasi Setup Face Unul\nBogat si Pe Altul Falit', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-why-traders-fail-at-journaling', title: 'De Ce 90% Dintre Traderi\nEsueaza la Jurnalizare\n(Si Cum Sa Fii in Cei 10%)', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-overtrading-checklist', title: 'Checklist de Overtrading:\n8 Semne Ca Esti pe Tilt\nFara Sa-ti Dai Seama', category: 'Disciplina', color: '#FFB300' },
+  { slug: 'ro-revenge-trading-kill-switch', title: 'Kill Switch pentru\nRevenge Trading:\nProtocolul in 5 Reguli', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-market-order-vs-limit-order', title: 'Market Order vs Limit Order:\nCostul Ascuns Care\nIti Goleste Contul', category: 'Managementul Riscului', color: '#00C853' },
+  { slug: 'ro-scaling-in-vs-scaling-out', title: 'Scaling In vs Scaling Out:\nCare Metoda Distruge\nMai Putine Conturi?', category: 'Managementul Riscului', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

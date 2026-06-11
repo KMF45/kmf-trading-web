@@ -73,6 +73,9 @@ const routes = [
   '/blog/ro/strategy-is-not-enough',
   '/blog/ro/why-traders-fail-at-journaling',
   '/blog/ro/overtrading-checklist',
+  '/blog/ro/revenge-trading-kill-switch',
+  '/blog/ro/market-order-vs-limit-order',
+  '/blog/ro/scaling-in-vs-scaling-out',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

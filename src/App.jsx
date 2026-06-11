@@ -86,6 +86,9 @@ const TradingViewKmfWorkflowRo = lazy(() => import('./pages/blog/ro/TradingViewK
 const StrategyIsNotEnoughRo = lazy(() => import('./pages/blog/ro/StrategyIsNotEnoughRo'));
 const WhyTradersFailAtJournalingRo = lazy(() => import('./pages/blog/ro/WhyTradersFailAtJournalingRo'));
 const OvertradingChecklistRo = lazy(() => import('./pages/blog/ro/OvertradingChecklistRo'));
+const RevengeTradingKillSwitchRo = lazy(() => import('./pages/blog/ro/RevengeTradingKillSwitchRo'));
+const MarketOrderVsLimitOrderRo = lazy(() => import('./pages/blog/ro/MarketOrderVsLimitOrderRo'));
+const ScalingInVsScalingOutRo = lazy(() => import('./pages/blog/ro/ScalingInVsScalingOutRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -214,6 +217,9 @@ function App() {
           <Route path="/blog/ro/strategy-is-not-enough" element={<StrategyIsNotEnoughRo />} />
           <Route path="/blog/ro/why-traders-fail-at-journaling" element={<WhyTradersFailAtJournalingRo />} />
           <Route path="/blog/ro/overtrading-checklist" element={<OvertradingChecklistRo />} />
+          <Route path="/blog/ro/revenge-trading-kill-switch" element={<RevengeTradingKillSwitchRo />} />
+          <Route path="/blog/ro/market-order-vs-limit-order" element={<MarketOrderVsLimitOrderRo />} />
+          <Route path="/blog/ro/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOutRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

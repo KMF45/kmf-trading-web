@@ -68,7 +68,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/market-order-vs-limit-order</loc>
-    <lastmod>2026-06-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/market-order-vs-limit-order"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/market-order-vs-limit-order"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/market-order-vs-limit-order"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/market-order-vs-limit-order</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/market-order-vs-limit-order"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/market-order-vs-limit-order"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/market-order-vs-limit-order"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -554,7 +566,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/scaling-in-vs-scaling-out</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/scaling-in-vs-scaling-out"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/scaling-in-vs-scaling-out"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/scaling-in-vs-scaling-out"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/scaling-in-vs-scaling-out</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/scaling-in-vs-scaling-out"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/scaling-in-vs-scaling-out"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/scaling-in-vs-scaling-out"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -584,7 +608,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/revenge-trading-kill-switch</loc>
-    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/revenge-trading-kill-switch"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/revenge-trading-kill-switch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/revenge-trading-kill-switch"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/revenge-trading-kill-switch</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/revenge-trading-kill-switch"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/revenge-trading-kill-switch"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/revenge-trading-kill-switch"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
