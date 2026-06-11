@@ -86,6 +86,9 @@ const articles = [
   { slug: 'ro-excel-vs-trading-journal-app', title: 'De Ce Excel Iti Omoara\nIncet Performanta\nde Trading', category: 'Progres', color: '#FFB300' },
   { slug: 'ro-ai-trade-review', title: 'Cum Folosesti AI pentru\nReview-ul Trade-urilor\n(Fara Sa Pierzi Controlul)', category: 'Progres', color: '#FFB300' },
   { slug: 'ro-tradingview-kmf-workflow', title: 'TradingView + K.M.F.:\nWorkflow-ul Perfect pentru\nun Trader Modern', category: 'Progres', color: '#FFB300' },
+  { slug: 'ro-strategy-is-not-enough', title: 'Mitul Strategiei Perfecte:\nDe Ce Acelasi Setup Face Unul\nBogat si Pe Altul Falit', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-why-traders-fail-at-journaling', title: 'De Ce 90% Dintre Traderi\nEsueaza la Jurnalizare\n(Si Cum Sa Fii in Cei 10%)', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-overtrading-checklist', title: 'Checklist de Overtrading:\n8 Semne Ca Esti pe Tilt\nFara Sa-ti Dai Seama', category: 'Disciplina', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

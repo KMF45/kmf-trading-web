@@ -70,6 +70,9 @@ const routes = [
   '/blog/ro/excel-vs-trading-journal-app',
   '/blog/ro/ai-trade-review',
   '/blog/ro/tradingview-kmf-workflow',
+  '/blog/ro/strategy-is-not-enough',
+  '/blog/ro/why-traders-fail-at-journaling',
+  '/blog/ro/overtrading-checklist',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

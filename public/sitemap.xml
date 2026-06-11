@@ -410,7 +410,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/strategy-is-not-enough</loc>
-    <lastmod>2026-03-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/strategy-is-not-enough"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/strategy-is-not-enough"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/strategy-is-not-enough"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/strategy-is-not-enough</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/strategy-is-not-enough"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/strategy-is-not-enough"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/strategy-is-not-enough"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -422,13 +434,37 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/why-traders-fail-at-journaling</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/why-traders-fail-at-journaling</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/overtrading-checklist</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/overtrading-checklist"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/overtrading-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/overtrading-checklist"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/overtrading-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/overtrading-checklist"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/overtrading-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/overtrading-checklist"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

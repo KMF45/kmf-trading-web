@@ -117,6 +117,18 @@ const blogTranslations = {
     en: '/blog/tradingview-kmf-workflow',
     ro: '/blog/ro/tradingview-kmf-workflow',
   },
+  'strategy-is-not-enough': {
+    en: '/blog/strategy-is-not-enough',
+    ro: '/blog/ro/strategy-is-not-enough',
+  },
+  'why-traders-fail-at-journaling': {
+    en: '/blog/why-traders-fail-at-journaling',
+    ro: '/blog/ro/why-traders-fail-at-journaling',
+  },
+  'overtrading-checklist': {
+    en: '/blog/overtrading-checklist',
+    ro: '/blog/ro/overtrading-checklist',
+  },
 };
 
 export default blogTranslations;

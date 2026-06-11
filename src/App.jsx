@@ -83,6 +83,9 @@ const BreakevenStopTooEarlyRo = lazy(() => import('./pages/blog/ro/BreakevenStop
 const ExcelVsTradingJournalRo = lazy(() => import('./pages/blog/ro/ExcelVsTradingJournalRo'));
 const AiTradeReviewRo = lazy(() => import('./pages/blog/ro/AiTradeReviewRo'));
 const TradingViewKmfWorkflowRo = lazy(() => import('./pages/blog/ro/TradingViewKmfWorkflowRo'));
+const StrategyIsNotEnoughRo = lazy(() => import('./pages/blog/ro/StrategyIsNotEnoughRo'));
+const WhyTradersFailAtJournalingRo = lazy(() => import('./pages/blog/ro/WhyTradersFailAtJournalingRo'));
+const OvertradingChecklistRo = lazy(() => import('./pages/blog/ro/OvertradingChecklistRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -208,6 +211,9 @@ function App() {
           <Route path="/blog/ro/excel-vs-trading-journal-app" element={<ExcelVsTradingJournalRo />} />
           <Route path="/blog/ro/ai-trade-review" element={<AiTradeReviewRo />} />
           <Route path="/blog/ro/tradingview-kmf-workflow" element={<TradingViewKmfWorkflowRo />} />
+          <Route path="/blog/ro/strategy-is-not-enough" element={<StrategyIsNotEnoughRo />} />
+          <Route path="/blog/ro/why-traders-fail-at-journaling" element={<WhyTradersFailAtJournalingRo />} />
+          <Route path="/blog/ro/overtrading-checklist" element={<OvertradingChecklistRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
