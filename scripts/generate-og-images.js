@@ -92,6 +92,9 @@ const articles = [
   { slug: 'ro-revenge-trading-kill-switch', title: 'Kill Switch pentru\nRevenge Trading:\nProtocolul in 5 Reguli', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-market-order-vs-limit-order', title: 'Market Order vs Limit Order:\nCostul Ascuns Care\nIti Goleste Contul', category: 'Managementul Riscului', color: '#00C853' },
   { slug: 'ro-scaling-in-vs-scaling-out', title: 'Scaling In vs Scaling Out:\nCare Metoda Distruge\nMai Putine Conturi?', category: 'Managementul Riscului', color: '#00C853' },
+  { slug: 'ro-monday-effect-trading', title: 'Efectul de Luni:\nDe Ce Luni E Cea Mai Proasta\nZi Sa Tranzactionezi Agresiv', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-worst-trading-excuses', title: 'Cele 7 Cele Mai Proaste\nScuze Pe Care Si Le Spun\nTraderii', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-metatrader-pre-trade-checklist', title: 'Pre-Trade Checklist pentru\nMetaTrader si cTrader:\n5 Reguli Care Chiar Raman', category: 'Disciplina', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

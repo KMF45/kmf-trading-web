@@ -500,7 +500,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/worst-trading-excuses</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/worst-trading-excuses</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -524,7 +536,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/monday-effect-trading</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/monday-effect-trading"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/monday-effect-trading</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/monday-effect-trading"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -626,7 +650,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/metatrader-pre-trade-checklist</loc>
-    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/metatrader-pre-trade-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

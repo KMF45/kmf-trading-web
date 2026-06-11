@@ -141,6 +141,18 @@ const blogTranslations = {
     en: '/blog/scaling-in-vs-scaling-out',
     ro: '/blog/ro/scaling-in-vs-scaling-out',
   },
+  'monday-effect-trading': {
+    en: '/blog/monday-effect-trading',
+    ro: '/blog/ro/monday-effect-trading',
+  },
+  'worst-trading-excuses': {
+    en: '/blog/worst-trading-excuses',
+    ro: '/blog/ro/worst-trading-excuses',
+  },
+  'metatrader-pre-trade-checklist': {
+    en: '/blog/metatrader-pre-trade-checklist',
+    ro: '/blog/ro/metatrader-pre-trade-checklist',
+  },
 };
 
 export default blogTranslations;

@@ -76,6 +76,9 @@ const routes = [
   '/blog/ro/revenge-trading-kill-switch',
   '/blog/ro/market-order-vs-limit-order',
   '/blog/ro/scaling-in-vs-scaling-out',
+  '/blog/ro/monday-effect-trading',
+  '/blog/ro/worst-trading-excuses',
+  '/blog/ro/metatrader-pre-trade-checklist',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',
