@@ -153,6 +153,22 @@ const blogTranslations = {
     en: '/blog/metatrader-pre-trade-checklist',
     ro: '/blog/ro/metatrader-pre-trade-checklist',
   },
+  'static-vs-trailing-drawdown': {
+    en: '/blog/static-vs-trailing-drawdown',
+    ro: '/blog/ro/static-vs-trailing-drawdown',
+  },
+  'prop-firm-trading-journal': {
+    en: '/blog/prop-firm-trading-journal',
+    ro: '/blog/ro/prop-firm-trading-journal',
+  },
+  'prop-firm-daily-drawdown-guide': {
+    en: '/blog/prop-firm-daily-drawdown-guide',
+    ro: '/blog/ro/prop-firm-daily-drawdown-guide',
+  },
+  'scared-money-prop-firm': {
+    en: '/blog/scared-money-prop-firm',
+    ro: '/blog/ro/scared-money-prop-firm',
+  },
 };
 
 export default blogTranslations;

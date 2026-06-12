@@ -79,6 +79,10 @@ const routes = [
   '/blog/ro/monday-effect-trading',
   '/blog/ro/worst-trading-excuses',
   '/blog/ro/metatrader-pre-trade-checklist',
+  '/blog/ro/static-vs-trailing-drawdown',
+  '/blog/ro/prop-firm-trading-journal',
+  '/blog/ro/prop-firm-daily-drawdown-guide',
+  '/blog/ro/scared-money-prop-firm',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

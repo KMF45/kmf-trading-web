@@ -92,6 +92,10 @@ const ScalingInVsScalingOutRo = lazy(() => import('./pages/blog/ro/ScalingInVsSc
 const MondayEffectTradingRo = lazy(() => import('./pages/blog/ro/MondayEffectTradingRo'));
 const WorstTradingExcusesRo = lazy(() => import('./pages/blog/ro/WorstTradingExcusesRo'));
 const MetatraderPreTradeChecklistRo = lazy(() => import('./pages/blog/ro/MetatraderPreTradeChecklistRo'));
+const StaticVsTrailingDrawdownRo = lazy(() => import('./pages/blog/ro/StaticVsTrailingDrawdownRo'));
+const PropFirmJournalRo = lazy(() => import('./pages/blog/ro/PropFirmJournalRo'));
+const PropFirmDailyDrawdownRo = lazy(() => import('./pages/blog/ro/PropFirmDailyDrawdownRo'));
+const ScaredMoneyPropFirmRo = lazy(() => import('./pages/blog/ro/ScaredMoneyPropFirmRo'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -226,6 +230,10 @@ function App() {
           <Route path="/blog/ro/monday-effect-trading" element={<MondayEffectTradingRo />} />
           <Route path="/blog/ro/worst-trading-excuses" element={<WorstTradingExcusesRo />} />
           <Route path="/blog/ro/metatrader-pre-trade-checklist" element={<MetatraderPreTradeChecklistRo />} />
+          <Route path="/blog/ro/static-vs-trailing-drawdown" element={<StaticVsTrailingDrawdownRo />} />
+          <Route path="/blog/ro/prop-firm-trading-journal" element={<PropFirmJournalRo />} />
+          <Route path="/blog/ro/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdownRo />} />
+          <Route path="/blog/ro/scared-money-prop-firm" element={<ScaredMoneyPropFirmRo />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

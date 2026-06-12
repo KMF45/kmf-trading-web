@@ -95,6 +95,10 @@ const articles = [
   { slug: 'ro-monday-effect-trading', title: 'Efectul de Luni:\nDe Ce Luni E Cea Mai Proasta\nZi Sa Tranzactionezi Agresiv', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-worst-trading-excuses', title: 'Cele 7 Cele Mai Proaste\nScuze Pe Care Si Le Spun\nTraderii', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-metatrader-pre-trade-checklist', title: 'Pre-Trade Checklist pentru\nMetaTrader si cTrader:\n5 Reguli Care Chiar Raman', category: 'Disciplina', color: '#FFB300' },
+  { slug: 'ro-static-vs-trailing-drawdown', title: 'Static vs Trailing Drawdown:\nRegula Prop Firm Care Omoara\nConturile Finantate', category: 'Managementul Riscului', color: '#00C853' },
+  { slug: 'ro-prop-firm-trading-journal', title: 'Ucigasii de Conturi Prop Firm:\nCum un Jurnal Iti Salveaza\nContul Finantat', category: 'Managementul Riscului', color: '#00C853' },
+  { slug: 'ro-prop-firm-daily-drawdown-guide', title: 'Daily Drawdown la Prop Firm:\nSistemul in 5 Reguli\nca sa Nu-l Mai Incalci', category: 'Managementul Riscului', color: '#00C853' },
+  { slug: 'ro-scared-money-prop-firm', title: 'Trading cu Scared Money:\nDe Ce Contul Prop de 100k\nSe Simte ca o Povara', category: 'Psihologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

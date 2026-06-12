@@ -326,7 +326,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/prop-firm-trading-journal</loc>
-    <lastmod>2026-03-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/prop-firm-trading-journal"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/prop-firm-trading-journal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/prop-firm-trading-journal"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/prop-firm-trading-journal</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/prop-firm-trading-journal"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/prop-firm-trading-journal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/prop-firm-trading-journal"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -440,7 +452,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/prop-firm-daily-drawdown-guide</loc>
-    <lastmod>2026-03-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/prop-firm-daily-drawdown-guide"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/prop-firm-daily-drawdown-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/prop-firm-daily-drawdown-guide"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/prop-firm-daily-drawdown-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/prop-firm-daily-drawdown-guide"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/prop-firm-daily-drawdown-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/prop-firm-daily-drawdown-guide"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -626,7 +650,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/static-vs-trailing-drawdown</loc>
-    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/static-vs-trailing-drawdown"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/static-vs-trailing-drawdown"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/static-vs-trailing-drawdown"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/static-vs-trailing-drawdown</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/static-vs-trailing-drawdown"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/static-vs-trailing-drawdown"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/static-vs-trailing-drawdown"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -686,7 +722,19 @@
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/scared-money-prop-firm</loc>
-    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/scared-money-prop-firm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
+    <lastmod>2026-06-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
