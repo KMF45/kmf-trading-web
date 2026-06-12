@@ -1,26 +1,26 @@
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Navbar from '../../components/landing/Navbar';
-import Footer from '../../components/Footer';
+import Navbar from '../../../components/landing/Navbar';
+import Footer from '../../../components/Footer';
 import { FaCheck, FaTimes, FaGooglePlay } from 'react-icons/fa';
-import { useLanguage } from '../../i18n/LanguageContext';
-import blogTranslations from '../../i18n/blogTranslations';
+import { useLanguage } from '../../../i18n/LanguageContext';
+import blogTranslations from '../../../i18n/blogTranslations';
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.kmf.tradingjournal';
 
 const SITE = 'https://kmfjournal.com';
 const SLUG = 'best-free-trading-journal-app-android-2026';
-const PAGE_TITLE = 'Best Free Trading Journal App for Android in 2026 | K.M.F. Trading Journal';
-const PAGE_DESC = 'Looking for the best free trading journal app for Android in 2026? Compare K.M.F., TraderSync, Tradervue and Edgewonk — features, pricing, and which is best for forex, stock and crypto traders.';
-const PAGE_URL = `${SITE}/blog/${SLUG}`;
-const OG_IMAGE = `${SITE}/blog/og/${SLUG}.png`;
+const PAGE_TITLE = 'Cea Mai Bună Aplicație Gratuită de Trading Journal pentru Android în 2026 | K.M.F.';
+const PAGE_DESC = 'Cauți cea mai bună aplicație gratuită de trading journal pentru Android în 2026? Compară K.M.F., TraderSync, Tradervue și Edgewonk — funcții, prețuri și care e cea mai bună pentru traderii de forex, acțiuni și crypto.';
+const PAGE_URL = `${SITE}/blog/ro/${SLUG}`;
+const OG_IMAGE = `${SITE}/blog/og/ro-${SLUG}.png`;
 
 function setMeta(name, content, attr = 'name') {
   const el = document.querySelector(`meta[${attr}="${name}"]`);
   if (el) el.setAttribute('content', content);
 }
 
-export default function BestTradingJournalAndroid2026() {
+export default function BestTradingJournalAndroid2026Ro() {
   const { lang: uiLang } = useLanguage();
   const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ export default function BestTradingJournalAndroid2026() {
   useEffect(() => {
     if (typeof navigator !== 'undefined' && navigator.webdriver) return;
     const tr = blogTranslations[SLUG];
-    if (tr && uiLang !== 'en' && tr[uiLang]) {
+    if (tr && uiLang !== 'ro' && tr[uiLang]) {
       navigate(tr[uiLang], { replace: true });
     }
   }, [uiLang, navigate]);
@@ -38,6 +38,9 @@ export default function BestTradingJournalAndroid2026() {
   useEffect(() => {
     document.title = PAGE_TITLE;
     setMeta('description', PAGE_DESC);
+
+    // html lang
+    document.documentElement.lang = 'ro';
 
     // Canonical
     const canonical = document.querySelector('link[rel="canonical"]');
@@ -97,10 +100,11 @@ export default function BestTradingJournalAndroid2026() {
     injectLd('ld-article', {
       '@context': 'https://schema.org',
       '@type': 'Article',
-      headline: 'Best Free Trading Journal App for Android in 2026',
+      headline: 'Cea Mai Bună Aplicație Gratuită de Trading Journal pentru Android în 2026',
       description: PAGE_DESC,
       datePublished: '2026-02-20',
       dateModified: '2026-02-27',
+      inLanguage: 'ro',
       author: { '@type': 'Organization', name: 'K.M.F. Trading Research', url: SITE },
       publisher: { '@type': 'Organization', name: 'K.M.F. Trading Journal', url: SITE, logo: { '@type': 'ImageObject', url: `${SITE}/logo.png` } },
       image: OG_IMAGE,
@@ -111,9 +115,9 @@ export default function BestTradingJournalAndroid2026() {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+        { '@type': 'ListItem', position: 1, name: 'Acasă', item: `${SITE}/` },
         { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog` },
-        { '@type': 'ListItem', position: 3, name: 'Best Free Trading Journal App for Android 2026', item: PAGE_URL },
+        { '@type': 'ListItem', position: 3, name: 'Cea Mai Bună Aplicație Gratuită de Trading Journal pentru Android 2026', item: PAGE_URL },
       ],
     });
 
@@ -121,9 +125,9 @@ export default function BestTradingJournalAndroid2026() {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        { '@type': 'Question', name: 'What is the best free trading journal app for Android?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal is the best free trading journal for Android in 2026, offering emotion tracking, risk calculators, achievements, and offline support — all free with an optional Premium tier.' } },
-        { '@type': 'Question', name: 'Is K.M.F. Trading Journal really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. K.M.F. offers a free tier with 15 trades, basic statistics, risk calculators, and cloud sync. Premium adds unlimited trades, advanced analytics, and behavioral psychology tools.' } },
-        { '@type': 'Question', name: 'Which trading journal app is best for forex traders?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal is designed for forex, stocks, and crypto traders. It includes a lot size calculator, pip-based stop loss tracking, and session-aware analytics tailored to forex markets.' } },
+        { '@type': 'Question', name: 'Care e cea mai bună aplicație gratuită de trading journal pentru Android?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal e cel mai bun trading journal gratuit pentru Android în 2026, oferind tracking emoțional, calculatoare de risc, realizări și suport offline — toate gratuit, cu un plan Premium opțional.' } },
+        { '@type': 'Question', name: 'K.M.F. Trading Journal e cu adevărat gratuit?', acceptedAnswer: { '@type': 'Answer', text: 'Da. K.M.F. oferă un plan gratuit cu 15 trade-uri, statistici de bază, calculatoare de risc și sincronizare în cloud. Premium adaugă trade-uri nelimitate, analiză avansată și unelte de psihologie comportamentală.' } },
+        { '@type': 'Question', name: 'Care aplicație de trading journal e cea mai bună pentru traderii de forex?', acceptedAnswer: { '@type': 'Answer', text: 'K.M.F. Trading Journal e construit pentru traderii de forex, acțiuni și crypto. Include un calculator de lot size, urmărirea stop loss-ului în pips și analiză adaptată sesiunilor piețelor forex.' } },
       ],
     });
 
@@ -148,6 +152,7 @@ export default function BestTradingJournalAndroid2026() {
       document.getElementById('ld-faq')?.remove();
       document.getElementById('ld-breadcrumb')?.remove();
       document.querySelectorAll('[id^="hreflang-"]').forEach(el => el.remove());
+      document.documentElement.lang = 'en';
     };
   }, []);
 
@@ -162,62 +167,62 @@ export default function BestTradingJournalAndroid2026() {
 
           {/* Breadcrumb */}
           <nav className="mb-8 text-sm text-kmf-text-tertiary" aria-label="Breadcrumb">
-            <Link to="/" className="hover:text-kmf-accent transition-colors">Home</Link>
+            <Link to="/" className="hover:text-kmf-accent transition-colors">Acasă</Link>
             <span className="mx-2">/</span>
             <Link to="/blog" className="hover:text-kmf-accent transition-colors">Blog</Link>
             <span className="mx-2">/</span>
-            <span className="text-kmf-text-secondary">Best Free Trading Journal App for Android 2026</span>
+            <span className="text-kmf-text-secondary">Cea Mai Bună Aplicație Gratuită de Trading Journal pentru Android 2026</span>
           </nav>
 
           {/* Meta */}
           <div className="flex items-center gap-3 mb-6 flex-wrap">
             <span className="text-xs font-semibold px-3 py-1 rounded-full"
               style={{ background: 'rgba(79,195,247,0.12)', color: '#4FC3F7', border: '1px solid rgba(79,195,247,0.22)' }}>
-              App Reviews
+              Recenzii Aplicații
             </span>
-            <time className="text-xs text-kmf-text-tertiary" dateTime="2026-02-20">February 20, 2026</time>
-            <span className="text-xs text-kmf-text-tertiary">· 6 min read</span>
+            <time className="text-xs text-kmf-text-tertiary" dateTime="2026-02-20">20 februarie 2026</time>
+            <span className="text-xs text-kmf-text-tertiary">· 6 min citire</span>
           </div>
 
           {/* H1 */}
           <h1 className="text-3xl sm:text-4xl font-bold text-kmf-text-primary mb-6 leading-tight"
             style={{ letterSpacing: '-0.02em' }}
             itemProp="headline">
-            Best Free Trading Journal App for Android in 2026
+            Cea Mai Bună Aplicație Gratuită de Trading Journal pentru Android în 2026
           </h1>
 
           {/* Intro */}
           <p className="text-lg text-kmf-text-secondary leading-relaxed mb-10"
             style={{ borderLeft: '3px solid rgba(79,195,247,0.40)', paddingLeft: '1.25rem' }}>
-            Most traders know they should keep a journal. Few actually do — because most journal apps are either expensive, web-only, or require connecting your broker account. Here's an honest comparison of the best free options available for Android in 2026.
+            Majoritatea traderilor știu că ar trebui să țină un jurnal. Puțini o fac cu adevărat — pentru că majoritatea aplicațiilor de jurnal sunt fie scumpe, fie doar pe web, fie cer conectarea contului de broker. Iată o comparație onestă a celor mai bune opțiuni gratuite disponibile pentru Android în 2026.
           </p>
 
           <Divider />
 
           {/* Section 1 */}
           <h2 className="text-2xl font-bold text-kmf-text-primary mt-10 mb-4" style={{ letterSpacing: '-0.01em' }}>
-            Why a Trading Journal Changes Your Results
+            De Ce un Trading Journal Îți Schimbă Rezultatele
           </h2>
           <p className="text-kmf-text-secondary leading-relaxed mb-4">
-            Studies on trading performance consistently show one thing: traders who journal improve faster than those who don't. Not because writing things down is magic — but because it forces you to review your decisions, spot patterns in your losses, and track whether you're actually following your own rules.
+            Studiile despre performanța în trading arată constant un lucru: traderii care jurnalizează progresează mai repede decât cei care nu o fac. Nu pentru că scrisul ar fi magic — ci pentru că te forțează să-ți revizuiești deciziile, să găsești pattern-uri în pierderi și să urmărești dacă îți respecți cu adevărat propriile reguli.
           </p>
           <p className="text-kmf-text-secondary leading-relaxed mb-4">
-            The problem is consistency. If your journal is a spreadsheet on your laptop, you won't fill it in right after a trade. If it's a paid app that costs $30/month, you'll stop using it after the first losing streak. A good journal needs to be fast, mobile, and free enough that there's no excuse not to use it.
+            Problema e consistența. Dacă jurnalul tău e un spreadsheet pe laptop, nu o să-l completezi imediat după trade. Dacă e o aplicație plătită care costă $30/lună, o să renunți la ea după prima serie de pierderi. Un jurnal bun trebuie să fie rapid, pe mobil și destul de gratuit încât să nu existe nicio scuză să nu-l folosești.
           </p>
 
           <Divider />
 
           {/* Section 2 */}
           <h2 className="text-2xl font-bold text-kmf-text-primary mt-10 mb-4" style={{ letterSpacing: '-0.01em' }}>
-            What to Look for in a Trading Journal App
+            Ce să Cauți într-o Aplicație de Trading Journal
           </h2>
           <ul className="space-y-3 mb-6">
             {[
-              ['Mobile-first & offline', 'Works without internet. You can log a trade immediately after execution, not later at your desk.'],
-              ['Analytics beyond P/L', 'Win rate is not enough. Look for profit factor, R-multiple, expectancy, and drawdown.'],
-              ['Discipline tools', 'Pre-trade checklists, weekly reviews, and scoring help you trade your system, not your emotions.'],
-              ['Privacy', 'Apps that require broker API access expose your account. Manual entry keeps your data yours.'],
-              ['Honest free tier', 'Many "free" apps lock everything behind a paywall. Core journaling should be free.'],
+              ['Mobile-first & offline', 'Funcționează fără internet. Poți loga un trade imediat după execuție, nu mai târziu la birou.'],
+              ['Analiză dincolo de P/L', 'Win rate-ul nu e de ajuns. Caută profit factor, R-multiple, expectancy și drawdown.'],
+              ['Unelte de disciplină', 'Checklist-uri pre-trade, review-uri săptămânale și scoruri te ajută să-ți tranzacționezi sistemul, nu emoțiile.'],
+              ['Confidențialitate', 'Aplicațiile care cer acces API la broker îți expun contul. Introducerea manuală îți păstrează datele ale tale.'],
+              ['Plan gratuit onest', 'Multe aplicații „gratuite" blochează totul în spatele unui paywall. Jurnalizarea de bază ar trebui să fie gratuită.'],
             ].map(([title, desc]) => (
               <li key={title} className="flex gap-3">
                 <FaCheck style={{ color: '#00C853', fontSize: 13, flexShrink: 0, marginTop: 4 }} />
@@ -230,34 +235,34 @@ export default function BestTradingJournalAndroid2026() {
 
           {/* Section 3 — The apps */}
           <h2 className="text-2xl font-bold text-kmf-text-primary mt-10 mb-8" style={{ letterSpacing: '-0.01em' }}>
-            Best Trading Journal Apps for Android in 2026
+            Cele Mai Bune Aplicații de Trading Journal pentru Android în 2026
           </h2>
 
           {/* App 1 — KMF */}
           <AppCard
             rank="1"
             name="K.M.F. Trading Journal"
-            tag="Best Free Android Option"
+            tag="Cea Mai Bună Opțiune Gratuită pe Android"
             tagColor="#4FC3F7"
             url="https://kmfjournal.com"
-            description="K.M.F. (Keep Moving Forward) is a native Android app built specifically for serious traders who want more than a P/L log. It works fully offline, doesn't require a broker connection, and focuses heavily on discipline — not just numbers."
+            description="K.M.F. (Keep Moving Forward) e o aplicație nativă de Android construită special pentru traderii serioși care vor mai mult decât un log de P/L. Funcționează complet offline, nu cere conexiune la broker și pune accent puternic pe disciplină — nu doar pe cifre."
             pros={[
-              'Native Android app — fast, offline, no browser needed',
-              'Pre-trade checklist to verify your setup before every entry',
-              'Discipline score tracking across trades and weeks',
-              'Weekly review with 5 self-evaluation metrics',
-              'Advanced stats: profit factor, R-multiple, expectancy, drawdown',
-              'Built-in lot size calculator with live prices and R:R',
-              'Cloud sync & backup (all plans)',
-              '7 languages including English, Romanian, Russian, Japanese',
-              'Free core features — no credit card required',
+              'Aplicație nativă Android — rapidă, offline, fără browser',
+              'Checklist pre-trade ca să-ți verifici setup-ul înainte de fiecare intrare',
+              'Urmărirea scorului de disciplină pe trade-uri și săptămâni',
+              'Review săptămânal cu 5 criterii de autoevaluare',
+              'Statistici avansate: profit factor, R-multiple, expectancy, drawdown',
+              'Calculator de lot size integrat, cu prețuri live și R:R',
+              'Sincronizare cloud & backup (toate planurile)',
+              '7 limbi, inclusiv engleză, română, rusă, japoneză',
+              'Funcțiile de bază gratuite — fără card bancar',
             ]}
             cons={[
-              'Android only (iOS not available yet)',
-              'New on Google Play — growing feature set with regular updates',
+              'Doar Android (iOS nu e disponibil încă)',
+              'Nouă pe Google Play — set de funcții în creștere, cu update-uri regulate',
             ]}
-            free="15 trades, full journaling, lot calculator, checklists"
-            premium="Unlimited trades, advanced statistics, weekly review, notifications, export, psychology tools"
+            free="15 trade-uri, jurnalizare completă, calculator de lot, checklist-uri"
+            premium="Trade-uri nelimitate, statistici avansate, review săptămânal, notificări, export, unelte de psihologie"
             cta={
               <a href={PLAY_STORE_URL}
                 target="_blank"
@@ -266,7 +271,7 @@ export default function BestTradingJournalAndroid2026() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200' }}>
                 <FaGooglePlay style={{ fontSize: 12 }} />
-                Download Free on Google Play
+                Descarcă Gratuit de pe Google Play
               </a>
             }
           />
@@ -275,76 +280,76 @@ export default function BestTradingJournalAndroid2026() {
           <AppCard
             rank="2"
             name="TraderSync"
-            tag="Best for Broker Auto-Import"
+            tag="Cel Mai Bun pentru Import Automat de la Broker"
             tagColor="#CE93D8"
-            description="TraderSync is a well-established web-based trading journal with automatic broker import. It's popular with US stock traders who want to connect their brokerage directly and have trades imported automatically."
+            description="TraderSync e un trading journal consacrat, bazat pe web, cu import automat de la broker. E popular printre traderii americani de acțiuni care vor să-și conecteze direct brokerajul și să aibă trade-urile importate automat."
             pros={[
-              'Automatic broker import (100+ supported brokers)',
-              'Good statistics and reporting',
-              'Clean, professional interface',
+              'Import automat de la broker (100+ brokeri suportați)',
+              'Statistici și rapoarte bune',
+              'Interfață curată, profesionistă',
             ]}
             cons={[
-              'No native Android app — mobile experience is limited',
-              'Requires broker connection for best functionality',
-              'Free plan is very limited (10 trades/month)',
-              'Paid plans start at $29.95/month',
-              'No offline functionality',
+              'Fără aplicație nativă Android — experiența pe mobil e limitată',
+              'Cere conexiune la broker pentru funcționalitate completă',
+              'Planul gratuit e foarte limitat (10 trade-uri/lună)',
+              'Planurile plătite încep de la $29.95/lună',
+              'Fără funcționare offline',
             ]}
-            free="10 trades/month, limited analytics"
-            premium="From $29.95/month"
+            free="10 trade-uri/lună, analiză limitată"
+            premium="De la $29.95/lună"
           />
 
           {/* App 3 — Tradervue */}
           <AppCard
             rank="3"
             name="Tradervue"
-            tag="Best for Day Traders (Web)"
+            tag="Cel Mai Bun pentru Day Traderi (Web)"
             tagColor="#FFB300"
-            description="Tradervue is one of the oldest trading journal platforms, web-only, focused on day traders and stocks. It has a strong community and sharing features."
+            description="Tradervue e una dintre cele mai vechi platforme de trading journal, doar pe web, concentrată pe day traderi și acțiuni. Are o comunitate puternică și funcții de share."
             pros={[
-              'Strong analytics for day traders',
-              'Trade sharing and community',
-              'Broker import supported',
+              'Analiză solidă pentru day traderi',
+              'Share de trade-uri și comunitate',
+              'Import de la broker suportat',
             ]}
             cons={[
-              'No mobile app at all',
-              'Dated interface',
-              'Free plan limited to 30 trades/month, no advanced stats',
-              'Paid plans from $29.95/month',
-              'No checklist or discipline tracking',
+              'Fără nicio aplicație de mobil',
+              'Interfață învechită',
+              'Planul gratuit limitat la 30 trade-uri/lună, fără statistici avansate',
+              'Planuri plătite de la $29.95/lună',
+              'Fără checklist sau urmărirea disciplinei',
             ]}
-            free="30 trades/month, basic stats"
-            premium="From $29.95/month"
+            free="30 trade-uri/lună, statistici de bază"
+            premium="De la $29.95/lună"
           />
 
           {/* App 4 — Edgewonk */}
           <AppCard
             rank="4"
             name="Edgewonk"
-            tag="Best Desktop Journal"
+            tag="Cel Mai Bun Jurnal de Desktop"
             tagColor="#78909C"
-            description="Edgewonk is a powerful trading journal with deep analytics, widely recommended in the professional trading community. It now offers a cloud version alongside its classic desktop app, but still has no dedicated mobile app."
+            description="Edgewonk e un trading journal puternic, cu analiză profundă, recomandat frecvent în comunitatea traderilor profesioniști. Oferă acum și o versiune cloud pe lângă aplicația clasică de desktop, dar tot nu are o aplicație dedicată de mobil."
             pros={[
-              'Very deep analytics and reporting',
-              'Cloud version now available (alongside desktop)',
-              'Good for swing traders and investors',
+              'Analiză și rapoarte foarte detaliate',
+              'Versiune cloud disponibilă acum (pe lângă desktop)',
+              'Bun pentru swing traderi și investitori',
             ]}
             cons={[
-              'No dedicated mobile app',
-              'Annual subscription starting at $169/year',
-              'No offline mobile logging',
-              'No free plan available',
-              'No real-time features',
+              'Fără aplicație dedicată de mobil',
+              'Abonament anual de la $169/an',
+              'Fără logare offline pe mobil',
+              'Fără plan gratuit',
+              'Fără funcții în timp real',
             ]}
-            free="No free plan"
-            premium="From $169/year"
+            free="Fără plan gratuit"
+            premium="De la $169/an"
           />
 
           <Divider />
 
           {/* Comparison table */}
           <h2 className="text-2xl font-bold text-kmf-text-primary mt-10 mb-6" style={{ letterSpacing: '-0.01em' }}>
-            Quick Comparison
+            Comparație Rapidă
           </h2>
 
           <div className="overflow-x-auto rounded-xl mb-10" style={{ border: '1px solid rgba(255,255,255,0.07)' }}>
@@ -358,13 +363,13 @@ export default function BestTradingJournalAndroid2026() {
               </thead>
               <tbody>
                 {[
-                  ['Android app',   true,  false, false, false],
-                  ['Offline mode',  true,  false, false, false],
-                  ['Free tier',     true,  true,  true,  false],
-                  ['No broker req', true,  false, false, true ],
-                  ['Discipline tools', true, false, false, false],
-                  ['Advanced stats',true,  true,  true,  true ],
-                  ['Price',         'Free+','$30/mo','$30/mo','$169/yr'],
+                  ['Aplicație Android',   true,  false, false, false],
+                  ['Mod offline',  true,  false, false, false],
+                  ['Plan gratuit',     true,  true,  true,  false],
+                  ['Fără broker', true,  false, false, true ],
+                  ['Unelte de disciplină', true, false, false, false],
+                  ['Statistici avansate',true,  true,  true,  true ],
+                  ['Preț',         'Gratuit+','$30/lună','$30/lună','$169/an'],
                 ].map(([label, ...vals]) => (
                   <tr key={label} style={{ borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                     <td className="px-4 py-3 text-kmf-text-tertiary font-medium">{label}</td>
@@ -385,7 +390,7 @@ export default function BestTradingJournalAndroid2026() {
           </div>
 
           <p className="text-xs text-kmf-text-tertiary mb-6" style={{ opacity: 0.6 }}>
-            Prices verified as of March 2026. Check each provider's website for the most current pricing.
+            Prețuri verificate în martie 2026. Verifică site-ul fiecărui furnizor pentru prețurile la zi.
           </p>
 
           <Divider />
@@ -395,18 +400,18 @@ export default function BestTradingJournalAndroid2026() {
             Verdict
           </h2>
           <p className="text-kmf-text-secondary leading-relaxed mb-4">
-            If you trade on your phone or want to log trades immediately after execution — <strong className="text-kmf-text-primary">K.M.F. Trading Journal is the only free Android option</strong> that combines real analytics with discipline tools, offline access, and privacy.
+            Dacă tranzacționezi de pe telefon sau vrei să loghezi trade-urile imediat după execuție — <strong className="text-kmf-text-primary">K.M.F. Trading Journal e singura opțiune gratuită de Android</strong> care combină analiză reală cu unelte de disciplină, acces offline și confidențialitate.
           </p>
           <p className="text-kmf-text-secondary leading-relaxed mb-4">
-            TraderSync and Tradervue are solid choices if you trade from a desktop and want automatic broker import — but their mobile experience is poor and free tiers are very limited.
+            TraderSync și Tradervue sunt alegeri solide dacă tranzacționezi de pe desktop și vrei import automat de la broker — dar experiența lor pe mobil e slabă și planurile gratuite sunt foarte limitate.
           </p>
           <p className="text-kmf-text-secondary leading-relaxed mb-8">
-            Edgewonk is excellent for deep analysis but requires a $169/year subscription and still lacks a dedicated mobile app.
+            Edgewonk e excelent pentru analiză profundă, dar cere un abonament de $169/an și tot nu are o aplicație dedicată de mobil.
           </p>
 
           {/* Related Articles */}
           <div className="rounded-xl p-6 mt-10 mb-8" style={{ background: 'rgba(79,195,247,0.04)', border: '1px solid rgba(79,195,247,0.12)' }}>
-            <p className="text-xs font-bold text-kmf-accent uppercase tracking-widest mb-4">Related Articles</p>
+            <p className="text-xs font-bold text-kmf-accent uppercase tracking-widest mb-4">Articole Similare</p>
             <ul className="space-y-3">
               {[
                 { slug: 'profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate: Which Metric Actually Predicts Trading Success?', category: 'Statistics' },
@@ -430,10 +435,10 @@ export default function BestTradingJournalAndroid2026() {
           <div className="rounded-2xl p-7 text-center"
             style={{ background: 'rgba(26,22,14,0.95)', border: '1px solid rgba(255,179,0,0.22)' }}>
             <p className="text-lg font-bold text-kmf-text-primary mb-2">
-              K.M.F. is available on Google Play
+              K.M.F. e disponibilă pe Google Play
             </p>
             <p className="text-sm text-kmf-text-secondary mb-5">
-              Download free and start journaling your trades today. <strong style={{ color: '#FFB300' }}>7-day Premium trial included</strong> — cancel before it ends and you won't be charged.
+              Descarcă gratuit și începe să-ți jurnalizezi trade-urile de azi. <strong style={{ color: '#FFB300' }}>Trial Premium de 7 zile inclus</strong> — anulează înainte să expire și nu ești taxat.
             </p>
             <a href={PLAY_STORE_URL}
               target="_blank"
@@ -442,7 +447,7 @@ export default function BestTradingJournalAndroid2026() {
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-base transition-all hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}>
               <FaGooglePlay style={{ fontSize: 14 }} />
-              Download on Google Play
+              Descarcă de pe Google Play
             </a>
           </div>
 
@@ -451,7 +456,7 @@ export default function BestTradingJournalAndroid2026() {
         {/* Back to blog */}
         <div className="max-w-2xl mx-auto mt-12">
           <Link to="/blog" className="text-sm text-kmf-accent hover:text-kmf-accent-bright transition-colors">
-            ← Back to Blog
+            ← Înapoi la Blog
           </Link>
         </div>
 
@@ -492,7 +497,7 @@ const AppCard = ({ rank, name, tag, tagColor, url, description, pros, cons, free
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
       <div>
-        <p className="text-xs font-bold text-kmf-text-tertiary uppercase tracking-wider mb-2">Pros</p>
+        <p className="text-xs font-bold text-kmf-text-tertiary uppercase tracking-wider mb-2">Avantaje</p>
         <ul className="space-y-1.5">
           {pros.map((p) => (
             <li key={p} className="flex gap-2 text-xs text-kmf-text-secondary">
@@ -503,7 +508,7 @@ const AppCard = ({ rank, name, tag, tagColor, url, description, pros, cons, free
         </ul>
       </div>
       <div>
-        <p className="text-xs font-bold text-kmf-text-tertiary uppercase tracking-wider mb-2">Cons</p>
+        <p className="text-xs font-bold text-kmf-text-tertiary uppercase tracking-wider mb-2">Dezavantaje</p>
         <ul className="space-y-1.5">
           {cons.map((c) => (
             <li key={c} className="flex gap-2 text-xs text-kmf-text-secondary">
@@ -517,8 +522,8 @@ const AppCard = ({ rank, name, tag, tagColor, url, description, pros, cons, free
 
     <div className="flex flex-wrap gap-3 pt-3 border-t border-white/5 items-center justify-between">
       <div className="flex gap-4 flex-wrap text-xs text-kmf-text-tertiary">
-        <span><strong className="text-kmf-text-secondary">Free:</strong> {free}</span>
-        <span><strong className="text-kmf-text-secondary">Paid:</strong> {premium}</span>
+        <span><strong className="text-kmf-text-secondary">Gratuit:</strong> {free}</span>
+        <span><strong className="text-kmf-text-secondary">Plătit:</strong> {premium}</span>
       </div>
       {cta && <div>{cta}</div>}
     </div>

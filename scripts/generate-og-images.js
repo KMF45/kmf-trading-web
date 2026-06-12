@@ -99,6 +99,7 @@ const articles = [
   { slug: 'ro-prop-firm-trading-journal', title: 'Ucigasii de Conturi Prop Firm:\nCum un Jurnal Iti Salveaza\nContul Finantat', category: 'Managementul Riscului', color: '#00C853' },
   { slug: 'ro-prop-firm-daily-drawdown-guide', title: 'Daily Drawdown la Prop Firm:\nSistemul in 5 Reguli\nca sa Nu-l Mai Incalci', category: 'Managementul Riscului', color: '#00C853' },
   { slug: 'ro-scared-money-prop-firm', title: 'Trading cu Scared Money:\nDe Ce Contul Prop de 100k\nSe Simte ca o Povara', category: 'Psihologie', color: '#CE93D8' },
+  { slug: 'ro-best-free-trading-journal-app-android-2026', title: 'Cea Mai Buna Aplicatie\nGratuita de Trading Journal\npentru Android in 2026', category: 'Recenzii Aplicatii', color: '#4FC3F7' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

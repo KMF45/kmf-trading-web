@@ -169,6 +169,10 @@ const blogTranslations = {
     en: '/blog/scared-money-prop-firm',
     ro: '/blog/ro/scared-money-prop-firm',
   },
+  'best-free-trading-journal-app-android-2026': {
+    en: '/blog/best-free-trading-journal-app-android-2026',
+    ro: '/blog/ro/best-free-trading-journal-app-android-2026',
+  },
 };
 
 export default blogTranslations;

@@ -83,6 +83,7 @@ const routes = [
   '/blog/ro/prop-firm-trading-journal',
   '/blog/ro/prop-firm-daily-drawdown-guide',
   '/blog/ro/scared-money-prop-firm',
+  '/blog/ro/best-free-trading-journal-app-android-2026',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

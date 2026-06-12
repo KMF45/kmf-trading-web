@@ -96,6 +96,7 @@ const StaticVsTrailingDrawdownRo = lazy(() => import('./pages/blog/ro/StaticVsTr
 const PropFirmJournalRo = lazy(() => import('./pages/blog/ro/PropFirmJournalRo'));
 const PropFirmDailyDrawdownRo = lazy(() => import('./pages/blog/ro/PropFirmDailyDrawdownRo'));
 const ScaredMoneyPropFirmRo = lazy(() => import('./pages/blog/ro/ScaredMoneyPropFirmRo'));
+const BestTradingJournalAndroid2026Ro = lazy(() => import('./pages/blog/ro/BestTradingJournalAndroid2026Ro'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -234,6 +235,7 @@ function App() {
           <Route path="/blog/ro/prop-firm-trading-journal" element={<PropFirmJournalRo />} />
           <Route path="/blog/ro/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdownRo />} />
           <Route path="/blog/ro/scared-money-prop-firm" element={<ScaredMoneyPropFirmRo />} />
+          <Route path="/blog/ro/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026Ro />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
