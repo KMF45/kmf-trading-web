@@ -44,7 +44,7 @@ export default function RevengeTrading() {
       </P>
       <H3>Loss Aversion</H3>
       <P>
-        Research by Daniel Kahneman and Amos Tversky established that the psychological pain of losing $100 is approximately twice as intense as the pleasure of gaining $100. In trading, this means losses feel disproportionately bad, and the brain urgently wants to eliminate that pain — not by processing it, but by erasing it. The fastest way to erase a $200 loss, the emotional brain insists, is to make back $200 immediately.
+        Research by Daniel Kahneman and Amos Tversky established that the psychological pain of losing $100 is approximately twice as intense as the pleasure of gaining $100. In trading, this means losses feel disproportionately bad, and the brain urgently wants to eliminate that pain — not by processing it, but by erasing it. The fastest way to erase a $200 loss, the emotional brain insists, is to make back $200 immediately. This asymmetry is the core of <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">prospect theory</Link> — and it quietly rewrites your decisions after every losing trade.
       </P>
       <H3>Ego and the Need to Be Right</H3>
       <P>

@@ -117,7 +117,7 @@ export default function ScalingInVsScalingOutRo() {
 
       <H2>Ideea Cheie</H2>
       <P>
-        Scaling in pe pierzători omoară conturi. Asta nu e de dezbătut — e o certitudine matematică dat fiind destul timp. Îți crești expunerea la o teză pe care piața o invalidează activ. Fiecare adăugare îți crește riscul total în timp ce probabilitatea de revenire scade.
+        Scaling in pe pierzători omoară conturi. Asta nu e de dezbătut — e o certitudine matematică dat fiind destul timp. Îți crești expunerea la o teză pe care piața o invalidează activ. Fiecare adăugare îți crește riscul total în timp ce probabilitatea de revenire scade. Iar motivul pentru care traderii o fac oricum nu e prostia — e <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">prospect theory</Link>: creierul tău e construit să-și asume riscuri mai mari ca să evite să bată în cuie o pierdere.
       </P>
       <P>
         Scaling in pe câștigători poate funcționa, dar doar cu reguli stricte: un număr maxim de adăugări, niveluri pre-definite, și un plafon de risc cumulat care nu depășește niciodată <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">limita ta standard de risc per trade</Link>. Fără aceste reguli, până și adăugarea la câștigători devine supraexpunere deghizată.

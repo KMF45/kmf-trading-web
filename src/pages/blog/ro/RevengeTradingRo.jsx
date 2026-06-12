@@ -45,7 +45,7 @@ export default function RevengeTradingRo() {
       </P>
       <H3>Loss Aversion</H3>
       <P>
-        Cercetările lui Daniel Kahneman și Amos Tversky au stabilit că durerea psihologică de a pierde $100 e aproximativ de două ori mai intensă decât plăcerea de a câștiga $100. În trading, asta înseamnă că pierderile dor disproporționat de tare, iar creierul vrea urgent să elimine acea durere — nu procesând-o, ci ștergând-o. Cea mai rapidă cale de a șterge o pierdere de $200, insistă creierul emoțional, e să faci la loc $200 imediat.
+        Cercetările lui Daniel Kahneman și Amos Tversky au stabilit că durerea psihologică de a pierde $100 e aproximativ de două ori mai intensă decât plăcerea de a câștiga $100. În trading, asta înseamnă că pierderile dor disproporționat de tare, iar creierul vrea urgent să elimine acea durere — nu procesând-o, ci ștergând-o. Cea mai rapidă cale de a șterge o pierdere de $200, insistă creierul emoțional, e să faci la loc $200 imediat. Asimetria asta e nucleul <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">prospect theory</Link> — și îți rescrie pe tăcute deciziile după fiecare trade pierdut.
       </P>
       <H3>Ego-ul și Nevoia de a Avea Dreptate</H3>
       <P>

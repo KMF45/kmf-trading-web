@@ -116,7 +116,7 @@ export default function ScalingInVsScalingOut() {
 
       <H2>The Key Insight</H2>
       <P>
-        Scaling in to losers kills accounts. This is not debatable — it is mathematical certainty given enough time. You are increasing exposure to a thesis that the market is actively invalidating. Every add-on increases your total risk while the probability of recovery decreases.
+        Scaling in to losers kills accounts. This is not debatable — it is mathematical certainty given enough time. You are increasing exposure to a thesis that the market is actively invalidating. Every add-on increases your total risk while the probability of recovery decreases. And the reason traders keep doing it anyway is not ignorance — it is <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">prospect theory</Link>: your brain is wired to take bigger risks to avoid locking in a loss.
       </P>
       <P>
         Scaling in to winners can work, but only with strict rules: a maximum number of additions, pre-defined levels, and a cumulative risk cap that never exceeds your standard <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">per-trade risk limit</Link>. Without these rules, even adding to winners becomes disguised overexposure.
