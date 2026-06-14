@@ -88,6 +88,9 @@ const routes = [
   '/blog/de/profit-factor-vs-win-rate',
   '/blog/de/market-order-vs-limit-order',
   '/blog/de/scaling-in-vs-scaling-out',
+  '/blog/de/1-percent-risk-rule',
+  '/blog/de/position-sizing-guide',
+  '/blog/de/trading-expectancy-explained',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

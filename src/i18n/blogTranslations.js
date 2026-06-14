@@ -24,10 +24,12 @@ const blogTranslations = {
   'trading-expectancy-explained': {
     en: '/blog/trading-expectancy-explained',
     ro: '/blog/ro/trading-expectancy-explained',
+    de: '/blog/de/trading-expectancy-explained',
   },
   '1-percent-risk-rule': {
     en: '/blog/1-percent-risk-rule',
     ro: '/blog/ro/1-percent-risk-rule',
+    de: '/blog/de/1-percent-risk-rule',
   },
   'how-to-recover-from-losing-streak': {
     en: '/blog/how-to-recover-from-losing-streak',
@@ -41,6 +43,7 @@ const blogTranslations = {
   'position-sizing-guide': {
     en: '/blog/position-sizing-guide',
     ro: '/blog/ro/position-sizing-guide',
+    de: '/blog/de/position-sizing-guide',
   },
   'how-to-set-stop-loss': {
     en: '/blog/how-to-set-stop-loss',

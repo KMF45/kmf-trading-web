@@ -101,6 +101,9 @@ const BestTradingJournalAndroid2026Ro = lazy(() => import('./pages/blog/ro/BestT
 const ProfitFactorVsWinRateDe = lazy(() => import('./pages/blog/de/ProfitFactorVsWinRateDe'));
 const MarketOrderVsLimitOrderDe = lazy(() => import('./pages/blog/de/MarketOrderVsLimitOrderDe'));
 const ScalingInVsScalingOutDe = lazy(() => import('./pages/blog/de/ScalingInVsScalingOutDe'));
+const OnePercentRiskRuleDe = lazy(() => import('./pages/blog/de/OnePercentRiskRuleDe'));
+const PositionSizingGuideDe = lazy(() => import('./pages/blog/de/PositionSizingGuideDe'));
+const TradingExpectancyExplainedDe = lazy(() => import('./pages/blog/de/TradingExpectancyExplainedDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -244,6 +247,9 @@ function App() {
           <Route path="/blog/de/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRateDe />} />
           <Route path="/blog/de/market-order-vs-limit-order" element={<MarketOrderVsLimitOrderDe />} />
           <Route path="/blog/de/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOutDe />} />
+          <Route path="/blog/de/1-percent-risk-rule" element={<OnePercentRiskRuleDe />} />
+          <Route path="/blog/de/position-sizing-guide" element={<PositionSizingGuideDe />} />
+          <Route path="/blog/de/trading-expectancy-explained" element={<TradingExpectancyExplainedDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

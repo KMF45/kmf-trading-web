@@ -148,8 +148,9 @@
     <loc>https://kmfjournal.com/blog/1-percent-risk-rule</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/1-percent-risk-rule"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/1-percent-risk-rule"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/1-percent-risk-rule"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/1-percent-risk-rule"/>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -157,10 +158,21 @@
     <loc>https://kmfjournal.com/blog/ro/1-percent-risk-rule</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/1-percent-risk-rule"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/1-percent-risk-rule"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/1-percent-risk-rule"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/1-percent-risk-rule"/>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/de/1-percent-risk-rule</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/1-percent-risk-rule"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/1-percent-risk-rule"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/1-percent-risk-rule"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/1-percent-risk-rule"/>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/revenge-trading</loc>
@@ -274,8 +286,9 @@
     <loc>https://kmfjournal.com/blog/trading-expectancy-explained</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/trading-expectancy-explained"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/trading-expectancy-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/trading-expectancy-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/trading-expectancy-explained"/>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -283,10 +296,21 @@
     <loc>https://kmfjournal.com/blog/ro/trading-expectancy-explained</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/trading-expectancy-explained"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/trading-expectancy-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/trading-expectancy-explained"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/trading-expectancy-explained"/>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/de/trading-expectancy-explained</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/trading-expectancy-explained"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/trading-expectancy-explained"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/trading-expectancy-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/trading-expectancy-explained"/>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kmfjournal.com/blog/how-to-set-stop-loss</loc>
@@ -310,8 +334,9 @@
     <loc>https://kmfjournal.com/blog/position-sizing-guide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/position-sizing-guide"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/position-sizing-guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/position-sizing-guide"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/position-sizing-guide"/>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -319,8 +344,19 @@
     <loc>https://kmfjournal.com/blog/ro/position-sizing-guide</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/position-sizing-guide"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/position-sizing-guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/position-sizing-guide"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/position-sizing-guide"/>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/de/position-sizing-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/position-sizing-guide"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/position-sizing-guide"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/position-sizing-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/position-sizing-guide"/>
+    <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

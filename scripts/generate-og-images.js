@@ -103,6 +103,9 @@ const articles = [
   { slug: 'de-profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate:\nWelche Kennzahl sagt den\nTrading-Erfolg wirklich voraus?', category: 'Statistik', color: '#4FC3F7' },
   { slug: 'de-market-order-vs-limit-order', title: 'Market Order vs Limit Order:\nDie versteckten Kosten, die\ndein Konto leer saugen', category: 'Risikomanagement', color: '#00C853' },
   { slug: 'de-scaling-in-vs-scaling-out', title: 'Scaling In vs Scaling Out:\nWelche Methode des Positions-\nmanagements ist besser?', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-1-percent-risk-rule', title: 'Die 1-%-Risikoregel:\nDie Regel, die Profi-Trader\nam Leben haelt', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-position-sizing-guide', title: 'Positionsgroessen-Leitfaden:\nWie viel solltest\ndu traden?', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-trading-expectancy-explained', title: 'Trading-Erwartungswert:\nDie Formel, die zeigt, ob\ndeine Strategie funktioniert', category: 'Statistik', color: '#4FC3F7' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
