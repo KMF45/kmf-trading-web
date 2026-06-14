@@ -84,6 +84,10 @@ const routes = [
   '/blog/ro/prop-firm-daily-drawdown-guide',
   '/blog/ro/scared-money-prop-firm',
   '/blog/ro/best-free-trading-journal-app-android-2026',
+  // German blog articles
+  '/blog/de/profit-factor-vs-win-rate',
+  '/blog/de/market-order-vs-limit-order',
+  '/blog/de/scaling-in-vs-scaling-out',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

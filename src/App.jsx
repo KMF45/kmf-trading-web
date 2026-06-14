@@ -97,6 +97,10 @@ const PropFirmJournalRo = lazy(() => import('./pages/blog/ro/PropFirmJournalRo')
 const PropFirmDailyDrawdownRo = lazy(() => import('./pages/blog/ro/PropFirmDailyDrawdownRo'));
 const ScaredMoneyPropFirmRo = lazy(() => import('./pages/blog/ro/ScaredMoneyPropFirmRo'));
 const BestTradingJournalAndroid2026Ro = lazy(() => import('./pages/blog/ro/BestTradingJournalAndroid2026Ro'));
+// German blog articles
+const ProfitFactorVsWinRateDe = lazy(() => import('./pages/blog/de/ProfitFactorVsWinRateDe'));
+const MarketOrderVsLimitOrderDe = lazy(() => import('./pages/blog/de/MarketOrderVsLimitOrderDe'));
+const ScalingInVsScalingOutDe = lazy(() => import('./pages/blog/de/ScalingInVsScalingOutDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -236,6 +240,10 @@ function App() {
           <Route path="/blog/ro/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdownRo />} />
           <Route path="/blog/ro/scared-money-prop-firm" element={<ScaredMoneyPropFirmRo />} />
           <Route path="/blog/ro/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026Ro />} />
+          {/* German blog articles */}
+          <Route path="/blog/de/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRateDe />} />
+          <Route path="/blog/de/market-order-vs-limit-order" element={<MarketOrderVsLimitOrderDe />} />
+          <Route path="/blog/de/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOutDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

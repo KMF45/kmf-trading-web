@@ -100,6 +100,9 @@ const articles = [
   { slug: 'ro-prop-firm-daily-drawdown-guide', title: 'Daily Drawdown la Prop Firm:\nSistemul in 5 Reguli\nca sa Nu-l Mai Incalci', category: 'Managementul Riscului', color: '#00C853' },
   { slug: 'ro-scared-money-prop-firm', title: 'Trading cu Scared Money:\nDe Ce Contul Prop de 100k\nSe Simte ca o Povara', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-best-free-trading-journal-app-android-2026', title: 'Cea Mai Buna Aplicatie\nGratuita de Trading Journal\npentru Android in 2026', category: 'Recenzii Aplicatii', color: '#4FC3F7' },
+  { slug: 'de-profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate:\nWelche Kennzahl sagt den\nTrading-Erfolg wirklich voraus?', category: 'Statistik', color: '#4FC3F7' },
+  { slug: 'de-market-order-vs-limit-order', title: 'Market Order vs Limit Order:\nDie versteckten Kosten, die\ndein Konto leer saugen', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-scaling-in-vs-scaling-out', title: 'Scaling In vs Scaling Out:\nWelche Methode des Positions-\nmanagements ist besser?', category: 'Risikomanagement', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

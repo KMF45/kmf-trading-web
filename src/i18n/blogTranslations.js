@@ -36,6 +36,7 @@ const blogTranslations = {
   'profit-factor-vs-win-rate': {
     en: '/blog/profit-factor-vs-win-rate',
     ro: '/blog/ro/profit-factor-vs-win-rate',
+    de: '/blog/de/profit-factor-vs-win-rate',
   },
   'position-sizing-guide': {
     en: '/blog/position-sizing-guide',
@@ -136,10 +137,12 @@ const blogTranslations = {
   'market-order-vs-limit-order': {
     en: '/blog/market-order-vs-limit-order',
     ro: '/blog/ro/market-order-vs-limit-order',
+    de: '/blog/de/market-order-vs-limit-order',
   },
   'scaling-in-vs-scaling-out': {
     en: '/blog/scaling-in-vs-scaling-out',
     ro: '/blog/ro/scaling-in-vs-scaling-out',
+    de: '/blog/de/scaling-in-vs-scaling-out',
   },
   'monday-effect-trading': {
     en: '/blog/monday-effect-trading',
