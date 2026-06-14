@@ -10,6 +10,18 @@ const META = {
     title: 'Termeni și Condiții — K.M.F. Trading Journal',
     desc: 'Termenii și condițiile pentru K.M.F. Trading Journal — acoperă site-ul kmfjournal.com și aplicația de Android. Limbaj simplu. Lege română.',
   },
+  de: {
+    title: 'Nutzungsbedingungen — K.M.F. Trading Journal',
+    desc: 'Nutzungsbedingungen für K.M.F. Trading Journal — gelten für die Website kmfjournal.com und die Android-App. Einfache Sprache. Rumänisches Recht.',
+  },
+  fr: {
+    title: 'Conditions d\'utilisation — K.M.F. Trading Journal',
+    desc: 'Conditions d\'utilisation de K.M.F. Trading Journal — couvrent le site kmfjournal.com et l\'application Android. Langage clair. Droit roumain.',
+  },
+  ru: {
+    title: 'Условия использования — K.M.F. Trading Journal',
+    desc: 'Условия использования K.M.F. Trading Journal — охватывают сайт kmfjournal.com и приложение для Android. Простой язык. Право Румынии.',
+  },
 };
 
 const TermsOfServicePage = () => {
@@ -23,6 +35,9 @@ const TermsOfServicePage = () => {
   }, [lang]);
 
   if (lang === 'ro') return <TermsOfServiceRo />;
+  if (lang === 'de') return <TermsOfServiceDe />;
+  if (lang === 'fr') return <TermsOfServiceFr />;
+  if (lang === 'ru') return <TermsOfServiceRu />;
 
   return (
     <div style={{ minHeight: '100vh', background: '#0F1115', color: '#E0E0E0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
@@ -454,6 +469,660 @@ function TermsOfServiceRo() {
           <strong style={styles.strong}>Locație:</strong> România (Uniunea Europeană)
         </p>
         <p style={styles.text}>Vom răspunde în termen de 30 de zile.</p>
+      </div>
+    </div>
+  );
+}
+
+function TermsOfServiceDe() {
+  return (
+    <div style={{ minHeight: '100vh', background: '#0F1115', color: '#E0E0E0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 20px 80px' }}>
+        {/* Header */}
+        <div style={{ textAlign: 'center', marginBottom: 40 }}>
+          <h1 style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Nutzungsbedingungen</h1>
+          <p style={{ fontSize: 14, color: '#4FC3F7', fontWeight: 600 }}>K.M.F. Trading Journal — Website &amp; mobile App</p>
+          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Zuletzt aktualisiert: 26. Mai 2026</p>
+        </div>
+
+        <p style={styles.text}>
+          Diese Nutzungsbedingungen („Bedingungen") stellen eine rechtsverbindliche Vereinbarung zwischen dir und Ionel Aanei, einem Einzelentwickler (Einzelunternehmer) mit Sitz in Rumänien („wir" oder „uns"), bezüglich deiner Nutzung dar von:
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Der Website unter <a style={styles.link} href="https://kmfjournal.com">kmfjournal.com</a> (die „Website")</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> Der mobilen App K.M.F. Trading Journal bei Google Play (die „App")</li>
+        </ul>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Durch die Nutzung der Website oder der App erklärst du dich mit diesen Bedingungen einverstanden. Wenn du nicht einverstanden bist, nutze sie nicht.</strong>
+        </p>
+
+        <h2 style={styles.h2}>1. Beschreibung des Dienstes</h2>
+        <p style={styles.text}>
+          K.M.F. Trading Journal ist ein Werkzeug zur Verfolgung und Analyse der Trading-Leistung. Die Website stellt Marketinginformationen, Blogartikel, kostenlose Rechner sowie die Datenschutzerklärung / Bedingungen bereit. Die App ermöglicht es dir, Trades zu protokollieren, die Leistung zu analysieren, Pre-Trade-Checklisten zu nutzen, PDF-Berichte zu erstellen und Daten geräteübergreifend zu synchronisieren.
+        </p>
+        <p style={styles.text}>Beide werden „wie besehen" bereitgestellt und sind ausschließlich für die persönliche Aufzeichnung von Trades, zur Bildung und zur Analyse bestimmt.</p>
+
+        <h2 style={styles.h2}>2. Keine Finanzberatung</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>K.M.F. Trading Journal ist ausschließlich ein Werkzeug zur Verfolgung, Analyse und Bildung. Wir bieten keine Finanzberatung, Anlageempfehlungen oder Trading-Signale.</strong>
+        </p>
+        <p style={styles.text}>Alle Inhalte — Blogartikel, Rechnerergebnisse, App-Statistiken, die Pre-Trade-Checkliste, das Risk-of-Ruin-Werkzeug — dienen <strong style={styles.strong}>ausschließlich Informations- und Bildungszwecken</strong>.</p>
+        <p style={styles.text}>Du erkennst an, dass:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Trading ein erhebliches Verlustrisiko birgt und möglicherweise nicht für alle Anleger geeignet ist.</li>
+          <li style={styles.li}>Du dein gesamtes eingesetztes Kapital oder mehr verlieren kannst.</li>
+          <li style={styles.li}>Vergangene Ergebnisse keine künftigen Ergebnisse garantieren.</li>
+          <li style={styles.li}>Du allein für alle Trading-Entscheidungen verantwortlich bist.</li>
+          <li style={styles.li}>Wir keine zugelassenen Finanzberater, Broker oder Händler sind.</li>
+          <li style={styles.li}>Du vor Anlageentscheidungen einen qualifizierten Finanzfachmann konsultieren solltest.</li>
+          <li style={styles.li}>Wir die Richtigkeit oder Vollständigkeit von Rechnern, Statistiken oder Bildungsinhalten nicht garantieren.</li>
+          <li style={styles.li}>Du nur mit Geld handeln solltest, dessen Verlust du dir leisten kannst.</li>
+        </ul>
+
+        <h2 style={styles.h2}>3. Nutzung der Website <span style={styles.pillWeb}>WEB</span></h2>
+
+        <h3 style={styles.h3}>3.1 Kein Konto erforderlich</h3>
+        <p style={styles.text}>Die Website ist öffentlich zugänglich. Es ist kein Konto, keine Anmeldung und keine Zahlung erforderlich, um Inhalte anzusehen, Rechner zu nutzen oder den Blog zu lesen.</p>
+
+        <h3 style={styles.h3}>3.2 Kostenlose Werkzeuge</h3>
+        <p style={styles.text}>Die Rechner auf der Website (Lot Size, Risk of Ruin, Win Rate vs R:R Matrix, Compound, Pre-Trade-Checkliste) sind kostenlos nutzbar. Alle Berechnungen werden in deinem Browser durchgeführt. Die Ergebnisse dienen nur der Information und stellen keine Anlageberatung dar.</p>
+
+        <h3 style={styles.h3}>3.3 Zulässige Nutzung</h3>
+        <p style={styles.text}>Du darfst die Website für persönliche, nicht-kommerzielle Zwecke nutzen. Du verpflichtest dich, NICHT:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Inhalte ohne Erlaubnis mit automatisierten Mitteln zu scrapen, zu kopieren oder zu extrahieren</li>
+          <li style={styles.li}>Blogartikel oder Rechnerergebnisse als eigenes Werk erneut zu veröffentlichen</li>
+          <li style={styles.li}>Zu versuchen, die Funktionalität der Website zu beeinträchtigen</li>
+          <li style={styles.li}>Die Website auf eine Weise zu nutzen, die geltendes Recht verletzt</li>
+        </ul>
+
+        <h2 style={styles.h2}>4. App-Konto &amp; Nutzung <span style={styles.pillApp}>APP</span></h2>
+
+        <h3 style={styles.h3}>4.1 Konto-Erstellung</h3>
+        <p style={styles.text}>Um die App zu nutzen, musst du:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Eine gültige E-Mail-Adresse angeben</li>
+          <li style={styles.li}>Ein sicheres Passwort erstellen</li>
+          <li style={styles.li}>Mindestens 18 Jahre alt sein (oder das gesetzliche Alter in deiner Rechtsordnung)</li>
+          <li style={styles.li}>Diesen Bedingungen und unserer Datenschutzerklärung zustimmen</li>
+        </ul>
+        <p style={styles.text}>Mit der Erstellung eines Kontos erklärst du dich damit einverstanden, dass wir dienstkritische (transaktionale) E-Mails und eine Produkt-Follow-up-E-Mail an deine registrierte Adresse senden dürfen. Du kannst die Follow-up-E-Mail jederzeit über den enthaltenen One-Click-Abmeldelink abbestellen, ohne dass dies transaktionale E-Mails beeinträchtigt. Einzelheiten findest du in unserer <a style={styles.link} href="/privacy-policy">Datenschutzerklärung</a>.</p>
+
+        <h3 style={styles.h3}>4.2 Kontosicherheit</h3>
+        <p style={styles.text}>Du bist dafür verantwortlich, die Vertraulichkeit deiner Konto-Zugangsdaten zu wahren, und für alle Aktivitäten unter deinem Konto. Benachrichtige uns unverzüglich über jeden unbefugten Zugriff. Wir haften nicht für Verluste oder Schäden, die daraus entstehen, dass du deine Kontoinformationen nicht geschützt hast.</p>
+
+        <h3 style={styles.h3}>4.3 Zulässige Nutzung der App</h3>
+        <p style={styles.text}>Du darfst die App ausschließlich für die persönliche, nicht-kommerzielle Aufzeichnung und Analyse von Trades nutzen. Du verpflichtest dich, NICHT:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Die App für illegale Zwecke zu nutzen</li>
+          <li style={styles.li}>Die App per Reverse Engineering zurückzuentwickeln, zu dekompilieren oder zu disassemblieren</li>
+          <li style={styles.li}>Die Funktionalität der App oder die Server zu beeinträchtigen oder zu stören</li>
+          <li style={styles.li}>Automatisierte Skripte, Bots oder ähnliche Werkzeuge ohne Genehmigung zu verwenden</li>
+          <li style={styles.li}>Deine Konto-Zugangsdaten mit anderen zu teilen</li>
+          <li style={styles.li}>Schädlichen Code, Viren oder schädliche Inhalte hochzuladen</li>
+          <li style={styles.li}>Andere Nutzer zu missbrauchen, zu belästigen oder zu schädigen</li>
+          <li style={styles.li}>Rechte Dritter zu verletzen</li>
+          <li style={styles.li}>Die App zu nutzen, um Dritten kommerziell Dienste anzubieten</li>
+        </ul>
+
+        <h3 style={styles.h3}>4.4 Folgen eines Verstoßes</h3>
+        <p style={styles.text}>Ein Verstoß kann zur sofortigen Sperrung oder Kündigung deines Kontos, zu rechtlichen Schritten, soweit anwendbar, und zur Meldung an zuständige Behörden führen.</p>
+
+        <h2 style={styles.h2}>5. Geistiges Eigentum</h2>
+        <p style={styles.text}>Die Website und die App — einschließlich aller Inhalte, Designs, Logos, Blogartikel, Rechnerimplementierungen, des Codes, der Texte und Grafiken — sind Eigentum von Ionel Aanei und durch internationale Urheberrechts-, Marken- und sonstige Gesetze zum geistigen Eigentum geschützt.</p>
+        <p style={styles.text}>Wir gewähren dir eine beschränkte, nicht-exklusive, nicht übertragbare und widerrufliche Lizenz, die App für persönliche Zwecke zu nutzen und die Inhalte der Website zu lesen. Du darfst nicht:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Die App oder Teile davon kopieren, ändern oder verbreiten</li>
+          <li style={styles.li}>Die App per Reverse Engineering zurückentwickeln, dekompilieren oder disassemblieren</li>
+          <li style={styles.li}>Unser Design, Branding oder unsere Inhalte für kommerzielle Zwecke nutzen</li>
+          <li style={styles.li}>Abgeleitete Werke auf Basis der App oder Website erstellen</li>
+        </ul>
+        <p style={styles.text}>
+          Du behältst das Eigentum an allen Trading-Daten, Notizen und Inhalten, die du in der App erstellst („Deine Inhalte"). Durch die Nutzung der App gewährst du uns eine Lizenz, Deine Inhalte zu speichern, zu verarbeiten und anzuzeigen, ausschließlich zum Zweck der Bereitstellung der App-Funktionalität. Wir werden Deine Inhalte nicht teilen, verkaufen oder für andere Zwecke verwenden, außer soweit gesetzlich vorgeschrieben.
+        </p>
+
+        <h2 style={styles.h2}>6. Abonnements und Zahlungen <span style={styles.pillApp}>APP</span></h2>
+        <p style={styles.text}>Die App bietet sowohl kostenlose Funktionen als auch Premium-Funktionen, die per Abonnement verfügbar sind.</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Abonnements werden über Google Play abgerechnet</li>
+          <li style={styles.li}>Abonnements verlängern sich automatisch, sofern sie nicht gekündigt werden</li>
+          <li style={styles.li}>Du kannst jederzeit über die Google-Play-Einstellungen kündigen</li>
+          <li style={styles.li}>Keine Erstattungen für Teilzeiträume (vorbehaltlich der Erstattungsrichtlinie von Google Play)</li>
+          <li style={styles.li}>Preise können sich mit vorheriger Ankündigung ändern</li>
+        </ul>
+        <p style={styles.text}>Alle Zahlungen werden von Google Play abgewickelt. Wir speichern deine Zahlungsinformationen nicht und haben keinen Zugriff darauf.</p>
+
+        <h2 style={styles.h2}>7. Daten und Datenschutz</h2>
+        <p style={styles.text}>Deine Nutzung der Website und der App unterliegt zudem unserer <a style={styles.link} href="/privacy-policy">Datenschutzerklärung</a>, die durch Verweis Bestandteil dieser Bedingungen ist.</p>
+        <p style={styles.text}>Wichtige Punkte:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Die Website erhebt keine personenbezogenen Daten direkt. Analyse-Cookies werden erst nach ausdrücklicher Einwilligung geladen.</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> Die App erhebt die zur Bereitstellung der Funktionalität notwendigen Daten (E-Mail, Trading-Daten, Analyse).</li>
+          <li style={styles.li}>App-Daten werden in der Europäischen Union (Region eur3) gespeichert.</li>
+          <li style={styles.li}>Wir verkaufen deine Daten nicht an Dritte.</li>
+          <li style={styles.li}>Du kannst jederzeit die Löschung deines Kontos und deiner Daten verlangen.</li>
+        </ul>
+
+        <h2 style={styles.h2}>8. Gewährleistungsausschluss</h2>
+        <p style={styles.text}>
+          Die Website und die App werden <strong style={styles.strong}>„wie besehen"</strong> und <strong style={styles.strong}>„wie verfügbar"</strong> bereitgestellt, ohne jegliche Gewährleistung, ob ausdrücklich oder stillschweigend, einschließlich:
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Stillschweigender Gewährleistungen der Marktgängigkeit</li>
+          <li style={styles.li}>Eignung für einen bestimmten Zweck</li>
+          <li style={styles.li}>Richtigkeit oder Zuverlässigkeit von Berechnungen, Statistiken oder Bildungsinhalten</li>
+          <li style={styles.li}>Ununterbrochenem oder fehlerfreiem Betrieb</li>
+          <li style={styles.li}>Umgehender Behebung von Mängeln</li>
+          <li style={styles.li}>Dauerhafter Aufbewahrung von Daten (obwohl wir Backup-Maßnahmen umsetzen)</li>
+        </ul>
+
+        <h2 style={styles.h2}>9. Haftungsbeschränkung</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Im größtmöglichen gesetzlich zulässigen Umfang haftet Ionel Aanei nicht für:</strong>
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Trading-Verluste oder finanzielle Schäden jeglicher Art</li>
+          <li style={styles.li}>Entgangene Gewinne oder Geschäftschancen</li>
+          <li style={styles.li}>Datenverlust oder Datenbeschädigung (obwohl wir Backups umsetzen)</li>
+          <li style={styles.li}>Indirekte, beiläufige, Folge-, besondere oder Strafschäden</li>
+          <li style={styles.li}>Schäden infolge unbefugten Zugriffs auf dein Konto</li>
+          <li style={styles.li}>Schäden, die durch Drittanbieter-Dienste verursacht werden (Firebase, Google Cloud, Google Analytics, Google Play, Twelve Data)</li>
+        </ul>
+        <p style={styles.text}>Diese Beschränkung gilt unabhängig von der Haftungsgrundlage (Vertrag, unerlaubte Handlung, Fahrlässigkeit oder anderweitig), selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden.</p>
+        <p style={styles.text}>Unsere Gesamthaftung dir gegenüber für alle Ansprüche übersteigt nicht die Gesamtbeträge, die du in den zwölf (12) Monaten vor dem Anspruch an uns gezahlt hast. Für Website-Nutzer, die uns nichts gezahlt haben, ist unsere maximale Haftung auf 100 € beschränkt.</p>
+
+        <h2 style={styles.h2}>10. Verantwortung des Nutzers</h2>
+        <p style={styles.text}>Du erkennst an, dass:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Du allein für deine Trading-Entscheidungen verantwortlich bist.</li>
+          <li style={styles.li}>Wir keine Kontrolle über die Finanzmärkte haben.</li>
+          <li style={styles.li}>App-Statistiken und Rechnerergebnisse auf den Daten beruhen, die DU bereitstellst.</li>
+          <li style={styles.li}>Du alle Berechnungen unabhängig überprüfen solltest.</li>
+          <li style={styles.li}>Du wichtige Daten sichern solltest.</li>
+        </ul>
+
+        <h2 style={styles.h2}>11. Freistellung</h2>
+        <p style={styles.text}>
+          Du erklärst dich bereit, Ionel Aanei von allen Ansprüchen, Schäden, Verlusten, Verbindlichkeiten und Kosten (einschließlich Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die sich aus deiner Nutzung der Website oder App, deinem Verstoß gegen diese Bedingungen, deinem Verstoß gegen Gesetze oder Rechte Dritter oder aus deinen Trading-Aktivitäten und -Entscheidungen ergeben.
+        </p>
+
+        <h2 style={styles.h2}>12. Kündigung</h2>
+
+        <h3 style={styles.h3}>12.1 Kündigung durch dich</h3>
+        <p style={styles.text}>Du kannst dein App-Konto jederzeit kündigen:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Über die Funktion „Konto löschen" in den App-Einstellungen</li>
+          <li style={styles.li}>Indem du uns unter <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a> kontaktierst</li>
+        </ul>
+        <p style={styles.text}>Bei der Website kannst du jederzeit ohne Ankündigung aufhören, sie zu besuchen.</p>
+
+        <h3 style={styles.h3}>12.2 Kündigung durch uns</h3>
+        <p style={styles.text}>Wir können dein Konto sofort und ohne Ankündigung sperren oder kündigen, wenn du gegen diese Bedingungen verstößt, betrügerische oder illegale Aktivitäten betreibst, die App oder andere Nutzer missbrauchst oder soweit gesetzlich vorgeschrieben. Wir können die App auch mit angemessener Ankündigung einstellen.</p>
+
+        <h2 style={styles.h2}>13. Änderungen der Bedingungen</h2>
+        <p style={styles.text}>Wir können diese Bedingungen jederzeit ändern. Wir informieren dich über wesentliche Änderungen, indem wir das Datum „Zuletzt aktualisiert" aktualisieren, einen Hinweis in der App veröffentlichen oder eine E-Mail an deine registrierte Adresse senden (bei wesentlichen Änderungen des App-Kontos). Deine fortgesetzte Nutzung nach Veröffentlichung der Änderungen gilt als Annahme der geänderten Bedingungen.</p>
+
+        <h2 style={styles.h2}>14. Anwendbares Recht und Streitigkeiten</h2>
+        <p style={styles.text}>Diese Bedingungen unterliegen dem Recht Rumäniens, ungeachtet der Grundsätze des Kollisionsrechts.</p>
+        <p style={styles.text}>Streitigkeiten werden in folgender Reihenfolge beigelegt:</p>
+        <ol style={{ ...styles.ul, listStyleType: 'decimal' }}>
+          <li style={styles.li}>Verhandlungen in gutem Glauben zwischen den Parteien</li>
+          <li style={styles.li}>Mediation, falls die Verhandlungen scheitern</li>
+          <li style={styles.li}>Rumänische Gerichte, falls die Mediation scheitert</li>
+        </ol>
+
+        <h2 style={styles.h2}>15. Sonstiges</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Gesamte Vereinbarung:</strong> Diese Bedingungen bilden zusammen mit unserer Datenschutzerklärung die gesamte Vereinbarung zwischen dir und Ionel Aanei.<br />
+          <strong style={styles.strong}>Salvatorische Klausel:</strong> Sollte eine Bestimmung dieser Bedingungen ungültig oder nicht durchsetzbar sein, bleiben die übrigen Bestimmungen in vollem Umfang in Kraft.<br />
+          <strong style={styles.strong}>Verzicht:</strong> Wenn wir eine Bestimmung nicht durchsetzen, stellt dies keinen Verzicht auf diese Bestimmung dar.<br />
+          <strong style={styles.strong}>Abtretung:</strong> Du darfst diese Bedingungen nicht abtreten oder übertragen. Wir dürfen unsere Rechte und Pflichten ohne deine Zustimmung abtreten.
+        </p>
+
+        <h2 style={styles.h2}>16. Kontakt</h2>
+        <p style={styles.text}>Bei Fragen zu diesen Bedingungen:</p>
+        <p style={styles.text}>
+          <strong style={styles.strong}>E-Mail:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Entwickler:</strong> Ionel Aanei (Einzelentwickler)<br />
+          <strong style={styles.strong}>Standort:</strong> Rumänien (Europäische Union)
+        </p>
+        <p style={styles.text}>Wir antworten innerhalb von 30 Tagen.</p>
+      </div>
+    </div>
+  );
+}
+
+function TermsOfServiceFr() {
+  return (
+    <div style={{ minHeight: '100vh', background: '#0F1115', color: '#E0E0E0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 20px 80px' }}>
+        {/* Header */}
+        <div style={{ textAlign: 'center', marginBottom: 40 }}>
+          <h1 style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Conditions d'utilisation</h1>
+          <p style={{ fontSize: 14, color: '#4FC3F7', fontWeight: 600 }}>K.M.F. Trading Journal — Site web &amp; application mobile</p>
+          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Dernière mise à jour : 26 mai 2026</p>
+        </div>
+
+        <p style={styles.text}>
+          Les présentes conditions d'utilisation (« Conditions ») constituent un accord juridiquement contraignant entre vous et Ionel Aanei, développeur individuel (entrepreneur individuel) établi en Roumanie (« nous » ou « notre »), concernant votre utilisation de :
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Le site web à l'adresse <a style={styles.link} href="https://kmfjournal.com">kmfjournal.com</a> (le « Site »)</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> L'application mobile K.M.F. Trading Journal sur Google Play (l'« Application »)</li>
+        </ul>
+        <p style={styles.text}>
+          <strong style={styles.strong}>En utilisant le Site ou l'Application, vous acceptez d'être lié par ces Conditions. Si vous n'êtes pas d'accord, ne les utilisez pas.</strong>
+        </p>
+
+        <h2 style={styles.h2}>1. Description du service</h2>
+        <p style={styles.text}>
+          K.M.F. Trading Journal est un outil de suivi et d'analyse de la performance de trading. Le Site fournit des informations marketing, des articles de blog, des calculateurs gratuits ainsi que la politique de confidentialité / les Conditions. L'Application vous permet d'enregistrer des trades, d'analyser votre performance, d'utiliser des checklists pré-trade, de générer des rapports PDF et de synchroniser vos données entre appareils.
+        </p>
+        <p style={styles.text}>Les deux sont fournis « en l'état » et destinés uniquement au suivi personnel des trades, à l'éducation et à l'analyse.</p>
+
+        <h2 style={styles.h2}>2. Pas de conseil financier</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>K.M.F. Trading Journal est uniquement un outil de suivi, d'analyse et d'éducation. Nous ne fournissons pas de conseil financier, de recommandations d'investissement ni de signaux de trading.</strong>
+        </p>
+        <p style={styles.text}>Tout le contenu — articles de blog, résultats des calculateurs, statistiques de l'Application, checklist pré-trade, outil Risk of Ruin — est fourni <strong style={styles.strong}>à des fins purement informatives et éducatives</strong>.</p>
+        <p style={styles.text}>Vous reconnaissez que :</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Le trading comporte un risque de perte important et peut ne pas convenir à tous les investisseurs.</li>
+          <li style={styles.li}>Vous pouvez perdre la totalité, voire plus, de votre capital investi.</li>
+          <li style={styles.li}>Les performances passées ne garantissent pas les résultats futurs.</li>
+          <li style={styles.li}>Vous êtes seul responsable de toutes vos décisions de trading.</li>
+          <li style={styles.li}>Nous ne sommes pas des conseillers financiers, courtiers ou négociants agréés.</li>
+          <li style={styles.li}>Vous devriez consulter un professionnel financier qualifié avant de prendre des décisions d'investissement.</li>
+          <li style={styles.li}>Nous ne garantissons pas l'exactitude ou l'exhaustivité d'un calculateur, d'une statistique ou d'un contenu éducatif.</li>
+          <li style={styles.li}>Vous ne devriez trader qu'avec de l'argent que vous pouvez vous permettre de perdre.</li>
+        </ul>
+
+        <h2 style={styles.h2}>3. Utilisation du Site <span style={styles.pillWeb}>WEB</span></h2>
+
+        <h3 style={styles.h3}>3.1 Aucun compte requis</h3>
+        <p style={styles.text}>Le Site est accessible au public. Aucun compte, aucune inscription ni aucun paiement n'est requis pour consulter le contenu, utiliser les calculateurs ou lire le blog.</p>
+
+        <h3 style={styles.h3}>3.2 Outils gratuits</h3>
+        <p style={styles.text}>Les calculateurs du Site (Lot Size, Risk of Ruin, Win Rate vs R:R Matrix, Compound, checklist pré-trade) sont gratuits. Tous les calculs sont effectués dans votre navigateur. Les résultats sont purement informatifs et ne constituent pas un conseil en investissement.</p>
+
+        <h3 style={styles.h3}>3.3 Utilisation acceptable</h3>
+        <p style={styles.text}>Vous pouvez utiliser le Site à des fins personnelles et non commerciales. Vous acceptez de ne pas :</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Extraire, copier ou récupérer du contenu par des moyens automatisés sans autorisation</li>
+          <li style={styles.li}>Republier des articles de blog ou des résultats de calculateurs comme votre propre travail</li>
+          <li style={styles.li}>Tenter de perturber le fonctionnement du Site</li>
+          <li style={styles.li}>Utiliser le Site d'une manière qui enfreint les lois applicables</li>
+        </ul>
+
+        <h2 style={styles.h2}>4. Compte &amp; utilisation de l'Application <span style={styles.pillApp}>APP</span></h2>
+
+        <h3 style={styles.h3}>4.1 Création de compte</h3>
+        <p style={styles.text}>Pour utiliser l'Application, vous devez :</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Fournir une adresse e-mail valide</li>
+          <li style={styles.li}>Créer un mot de passe sécurisé</li>
+          <li style={styles.li}>Être âgé d'au moins 18 ans (ou de l'âge légal dans votre juridiction)</li>
+          <li style={styles.li}>Accepter ces Conditions et notre politique de confidentialité</li>
+        </ul>
+        <p style={styles.text}>En créant un compte, vous acceptez que nous puissions envoyer des e-mails essentiels au service (transactionnels) et un seul e-mail de relance produit à votre adresse enregistrée. Vous pouvez vous désinscrire de l'e-mail de relance à tout moment via le lien de désinscription en un clic qu'il contient, sans affecter les e-mails transactionnels. Voir notre <a style={styles.link} href="/privacy-policy">politique de confidentialité</a> pour les détails.</p>
+
+        <h3 style={styles.h3}>4.2 Sécurité du compte</h3>
+        <p style={styles.text}>Vous êtes responsable du maintien de la confidentialité de vos identifiants de compte et de toutes les activités effectuées sous votre compte. Informez-nous immédiatement de tout accès non autorisé. Nous ne sommes pas responsables des pertes ou dommages résultant de votre incapacité à protéger les informations de votre compte.</p>
+
+        <h3 style={styles.h3}>4.3 Utilisation acceptable de l'Application</h3>
+        <p style={styles.text}>Vous pouvez utiliser l'Application uniquement pour le suivi et l'analyse personnels et non commerciaux de vos trades. Vous acceptez de NE PAS :</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Utiliser l'Application à des fins illégales</li>
+          <li style={styles.li}>Faire de la rétro-ingénierie, décompiler ou désassembler l'Application</li>
+          <li style={styles.li}>Perturber ou interrompre le fonctionnement de l'Application ou ses serveurs</li>
+          <li style={styles.li}>Utiliser des scripts automatisés, bots ou outils similaires sans autorisation</li>
+          <li style={styles.li}>Partager vos identifiants de compte avec d'autres</li>
+          <li style={styles.li}>Téléverser du code malveillant, des virus ou du contenu nuisible</li>
+          <li style={styles.li}>Maltraiter, harceler ou nuire à d'autres utilisateurs</li>
+          <li style={styles.li}>Violer les droits de tiers</li>
+          <li style={styles.li}>Utiliser l'Application pour fournir des services à des tiers à titre commercial</li>
+        </ul>
+
+        <h3 style={styles.h3}>4.4 Conséquences d'une violation</h3>
+        <p style={styles.text}>Une violation peut entraîner la suspension ou la résiliation immédiate de votre compte, des poursuites judiciaires le cas échéant et un signalement aux autorités compétentes.</p>
+
+        <h2 style={styles.h2}>5. Propriété intellectuelle</h2>
+        <p style={styles.text}>Le Site et l'Application — y compris tout le contenu, les designs, logos, articles de blog, implémentations de calculateurs, code, textes et graphismes — sont la propriété de Ionel Aanei et protégés par les lois internationales sur le droit d'auteur, les marques et autres droits de propriété intellectuelle.</p>
+        <p style={styles.text}>Nous vous accordons une licence limitée, non exclusive, non transférable et révocable d'utiliser l'Application à des fins personnelles et de lire le contenu du Site. Vous ne pouvez pas :</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Copier, modifier ou distribuer l'Application ou une partie de celle-ci</li>
+          <li style={styles.li}>Faire de la rétro-ingénierie, décompiler ou désassembler l'Application</li>
+          <li style={styles.li}>Utiliser notre design, notre image de marque ou notre contenu à des fins commerciales</li>
+          <li style={styles.li}>Créer des œuvres dérivées basées sur l'Application ou le Site</li>
+        </ul>
+        <p style={styles.text}>
+          Vous conservez la propriété de toutes les données de trading, notes et contenus que vous créez dans l'Application (« Votre Contenu »). En utilisant l'Application, vous nous accordez une licence pour stocker, traiter et afficher Votre Contenu uniquement dans le but de fournir les fonctionnalités de l'Application. Nous ne partagerons, ne vendrons ni n'utiliserons Votre Contenu à d'autres fins, sauf si la loi l'exige.
+        </p>
+
+        <h2 style={styles.h2}>6. Abonnements et paiements <span style={styles.pillApp}>APP</span></h2>
+        <p style={styles.text}>L'Application propose à la fois des fonctionnalités gratuites et des fonctionnalités Premium disponibles par abonnement.</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Les abonnements sont facturés via Google Play</li>
+          <li style={styles.li}>Les abonnements se renouvellent automatiquement sauf annulation</li>
+          <li style={styles.li}>Vous pouvez annuler à tout moment dans les réglages Google Play</li>
+          <li style={styles.li}>Aucun remboursement pour les périodes partielles (sous réserve de la politique de remboursement de Google Play)</li>
+          <li style={styles.li}>Les prix peuvent changer moyennant préavis</li>
+        </ul>
+        <p style={styles.text}>Tous les paiements sont traités par Google Play. Nous ne stockons pas et n'avons pas accès à vos informations de paiement.</p>
+
+        <h2 style={styles.h2}>7. Données et confidentialité</h2>
+        <p style={styles.text}>Votre utilisation du Site et de l'Application est également régie par notre <a style={styles.link} href="/privacy-policy">politique de confidentialité</a>, qui est intégrée à ces Conditions par référence.</p>
+        <p style={styles.text}>Points clés :</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Le Site ne collecte pas de données personnelles directement. Les cookies d'analyse ne sont chargés qu'après un consentement explicite.</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> L'Application collecte les données nécessaires à la fourniture des fonctionnalités (e-mail, données de trading, analyse).</li>
+          <li style={styles.li}>Les données de l'App sont stockées dans l'Union européenne (région eur3).</li>
+          <li style={styles.li}>Nous ne vendons pas vos données à des tiers.</li>
+          <li style={styles.li}>Vous pouvez demander la suppression de votre compte et de vos données à tout moment.</li>
+        </ul>
+
+        <h2 style={styles.h2}>8. Exclusion de garanties</h2>
+        <p style={styles.text}>
+          Le Site et l'Application sont fournis <strong style={styles.strong}>« en l'état »</strong> et <strong style={styles.strong}>« selon disponibilité »</strong>, sans garantie d'aucune sorte, expresse ou implicite, y compris :
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Garanties implicites de qualité marchande</li>
+          <li style={styles.li}>Adéquation à un usage particulier</li>
+          <li style={styles.li}>Exactitude ou fiabilité des calculs, statistiques ou contenus éducatifs</li>
+          <li style={styles.li}>Fonctionnement ininterrompu ou sans erreur</li>
+          <li style={styles.li}>Correction rapide des défauts</li>
+          <li style={styles.li}>Conservation permanente des données (bien que nous mettions en place des mesures de sauvegarde)</li>
+        </ul>
+
+        <h2 style={styles.h2}>9. Limitation de responsabilité</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Dans toute la mesure permise par la loi, Ionel Aanei n'est pas responsable des :</strong>
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Pertes de trading ou dommages financiers de quelque nature que ce soit</li>
+          <li style={styles.li}>Pertes de profits ou d'opportunités d'affaires</li>
+          <li style={styles.li}>Perte ou corruption de données (bien que nous mettions en place des sauvegardes)</li>
+          <li style={styles.li}>Dommages indirects, accessoires, consécutifs, spéciaux ou punitifs</li>
+          <li style={styles.li}>Dommages résultant d'un accès non autorisé à votre compte</li>
+          <li style={styles.li}>Dommages causés par des services tiers (Firebase, Google Cloud, Google Analytics, Google Play, Twelve Data)</li>
+        </ul>
+        <p style={styles.text}>Cette limitation s'applique quel que soit le fondement de la responsabilité (contrat, délit, négligence ou autre), même si nous avons été informés de la possibilité de tels dommages.</p>
+        <p style={styles.text}>Notre responsabilité totale envers vous pour l'ensemble des réclamations ne dépassera pas les montants totaux que vous nous avez versés au cours des douze (12) mois précédant la réclamation. Pour les utilisateurs du Site qui ne nous ont rien versé, notre responsabilité maximale est limitée à 100 €.</p>
+
+        <h2 style={styles.h2}>10. Responsabilité de l'utilisateur</h2>
+        <p style={styles.text}>Vous reconnaissez que :</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Vous êtes seul responsable de vos décisions de trading.</li>
+          <li style={styles.li}>Nous n'avons aucun contrôle sur les marchés financiers.</li>
+          <li style={styles.li}>Les statistiques de l'Application et les résultats des calculateurs sont basés sur les données que VOUS fournissez.</li>
+          <li style={styles.li}>Vous devriez vérifier tous les calculs de manière indépendante.</li>
+          <li style={styles.li}>Vous devriez sauvegarder vos données importantes.</li>
+        </ul>
+
+        <h2 style={styles.h2}>11. Indemnisation</h2>
+        <p style={styles.text}>
+          Vous acceptez d'indemniser, de défendre et de dégager de toute responsabilité Ionel Aanei contre toute réclamation, dommage, perte, responsabilité et dépense (y compris les frais juridiques) découlant de votre utilisation du Site ou de l'Application, de votre violation de ces Conditions, de votre violation de toute loi ou des droits de tiers, ou de vos activités et décisions de trading.
+        </p>
+
+        <h2 style={styles.h2}>12. Résiliation</h2>
+
+        <h3 style={styles.h3}>12.1 Résiliation par vous</h3>
+        <p style={styles.text}>Vous pouvez résilier votre compte d'Application à tout moment :</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>En utilisant la fonction « Supprimer le compte » dans les réglages de l'Application</li>
+          <li style={styles.li}>En nous contactant à <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+        </ul>
+        <p style={styles.text}>Pour le Site, vous pouvez cesser de le visiter à tout moment sans préavis.</p>
+
+        <h3 style={styles.h3}>12.2 Résiliation par nous</h3>
+        <p style={styles.text}>Nous pouvons suspendre ou résilier votre compte immédiatement, sans préavis, si vous enfreignez ces Conditions, vous livrez à des activités frauduleuses ou illégales, maltraitez l'Application ou d'autres utilisateurs, ou lorsque la loi l'exige. Nous pouvons également interrompre l'Application moyennant un préavis raisonnable.</p>
+
+        <h2 style={styles.h2}>13. Modifications des Conditions</h2>
+        <p style={styles.text}>Nous pouvons modifier ces Conditions à tout moment. Nous vous informerons des changements importants en mettant à jour la date « Dernière mise à jour », en publiant un avis dans l'Application ou en envoyant un e-mail à votre adresse enregistrée (pour les changements importants relatifs au compte d'Application). Votre utilisation continue après la publication des changements vaut acceptation des Conditions modifiées.</p>
+
+        <h2 style={styles.h2}>14. Droit applicable et litiges</h2>
+        <p style={styles.text}>Ces Conditions sont régies par le droit roumain, sans égard aux principes de conflit de lois.</p>
+        <p style={styles.text}>Tout litige sera résolu (dans cet ordre) par :</p>
+        <ol style={{ ...styles.ul, listStyleType: 'decimal' }}>
+          <li style={styles.li}>Des négociations de bonne foi entre les parties</li>
+          <li style={styles.li}>Une médiation, si les négociations échouent</li>
+          <li style={styles.li}>Les tribunaux roumains, si la médiation échoue</li>
+        </ol>
+
+        <h2 style={styles.h2}>15. Dispositions diverses</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Intégralité de l'accord :</strong> Ces Conditions, avec notre politique de confidentialité, constituent l'intégralité de l'accord entre vous et Ionel Aanei.<br />
+          <strong style={styles.strong}>Divisibilité :</strong> Si une disposition de ces Conditions est jugée invalide ou inapplicable, les dispositions restantes demeurent pleinement en vigueur.<br />
+          <strong style={styles.strong}>Renonciation :</strong> Le fait de ne pas faire appliquer une disposition ne constitue pas une renonciation à celle-ci.<br />
+          <strong style={styles.strong}>Cession :</strong> Vous ne pouvez pas céder ou transférer ces Conditions. Nous pouvons céder nos droits et obligations sans votre consentement.
+        </p>
+
+        <h2 style={styles.h2}>16. Contact</h2>
+        <p style={styles.text}>Pour toute question sur ces Conditions :</p>
+        <p style={styles.text}>
+          <strong style={styles.strong}>E-mail :</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Développeur :</strong> Ionel Aanei (développeur individuel)<br />
+          <strong style={styles.strong}>Localisation :</strong> Roumanie (Union européenne)
+        </p>
+        <p style={styles.text}>Nous répondrons sous 30 jours.</p>
+      </div>
+    </div>
+  );
+}
+
+function TermsOfServiceRu() {
+  return (
+    <div style={{ minHeight: '100vh', background: '#0F1115', color: '#E0E0E0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '48px 20px 80px' }}>
+        {/* Header */}
+        <div style={{ textAlign: 'center', marginBottom: 40 }}>
+          <h1 style={{ fontSize: 28, fontWeight: 700, color: '#fff', marginBottom: 8 }}>Условия использования</h1>
+          <p style={{ fontSize: 14, color: '#4FC3F7', fontWeight: 600 }}>K.M.F. Trading Journal — сайт и мобильное приложение</p>
+          <p style={{ fontSize: 13, color: '#888', marginTop: 4 }}>Последнее обновление: 26 мая 2026 г.</p>
+        </div>
+
+        <p style={styles.text}>
+          Настоящие Условия использования («Условия») представляют собой юридически обязывающее соглашение между вами и Ionel Aanei, индивидуальным разработчиком (индивидуальным предпринимателем) из Румынии («мы» или «нас»), относительно вашего использования:
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Сайта по адресу <a style={styles.link} href="https://kmfjournal.com">kmfjournal.com</a> («Сайт»)</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> Мобильного приложения K.M.F. Trading Journal в Google Play («Приложение»)</li>
+        </ul>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Используя Сайт или Приложение, вы соглашаетесь соблюдать настоящие Условия. Если вы не согласны, не используйте их.</strong>
+        </p>
+
+        <h2 style={styles.h2}>1. Описание сервиса</h2>
+        <p style={styles.text}>
+          K.M.F. Trading Journal — это инструмент для отслеживания и анализа торговой эффективности. Сайт предоставляет маркетинговую информацию, статьи блога, бесплатные калькуляторы, а также Политику конфиденциальности / Условия. Приложение позволяет вести журнал сделок, анализировать эффективность, использовать чек-листы перед сделкой, генерировать PDF-отчёты и синхронизировать данные между устройствами.
+        </p>
+        <p style={styles.text}>Оба предоставляются «как есть» и предназначены только для личного ведения учёта сделок, обучения и анализа.</p>
+
+        <h2 style={styles.h2}>2. Не финансовая консультация</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>K.M.F. Trading Journal — это только инструмент для отслеживания, анализа и обучения. Мы не предоставляем финансовых консультаций, инвестиционных рекомендаций или торговых сигналов.</strong>
+        </p>
+        <p style={styles.text}>Весь контент — статьи блога, результаты калькуляторов, статистика Приложения, чек-лист перед сделкой, инструмент Risk of Ruin — предоставляется <strong style={styles.strong}>исключительно в информационных и образовательных целях</strong>.</p>
+        <p style={styles.text}>Вы признаёте, что:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Торговля сопряжена со значительным риском убытков и может подходить не всем инвесторам.</li>
+          <li style={styles.li}>Вы можете потерять весь вложенный капитал или даже больше.</li>
+          <li style={styles.li}>Прошлые результаты не гарантируют будущих результатов.</li>
+          <li style={styles.li}>Вы несёте единоличную ответственность за все торговые решения.</li>
+          <li style={styles.li}>Мы не являемся лицензированными финансовыми консультантами, брокерами или дилерами.</li>
+          <li style={styles.li}>Перед принятием инвестиционных решений вам следует проконсультироваться с квалифицированным финансовым специалистом.</li>
+          <li style={styles.li}>Мы не гарантируем точность или полноту какого-либо калькулятора, статистики или образовательного контента.</li>
+          <li style={styles.li}>Торговать следует только теми деньгами, потерю которых вы можете себе позволить.</li>
+        </ul>
+
+        <h2 style={styles.h2}>3. Использование Сайта <span style={styles.pillWeb}>WEB</span></h2>
+
+        <h3 style={styles.h3}>3.1 Аккаунт не требуется</h3>
+        <p style={styles.text}>Сайт общедоступен. Для просмотра контента, использования калькуляторов или чтения блога не требуется аккаунт, регистрация или оплата.</p>
+
+        <h3 style={styles.h3}>3.2 Бесплатные инструменты</h3>
+        <p style={styles.text}>Калькуляторы на Сайте (Lot Size, Risk of Ruin, Win Rate vs R:R Matrix, Compound, чек-лист перед сделкой) бесплатны. Все вычисления выполняются в вашем браузере. Результаты носят только информационный характер и не являются инвестиционной консультацией.</p>
+
+        <h3 style={styles.h3}>3.3 Допустимое использование</h3>
+        <p style={styles.text}>Вы можете использовать Сайт в личных некоммерческих целях. Вы соглашаетесь не:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Извлекать, копировать или собирать контент автоматизированными средствами без разрешения</li>
+          <li style={styles.li}>Повторно публиковать статьи блога или результаты калькуляторов как собственную работу</li>
+          <li style={styles.li}>Пытаться нарушить работу Сайта</li>
+          <li style={styles.li}>Использовать Сайт способом, нарушающим применимые законы</li>
+        </ul>
+
+        <h2 style={styles.h2}>4. Аккаунт и использование Приложения <span style={styles.pillApp}>APP</span></h2>
+
+        <h3 style={styles.h3}>4.1 Создание аккаунта</h3>
+        <p style={styles.text}>Чтобы использовать Приложение, вы должны:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Предоставить действующий адрес эл. почты</li>
+          <li style={styles.li}>Создать надёжный пароль</li>
+          <li style={styles.li}>Быть не моложе 18 лет (или совершеннолетним по законам вашей юрисдикции)</li>
+          <li style={styles.li}>Согласиться с настоящими Условиями и нашей Политикой конфиденциальности</li>
+        </ul>
+        <p style={styles.text}>Создавая аккаунт, вы соглашаетесь на то, что мы можем отправлять критически важные для сервиса (транзакционные) письма и одно письмо-напоминание о продукте на ваш зарегистрированный адрес. Вы можете отписаться от письма-напоминания в любой момент через ссылку отписки в один клик в нём, без влияния на транзакционные письма. Подробности см. в нашей <a style={styles.link} href="/privacy-policy">Политике конфиденциальности</a>.</p>
+
+        <h3 style={styles.h3}>4.2 Безопасность аккаунта</h3>
+        <p style={styles.text}>Вы несёте ответственность за сохранение конфиденциальности учётных данных вашего аккаунта и за все действия под вашим аккаунтом. Немедленно уведомляйте нас о любом несанкционированном доступе. Мы не несём ответственности за убытки или ущерб, возникшие из-за того, что вы не защитили данные своего аккаунта.</p>
+
+        <h3 style={styles.h3}>4.3 Допустимое использование Приложения</h3>
+        <p style={styles.text}>Вы можете использовать Приложение исключительно для личного некоммерческого учёта и анализа сделок. Вы соглашаетесь НЕ:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Использовать Приложение в любых незаконных целях</li>
+          <li style={styles.li}>Производить обратную разработку, декомпилировать или дизассемблировать Приложение</li>
+          <li style={styles.li}>Нарушать или прерывать работу Приложения или серверов</li>
+          <li style={styles.li}>Использовать автоматические скрипты, ботов или подобные инструменты без разрешения</li>
+          <li style={styles.li}>Передавать учётные данные вашего аккаунта другим</li>
+          <li style={styles.li}>Загружать вредоносный код, вирусы или вредоносный контент</li>
+          <li style={styles.li}>Оскорблять, преследовать или причинять вред другим пользователям</li>
+          <li style={styles.li}>Нарушать права третьих лиц</li>
+          <li style={styles.li}>Использовать Приложение для предоставления услуг третьим лицам в коммерческих целях</li>
+        </ul>
+
+        <h3 style={styles.h3}>4.4 Последствия нарушения</h3>
+        <p style={styles.text}>Нарушение может привести к немедленной приостановке или прекращению действия вашего аккаунта, судебным мерам, где применимо, и сообщению в соответствующие органы.</p>
+
+        <h2 style={styles.h2}>5. Интеллектуальная собственность</h2>
+        <p style={styles.text}>Сайт и Приложение — включая весь контент, дизайн, логотипы, статьи блога, реализации калькуляторов, код, тексты и графику — являются собственностью Ionel Aanei и защищены международными законами об авторском праве, товарных знаках и других правах интеллектуальной собственности.</p>
+        <p style={styles.text}>Мы предоставляем вам ограниченную, неисключительную, непередаваемую и отзывную лицензию на использование Приложения в личных целях и чтение контента Сайта. Вы не можете:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Копировать, изменять или распространять Приложение или любую его часть</li>
+          <li style={styles.li}>Производить обратную разработку, декомпилировать или дизассемблировать Приложение</li>
+          <li style={styles.li}>Использовать наш дизайн, брендинг или контент в коммерческих целях</li>
+          <li style={styles.li}>Создавать производные работы на основе Приложения или Сайта</li>
+        </ul>
+        <p style={styles.text}>
+          Вы сохраняете право собственности на все торговые данные, заметки и контент, которые создаёте в Приложении («Ваш контент»). Используя Приложение, вы предоставляете нам лицензию на хранение, обработку и отображение Вашего контента исключительно с целью обеспечения функциональности Приложения. Мы не будем передавать, продавать или использовать Ваш контент в иных целях, за исключением случаев, требуемых законом.
+        </p>
+
+        <h2 style={styles.h2}>6. Подписки и платежи <span style={styles.pillApp}>APP</span></h2>
+        <p style={styles.text}>Приложение предлагает как бесплатные функции, так и Premium-функции, доступные по подписке.</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Подписки оплачиваются через Google Play</li>
+          <li style={styles.li}>Подписки продлеваются автоматически, если не отменены</li>
+          <li style={styles.li}>Вы можете отменить подписку в любой момент в настройках Google Play</li>
+          <li style={styles.li}>Без возврата средств за частичные периоды (в соответствии с политикой возврата Google Play)</li>
+          <li style={styles.li}>Цены могут изменяться с уведомлением</li>
+        </ul>
+        <p style={styles.text}>Все платежи обрабатываются Google Play. Мы не храним и не имеем доступа к вашей платёжной информации.</p>
+
+        <h2 style={styles.h2}>7. Данные и конфиденциальность</h2>
+        <p style={styles.text}>Ваше использование Сайта и Приложения также регулируется нашей <a style={styles.link} href="/privacy-policy">Политикой конфиденциальности</a>, которая включена в настоящие Условия посредством ссылки.</p>
+        <p style={styles.text}>Ключевые моменты:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}><span style={styles.pillWeb}>WEB</span> Сайт не собирает персональные данные напрямую. Cookie аналитики загружаются только после явного согласия.</li>
+          <li style={styles.li}><span style={styles.pillApp}>APP</span> Приложение собирает данные, необходимые для обеспечения функциональности (эл. почта, торговые данные, аналитика).</li>
+          <li style={styles.li}>Данные Приложения хранятся в Европейском союзе (регион eur3).</li>
+          <li style={styles.li}>Мы не продаём ваши данные третьим лицам.</li>
+          <li style={styles.li}>Вы можете запросить удаление вашего аккаунта и данных в любой момент.</li>
+        </ul>
+
+        <h2 style={styles.h2}>8. Отказ от гарантий</h2>
+        <p style={styles.text}>
+          Сайт и Приложение предоставляются <strong style={styles.strong}>«как есть»</strong> и <strong style={styles.strong}>«по мере доступности»</strong>, без каких-либо гарантий, явных или подразумеваемых, включая:
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Подразумеваемые гарантии товарной пригодности</li>
+          <li style={styles.li}>Пригодность для конкретной цели</li>
+          <li style={styles.li}>Точность или надёжность вычислений, статистики или образовательного контента</li>
+          <li style={styles.li}>Бесперебойную или безошибочную работу</li>
+          <li style={styles.li}>Быстрое устранение дефектов</li>
+          <li style={styles.li}>Постоянное сохранение каких-либо данных (хотя мы применяем меры резервного копирования)</li>
+        </ul>
+
+        <h2 style={styles.h2}>9. Ограничение ответственности</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>В максимальной степени, разрешённой законом, Ionel Aanei не несёт ответственности за любые:</strong>
+        </p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Торговые убытки или финансовый ущерб любого рода</li>
+          <li style={styles.li}>Упущенную прибыль или деловые возможности</li>
+          <li style={styles.li}>Потерю или повреждение данных (хотя мы применяем резервное копирование)</li>
+          <li style={styles.li}>Косвенный, случайный, последующий, специальный или штрафной ущерб</li>
+          <li style={styles.li}>Ущерб в результате несанкционированного доступа к вашему аккаунту</li>
+          <li style={styles.li}>Ущерб, причинённый сторонними сервисами (Firebase, Google Cloud, Google Analytics, Google Play, Twelve Data)</li>
+        </ul>
+        <p style={styles.text}>Это ограничение применяется независимо от основания ответственности (договор, деликт, неосторожность или иное), даже если мы были предупреждены о возможности такого ущерба.</p>
+        <p style={styles.text}>Наша общая ответственность перед вами по всем требованиям не превысит общую сумму, уплаченную вами нам за двенадцать (12) месяцев, предшествующих требованию. Для пользователей Сайта, которые ничего нам не платили, наша максимальная ответственность ограничена 100 €.</p>
+
+        <h2 style={styles.h2}>10. Ответственность пользователя</h2>
+        <p style={styles.text}>Вы признаёте, что:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>Вы несёте единоличную ответственность за свои торговые решения.</li>
+          <li style={styles.li}>Мы не контролируем финансовые рынки.</li>
+          <li style={styles.li}>Статистика Приложения и результаты калькуляторов основаны на данных, которые предоставляете ВЫ.</li>
+          <li style={styles.li}>Вам следует самостоятельно проверять все вычисления.</li>
+          <li style={styles.li}>Вам следует создавать резервные копии важных данных.</li>
+        </ul>
+
+        <h2 style={styles.h2}>11. Возмещение убытков</h2>
+        <p style={styles.text}>
+          Вы соглашаетесь возмещать, защищать и ограждать Ionel Aanei от любых претензий, ущерба, убытков, обязательств и расходов (включая судебные издержки), возникающих из вашего использования Сайта или Приложения, вашего нарушения настоящих Условий, вашего нарушения любого закона или прав третьих лиц, либо вашей торговой деятельности и решений.
+        </p>
+
+        <h2 style={styles.h2}>12. Прекращение</h2>
+
+        <h3 style={styles.h3}>12.1 Прекращение с вашей стороны</h3>
+        <p style={styles.text}>Вы можете прекратить действие вашего аккаунта Приложения в любой момент:</p>
+        <ul style={styles.ul}>
+          <li style={styles.li}>С помощью функции «Удалить аккаунт» в настройках Приложения</li>
+          <li style={styles.li}>Связавшись с нами по адресу <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+        </ul>
+        <p style={styles.text}>Что касается Сайта, вы можете прекратить его посещение в любой момент без уведомления.</p>
+
+        <h3 style={styles.h3}>12.2 Прекращение с нашей стороны</h3>
+        <p style={styles.text}>Мы можем приостановить или прекратить действие вашего аккаунта немедленно, без уведомления, если вы нарушаете настоящие Условия, занимаетесь мошеннической или незаконной деятельностью, злоупотребляете Приложением или другими пользователями, либо где этого требует закон. Мы также можем прекратить работу Приложения с разумным уведомлением.</p>
+
+        <h2 style={styles.h2}>13. Изменения Условий</h2>
+        <p style={styles.text}>Мы можем изменять настоящие Условия в любой момент. Мы уведомим вас о существенных изменениях, обновив дату «Последнее обновление», разместив уведомление в Приложении или отправив письмо на ваш зарегистрированный адрес (для существенных изменений аккаунта Приложения). Продолжение использования после публикации изменений означает принятие изменённых Условий.</p>
+
+        <h2 style={styles.h2}>14. Применимое право и споры</h2>
+        <p style={styles.text}>Настоящие Условия регулируются законодательством Румынии, без учёта принципов коллизионного права.</p>
+        <p style={styles.text}>Любые споры разрешаются (в следующем порядке):</p>
+        <ol style={{ ...styles.ul, listStyleType: 'decimal' }}>
+          <li style={styles.li}>Добросовестными переговорами между сторонами</li>
+          <li style={styles.li}>Медиацией, если переговоры не удаются</li>
+          <li style={styles.li}>Судами Румынии, если медиация не удаётся</li>
+        </ol>
+
+        <h2 style={styles.h2}>15. Прочее</h2>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Полнота соглашения:</strong> настоящие Условия вместе с нашей Политикой конфиденциальности составляют полное соглашение между вами и Ionel Aanei.<br />
+          <strong style={styles.strong}>Делимость:</strong> если какое-либо положение настоящих Условий признано недействительным или неисполнимым, остальные положения сохраняют полную силу.<br />
+          <strong style={styles.strong}>Отказ от прав:</strong> неприменение нами какого-либо положения не является отказом от него.<br />
+          <strong style={styles.strong}>Передача прав:</strong> вы не можете уступать или передавать настоящие Условия. Мы можем уступать наши права и обязанности без вашего согласия.
+        </p>
+
+        <h2 style={styles.h2}>16. Контакты</h2>
+        <p style={styles.text}>По вопросам, касающимся настоящих Условий:</p>
+        <p style={styles.text}>
+          <strong style={styles.strong}>Эл. почта:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Разработчик:</strong> Ionel Aanei (индивидуальный разработчик)<br />
+          <strong style={styles.strong}>Местоположение:</strong> Румыния (Европейский союз)
+        </p>
+        <p style={styles.text}>Мы ответим в течение 30 дней.</p>
       </div>
     </div>
   );
