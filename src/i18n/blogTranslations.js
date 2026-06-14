@@ -20,6 +20,7 @@ const blogTranslations = {
   'revenge-trading': {
     en: '/blog/revenge-trading',
     ro: '/blog/ro/revenge-trading',
+    de: '/blog/de/revenge-trading',
   },
   'trading-expectancy-explained': {
     en: '/blog/trading-expectancy-explained',
@@ -34,6 +35,7 @@ const blogTranslations = {
   'how-to-recover-from-losing-streak': {
     en: '/blog/how-to-recover-from-losing-streak',
     ro: '/blog/ro/how-to-recover-from-losing-streak',
+    de: '/blog/de/how-to-recover-from-losing-streak',
   },
   'profit-factor-vs-win-rate': {
     en: '/blog/profit-factor-vs-win-rate',
@@ -60,6 +62,7 @@ const blogTranslations = {
   'why-traders-break-their-rules': {
     en: '/blog/why-traders-break-their-rules',
     ro: '/blog/ro/why-traders-break-their-rules',
+    de: '/blog/de/why-traders-break-their-rules',
   },
   'good-loss-vs-bad-win': {
     en: '/blog/good-loss-vs-bad-win',

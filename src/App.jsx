@@ -104,6 +104,9 @@ const ScalingInVsScalingOutDe = lazy(() => import('./pages/blog/de/ScalingInVsSc
 const OnePercentRiskRuleDe = lazy(() => import('./pages/blog/de/OnePercentRiskRuleDe'));
 const PositionSizingGuideDe = lazy(() => import('./pages/blog/de/PositionSizingGuideDe'));
 const TradingExpectancyExplainedDe = lazy(() => import('./pages/blog/de/TradingExpectancyExplainedDe'));
+const RevengeTradingDe = lazy(() => import('./pages/blog/de/RevengeTradingDe'));
+const WhyTradersBreakRulesDe = lazy(() => import('./pages/blog/de/WhyTradersBreakRulesDe'));
+const HowToRecoverFromLosingStreakDe = lazy(() => import('./pages/blog/de/HowToRecoverFromLosingStreakDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -250,6 +253,9 @@ function App() {
           <Route path="/blog/de/1-percent-risk-rule" element={<OnePercentRiskRuleDe />} />
           <Route path="/blog/de/position-sizing-guide" element={<PositionSizingGuideDe />} />
           <Route path="/blog/de/trading-expectancy-explained" element={<TradingExpectancyExplainedDe />} />
+          <Route path="/blog/de/revenge-trading" element={<RevengeTradingDe />} />
+          <Route path="/blog/de/why-traders-break-their-rules" element={<WhyTradersBreakRulesDe />} />
+          <Route path="/blog/de/how-to-recover-from-losing-streak" element={<HowToRecoverFromLosingStreakDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

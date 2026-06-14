@@ -91,6 +91,9 @@ const routes = [
   '/blog/de/1-percent-risk-rule',
   '/blog/de/position-sizing-guide',
   '/blog/de/trading-expectancy-explained',
+  '/blog/de/revenge-trading',
+  '/blog/de/why-traders-break-their-rules',
+  '/blog/de/how-to-recover-from-losing-streak',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

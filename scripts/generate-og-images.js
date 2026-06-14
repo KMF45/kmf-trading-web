@@ -106,6 +106,9 @@ const articles = [
   { slug: 'de-1-percent-risk-rule', title: 'Die 1-%-Risikoregel:\nDie Regel, die Profi-Trader\nam Leben haelt', category: 'Risikomanagement', color: '#00C853' },
   { slug: 'de-position-sizing-guide', title: 'Positionsgroessen-Leitfaden:\nWie viel solltest\ndu traden?', category: 'Risikomanagement', color: '#00C853' },
   { slug: 'de-trading-expectancy-explained', title: 'Trading-Erwartungswert:\nDie Formel, die zeigt, ob\ndeine Strategie funktioniert', category: 'Statistik', color: '#4FC3F7' },
+  { slug: 'de-revenge-trading', title: 'Revenge Trading:\nWas es ist, warum es passiert\nund wie du es stoppst', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-why-traders-break-their-rules', title: 'Warum du deine eigenen\nTrading-Regeln brichst —\nund wie du aufhoerst', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-how-to-recover-from-losing-streak', title: 'Wie du dich von einer\nVerlustserie erholst, ohne\ndein Konto zu sprengen', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
