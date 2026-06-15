@@ -110,6 +110,9 @@ const HowToRecoverFromLosingStreakDe = lazy(() => import('./pages/blog/de/HowToR
 const RMultipleExplainedDe = lazy(() => import('./pages/blog/de/RMultipleExplainedDe'));
 const HowToSetStopLossDe = lazy(() => import('./pages/blog/de/HowToSetStopLossDe'));
 const PreTradeChecklistDe = lazy(() => import('./pages/blog/de/PreTradeChecklistDe'));
+const ProspectTheoryTradingDe = lazy(() => import('./pages/blog/de/ProspectTheoryTradingDe'));
+const GoodLossVsBadWinDe = lazy(() => import('./pages/blog/de/GoodLossVsBadWinDe'));
+const CryptoVsForexJournalingDe = lazy(() => import('./pages/blog/de/CryptoVsForexJournalingDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -262,6 +265,9 @@ function App() {
           <Route path="/blog/de/r-multiple-explained" element={<RMultipleExplainedDe />} />
           <Route path="/blog/de/how-to-set-stop-loss" element={<HowToSetStopLossDe />} />
           <Route path="/blog/de/pre-trade-checklist" element={<PreTradeChecklistDe />} />
+          <Route path="/blog/de/prospect-theory-trading" element={<ProspectTheoryTradingDe />} />
+          <Route path="/blog/de/good-loss-vs-bad-win" element={<GoodLossVsBadWinDe />} />
+          <Route path="/blog/de/crypto-vs-forex-journaling" element={<CryptoVsForexJournalingDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

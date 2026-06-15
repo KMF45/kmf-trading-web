@@ -60,6 +60,7 @@ const blogTranslations = {
   'crypto-vs-forex-journaling': {
     en: '/blog/crypto-vs-forex-journaling',
     ro: '/blog/ro/crypto-vs-forex-journaling',
+    de: '/blog/de/crypto-vs-forex-journaling',
   },
   'why-traders-break-their-rules': {
     en: '/blog/why-traders-break-their-rules',
@@ -69,6 +70,7 @@ const blogTranslations = {
   'good-loss-vs-bad-win': {
     en: '/blog/good-loss-vs-bad-win',
     ro: '/blog/ro/good-loss-vs-bad-win',
+    de: '/blog/de/good-loss-vs-bad-win',
   },
   'weekend-gap-risk': {
     en: '/blog/weekend-gap-risk',
@@ -98,6 +100,7 @@ const blogTranslations = {
   'prospect-theory-trading': {
     en: '/blog/prospect-theory-trading',
     ro: '/blog/ro/prospect-theory-trading',
+    de: '/blog/de/prospect-theory-trading',
   },
   'confidence-vs-overconfidence': {
     en: '/blog/confidence-vs-overconfidence',

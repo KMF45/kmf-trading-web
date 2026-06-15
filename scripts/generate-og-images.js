@@ -112,6 +112,9 @@ const articles = [
   { slug: 'de-r-multiple-explained', title: 'R-Vielfaches erklaert:\nWie du Trade-Qualitaet misst\n(nicht nur Gewinn)', category: 'Statistik', color: '#4FC3F7' },
   { slug: 'de-how-to-set-stop-loss', title: 'Wie man einen Stop Loss\nrichtig setzt\n(nicht einfach willkuerlich)', category: 'Risikomanagement', color: '#00C853' },
   { slug: 'de-pre-trade-checklist', title: 'Die Pre-Trade-Checkliste:\n10 Dinge vor jedem\nEinstieg pruefen', category: 'Disziplin', color: '#FFB300' },
+  { slug: 'de-prospect-theory-trading', title: 'Warum du Gewinner zu frueh\nschliesst und Verlierer\nlaufen laesst', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-good-loss-vs-bad-win', title: 'Gute Verluste, schlechte\nGewinne: Warum dein bester\nTrade dein schlechtester ist', category: 'Verbesserung', color: '#FFB300' },
+  { slug: 'de-crypto-vs-forex-journaling', title: 'Krypto vs Forex: Warum dein\nJournal fuer jeden Markt\nandere Regeln braucht', category: 'Risikomanagement', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

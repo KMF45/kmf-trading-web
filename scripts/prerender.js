@@ -97,6 +97,9 @@ const routes = [
   '/blog/de/r-multiple-explained',
   '/blog/de/how-to-set-stop-loss',
   '/blog/de/pre-trade-checklist',
+  '/blog/de/prospect-theory-trading',
+  '/blog/de/good-loss-vs-bad-win',
+  '/blog/de/crypto-vs-forex-journaling',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',
