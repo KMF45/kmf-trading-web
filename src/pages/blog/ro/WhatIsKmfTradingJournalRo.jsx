@@ -228,7 +228,7 @@ export default function WhatIsKmfTradingJournalRo() {
         ]}
       />
       <P>
-        <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Pret Premium:</strong> $5.99/luna sau $49.99/an (economie 30%). 7 zile de incercare gratuita, fara card de credit. Anulare oricand prin Google Play.
+        <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Pret Premium:</strong> $5.99/luna sau $49.99/an (economie 30%). 7 zile de incercare gratuita. Anulare oricand prin Google Play.
       </P>
       <P>
         Merita Premium? Daca vrei trade-uri nelimitate, functiile de psihologie (emotion tracking, tilt detection, personality profile), sau statistici avansate — da. Free tier-ul iti ofera 15 trade-uri cu cloud sync complet ca sa testezi aplicatia inainte de a decide.

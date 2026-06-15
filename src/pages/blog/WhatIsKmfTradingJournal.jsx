@@ -233,7 +233,7 @@ export default function WhatIsKmfTradingJournal() {
         ]}
       />
       <P>
-        <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Premium pricing:</strong> $5.99/month or $49.99/year (30% savings). 7-day free trial, no credit card required. Cancel anytime through Google Play.
+        <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Premium pricing:</strong> $5.99/month or $49.99/year (30% savings). 7-day free trial. Cancel anytime through Google Play.
       </P>
       <P>
         Is Premium worth it? If you want unlimited trades, the psychology features (emotion tracking, tilt detection, personality profile), or advanced statistics — yes. The free tier gives you 15 trades with full cloud sync to experience the app before deciding.
