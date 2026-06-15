@@ -109,6 +109,9 @@ const articles = [
   { slug: 'de-revenge-trading', title: 'Revenge Trading:\nWas es ist, warum es passiert\nund wie du es stoppst', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-why-traders-break-their-rules', title: 'Warum du deine eigenen\nTrading-Regeln brichst —\nund wie du aufhoerst', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-how-to-recover-from-losing-streak', title: 'Wie du dich von einer\nVerlustserie erholst, ohne\ndein Konto zu sprengen', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-r-multiple-explained', title: 'R-Vielfaches erklaert:\nWie du Trade-Qualitaet misst\n(nicht nur Gewinn)', category: 'Statistik', color: '#4FC3F7' },
+  { slug: 'de-how-to-set-stop-loss', title: 'Wie man einen Stop Loss\nrichtig setzt\n(nicht einfach willkuerlich)', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-pre-trade-checklist', title: 'Die Pre-Trade-Checkliste:\n10 Dinge vor jedem\nEinstieg pruefen', category: 'Disziplin', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

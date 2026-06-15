@@ -50,10 +50,12 @@ const blogTranslations = {
   'how-to-set-stop-loss': {
     en: '/blog/how-to-set-stop-loss',
     ro: '/blog/ro/how-to-set-stop-loss',
+    de: '/blog/de/how-to-set-stop-loss',
   },
   'r-multiple-explained': {
     en: '/blog/r-multiple-explained',
     ro: '/blog/ro/r-multiple-explained',
+    de: '/blog/de/r-multiple-explained',
   },
   'crypto-vs-forex-journaling': {
     en: '/blog/crypto-vs-forex-journaling',
@@ -75,6 +77,7 @@ const blogTranslations = {
   'pre-trade-checklist': {
     en: '/blog/pre-trade-checklist',
     ro: '/blog/ro/pre-trade-checklist',
+    de: '/blog/de/pre-trade-checklist',
   },
   '10-questions-after-every-trade': {
     en: '/blog/10-questions-after-every-trade',

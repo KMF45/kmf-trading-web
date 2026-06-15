@@ -94,6 +94,9 @@ const routes = [
   '/blog/de/revenge-trading',
   '/blog/de/why-traders-break-their-rules',
   '/blog/de/how-to-recover-from-losing-streak',
+  '/blog/de/r-multiple-explained',
+  '/blog/de/how-to-set-stop-loss',
+  '/blog/de/pre-trade-checklist',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',
