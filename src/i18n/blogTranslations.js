@@ -91,10 +91,12 @@ const blogTranslations = {
   'weekly-trading-review-template': {
     en: '/blog/weekly-trading-review-template',
     ro: '/blog/ro/weekly-trading-review-template',
+    de: '/blog/de/weekly-trading-review-template',
   },
   'execution-gap-backtest-vs-live-trading': {
     en: '/blog/execution-gap-backtest-vs-live-trading',
     ro: '/blog/ro/execution-gap-backtest-vs-live-trading',
+    de: '/blog/de/execution-gap-backtest-vs-live-trading',
   },
   'ghost-trades-journaling-missed-opportunities': {
     en: '/blog/ghost-trades-journaling-missed-opportunities',
@@ -108,6 +110,7 @@ const blogTranslations = {
   'confidence-vs-overconfidence': {
     en: '/blog/confidence-vs-overconfidence',
     ro: '/blog/ro/confidence-vs-overconfidence',
+    de: '/blog/de/confidence-vs-overconfidence',
   },
   'tilt-recovery-protocol': {
     en: '/blog/tilt-recovery-protocol',

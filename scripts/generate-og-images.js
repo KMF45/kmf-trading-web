@@ -118,6 +118,9 @@ const articles = [
   { slug: 'de-what-is-kmf-trading-journal', title: 'Was ist K.M.F.\nTrading Journal? Die App\nvon Tradern gebaut', category: 'App-Tests', color: '#4FC3F7' },
   { slug: 'de-trading-vs-gambling', title: 'Wann Trading zu\nGluecksspiel wird\n(und wie du es vermeidest)', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-analysis-paralysis-trading', title: 'Analyse-Paralyse:\nWarum du nicht\nabdruecken kannst', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-weekly-trading-review-template', title: 'Woechentliches Trading-Review:\nDie 15-Minuten-Routine, die\ndeine Verbesserung verzehnfacht', category: 'Verbesserung', color: '#FFB300' },
+  { slug: 'de-execution-gap-backtest-vs-live-trading', title: 'Die Ausfuehrungsluecke:\nWarum deine Strategie im Backtest\nfunktioniert, aber live scheitert', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-confidence-vs-overconfidence', title: 'Selbstvertrauen vs\nSelbstueberschaetzung: Die Linie,\ndie Gewinner von Sprengungen trennt', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

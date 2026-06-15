@@ -116,6 +116,9 @@ const CryptoVsForexJournalingDe = lazy(() => import('./pages/blog/de/CryptoVsFor
 const WhatIsKmfTradingJournalDe = lazy(() => import('./pages/blog/de/WhatIsKmfTradingJournalDe'));
 const TradingVsGamblingDe = lazy(() => import('./pages/blog/de/TradingVsGamblingDe'));
 const AnalysisParalysisTradingDe = lazy(() => import('./pages/blog/de/AnalysisParalysisTradingDe'));
+const WeeklyTradingReviewTemplateDe = lazy(() => import('./pages/blog/de/WeeklyTradingReviewTemplateDe'));
+const ExecutionGapDe = lazy(() => import('./pages/blog/de/ExecutionGapDe'));
+const ConfidenceVsOverconfidenceDe = lazy(() => import('./pages/blog/de/ConfidenceVsOverconfidenceDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -274,6 +277,9 @@ function App() {
           <Route path="/blog/de/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalDe />} />
           <Route path="/blog/de/trading-vs-gambling" element={<TradingVsGamblingDe />} />
           <Route path="/blog/de/analysis-paralysis-trading" element={<AnalysisParalysisTradingDe />} />
+          <Route path="/blog/de/weekly-trading-review-template" element={<WeeklyTradingReviewTemplateDe />} />
+          <Route path="/blog/de/execution-gap-backtest-vs-live-trading" element={<ExecutionGapDe />} />
+          <Route path="/blog/de/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidenceDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
