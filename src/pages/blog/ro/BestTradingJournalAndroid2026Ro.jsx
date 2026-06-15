@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navbar from '../../../components/landing/Navbar';
 import Footer from '../../../components/Footer';
 import { FaCheck, FaTimes, FaGooglePlay } from 'react-icons/fa';
-import { useLanguage } from '../../../i18n/LanguageContext';
 import blogTranslations from '../../../i18n/blogTranslations';
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.kmf.tradingjournal';
@@ -21,19 +20,9 @@ function setMeta(name, content, attr = 'name') {
 }
 
 export default function BestTradingJournalAndroid2026Ro() {
-  const { lang: uiLang } = useLanguage();
-  const navigate = useNavigate();
-
-  // Auto-route the visitor to the article in their own language when a
-  // translation exists. Skipped during prerender/bots (navigator.webdriver)
-  // so the prerendered HTML for each URL stays in its own language.
-  useEffect(() => {
-    if (typeof navigator !== 'undefined' && navigator.webdriver) return;
-    const tr = blogTranslations[SLUG];
-    if (tr && uiLang !== 'ro' && tr[uiLang]) {
-      navigate(tr[uiLang], { replace: true });
-    }
-  }, [uiLang, navigate]);
+  // NOTE: No automatic browser-language redirect — it caused Googlebot to flag
+  // canonical URLs as "Page with redirect" and blocked indexing. hreflang tags
+  // (injected below) handle language alternates; switching is manual.
 
   useEffect(() => {
     document.title = PAGE_TITLE;
