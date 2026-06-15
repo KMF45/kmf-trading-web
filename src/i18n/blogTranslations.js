@@ -4,14 +4,17 @@ const blogTranslations = {
   'what-is-kmf-trading-journal': {
     en: '/blog/what-is-kmf-trading-journal',
     ro: '/blog/ro/what-is-kmf-trading-journal',
+    de: '/blog/de/what-is-kmf-trading-journal',
   },
   'trading-vs-gambling': {
     en: '/blog/trading-vs-gambling',
     ro: '/blog/ro/trading-vs-gambling',
+    de: '/blog/de/trading-vs-gambling',
   },
   'analysis-paralysis-trading': {
     en: '/blog/analysis-paralysis-trading',
     ro: '/blog/ro/analysis-paralysis-trading',
+    de: '/blog/de/analysis-paralysis-trading',
   },
   'is-100-enough-to-start-forex': {
     en: '/blog/is-100-enough-to-start-forex',

@@ -100,6 +100,9 @@ const routes = [
   '/blog/de/prospect-theory-trading',
   '/blog/de/good-loss-vs-bad-win',
   '/blog/de/crypto-vs-forex-journaling',
+  '/blog/de/what-is-kmf-trading-journal',
+  '/blog/de/trading-vs-gambling',
+  '/blog/de/analysis-paralysis-trading',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

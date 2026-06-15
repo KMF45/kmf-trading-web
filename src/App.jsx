@@ -113,6 +113,9 @@ const PreTradeChecklistDe = lazy(() => import('./pages/blog/de/PreTradeChecklist
 const ProspectTheoryTradingDe = lazy(() => import('./pages/blog/de/ProspectTheoryTradingDe'));
 const GoodLossVsBadWinDe = lazy(() => import('./pages/blog/de/GoodLossVsBadWinDe'));
 const CryptoVsForexJournalingDe = lazy(() => import('./pages/blog/de/CryptoVsForexJournalingDe'));
+const WhatIsKmfTradingJournalDe = lazy(() => import('./pages/blog/de/WhatIsKmfTradingJournalDe'));
+const TradingVsGamblingDe = lazy(() => import('./pages/blog/de/TradingVsGamblingDe'));
+const AnalysisParalysisTradingDe = lazy(() => import('./pages/blog/de/AnalysisParalysisTradingDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -268,6 +271,9 @@ function App() {
           <Route path="/blog/de/prospect-theory-trading" element={<ProspectTheoryTradingDe />} />
           <Route path="/blog/de/good-loss-vs-bad-win" element={<GoodLossVsBadWinDe />} />
           <Route path="/blog/de/crypto-vs-forex-journaling" element={<CryptoVsForexJournalingDe />} />
+          <Route path="/blog/de/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalDe />} />
+          <Route path="/blog/de/trading-vs-gambling" element={<TradingVsGamblingDe />} />
+          <Route path="/blog/de/analysis-paralysis-trading" element={<AnalysisParalysisTradingDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

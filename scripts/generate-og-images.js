@@ -115,6 +115,9 @@ const articles = [
   { slug: 'de-prospect-theory-trading', title: 'Warum du Gewinner zu frueh\nschliesst und Verlierer\nlaufen laesst', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-good-loss-vs-bad-win', title: 'Gute Verluste, schlechte\nGewinne: Warum dein bester\nTrade dein schlechtester ist', category: 'Verbesserung', color: '#FFB300' },
   { slug: 'de-crypto-vs-forex-journaling', title: 'Krypto vs Forex: Warum dein\nJournal fuer jeden Markt\nandere Regeln braucht', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-what-is-kmf-trading-journal', title: 'Was ist K.M.F.\nTrading Journal? Die App\nvon Tradern gebaut', category: 'App-Tests', color: '#4FC3F7' },
+  { slug: 'de-trading-vs-gambling', title: 'Wann Trading zu\nGluecksspiel wird\n(und wie du es vermeidest)', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-analysis-paralysis-trading', title: 'Analyse-Paralyse:\nWarum du nicht\nabdruecken kannst', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
