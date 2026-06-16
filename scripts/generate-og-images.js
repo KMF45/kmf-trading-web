@@ -127,6 +127,9 @@ const articles = [
   { slug: 'de-tilt-recovery-protocol', title: 'Tilt-Recovery-Protokoll:\nWas Top-Trader in den ersten\n60 Minuten nach einem Verlust tun', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-overtrading-checklist', title: 'Overtrading-Checkliste:\n8 Anzeichen, dass du auf Tilt\nbist, ohne es zu merken', category: 'Disziplin', color: '#FFB300' },
   { slug: 'de-lotto-ticket-syndrome', title: 'Das Lotto-Ticket-Syndrom:\nWarum du nach einem grossen\nGewinn das Risiko erhoehst', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-prop-firm-trading-journal', title: 'Prop-Firm-Killer:\nWie ein Trading-Journal\ndein Funded-Konto rettet', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-static-vs-trailing-drawdown', title: 'Static vs Trailing Drawdown:\nDie Prop-Firm-Regel, die\nFunded-Konten toetet', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-prop-firm-daily-drawdown-guide', title: 'Prop-Firm-Daily-Drawdown:\nEin 5-Regel-System, um sie\nnie wieder zu brechen', category: 'Risikomanagement', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

@@ -112,6 +112,9 @@ const routes = [
   '/blog/de/tilt-recovery-protocol',
   '/blog/de/overtrading-checklist',
   '/blog/de/lotto-ticket-syndrome',
+  '/blog/de/prop-firm-trading-journal',
+  '/blog/de/static-vs-trailing-drawdown',
+  '/blog/de/prop-firm-daily-drawdown-guide',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',
