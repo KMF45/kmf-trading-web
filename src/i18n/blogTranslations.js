@@ -116,10 +116,12 @@ const blogTranslations = {
   'tilt-recovery-protocol': {
     en: '/blog/tilt-recovery-protocol',
     ro: '/blog/ro/tilt-recovery-protocol',
+    de: '/blog/de/tilt-recovery-protocol',
   },
   'lotto-ticket-syndrome': {
     en: '/blog/lotto-ticket-syndrome',
     ro: '/blog/ro/lotto-ticket-syndrome',
+    de: '/blog/de/lotto-ticket-syndrome',
   },
   'breakeven-stop-too-early': {
     en: '/blog/breakeven-stop-too-early',
@@ -149,6 +151,7 @@ const blogTranslations = {
   'overtrading-checklist': {
     en: '/blog/overtrading-checklist',
     ro: '/blog/ro/overtrading-checklist',
+    de: '/blog/de/overtrading-checklist',
   },
   'revenge-trading-kill-switch': {
     en: '/blog/revenge-trading-kill-switch',

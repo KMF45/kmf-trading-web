@@ -122,6 +122,9 @@ const ConfidenceVsOverconfidenceDe = lazy(() => import('./pages/blog/de/Confiden
 const GhostTradesDe = lazy(() => import('./pages/blog/de/GhostTradesDe'));
 const BreakevenStopTooEarlyDe = lazy(() => import('./pages/blog/de/BreakevenStopTooEarlyDe'));
 const RevengeTradingKillSwitchDe = lazy(() => import('./pages/blog/de/RevengeTradingKillSwitchDe'));
+const TiltRecoveryProtocolDe = lazy(() => import('./pages/blog/de/TiltRecoveryProtocolDe'));
+const OvertradingChecklistDe = lazy(() => import('./pages/blog/de/OvertradingChecklistDe'));
+const LottoTicketSyndromeDe = lazy(() => import('./pages/blog/de/LottoTicketSyndromeDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -286,6 +289,9 @@ function App() {
           <Route path="/blog/de/ghost-trades-journaling-missed-opportunities" element={<GhostTradesDe />} />
           <Route path="/blog/de/breakeven-stop-too-early" element={<BreakevenStopTooEarlyDe />} />
           <Route path="/blog/de/revenge-trading-kill-switch" element={<RevengeTradingKillSwitchDe />} />
+          <Route path="/blog/de/tilt-recovery-protocol" element={<TiltRecoveryProtocolDe />} />
+          <Route path="/blog/de/overtrading-checklist" element={<OvertradingChecklistDe />} />
+          <Route path="/blog/de/lotto-ticket-syndrome" element={<LottoTicketSyndromeDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

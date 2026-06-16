@@ -109,6 +109,9 @@ const routes = [
   '/blog/de/ghost-trades-journaling-missed-opportunities',
   '/blog/de/breakeven-stop-too-early',
   '/blog/de/revenge-trading-kill-switch',
+  '/blog/de/tilt-recovery-protocol',
+  '/blog/de/overtrading-checklist',
+  '/blog/de/lotto-ticket-syndrome',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

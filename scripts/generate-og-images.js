@@ -124,6 +124,9 @@ const articles = [
   { slug: 'de-ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades: Warum die Trades,\ndie du nicht nimmst, mehr kosten\nals die, die du verlierst', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-breakeven-stop-too-early', title: 'Die $0,01-Luecke:\nWarum du deinen Stop zu frueh\nauf Break-even ziehst', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-revenge-trading-kill-switch', title: 'Der Revenge-Trading-Kill-Switch:\nDas 5-Regeln-Protokoll, das\ndie Spirale stoppt', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-tilt-recovery-protocol', title: 'Tilt-Recovery-Protokoll:\nWas Top-Trader in den ersten\n60 Minuten nach einem Verlust tun', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-overtrading-checklist', title: 'Overtrading-Checkliste:\n8 Anzeichen, dass du auf Tilt\nbist, ohne es zu merken', category: 'Disziplin', color: '#FFB300' },
+  { slug: 'de-lotto-ticket-syndrome', title: 'Das Lotto-Ticket-Syndrom:\nWarum du nach einem grossen\nGewinn das Risiko erhoehst', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
