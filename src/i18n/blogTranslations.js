@@ -131,10 +131,12 @@ const blogTranslations = {
   'excel-vs-trading-journal-app': {
     en: '/blog/excel-vs-trading-journal-app',
     ro: '/blog/ro/excel-vs-trading-journal-app',
+    de: '/blog/de/excel-vs-trading-journal-app',
   },
   'ai-trade-review': {
     en: '/blog/ai-trade-review',
     ro: '/blog/ro/ai-trade-review',
+    de: '/blog/de/ai-trade-review',
   },
   'tradingview-kmf-workflow': {
     en: '/blog/tradingview-kmf-workflow',
@@ -147,6 +149,7 @@ const blogTranslations = {
   'why-traders-fail-at-journaling': {
     en: '/blog/why-traders-fail-at-journaling',
     ro: '/blog/ro/why-traders-fail-at-journaling',
+    de: '/blog/de/why-traders-fail-at-journaling',
   },
   'overtrading-checklist': {
     en: '/blog/overtrading-checklist',

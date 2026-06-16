@@ -130,6 +130,9 @@ const articles = [
   { slug: 'de-prop-firm-trading-journal', title: 'Prop-Firm-Killer:\nWie ein Trading-Journal\ndein Funded-Konto rettet', category: 'Risikomanagement', color: '#00C853' },
   { slug: 'de-static-vs-trailing-drawdown', title: 'Static vs Trailing Drawdown:\nDie Prop-Firm-Regel, die\nFunded-Konten toetet', category: 'Risikomanagement', color: '#00C853' },
   { slug: 'de-prop-firm-daily-drawdown-guide', title: 'Prop-Firm-Daily-Drawdown:\nEin 5-Regel-System, um sie\nnie wieder zu brechen', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-why-traders-fail-at-journaling', title: 'Warum 90 % der Trader\nam Journaling scheitern\n(und wie du dazugehoerst)', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-excel-vs-trading-journal-app', title: 'Warum Excel deine\nTrading-Performance\nlangsam ruiniert', category: 'Verbesserung', color: '#FFB300' },
+  { slug: 'de-ai-trade-review', title: 'Wie du KI fuers\nTrade-Review nutzt\n(ohne Kontrollverlust)', category: 'Verbesserung', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

@@ -128,6 +128,9 @@ const LottoTicketSyndromeDe = lazy(() => import('./pages/blog/de/LottoTicketSynd
 const PropFirmJournalDe = lazy(() => import('./pages/blog/de/PropFirmJournalDe'));
 const StaticVsTrailingDrawdownDe = lazy(() => import('./pages/blog/de/StaticVsTrailingDrawdownDe'));
 const PropFirmDailyDrawdownGuideDe = lazy(() => import('./pages/blog/de/PropFirmDailyDrawdownGuideDe'));
+const WhyTradersFailAtJournalingDe = lazy(() => import('./pages/blog/de/WhyTradersFailAtJournalingDe'));
+const ExcelVsTradingJournalDe = lazy(() => import('./pages/blog/de/ExcelVsTradingJournalDe'));
+const AiTradeReviewDe = lazy(() => import('./pages/blog/de/AiTradeReviewDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -298,6 +301,9 @@ function App() {
           <Route path="/blog/de/prop-firm-trading-journal" element={<PropFirmJournalDe />} />
           <Route path="/blog/de/static-vs-trailing-drawdown" element={<StaticVsTrailingDrawdownDe />} />
           <Route path="/blog/de/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdownGuideDe />} />
+          <Route path="/blog/de/why-traders-fail-at-journaling" element={<WhyTradersFailAtJournalingDe />} />
+          <Route path="/blog/de/excel-vs-trading-journal-app" element={<ExcelVsTradingJournalDe />} />
+          <Route path="/blog/de/ai-trade-review" element={<AiTradeReviewDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

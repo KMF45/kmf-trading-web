@@ -115,6 +115,9 @@ const routes = [
   '/blog/de/prop-firm-trading-journal',
   '/blog/de/static-vs-trailing-drawdown',
   '/blog/de/prop-firm-daily-drawdown-guide',
+  '/blog/de/why-traders-fail-at-journaling',
+  '/blog/de/excel-vs-trading-journal-app',
+  '/blog/de/ai-trade-review',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',
