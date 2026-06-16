@@ -101,6 +101,7 @@ const blogTranslations = {
   'ghost-trades-journaling-missed-opportunities': {
     en: '/blog/ghost-trades-journaling-missed-opportunities',
     ro: '/blog/ro/ghost-trades-journaling-missed-opportunities',
+    de: '/blog/de/ghost-trades-journaling-missed-opportunities',
   },
   'prospect-theory-trading': {
     en: '/blog/prospect-theory-trading',
@@ -123,6 +124,7 @@ const blogTranslations = {
   'breakeven-stop-too-early': {
     en: '/blog/breakeven-stop-too-early',
     ro: '/blog/ro/breakeven-stop-too-early',
+    de: '/blog/de/breakeven-stop-too-early',
   },
   'excel-vs-trading-journal-app': {
     en: '/blog/excel-vs-trading-journal-app',
@@ -151,6 +153,7 @@ const blogTranslations = {
   'revenge-trading-kill-switch': {
     en: '/blog/revenge-trading-kill-switch',
     ro: '/blog/ro/revenge-trading-kill-switch',
+    de: '/blog/de/revenge-trading-kill-switch',
   },
   'market-order-vs-limit-order': {
     en: '/blog/market-order-vs-limit-order',

@@ -119,6 +119,9 @@ const AnalysisParalysisTradingDe = lazy(() => import('./pages/blog/de/AnalysisPa
 const WeeklyTradingReviewTemplateDe = lazy(() => import('./pages/blog/de/WeeklyTradingReviewTemplateDe'));
 const ExecutionGapDe = lazy(() => import('./pages/blog/de/ExecutionGapDe'));
 const ConfidenceVsOverconfidenceDe = lazy(() => import('./pages/blog/de/ConfidenceVsOverconfidenceDe'));
+const GhostTradesDe = lazy(() => import('./pages/blog/de/GhostTradesDe'));
+const BreakevenStopTooEarlyDe = lazy(() => import('./pages/blog/de/BreakevenStopTooEarlyDe'));
+const RevengeTradingKillSwitchDe = lazy(() => import('./pages/blog/de/RevengeTradingKillSwitchDe'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -280,6 +283,9 @@ function App() {
           <Route path="/blog/de/weekly-trading-review-template" element={<WeeklyTradingReviewTemplateDe />} />
           <Route path="/blog/de/execution-gap-backtest-vs-live-trading" element={<ExecutionGapDe />} />
           <Route path="/blog/de/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidenceDe />} />
+          <Route path="/blog/de/ghost-trades-journaling-missed-opportunities" element={<GhostTradesDe />} />
+          <Route path="/blog/de/breakeven-stop-too-early" element={<BreakevenStopTooEarlyDe />} />
+          <Route path="/blog/de/revenge-trading-kill-switch" element={<RevengeTradingKillSwitchDe />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

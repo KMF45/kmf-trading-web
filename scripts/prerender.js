@@ -106,6 +106,9 @@ const routes = [
   '/blog/de/weekly-trading-review-template',
   '/blog/de/execution-gap-backtest-vs-live-trading',
   '/blog/de/confidence-vs-overconfidence',
+  '/blog/de/ghost-trades-journaling-missed-opportunities',
+  '/blog/de/breakeven-stop-too-early',
+  '/blog/de/revenge-trading-kill-switch',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

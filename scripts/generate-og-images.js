@@ -121,6 +121,9 @@ const articles = [
   { slug: 'de-weekly-trading-review-template', title: 'Woechentliches Trading-Review:\nDie 15-Minuten-Routine, die\ndeine Verbesserung verzehnfacht', category: 'Verbesserung', color: '#FFB300' },
   { slug: 'de-execution-gap-backtest-vs-live-trading', title: 'Die Ausfuehrungsluecke:\nWarum deine Strategie im Backtest\nfunktioniert, aber live scheitert', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-confidence-vs-overconfidence', title: 'Selbstvertrauen vs\nSelbstueberschaetzung: Die Linie,\ndie Gewinner von Sprengungen trennt', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-ghost-trades-journaling-missed-opportunities', title: 'Ghost Trades: Warum die Trades,\ndie du nicht nimmst, mehr kosten\nals die, die du verlierst', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-breakeven-stop-too-early', title: 'Die $0,01-Luecke:\nWarum du deinen Stop zu frueh\nauf Break-even ziehst', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-revenge-trading-kill-switch', title: 'Der Revenge-Trading-Kill-Switch:\nDas 5-Regeln-Protokoll, das\ndie Spirale stoppt', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
