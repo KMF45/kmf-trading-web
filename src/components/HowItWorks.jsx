@@ -226,6 +226,7 @@ const HowItWorks = () => {
                   <video
                     ref={videoRef}
                     src="/videos/how-it-works.mp4"
+                    poster="/videos/how-it-works-poster.png"
                     muted
                     playsInline
                     preload="auto"
