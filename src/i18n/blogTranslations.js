@@ -87,6 +87,7 @@ const blogTranslations = {
   '10-questions-after-every-trade': {
     en: '/blog/10-questions-after-every-trade',
     ro: '/blog/ro/10-questions-after-every-trade',
+    de: '/blog/de/10-questions-after-every-trade',
   },
   'weekly-trading-review-template': {
     en: '/blog/weekly-trading-review-template',
@@ -141,10 +142,12 @@ const blogTranslations = {
   'tradingview-kmf-workflow': {
     en: '/blog/tradingview-kmf-workflow',
     ro: '/blog/ro/tradingview-kmf-workflow',
+    de: '/blog/de/tradingview-kmf-workflow',
   },
   'strategy-is-not-enough': {
     en: '/blog/strategy-is-not-enough',
     ro: '/blog/ro/strategy-is-not-enough',
+    de: '/blog/de/strategy-is-not-enough',
   },
   'why-traders-fail-at-journaling': {
     en: '/blog/why-traders-fail-at-journaling',

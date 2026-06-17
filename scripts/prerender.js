@@ -118,6 +118,9 @@ const routes = [
   '/blog/de/why-traders-fail-at-journaling',
   '/blog/de/excel-vs-trading-journal-app',
   '/blog/de/ai-trade-review',
+  '/blog/de/10-questions-after-every-trade',
+  '/blog/de/strategy-is-not-enough',
+  '/blog/de/tradingview-kmf-workflow',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

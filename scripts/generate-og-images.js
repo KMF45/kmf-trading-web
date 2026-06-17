@@ -133,6 +133,9 @@ const articles = [
   { slug: 'de-why-traders-fail-at-journaling', title: 'Warum 90 % der Trader\nam Journaling scheitern\n(und wie du dazugehoerst)', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-excel-vs-trading-journal-app', title: 'Warum Excel deine\nTrading-Performance\nlangsam ruiniert', category: 'Verbesserung', color: '#FFB300' },
   { slug: 'de-ai-trade-review', title: 'Wie du KI fuers\nTrade-Review nutzt\n(ohne Kontrollverlust)', category: 'Verbesserung', color: '#FFB300' },
+  { slug: 'de-10-questions-after-every-trade', title: '10 Fragen, die du dir\nnach jedem Trade\nstellen solltest', category: 'Verbesserung', color: '#FFB300' },
+  { slug: 'de-strategy-is-not-enough', title: 'Der Mythos der perfekten\nStrategie: Warum 80 % nichts\nmit Strategie zu tun haben', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-tradingview-kmf-workflow', title: 'TradingView + K.M.F.:\nDer perfekte Workflow\nfuer moderne Trader', category: 'Verbesserung', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
