@@ -246,6 +246,10 @@ async function prerender() {
         /<!-- Structured Data: BreadcrumbList -->[\s\S]*?<\/script>/,
         ''
       );
+      html = html.replace(
+        /<!-- Structured Data: VideoObject -->[\s\S]*?<\/script>/,
+        ''
+      );
     }
 
     // Write to dist
