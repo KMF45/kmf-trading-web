@@ -121,6 +121,13 @@ const routes = [
   '/blog/de/10-questions-after-every-trade',
   '/blog/de/strategy-is-not-enough',
   '/blog/de/tradingview-kmf-workflow',
+  '/blog/de/is-100-enough-to-start-forex',
+  '/blog/de/weekend-gap-risk',
+  '/blog/de/monday-effect-trading',
+  '/blog/de/worst-trading-excuses',
+  '/blog/de/metatrader-pre-trade-checklist',
+  '/blog/de/scared-money-prop-firm',
+  '/blog/de/best-free-trading-journal-app-android-2026',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

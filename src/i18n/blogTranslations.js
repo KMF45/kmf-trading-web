@@ -19,6 +19,7 @@ const blogTranslations = {
   'is-100-enough-to-start-forex': {
     en: '/blog/is-100-enough-to-start-forex',
     ro: '/blog/ro/is-100-enough-to-start-forex',
+    de: '/blog/de/is-100-enough-to-start-forex',
   },
   'revenge-trading': {
     en: '/blog/revenge-trading',
@@ -78,6 +79,7 @@ const blogTranslations = {
   'weekend-gap-risk': {
     en: '/blog/weekend-gap-risk',
     ro: '/blog/ro/weekend-gap-risk',
+    de: '/blog/de/weekend-gap-risk',
   },
   'pre-trade-checklist': {
     en: '/blog/pre-trade-checklist',
@@ -177,14 +179,17 @@ const blogTranslations = {
   'monday-effect-trading': {
     en: '/blog/monday-effect-trading',
     ro: '/blog/ro/monday-effect-trading',
+    de: '/blog/de/monday-effect-trading',
   },
   'worst-trading-excuses': {
     en: '/blog/worst-trading-excuses',
     ro: '/blog/ro/worst-trading-excuses',
+    de: '/blog/de/worst-trading-excuses',
   },
   'metatrader-pre-trade-checklist': {
     en: '/blog/metatrader-pre-trade-checklist',
     ro: '/blog/ro/metatrader-pre-trade-checklist',
+    de: '/blog/de/metatrader-pre-trade-checklist',
   },
   'static-vs-trailing-drawdown': {
     en: '/blog/static-vs-trailing-drawdown',
@@ -204,10 +209,12 @@ const blogTranslations = {
   'scared-money-prop-firm': {
     en: '/blog/scared-money-prop-firm',
     ro: '/blog/ro/scared-money-prop-firm',
+    de: '/blog/de/scared-money-prop-firm',
   },
   'best-free-trading-journal-app-android-2026': {
     en: '/blog/best-free-trading-journal-app-android-2026',
     ro: '/blog/ro/best-free-trading-journal-app-android-2026',
+    de: '/blog/de/best-free-trading-journal-app-android-2026',
   },
 };
 

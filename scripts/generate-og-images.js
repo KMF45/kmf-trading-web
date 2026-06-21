@@ -136,6 +136,13 @@ const articles = [
   { slug: 'de-10-questions-after-every-trade', title: '10 Fragen, die du dir\nnach jedem Trade\nstellen solltest', category: 'Verbesserung', color: '#FFB300' },
   { slug: 'de-strategy-is-not-enough', title: 'Der Mythos der perfekten\nStrategie: Warum 80 % nichts\nmit Strategie zu tun haben', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-tradingview-kmf-workflow', title: 'TradingView + K.M.F.:\nDer perfekte Workflow\nfuer moderne Trader', category: 'Verbesserung', color: '#FFB300' },
+  { slug: 'de-is-100-enough-to-start-forex', title: 'Reichen 100 $, um\nForex zu traden?\nDie brutale Wahrheit', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-weekend-gap-risk', title: 'Weekend-Gap-Risiko:\nWie du dein Konto vor\nMontags Ueberraschung schuetzt', category: 'Risikomanagement', color: '#00C853' },
+  { slug: 'de-monday-effect-trading', title: 'Der Montags-Effekt:\nWarum Montag der schlechteste\nTag zum aggressiven Traden ist', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-worst-trading-excuses', title: 'Die 7 schlimmsten Ausreden,\ndie Trader sich erzaehlen\n(und wie dein Journal sie entlarvt)', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-metatrader-pre-trade-checklist', title: 'MetaTrader-Checkliste:\n5 Regeln vor jedem\nEinstieg, die wirklich haften', category: 'Disziplin', color: '#FFB300' },
+  { slug: 'de-scared-money-prop-firm', title: 'Scared Money: Warum sich\ndein 100k-Prop-Konto\nwie eine Last anfuehlt', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'de-best-free-trading-journal-app-android-2026', title: 'Die beste kostenlose\nTrading-Journal-App\nfuer Android 2026', category: 'App-Reviews', color: '#4FC3F7' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
