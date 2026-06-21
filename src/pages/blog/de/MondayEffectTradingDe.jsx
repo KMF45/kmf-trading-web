@@ -1,6 +1,7 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../../components/blog/BlogArticleLayout';
+import { MondayEffectChart } from '../../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
 
 export default function MondayEffectTradingDe() {
@@ -96,6 +97,8 @@ export default function MondayEffectTradingDe() {
       <P>
         Die Ironie ist auffällig: Retail-Trader sind am aktivsten an dem Tag, der die wenigsten hochwertigen Gelegenheiten bietet. Dienstag bis Donnerstag, wenn die Bedingungen am besten sind, sind sie oft schon emotional erschöpft von Montags impulsiven Trades.
       </P>
+
+      <MondayEffectChart />
 
       <H2>Praktische Anpassungen für Montage</H2>
       <H3>1. Reduziere deine Positionsgröße</H3>

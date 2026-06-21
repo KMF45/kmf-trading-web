@@ -693,6 +693,40 @@ export const Callout = ({ title, children, color = '#4FC3F7' }) => (
   </div>
 );
 
+// Figure — real screenshots / generated diagrams in article body.
+// `phone` = portrait app screenshot (constrained width, centered). Otherwise full-width.
+// `width`/`height` = intrinsic pixel size of the asset → prevents layout shift (CLS).
+// `alt` is REQUIRED (SEO + accessibility); `caption` shows muted below the image.
+export const Figure = ({ src, alt, caption, phone = false, width, height }) => (
+  <figure className="my-8" style={{ textAlign: 'center' }}>
+    <div
+      className="inline-block rounded-2xl overflow-hidden align-top"
+      style={{
+        maxWidth: phone ? 340 : '100%',
+        width: '100%',
+        border: '1px solid rgba(255,255,255,0.08)',
+        background: 'rgba(255,255,255,0.02)',
+        boxShadow: '0 8px 30px rgba(0,0,0,0.35)',
+      }}
+    >
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading="lazy"
+        decoding="async"
+        style={{ display: 'block', width: '100%', height: 'auto' }}
+      />
+    </div>
+    {caption && (
+      <figcaption className="text-xs text-kmf-text-secondary mt-3" style={{ opacity: 0.7 }}>
+        {caption}
+      </figcaption>
+    )}
+  </figure>
+);
+
 function useInView(ref, { once = true, rootMargin = '0px 0px -60px 0px' } = {}) {
   const [inView, setInView] = useState(false);
   useEffect(() => {

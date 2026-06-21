@@ -1,6 +1,7 @@
 import BlogArticleLayout, {
   Intro, H2, H3, P, Ul, Callout, Takeaways, Table, Divider, StatsStrip
 } from '../../../components/blog/BlogArticleLayout';
+import { MondayEffectChart } from '../../../components/blog/BlogCharts';
 import { Link } from 'react-router-dom';
 
 export default function MondayEffectTradingRo() {
@@ -96,6 +97,8 @@ export default function MondayEffectTradingRo() {
       <P>
         Ironia e izbitoare: traderii retail sunt cei mai activi în ziua care oferă cele mai puține oportunități de calitate. De marți până joi, când condițiile sunt cele mai bune, sunt adesea deja epuizați emoțional de la trade-urile impulsive de luni.
       </P>
+
+      <MondayEffectChart />
 
       <H2>Ajustări Practice pentru Luni</H2>
       <H3>1. Redu-ți Position Size-ul</H3>

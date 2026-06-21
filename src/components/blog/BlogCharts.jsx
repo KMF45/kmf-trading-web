@@ -89,3 +89,4 @@ export const BreakevenExpectancyChart = makeLazyChart('BreakevenExpectancyChart'
 export const ScaredMoneyChart = makeLazyChart('ScaredMoneyChart');
 export const LottoTicketChart = makeLazyChart('LottoTicketChart');
 export const ProspectTheoryChart = makeLazyChart('ProspectTheoryChart');
+export const MondayEffectChart = makeLazyChart('MondayEffectChart');

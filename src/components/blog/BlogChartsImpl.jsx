@@ -581,3 +581,41 @@ export function ProspectTheoryChart() {
     </ChartWrapper>
   );
 }
+
+// ─── Monday Effect: Average R per Trade by Day of Week ───
+export function MondayEffectChart() {
+  const data = [
+    { day: 'Mon', r: -0.15, color: COLORS.red },
+    { day: 'Tue', r: 0.34, color: COLORS.green },
+    { day: 'Wed', r: 0.42, color: COLORS.green },
+    { day: 'Thu', r: 0.30, color: COLORS.green },
+    { day: 'Fri', r: 0.08, color: COLORS.gold },
+  ];
+
+  return (
+    <ChartWrapper title="Average R per Trade by Day of Week (Representative Pattern)">
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data} margin={chartMargin} barCategoryGap="30%">
+          <CartesianGrid strokeDasharray="3 3" stroke={COLORS.gridLine} />
+          <XAxis dataKey="day" stroke={COLORS.text} tick={{ fontSize: 12 }} />
+          <YAxis
+            stroke={COLORS.text}
+            tick={{ fontSize: 12 }}
+            tickFormatter={v => `${v > 0 ? '+' : ''}${v.toFixed(2)}R`}
+          />
+          <Tooltip content={<CustomTooltip formatter={v => `${v > 0 ? '+' : ''}${v.toFixed(2)}R`} />} />
+          <ReferenceLine y={0} stroke={COLORS.text} strokeOpacity={0.5} />
+          <Bar dataKey="r" name="Avg R" radius={[6, 6, 0, 0]}>
+            {data.map((entry, i) => (
+              <Cell key={i} fill={entry.color} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+      <p style={{ textAlign: 'center', color: COLORS.text, fontSize: 12, marginTop: 8 }}>
+        Illustrative pattern: Monday bleeds while midweek carries the edge. Track your own
+        journal by weekday — the shape is what matters, not the exact numbers.
+      </p>
+    </ChartWrapper>
+  );
+}
