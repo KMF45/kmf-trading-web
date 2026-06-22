@@ -1,0 +1,73 @@
+# K.M.F. Trading Journal
+
+> K.M.F. Trading Journal is a free trading journal app for Android that helps forex, futures, crypto and prop-firm traders log trades, track statistics (win rate, profit factor, R-multiple, expectancy), enforce risk rules, and improve discipline. This site (kmfjournal.com) is the product's landing page plus an educational blog and a set of free trading calculators. There is no web app and no login — the journal itself runs on Android.
+
+## Key facts
+- Product: K.M.F. Trading Journal — Android trading journal app (free to start).
+- What it does: trade logging, performance analytics, risk management, trading psychology tools, prop-firm drawdown tracking.
+- Audience: retail forex/futures/crypto traders and prop-firm (funded) traders.
+- Languages: site content is available in English (default), Romanian (`/ro/`) and German (`/de/`).
+- The website uses no tracking, no accounts and no Firebase; Firebase is used only inside the Android app (described in the Privacy Policy).
+
+## Main pages
+- [Home](https://kmfjournal.com/): product overview, features, pricing and download.
+- [About](https://kmfjournal.com/about): what K.M.F. Trading Journal is and who it is for.
+- [Blog index](https://kmfjournal.com/blog): all educational articles on trading discipline, risk and statistics.
+- [Privacy Policy](https://kmfjournal.com/privacy-policy)
+- [Terms of Service](https://kmfjournal.com/terms-of-service)
+
+## Free trading tools (calculators)
+- [Lot Size Calculator](https://kmfjournal.com/tools/lot-size-calculator): position size from account risk %, stop distance and pair.
+- [Risk of Ruin Calculator](https://kmfjournal.com/tools/risk-of-ruin): probability of blowing an account given win rate and risk.
+- [Win Rate / R:R Matrix](https://kmfjournal.com/tools/win-rate-rr-matrix): which win-rate and reward-to-risk combos are profitable.
+- [Compound Calculator](https://kmfjournal.com/tools/compound-calculator): account growth projection over time.
+- [Pre-Trade Checklist](https://kmfjournal.com/tools/pre-trade-checklist): interactive checklist before entering a trade.
+
+## Blog — statistics & metrics
+- [Profit Factor vs Win Rate](https://kmfjournal.com/blog/profit-factor-vs-win-rate)
+- [R-Multiple Explained](https://kmfjournal.com/blog/r-multiple-explained)
+- [Trading Expectancy Explained](https://kmfjournal.com/blog/trading-expectancy-explained)
+- [Market Order vs Limit Order](https://kmfjournal.com/blog/market-order-vs-limit-order)
+
+## Blog — risk management
+- [The 1% Risk Rule](https://kmfjournal.com/blog/1-percent-risk-rule)
+- [Position Sizing Guide](https://kmfjournal.com/blog/position-sizing-guide)
+- [How to Set a Stop Loss](https://kmfjournal.com/blog/how-to-set-stop-loss)
+- [Prop Firm Daily Drawdown Guide](https://kmfjournal.com/blog/prop-firm-daily-drawdown-guide)
+- [Static vs Trailing Drawdown](https://kmfjournal.com/blog/static-vs-trailing-drawdown)
+- [Weekend Gap Risk](https://kmfjournal.com/blog/weekend-gap-risk)
+- [Is $100 Enough to Start Forex?](https://kmfjournal.com/blog/is-100-enough-to-start-forex)
+
+## Blog — psychology
+- [Revenge Trading](https://kmfjournal.com/blog/revenge-trading)
+- [Tilt Recovery Protocol](https://kmfjournal.com/blog/tilt-recovery-protocol)
+- [Analysis Paralysis in Trading](https://kmfjournal.com/blog/analysis-paralysis-trading)
+- [Confidence vs Overconfidence](https://kmfjournal.com/blog/confidence-vs-overconfidence)
+- [Prospect Theory in Trading](https://kmfjournal.com/blog/prospect-theory-trading)
+- [Trading vs Gambling](https://kmfjournal.com/blog/trading-vs-gambling)
+- [How to Recover From a Losing Streak](https://kmfjournal.com/blog/how-to-recover-from-losing-streak)
+
+## Blog — discipline & process
+- [Why Traders Break Their Rules](https://kmfjournal.com/blog/why-traders-break-their-rules)
+- [10 Questions After Every Trade](https://kmfjournal.com/blog/10-questions-after-every-trade)
+- [Weekly Trading Review Template](https://kmfjournal.com/blog/weekly-trading-review-template)
+- [Overtrading Checklist](https://kmfjournal.com/blog/overtrading-checklist)
+- [Strategy Is Not Enough](https://kmfjournal.com/blog/strategy-is-not-enough)
+- [Good Loss vs Bad Win](https://kmfjournal.com/blog/good-loss-vs-bad-win)
+
+## Blog — journaling & product
+- [What Is K.M.F. Trading Journal?](https://kmfjournal.com/blog/what-is-kmf-trading-journal)
+- [Best Free Trading Journal App for Android (2026)](https://kmfjournal.com/blog/best-free-trading-journal-app-android-2026)
+- [Why Traders Fail at Journaling](https://kmfjournal.com/blog/why-traders-fail-at-journaling)
+- [Excel vs a Trading Journal App](https://kmfjournal.com/blog/excel-vs-trading-journal-app)
+- [Prop Firm Trading Journal](https://kmfjournal.com/blog/prop-firm-trading-journal)
+- [Crypto vs Forex Journaling](https://kmfjournal.com/blog/crypto-vs-forex-journaling)
+- [Ghost Trades: Journaling Missed Opportunities](https://kmfjournal.com/blog/ghost-trades-journaling-missed-opportunities)
+- [Execution Gap: Backtest vs Live Trading](https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading)
+- [TradingView + K.M.F. Workflow](https://kmfjournal.com/blog/tradingview-kmf-workflow)
+- [AI Trade Review](https://kmfjournal.com/blog/ai-trade-review)
+
+## Optional
+- [Full URL list (sitemap)](https://kmfjournal.com/sitemap.xml): every page including all Romanian (`/blog/ro/...`) and German (`/blog/de/...`) translations and category pages.
+- [RSS feed](https://kmfjournal.com/rss.xml): latest blog articles.
+- Blog categories: [Psychology](https://kmfjournal.com/blog/category/psychology), [Risk Management](https://kmfjournal.com/blog/category/risk-management), [Statistics](https://kmfjournal.com/blog/category/statistics), [Improvement](https://kmfjournal.com/blog/category/improvement), [Discipline](https://kmfjournal.com/blog/category/discipline), [App Reviews](https://kmfjournal.com/blog/category/app-reviews).
