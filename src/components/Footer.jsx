@@ -1,4 +1,4 @@
-import { FaEnvelope, FaInstagram, FaTiktok, FaReddit } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram, FaTiktok, FaYoutube, FaPinterest } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -42,7 +42,7 @@ const Footer = () => {
                 <FaEnvelope className="text-2xl" />
               </a>
               <a
-                href="https://www.instagram.com/kmf.45.ai"
+                href="https://www.instagram.com/kmfjournal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
@@ -51,7 +51,7 @@ const Footer = () => {
                 <FaInstagram className="text-2xl" />
               </a>
               <a
-                href="https://www.tiktok.com/@kmf.45"
+                href="https://www.tiktok.com/@kmf.journal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
@@ -60,7 +60,7 @@ const Footer = () => {
                 <FaTiktok className="text-2xl" />
               </a>
               <a
-                href="https://x.com/KMF_45"
+                href="https://x.com/kmfjournal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
@@ -69,13 +69,22 @@ const Footer = () => {
                 <FaXTwitter className="text-2xl" />
               </a>
               <a
-                href="https://www.reddit.com/user/kmf_45"
+                href="https://www.youtube.com/@KMF.JOURNAL"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
-                aria-label="Reddit"
+                aria-label="YouTube"
               >
-                <FaReddit className="text-2xl" />
+                <FaYoutube className="text-2xl" />
+              </a>
+              <a
+                href="https://pinterest.com/contactkmfjournal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
+                aria-label="Pinterest"
+              >
+                <FaPinterest className="text-2xl" />
               </a>
             </div>
           </div>

@@ -96,7 +96,14 @@ export default function AboutPage() {
       description: 'Professional trading journal app built by active traders. Track trades, analyze performance, and improve discipline.',
       foundingDate: '2025',
       email: 'kmf45.ai@gmail.com',
-      sameAs: ['https://github.com/KMF45'],
+      sameAs: [
+        'https://github.com/KMF45',
+        'https://www.instagram.com/kmfjournal',
+        'https://x.com/kmfjournal',
+        'https://www.tiktok.com/@kmf.journal',
+        'https://www.youtube.com/@KMF.JOURNAL',
+        'https://pinterest.com/contactkmfjournal',
+      ],
     });
 
     addLd('ld-about-breadcrumb', {
