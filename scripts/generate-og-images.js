@@ -156,6 +156,9 @@ const articles = [
   { slug: 'fr-trading-expectancy-explained', title: 'L\'esperance en trading :\nla formule qui dit si\nta strategie fonctionne', category: 'Statistiques', color: '#4FC3F7' },
   { slug: 'fr-r-multiple-explained', title: 'Le R-multiple explique :\nmesurer la qualite d\'un trade\n(pas juste le profit)', category: 'Statistiques', color: '#4FC3F7' },
   { slug: 'fr-how-to-set-stop-loss', title: 'Comment placer un\nstop loss correctement\n(pas au hasard)', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-good-loss-vs-bad-win', title: 'Bonnes pertes, mauvais gains :\npourquoi le trade dont tu es\nfier est peut-etre le pire', category: 'Amelioration', color: '#FFB300' },
+  { slug: 'fr-why-traders-fail-at-journaling', title: 'Pourquoi 90 % des traders\nechouent a tenir un journal\n(et comment etre dans les 10 %)', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-confidence-vs-overconfidence', title: 'Confiance vs surconfiance :\nla ligne invisible qui separe\nles gagnants des comptes crames', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

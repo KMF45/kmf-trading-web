@@ -85,6 +85,7 @@ const blogTranslations = {
     en: '/blog/good-loss-vs-bad-win',
     ro: '/blog/ro/good-loss-vs-bad-win',
     de: '/blog/de/good-loss-vs-bad-win',
+    fr: '/blog/fr/good-loss-vs-bad-win',
   },
   'weekend-gap-risk': {
     en: '/blog/weekend-gap-risk',
@@ -125,6 +126,7 @@ const blogTranslations = {
     en: '/blog/confidence-vs-overconfidence',
     ro: '/blog/ro/confidence-vs-overconfidence',
     de: '/blog/de/confidence-vs-overconfidence',
+    fr: '/blog/fr/confidence-vs-overconfidence',
   },
   'tilt-recovery-protocol': {
     en: '/blog/tilt-recovery-protocol',
@@ -167,6 +169,7 @@ const blogTranslations = {
     en: '/blog/why-traders-fail-at-journaling',
     ro: '/blog/ro/why-traders-fail-at-journaling',
     de: '/blog/de/why-traders-fail-at-journaling',
+    fr: '/blog/fr/why-traders-fail-at-journaling',
   },
   'overtrading-checklist': {
     en: '/blog/overtrading-checklist',

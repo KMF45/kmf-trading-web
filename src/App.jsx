@@ -155,6 +155,9 @@ const ProfitFactorVsWinRateFr = lazy(() => import('./pages/blog/fr/ProfitFactorV
 const TradingExpectancyExplainedFr = lazy(() => import('./pages/blog/fr/TradingExpectancyExplainedFr'));
 const RMultipleExplainedFr = lazy(() => import('./pages/blog/fr/RMultipleExplainedFr'));
 const HowToSetStopLossFr = lazy(() => import('./pages/blog/fr/HowToSetStopLossFr'));
+const GoodLossVsBadWinFr = lazy(() => import('./pages/blog/fr/GoodLossVsBadWinFr'));
+const WhyTradersFailAtJournalingFr = lazy(() => import('./pages/blog/fr/WhyTradersFailAtJournalingFr'));
+const ConfidenceVsOverconfidenceFr = lazy(() => import('./pages/blog/fr/ConfidenceVsOverconfidenceFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -352,6 +355,9 @@ function App() {
           <Route path="/blog/fr/trading-expectancy-explained" element={<TradingExpectancyExplainedFr />} />
           <Route path="/blog/fr/r-multiple-explained" element={<RMultipleExplainedFr />} />
           <Route path="/blog/fr/how-to-set-stop-loss" element={<HowToSetStopLossFr />} />
+          <Route path="/blog/fr/good-loss-vs-bad-win" element={<GoodLossVsBadWinFr />} />
+          <Route path="/blog/fr/why-traders-fail-at-journaling" element={<WhyTradersFailAtJournalingFr />} />
+          <Route path="/blog/fr/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidenceFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

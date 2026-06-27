@@ -141,6 +141,9 @@ const routes = [
   '/blog/fr/trading-expectancy-explained',
   '/blog/fr/r-multiple-explained',
   '/blog/fr/how-to-set-stop-loss',
+  '/blog/fr/good-loss-vs-bad-win',
+  '/blog/fr/why-traders-fail-at-journaling',
+  '/blog/fr/confidence-vs-overconfidence',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

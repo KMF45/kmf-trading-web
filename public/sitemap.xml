@@ -675,6 +675,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
     <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -685,6 +686,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
     <lastmod>2026-06-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -695,8 +697,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/good-loss-vs-bad-win"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
     <lastmod>2026-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/good-loss-vs-bad-win</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/good-loss-vs-bad-win"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/good-loss-vs-bad-win"/>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -913,6 +927,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -923,6 +938,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -933,8 +949,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/why-traders-fail-at-journaling"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
     <lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/why-traders-fail-at-journaling</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/why-traders-fail-at-journaling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/why-traders-fail-at-journaling"/>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1093,6 +1121,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/confidence-vs-overconfidence"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/confidence-vs-overconfidence"/>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1103,6 +1132,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/confidence-vs-overconfidence"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/confidence-vs-overconfidence"/>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1113,8 +1143,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/confidence-vs-overconfidence"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/confidence-vs-overconfidence"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/confidence-vs-overconfidence"/>
     <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/confidence-vs-overconfidence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/confidence-vs-overconfidence"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/confidence-vs-overconfidence"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/confidence-vs-overconfidence"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/confidence-vs-overconfidence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/confidence-vs-overconfidence"/>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
