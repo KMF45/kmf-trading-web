@@ -143,6 +143,19 @@ const articles = [
   { slug: 'de-metatrader-pre-trade-checklist', title: 'MetaTrader-Checkliste:\n5 Regeln vor jedem\nEinstieg, die wirklich haften', category: 'Disziplin', color: '#FFB300' },
   { slug: 'de-scared-money-prop-firm', title: 'Scared Money: Warum sich\ndein 100k-Prop-Konto\nwie eine Last anfuehlt', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-best-free-trading-journal-app-android-2026', title: 'Die beste kostenlose\nTrading-Journal-App\nfuer Android 2026', category: 'App-Reviews', color: '#4FC3F7' },
+  // French
+  { slug: 'fr-what-is-kmf-trading-journal', title: 'Qu\'est-ce que K.M.F.\nTrading Journal ? L\'app\nconstruite par des traders', category: 'Avis Applications', color: '#4FC3F7' },
+  { slug: 'fr-excel-vs-trading-journal-app', title: 'Pourquoi Excel tue\nlentement ta performance\nde trading', category: 'Amelioration', color: '#FFB300' },
+  { slug: 'fr-tradingview-kmf-workflow', title: 'TradingView + K.M.F. :\nle workflow parfait\ndu trader moderne', category: 'Amelioration', color: '#FFB300' },
+  { slug: 'fr-revenge-trading', title: 'Le revenge trading :\nle tueur de comptes n1\net comment l\'arreter', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-trading-vs-gambling', title: 'Quand le trading\ndevient un pari\n(et comment l\'eviter)', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-analysis-paralysis-trading', title: 'Paralysie d\'analyse :\npourquoi tu n\'arrives pas\na appuyer sur la gachette', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-1-percent-risk-rule', title: 'La regle des 1 % :\nce qui garde les pros\nen vie', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-position-sizing-guide', title: 'Dimensionnement :\ncombien dois-tu\ntrader ?', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate :\nquelle metrique predit\nvraiment le succes ?', category: 'Statistiques', color: '#4FC3F7' },
+  { slug: 'fr-trading-expectancy-explained', title: 'L\'esperance en trading :\nla formule qui dit si\nta strategie fonctionne', category: 'Statistiques', color: '#4FC3F7' },
+  { slug: 'fr-r-multiple-explained', title: 'Le R-multiple explique :\nmesurer la qualite d\'un trade\n(pas juste le profit)', category: 'Statistiques', color: '#4FC3F7' },
+  { slug: 'fr-how-to-set-stop-loss', title: 'Comment placer un\nstop loss correctement\n(pas au hasard)', category: 'Gestion du risque', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

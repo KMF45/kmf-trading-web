@@ -5,16 +5,19 @@ const blogTranslations = {
     en: '/blog/what-is-kmf-trading-journal',
     ro: '/blog/ro/what-is-kmf-trading-journal',
     de: '/blog/de/what-is-kmf-trading-journal',
+    fr: '/blog/fr/what-is-kmf-trading-journal',
   },
   'trading-vs-gambling': {
     en: '/blog/trading-vs-gambling',
     ro: '/blog/ro/trading-vs-gambling',
     de: '/blog/de/trading-vs-gambling',
+    fr: '/blog/fr/trading-vs-gambling',
   },
   'analysis-paralysis-trading': {
     en: '/blog/analysis-paralysis-trading',
     ro: '/blog/ro/analysis-paralysis-trading',
     de: '/blog/de/analysis-paralysis-trading',
+    fr: '/blog/fr/analysis-paralysis-trading',
   },
   'is-100-enough-to-start-forex': {
     en: '/blog/is-100-enough-to-start-forex',
@@ -25,16 +28,19 @@ const blogTranslations = {
     en: '/blog/revenge-trading',
     ro: '/blog/ro/revenge-trading',
     de: '/blog/de/revenge-trading',
+    fr: '/blog/fr/revenge-trading',
   },
   'trading-expectancy-explained': {
     en: '/blog/trading-expectancy-explained',
     ro: '/blog/ro/trading-expectancy-explained',
     de: '/blog/de/trading-expectancy-explained',
+    fr: '/blog/fr/trading-expectancy-explained',
   },
   '1-percent-risk-rule': {
     en: '/blog/1-percent-risk-rule',
     ro: '/blog/ro/1-percent-risk-rule',
     de: '/blog/de/1-percent-risk-rule',
+    fr: '/blog/fr/1-percent-risk-rule',
   },
   'how-to-recover-from-losing-streak': {
     en: '/blog/how-to-recover-from-losing-streak',
@@ -45,21 +51,25 @@ const blogTranslations = {
     en: '/blog/profit-factor-vs-win-rate',
     ro: '/blog/ro/profit-factor-vs-win-rate',
     de: '/blog/de/profit-factor-vs-win-rate',
+    fr: '/blog/fr/profit-factor-vs-win-rate',
   },
   'position-sizing-guide': {
     en: '/blog/position-sizing-guide',
     ro: '/blog/ro/position-sizing-guide',
     de: '/blog/de/position-sizing-guide',
+    fr: '/blog/fr/position-sizing-guide',
   },
   'how-to-set-stop-loss': {
     en: '/blog/how-to-set-stop-loss',
     ro: '/blog/ro/how-to-set-stop-loss',
     de: '/blog/de/how-to-set-stop-loss',
+    fr: '/blog/fr/how-to-set-stop-loss',
   },
   'r-multiple-explained': {
     en: '/blog/r-multiple-explained',
     ro: '/blog/ro/r-multiple-explained',
     de: '/blog/de/r-multiple-explained',
+    fr: '/blog/fr/r-multiple-explained',
   },
   'crypto-vs-forex-journaling': {
     en: '/blog/crypto-vs-forex-journaling',
@@ -135,6 +145,7 @@ const blogTranslations = {
     en: '/blog/excel-vs-trading-journal-app',
     ro: '/blog/ro/excel-vs-trading-journal-app',
     de: '/blog/de/excel-vs-trading-journal-app',
+    fr: '/blog/fr/excel-vs-trading-journal-app',
   },
   'ai-trade-review': {
     en: '/blog/ai-trade-review',
@@ -145,6 +156,7 @@ const blogTranslations = {
     en: '/blog/tradingview-kmf-workflow',
     ro: '/blog/ro/tradingview-kmf-workflow',
     de: '/blog/de/tradingview-kmf-workflow',
+    fr: '/blog/fr/tradingview-kmf-workflow',
   },
   'strategy-is-not-enough': {
     en: '/blog/strategy-is-not-enough',

@@ -142,6 +142,20 @@ const WorstTradingExcusesDe = lazy(() => import('./pages/blog/de/WorstTradingExc
 const MetatraderPreTradeChecklistDe = lazy(() => import('./pages/blog/de/MetatraderPreTradeChecklistDe'));
 const ScaredMoneyPropFirmDe = lazy(() => import('./pages/blog/de/ScaredMoneyPropFirmDe'));
 
+// Blog articles — French
+const WhatIsKmfTradingJournalFr = lazy(() => import('./pages/blog/fr/WhatIsKmfTradingJournalFr'));
+const ExcelVsTradingJournalFr = lazy(() => import('./pages/blog/fr/ExcelVsTradingJournalFr'));
+const TradingViewKmfWorkflowFr = lazy(() => import('./pages/blog/fr/TradingViewKmfWorkflowFr'));
+const RevengeTradingFr = lazy(() => import('./pages/blog/fr/RevengeTradingFr'));
+const TradingVsGamblingFr = lazy(() => import('./pages/blog/fr/TradingVsGamblingFr'));
+const AnalysisParalysisTradingFr = lazy(() => import('./pages/blog/fr/AnalysisParalysisTradingFr'));
+const OnePercentRiskRuleFr = lazy(() => import('./pages/blog/fr/OnePercentRiskRuleFr'));
+const PositionSizingGuideFr = lazy(() => import('./pages/blog/fr/PositionSizingGuideFr'));
+const ProfitFactorVsWinRateFr = lazy(() => import('./pages/blog/fr/ProfitFactorVsWinRateFr'));
+const TradingExpectancyExplainedFr = lazy(() => import('./pages/blog/fr/TradingExpectancyExplainedFr'));
+const RMultipleExplainedFr = lazy(() => import('./pages/blog/fr/RMultipleExplainedFr'));
+const HowToSetStopLossFr = lazy(() => import('./pages/blog/fr/HowToSetStopLossFr'));
+
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsOfServicePage = lazy(() => import('./pages/TermsOfServicePage'));
@@ -324,6 +338,20 @@ function App() {
           <Route path="/blog/de/worst-trading-excuses" element={<WorstTradingExcusesDe />} />
           <Route path="/blog/de/metatrader-pre-trade-checklist" element={<MetatraderPreTradeChecklistDe />} />
           <Route path="/blog/de/scared-money-prop-firm" element={<ScaredMoneyPropFirmDe />} />
+
+          {/* Blog — French */}
+          <Route path="/blog/fr/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalFr />} />
+          <Route path="/blog/fr/excel-vs-trading-journal-app" element={<ExcelVsTradingJournalFr />} />
+          <Route path="/blog/fr/tradingview-kmf-workflow" element={<TradingViewKmfWorkflowFr />} />
+          <Route path="/blog/fr/revenge-trading" element={<RevengeTradingFr />} />
+          <Route path="/blog/fr/trading-vs-gambling" element={<TradingVsGamblingFr />} />
+          <Route path="/blog/fr/analysis-paralysis-trading" element={<AnalysisParalysisTradingFr />} />
+          <Route path="/blog/fr/1-percent-risk-rule" element={<OnePercentRiskRuleFr />} />
+          <Route path="/blog/fr/position-sizing-guide" element={<PositionSizingGuideFr />} />
+          <Route path="/blog/fr/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRateFr />} />
+          <Route path="/blog/fr/trading-expectancy-explained" element={<TradingExpectancyExplainedFr />} />
+          <Route path="/blog/fr/r-multiple-explained" element={<RMultipleExplainedFr />} />
+          <Route path="/blog/fr/how-to-set-stop-loss" element={<HowToSetStopLossFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
