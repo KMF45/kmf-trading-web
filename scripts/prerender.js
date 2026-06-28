@@ -156,6 +156,9 @@ const routes = [
   '/blog/fr/execution-gap-backtest-vs-live-trading',
   '/blog/fr/10-questions-after-every-trade',
   '/blog/fr/weekly-trading-review-template',
+  '/blog/fr/prospect-theory-trading',
+  '/blog/fr/lotto-ticket-syndrome',
+  '/blog/fr/breakeven-stop-too-early',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

@@ -170,6 +170,9 @@ const OvertradingChecklistFr = lazy(() => import('./pages/blog/fr/OvertradingChe
 const ExecutionGapFr = lazy(() => import('./pages/blog/fr/ExecutionGapFr'));
 const TenQuestionsAfterEveryTradeFr = lazy(() => import('./pages/blog/fr/TenQuestionsAfterEveryTradeFr'));
 const WeeklyTradingReviewTemplateFr = lazy(() => import('./pages/blog/fr/WeeklyTradingReviewTemplateFr'));
+const ProspectTheoryTradingFr = lazy(() => import('./pages/blog/fr/ProspectTheoryTradingFr'));
+const LottoTicketSyndromeFr = lazy(() => import('./pages/blog/fr/LottoTicketSyndromeFr'));
+const BreakevenStopTooEarlyFr = lazy(() => import('./pages/blog/fr/BreakevenStopTooEarlyFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -382,6 +385,9 @@ function App() {
           <Route path="/blog/fr/execution-gap-backtest-vs-live-trading" element={<ExecutionGapFr />} />
           <Route path="/blog/fr/10-questions-after-every-trade" element={<TenQuestionsAfterEveryTradeFr />} />
           <Route path="/blog/fr/weekly-trading-review-template" element={<WeeklyTradingReviewTemplateFr />} />
+          <Route path="/blog/fr/prospect-theory-trading" element={<ProspectTheoryTradingFr />} />
+          <Route path="/blog/fr/lotto-ticket-syndrome" element={<LottoTicketSyndromeFr />} />
+          <Route path="/blog/fr/breakeven-stop-too-early" element={<BreakevenStopTooEarlyFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

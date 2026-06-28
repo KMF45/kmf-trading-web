@@ -171,6 +171,9 @@ const articles = [
   { slug: 'fr-execution-gap-backtest-vs-live-trading', title: 'L\'ecart d\'execution :\npourquoi ta strategie marche\nen backtest mais echoue en reel', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-10-questions-after-every-trade', title: '10 questions que chaque\ntrader devrait se poser\napres chaque trade', category: 'Amelioration', color: '#FFB300' },
   { slug: 'fr-weekly-trading-review-template', title: 'Revue de trading hebdo :\nla routine de 15 min qui\ndecuple ta progression', category: 'Amelioration', color: '#FFB300' },
+  { slug: 'fr-prospect-theory-trading', title: 'Pourquoi tu clotures tes\ngagnants trop tot et laisses\ncourir tes perdants', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-lotto-ticket-syndrome', title: 'Le syndrome du ticket de loto :\npourquoi tu augmentes ton\nrisque apres un gros gain', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-breakeven-stop-too-early', title: 'Pourquoi tu deplaces ton\nstop au breakeven trop tot\n(et detruis ton esperance)', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

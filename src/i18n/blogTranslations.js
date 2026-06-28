@@ -127,6 +127,7 @@ const blogTranslations = {
     en: '/blog/prospect-theory-trading',
     ro: '/blog/ro/prospect-theory-trading',
     de: '/blog/de/prospect-theory-trading',
+    fr: '/blog/fr/prospect-theory-trading',
   },
   'confidence-vs-overconfidence': {
     en: '/blog/confidence-vs-overconfidence',
@@ -144,11 +145,13 @@ const blogTranslations = {
     en: '/blog/lotto-ticket-syndrome',
     ro: '/blog/ro/lotto-ticket-syndrome',
     de: '/blog/de/lotto-ticket-syndrome',
+    fr: '/blog/fr/lotto-ticket-syndrome',
   },
   'breakeven-stop-too-early': {
     en: '/blog/breakeven-stop-too-early',
     ro: '/blog/ro/breakeven-stop-too-early',
     de: '/blog/de/breakeven-stop-too-early',
+    fr: '/blog/fr/breakeven-stop-too-early',
   },
   'excel-vs-trading-journal-app': {
     en: '/blog/excel-vs-trading-journal-app',
