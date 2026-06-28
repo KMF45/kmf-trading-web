@@ -153,6 +153,9 @@ const routes = [
   '/blog/fr/revenge-trading-kill-switch',
   '/blog/fr/tilt-recovery-protocol',
   '/blog/fr/overtrading-checklist',
+  '/blog/fr/execution-gap-backtest-vs-live-trading',
+  '/blog/fr/10-questions-after-every-trade',
+  '/blog/fr/weekly-trading-review-template',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

@@ -167,6 +167,9 @@ const PropFirmDailyDrawdownFr = lazy(() => import('./pages/blog/fr/PropFirmDaily
 const RevengeTradingKillSwitchFr = lazy(() => import('./pages/blog/fr/RevengeTradingKillSwitchFr'));
 const TiltRecoveryProtocolFr = lazy(() => import('./pages/blog/fr/TiltRecoveryProtocolFr'));
 const OvertradingChecklistFr = lazy(() => import('./pages/blog/fr/OvertradingChecklistFr'));
+const ExecutionGapFr = lazy(() => import('./pages/blog/fr/ExecutionGapFr'));
+const TenQuestionsAfterEveryTradeFr = lazy(() => import('./pages/blog/fr/TenQuestionsAfterEveryTradeFr'));
+const WeeklyTradingReviewTemplateFr = lazy(() => import('./pages/blog/fr/WeeklyTradingReviewTemplateFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -376,6 +379,9 @@ function App() {
           <Route path="/blog/fr/revenge-trading-kill-switch" element={<RevengeTradingKillSwitchFr />} />
           <Route path="/blog/fr/tilt-recovery-protocol" element={<TiltRecoveryProtocolFr />} />
           <Route path="/blog/fr/overtrading-checklist" element={<OvertradingChecklistFr />} />
+          <Route path="/blog/fr/execution-gap-backtest-vs-live-trading" element={<ExecutionGapFr />} />
+          <Route path="/blog/fr/10-questions-after-every-trade" element={<TenQuestionsAfterEveryTradeFr />} />
+          <Route path="/blog/fr/weekly-trading-review-template" element={<WeeklyTradingReviewTemplateFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

@@ -168,6 +168,9 @@ const articles = [
   { slug: 'fr-revenge-trading-kill-switch', title: 'Le kill switch anti-revenge :\nle protocole en 5 regles\nqui stoppe la spirale', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-tilt-recovery-protocol', title: 'Recuperation du tilt :\nles 60 premieres minutes\napres une grosse perte', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-overtrading-checklist', title: 'Overtrading : 8 signes\nque tu es en tilt\nsans t\'en rendre compte', category: 'Discipline', color: '#FFB300' },
+  { slug: 'fr-execution-gap-backtest-vs-live-trading', title: 'L\'ecart d\'execution :\npourquoi ta strategie marche\nen backtest mais echoue en reel', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-10-questions-after-every-trade', title: '10 questions que chaque\ntrader devrait se poser\napres chaque trade', category: 'Amelioration', color: '#FFB300' },
+  { slug: 'fr-weekly-trading-review-template', title: 'Revue de trading hebdo :\nla routine de 15 min qui\ndecuple ta progression', category: 'Amelioration', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

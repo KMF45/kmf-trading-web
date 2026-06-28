@@ -289,6 +289,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/weekly-trading-review-template"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekly-trading-review-template"/>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -299,6 +300,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/weekly-trading-review-template"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekly-trading-review-template"/>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -309,8 +311,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/weekly-trading-review-template"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/weekly-trading-review-template"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekly-trading-review-template"/>
     <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/weekly-trading-review-template</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekly-trading-review-template"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekly-trading-review-template"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/weekly-trading-review-template"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/weekly-trading-review-template"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekly-trading-review-template"/>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -451,6 +465,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/10-questions-after-every-trade"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/10-questions-after-every-trade"/>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -461,6 +476,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/10-questions-after-every-trade"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/10-questions-after-every-trade"/>
     <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -471,8 +487,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/10-questions-after-every-trade"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/10-questions-after-every-trade"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/10-questions-after-every-trade"/>
     <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/10-questions-after-every-trade</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/10-questions-after-every-trade"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/10-questions-after-every-trade"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/10-questions-after-every-trade"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/10-questions-after-every-trade"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/10-questions-after-every-trade"/>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -643,6 +671,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/execution-gap-backtest-vs-live-trading"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading"/>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -653,6 +682,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/execution-gap-backtest-vs-live-trading"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading"/>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -663,8 +693,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/execution-gap-backtest-vs-live-trading"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/execution-gap-backtest-vs-live-trading"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading"/>
     <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/execution-gap-backtest-vs-live-trading</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/execution-gap-backtest-vs-live-trading"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/execution-gap-backtest-vs-live-trading"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/execution-gap-backtest-vs-live-trading"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/execution-gap-backtest-vs-live-trading"/>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

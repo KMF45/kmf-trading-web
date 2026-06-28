@@ -103,16 +103,19 @@ const blogTranslations = {
     en: '/blog/10-questions-after-every-trade',
     ro: '/blog/ro/10-questions-after-every-trade',
     de: '/blog/de/10-questions-after-every-trade',
+    fr: '/blog/fr/10-questions-after-every-trade',
   },
   'weekly-trading-review-template': {
     en: '/blog/weekly-trading-review-template',
     ro: '/blog/ro/weekly-trading-review-template',
     de: '/blog/de/weekly-trading-review-template',
+    fr: '/blog/fr/weekly-trading-review-template',
   },
   'execution-gap-backtest-vs-live-trading': {
     en: '/blog/execution-gap-backtest-vs-live-trading',
     ro: '/blog/ro/execution-gap-backtest-vs-live-trading',
     de: '/blog/de/execution-gap-backtest-vs-live-trading',
+    fr: '/blog/fr/execution-gap-backtest-vs-live-trading',
   },
   'ghost-trades-journaling-missed-opportunities': {
     en: '/blog/ghost-trades-journaling-missed-opportunities',
