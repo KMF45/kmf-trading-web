@@ -161,6 +161,9 @@ const ConfidenceVsOverconfidenceFr = lazy(() => import('./pages/blog/fr/Confiden
 const GhostTradesFr = lazy(() => import('./pages/blog/fr/GhostTradesFr'));
 const WhyTradersBreakRulesFr = lazy(() => import('./pages/blog/fr/WhyTradersBreakRulesFr'));
 const HowToRecoverFromLosingStreakFr = lazy(() => import('./pages/blog/fr/HowToRecoverFromLosingStreakFr'));
+const PropFirmJournalFr = lazy(() => import('./pages/blog/fr/PropFirmJournalFr'));
+const StaticVsTrailingDrawdownFr = lazy(() => import('./pages/blog/fr/StaticVsTrailingDrawdownFr'));
+const PropFirmDailyDrawdownFr = lazy(() => import('./pages/blog/fr/PropFirmDailyDrawdownFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -364,6 +367,9 @@ function App() {
           <Route path="/blog/fr/ghost-trades-journaling-missed-opportunities" element={<GhostTradesFr />} />
           <Route path="/blog/fr/why-traders-break-their-rules" element={<WhyTradersBreakRulesFr />} />
           <Route path="/blog/fr/how-to-recover-from-losing-streak" element={<HowToRecoverFromLosingStreakFr />} />
+          <Route path="/blog/fr/prop-firm-trading-journal" element={<PropFirmJournalFr />} />
+          <Route path="/blog/fr/static-vs-trailing-drawdown" element={<StaticVsTrailingDrawdownFr />} />
+          <Route path="/blog/fr/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdownFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

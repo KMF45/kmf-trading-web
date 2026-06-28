@@ -147,6 +147,9 @@ const routes = [
   '/blog/fr/ghost-trades-journaling-missed-opportunities',
   '/blog/fr/why-traders-break-their-rules',
   '/blog/fr/how-to-recover-from-losing-streak',
+  '/blog/fr/prop-firm-trading-journal',
+  '/blog/fr/static-vs-trailing-drawdown',
+  '/blog/fr/prop-firm-daily-drawdown-guide',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

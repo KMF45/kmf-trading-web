@@ -162,6 +162,9 @@ const articles = [
   { slug: 'fr-ghost-trades-journaling-missed-opportunities', title: 'Ghost trades : pourquoi les\ntrades que tu ne prends pas\ncoutent plus que tes pertes', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-why-traders-break-their-rules', title: 'Pourquoi tu enfreins tes\npropres regles de trading\n(et comment arreter)', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-how-to-recover-from-losing-streak', title: 'Comment se remettre\nd\'une serie de pertes\nsans cramer ton compte', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-prop-firm-trading-journal', title: 'Tueurs de prop firms :\ncomment un journal sauve\nton compte funded', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-static-vs-trailing-drawdown', title: 'Static vs trailing drawdown :\nla regle prop firm qui tue\nles comptes funded', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-prop-firm-daily-drawdown-guide', title: 'Daily drawdown : un systeme\nen 5 regles pour ne plus\njamais le depasser', category: 'Gestion du risque', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

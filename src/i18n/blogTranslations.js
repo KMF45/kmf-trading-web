@@ -213,16 +213,19 @@ const blogTranslations = {
     en: '/blog/static-vs-trailing-drawdown',
     ro: '/blog/ro/static-vs-trailing-drawdown',
     de: '/blog/de/static-vs-trailing-drawdown',
+    fr: '/blog/fr/static-vs-trailing-drawdown',
   },
   'prop-firm-trading-journal': {
     en: '/blog/prop-firm-trading-journal',
     ro: '/blog/ro/prop-firm-trading-journal',
     de: '/blog/de/prop-firm-trading-journal',
+    fr: '/blog/fr/prop-firm-trading-journal',
   },
   'prop-firm-daily-drawdown-guide': {
     en: '/blog/prop-firm-daily-drawdown-guide',
     ro: '/blog/ro/prop-firm-daily-drawdown-guide',
     de: '/blog/de/prop-firm-daily-drawdown-guide',
+    fr: '/blog/fr/prop-firm-daily-drawdown-guide',
   },
   'scared-money-prop-firm': {
     en: '/blog/scared-money-prop-firm',
