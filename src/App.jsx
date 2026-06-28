@@ -158,6 +158,9 @@ const HowToSetStopLossFr = lazy(() => import('./pages/blog/fr/HowToSetStopLossFr
 const GoodLossVsBadWinFr = lazy(() => import('./pages/blog/fr/GoodLossVsBadWinFr'));
 const WhyTradersFailAtJournalingFr = lazy(() => import('./pages/blog/fr/WhyTradersFailAtJournalingFr'));
 const ConfidenceVsOverconfidenceFr = lazy(() => import('./pages/blog/fr/ConfidenceVsOverconfidenceFr'));
+const GhostTradesFr = lazy(() => import('./pages/blog/fr/GhostTradesFr'));
+const WhyTradersBreakRulesFr = lazy(() => import('./pages/blog/fr/WhyTradersBreakRulesFr'));
+const HowToRecoverFromLosingStreakFr = lazy(() => import('./pages/blog/fr/HowToRecoverFromLosingStreakFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -358,6 +361,9 @@ function App() {
           <Route path="/blog/fr/good-loss-vs-bad-win" element={<GoodLossVsBadWinFr />} />
           <Route path="/blog/fr/why-traders-fail-at-journaling" element={<WhyTradersFailAtJournalingFr />} />
           <Route path="/blog/fr/confidence-vs-overconfidence" element={<ConfidenceVsOverconfidenceFr />} />
+          <Route path="/blog/fr/ghost-trades-journaling-missed-opportunities" element={<GhostTradesFr />} />
+          <Route path="/blog/fr/why-traders-break-their-rules" element={<WhyTradersBreakRulesFr />} />
+          <Route path="/blog/fr/how-to-recover-from-losing-streak" element={<HowToRecoverFromLosingStreakFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

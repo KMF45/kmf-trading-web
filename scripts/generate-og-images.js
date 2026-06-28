@@ -159,6 +159,9 @@ const articles = [
   { slug: 'fr-good-loss-vs-bad-win', title: 'Bonnes pertes, mauvais gains :\npourquoi le trade dont tu es\nfier est peut-etre le pire', category: 'Amelioration', color: '#FFB300' },
   { slug: 'fr-why-traders-fail-at-journaling', title: 'Pourquoi 90 % des traders\nechouent a tenir un journal\n(et comment etre dans les 10 %)', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-confidence-vs-overconfidence', title: 'Confiance vs surconfiance :\nla ligne invisible qui separe\nles gagnants des comptes crames', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-ghost-trades-journaling-missed-opportunities', title: 'Ghost trades : pourquoi les\ntrades que tu ne prends pas\ncoutent plus que tes pertes', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-why-traders-break-their-rules', title: 'Pourquoi tu enfreins tes\npropres regles de trading\n(et comment arreter)', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-how-to-recover-from-losing-streak', title: 'Comment se remettre\nd\'une serie de pertes\nsans cramer ton compte', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

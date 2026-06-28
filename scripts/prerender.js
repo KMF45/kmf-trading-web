@@ -144,6 +144,9 @@ const routes = [
   '/blog/fr/good-loss-vs-bad-win',
   '/blog/fr/why-traders-fail-at-journaling',
   '/blog/fr/confidence-vs-overconfidence',
+  '/blog/fr/ghost-trades-journaling-missed-opportunities',
+  '/blog/fr/why-traders-break-their-rules',
+  '/blog/fr/how-to-recover-from-losing-streak',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

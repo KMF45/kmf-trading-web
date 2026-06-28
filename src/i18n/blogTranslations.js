@@ -46,6 +46,7 @@ const blogTranslations = {
     en: '/blog/how-to-recover-from-losing-streak',
     ro: '/blog/ro/how-to-recover-from-losing-streak',
     de: '/blog/de/how-to-recover-from-losing-streak',
+    fr: '/blog/fr/how-to-recover-from-losing-streak',
   },
   'profit-factor-vs-win-rate': {
     en: '/blog/profit-factor-vs-win-rate',
@@ -80,6 +81,7 @@ const blogTranslations = {
     en: '/blog/why-traders-break-their-rules',
     ro: '/blog/ro/why-traders-break-their-rules',
     de: '/blog/de/why-traders-break-their-rules',
+    fr: '/blog/fr/why-traders-break-their-rules',
   },
   'good-loss-vs-bad-win': {
     en: '/blog/good-loss-vs-bad-win',
@@ -116,6 +118,7 @@ const blogTranslations = {
     en: '/blog/ghost-trades-journaling-missed-opportunities',
     ro: '/blog/ro/ghost-trades-journaling-missed-opportunities',
     de: '/blog/de/ghost-trades-journaling-missed-opportunities',
+    fr: '/blog/fr/ghost-trades-journaling-missed-opportunities',
   },
   'prospect-theory-trading': {
     en: '/blog/prospect-theory-trading',
