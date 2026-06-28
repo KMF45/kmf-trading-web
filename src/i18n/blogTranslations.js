@@ -135,6 +135,7 @@ const blogTranslations = {
     en: '/blog/tilt-recovery-protocol',
     ro: '/blog/ro/tilt-recovery-protocol',
     de: '/blog/de/tilt-recovery-protocol',
+    fr: '/blog/fr/tilt-recovery-protocol',
   },
   'lotto-ticket-syndrome': {
     en: '/blog/lotto-ticket-syndrome',
@@ -178,11 +179,13 @@ const blogTranslations = {
     en: '/blog/overtrading-checklist',
     ro: '/blog/ro/overtrading-checklist',
     de: '/blog/de/overtrading-checklist',
+    fr: '/blog/fr/overtrading-checklist',
   },
   'revenge-trading-kill-switch': {
     en: '/blog/revenge-trading-kill-switch',
     ro: '/blog/ro/revenge-trading-kill-switch',
     de: '/blog/de/revenge-trading-kill-switch',
+    fr: '/blog/fr/revenge-trading-kill-switch',
   },
   'market-order-vs-limit-order': {
     en: '/blog/market-order-vs-limit-order',

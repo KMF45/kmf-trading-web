@@ -165,6 +165,9 @@ const articles = [
   { slug: 'fr-prop-firm-trading-journal', title: 'Tueurs de prop firms :\ncomment un journal sauve\nton compte funded', category: 'Gestion du risque', color: '#00C853' },
   { slug: 'fr-static-vs-trailing-drawdown', title: 'Static vs trailing drawdown :\nla regle prop firm qui tue\nles comptes funded', category: 'Gestion du risque', color: '#00C853' },
   { slug: 'fr-prop-firm-daily-drawdown-guide', title: 'Daily drawdown : un systeme\nen 5 regles pour ne plus\njamais le depasser', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-revenge-trading-kill-switch', title: 'Le kill switch anti-revenge :\nle protocole en 5 regles\nqui stoppe la spirale', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-tilt-recovery-protocol', title: 'Recuperation du tilt :\nles 60 premieres minutes\napres une grosse perte', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-overtrading-checklist', title: 'Overtrading : 8 signes\nque tu es en tilt\nsans t\'en rendre compte', category: 'Discipline', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

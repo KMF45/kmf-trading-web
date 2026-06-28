@@ -150,6 +150,9 @@ const routes = [
   '/blog/fr/prop-firm-trading-journal',
   '/blog/fr/static-vs-trailing-drawdown',
   '/blog/fr/prop-firm-daily-drawdown-guide',
+  '/blog/fr/revenge-trading-kill-switch',
+  '/blog/fr/tilt-recovery-protocol',
+  '/blog/fr/overtrading-checklist',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

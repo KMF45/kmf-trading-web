@@ -164,6 +164,9 @@ const HowToRecoverFromLosingStreakFr = lazy(() => import('./pages/blog/fr/HowToR
 const PropFirmJournalFr = lazy(() => import('./pages/blog/fr/PropFirmJournalFr'));
 const StaticVsTrailingDrawdownFr = lazy(() => import('./pages/blog/fr/StaticVsTrailingDrawdownFr'));
 const PropFirmDailyDrawdownFr = lazy(() => import('./pages/blog/fr/PropFirmDailyDrawdownFr'));
+const RevengeTradingKillSwitchFr = lazy(() => import('./pages/blog/fr/RevengeTradingKillSwitchFr'));
+const TiltRecoveryProtocolFr = lazy(() => import('./pages/blog/fr/TiltRecoveryProtocolFr'));
+const OvertradingChecklistFr = lazy(() => import('./pages/blog/fr/OvertradingChecklistFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -370,6 +373,9 @@ function App() {
           <Route path="/blog/fr/prop-firm-trading-journal" element={<PropFirmJournalFr />} />
           <Route path="/blog/fr/static-vs-trailing-drawdown" element={<StaticVsTrailingDrawdownFr />} />
           <Route path="/blog/fr/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdownFr />} />
+          <Route path="/blog/fr/revenge-trading-kill-switch" element={<RevengeTradingKillSwitchFr />} />
+          <Route path="/blog/fr/tilt-recovery-protocol" element={<TiltRecoveryProtocolFr />} />
+          <Route path="/blog/fr/overtrading-checklist" element={<OvertradingChecklistFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
