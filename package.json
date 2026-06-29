@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "generate-og": "node scripts/generate-og-images.js",
-    "prebuild": "node scripts/generate-og-images.js",
+    "generate-fr-rss": "node scripts/generate-fr-rss.js",
+    "prebuild": "node scripts/generate-og-images.js && node scripts/generate-fr-rss.js",
     "build": "vite build && node scripts/prerender.js",
     "preview": "vite preview"
   },

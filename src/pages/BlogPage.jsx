@@ -4,6 +4,7 @@ import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
 import BlogCoverArt from '../components/blog/BlogCoverArt';
 import { useLanguage } from '../i18n/LanguageContext';
+import blogTranslations from '../i18n/blogTranslations';
 
 export const posts = [
   {
@@ -482,6 +483,12 @@ const BLOG_UI = {
 export default function BlogPage() {
   const { lang } = useLanguage();
   const ui = BLOG_UI[lang] || BLOG_UI.en;
+  // Link each post to its localized version when one exists, else fall back to EN.
+  // Keeps EN untouched (lang === 'en' always returns /blog/<slug>).
+  const localizedHref = (slug) =>
+    (lang !== 'en' && blogTranslations[slug] && blogTranslations[slug][lang])
+      ? blogTranslations[slug][lang]
+      : `/blog/${slug}`;
   const [searchQuery, setSearchQuery] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeIdx, setActiveIdx] = useState(0);
@@ -522,7 +529,7 @@ export default function BlogPage() {
     } else if (e.key === 'Enter') {
       e.preventDefault();
       const target = autocomplete[activeIdx];
-      if (target) window.location.href = `/blog/${target.slug}`;
+      if (target) window.location.href = localizedHref(target.slug);
     } else if (e.key === 'Escape') {
       setShowDropdown(false);
       inputRef.current?.blur();
@@ -705,7 +712,7 @@ export default function BlogPage() {
                 {autocomplete.map((p, i) => (
                   <Link
                     key={p.slug}
-                    to={`/blog/${p.slug}`}
+                    to={localizedHref(p.slug)}
                     onClick={() => setShowDropdown(false)}
                     onMouseEnter={() => setActiveIdx(i)}
                     className="flex items-start gap-3 px-4 py-3 transition-colors"
@@ -830,7 +837,7 @@ export default function BlogPage() {
               return (
                 <Link
                   key={post.slug}
-                  to={`/blog/${post.slug}`}
+                  to={localizedHref(post.slug)}
                   className={`group rounded-2xl border overflow-hidden transition-all duration-200 hover:-translate-y-0.5 ${
                     featured ? 'lg:col-span-2 lg:flex lg:flex-row' : 'flex flex-col'
                   }`}

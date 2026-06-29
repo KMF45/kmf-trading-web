@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K.M.F. Trading Journal Blog (Français)</title>
+    <link>https://kmfjournal.com/blog</link>
+    <description>Analyses de trading, guides de l'application et conseils pour traders sérieux. Le blog K.M.F. Trading Journal, en français.</description>
+    <language>fr-fr</language>
+    <lastBuildDate>Mon, 08 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://kmfjournal.com/blog/fr/rss.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://kmfjournal.com/logo.png</url>
+      <title>K.M.F. Trading Journal Blog (Français)</title>
+      <link>https://kmfjournal.com/blog</link>
+    </image>
+
+    <item>
+      <title>Paralysie d'analyse : pourquoi tu n'arrives pas à appuyer sur la gâchette (et comment t'en libérer)</title>
+      <link>https://kmfjournal.com/blog/fr/analysis-paralysis-trading</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/analysis-paralysis-trading</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Tu vois le setup. Il est parfait. Et tu te figes — puis tu le regardes partir sans toi. Pourquoi la paralysie d'analyse arrive, ce qu'elle te coûte vraiment et le système qui te remet à cliquer.</description>
+    </item>
+
+    <item>
+      <title>Quand le trading devient un pari (et comment l'éviter)</title>
+      <link>https://kmfjournal.com/blog/fr/trading-vs-gambling</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/trading-vs-gambling</guid>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Où finit le trading et où commence le pari ? La ligne mathématique est plus nette que tu ne le crois — et un journal de trading est ce qui te place du bon côté.</description>
+    </item>
+
+    <item>
+      <title>L'écart de 0,01 $ : pourquoi tu déplaces ton stop loss au breakeven trop tôt</title>
+      <link>https://kmfjournal.com/blog/fr/breakeven-stop-too-early</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/breakeven-stop-too-early</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Tu déplaces ton stop au breakeven pour « protéger tes profits ». Mais les maths disent que tu détruis ton espérance. La psychologie derrière les stops breakeven prématurés et comment la corriger.</description>
+    </item>
+
+    <item>
+      <title>Le syndrome du « ticket de loto » : pourquoi tu augmentes ton risque après un gros gain</title>
+      <link>https://kmfjournal.com/blog/fr/lotto-ticket-syndrome</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/lotto-ticket-syndrome</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Après un gros gain, ton cerveau est inondé de dopamine et tu te sens invincible. Puis tu doubles ton risque et perds le profit d'une semaine en un trade. La neuroscience de l'euphorie post-gain.</description>
+    </item>
+
+    <item>
+      <title>Pourquoi tu clôtures tes gagnants trop tôt et laisses courir tes perdants</title>
+      <link>https://kmfjournal.com/blog/fr/prospect-theory-trading</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/prospect-theory-trading</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Ton cerveau valorise éviter une perte de 100 $ 2,25× plus que gagner 100 $. Cette asymétrie biologique explique pourquoi tu coupes tes gagnants et gardes tes perdants. La neuroscience et comment la contourner.</description>
+    </item>
+
+    <item>
+      <title>Le kill switch anti-revenge trading : un protocole dont ton futur toi te remerciera</title>
+      <link>https://kmfjournal.com/blog/fr/revenge-trading-kill-switch</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/revenge-trading-kill-switch</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Un protocole concret et pré-programmé pour arrêter le revenge trading avant qu'il ne commence. Basé sur la recherche sur le cortisol, avec des règles automatiques que tu fixes au calme et suis en tilt.</description>
+    </item>
+
+    <item>
+      <title>Static vs trailing drawdown : la règle prop firm qui tue silencieusement les comptes funded</title>
+      <link>https://kmfjournal.com/blog/fr/static-vs-trailing-drawdown</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/static-vs-trailing-drawdown</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>La plupart des échecs en prop firm arrivent parce que les traders ne comprennent pas la différence entre static et trailing drawdown. Apprends comment chacun se calcule, pourquoi le trailing est un piège, et comment survivre aux deux.</description>
+    </item>
+
+    <item>
+      <title>Confiance vs surconfiance : la ligne invisible qui sépare les gagnants des comptes cramés</title>
+      <link>https://kmfjournal.com/blog/fr/confidence-vs-overconfidence</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/confidence-vs-overconfidence</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Apprends la différence cruciale entre une confiance de trading saine bâtie sur les données et une surconfiance dangereuse alimentée par les séries gagnantes. Inclut un tableau d'auto-évaluation et des méthodes de suivi concrètes.</description>
+    </item>
+
+    <item>
+      <title>Checklist de l'overtrading : 8 signes que tu es en tilt sans t'en rendre compte</title>
+      <link>https://kmfjournal.com/blog/fr/overtrading-checklist</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/overtrading-checklist</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Discipline</category>
+      <description>L'overtrading est le tueur de compte silencieux. Apprends 8 signes d'alerte concrets que tu es en tilt, la psychologie derrière chacun, et comment te rattraper avant que le mal soit fait.</description>
+    </item>
+
+    <item>
+      <title>Scaling in vs scaling out : quelle méthode détruit le moins de comptes ?</title>
+      <link>https://kmfjournal.com/blog/fr/scaling-in-vs-scaling-out</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/scaling-in-vs-scaling-out</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>Pourquoi le scaling out fait du bien mais est mathématiquement pire pour la plupart des traders. Les maths cachées de l'ajout aux positions, de la prise de profits partiels, et ce qui marche vraiment.</description>
+    </item>
+
+    <item>
+      <title>Protocole de récupération du tilt : ce que font les top traders dans les 60 premières minutes après une grosse perte</title>
+      <link>https://kmfjournal.com/blog/fr/tilt-recovery-protocol</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/tilt-recovery-protocol</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Un protocole étape par étape pour les 60 minutes critiques après une perte majeure. Apprends la séquence exacte que les top traders utilisent pour récupérer mentalement et protéger leur capital.</description>
+    </item>
+
+    <item>
+      <title>Qu'est-ce que K.M.F. Trading Journal ? L'app construite par des traders lassés des tableurs</title>
+      <link>https://kmfjournal.com/blog/fr/what-is-kmf-trading-journal</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/what-is-kmf-trading-journal</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Avis Applications</category>
+      <description>K.M.F. Trading Journal est une application Android gratuite pour les traders forex, actions et crypto. Suivi psychologique, détection de tilt, calculateur de lot et statistiques avancées — construite par des traders qui tradent vraiment.</description>
+    </item>
+
+    <item>
+      <title>Pourquoi 90 % des traders échouent à tenir un journal (et comment être dans les 10 %)</title>
+      <link>https://kmfjournal.com/blog/fr/why-traders-fail-at-journaling</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/why-traders-fail-at-journaling</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>La plupart des traders savent que tenir un journal marche, mais abandonnent en quelques semaines. Découvre les 5 barrières psychologiques qui tuent l'habitude et des solutions concrètes pour chacune.</description>
+    </item>
+
+    <item>
+      <title>Pourquoi Excel est en train de tuer lentement ta performance de trading</title>
+      <link>https://kmfjournal.com/blog/fr/excel-vs-trading-journal-app</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/excel-vs-trading-journal-app</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Amélioration</category>
+      <description>Excel donne une impression de productivité, mais il nuit silencieusement à ton trading. Erreurs de calcul, saisie incohérente et zéro automatisation. Découvre pourquoi une application de journal dédiée surpasse les tableurs.</description>
+    </item>
+
+    <item>
+      <title>Comment ne plus jamais dépasser le daily drawdown : un guide de survie prop firm</title>
+      <link>https://kmfjournal.com/blog/fr/prop-firm-daily-drawdown-guide</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/prop-firm-daily-drawdown-guide</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>La règle du daily drawdown tue plus de comptes prop firm que les mauvais trades. Apprends à utiliser un journal de trading avec checklists et gestion du risque pour protéger ton compte funded.</description>
+    </item>
+
+    <item>
+      <title>Le mythe de la stratégie parfaite : pourquoi le même setup rend un trader riche et un autre fauché</title>
+      <link>https://kmfjournal.com/blog/fr/strategy-is-not-enough</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/strategy-is-not-enough</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Deux traders, même stratégie, résultats opposés. La différence n'est pas le système — c'est la psychologie, les habitudes et l'exécution sous pression. Voici ce qui rend vraiment les traders rentables.</description>
+    </item>
+
+    <item>
+      <title>TradingView + K.M.F. Journal : le workflow parfait du trader moderne</title>
+      <link>https://kmfjournal.com/blog/fr/tradingview-kmf-workflow</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/tradingview-kmf-workflow</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Amélioration</category>
+      <description>Apprends le workflow étape par étape utilisé par les traders disciplinés : analyser sur TradingView, exécuter chez ton broker et journaliser dans K.M.F. — le workflow de trading moderne complet.</description>
+    </item>
+
+    <item>
+      <title>Ghost trades : pourquoi les trades que tu ne prends pas te coûtent plus que ceux que tu perds</title>
+      <link>https://kmfjournal.com/blog/fr/ghost-trades-journaling-missed-opportunities</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/ghost-trades-journaling-missed-opportunities</guid>
+      <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Les trades que tu sautes par peur ou hésitation surperforment souvent ceux que tu prends. Apprends à journaliser les occasions manquées et à transformer les ghost trades en ton plus grand edge.</description>
+    </item>
+
+    <item>
+      <title>Bonnes pertes, mauvais gains : pourquoi le trade dont tu es fier est peut-être le pire</title>
+      <link>https://kmfjournal.com/blog/fr/good-loss-vs-bad-win</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/good-loss-vs-bad-win</guid>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Amélioration</category>
+      <description>Un stop loss discipliné peut être ton meilleur trade de la semaine. Un take profit chanceux sans plan peut être le pire. Apprends à évaluer la qualité d'un trade au-delà du P/L.</description>
+    </item>
+
+    <item>
+      <title>Tueurs de prop firms : comment un journal de trading sauve ton compte funded</title>
+      <link>https://kmfjournal.com/blog/fr/prop-firm-trading-journal</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/prop-firm-trading-journal</guid>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>La plupart des échecs en prop firm ne sont pas de mauvais trades — ce sont des règles enfreintes. Apprends comment un journal avec calculateur de risque et checklists évite les dépassements de daily drawdown et garde ton compte funded en vie.</description>
+    </item>
+
+    <item>
+      <title>L'écart d'exécution : pourquoi ta stratégie marche en backtest mais échoue en réel</title>
+      <link>https://kmfjournal.com/blog/fr/execution-gap-backtest-vs-live-trading</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/execution-gap-backtest-vs-live-trading</guid>
+      <pubDate>Sun, 22 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Ta stratégie backtestée a 70 % de win rate. En réel, tu es à 40 %. Le problème n'est pas la stratégie — c'est l'écart entre savoir et faire. Voici comment le combler.</description>
+    </item>
+
+    <item>
+      <title>La checklist pré-trade : 10 choses à vérifier avant chaque entrée</title>
+      <link>https://kmfjournal.com/blog/fr/pre-trade-checklist</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/pre-trade-checklist</guid>
+      <pubDate>Sat, 14 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Discipline</category>
+      <description>Une checklist pré-trade est l'outil le plus efficace pour un trading régulier. Voici 10 questions à vérifier avant d'entrer dans tout trade — adapte-les à ta propre stratégie.</description>
+    </item>
+
+    <item>
+      <title>Guide du dimensionnement de position : combien dois-tu trader ?</title>
+      <link>https://kmfjournal.com/blog/fr/position-sizing-guide</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/position-sizing-guide</guid>
+      <pubDate>Tue, 10 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>Le dimensionnement de position est la compétence la plus sous-estimée du trading. Apprends la formule exacte pour calculer combien trader selon la taille de ton compte, ta tolérance au risque et la distance de ton stop loss.</description>
+    </item>
+
+    <item>
+      <title>Comment placer un stop loss correctement (pas au hasard)</title>
+      <link>https://kmfjournal.com/blog/fr/how-to-set-stop-loss</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/how-to-set-stop-loss</guid>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>La plupart des traders placent leurs stops loss selon des montants en dollars ou des chiffres ronds. Apprends les trois méthodes professionnelles pour placer ton stop là où le marché invalide réellement ton trade.</description>
+    </item>
+
+    <item>
+      <title>L'espérance en trading expliquée : la formule qui dit si ta stratégie fonctionne</title>
+      <link>https://kmfjournal.com/blog/fr/trading-expectancy-explained</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/trading-expectancy-explained</guid>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Statistiques</category>
+      <description>L'espérance est le seul nombre qui te dit si ta stratégie est rentable à long terme. Apprends la formule, comment la calculer et ce qu'elle signifie pour ton trading.</description>
+    </item>
+
+    <item>
+      <title>10 questions que chaque trader devrait se poser après chaque trade</title>
+      <link>https://kmfjournal.com/blog/fr/10-questions-after-every-trade</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/10-questions-after-every-trade</guid>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Amélioration</category>
+      <description>Les questions que tu te poses après un trade comptent plus que le résultat. Voici 10 questions de revue post-trade qui accéléreront ton développement de trader.</description>
+    </item>
+
+    <item>
+      <title>Comment se remettre d'une série de pertes sans cramer ton compte</title>
+      <link>https://kmfjournal.com/blog/fr/how-to-recover-from-losing-streak</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/how-to-recover-from-losing-streak</guid>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Chaque trader affronte des séries de pertes. La différence entre les professionnels et les amateurs est leur façon de réagir. Un guide pratique, étape par étape, pour survivre et récupérer.</description>
+    </item>
+
+    <item>
+      <title>Pourquoi tu enfreins tes propres règles de trading — et comment arrêter</title>
+      <link>https://kmfjournal.com/blog/fr/why-traders-break-their-rules</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/why-traders-break-their-rules</guid>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Tu connais les règles. Tu les as écrites toi-même. Alors pourquoi continues-tu à les enfreindre ? La psychologie de la transgression des règles en trading et des solutions concrètes.</description>
+    </item>
+
+    <item>
+      <title>Le R-multiple expliqué : comment mesurer la qualité d'un trade (pas juste le profit)</title>
+      <link>https://kmfjournal.com/blog/fr/r-multiple-explained</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/r-multiple-explained</guid>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Statistiques</category>
+      <description>Le R-multiple est la façon la plus honnête d'évaluer tes trades. Apprends ce que signifie R, comment le calculer et pourquoi un trade à −50 $ peut être meilleur qu'un trade à +200 $.</description>
+    </item>
+
+    <item>
+      <title>Comment faire une revue de trading hebdomadaire (avec un modèle complet)</title>
+      <link>https://kmfjournal.com/blog/fr/weekly-trading-review-template</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/weekly-trading-review-template</guid>
+      <pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Amélioration</category>
+      <description>Un guide étape par étape pour mener une vraie revue de trading hebdomadaire. Inclut un modèle complet avec des questions pour évaluer ta performance, ta discipline et ta stratégie.</description>
+    </item>
+
+    <item>
+      <title>Le revenge trading : ce que c'est, pourquoi ça arrive et comment briser le cycle</title>
+      <link>https://kmfjournal.com/blog/fr/revenge-trading</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/revenge-trading</guid>
+      <pubDate>Tue, 13 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Psychologie</category>
+      <description>Le revenge trading est l'un des moyens les plus rapides de cramer un compte. Comprends la psychologie derrière et apprends des techniques concrètes pour l'arrêter avant qu'il ne commence.</description>
+    </item>
+
+    <item>
+      <title>La règle des 1 % : la règle de trading qui garde les professionnels en vie</title>
+      <link>https://kmfjournal.com/blog/fr/1-percent-risk-rule</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/1-percent-risk-rule</guid>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>Découvre pourquoi les traders professionnels ne risquent jamais plus de 1 % par trade, comment le calculer et comment ça protège ton compte pendant les séries de pertes.</description>
+    </item>
+
+    <item>
+      <title>Profit factor vs win rate : quelle métrique prédit vraiment le succès en trading ?</title>
+      <link>https://kmfjournal.com/blog/fr/profit-factor-vs-win-rate</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/profit-factor-vs-win-rate</guid>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 +0000</pubDate>
+      <category>Statistiques</category>
+      <description>La plupart des traders sont obsédés par le win rate. Mais le profit factor est un bien meilleur prédicteur du succès à long terme. Découvre ce que signifient les deux métriques, comment les calculer et laquelle optimiser.</description>
+    </item>
+
+  </channel>
+</rss>
