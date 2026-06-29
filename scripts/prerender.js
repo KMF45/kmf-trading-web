@@ -165,6 +165,9 @@ const routes = [
   '/blog/fr/ai-trade-review',
   '/blog/fr/crypto-vs-forex-journaling',
   '/blog/fr/market-order-vs-limit-order',
+  '/blog/fr/is-100-enough-to-start-forex',
+  '/blog/fr/weekend-gap-risk',
+  '/blog/fr/monday-effect-trading',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

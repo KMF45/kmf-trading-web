@@ -180,6 +180,9 @@ const articles = [
   { slug: 'fr-ai-trade-review', title: 'Comment utiliser l\'IA\npour la revue de tes trades\n(sans perdre le controle)', category: 'Amelioration', color: '#FFB300' },
   { slug: 'fr-crypto-vs-forex-journaling', title: 'Crypto vs forex : pourquoi\nton journal a besoin de regles\ndifferentes pour chaque marche', category: 'Gestion du risque', color: '#00C853' },
   { slug: 'fr-market-order-vs-limit-order', title: 'Ordre au marche vs ordre limite :\nle cout cache qui vide\ndiscretement ton compte', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-is-100-enough-to-start-forex', title: '100 $ suffisent-ils\npour trader le forex ?\nLa verite brutale', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-weekend-gap-risk', title: 'Risque de gap du week-end :\nprotege ton compte de\nla surprise du lundi', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-monday-effect-trading', title: 'L\'effet lundi : pourquoi\nle lundi est le pire jour\npour trader agressivement', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

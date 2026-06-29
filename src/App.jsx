@@ -179,6 +179,9 @@ const StrategyIsNotEnoughFr = lazy(() => import('./pages/blog/fr/StrategyIsNotEn
 const AiTradeReviewFr = lazy(() => import('./pages/blog/fr/AiTradeReviewFr'));
 const CryptoVsForexJournalingFr = lazy(() => import('./pages/blog/fr/CryptoVsForexJournalingFr'));
 const MarketOrderVsLimitOrderFr = lazy(() => import('./pages/blog/fr/MarketOrderVsLimitOrderFr'));
+const IsHundredDollarsEnoughForexFr = lazy(() => import('./pages/blog/fr/IsHundredDollarsEnoughForexFr'));
+const WeekendGapRiskFr = lazy(() => import('./pages/blog/fr/WeekendGapRiskFr'));
+const MondayEffectTradingFr = lazy(() => import('./pages/blog/fr/MondayEffectTradingFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -400,6 +403,9 @@ function App() {
           <Route path="/blog/fr/ai-trade-review" element={<AiTradeReviewFr />} />
           <Route path="/blog/fr/crypto-vs-forex-journaling" element={<CryptoVsForexJournalingFr />} />
           <Route path="/blog/fr/market-order-vs-limit-order" element={<MarketOrderVsLimitOrderFr />} />
+          <Route path="/blog/fr/is-100-enough-to-start-forex" element={<IsHundredDollarsEnoughForexFr />} />
+          <Route path="/blog/fr/weekend-gap-risk" element={<WeekendGapRiskFr />} />
+          <Route path="/blog/fr/monday-effect-trading" element={<MondayEffectTradingFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

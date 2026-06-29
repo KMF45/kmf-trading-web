@@ -1301,6 +1301,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/monday-effect-trading"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1311,6 +1312,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/monday-effect-trading"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1321,8 +1323,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/monday-effect-trading"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/monday-effect-trading"/>
     <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/monday-effect-trading</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/monday-effect-trading"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/monday-effect-trading"/>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1375,6 +1389,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1385,6 +1400,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1395,8 +1411,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
     <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/weekend-gap-risk</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/weekend-gap-risk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1773,6 +1801,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1783,6 +1812,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1793,8 +1823,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/is-100-enough-to-start-forex"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
     <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/is-100-enough-to-start-forex</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/is-100-enough-to-start-forex"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/is-100-enough-to-start-forex"/>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

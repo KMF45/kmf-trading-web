@@ -23,6 +23,7 @@ const blogTranslations = {
     en: '/blog/is-100-enough-to-start-forex',
     ro: '/blog/ro/is-100-enough-to-start-forex',
     de: '/blog/de/is-100-enough-to-start-forex',
+    fr: '/blog/fr/is-100-enough-to-start-forex',
   },
   'revenge-trading': {
     en: '/blog/revenge-trading',
@@ -94,6 +95,7 @@ const blogTranslations = {
     en: '/blog/weekend-gap-risk',
     ro: '/blog/ro/weekend-gap-risk',
     de: '/blog/de/weekend-gap-risk',
+    fr: '/blog/fr/weekend-gap-risk',
   },
   'pre-trade-checklist': {
     en: '/blog/pre-trade-checklist',
@@ -213,6 +215,7 @@ const blogTranslations = {
     en: '/blog/monday-effect-trading',
     ro: '/blog/ro/monday-effect-trading',
     de: '/blog/de/monday-effect-trading',
+    fr: '/blog/fr/monday-effect-trading',
   },
   'worst-trading-excuses': {
     en: '/blog/worst-trading-excuses',
