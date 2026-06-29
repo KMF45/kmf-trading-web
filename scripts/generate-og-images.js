@@ -174,6 +174,9 @@ const articles = [
   { slug: 'fr-prospect-theory-trading', title: 'Pourquoi tu clotures tes\ngagnants trop tot et laisses\ncourir tes perdants', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-lotto-ticket-syndrome', title: 'Le syndrome du ticket de loto :\npourquoi tu augmentes ton\nrisque apres un gros gain', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-breakeven-stop-too-early', title: 'Pourquoi tu deplaces ton\nstop au breakeven trop tot\n(et detruis ton esperance)', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-pre-trade-checklist', title: 'La checklist pre-trade :\n10 choses a verifier\navant chaque entree', category: 'Discipline', color: '#FFB300' },
+  { slug: 'fr-scaling-in-vs-scaling-out', title: 'Scaling in vs scaling out :\nquelle methode detruit\nle moins de comptes ?', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-strategy-is-not-enough', title: 'Le mythe de la strategie\nparfaite : pourquoi 80 % n\'a\nrien a voir avec la strategie', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

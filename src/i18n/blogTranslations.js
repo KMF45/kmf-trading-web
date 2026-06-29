@@ -98,6 +98,7 @@ const blogTranslations = {
     en: '/blog/pre-trade-checklist',
     ro: '/blog/ro/pre-trade-checklist',
     de: '/blog/de/pre-trade-checklist',
+    fr: '/blog/fr/pre-trade-checklist',
   },
   '10-questions-after-every-trade': {
     en: '/blog/10-questions-after-every-trade',
@@ -174,6 +175,7 @@ const blogTranslations = {
     en: '/blog/strategy-is-not-enough',
     ro: '/blog/ro/strategy-is-not-enough',
     de: '/blog/de/strategy-is-not-enough',
+    fr: '/blog/fr/strategy-is-not-enough',
   },
   'why-traders-fail-at-journaling': {
     en: '/blog/why-traders-fail-at-journaling',
@@ -202,6 +204,7 @@ const blogTranslations = {
     en: '/blog/scaling-in-vs-scaling-out',
     ro: '/blog/ro/scaling-in-vs-scaling-out',
     de: '/blog/de/scaling-in-vs-scaling-out',
+    fr: '/blog/fr/scaling-in-vs-scaling-out',
   },
   'monday-effect-trading': {
     en: '/blog/monday-effect-trading',

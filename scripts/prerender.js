@@ -159,6 +159,9 @@ const routes = [
   '/blog/fr/prospect-theory-trading',
   '/blog/fr/lotto-ticket-syndrome',
   '/blog/fr/breakeven-stop-too-early',
+  '/blog/fr/pre-trade-checklist',
+  '/blog/fr/scaling-in-vs-scaling-out',
+  '/blog/fr/strategy-is-not-enough',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

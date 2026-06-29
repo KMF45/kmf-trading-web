@@ -173,6 +173,9 @@ const WeeklyTradingReviewTemplateFr = lazy(() => import('./pages/blog/fr/WeeklyT
 const ProspectTheoryTradingFr = lazy(() => import('./pages/blog/fr/ProspectTheoryTradingFr'));
 const LottoTicketSyndromeFr = lazy(() => import('./pages/blog/fr/LottoTicketSyndromeFr'));
 const BreakevenStopTooEarlyFr = lazy(() => import('./pages/blog/fr/BreakevenStopTooEarlyFr'));
+const PreTradeChecklistFr = lazy(() => import('./pages/blog/fr/PreTradeChecklistFr'));
+const ScalingInVsScalingOutFr = lazy(() => import('./pages/blog/fr/ScalingInVsScalingOutFr'));
+const StrategyIsNotEnoughFr = lazy(() => import('./pages/blog/fr/StrategyIsNotEnoughFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -388,6 +391,9 @@ function App() {
           <Route path="/blog/fr/prospect-theory-trading" element={<ProspectTheoryTradingFr />} />
           <Route path="/blog/fr/lotto-ticket-syndrome" element={<LottoTicketSyndromeFr />} />
           <Route path="/blog/fr/breakeven-stop-too-early" element={<BreakevenStopTooEarlyFr />} />
+          <Route path="/blog/fr/pre-trade-checklist" element={<PreTradeChecklistFr />} />
+          <Route path="/blog/fr/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOutFr />} />
+          <Route path="/blog/fr/strategy-is-not-enough" element={<StrategyIsNotEnoughFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
