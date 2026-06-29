@@ -176,6 +176,9 @@ const BreakevenStopTooEarlyFr = lazy(() => import('./pages/blog/fr/BreakevenStop
 const PreTradeChecklistFr = lazy(() => import('./pages/blog/fr/PreTradeChecklistFr'));
 const ScalingInVsScalingOutFr = lazy(() => import('./pages/blog/fr/ScalingInVsScalingOutFr'));
 const StrategyIsNotEnoughFr = lazy(() => import('./pages/blog/fr/StrategyIsNotEnoughFr'));
+const AiTradeReviewFr = lazy(() => import('./pages/blog/fr/AiTradeReviewFr'));
+const CryptoVsForexJournalingFr = lazy(() => import('./pages/blog/fr/CryptoVsForexJournalingFr'));
+const MarketOrderVsLimitOrderFr = lazy(() => import('./pages/blog/fr/MarketOrderVsLimitOrderFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -394,6 +397,9 @@ function App() {
           <Route path="/blog/fr/pre-trade-checklist" element={<PreTradeChecklistFr />} />
           <Route path="/blog/fr/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOutFr />} />
           <Route path="/blog/fr/strategy-is-not-enough" element={<StrategyIsNotEnoughFr />} />
+          <Route path="/blog/fr/ai-trade-review" element={<AiTradeReviewFr />} />
+          <Route path="/blog/fr/crypto-vs-forex-journaling" element={<CryptoVsForexJournalingFr />} />
+          <Route path="/blog/fr/market-order-vs-limit-order" element={<MarketOrderVsLimitOrderFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

@@ -23,6 +23,15 @@
     </item>
 
     <item>
+      <title>Ordre au marché vs ordre limite : le coût caché qui vide discrètement ton compte</title>
+      <link>https://kmfjournal.com/blog/fr/market-order-vs-limit-order</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/market-order-vs-limit-order</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>Les ordres au marché semblent rapides, mais ils paient discrètement le spread et le slippage sur chaque trade. Le vrai coût des ordres au marché vs limite — et quand utiliser chacun.</description>
+    </item>
+
+    <item>
       <title>Quand le trading devient un pari (et comment l'éviter)</title>
       <link>https://kmfjournal.com/blog/fr/trading-vs-gambling</link>
       <guid isPermaLink="true">https://kmfjournal.com/blog/fr/trading-vs-gambling</guid>
@@ -74,6 +83,15 @@
       <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
       <category>Gestion du risque</category>
       <description>La plupart des échecs en prop firm arrivent parce que les traders ne comprennent pas la différence entre static et trailing drawdown. Apprends comment chacun se calcule, pourquoi le trailing est un piège, et comment survivre aux deux.</description>
+    </item>
+
+    <item>
+      <title>Comment utiliser l'IA pour la revue de tes trades (sans perdre le contrôle de ton processus)</title>
+      <link>https://kmfjournal.com/blog/fr/ai-trade-review</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/ai-trade-review</guid>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <category>Amélioration</category>
+      <description>ChatGPT et Claude peuvent analyser ton journal de trading d'une façon que tu ne pourrais jamais seul. Voici exactement comment utiliser l'IA pour la revue de tes trades — et où tracer la limite.</description>
     </item>
 
     <item>
@@ -164,6 +182,15 @@
       <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
       <category>Amélioration</category>
       <description>Apprends le workflow étape par étape utilisé par les traders disciplinés : analyser sur TradingView, exécuter chez ton broker et journaliser dans K.M.F. — le workflow de trading moderne complet.</description>
+    </item>
+
+    <item>
+      <title>Crypto vs forex : pourquoi ton journal a besoin de règles différentes pour chaque marché</title>
+      <link>https://kmfjournal.com/blog/fr/crypto-vs-forex-journaling</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/fr/crypto-vs-forex-journaling</guid>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0000</pubDate>
+      <category>Gestion du risque</category>
+      <description>Le forex et la crypto se ressemblent sur un graphique mais se comportent complètement différemment. Ton journal, ton dimensionnement et tes règles de risque doivent s'adapter — sinon tu crameras un compte en l'apprenant.</description>
     </item>
 
     <item>

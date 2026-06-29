@@ -162,6 +162,9 @@ const routes = [
   '/blog/fr/pre-trade-checklist',
   '/blog/fr/scaling-in-vs-scaling-out',
   '/blog/fr/strategy-is-not-enough',
+  '/blog/fr/ai-trade-review',
+  '/blog/fr/crypto-vs-forex-journaling',
+  '/blog/fr/market-order-vs-limit-order',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

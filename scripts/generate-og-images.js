@@ -177,6 +177,9 @@ const articles = [
   { slug: 'fr-pre-trade-checklist', title: 'La checklist pre-trade :\n10 choses a verifier\navant chaque entree', category: 'Discipline', color: '#FFB300' },
   { slug: 'fr-scaling-in-vs-scaling-out', title: 'Scaling in vs scaling out :\nquelle methode detruit\nle moins de comptes ?', category: 'Gestion du risque', color: '#00C853' },
   { slug: 'fr-strategy-is-not-enough', title: 'Le mythe de la strategie\nparfaite : pourquoi 80 % n\'a\nrien a voir avec la strategie', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-ai-trade-review', title: 'Comment utiliser l\'IA\npour la revue de tes trades\n(sans perdre le controle)', category: 'Amelioration', color: '#FFB300' },
+  { slug: 'fr-crypto-vs-forex-journaling', title: 'Crypto vs forex : pourquoi\nton journal a besoin de regles\ndifferentes pour chaque marche', category: 'Gestion du risque', color: '#00C853' },
+  { slug: 'fr-market-order-vs-limit-order', title: 'Ordre au marche vs ordre limite :\nle cout cache qui vide\ndiscretement ton compte', category: 'Gestion du risque', color: '#00C853' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

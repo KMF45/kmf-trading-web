@@ -76,6 +76,7 @@ const blogTranslations = {
     en: '/blog/crypto-vs-forex-journaling',
     ro: '/blog/ro/crypto-vs-forex-journaling',
     de: '/blog/de/crypto-vs-forex-journaling',
+    fr: '/blog/fr/crypto-vs-forex-journaling',
   },
   'why-traders-break-their-rules': {
     en: '/blog/why-traders-break-their-rules',
@@ -164,6 +165,7 @@ const blogTranslations = {
     en: '/blog/ai-trade-review',
     ro: '/blog/ro/ai-trade-review',
     de: '/blog/de/ai-trade-review',
+    fr: '/blog/fr/ai-trade-review',
   },
   'tradingview-kmf-workflow': {
     en: '/blog/tradingview-kmf-workflow',
@@ -199,6 +201,7 @@ const blogTranslations = {
     en: '/blog/market-order-vs-limit-order',
     ro: '/blog/ro/market-order-vs-limit-order',
     de: '/blog/de/market-order-vs-limit-order',
+    fr: '/blog/fr/market-order-vs-limit-order',
   },
   'scaling-in-vs-scaling-out': {
     en: '/blog/scaling-in-vs-scaling-out',
