@@ -171,6 +171,7 @@ const routes = [
   '/blog/fr/metatrader-pre-trade-checklist',
   '/blog/fr/scared-money-prop-firm',
   '/blog/fr/worst-trading-excuses',
+  '/blog/fr/best-free-trading-journal-app-android-2026',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

@@ -257,6 +257,7 @@ const blogTranslations = {
     en: '/blog/best-free-trading-journal-app-android-2026',
     ro: '/blog/ro/best-free-trading-journal-app-android-2026',
     de: '/blog/de/best-free-trading-journal-app-android-2026',
+    fr: '/blog/fr/best-free-trading-journal-app-android-2026',
   },
 };
 

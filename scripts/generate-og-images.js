@@ -186,6 +186,7 @@ const articles = [
   { slug: 'fr-metatrader-pre-trade-checklist', title: 'Checklist pre-trade\nMetaTrader et cTrader :\n5 regles qui tiennent', category: 'Discipline', color: '#FFB300' },
   { slug: 'fr-scared-money-prop-firm', title: 'Scared money : pourquoi\nton compte prop de 100k\nte pese comme un fardeau', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-worst-trading-excuses', title: 'Les 7 pires excuses que\nles traders se racontent\n(et comment ton journal les demasque)', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-best-free-trading-journal-app-android-2026', title: 'La meilleure appli de\njournal de trading gratuite\npour Android 2026', category: 'Avis Applications', color: '#4FC3F7' },
 ];
 
 // Tools OG images (output to /public/tools/og/)

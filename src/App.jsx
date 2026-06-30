@@ -185,6 +185,7 @@ const MondayEffectTradingFr = lazy(() => import('./pages/blog/fr/MondayEffectTra
 const MetatraderPreTradeChecklistFr = lazy(() => import('./pages/blog/fr/MetatraderPreTradeChecklistFr'));
 const ScaredMoneyPropFirmFr = lazy(() => import('./pages/blog/fr/ScaredMoneyPropFirmFr'));
 const WorstTradingExcusesFr = lazy(() => import('./pages/blog/fr/WorstTradingExcusesFr'));
+const BestTradingJournalAndroid2026Fr = lazy(() => import('./pages/blog/fr/BestTradingJournalAndroid2026Fr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -412,6 +413,7 @@ function App() {
           <Route path="/blog/fr/metatrader-pre-trade-checklist" element={<MetatraderPreTradeChecklistFr />} />
           <Route path="/blog/fr/scared-money-prop-firm" element={<ScaredMoneyPropFirmFr />} />
           <Route path="/blog/fr/worst-trading-excuses" element={<WorstTradingExcusesFr />} />
+          <Route path="/blog/fr/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026Fr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
