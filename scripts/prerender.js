@@ -168,6 +168,9 @@ const routes = [
   '/blog/fr/is-100-enough-to-start-forex',
   '/blog/fr/weekend-gap-risk',
   '/blog/fr/monday-effect-trading',
+  '/blog/fr/metatrader-pre-trade-checklist',
+  '/blog/fr/scared-money-prop-firm',
+  '/blog/fr/worst-trading-excuses',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

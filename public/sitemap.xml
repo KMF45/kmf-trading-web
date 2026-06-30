@@ -1227,6 +1227,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1237,6 +1238,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1247,8 +1249,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/worst-trading-excuses"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
     <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/worst-trading-excuses</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/worst-trading-excuses"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/worst-trading-excuses"/>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1609,6 +1623,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1619,6 +1634,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1629,8 +1645,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/metatrader-pre-trade-checklist"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
     <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/metatrader-pre-trade-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/metatrader-pre-trade-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/metatrader-pre-trade-checklist"/>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1683,6 +1711,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1693,6 +1722,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1703,8 +1733,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/scared-money-prop-firm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
     <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/fr/scared-money-prop-firm</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://kmfjournal.com/blog/de/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kmfjournal.com/blog/fr/scared-money-prop-firm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/scared-money-prop-firm"/>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

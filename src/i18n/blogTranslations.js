@@ -221,11 +221,13 @@ const blogTranslations = {
     en: '/blog/worst-trading-excuses',
     ro: '/blog/ro/worst-trading-excuses',
     de: '/blog/de/worst-trading-excuses',
+    fr: '/blog/fr/worst-trading-excuses',
   },
   'metatrader-pre-trade-checklist': {
     en: '/blog/metatrader-pre-trade-checklist',
     ro: '/blog/ro/metatrader-pre-trade-checklist',
     de: '/blog/de/metatrader-pre-trade-checklist',
+    fr: '/blog/fr/metatrader-pre-trade-checklist',
   },
   'static-vs-trailing-drawdown': {
     en: '/blog/static-vs-trailing-drawdown',
@@ -249,6 +251,7 @@ const blogTranslations = {
     en: '/blog/scared-money-prop-firm',
     ro: '/blog/ro/scared-money-prop-firm',
     de: '/blog/de/scared-money-prop-firm',
+    fr: '/blog/fr/scared-money-prop-firm',
   },
   'best-free-trading-journal-app-android-2026': {
     en: '/blog/best-free-trading-journal-app-android-2026',

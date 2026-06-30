@@ -183,6 +183,9 @@ const articles = [
   { slug: 'fr-is-100-enough-to-start-forex', title: '100 $ suffisent-ils\npour trader le forex ?\nLa verite brutale', category: 'Gestion du risque', color: '#00C853' },
   { slug: 'fr-weekend-gap-risk', title: 'Risque de gap du week-end :\nprotege ton compte de\nla surprise du lundi', category: 'Gestion du risque', color: '#00C853' },
   { slug: 'fr-monday-effect-trading', title: 'L\'effet lundi : pourquoi\nle lundi est le pire jour\npour trader agressivement', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-metatrader-pre-trade-checklist', title: 'Checklist pre-trade\nMetaTrader et cTrader :\n5 regles qui tiennent', category: 'Discipline', color: '#FFB300' },
+  { slug: 'fr-scared-money-prop-firm', title: 'Scared money : pourquoi\nton compte prop de 100k\nte pese comme un fardeau', category: 'Psychologie', color: '#CE93D8' },
+  { slug: 'fr-worst-trading-excuses', title: 'Les 7 pires excuses que\nles traders se racontent\n(et comment ton journal les demasque)', category: 'Psychologie', color: '#CE93D8' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
