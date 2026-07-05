@@ -60,7 +60,7 @@ const PrivacyPolicyPage = () => {
         <h2 style={styles.h2}>2. Contact &amp; Controller</h2>
         <p style={styles.text}>
           <strong style={styles.strong}>Data Controller:</strong> Ionel Aanei (individual developer)<br />
-          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Location:</strong> Romania (European Union)
         </p>
 
@@ -337,7 +337,7 @@ const PrivacyPolicyPage = () => {
         <p style={styles.text}>You can request deletion of your account and all associated data by:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>Using the "Delete Account" feature in the App Settings</li>
-          <li style={styles.li}>Contacting us at <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+          <li style={styles.li}>Contacting us at <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a></li>
         </ul>
         <p style={styles.text}><span style={styles.pillWeb}>WEB</span> For Website cookies/analytics, click "Reject" in the cookie banner or use "Cookie Preferences" in the footer.</p>
 
@@ -358,7 +358,7 @@ const PrivacyPolicyPage = () => {
           <a style={styles.link} href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">dataprotection.ro</a>
         </p>
         <p style={styles.text}>If you reside in another EU member state, you may file with your local DPA.</p>
-        <p style={styles.text}>To exercise any of these rights, contact us at <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>. We will respond within 30 days.</p>
+        <p style={styles.text}>To exercise any of these rights, contact us at <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a>. We will respond within 30 days.</p>
 
         <h2 style={styles.h2}>12. Children's Privacy and Age Requirement</h2>
         <p style={styles.text}><span style={styles.pillApp}>APP</span> The App is intended for users aged 18 and older. We do not knowingly collect information from individuals under 18.</p>
@@ -376,7 +376,7 @@ const PrivacyPolicyPage = () => {
         <h2 style={styles.h2}>15. Contact Us</h2>
         <p style={styles.text}>For questions about this Privacy Policy or to exercise your data rights:</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Controller:</strong> Ionel Aanei (individual developer)<br />
           <strong style={styles.strong}>Location:</strong> Romania (European Union)
         </p>
@@ -408,7 +408,7 @@ function PrivacyPolicyRo() {
         <h2 style={styles.h2}>2. Contact și Operator de Date</h2>
         <p style={styles.text}>
           <strong style={styles.strong}>Operator de date:</strong> Ionel Aanei (dezvoltator individual)<br />
-          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Locație:</strong> România (Uniunea Europeană)
         </p>
 
@@ -685,7 +685,7 @@ function PrivacyPolicyRo() {
         <p style={styles.text}>Poți cere ștergerea contului tău și a tuturor datelor asociate:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>Folosind funcția „Șterge Contul" din Setările Aplicației</li>
-          <li style={styles.li}>Contactându-ne la <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+          <li style={styles.li}>Contactându-ne la <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a></li>
         </ul>
         <p style={styles.text}><span style={styles.pillWeb}>WEB</span> Pentru cookie-urile/analiza Site-ului, apasă „Refuz" în banner-ul de cookie-uri sau folosește „Cookie Preferences" din subsol.</p>
 
@@ -706,7 +706,7 @@ function PrivacyPolicyRo() {
           <a style={styles.link} href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">dataprotection.ro</a>
         </p>
         <p style={styles.text}>Dacă locuiești în alt stat membru UE, poți depune plângerea la autoritatea locală de protecție a datelor.</p>
-        <p style={styles.text}>Ca să-ți exerciți oricare dintre aceste drepturi, contactează-ne la <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>. Vom răspunde în termen de 30 de zile.</p>
+        <p style={styles.text}>Ca să-ți exerciți oricare dintre aceste drepturi, contactează-ne la <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a>. Vom răspunde în termen de 30 de zile.</p>
 
         <h2 style={styles.h2}>12. Confidențialitatea Copiilor și Cerința de Vârstă</h2>
         <p style={styles.text}><span style={styles.pillApp}>APP</span> Aplicația este destinată utilizatorilor de 18 ani și peste. Nu colectăm cu bună știință informații de la persoane sub 18 ani.</p>
@@ -724,7 +724,7 @@ function PrivacyPolicyRo() {
         <h2 style={styles.h2}>15. Contactează-ne</h2>
         <p style={styles.text}>Pentru întrebări despre această Politică de Confidențialitate sau ca să-ți exerciți drepturile asupra datelor:</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Operator:</strong> Ionel Aanei (dezvoltator individual)<br />
           <strong style={styles.strong}>Locație:</strong> România (Uniunea Europeană)
         </p>
@@ -756,7 +756,7 @@ function PrivacyPolicyDe() {
         <h2 style={styles.h2}>2. Kontakt &amp; Verantwortlicher</h2>
         <p style={styles.text}>
           <strong style={styles.strong}>Verantwortlicher:</strong> Ionel Aanei (Einzelentwickler)<br />
-          <strong style={styles.strong}>E-Mail:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>E-Mail:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Standort:</strong> Rumänien (Europäische Union)
         </p>
 
@@ -1033,7 +1033,7 @@ function PrivacyPolicyDe() {
         <p style={styles.text}>Du kannst die Löschung deines Kontos und aller zugehörigen Daten beantragen:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>Über die Funktion „Konto löschen" in den App-Einstellungen</li>
-          <li style={styles.li}>Indem du uns unter <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a> kontaktierst</li>
+          <li style={styles.li}>Indem du uns unter <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a> kontaktierst</li>
         </ul>
         <p style={styles.text}><span style={styles.pillWeb}>WEB</span> Für Website-Cookies/-Analyse klicke im Cookie-Banner auf „Ablehnen" oder nutze „Cookie-Einstellungen" im Footer.</p>
 
@@ -1054,7 +1054,7 @@ function PrivacyPolicyDe() {
           <a style={styles.link} href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">dataprotection.ro</a>
         </p>
         <p style={styles.text}>Wenn du in einem anderen EU-Mitgliedstaat wohnst, kannst du die Beschwerde bei deiner lokalen Datenschutzbehörde einreichen.</p>
-        <p style={styles.text}>Um eines dieser Rechte auszuüben, kontaktiere uns unter <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>. Wir antworten innerhalb von 30 Tagen.</p>
+        <p style={styles.text}>Um eines dieser Rechte auszuüben, kontaktiere uns unter <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a>. Wir antworten innerhalb von 30 Tagen.</p>
 
         <h2 style={styles.h2}>12. Datenschutz von Kindern und Altersanforderung</h2>
         <p style={styles.text}><span style={styles.pillApp}>APP</span> Die App ist für Nutzer ab 18 Jahren bestimmt. Wir erheben nicht wissentlich Informationen von Personen unter 18 Jahren.</p>
@@ -1072,7 +1072,7 @@ function PrivacyPolicyDe() {
         <h2 style={styles.h2}>15. Kontaktiere uns</h2>
         <p style={styles.text}>Bei Fragen zu dieser Datenschutzerklärung oder zur Ausübung deiner Datenrechte:</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>E-Mail:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>E-Mail:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Verantwortlicher:</strong> Ionel Aanei (Einzelentwickler)<br />
           <strong style={styles.strong}>Standort:</strong> Rumänien (Europäische Union)
         </p>
@@ -1104,7 +1104,7 @@ function PrivacyPolicyFr() {
         <h2 style={styles.h2}>2. Contact &amp; responsable du traitement</h2>
         <p style={styles.text}>
           <strong style={styles.strong}>Responsable du traitement :</strong> Ionel Aanei (développeur individuel)<br />
-          <strong style={styles.strong}>E-mail :</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>E-mail :</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Localisation :</strong> Roumanie (Union européenne)
         </p>
 
@@ -1381,7 +1381,7 @@ function PrivacyPolicyFr() {
         <p style={styles.text}>Vous pouvez demander la suppression de votre compte et de toutes les données associées :</p>
         <ul style={styles.ul}>
           <li style={styles.li}>En utilisant la fonction « Supprimer le compte » dans les réglages de l'Application</li>
-          <li style={styles.li}>En nous contactant à <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+          <li style={styles.li}>En nous contactant à <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a></li>
         </ul>
         <p style={styles.text}><span style={styles.pillWeb}>WEB</span> Pour les cookies/l'analyse du Site, cliquez sur « Refuser » dans la bannière de cookies ou utilisez « Préférences de cookies » dans le pied de page.</p>
 
@@ -1402,7 +1402,7 @@ function PrivacyPolicyFr() {
           <a style={styles.link} href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">dataprotection.ro</a>
         </p>
         <p style={styles.text}>Si vous résidez dans un autre État membre de l'UE, vous pouvez saisir votre autorité locale de protection des données.</p>
-        <p style={styles.text}>Pour exercer l'un de ces droits, contactez-nous à <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>. Nous répondrons sous 30 jours.</p>
+        <p style={styles.text}>Pour exercer l'un de ces droits, contactez-nous à <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a>. Nous répondrons sous 30 jours.</p>
 
         <h2 style={styles.h2}>12. Confidentialité des enfants et condition d'âge</h2>
         <p style={styles.text}><span style={styles.pillApp}>APP</span> L'Application est destinée aux utilisateurs âgés de 18 ans et plus. Nous ne collectons pas sciemment d'informations auprès de personnes de moins de 18 ans.</p>
@@ -1420,7 +1420,7 @@ function PrivacyPolicyFr() {
         <h2 style={styles.h2}>15. Nous contacter</h2>
         <p style={styles.text}>Pour toute question sur cette politique de confidentialité ou pour exercer vos droits :</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>E-mail :</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>E-mail :</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Responsable :</strong> Ionel Aanei (développeur individuel)<br />
           <strong style={styles.strong}>Localisation :</strong> Roumanie (Union européenne)
         </p>
@@ -1452,7 +1452,7 @@ function PrivacyPolicyRu() {
         <h2 style={styles.h2}>2. Контакты и оператор данных</h2>
         <p style={styles.text}>
           <strong style={styles.strong}>Оператор данных:</strong> Ionel Aanei (индивидуальный разработчик)<br />
-          <strong style={styles.strong}>Эл. почта:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Эл. почта:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Местоположение:</strong> Румыния (Европейский союз)
         </p>
 
@@ -1729,7 +1729,7 @@ function PrivacyPolicyRu() {
         <p style={styles.text}>Вы можете запросить удаление вашего аккаунта и всех связанных данных:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>С помощью функции «Удалить аккаунт» в настройках Приложения</li>
-          <li style={styles.li}>Связавшись с нами по адресу <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+          <li style={styles.li}>Связавшись с нами по адресу <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a></li>
         </ul>
         <p style={styles.text}><span style={styles.pillWeb}>WEB</span> По cookie/аналитике Сайта нажмите «Отклонить» в баннере cookie или используйте «Настройки cookie» в подвале.</p>
 
@@ -1750,7 +1750,7 @@ function PrivacyPolicyRu() {
           <a style={styles.link} href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">dataprotection.ro</a>
         </p>
         <p style={styles.text}>Если вы проживаете в другом государстве — члене ЕС, вы можете обратиться в свой местный орган по защите данных.</p>
-        <p style={styles.text}>Чтобы воспользоваться любым из этих прав, свяжитесь с нами по адресу <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>. Мы ответим в течение 30 дней.</p>
+        <p style={styles.text}>Чтобы воспользоваться любым из этих прав, свяжитесь с нами по адресу <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a>. Мы ответим в течение 30 дней.</p>
 
         <h2 style={styles.h2}>12. Конфиденциальность детей и возрастное требование</h2>
         <p style={styles.text}><span style={styles.pillApp}>APP</span> Приложение предназначено для пользователей в возрасте 18 лет и старше. Мы сознательно не собираем информацию от лиц младше 18 лет.</p>
@@ -1768,7 +1768,7 @@ function PrivacyPolicyRu() {
         <h2 style={styles.h2}>15. Свяжитесь с нами</h2>
         <p style={styles.text}>По вопросам настоящей Политики конфиденциальности или для реализации ваших прав на данные:</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>Эл. почта:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Эл. почта:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Оператор:</strong> Ionel Aanei (индивидуальный разработчик)<br />
           <strong style={styles.strong}>Местоположение:</strong> Румыния (Европейский союз)
         </p>

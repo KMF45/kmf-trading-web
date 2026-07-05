@@ -216,7 +216,7 @@ const TermsOfServicePage = () => {
         <p style={styles.text}>You may terminate your App account at any time by:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>Using the "Delete Account" feature in the App Settings</li>
-          <li style={styles.li}>Contacting us at <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+          <li style={styles.li}>Contacting us at <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a></li>
         </ul>
         <p style={styles.text}>For the Website, you may stop visiting at any time without notice.</p>
 
@@ -246,7 +246,7 @@ const TermsOfServicePage = () => {
         <h2 style={styles.h2}>16. Contact</h2>
         <p style={styles.text}>For questions about these Terms:</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Developer:</strong> Ionel Aanei (individual developer)<br />
           <strong style={styles.strong}>Location:</strong> Romania (European Union)
         </p>
@@ -434,7 +434,7 @@ function TermsOfServiceRo() {
         <p style={styles.text}>Îți poți închide oricând contul din Aplicație:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>Folosind funcția „Șterge Contul" din Setările Aplicației</li>
-          <li style={styles.li}>Contactându-ne la <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+          <li style={styles.li}>Contactându-ne la <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a></li>
         </ul>
         <p style={styles.text}>Pentru Site, poți să nu-l mai vizitezi oricând, fără notificare.</p>
 
@@ -464,7 +464,7 @@ function TermsOfServiceRo() {
         <h2 style={styles.h2}>16. Contact</h2>
         <p style={styles.text}>Pentru întrebări despre acești Termeni:</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Email:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Dezvoltator:</strong> Ionel Aanei (dezvoltator individual)<br />
           <strong style={styles.strong}>Locație:</strong> România (Uniunea Europeană)
         </p>
@@ -652,7 +652,7 @@ function TermsOfServiceDe() {
         <p style={styles.text}>Du kannst dein App-Konto jederzeit kündigen:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>Über die Funktion „Konto löschen" in den App-Einstellungen</li>
-          <li style={styles.li}>Indem du uns unter <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a> kontaktierst</li>
+          <li style={styles.li}>Indem du uns unter <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a> kontaktierst</li>
         </ul>
         <p style={styles.text}>Bei der Website kannst du jederzeit ohne Ankündigung aufhören, sie zu besuchen.</p>
 
@@ -682,7 +682,7 @@ function TermsOfServiceDe() {
         <h2 style={styles.h2}>16. Kontakt</h2>
         <p style={styles.text}>Bei Fragen zu diesen Bedingungen:</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>E-Mail:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>E-Mail:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Entwickler:</strong> Ionel Aanei (Einzelentwickler)<br />
           <strong style={styles.strong}>Standort:</strong> Rumänien (Europäische Union)
         </p>
@@ -870,7 +870,7 @@ function TermsOfServiceFr() {
         <p style={styles.text}>Vous pouvez résilier votre compte d'Application à tout moment :</p>
         <ul style={styles.ul}>
           <li style={styles.li}>En utilisant la fonction « Supprimer le compte » dans les réglages de l'Application</li>
-          <li style={styles.li}>En nous contactant à <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+          <li style={styles.li}>En nous contactant à <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a></li>
         </ul>
         <p style={styles.text}>Pour le Site, vous pouvez cesser de le visiter à tout moment sans préavis.</p>
 
@@ -900,7 +900,7 @@ function TermsOfServiceFr() {
         <h2 style={styles.h2}>16. Contact</h2>
         <p style={styles.text}>Pour toute question sur ces Conditions :</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>E-mail :</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>E-mail :</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Développeur :</strong> Ionel Aanei (développeur individuel)<br />
           <strong style={styles.strong}>Localisation :</strong> Roumanie (Union européenne)
         </p>
@@ -1088,7 +1088,7 @@ function TermsOfServiceRu() {
         <p style={styles.text}>Вы можете прекратить действие вашего аккаунта Приложения в любой момент:</p>
         <ul style={styles.ul}>
           <li style={styles.li}>С помощью функции «Удалить аккаунт» в настройках Приложения</li>
-          <li style={styles.li}>Связавшись с нами по адресу <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a></li>
+          <li style={styles.li}>Связавшись с нами по адресу <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a></li>
         </ul>
         <p style={styles.text}>Что касается Сайта, вы можете прекратить его посещение в любой момент без уведомления.</p>
 
@@ -1118,7 +1118,7 @@ function TermsOfServiceRu() {
         <h2 style={styles.h2}>16. Контакты</h2>
         <p style={styles.text}>По вопросам, касающимся настоящих Условий:</p>
         <p style={styles.text}>
-          <strong style={styles.strong}>Эл. почта:</strong> <a style={styles.link} href="mailto:kmf45.ai@gmail.com">kmf45.ai@gmail.com</a>, <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
+          <strong style={styles.strong}>Эл. почта:</strong> <a style={styles.link} href="mailto:contact@kmfjournal.com">contact@kmfjournal.com</a><br />
           <strong style={styles.strong}>Разработчик:</strong> Ionel Aanei (индивидуальный разработчик)<br />
           <strong style={styles.strong}>Местоположение:</strong> Румыния (Европейский союз)
         </p>

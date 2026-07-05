@@ -95,7 +95,7 @@ export default function AboutPage() {
       logo: `${SITE}/logo.png`,
       description: 'Professional trading journal app built by active traders. Track trades, analyze performance, and improve discipline.',
       foundingDate: '2025',
-      email: 'kmf45.ai@gmail.com',
+      email: 'contact@kmfjournal.com',
       sameAs: [
         'https://github.com/KMF45',
         'https://www.instagram.com/kmfjournal',
@@ -167,7 +167,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-kmf-text-primary mt-10 mb-4">{t.contactTitle}</h2>
             <p>{t.contactIntro}</p>
             <p>
-              <a href="mailto:kmf45.ai@gmail.com" className="text-kmf-accent hover:underline">kmf45.ai@gmail.com</a>
+              <a href="mailto:contact@kmfjournal.com" className="text-kmf-accent hover:underline">contact@kmfjournal.com</a>
             </p>
             <p className="text-sm text-kmf-text-tertiary mt-2">
               {t.contactNote}

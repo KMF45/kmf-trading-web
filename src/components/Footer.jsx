@@ -35,7 +35,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="mailto:kmf45.ai@gmail.com"
+                href="mailto:contact@kmfjournal.com"
                 className="text-kmf-text-tertiary hover:text-kmf-accent transition-colors"
                 aria-label="Email"
               >
