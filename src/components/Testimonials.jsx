@@ -1,5 +1,7 @@
 import { FaStar } from 'react-icons/fa';
+import { motion } from 'motion/react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { revealProps } from './common/Reveal';
 
 const NAMES = ['Alex M.', 'Radu T.', 'Sara K.'];
 const INITIALS = ['AM', 'RT', 'SK'];
@@ -21,7 +23,7 @@ const Testimonials = () => {
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-label="What traders say about K.M.F.">
       <div className="container mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fadeIn">
+        <motion.div {...revealProps()} className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold border border-kmf-accent/25">
               ✦ {t('testimonials.badge')}
@@ -35,17 +37,16 @@ const Testimonials = () => {
           <p className="text-lg text-kmf-text-tertiary max-w-xl mx-auto leading-relaxed">
             {t('testimonials.subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {items.map((item, i) => (
-            <div
+            <motion.div
               key={i}
-              className="rounded-2xl p-6 border transition-all duration-300 animate-slideUp flex flex-col"
+              {...revealProps(i * 0.1)}
+              className="rounded-2xl p-6 border transition-all duration-300 flex flex-col"
               style={{
-                animationDelay: `${i * 100}ms`,
-                animationFillMode: 'both',
                 background: 'rgba(26,29,36,0.85)',
                 border: '1px solid rgba(255,255,255,0.06)',
                 boxShadow: '0 2px 20px rgba(0,0,0,0.20)',
@@ -69,7 +70,7 @@ const Testimonials = () => {
                   <p className="text-xs text-kmf-text-tertiary">{item.role}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

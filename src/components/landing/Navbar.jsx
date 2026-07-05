@@ -104,6 +104,7 @@ const ResourcesDropdown = () => {
           }}
         >
           <Link
+            viewTransition
             to="/blog"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
@@ -115,6 +116,7 @@ const ResourcesDropdown = () => {
             {t('nav.blog')}
           </Link>
           <Link
+            viewTransition
             to="/tools/lot-size-calculator"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
@@ -126,6 +128,7 @@ const ResourcesDropdown = () => {
             Lot Size Calculator
           </Link>
           <Link
+            viewTransition
             to="/tools/risk-of-ruin"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
@@ -137,6 +140,7 @@ const ResourcesDropdown = () => {
             Risk of Ruin Calculator
           </Link>
           <Link
+            viewTransition
             to="/tools/win-rate-rr-matrix"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
@@ -148,6 +152,7 @@ const ResourcesDropdown = () => {
             Win Rate vs R:R Matrix
           </Link>
           <Link
+            viewTransition
             to="/tools/compound-calculator"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
@@ -159,6 +164,7 @@ const ResourcesDropdown = () => {
             Compound Calculator
           </Link>
           <Link
+            viewTransition
             to="/tools/pre-trade-checklist"
             onClick={() => setOpen(false)}
             className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
@@ -215,7 +221,7 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            <Link to="/" className="flex items-center gap-3 group">
+            <Link viewTransition to="/" className="flex items-center gap-3 group">
               <picture>
                 <source srcSet="/logo-80.webp" type="image/webp" />
                 <img src="/logo-80.png" alt="K.M.F. Trading Journal" className="w-10 h-10 drop-shadow-[0_0_8px_rgba(79,195,247,0.4)] group-hover:drop-shadow-[0_0_12px_rgba(79,195,247,0.6)] transition-all" width="40" height="40" loading="eager" fetchPriority="high" />
@@ -251,13 +257,12 @@ const Navbar = () => {
                   <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-2 py-1">{link.label}</a>
                 ))}
                 <span className="text-kmf-text-tertiary text-xs font-semibold uppercase tracking-wider px-2 pt-2">{t('nav.resources') || 'Resources'}</span>
-                <Link to="/blog" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">{t('nav.blog')}</Link>
-                <Link to="/tools/lot-size-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Lot Size Calculator</Link>
-                <Link to="/tools/risk-of-ruin" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Risk of Ruin Calculator</Link>
-                <Link to="/tools/win-rate-rr-matrix" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Win Rate vs R:R Matrix</Link>
-                <Link to="/tools/compound-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Compound Calculator</Link>
-                <Link to="/tools/pre-trade-checklist" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Pre-Trade Checklist</Link>
-              </div>
+                <Link viewTransition to="/blog" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">{t('nav.blog')}</Link>
+                <Link viewTransition to="/tools/lot-size-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Lot Size Calculator</Link>
+                <Link viewTransition to="/tools/risk-of-ruin" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Risk of Ruin Calculator</Link>
+                <Link viewTransition to="/tools/win-rate-rr-matrix" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Win Rate vs R:R Matrix</Link>
+                <Link viewTransition to="/tools/compound-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Compound Calculator</Link>
+                <Link viewTransition to="/tools/pre-trade-checklist" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Pre-Trade Checklist</Link>              </div>
             </div>
           )}
         </div>

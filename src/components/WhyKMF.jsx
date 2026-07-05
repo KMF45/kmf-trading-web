@@ -1,5 +1,7 @@
 import { FaMobileAlt, FaBrain, FaShieldAlt, FaHeart } from 'react-icons/fa';
+import { motion } from 'motion/react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { revealProps } from './common/Reveal';
 
 const ICONS = [FaMobileAlt, FaBrain, FaShieldAlt, FaHeart];
 const ACCENTS = ['#4FC3F7', '#CE93D8', '#00C853', '#FFB300'];
@@ -14,7 +16,7 @@ const WhyKMF = () => {
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fadeIn">
+        <motion.div {...revealProps()} className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold border border-kmf-accent/25">
               ✦ {t('whyKmf.badge')}
@@ -28,7 +30,7 @@ const WhyKMF = () => {
           <p className="text-lg text-kmf-text-tertiary max-w-2xl mx-auto leading-relaxed">
             {t('whyKmf.subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -36,12 +38,11 @@ const WhyKMF = () => {
             const Icon = ICONS[i];
             const accent = ACCENTS[i];
             return (
-              <div
+              <motion.div
                 key={i}
-                className="group relative rounded-2xl p-6 border transition-all duration-300 animate-slideUp"
+                {...revealProps(i * 0.08)}
+                className="group relative rounded-2xl p-6 border transition-all duration-300"
                 style={{
-                  animationDelay: `${i * 80}ms`,
-                  animationFillMode: 'both',
                   background: 'rgba(26,29,36,0.85)',
                   border: '1px solid rgba(255,255,255,0.06)',
                   boxShadow: '0 2px 20px rgba(0,0,0,0.20)',
@@ -74,7 +75,7 @@ const WhyKMF = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

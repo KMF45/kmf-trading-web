@@ -3,7 +3,9 @@ import {
   FaTasks, FaCalculator, FaBell, FaDatabase, FaGlobe,
   FaBrain, FaTrophy, FaBook, FaClock
 } from 'react-icons/fa';
+import { motion } from 'motion/react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { revealProps } from './common/Reveal';
 
 const PRIMARY_ICONS = [FaChartLine, FaHome, FaCalculator, FaClipboardCheck, FaPlus, FaBrain, FaTrophy, FaHistory];
 const PRIMARY_COLORS = [
@@ -23,9 +25,9 @@ const PrimaryCard = ({ feature, index }) => {
   const Icon = PRIMARY_ICONS[index];
   const style = PRIMARY_COLORS[index];
   return (
-    <div
-      className="group relative animate-slideUp"
-      style={{ animationDelay: `${index * 80}ms`, animationFillMode: 'both' }}
+    <motion.div
+      {...revealProps(index * 0.07)}
+      className="group relative"
     >
       <div className="absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500"
         style={{ background: `linear-gradient(135deg, ${style.accentColor}22, transparent 60%)` }} />
@@ -69,14 +71,16 @@ const PrimaryCard = ({ feature, index }) => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const SecondaryCard = ({ feature }) => {
   const Icon = SECONDARY_ICONS[feature._idx];
   return (
-    <div className="flex items-start gap-4 bg-kmf-panel/60 rounded-xl p-4 border border-white/5
+    <motion.div
+      {...revealProps(feature._idx * 0.05, 16)}
+      className="flex items-start gap-4 bg-kmf-panel/60 rounded-xl p-4 border border-white/5
                   hover:border-kmf-accent/20 hover:bg-kmf-panel transition-all duration-300 group">
       <div className="rounded-lg p-2.5 flex-shrink-0 transition-colors duration-200 group-hover:bg-kmf-accent/10"
         style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
@@ -86,7 +90,7 @@ const SecondaryCard = ({ feature }) => {
         <p className="text-sm font-semibold text-kmf-text-primary group-hover:text-kmf-accent transition-colors">{feature.title}</p>
         <p className="text-xs text-kmf-text-tertiary mt-0.5 leading-relaxed">{feature.description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -102,7 +106,7 @@ const Features = () => {
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fadeIn">
+        <motion.div {...revealProps()} className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold border border-kmf-accent/25">
               ✦ {t('features.badge')}
@@ -116,7 +120,7 @@ const Features = () => {
           <p className="text-lg text-kmf-text-tertiary max-w-2xl mx-auto leading-relaxed">
             {t('features.subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Primary features — 3 columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
@@ -133,7 +137,7 @@ const Features = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center animate-fadeIn">
+        <motion.div {...revealProps()} className="text-center">
           <a
             href="#download"
             className="inline-block px-8 py-4 bg-gradient-to-r from-kmf-accent to-kmf-accent-bright
@@ -142,7 +146,7 @@ const Features = () => {
           >
             {t('features.cta')}
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

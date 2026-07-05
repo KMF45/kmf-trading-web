@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { revealProps, REVEAL_EASE } from './common/Reveal';
 
 const OUTRO_DURATION_MS = 2800;
 
@@ -65,7 +67,7 @@ const HowItWorks = () => {
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fadeIn">
+        <motion.div {...revealProps()} className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold border border-kmf-accent/25">
               ✦ {t('howItWorks.badge')}
@@ -77,12 +79,18 @@ const HowItWorks = () => {
           <p className="text-lg text-kmf-text-tertiary max-w-xl mx-auto leading-relaxed">
             {t('howItWorks.subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         {/* 2-column: left copy + features, right phone */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
           {/* LEFT */}
-          <div className="order-2 lg:order-1 max-w-lg lg:max-w-none">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '0px 0px -80px 0px' }}
+            transition={{ duration: 0.7, ease: REVEAL_EASE }}
+            className="order-2 lg:order-1 max-w-lg lg:max-w-none"
+          >
             <h3
               className="font-extrabold mb-5"
               style={{
@@ -156,10 +164,16 @@ const HowItWorks = () => {
               </svg>
               {t('howItWorks.cta')}
             </a>
-          </div>
+          </motion.div>
 
           {/* RIGHT: phone with video */}
-          <div className="relative flex flex-col items-center order-1 lg:order-2">
+          <motion.div
+            initial={{ opacity: 0, x: 40, scale: 0.96 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: '0px 0px -80px 0px' }}
+            transition={{ duration: 0.8, ease: REVEAL_EASE }}
+            className="relative flex flex-col items-center order-1 lg:order-2"
+          >
             <div className="relative">
               {/* Ambient glow */}
               <div
@@ -359,7 +373,7 @@ const HowItWorks = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
 import { FaGooglePlay, FaCheckCircle, FaLock, FaGlobe, FaCloud, FaShieldAlt } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi2';
+import { motion } from 'motion/react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { REVEAL_EASE } from './common/Reveal';
 
 const TRUST_ICONS = [FaShieldAlt, FaLock, FaGlobe, FaCloud];
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.kmf.tradingjournal';
@@ -19,7 +21,13 @@ const Download = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-kmf-accent-bright/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s', willChange: 'opacity' }}></div>
 
       <div className="container mx-auto relative z-10">
-        <div className="max-w-5xl mx-auto animate-fadeIn">
+        <motion.div
+          initial={{ opacity: 0, y: 36, scale: 0.97 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: '0px 0px -80px 0px' }}
+          transition={{ duration: 0.8, ease: REVEAL_EASE }}
+          className="max-w-5xl mx-auto"
+        >
           <div className="glass rounded-3xl p-8 sm:p-12 lg:p-16 border-2 border-kmf-accent/30
                         shadow-glow-strong overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-kmf-accent/10 to-transparent rounded-full -translate-y-1/2 translate-x-1/2"></div>
@@ -50,9 +58,10 @@ const Download = () => {
                   rel="noopener noreferrer"
                   aria-label="Download K.M.F. Trading Journal on Google Play (opens in new tab)"
                   onClick={() => window.gtag?.('event', 'play_store_click', { source: 'download' })}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-200 hover:scale-105"
+                  className="relative overflow-hidden inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-200 hover:scale-105 active:scale-95"
                   style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
                 >
+                  <span aria-hidden="true" className="kmf-cta-shine" />
                   <FaGooglePlay className="text-xl" aria-hidden="true" />
                   {t('download.submitBtn')}
                 </a>
@@ -89,7 +98,7 @@ const Download = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

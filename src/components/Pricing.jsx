@@ -1,6 +1,8 @@
 import { FaCheck, FaTimes, FaCrown, FaGooglePlay } from 'react-icons/fa';
+import { motion } from 'motion/react';
 
 import { useLanguage } from '../i18n/LanguageContext';
+import { revealProps } from './common/Reveal';
 
 const CheckRow = ({ text, included, muted }) => (
   <li className="flex items-center gap-3 py-1.5">
@@ -32,7 +34,7 @@ const Pricing = () => {
 
       <div className="container mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fadeIn">
+        <motion.div {...revealProps()} className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold border border-kmf-accent/25">
               ✦ {t('pricing.badge')}
@@ -46,17 +48,16 @@ const Pricing = () => {
           <p className="text-lg text-kmf-text-tertiary max-w-xl mx-auto leading-relaxed">
             {t('pricing.subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
           {/* Free */}
-          <div
-            className="rounded-2xl p-7 border flex flex-col animate-slideUp"
+          <motion.div
+            {...revealProps(0)}
+            className="rounded-2xl p-7 border flex flex-col"
             style={{
-              animationDelay: '0ms',
-              animationFillMode: 'both',
               background: 'rgba(26,29,36,0.85)',
               border: '1px solid rgba(255,255,255,0.07)',
               boxShadow: '0 2px 20px rgba(0,0,0,0.20)',
@@ -89,14 +90,13 @@ const Pricing = () => {
               <li aria-hidden="true" className="my-2 border-t border-white/5" role="separator" />
               {t('pricing.freeMissing').map((f) => <CheckRow key={f} text={f} included={false} />)}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Premium Monthly */}
-          <div
-            className="rounded-2xl p-7 flex flex-col relative overflow-hidden animate-slideUp"
+          <motion.div
+            {...revealProps(0.08)}
+            className="rounded-2xl p-7 flex flex-col relative overflow-hidden"
             style={{
-              animationDelay: '80ms',
-              animationFillMode: 'both',
               background: 'rgba(14,18,26,0.97)',
               border: '1px solid rgba(79,195,247,0.20)',
               boxShadow: '0 2px 20px rgba(0,0,0,0.30)',
@@ -133,14 +133,13 @@ const Pricing = () => {
                 <CheckRow key={f} text={f} included={true} muted={i > 0} />
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Premium Annual */}
-          <div
-            className="rounded-2xl p-7 flex flex-col relative overflow-hidden animate-slideUp"
+          <motion.div
+            {...revealProps(0.16)}
+            className="rounded-2xl p-7 flex flex-col relative overflow-hidden"
             style={{
-              animationDelay: '160ms',
-              animationFillMode: 'both',
               background: 'rgba(14,18,26,0.97)',
               border: '1px solid rgba(79,195,247,0.28)',
               boxShadow: '0 0 0 1px rgba(79,195,247,0.08), 0 8px 40px rgba(79,195,247,0.08), 0 2px 20px rgba(0,0,0,0.40)',
@@ -197,16 +196,16 @@ const Pricing = () => {
                 <CheckRow key={f} text={f} included={true} muted={i > 0} />
               ))}
             </ul>
-          </div>
+          </motion.div>
         </div>
 
         {/* Promo banner */}
-        <div className="mt-10 max-w-xl mx-auto text-center px-6 py-4 rounded-xl border border-kmf-accent/30"
+        <motion.div {...revealProps(0.1, 16)} className="mt-10 max-w-xl mx-auto text-center px-6 py-4 rounded-xl border border-kmf-accent/30"
           style={{ background: 'rgba(79,195,247,0.08)' }}>
           <p className="text-sm font-semibold text-kmf-accent">
             {t('pricing.promo')}
           </p>
-        </div>
+        </motion.div>
 
         {/* Footer note */}
         <p className="text-center text-xs mt-6" style={{ color: '#6B7D87' }}>

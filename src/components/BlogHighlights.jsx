@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'motion/react';
 import { useLanguage } from '../i18n/LanguageContext';
+import { revealProps } from './common/Reveal';
+
+const MotionLink = motion.create(Link);
 
 const highlights = [
   {
@@ -40,7 +44,7 @@ const BlogHighlights = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-kmf-accent/[0.015] to-transparent" />
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-14 animate-fadeIn">
+        <motion.div {...revealProps()} className="text-center mb-14">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-kmf-accent/10 text-kmf-accent rounded-full text-sm font-semibold border border-kmf-accent/25">
               ✦ {t('blogHighlights.badge')}
@@ -53,17 +57,17 @@ const BlogHighlights = () => {
           <p className="text-lg text-kmf-text-tertiary max-w-xl mx-auto leading-relaxed">
             {t('blogHighlights.subtitle')}
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {highlights.map((post, i) => (
-            <Link
+            <MotionLink
               key={post.slug}
               to={`/blog/${post.slug}`}
-              className="block rounded-2xl p-6 border transition-all duration-200 group animate-slideUp"
+              viewTransition
+              {...revealProps(i * 0.07)}
+              className="block rounded-2xl p-6 border transition-all duration-200 group"
               style={{
-                animationDelay: `${i * 80}ms`,
-                animationFillMode: 'both',
                 background: 'rgba(26,29,36,0.85)',
                 border: '1px solid rgba(255,255,255,0.07)',
               }}
@@ -81,19 +85,20 @@ const BlogHighlights = () => {
               </h3>
               <p className="text-sm text-kmf-text-tertiary leading-relaxed">{post.excerpt}</p>
               <p className="text-xs text-kmf-accent mt-3 font-semibold">{t('blogHighlights.readArticle')}</p>
-            </Link>
+            </MotionLink>
           ))}
         </div>
 
-        <div className="text-center mt-10">
+        <motion.div {...revealProps(0.1, 16)} className="text-center mt-10">
           <Link
             to="/blog"
+            viewTransition
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02]"
             style={{ background: 'rgba(79,195,247,0.08)', border: '1px solid rgba(79,195,247,0.20)', color: '#4FC3F7' }}
           >
             {t('blogHighlights.viewAll')}
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
