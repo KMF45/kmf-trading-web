@@ -3,7 +3,7 @@
 
 export const CONSENT_KEY = 'kmf_consent_v1';
 export const CONSENT_VERSION = 1;
-const GA_ID = 'G-CTE9Y21S1L';
+const GA_ID = 'G-2HDZZLDDJJ';
 
 // Returns: { status: 'accepted' | 'rejected' | null, version: number, ts: number } | null
 export function getConsent() {

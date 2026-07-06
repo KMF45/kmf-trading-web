@@ -92,7 +92,7 @@ const PrivacyPolicyPage = () => {
             </thead>
             <tbody>
               <tr><td style={styles.td}><code style={styles.code}>_ga</code></td><td style={styles.td}>Google Analytics 4 user identifier</td><td style={styles.td}>2 years</td></tr>
-              <tr><td style={styles.td}><code style={styles.code}>_ga_CTE9Y21S1L</code></td><td style={styles.td}>GA4 session state</td><td style={styles.td}>2 years</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>_ga_2HDZZLDDJJ</code></td><td style={styles.td}>GA4 session state</td><td style={styles.td}>2 years</td></tr>
             </tbody>
           </table>
         </div>
@@ -440,7 +440,7 @@ function PrivacyPolicyRo() {
             </thead>
             <tbody>
               <tr><td style={styles.td}><code style={styles.code}>_ga</code></td><td style={styles.td}>Identificator de utilizator Google Analytics 4</td><td style={styles.td}>2 ani</td></tr>
-              <tr><td style={styles.td}><code style={styles.code}>_ga_CTE9Y21S1L</code></td><td style={styles.td}>Starea sesiunii GA4</td><td style={styles.td}>2 ani</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>_ga_2HDZZLDDJJ</code></td><td style={styles.td}>Starea sesiunii GA4</td><td style={styles.td}>2 ani</td></tr>
             </tbody>
           </table>
         </div>
@@ -788,7 +788,7 @@ function PrivacyPolicyDe() {
             </thead>
             <tbody>
               <tr><td style={styles.td}><code style={styles.code}>_ga</code></td><td style={styles.td}>Nutzerkennung von Google Analytics 4</td><td style={styles.td}>2 Jahre</td></tr>
-              <tr><td style={styles.td}><code style={styles.code}>_ga_CTE9Y21S1L</code></td><td style={styles.td}>GA4-Sitzungsstatus</td><td style={styles.td}>2 Jahre</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>_ga_2HDZZLDDJJ</code></td><td style={styles.td}>GA4-Sitzungsstatus</td><td style={styles.td}>2 Jahre</td></tr>
             </tbody>
           </table>
         </div>
@@ -1136,7 +1136,7 @@ function PrivacyPolicyFr() {
             </thead>
             <tbody>
               <tr><td style={styles.td}><code style={styles.code}>_ga</code></td><td style={styles.td}>Identifiant utilisateur Google Analytics 4</td><td style={styles.td}>2 ans</td></tr>
-              <tr><td style={styles.td}><code style={styles.code}>_ga_CTE9Y21S1L</code></td><td style={styles.td}>État de session GA4</td><td style={styles.td}>2 ans</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>_ga_2HDZZLDDJJ</code></td><td style={styles.td}>État de session GA4</td><td style={styles.td}>2 ans</td></tr>
             </tbody>
           </table>
         </div>
@@ -1484,7 +1484,7 @@ function PrivacyPolicyRu() {
             </thead>
             <tbody>
               <tr><td style={styles.td}><code style={styles.code}>_ga</code></td><td style={styles.td}>Идентификатор пользователя Google Analytics 4</td><td style={styles.td}>2 года</td></tr>
-              <tr><td style={styles.td}><code style={styles.code}>_ga_CTE9Y21S1L</code></td><td style={styles.td}>Состояние сессии GA4</td><td style={styles.td}>2 года</td></tr>
+              <tr><td style={styles.td}><code style={styles.code}>_ga_2HDZZLDDJJ</code></td><td style={styles.td}>Состояние сессии GA4</td><td style={styles.td}>2 года</td></tr>
             </tbody>
           </table>
         </div>
