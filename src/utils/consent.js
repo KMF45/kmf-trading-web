@@ -85,11 +85,25 @@ function initDownloadTracking() {
     'click',
     (e) => {
       const link = e.target.closest?.('a[href*="play.google.com"]');
-      if (!link || typeof window.gtag !== 'function') return;
+      if (!link) return;
       const container = link.closest('section[id], footer, nav');
-      window.gtag('event', 'download_click', {
-        link_section: container ? container.id || container.tagName.toLowerCase() : 'content',
-      });
+      const section = container ? container.id || container.tagName.toLowerCase() : 'content';
+      // Play Install Referrer: tags the store URL so Play Console attributes
+      // real installs (not just clicks) to the site, broken down by section.
+      // No personal data — just campaign labels, so no consent gate needed.
+      try {
+        const url = new URL(link.href);
+        if (!url.searchParams.has('referrer')) {
+          url.searchParams.set(
+            'referrer',
+            `utm_source=kmfjournal.com&utm_medium=web&utm_campaign=${section}`
+          );
+          link.href = url.toString();
+        }
+      } catch {}
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'download_click', { link_section: section });
+      }
     },
     true
   );
