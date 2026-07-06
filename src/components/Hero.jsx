@@ -139,6 +139,7 @@ const Hero = () => {
 
   return (
     <section
+      id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center bg-kmf-bg pt-20 overflow-hidden"
       aria-label="K.M.F. Trading Journal introduction"
     >

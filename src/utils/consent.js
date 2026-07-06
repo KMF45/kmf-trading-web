@@ -76,9 +76,29 @@ export function removeAnalytics() {
   analyticsLoaded = false;
 }
 
+// Site-wide tracking of Play Store link clicks via event delegation:
+// one listener covers every current and future download link, no per-component wiring.
+// No-op unless gtag is loaded (i.e. consent accepted), so DNT/rejected users send nothing.
+function initDownloadTracking() {
+  if (typeof document === 'undefined') return;
+  document.addEventListener(
+    'click',
+    (e) => {
+      const link = e.target.closest?.('a[href*="play.google.com"]');
+      if (!link || typeof window.gtag !== 'function') return;
+      const container = link.closest('section[id], footer, nav');
+      window.gtag('event', 'download_click', {
+        link_section: container ? container.id || container.tagName.toLowerCase() : 'content',
+      });
+    },
+    true
+  );
+}
+
 // Boot: on every page load, replay consent decision.
 export function initConsent() {
   if (typeof window === 'undefined') return;
+  initDownloadTracking();
   if (dntEnabled()) return; // Honor DNT — no analytics, no banner needed
   const c = getConsent();
   if (c?.status === 'accepted') loadAnalytics();
