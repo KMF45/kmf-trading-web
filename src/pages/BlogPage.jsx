@@ -8,6 +8,15 @@ import blogTranslations from '../i18n/blogTranslations';
 
 export const posts = [
   {
+    slug: 'swing-trading-vs-day-trading',
+    title: 'Swing Trading vs Day Trading: Why the Slower Style Usually Wins',
+    excerpt: 'Day trading has the better marketing — fast money, no overnight risk. But the 15-year data, the cost math, and the psychology all point the other way. An honest comparison, and how to pick the style your life can actually sustain.',
+    category: 'Improvement',
+    date: 'July 7, 2026',
+    readTime: '9 min read',
+    categoryColor: '#FFB300',
+  },
+  {
     slug: 'analysis-paralysis-trading',
     title: "Analysis Paralysis: Why You Can't Pull the Trigger (And How to Break Free)",
     excerpt: "You see the setup. It's textbook. Your hand is on the mouse — and you freeze, then watch it run without you. Why you can't pull the trigger, what it really costs, and the system that gets you clicking again.",

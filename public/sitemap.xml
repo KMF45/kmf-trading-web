@@ -1413,6 +1413,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kmfjournal.com/blog/swing-trading-vs-day-trading</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/swing-trading-vs-day-trading"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/swing-trading-vs-day-trading"/>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kmfjournal.com/blog/weekend-gap-risk</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/weekend-gap-risk"/>
     <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/weekend-gap-risk"/>

@@ -44,6 +44,7 @@ const ConfidenceVsOverconfidence = lazy(() => import('./pages/blog/ConfidenceVsO
 const WeekendGapRisk = lazy(() => import('./pages/blog/WeekendGapRisk'));
 const ScalingInVsScalingOut = lazy(() => import('./pages/blog/ScalingInVsScalingOut'));
 const MarketOrderVsLimitOrder = lazy(() => import('./pages/blog/MarketOrderVsLimitOrder'));
+const SwingVsDayTrading = lazy(() => import('./pages/blog/SwingVsDayTrading'));
 const AnalysisParalysisTrading = lazy(() => import('./pages/blog/AnalysisParalysisTrading'));
 const WhatIsKmfTradingJournal = lazy(() => import('./pages/blog/WhatIsKmfTradingJournal'));
 const StaticVsTrailingDrawdown = lazy(() => import('./pages/blog/StaticVsTrailingDrawdown'));
@@ -264,6 +265,7 @@ function App() {
           <Route path="/blog/weekend-gap-risk" element={<WeekendGapRisk />} />
           <Route path="/blog/scaling-in-vs-scaling-out" element={<ScalingInVsScalingOut />} />
           <Route path="/blog/market-order-vs-limit-order" element={<MarketOrderVsLimitOrder />} />
+          <Route path="/blog/swing-trading-vs-day-trading" element={<SwingVsDayTrading />} />
           <Route path="/blog/analysis-paralysis-trading" element={<AnalysisParalysisTrading />} />
           <Route path="/blog/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournal />} />
           <Route path="/blog/static-vs-trailing-drawdown" element={<StaticVsTrailingDrawdown />} />

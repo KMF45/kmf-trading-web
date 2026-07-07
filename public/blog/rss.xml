@@ -5,13 +5,22 @@
     <link>https://kmfjournal.com/blog</link>
     <description>Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kmfjournal.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://kmfjournal.com/logo.png</url>
       <title>K.M.F. Trading Journal Blog</title>
       <link>https://kmfjournal.com/blog</link>
     </image>
+
+    <item>
+      <title>Swing Trading vs Day Trading: Why the Slower Style Usually Wins</title>
+      <link>https://kmfjournal.com/blog/swing-trading-vs-day-trading</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/swing-trading-vs-day-trading</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
+      <category>Improvement</category>
+      <description>Day trading has the better marketing — fast money, no overnight risk. But the 15-year data, the cost math, and the psychology all point the other way. An honest comparison, and how to pick the style your life can actually sustain.</description>
+    </item>
 
     <item>
       <title>Analysis Paralysis: Why You Can't Pull the Trigger (And How to Break Free)</title>
