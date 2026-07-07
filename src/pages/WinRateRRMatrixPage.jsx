@@ -877,7 +877,6 @@ export default function WinRateRRMatrixPage() {
             <p className="text-kmf-text-primary font-semibold text-base mb-4">{t.ctaLine2}</p>
             <a href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal"
               target="_blank" rel="noopener noreferrer"
-              onClick={() => window.gtag?.('event', 'play_store_click', { source: 'win_rate_rr_matrix_cta' })}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #4FC3F7, #0288D1)', color: '#fff', boxShadow: '0 4px 20px rgba(79,195,247,0.3)' }}
               aria-label="Download K.M.F. Trading Journal on Google Play">

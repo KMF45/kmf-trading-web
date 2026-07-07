@@ -57,7 +57,6 @@ const Download = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Download K.M.F. Trading Journal on Google Play (opens in new tab)"
-                  onClick={() => window.gtag?.('event', 'play_store_click', { source: 'download' })}
                   className="relative overflow-hidden inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-200 hover:scale-105 active:scale-95"
                   style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}
                 >

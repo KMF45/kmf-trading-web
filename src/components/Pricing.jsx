@@ -77,7 +77,6 @@ const Pricing = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download free plan on Google Play (opens in new tab)"
-              onClick={() => window.gtag?.('event', 'play_store_click', { source: 'pricing_free' })}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm mb-7 transition-all duration-200 hover:scale-[1.02]"
               style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.10)', color: '#B8CAD4' }}
             >
@@ -120,7 +119,6 @@ const Pricing = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Get monthly premium on Google Play (opens in new tab)"
-              onClick={() => window.gtag?.('event', 'play_store_click', { source: 'pricing_monthly' })}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm text-white mb-7 transition-all duration-200 hover:scale-[1.02]"
               style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 16px rgba(255,179,0,0.25)' }}
             >
@@ -183,7 +181,6 @@ const Pricing = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Get annual premium on Google Play (opens in new tab)"
-              onClick={() => window.gtag?.('event', 'play_store_click', { source: 'pricing_annual' })}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-sm text-white mb-7 transition-all duration-200 hover:scale-[1.02]"
               style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', boxShadow: '0 4px 16px rgba(255,179,0,0.25)' }}
             >

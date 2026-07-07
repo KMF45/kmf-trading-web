@@ -426,7 +426,6 @@ function ArticleCTA() {
       <a href={PLAY_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => window.gtag?.('event', 'play_store_click', { source: 'blog_cta' })}
         className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-base transition-all hover:scale-105"
         style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}>
         <FaGooglePlay /> Download on Google Play
@@ -628,7 +627,6 @@ function StickyPlayBanner() {
           href={PLAY_STORE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => window.gtag?.('event', 'play_store_click', { source: 'blog_sticky' })}
           className="flex items-center justify-center gap-3 w-full py-3 rounded-xl font-semibold text-sm transition-all hover:scale-[1.02]"
           style={{
             background: 'linear-gradient(135deg, #FFB300, #FF8F00)',

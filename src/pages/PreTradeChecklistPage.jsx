@@ -1035,7 +1035,6 @@ export default function PreTradeChecklistPage() {
                 href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => window.gtag?.('event', 'play_store_click', { source: 'pretrade_checklist' })}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: 'white', boxShadow: '0 4px 16px rgba(255,179,0,0.25)' }}
               >{t.ctaButton}</a>

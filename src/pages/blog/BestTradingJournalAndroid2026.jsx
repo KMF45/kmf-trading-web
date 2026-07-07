@@ -251,7 +251,6 @@ export default function BestTradingJournalAndroid2026() {
               <a href={PLAY_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => window.gtag?.('event', 'play_store_click', { source: 'blog_best_journal_card' })}
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200' }}>
                 <FaGooglePlay style={{ fontSize: 12 }} />
@@ -427,7 +426,6 @@ export default function BestTradingJournalAndroid2026() {
             <a href={PLAY_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => window.gtag?.('event', 'play_store_click', { source: 'blog_best_journal_bottom' })}
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl font-bold text-base transition-all hover:scale-105"
               style={{ background: 'linear-gradient(135deg, #FFB300, #FF8F00)', color: '#1A1200', boxShadow: '0 4px 20px rgba(255,179,0,0.25)' }}>
               <FaGooglePlay style={{ fontSize: 14 }} />

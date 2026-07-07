@@ -858,7 +858,6 @@ export default function LotCalculatorPage() {
             {/* Bottom bar: CTA */}
             <div className="flex justify-center py-5" style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}>
               <a href="https://play.google.com/store/apps/details?id=com.kmf.tradingjournal" target="_blank" rel="noopener noreferrer"
-                onClick={() => window.gtag?.('event', 'play_store_click', { source: 'calculator' })}
                 className="inline-flex items-center gap-3 px-6 py-3 rounded-xl transition-all hover:scale-[1.02]"
                 style={{ background: 'linear-gradient(135deg, rgba(255,179,0,0.12), rgba(255,143,0,0.06))', border: '1px solid rgba(255,179,0,0.2)' }}>
                 <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="#FFB300"><path d="M3 20.5v-17c0-.83.52-1.28 1-1.5l9 9-9 9c-.48-.22-1-.67-1-1.5zm14.5-7.5L6.27 2.96l8.97 5.18L17.5 13zm-10.77 9.54l8.97-5.18-2.46-1.42L6.73 22.54zM21 12l-3.5-2-2.74 1.58L17.5 13 21 12z" /></svg>
