@@ -6,6 +6,7 @@
  */
 
 import { createCanvas } from '@napi-rs/canvas';
+import { FONT } from './register-fonts.js';
 import { writeFileSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -198,6 +199,7 @@ const tools = [
   { slug: 'win-rate-rr-matrix', title: 'Win Rate vs R:R Matrix\nFind Your Profitable Zone\nInstant Expectancy Heatmap', category: 'Trading Tool', color: '#00C853' },
   { slug: 'compound-calculator', title: 'KMF Compound Vision\nTrading Compound Growth\nVisualize Your Equity Curve', category: 'Trading Tool', color: '#FFB300' },
   { slug: 'pre-trade-checklist', title: 'Pre-Trade Checklist\nBuilder\nPersonalized for Your Strategy', category: 'Trading Tool', color: '#4FC3F7' },
+  { slug: 'trader-personality-test', title: 'Trader Personality Test\nWhich of 9 Types Are You?\nFind Your Trading Archetype', category: 'Trading Tool', color: '#CE93D8' },
 ];
 
 function hexToRgb(hex) {
@@ -229,7 +231,7 @@ function generate(article, outDir = OUT_DIR) {
   // Category badge
   ctx.fillStyle = `rgba(${r},${g},${b},0.15)`;
   const catText = article.category.toUpperCase();
-  ctx.font = 'bold 16px sans-serif';
+  ctx.font = `bold 16px ${FONT}`;
   const catWidth = ctx.measureText(catText).width + 24;
   const catX = 60, catY = 60;
   ctx.beginPath();
@@ -240,7 +242,7 @@ function generate(article, outDir = OUT_DIR) {
 
   // Title text
   ctx.fillStyle = '#E8EAED';
-  ctx.font = 'bold 48px sans-serif';
+  ctx.font = `bold 48px ${FONT}`;
   const lines = article.title.split('\n');
   let y = 150;
   for (const line of lines) {
@@ -252,10 +254,10 @@ function generate(article, outDir = OUT_DIR) {
   ctx.fillStyle = 'rgba(255,255,255,0.06)';
   ctx.fillRect(0, H - 70, W, 1);
   ctx.fillStyle = '#9AA0A6';
-  ctx.font = 'bold 18px sans-serif';
+  ctx.font = `bold 18px ${FONT}`;
   ctx.fillText('K.M.F. Trading Journal', 60, H - 28);
   ctx.fillStyle = '#6B7280';
-  ctx.font = '16px sans-serif';
+  ctx.font = `16px ${FONT}`;
   ctx.fillText('kmfjournal.com', W - 60 - ctx.measureText('kmfjournal.com').width, H - 28);
 
   const buf = canvas.toBuffer('image/png');
