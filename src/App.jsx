@@ -197,11 +197,13 @@ const LHPrivacyPolicy = lazy(() => import('./pages/liquidhours/PrivacyPolicyPage
 const LHTermsOfUse = lazy(() => import('./pages/liquidhours/TermsOfUsePage'));
 
 // Tools
+const ToolsPage = lazy(() => import('./pages/ToolsPage'));
 const LotCalculatorPage = lazy(() => import('./pages/LotCalculatorPage'));
 const RiskOfRuinPage = lazy(() => import('./pages/RiskOfRuinPage'));
 const WinRateRRMatrixPage = lazy(() => import('./pages/WinRateRRMatrixPage'));
 const CompoundCalculatorPage = lazy(() => import('./pages/CompoundCalculatorPage'));
 const PreTradeChecklistPage = lazy(() => import('./pages/PreTradeChecklistPage'));
+const TraderPersonalityTestPage = lazy(() => import('./pages/TraderPersonalityTestPage'));
 
 // Loading spinner for lazy-loaded routes
 const RouteLoader = () => (
@@ -279,11 +281,14 @@ function App() {
           <Route path="/blog/trading-vs-gambling" element={<TradingVsGambling />} />
 
           {/* Tools */}
+          <Route path="/tools" element={<ToolsPage />} />
           <Route path="/tools/lot-size-calculator" element={<LotCalculatorPage />} />
           <Route path="/tools/risk-of-ruin" element={<RiskOfRuinPage />} />
           <Route path="/tools/win-rate-rr-matrix" element={<WinRateRRMatrixPage />} />
           <Route path="/tools/compound-calculator" element={<CompoundCalculatorPage />} />
           <Route path="/tools/pre-trade-checklist" element={<PreTradeChecklistPage />} />
+          <Route path="/tools/trader-personality-test" element={<TraderPersonalityTestPage />} />
+          <Route path="/tools/trader-personality-test/:type" element={<TraderPersonalityTestPage />} />
 
           {/* Translated articles */}
           <Route path="/blog/ro/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalRo />} />

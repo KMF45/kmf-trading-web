@@ -179,6 +179,24 @@ const Footer = () => {
                   Pre-Trade Checklist
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/tools/trader-personality-test"
+                  className="text-kmf-text-secondary hover:text-kmf-accent transition-colors
+                           inline-block hover:translate-x-1 duration-200"
+                >
+                  Trader Personality Test
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/tools"
+                  className="text-kmf-accent/90 hover:text-kmf-accent transition-colors font-medium
+                           inline-block hover:translate-x-1 duration-200"
+                >
+                  All tools →
+                </Link>
+              </li>
             </ul>
           </div>
 

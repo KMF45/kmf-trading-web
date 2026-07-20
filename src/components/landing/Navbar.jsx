@@ -174,6 +174,29 @@ const ResourcesDropdown = () => {
             </svg>
             Pre-Trade Checklist
           </Link>
+          <Link
+            viewTransition
+            to="/tools/trader-personality-test"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-sm text-kmf-text-secondary hover:text-kmf-accent transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+            Trader Personality Test
+          </Link>
+          <Link
+            viewTransition
+            to="/tools"
+            onClick={() => setOpen(false)}
+            className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-kmf-accent/90 hover:text-kmf-accent transition-colors"
+            style={{ borderTop: '1px solid rgba(79,195,247,0.08)' }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ opacity: 0.6 }}>
+              <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+            </svg>
+            All tools
+          </Link>
         </div>
       )}
     </div>
@@ -262,7 +285,9 @@ const Navbar = () => {
                 <Link viewTransition to="/tools/risk-of-ruin" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Risk of Ruin Calculator</Link>
                 <Link viewTransition to="/tools/win-rate-rr-matrix" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Win Rate vs R:R Matrix</Link>
                 <Link viewTransition to="/tools/compound-calculator" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Compound Calculator</Link>
-                <Link viewTransition to="/tools/pre-trade-checklist" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Pre-Trade Checklist</Link>              </div>
+                <Link viewTransition to="/tools/pre-trade-checklist" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Pre-Trade Checklist</Link>
+                <Link viewTransition to="/tools/trader-personality-test" onClick={() => setMobileOpen(false)} className="text-kmf-text-secondary hover:text-kmf-accent transition-colors text-sm font-medium px-4 py-1">Trader Personality Test</Link>
+              </div>
             </div>
           )}
         </div>

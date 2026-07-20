@@ -76,6 +76,13 @@ export function removeAnalytics() {
   analyticsLoaded = false;
 }
 
+// Fire a GA4 event if analytics is loaded (consent accepted); silent no-op otherwise.
+export function trackEvent(name, params = {}) {
+  if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+    window.gtag('event', name, params);
+  }
+}
+
 // Site-wide tracking of Play Store link clicks via event delegation:
 // one listener covers every current and future download link, no per-component wiring.
 // No-op unless gtag is loaded (i.e. consent accepted), so DNT/rejected users send nothing.

@@ -34,6 +34,19 @@ const routes = [
   '/tools/win-rate-rr-matrix',
   '/tools/compound-calculator',
   '/tools/pre-trade-checklist',
+  '/tools/trader-personality-test',
+  '/tools',
+  // Shared personality-test results — each needs its own prerendered OG tags
+  // so social scrapers (which don't run JS) see the right archetype card.
+  '/tools/trader-personality-test/sniper',
+  '/tools/trader-personality-test/stoic',
+  '/tools/trader-personality-test/comeback-kid',
+  '/tools/trader-personality-test/revenge-trader',
+  '/tools/trader-personality-test/gambler',
+  '/tools/trader-personality-test/overtrader',
+  '/tools/trader-personality-test/overthinker',
+  '/tools/trader-personality-test/true-believer',
+  '/tools/trader-personality-test/momentum-rider',
   // Legal
   '/privacy-policy',
   '/terms-of-service',
