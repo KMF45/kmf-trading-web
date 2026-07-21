@@ -363,7 +363,7 @@ export default function TraderPersonalityTestPage() {
           {/* ── SHARED RESULT (someone sent you their archetype) ── */}
           {sharedProfile && !leftShared && phase === 'intro' && (
             <div className="kmf-anim-qin">
-              <div className="bg-kmf-card border rounded-2xl p-6 sm:p-8 text-center" style={{ borderColor: `${sharedProfile.color}40` }}>
+              <div className="bg-kmf-panel border rounded-2xl p-6 sm:p-8 text-center" style={{ borderColor: `${sharedProfile.color}40` }}>
                 <div className="text-xs font-semibold tracking-wider uppercase text-kmf-text-secondary mb-3">A Trader Personality</div>
                 <img
                   src={typeImg(sharedProfile.key)}
@@ -457,7 +457,7 @@ export default function TraderPersonalityTestPage() {
                   ['🧠', 'Your bias', 'The behavioral trap to watch'],
                   ['✅', '3 fixes + PDF', 'Actionable, downloadable'],
                 ].map(([e, t, d]) => (
-                  <div key={t} className="bg-kmf-card border border-white/5 rounded-xl p-4">
+                  <div key={t} className="bg-kmf-panel border border-white/5 rounded-xl p-4">
                     <div className="text-2xl mb-1">{e}</div>
                     <div className="font-semibold text-sm">{t}</div>
                     <div className="text-xs text-kmf-text-secondary">{d}</div>
@@ -500,7 +500,7 @@ export default function TraderPersonalityTestPage() {
                         className={`kmf-anim-stagger w-full text-left px-5 py-4 rounded-xl border transition-all duration-200 active:scale-[0.98] ${
                           selected
                             ? 'border-kmf-accent bg-kmf-accent/10 scale-[1.01]'
-                            : 'border-white/8 bg-kmf-card hover:border-kmf-accent/40 hover:bg-white/[0.03]'
+                            : 'border-white/8 bg-kmf-panel hover:border-kmf-accent/40 hover:bg-white/[0.03]'
                         }`}
                         style={{ animationDelay: `${idx * 0.05}s` }}
                       >
@@ -542,7 +542,7 @@ export default function TraderPersonalityTestPage() {
 
               <div className="kmf-anim-result">
                 {/* Card (captured for PDF) */}
-                <div ref={cardRef} className="bg-kmf-card border rounded-2xl p-6 sm:p-8" style={{ borderColor: `${result.profile.color}40` }}>
+                <div ref={cardRef} className="bg-kmf-panel border rounded-2xl p-6 sm:p-8" style={{ borderColor: `${result.profile.color}40` }}>
                   <div className="text-center">
                     <div className="text-xs font-semibold tracking-wider uppercase text-kmf-text-secondary mb-3">Your Trader Personality</div>
                     <img
@@ -618,17 +618,17 @@ export default function TraderPersonalityTestPage() {
                   <button onClick={downloadPdf} disabled={pdfBusy} className="flex-1 min-w-[140px] bg-kmf-accent hover:bg-kmf-accent/90 disabled:opacity-60 text-kmf-bg font-semibold px-5 py-3 rounded-xl transition-all active:scale-95">
                     {pdfBusy ? 'Generating…' : '⬇ Download PDF'}
                   </button>
-                  <button onClick={share} className="flex-1 min-w-[140px] bg-kmf-card border border-white/10 hover:border-kmf-accent/40 font-semibold px-5 py-3 rounded-xl transition-all active:scale-95">
+                  <button onClick={share} className="flex-1 min-w-[140px] bg-kmf-panel border border-white/10 hover:border-kmf-accent/40 font-semibold px-5 py-3 rounded-xl transition-all active:scale-95">
                     {copied ? '✓ Link copied' : '↗ Share result'}
                   </button>
-                  <button onClick={reset} className="flex-1 min-w-[140px] bg-kmf-card border border-white/10 hover:border-white/25 text-kmf-text-secondary font-semibold px-5 py-3 rounded-xl transition-all active:scale-95">
+                  <button onClick={reset} className="flex-1 min-w-[140px] bg-kmf-panel border border-white/10 hover:border-white/25 text-kmf-text-secondary font-semibold px-5 py-3 rounded-xl transition-all active:scale-95">
                     ↻ Retake
                   </button>
                 </div>
 
                 {/* Copying blocked by the browser — hand the link over directly. */}
                 {manualLink && (
-                  <div className="mt-3 bg-kmf-card border border-kmf-accent/30 rounded-xl p-4">
+                  <div className="mt-3 bg-kmf-panel border border-kmf-accent/30 rounded-xl p-4">
                     <div className="text-sm font-semibold mb-2">Your browser blocked copying — here's your link:</div>
                     <input
                       readOnly
@@ -665,7 +665,7 @@ export default function TraderPersonalityTestPage() {
               <h2 className="text-xl font-bold mb-5">Frequently asked</h2>
               <div className="space-y-4">
                 {FAQ.map((f) => (
-                  <div key={f.q} className="bg-kmf-card border border-white/5 rounded-xl p-4">
+                  <div key={f.q} className="bg-kmf-panel border border-white/5 rounded-xl p-4">
                     <div className="font-semibold text-kmf-text-primary mb-1.5">{f.q}</div>
                     <p className="text-sm text-kmf-text-secondary leading-relaxed">{f.a}</p>
                   </div>
@@ -676,7 +676,7 @@ export default function TraderPersonalityTestPage() {
               <h2 className="text-xl font-bold mb-4 mt-10">The 9 trader archetypes</h2>
               <div className="grid sm:grid-cols-2 gap-2.5">
                 {Object.values(PROFILES).map((p) => (
-                  <div key={p.key} className="flex items-center gap-3 bg-kmf-card border border-white/5 rounded-lg px-4 py-3">
+                  <div key={p.key} className="flex items-center gap-3 bg-kmf-panel border border-white/5 rounded-lg px-4 py-3">
                     <img src={typeImg(p.key)} alt={p.name} width="512" height="512" loading="lazy" className="w-11 h-11 shrink-0 rounded-lg" />
                     <div>
                       <div className="font-semibold text-sm" style={{ color: p.color }}>{p.name}</div>

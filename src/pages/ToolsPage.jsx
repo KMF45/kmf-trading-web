@@ -140,7 +140,7 @@ export default function ToolsPage() {
                 key={tool.to}
                 viewTransition
                 to={tool.to}
-                className="group bg-kmf-card border border-white/5 rounded-xl p-5 transition-all hover:border-kmf-accent/40 hover:bg-white/[0.03] hover:-translate-y-0.5"
+                className="group bg-kmf-panel border border-white/5 rounded-xl p-5 transition-all hover:border-kmf-accent/40 hover:bg-white/[0.03] hover:-translate-y-0.5"
               >
                 <div className="flex items-start gap-4">
                   <span
