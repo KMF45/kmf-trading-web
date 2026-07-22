@@ -157,6 +157,10 @@ export default function AnalysisParalysisTrading() {
         The line is simple and brutal: <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>did the chart say no, or did your fear say no?</strong> You can't always tell in the heat of the moment — which is why you write it down. Log every setup you passed on and check later what it did. After thirty entries, your journal stops the lying. It will show you, in cold numbers, whether your "discipline" is actually an edge or just well-disguised avoidance. That's the whole reason a <Link to="/" className="text-kmf-accent underline hover:text-white transition-colors">trading journal</Link> exists: to turn the story you tell yourself into data you can't argue with.
       </P>
 
+      <Callout title="Do you freeze at the entry?" color="#FFB300">
+        Chronic hesitation has a name: the Overthinker. Find out whether it's your dominant archetype with the free <Link to="/tools/trader-personality-test" className="text-kmf-accent hover:underline">Trader Personality Test</Link> — 16 questions, no signup, three fixes at the end.
+      </Callout>
+
       <Takeaways items={[
         "Analysis paralysis is fear wearing the costume of diligence — more confirmation isn't making you surer, it's giving you permission to do nothing.",
         "The cost is invisible but real: you can't compound a trade you never took, and every winner you watch leave teaches your brain that freezing is safe.",

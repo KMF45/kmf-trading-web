@@ -129,6 +129,10 @@ export default function RevengeTrading() {
         If you want a concrete, step-by-step protocol you can follow mechanically when you are tilted, read our <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading Kill Switch</Link> — five pre-programmed rules based on cortisol research that you set when calm and follow when you are not.
       </P>
 
+      <Callout title="Is the Revenge Trader your dominant pattern?" color="#FF5252">
+        Revenge trading is one of nine behavioral archetypes traders fall into. The free <Link to="/tools/trader-personality-test" className="text-kmf-accent hover:underline">Trader Personality Test</Link> — 16 questions, no signup — tells you whether it's your dominant bias and gives you three fixes built for it.
+      </Callout>
+
       <Takeaways items={[
         'Revenge trading is driven by loss aversion and ego — not by market analysis.',
         'The pattern is predictable: loss → frustration → oversized impulsive trade → larger loss.',

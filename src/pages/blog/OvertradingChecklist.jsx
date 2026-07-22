@@ -94,6 +94,10 @@ export default function OvertradingChecklist() {
         If you recognized yourself in two or more of the signs above, the action is simple but not easy: stop trading for the rest of the session. Close the platform. Do something physical — walk, exercise, cook. The cortisol and adrenaline in your system need 20 to 30 minutes to dissipate. When you return tomorrow, review today's trades honestly. Identify which ones were plan-based and which were emotion-based. That review is more valuable than any trade you might have taken. Read more about <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">why traders break their rules</Link> and how to build systems that prevent it.
       </P>
 
+      <Callout title="Is overtrading your default setting?" color="#FFB300">
+        The Overtrader is one of nine trader archetypes. The free <Link to="/tools/trader-personality-test" className="text-kmf-accent hover:underline">Trader Personality Test</Link> tells you in two minutes whether quantity-over-quality is your dominant bias — and exactly what to do about it.
+      </Callout>
+
       <Takeaways items={[
         'Overtrading is not about volume — it is about taking trades your strategy did not generate.',
         'The 8 warning signs: frequency spike, skipping checklist, smaller timeframes, trading news, position size creep, untested setups, screen addiction, and "just one more."',

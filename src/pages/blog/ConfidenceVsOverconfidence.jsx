@@ -112,6 +112,10 @@ export default function ConfidenceVsOverconfidence() {
         Until you have at least 100 trades logged with consistent results, keep your risk percentage fixed. No "feeling confident" adjustments. The <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">1% rule</Link> exists precisely because human judgment about position sizing is unreliable under emotional influence.
       </P>
 
+      <Callout title="Confidence or the house-money trap?" color="#4FC3F7">
+        The Momentum Rider presses winners — until confidence tips into overconfidence and gives it all back. See whether it's your dominant archetype with the free <Link to="/tools/trader-personality-test" className="text-kmf-accent hover:underline">Trader Personality Test</Link> — 16 questions, no signup.
+      </Callout>
+
       <Takeaways items={[
         'Confidence is built on verified data and process; overconfidence is built on recent wins and gut feeling.',
         'The Dunning-Kruger effect makes the most dangerous traders feel the most certain.',

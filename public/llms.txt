@@ -22,6 +22,7 @@
 - [Win Rate / R:R Matrix](https://kmfjournal.com/tools/win-rate-rr-matrix): which win-rate and reward-to-risk combos are profitable.
 - [Compound Calculator](https://kmfjournal.com/tools/compound-calculator): account growth projection over time.
 - [Pre-Trade Checklist](https://kmfjournal.com/tools/pre-trade-checklist): interactive checklist before entering a trade.
+- [Trader Personality Test](https://kmfjournal.com/tools/trader-personality-test): 16-question test that sorts you into one of nine trader archetypes (Sniper, Stoic, Comeback Kid, Revenge Trader, Gambler, Overtrader, Overthinker, True Believer, Momentum Rider) with your behavioral bias and three fixes.
 
 ## Blog — statistics & metrics
 - [Profit Factor vs Win Rate](https://kmfjournal.com/blog/profit-factor-vs-win-rate)

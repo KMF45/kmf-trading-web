@@ -163,6 +163,10 @@ export default function ProspectTheoryTrading() {
         You will never stop feeling the asymmetry. The $100 loss will always hurt more than the $100 gain feels good. The trick is not to eliminate the feeling — it is to build a system that executes correctly despite the feeling. Hard stops. Hard targets. R-multiple tracking. Monthly bias audits. The system does not care about your feelings. That is its greatest feature.
       </P>
 
+      <Callout title="Do you hold losers and cut winners?" color="#FFB300">
+        That's the True Believer archetype in action. The free <Link to="/tools/trader-personality-test" className="text-kmf-accent hover:underline">Trader Personality Test</Link> shows whether the disposition effect is your dominant bias — in 16 questions, with three concrete fixes.
+      </Callout>
+
       <Takeaways items={[
         'Prospect theory (Nobel Prize, 1979): humans feel losses 2.25x more intensely than equivalent gains. This is biological, not emotional weakness. You cannot "mindset" your way out of it.',
         'The disposition effect: traders sell winners 50% more often than losers. You close at +20 pips out of relief and hold at -60 pips out of hope.',
