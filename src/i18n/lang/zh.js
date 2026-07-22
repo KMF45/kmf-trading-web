@@ -329,7 +329,7 @@ const zh = {
       },
       {
         "question": "什么是交易者性格画像？",
-        "answer": "根据你的交易行为，应用会识别你的交易者类型：Sniper（自律、低频率）、Robot（机械化、基于规则）、Momentum Rider（趋势跟随）、Wave Rider（基于振荡指标）、Gambler（高风险入场）或 Revenge Trader（情绪化过度交易）。这有助于你了解自己的交易模式并加以改进。"
+        "answer": "根据你的交易行为，应用会识别你的交易者类型：Sniper（自律、低频率）、Stoic（冷静、基于规则）、Momentum Rider（趋势跟随）、Gambler（高风险入场）或 Revenge Trader（情绪化过度交易）。这有助于你了解自己的交易模式并加以改进。"
       },
       {
         "question": "成就和游戏化系统是如何运作的？",

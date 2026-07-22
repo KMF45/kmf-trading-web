@@ -329,7 +329,7 @@ const fr = {
       },
       {
         "question": "Qu'est-ce que le profil de personnalité du trader ?",
-        "answer": "En se basant sur votre comportement de trading, l'application identifie votre archétype de trader : Sniper (discipliné, faible fréquence), Robot (mécanique, basé sur des règles), Momentum Rider (suiveur de tendance), Wave Rider (basé sur les oscillateurs), Gambler (entrées risquées) ou Revenge Trader (overtrading émotionnel). Cela vous aide à comprendre vos schémas et à progresser."
+        "answer": "En se basant sur votre comportement de trading, l'application identifie votre archétype de trader : Sniper (discipliné, faible fréquence), Stoic (calme, basé sur des règles), Momentum Rider (suiveur de tendance), Gambler (entrées risquées) ou Revenge Trader (overtrading émotionnel). Cela vous aide à comprendre vos schémas et à progresser. Vous pouvez aussi faire le test de personnalité de trader gratuit sur le web — 16 questions, neuf archétypes — sur kmfjournal.com/tools/trader-personality-test."
       },
       {
         "question": "Comment fonctionne le système de récompenses et de gamification ?",

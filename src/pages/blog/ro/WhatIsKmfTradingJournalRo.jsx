@@ -142,7 +142,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Trader Personality Profile (Premium)</H3>
       <P>
-        Bazat pe datele tale reale de trading — nu pe un chestionar — K.M.F. iti identifica tipul de personalitate de trader: Sniper (putine trade-uri, acuratete mare), Wave Rider (trend follower), Robot (sistematic), Gambler (impulsiv, frecventa mare), Momentum Rider (agresiv dar calculat) sau Revenge Trader (reactiv, condus de pierderi). Fiecare profil vine cu puncte forte, puncte slabe si sugestii specifice de imbunatatire.
+        Bazat pe datele tale reale de trading — nu pe un chestionar — K.M.F. iti identifica tipul de personalitate de trader: Sniper (putine trade-uri, acuratete mare), Stoic (sistematic, bazat pe reguli), Gambler (impulsiv, frecventa mare), Momentum Rider (agresiv dar calculat) sau Revenge Trader (reactiv, condus de pierderi). Fiecare profil vine cu puncte forte, puncte slabe si sugestii specifice de imbunatatire.
       </P>
 
       <H3>Emotion Heatmap</H3>

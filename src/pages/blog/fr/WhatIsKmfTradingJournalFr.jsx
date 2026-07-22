@@ -148,7 +148,7 @@ export default function WhatIsKmfTradingJournalFr() {
 
       <H3>Profil de personnalité de trader (Premium)</H3>
       <P>
-        À partir de tes données de trading réelles — pas d'un questionnaire — K.M.F. identifie ton type de personnalité de trader : Sniper (peu de trades, grande précision), Wave Rider (suiveur de tendance), Robot (systématique), Gambler (impulsif, haute fréquence), Momentum Rider (agressif mais calculé) ou Revenge Trader (réactif, mené par les pertes). Chaque profil vient avec ses forces, ses faiblesses et des suggestions d'amélioration précises.
+        À partir de tes données de trading réelles — pas d'un questionnaire — K.M.F. identifie ton type de personnalité de trader : Sniper (peu de trades, grande précision), Stoic (systématique, basé sur des règles), Gambler (impulsif, haute fréquence), Momentum Rider (agressif mais calculé) ou Revenge Trader (réactif, mené par les pertes). Chaque profil vient avec ses forces, ses faiblesses et des suggestions d'amélioration précises.
       </P>
 
       <H3>Carte de chaleur émotionnelle</H3>

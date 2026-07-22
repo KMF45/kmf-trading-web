@@ -329,7 +329,7 @@ const en = {
       },
       {
         "question": "What is the trader personality profile?",
-        "answer": "Based on your trading behavior, the app identifies your trader archetype: Sniper (disciplined, low frequency), Robot (mechanical, rule-based), Momentum Rider (trend-follower), Wave Rider (oscillator-based), Gambler (risky entries), or Revenge Trader (emotional overtrading). This helps you understand your patterns and improve."
+        "answer": "Based on your trading behavior, the app identifies your trader archetype: Sniper (disciplined, low frequency), Stoic (calm, rule-based), Momentum Rider (trend-follower), Gambler (risky entries), or Revenge Trader (emotional overtrading). This helps you understand your patterns and improve. You can also take the free Trader Personality Test on the web — 16 questions, nine archetypes — at kmfjournal.com/tools/trader-personality-test."
       },
       {
         "question": "How does the achievement and gamification system work?",

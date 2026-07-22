@@ -329,7 +329,7 @@ const ro = {
       },
       {
         "question": "Ce este profilul de personalitate al traderului?",
-        "answer": "Pe baza comportamentului tău de trading, aplicația îți identifică arhetipul de trader: Sniper (disciplinat, frecvență scăzută), Robot (mecanic, bazat pe reguli), Momentum Rider (urmăritor de trend), Wave Rider (bazat pe oscilator), Gambler (intrări riscante) sau Revenge Trader (overtrading emoțional). Asta te ajută să înțelegi pattern-urile și să te îmbunătățești."
+        "answer": "Pe baza comportamentului tău de trading, aplicația îți identifică arhetipul de trader: Sniper (disciplinat, frecvență scăzută), Stoic (calm, bazat pe reguli), Momentum Rider (urmăritor de trend), Gambler (intrări riscante) sau Revenge Trader (overtrading emoțional). Asta te ajută să înțelegi pattern-urile și să te îmbunătățești. Poți face și testul gratuit de personalitate pe web — 16 întrebări, nouă arhetipuri — la kmfjournal.com/tools/trader-personality-test."
       },
       {
         "question": "Cum funcționează sistemul de realizări și gamification?",
