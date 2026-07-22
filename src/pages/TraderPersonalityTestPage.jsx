@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import { toPng } from 'html-to-image';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
 import { QUESTIONS, PROFILES, TOTAL_QUESTIONS, scoreTest, profileBySlug } from '../data/traderPersonalityTest';
@@ -332,6 +331,9 @@ export default function TraderPersonalityTestPage() {
     if (!cardRef.current || pdfBusy) return;
     setPdfBusy(true);
     try {
+      // Loaded on demand: html-to-image + jsPDF are only needed for the export,
+      // so they stay out of the page's initial load.
+      const { toPng } = await import('html-to-image');
       const dataUrl = await toPng(cardRef.current, { pixelRatio: 2, backgroundColor: '#0F1115', cacheBust: true });
       const img = new Image();
       img.src = dataUrl;

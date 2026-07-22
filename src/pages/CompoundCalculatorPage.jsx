@@ -1,7 +1,6 @@
 import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
-import { toPng } from 'html-to-image';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
 import { useLanguage } from '../i18n/LanguageContext';
@@ -1156,6 +1155,8 @@ export default function CompoundCalculatorPage() {
                     if (!resultsRef.current || sharing) return;
                     setSharing(true);
                     try {
+                      // Loaded on demand — only needed when exporting the image.
+                      const { toPng } = await import('html-to-image');
                       const dataUrl = await toPng(resultsRef.current, {
                         backgroundColor: '#0F1115',
                         pixelRatio: 2,
