@@ -97,6 +97,7 @@ const routes = [
   '/blog/ro/prop-firm-daily-drawdown-guide',
   '/blog/ro/scared-money-prop-firm',
   '/blog/ro/best-free-trading-journal-app-android-2026',
+  '/blog/ro/swing-trading-vs-day-trading',
   // German blog articles
   '/blog/de/profit-factor-vs-win-rate',
   '/blog/de/market-order-vs-limit-order',
@@ -141,6 +142,7 @@ const routes = [
   '/blog/de/metatrader-pre-trade-checklist',
   '/blog/de/scared-money-prop-firm',
   '/blog/de/best-free-trading-journal-app-android-2026',
+  '/blog/de/swing-trading-vs-day-trading',
   // Blog articles — French
   '/blog/fr/what-is-kmf-trading-journal',
   '/blog/fr/excel-vs-trading-journal-app',
@@ -185,6 +187,7 @@ const routes = [
   '/blog/fr/scared-money-prop-firm',
   '/blog/fr/worst-trading-excuses',
   '/blog/fr/best-free-trading-journal-app-android-2026',
+  '/blog/fr/swing-trading-vs-day-trading',
   // Blog articles
   '/blog/profit-factor-vs-win-rate',
   '/blog/1-percent-risk-rule',

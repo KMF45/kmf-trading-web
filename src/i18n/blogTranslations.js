@@ -259,6 +259,12 @@ const blogTranslations = {
     de: '/blog/de/best-free-trading-journal-app-android-2026',
     fr: '/blog/fr/best-free-trading-journal-app-android-2026',
   },
+  'swing-trading-vs-day-trading': {
+    en: '/blog/swing-trading-vs-day-trading',
+    ro: '/blog/ro/swing-trading-vs-day-trading',
+    de: '/blog/de/swing-trading-vs-day-trading',
+    fr: '/blog/fr/swing-trading-vs-day-trading',
+  },
 };
 
 export default blogTranslations;

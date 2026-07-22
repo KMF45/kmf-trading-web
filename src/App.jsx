@@ -99,6 +99,7 @@ const PropFirmJournalRo = lazy(() => import('./pages/blog/ro/PropFirmJournalRo')
 const PropFirmDailyDrawdownRo = lazy(() => import('./pages/blog/ro/PropFirmDailyDrawdownRo'));
 const ScaredMoneyPropFirmRo = lazy(() => import('./pages/blog/ro/ScaredMoneyPropFirmRo'));
 const BestTradingJournalAndroid2026Ro = lazy(() => import('./pages/blog/ro/BestTradingJournalAndroid2026Ro'));
+const SwingVsDayTradingRo = lazy(() => import('./pages/blog/ro/SwingVsDayTradingRo'));
 const BestTradingJournalAndroid2026De = lazy(() => import('./pages/blog/de/BestTradingJournalAndroid2026De'));
 // German blog articles
 const ProfitFactorVsWinRateDe = lazy(() => import('./pages/blog/de/ProfitFactorVsWinRateDe'));
@@ -143,6 +144,7 @@ const MondayEffectTradingDe = lazy(() => import('./pages/blog/de/MondayEffectTra
 const WorstTradingExcusesDe = lazy(() => import('./pages/blog/de/WorstTradingExcusesDe'));
 const MetatraderPreTradeChecklistDe = lazy(() => import('./pages/blog/de/MetatraderPreTradeChecklistDe'));
 const ScaredMoneyPropFirmDe = lazy(() => import('./pages/blog/de/ScaredMoneyPropFirmDe'));
+const SwingVsDayTradingDe = lazy(() => import('./pages/blog/de/SwingVsDayTradingDe'));
 
 // Blog articles — French
 const WhatIsKmfTradingJournalFr = lazy(() => import('./pages/blog/fr/WhatIsKmfTradingJournalFr'));
@@ -188,6 +190,7 @@ const MetatraderPreTradeChecklistFr = lazy(() => import('./pages/blog/fr/Metatra
 const ScaredMoneyPropFirmFr = lazy(() => import('./pages/blog/fr/ScaredMoneyPropFirmFr'));
 const WorstTradingExcusesFr = lazy(() => import('./pages/blog/fr/WorstTradingExcusesFr'));
 const BestTradingJournalAndroid2026Fr = lazy(() => import('./pages/blog/fr/BestTradingJournalAndroid2026Fr'));
+const SwingVsDayTradingFr = lazy(() => import('./pages/blog/fr/SwingVsDayTradingFr'));
 
 // Legal pages
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
@@ -334,6 +337,7 @@ function App() {
           <Route path="/blog/ro/prop-firm-daily-drawdown-guide" element={<PropFirmDailyDrawdownRo />} />
           <Route path="/blog/ro/scared-money-prop-firm" element={<ScaredMoneyPropFirmRo />} />
           <Route path="/blog/ro/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026Ro />} />
+          <Route path="/blog/ro/swing-trading-vs-day-trading" element={<SwingVsDayTradingRo />} />
           <Route path="/blog/de/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026De />} />
           {/* German blog articles */}
           <Route path="/blog/de/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRateDe />} />
@@ -378,6 +382,7 @@ function App() {
           <Route path="/blog/de/worst-trading-excuses" element={<WorstTradingExcusesDe />} />
           <Route path="/blog/de/metatrader-pre-trade-checklist" element={<MetatraderPreTradeChecklistDe />} />
           <Route path="/blog/de/scared-money-prop-firm" element={<ScaredMoneyPropFirmDe />} />
+          <Route path="/blog/de/swing-trading-vs-day-trading" element={<SwingVsDayTradingDe />} />
 
           {/* Blog — French */}
           <Route path="/blog/fr/what-is-kmf-trading-journal" element={<WhatIsKmfTradingJournalFr />} />
@@ -423,6 +428,7 @@ function App() {
           <Route path="/blog/fr/scared-money-prop-firm" element={<ScaredMoneyPropFirmFr />} />
           <Route path="/blog/fr/worst-trading-excuses" element={<WorstTradingExcusesFr />} />
           <Route path="/blog/fr/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026Fr />} />
+          <Route path="/blog/fr/swing-trading-vs-day-trading" element={<SwingVsDayTradingFr />} />
 
           {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

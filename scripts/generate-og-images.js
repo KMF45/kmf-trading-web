@@ -102,6 +102,7 @@ const articles = [
   { slug: 'ro-prop-firm-daily-drawdown-guide', title: 'Daily Drawdown la Prop Firm:\nSistemul in 5 Reguli\nca sa Nu-l Mai Incalci', category: 'Managementul Riscului', color: '#00C853' },
   { slug: 'ro-scared-money-prop-firm', title: 'Trading cu Scared Money:\nDe Ce Contul Prop de 100k\nSe Simte ca o Povara', category: 'Psihologie', color: '#CE93D8' },
   { slug: 'ro-best-free-trading-journal-app-android-2026', title: 'Cea Mai Buna Aplicatie\nGratuita de Trading Journal\npentru Android in 2026', category: 'Recenzii Aplicatii', color: '#4FC3F7' },
+  { slug: 'ro-swing-trading-vs-day-trading', title: 'Swing Trading vs\nDay Trading: De Ce\nStilul Lent Castiga', category: 'Progres', color: '#FFB300' },
   { slug: 'de-profit-factor-vs-win-rate', title: 'Profit Factor vs Win Rate:\nWelche Kennzahl sagt den\nTrading-Erfolg wirklich voraus?', category: 'Statistik', color: '#4FC3F7' },
   { slug: 'de-market-order-vs-limit-order', title: 'Market Order vs Limit Order:\nDie versteckten Kosten, die\ndein Konto leer saugen', category: 'Risikomanagement', color: '#00C853' },
   { slug: 'de-scaling-in-vs-scaling-out', title: 'Scaling In vs Scaling Out:\nWelche Methode des Positions-\nmanagements ist besser?', category: 'Risikomanagement', color: '#00C853' },
@@ -145,6 +146,7 @@ const articles = [
   { slug: 'de-metatrader-pre-trade-checklist', title: 'MetaTrader-Checkliste:\n5 Regeln vor jedem\nEinstieg, die wirklich haften', category: 'Disziplin', color: '#FFB300' },
   { slug: 'de-scared-money-prop-firm', title: 'Scared Money: Warum sich\ndein 100k-Prop-Konto\nwie eine Last anfuehlt', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'de-best-free-trading-journal-app-android-2026', title: 'Die beste kostenlose\nTrading-Journal-App\nfuer Android 2026', category: 'App-Reviews', color: '#4FC3F7' },
+  { slug: 'de-swing-trading-vs-day-trading', title: 'Swing vs Day Trading:\nWarum der langsamere\nStil meist gewinnt', category: 'Verbesserung', color: '#FFB300' },
   // French
   { slug: 'fr-what-is-kmf-trading-journal', title: 'Qu\'est-ce que K.M.F.\nTrading Journal ? L\'app\nconstruite par des traders', category: 'Avis Applications', color: '#4FC3F7' },
   { slug: 'fr-excel-vs-trading-journal-app', title: 'Pourquoi Excel tue\nlentement ta performance\nde trading', category: 'Amelioration', color: '#FFB300' },
@@ -189,6 +191,7 @@ const articles = [
   { slug: 'fr-scared-money-prop-firm', title: 'Scared money : pourquoi\nton compte prop de 100k\nte pese comme un fardeau', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-worst-trading-excuses', title: 'Les 7 pires excuses que\nles traders se racontent\n(et comment ton journal les demasque)', category: 'Psychologie', color: '#CE93D8' },
   { slug: 'fr-best-free-trading-journal-app-android-2026', title: 'La meilleure appli de\njournal de trading gratuite\npour Android 2026', category: 'Avis Applications', color: '#4FC3F7' },
+  { slug: 'fr-swing-trading-vs-day-trading', title: 'Swing vs Day Trading :\npourquoi le style lent\ngagne le plus souvent', category: 'Amelioration', color: '#FFB300' },
 ];
 
 // Tools OG images (output to /public/tools/og/)
