@@ -2,7 +2,9 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/landing/Navbar';
 import Footer from '../components/Footer';
-import { QUESTIONS, PROFILES, TOTAL_QUESTIONS, scoreTest, profileBySlug } from '../data/traderPersonalityTest';
+import { TOTAL_QUESTIONS, scoreTest } from '../data/traderPersonalityTest';
+import { localizedQuestions, localizedProfiles, profileBySlugLocalized, getUI } from '../i18n/personalityTest';
+import { useLanguage } from '../i18n/LanguageContext';
 import { trackEvent } from '../utils/consent';
 
 const OG_IMAGE = 'https://kmfjournal.com/tools/og/trader-personality-test.png';
@@ -10,24 +12,66 @@ const PAGE_URL = 'https://kmfjournal.com/tools/trader-personality-test';
 const LS_KEY = 'kmf_personality_test_v1';
 const APP_CTA = '/#download';
 
-const PAGE_TITLE = 'Trader Personality Test — Which of the 9 Trader Types Are You? | K.M.F.';
-const PAGE_DESC = 'Free 16-question trader personality test. Find your trading archetype — Sniper, Stoic, Revenge Trader, True Believer & more — with your behavioral biases and 3 fixes. No signup, nothing stored on a server.';
-
 const typeImg = (key) => `/tools/personality/${key.toLowerCase()}.png`;
 const shareUrl = (profile) => `${PAGE_URL}/${profile.slug}`;
 const shareImg = (profile) => `https://kmfjournal.com/tools/og/personality/${profile.slug}.png`;
 const OG_ALT = 'K.M.F. Trader Personality Test';
 
-const STYLE_LABEL = {
-  scalper: 'scalper', day: 'day trader', swing: 'swing trader',
-  position: 'position trader', mixed: 'developing trader',
+// English strings live here as the built-in default; other languages come from
+// getUI(lang). Same shape as the language packs in i18n/personalityTest/.
+const EN_UI = {
+  metaTitle: 'Trader Personality Test — Which of the 9 Trader Types Are You? | K.M.F.',
+  metaDesc: 'Free 16-question trader personality test. Find your trading archetype — Sniper, Stoic, Revenge Trader, True Believer & more — with your behavioral biases and 3 fixes. No signup, nothing stored on a server.',
+  sharedTitle: (name) => `${name} — Trader Personality Test | K.M.F.`,
+  styleLabel: { scalper: 'scalper', day: 'day trader', swing: 'swing trader', position: 'position trader', mixed: 'developing trader' },
+  faq: [
+    { q: 'What is the trader personality test?', a: 'A free 16-question self-assessment that estimates your trading archetype across 9 behavioral profiles used in the K.M.F. Trading Journal app — from the disciplined Sniper to the emotional Revenge Trader. It reveals your dominant behavioral bias and gives you three concrete fixes.' },
+    { q: 'Do you store my answers or results?', a: 'No. Everything runs in your browser. Your answers and result are saved only in your own browser (localStorage) so a page refresh does not lose them — nothing is ever sent to, or stored on, a server. There is no signup and no data collection.' },
+    { q: 'How accurate is it?', a: 'It is a self-report estimate of the same trader archetypes the K.M.F. app computes automatically from your real trades (discipline, emotions, hold-time patterns, disposition effect). It is an excellent mirror and starting point — your true, data-driven profile comes from your actual trade history in the app.' },
+  ],
+  badge: 'Free Trading Tool',
+  h1a: "What's Your", h1accent: 'Trader Personality?',
+  heroP: <>16 quick questions reveal which of the <strong className="text-kmf-text-primary">9 trader archetypes</strong> you are — plus your hidden behavioral bias and three fixes to trade better.</>,
+  chipTime: '⏱️ ~2 minutes', chipServer: '🔒 Nothing saved on a server', chipSignup: '🚫 No signup',
+  startBtn: 'Start the test →',
+  resume: (n, total) => `Resume where you left off (${n}/${total})`,
+  cards: [
+    ['🎯', 'Your archetype', 'From Sniper to True Believer'],
+    ['🧠', 'Your bias', 'The behavioral trap to watch'],
+    ['✅', '3 fixes + PDF', 'Actionable, downloadable'],
+  ],
+  privacyIntro: "🔒 Your answers stay in your browser (localStorage) so a refresh won't lose them. We don't collect, send, or store anything on a server.",
+  back: '← Back',
+  quizHint: <>Pick what you <strong className="text-kmf-text-secondary">actually do most often</strong> — not your ideal self. One honest answer.</>,
+  analyzingTitle: 'Analyzing your answers…',
+  analyzingSub: 'Matching you against 9 trader archetypes',
+  resultKicker: 'Your Trader Personality',
+  resultBasedOn: (style) => `Based on your answers as a ${style}`,
+  yourMatch: 'Your match',
+  biasTitle: '🧠 Your behavioral bias',
+  strengthsTitle: '💪 Strengths',
+  weaknessesTitle: '⚠️ Watch out for',
+  tipsTitle: '✅ 3 fixes to work on',
+  cardFooter: 'kmfjournal.com · Trader Personality Test',
+  pdfBtn: '⬇ Download PDF', pdfBusy: 'Generating…',
+  shareBtn: '↗ Share result', shareCopied: '✓ Link copied',
+  retakeBtn: '↻ Retake',
+  manualTitle: "Your browser blocked copying — here's your link:",
+  manualHint: 'Tap the link to select it, then copy.',
+  ctaTitle: <>This is your <em>self-image</em>. Want your <span className="text-kmf-accent">real</span> profile?</>,
+  ctaP: 'The K.M.F. app computes your true archetype automatically from your actual trades — discipline, emotions, hold-times and disposition effect. No guessing.',
+  ctaBtn: 'Get the free app →',
+  resultPrivacy: '🔒 This result lives only in your browser. We don\'t collect, send, or store your answers anywhere. Hit “Retake” to erase it.',
+  faqHeading: 'Frequently asked',
+  archetypesHeading: 'The 9 trader archetypes',
+  shareText: (name) => `I'm "${name}" — my trader personality. Find yours:`,
+  sharedKicker: 'A Trader Personality',
+  sharedBiasTitle: '🧠 The behavioral bias',
+  sharedCtaTitle: <>Which of the 9 types are <span className="text-kmf-accent">you</span>?</>,
+  sharedCtaP: '16 questions, about 2 minutes. No signup, nothing stored on a server — your answers never leave your browser.',
+  sharedCtaBtn: 'Take the test →',
+  sharedSeoSuffix: 'Take the free 16-question test and find your own trader archetype.',
 };
-
-const FAQ = [
-  { q: 'What is the trader personality test?', a: 'A free 16-question self-assessment that estimates your trading archetype across 9 behavioral profiles used in the K.M.F. Trading Journal app — from the disciplined Sniper to the emotional Revenge Trader. It reveals your dominant behavioral bias and gives you three concrete fixes.' },
-  { q: 'Do you store my answers or results?', a: 'No. Everything runs in your browser. Your answers and result are saved only in your own browser (localStorage) so a page refresh does not lose them — nothing is ever sent to, or stored on, a server. There is no signup and no data collection.' },
-  { q: 'How accurate is it?', a: 'It is a self-report estimate of the same trader archetypes the K.M.F. app computes automatically from your real trades (discipline, emotions, hold-time patterns, disposition effect). It is an excellent mirror and starting point — your true, data-driven profile comes from your actual trade history in the app.' },
-];
 
 // ── Count-up hook (matches the site's StatsStrip pattern) ──
 function useCountUp(target, run, duration = 1100) {
@@ -106,9 +150,15 @@ function MatchBar({ item, run, index }) {
 export default function TraderPersonalityTestPage() {
   const { type } = useParams();
   const navigate = useNavigate();
+  const { lang } = useLanguage();
+  const t = getUI(lang) || EN_UI;
+  // Display data localized to the current language. Scoring still runs on the
+  // English structure inside scoreTest — these only swap the visible text.
+  const questions = localizedQuestions(lang);
+  const profiles = localizedProfiles(lang);
   // A shared result URL (/tools/trader-personality-test/sniper) renders the
   // archetype as a landing page for the visitor who received the link.
-  const sharedProfile = type ? profileBySlug(type) : null;
+  const sharedProfile = type ? profileBySlugLocalized(type, lang) : null;
 
   const [phase, setPhase] = useState('intro'); // intro | quiz | analyzing | result
   const [step, setStep] = useState(0);
@@ -132,11 +182,11 @@ export default function TraderPersonalityTestPage() {
   // ── SEO ──
   useEffect(() => {
     const title = sharedProfile
-      ? `${sharedProfile.name} — Trader Personality Test | K.M.F.`
-      : PAGE_TITLE;
+      ? t.sharedTitle(sharedProfile.name)
+      : t.metaTitle;
     const desc = sharedProfile
-      ? `${sharedProfile.tagline} ${sharedProfile.description.slice(0, 150)}… Take the free 16-question test and find your own trader archetype.`
-      : PAGE_DESC;
+      ? `${sharedProfile.tagline} ${sharedProfile.description.slice(0, 150)}… ${t.sharedSeoSuffix}`
+      : t.metaDesc;
     const image = sharedProfile ? shareImg(sharedProfile) : OG_IMAGE;
     const url = sharedProfile ? shareUrl(sharedProfile) : PAGE_URL;
 
@@ -179,7 +229,7 @@ export default function TraderPersonalityTestPage() {
         },
         {
           '@type': 'FAQPage',
-          mainEntity: FAQ.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+          mainEntity: t.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
         },
         {
           '@type': 'BreadcrumbList',
@@ -198,7 +248,7 @@ export default function TraderPersonalityTestPage() {
     if (!script) { script = document.createElement('script'); script.id = 'tpt-jsonld'; script.type = 'application/ld+json'; document.head.appendChild(script); }
     script.textContent = JSON.stringify(jsonLd);
     return () => { script?.remove(); link?.remove(); };
-  }, [sharedProfile]);
+  }, [sharedProfile, t]);
 
   // ── Load saved state (results persist across refresh; no server) ──
   useEffect(() => {
@@ -214,7 +264,7 @@ export default function TraderPersonalityTestPage() {
         setResult(scoreTest(saved.answers));
         setPhase('result');
       } else if (saved.answers && Object.keys(saved.answers).length) {
-        const firstUnanswered = QUESTIONS.findIndex(q => saved.answers[q.id] == null);
+        const firstUnanswered = questions.findIndex(q => saved.answers[q.id] == null);
         setStep(firstUnanswered === -1 ? 0 : firstUnanswered);
         setPhase('quiz');
       }
@@ -238,7 +288,7 @@ export default function TraderPersonalityTestPage() {
   };
 
   const pick = (idx) => {
-    const q = QUESTIONS[step];
+    const q = questions[step];
     const next = { ...answers, [q.id]: idx };
     setAnswers(next);
     const isLast = step === TOTAL_QUESTIONS - 1;
@@ -293,14 +343,15 @@ export default function TraderPersonalityTestPage() {
   const share = async () => {
     if (!result) return;
     // Shares the archetype's own URL so the link preview shows that card.
-    const url = shareUrl(result.profile);
-    const text = `I'm "${result.profile.name}" ${result.profile.emoji} — my trader personality. Find yours:`;
+    const p = profiles[result.resultKey];
+    const url = shareUrl(p);
+    const text = t.shareText(p.name);
     const full = `${text} ${url}`;
 
     if (navigator.share) {
       try {
-        await navigator.share({ title: 'My Trader Personality', text, url });
-        trackEvent('test_share', { archetype: result.profile.slug, method: 'native' });
+        await navigator.share({ title: t.resultKicker, text, url });
+        trackEvent('test_share', { archetype: p.slug, method: 'native' });
         return;
       } catch (e) {
         // AbortError = user closed the share sheet on purpose; anything else
@@ -351,9 +402,16 @@ export default function TraderPersonalityTestPage() {
     }
   };
 
-  const q = QUESTIONS[step];
+  const q = questions[step];
   const answeredCount = Object.keys(answers).length;
   const progress = phase === 'result' ? 100 : Math.round((step / TOTAL_QUESTIONS) * 100);
+
+  // scoreTest returns the English profile; overlay the localized text for display
+  // (structure — key/slug/emoji/color — is identical, so links and images still work).
+  const resultProfile = result ? profiles[result.resultKey] : null;
+  const resultBreakdown = result
+    ? result.breakdown.map(b => ({ ...b, name: profiles[b.key]?.name ?? b.name }))
+    : [];
 
   return (
     <div className="min-h-screen bg-kmf-bg text-kmf-text-primary">
@@ -366,7 +424,7 @@ export default function TraderPersonalityTestPage() {
           {sharedProfile && !leftShared && phase === 'intro' && (
             <div className="kmf-anim-qin">
               <div className="bg-kmf-panel border rounded-2xl p-6 sm:p-8 text-center" style={{ borderColor: `${sharedProfile.color}40` }}>
-                <div className="text-xs font-semibold tracking-wider uppercase text-kmf-text-secondary mb-3">A Trader Personality</div>
+                <div className="text-xs font-semibold tracking-wider uppercase text-kmf-text-secondary mb-3">{t.sharedKicker}</div>
                 <img
                   src={typeImg(sharedProfile.key)}
                   alt={sharedProfile.name}
@@ -380,13 +438,13 @@ export default function TraderPersonalityTestPage() {
                 <p className="text-kmf-text-primary/90 leading-relaxed mt-6 text-left">{sharedProfile.description}</p>
 
                 <div className="mt-7 rounded-xl p-4 border-l-4 text-left" style={{ borderColor: sharedProfile.color, background: `${sharedProfile.color}12` }}>
-                  <div className="text-sm font-semibold mb-1" style={{ color: sharedProfile.color }}>🧠 The behavioral bias</div>
+                  <div className="text-sm font-semibold mb-1" style={{ color: sharedProfile.color }}>{t.sharedBiasTitle}</div>
                   <p className="text-sm text-kmf-text-primary/90">{sharedProfile.bias}</p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4 mt-6 text-left">
                   <div>
-                    <div className="text-sm font-semibold text-kmf-profit mb-2">💪 Strengths</div>
+                    <div className="text-sm font-semibold text-kmf-profit mb-2">{t.strengthsTitle}</div>
                     <ul className="space-y-1.5">
                       {sharedProfile.strengths.map((s, i) => (
                         <li key={i} className="text-sm text-kmf-text-primary/85 flex gap-2"><span className="text-kmf-profit">+</span>{s}</li>
@@ -394,7 +452,7 @@ export default function TraderPersonalityTestPage() {
                     </ul>
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-kmf-loss mb-2">⚠️ Watch out for</div>
+                    <div className="text-sm font-semibold text-kmf-loss mb-2">{t.weaknessesTitle}</div>
                     <ul className="space-y-1.5">
                       {sharedProfile.weaknesses.map((w, i) => (
                         <li key={i} className="text-sm text-kmf-text-primary/85 flex gap-2"><span className="text-kmf-loss">−</span>{w}</li>
@@ -405,15 +463,15 @@ export default function TraderPersonalityTestPage() {
               </div>
 
               <div className="mt-8 rounded-2xl p-6 text-center border border-kmf-accent/20 bg-gradient-to-b from-kmf-accent/10 to-transparent">
-                <h2 className="text-xl sm:text-2xl font-bold mb-2">Which of the 9 types are <span className="text-kmf-accent">you</span>?</h2>
+                <h2 className="text-xl sm:text-2xl font-bold mb-2">{t.sharedCtaTitle}</h2>
                 <p className="text-kmf-text-secondary text-sm mb-5 max-w-md mx-auto">
-                  16 questions, about 2 minutes. No signup, nothing stored on a server — your answers never leave your browser.
+                  {t.sharedCtaP}
                 </p>
                 <button
                   onClick={() => { setLeftShared(true); start('shared_result'); }}
                   className="inline-flex items-center gap-2 bg-kmf-accent hover:bg-kmf-accent/90 text-kmf-bg font-semibold text-lg px-8 py-4 rounded-xl transition-all hover:scale-[1.03] active:scale-95 shadow-lg shadow-kmf-accent/20"
                 >
-                  Take the test →
+                  {t.sharedCtaBtn}
                 </button>
               </div>
             </div>
@@ -423,52 +481,48 @@ export default function TraderPersonalityTestPage() {
           {(!sharedProfile || leftShared) && phase === 'intro' && (
             <div className="kmf-anim-qin text-center">
               <span className="inline-block text-xs font-semibold tracking-wider uppercase text-kmf-accent bg-kmf-accent/10 border border-kmf-accent/20 rounded-full px-3 py-1 mb-5">
-                Free Trading Tool
+                {t.badge}
               </span>
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
-                What's Your <span className="text-kmf-accent">Trader Personality?</span>
+                {t.h1a} <span className="text-kmf-accent">{t.h1accent}</span>
               </h1>
               <p className="text-kmf-text-secondary text-lg mb-6 max-w-xl mx-auto">
-                16 quick questions reveal which of the <strong className="text-kmf-text-primary">9 trader archetypes</strong> you are — plus your hidden behavioral bias and three fixes to trade better.
+                {t.heroP}
               </p>
 
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-kmf-text-secondary mb-8">
-                <span>⏱️ ~2 minutes</span>
-                <span>🔒 Nothing saved on a server</span>
-                <span>🚫 No signup</span>
+                <span>{t.chipTime}</span>
+                <span>{t.chipServer}</span>
+                <span>{t.chipSignup}</span>
               </div>
 
               <button
                 onClick={() => start('intro')}
                 className="inline-flex items-center gap-2 bg-kmf-accent hover:bg-kmf-accent/90 text-kmf-bg font-semibold text-lg px-8 py-4 rounded-xl transition-all hover:scale-[1.03] active:scale-95 shadow-lg shadow-kmf-accent/20"
               >
-                Start the test →
+                {t.startBtn}
               </button>
 
               {answeredCount > 0 && (
                 <div className="mt-4">
                   <button onClick={() => setPhase('quiz')} className="text-sm text-kmf-accent underline underline-offset-2">
-                    Resume where you left off ({answeredCount}/{TOTAL_QUESTIONS})
+                    {t.resume(answeredCount, TOTAL_QUESTIONS)}
                   </button>
                 </div>
               )}
 
               <div className="mt-10 grid sm:grid-cols-3 gap-3 text-left">
-                {[
-                  ['🎯', 'Your archetype', 'From Sniper to True Believer'],
-                  ['🧠', 'Your bias', 'The behavioral trap to watch'],
-                  ['✅', '3 fixes + PDF', 'Actionable, downloadable'],
-                ].map(([e, t, d]) => (
-                  <div key={t} className="bg-kmf-panel border border-white/5 rounded-xl p-4">
+                {t.cards.map(([e, title, d]) => (
+                  <div key={title} className="bg-kmf-panel border border-white/5 rounded-xl p-4">
                     <div className="text-2xl mb-1">{e}</div>
-                    <div className="font-semibold text-sm">{t}</div>
+                    <div className="font-semibold text-sm">{title}</div>
                     <div className="text-xs text-kmf-text-secondary">{d}</div>
                   </div>
                 ))}
               </div>
 
               <p className="mt-8 text-xs text-kmf-text-secondary/80 max-w-md mx-auto">
-                🔒 Your answers stay in your browser (localStorage) so a refresh won't lose them. We don't collect, send, or store anything on a server.
+                {t.privacyIntro}
               </p>
             </div>
           )}
@@ -479,7 +533,7 @@ export default function TraderPersonalityTestPage() {
               {/* progress */}
               <div className="mb-8">
                 <div className="flex justify-between items-center mb-2 text-sm">
-                  <button onClick={goBack} className="text-kmf-text-secondary hover:text-kmf-text-primary transition-colors">← Back</button>
+                  <button onClick={goBack} className="text-kmf-text-secondary hover:text-kmf-text-primary transition-colors">{t.back}</button>
                   <span className="text-kmf-text-secondary tabular-nums">{step + 1} / {TOTAL_QUESTIONS}</span>
                 </div>
                 <div className="h-1.5 rounded-full bg-white/5 overflow-hidden">
@@ -490,7 +544,7 @@ export default function TraderPersonalityTestPage() {
               <div key={q.id} className="kmf-anim-qin">
                 <div className="text-xs font-semibold tracking-wider uppercase text-kmf-accent mb-3">{q.section}</div>
                 <h2 className="text-2xl font-bold mb-2 leading-snug">{q.text}</h2>
-                <p className="text-xs text-kmf-text-secondary/70 mb-6">Pick what you <strong className="text-kmf-text-secondary">actually do most often</strong> — not your ideal self. One honest answer.</p>
+                <p className="text-xs text-kmf-text-secondary/70 mb-6">{t.quizHint}</p>
 
                 <div className="space-y-3">
                   {q.options.map((opt, idx) => {
@@ -527,8 +581,8 @@ export default function TraderPersonalityTestPage() {
                 <div className="absolute inset-0 rounded-full border-4 border-white/10" />
                 <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-kmf-accent" style={{ animation: 'kmf-ring-spin 0.9s linear infinite' }} />
               </div>
-              <h2 className="text-2xl font-bold mb-2">Analyzing your answers…</h2>
-              <p className="text-kmf-text-secondary">Matching you against 9 trader archetypes</p>
+              <h2 className="text-2xl font-bold mb-2">{t.analyzingTitle}</h2>
+              <p className="text-kmf-text-secondary">{t.analyzingSub}</p>
               <div className="flex justify-center gap-1.5 mt-6">
                 {[0, 1, 2].map(i => (
                   <span key={i} className="w-2.5 h-2.5 rounded-full bg-kmf-accent" style={{ animation: `kmf-dots 1.2s ease-in-out ${i * 0.2}s infinite` }} />
@@ -544,53 +598,53 @@ export default function TraderPersonalityTestPage() {
 
               <div className="kmf-anim-result">
                 {/* Card (captured for PDF) */}
-                <div ref={cardRef} className="bg-kmf-panel border rounded-2xl p-6 sm:p-8" style={{ borderColor: `${result.profile.color}40` }}>
+                <div ref={cardRef} className="bg-kmf-panel border rounded-2xl p-6 sm:p-8" style={{ borderColor: `${resultProfile.color}40` }}>
                   <div className="text-center">
-                    <div className="text-xs font-semibold tracking-wider uppercase text-kmf-text-secondary mb-3">Your Trader Personality</div>
+                    <div className="text-xs font-semibold tracking-wider uppercase text-kmf-text-secondary mb-3">{t.resultKicker}</div>
                     <img
-                      src={typeImg(result.profile.key)}
-                      alt={result.profile.name}
+                      src={typeImg(resultProfile.key)}
+                      alt={resultProfile.name}
                       width="512" height="512"
                       className="kmf-anim-emoji inline-block w-40 h-40 sm:w-44 sm:h-44 rounded-2xl mb-4 border"
-                      style={{ borderColor: `${result.profile.color}40` }}
+                      style={{ borderColor: `${resultProfile.color}40` }}
                     />
-                    <h1 className="text-3xl sm:text-4xl font-bold mb-2" style={{ color: result.profile.color }}>{result.profile.name}</h1>
-                    <p className="text-kmf-text-secondary text-lg mb-1">{result.profile.tagline}</p>
-                    <p className="text-xs text-kmf-text-secondary/70">Based on your answers as a {STYLE_LABEL[result.style] || 'trader'}</p>
+                    <h1 className="text-3xl sm:text-4xl font-bold mb-2" style={{ color: resultProfile.color }}>{resultProfile.name}</h1>
+                    <p className="text-kmf-text-secondary text-lg mb-1">{resultProfile.tagline}</p>
+                    <p className="text-xs text-kmf-text-secondary/70">{t.resultBasedOn(t.styleLabel[result.style] || t.styleLabel.mixed)}</p>
                   </div>
 
-                  <p className="text-kmf-text-primary/90 leading-relaxed mt-6">{result.profile.description}</p>
+                  <p className="text-kmf-text-primary/90 leading-relaxed mt-6">{resultProfile.description}</p>
 
                   {/* match breakdown */}
-                  {result.breakdown.length > 1 && (
+                  {resultBreakdown.length > 1 && (
                     <div className="mt-7 space-y-4">
-                      <div className="text-sm font-semibold text-kmf-text-secondary">Your match</div>
-                      {result.breakdown.map((item, i) => (
+                      <div className="text-sm font-semibold text-kmf-text-secondary">{t.yourMatch}</div>
+                      {resultBreakdown.map((item, i) => (
                         <MatchBar key={item.key} item={item} run={barsOn} index={i} />
                       ))}
                     </div>
                   )}
 
                   {/* bias callout */}
-                  <div className="mt-7 rounded-xl p-4 border-l-4" style={{ borderColor: result.profile.color, background: `${result.profile.color}12` }}>
-                    <div className="text-sm font-semibold mb-1" style={{ color: result.profile.color }}>🧠 Your behavioral bias</div>
-                    <p className="text-sm text-kmf-text-primary/90">{result.profile.bias}</p>
+                  <div className="mt-7 rounded-xl p-4 border-l-4" style={{ borderColor: resultProfile.color, background: `${resultProfile.color}12` }}>
+                    <div className="text-sm font-semibold mb-1" style={{ color: resultProfile.color }}>{t.biasTitle}</div>
+                    <p className="text-sm text-kmf-text-primary/90">{resultProfile.bias}</p>
                   </div>
 
                   {/* strengths / weaknesses */}
                   <div className="grid sm:grid-cols-2 gap-4 mt-6">
                     <div className="kmf-anim-stagger" style={{ animationDelay: '0.5s' }}>
-                      <div className="text-sm font-semibold text-kmf-profit mb-2">💪 Strengths</div>
+                      <div className="text-sm font-semibold text-kmf-profit mb-2">{t.strengthsTitle}</div>
                       <ul className="space-y-1.5">
-                        {result.profile.strengths.map((s, i) => (
+                        {resultProfile.strengths.map((s, i) => (
                           <li key={i} className="text-sm text-kmf-text-primary/85 flex gap-2"><span className="text-kmf-profit">+</span>{s}</li>
                         ))}
                       </ul>
                     </div>
                     <div className="kmf-anim-stagger" style={{ animationDelay: '0.62s' }}>
-                      <div className="text-sm font-semibold text-kmf-loss mb-2">⚠️ Watch out for</div>
+                      <div className="text-sm font-semibold text-kmf-loss mb-2">{t.weaknessesTitle}</div>
                       <ul className="space-y-1.5">
-                        {result.profile.weaknesses.map((w, i) => (
+                        {resultProfile.weaknesses.map((w, i) => (
                           <li key={i} className="text-sm text-kmf-text-primary/85 flex gap-2"><span className="text-kmf-loss">−</span>{w}</li>
                         ))}
                       </ul>
@@ -599,9 +653,9 @@ export default function TraderPersonalityTestPage() {
 
                   {/* tips */}
                   <div className="mt-6 kmf-anim-stagger" style={{ animationDelay: '0.74s' }}>
-                    <div className="text-sm font-semibold text-kmf-accent mb-2">✅ 3 fixes to work on</div>
+                    <div className="text-sm font-semibold text-kmf-accent mb-2">{t.tipsTitle}</div>
                     <ol className="space-y-2">
-                      {result.profile.tips.map((tip, i) => (
+                      {resultProfile.tips.map((tip, i) => (
                         <li key={i} className="text-sm text-kmf-text-primary/90 flex gap-3">
                           <span className="shrink-0 w-6 h-6 rounded-full bg-kmf-accent/15 text-kmf-accent font-semibold flex items-center justify-center text-xs">{i + 1}</span>
                           <span>{tip}</span>
@@ -611,27 +665,27 @@ export default function TraderPersonalityTestPage() {
                   </div>
 
                   <div className="mt-6 pt-4 border-t border-white/5 text-center text-xs text-kmf-text-secondary/60">
-                    kmfjournal.com · Trader Personality Test
+                    {t.cardFooter}
                   </div>
                 </div>
 
                 {/* actions */}
                 <div className="flex flex-wrap gap-3 mt-5">
                   <button onClick={downloadPdf} disabled={pdfBusy} className="flex-1 min-w-[140px] bg-kmf-accent hover:bg-kmf-accent/90 disabled:opacity-60 text-kmf-bg font-semibold px-5 py-3 rounded-xl transition-all active:scale-95">
-                    {pdfBusy ? 'Generating…' : '⬇ Download PDF'}
+                    {pdfBusy ? t.pdfBusy : t.pdfBtn}
                   </button>
                   <button onClick={share} className="flex-1 min-w-[140px] bg-kmf-panel border border-white/10 hover:border-kmf-accent/40 font-semibold px-5 py-3 rounded-xl transition-all active:scale-95">
-                    {copied ? '✓ Link copied' : '↗ Share result'}
+                    {copied ? t.shareCopied : t.shareBtn}
                   </button>
                   <button onClick={reset} className="flex-1 min-w-[140px] bg-kmf-panel border border-white/10 hover:border-white/25 text-kmf-text-secondary font-semibold px-5 py-3 rounded-xl transition-all active:scale-95">
-                    ↻ Retake
+                    {t.retakeBtn}
                   </button>
                 </div>
 
                 {/* Copying blocked by the browser — hand the link over directly. */}
                 {manualLink && (
                   <div className="mt-3 bg-kmf-panel border border-kmf-accent/30 rounded-xl p-4">
-                    <div className="text-sm font-semibold mb-2">Your browser blocked copying — here's your link:</div>
+                    <div className="text-sm font-semibold mb-2">{t.manualTitle}</div>
                     <input
                       readOnly
                       value={manualLink}
@@ -639,23 +693,23 @@ export default function TraderPersonalityTestPage() {
                       className="w-full bg-kmf-bg border border-white/10 rounded-lg px-3 py-2 text-sm text-kmf-text-primary"
                       aria-label="Your result link"
                     />
-                    <div className="text-xs text-kmf-text-secondary mt-2">Tap the link to select it, then copy.</div>
+                    <div className="text-xs text-kmf-text-secondary mt-2">{t.manualHint}</div>
                   </div>
                 )}
 
                 {/* CTA to app */}
                 <div className="mt-8 rounded-2xl p-6 text-center border border-kmf-accent/20 bg-gradient-to-b from-kmf-accent/10 to-transparent">
-                  <h3 className="text-xl font-bold mb-2">This is your <em>self-image</em>. Want your <span className="text-kmf-accent">real</span> profile?</h3>
+                  <h3 className="text-xl font-bold mb-2">{t.ctaTitle}</h3>
                   <p className="text-kmf-text-secondary text-sm mb-5 max-w-md mx-auto">
-                    The K.M.F. app computes your true archetype automatically from your actual trades — discipline, emotions, hold-times and disposition effect. No guessing.
+                    {t.ctaP}
                   </p>
                   <a href={APP_CTA} className="inline-flex items-center gap-2 bg-kmf-accent hover:bg-kmf-accent/90 text-kmf-bg font-semibold px-7 py-3.5 rounded-xl transition-all hover:scale-[1.03] active:scale-95">
-                    Get the free app →
+                    {t.ctaBtn}
                   </a>
                 </div>
 
                 <p className="mt-6 text-center text-xs text-kmf-text-secondary/70 max-w-md mx-auto">
-                  🔒 This result lives only in your browser. We don't collect, send, or store your answers anywhere. Hit “Retake” to erase it.
+                  {t.resultPrivacy}
                 </p>
               </div>
             </div>
@@ -664,9 +718,9 @@ export default function TraderPersonalityTestPage() {
           {/* ── FAQ / explainer (always visible on intro & result for SEO) ── */}
           {(phase === 'intro' || phase === 'result') && (
             <div className="mt-16 border-t border-white/5 pt-10">
-              <h2 className="text-xl font-bold mb-5">Frequently asked</h2>
+              <h2 className="text-xl font-bold mb-5">{t.faqHeading}</h2>
               <div className="space-y-4">
-                {FAQ.map((f) => (
+                {t.faq.map((f) => (
                   <div key={f.q} className="bg-kmf-panel border border-white/5 rounded-xl p-4">
                     <div className="font-semibold text-kmf-text-primary mb-1.5">{f.q}</div>
                     <p className="text-sm text-kmf-text-secondary leading-relaxed">{f.a}</p>
@@ -675,9 +729,9 @@ export default function TraderPersonalityTestPage() {
               </div>
 
               {/* type list for SEO */}
-              <h2 className="text-xl font-bold mb-4 mt-10">The 9 trader archetypes</h2>
+              <h2 className="text-xl font-bold mb-4 mt-10">{t.archetypesHeading}</h2>
               <div className="grid sm:grid-cols-2 gap-2.5">
-                {Object.values(PROFILES).map((p) => (
+                {Object.values(profiles).map((p) => (
                   <div key={p.key} className="flex items-center gap-3 bg-kmf-panel border border-white/5 rounded-lg px-4 py-3">
                     <img src={typeImg(p.key)} alt={p.name} width="512" height="512" loading="lazy" className="w-11 h-11 shrink-0 rounded-lg" />
                     <div>
