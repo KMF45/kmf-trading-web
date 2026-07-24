@@ -9,8 +9,9 @@ import { QUESTIONS, PROFILES } from '../../data/traderPersonalityTest';
 import * as ro from './ro';
 import * as de from './de';
 import * as fr from './fr';
+import * as ru from './ru';
 
-const PACKS = { ro, de, fr };
+const PACKS = { ro, de, fr, ru };
 
 // Localized questions for display. Structure (scores, style, hold, id, kind,
 // styleSensitive) is preserved; only section/text/option-text are swapped.
