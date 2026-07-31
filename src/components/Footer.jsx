@@ -259,14 +259,14 @@ const Footer = () => {
         <div className="border-t border-kmf-accent/20 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
             <a
-              href="https://onalyse.com/en/scan/kmfjournal.com?ref=badge"
+              href="https://onalyse.com/en/scan/r/b1e32e97b0004d9991007e445bcbdeb0?ref=badge"
               target="_blank"
               rel="noopener noreferrer"
               title="Onalyse Website Score"
               className="inline-block transition-opacity duration-200 hover:opacity-90"
             >
               <img
-                src="https://onalyse.com/badge/kmfjournal.com.svg"
+                src="https://onalyse.com/badge/r/b1e32e97b0004d9991007e445bcbdeb0.svg"
                 alt="Onalyse Score"
                 width="340"
                 height="104"
