@@ -196,13 +196,7 @@ const Pricing = () => {
           </motion.div>
         </div>
 
-        {/* Promo banner */}
-        <motion.div {...revealProps(0.1, 16)} className="mt-10 max-w-xl mx-auto text-center px-6 py-4 rounded-xl border border-kmf-accent/30"
-          style={{ background: 'rgba(79,195,247,0.08)' }}>
-          <p className="text-sm font-semibold text-kmf-accent">
-            {t('pricing.promo')}
-          </p>
-        </motion.div>
+        {/* Promo banner — disabled (no active offer). Strings kept in i18n under pricing.promo. */}
 
         {/* Footer note */}
         <p className="text-center text-xs mt-6" style={{ color: '#6B7D87' }}>
