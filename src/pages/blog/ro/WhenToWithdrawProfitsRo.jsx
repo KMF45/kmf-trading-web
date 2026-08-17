@@ -61,7 +61,7 @@ export default function WhenToWithdrawProfitsRo() {
         Economia comportamentală a numit fenomenul ăsta acum decenii. Richard Thaler a introdus termenul <em>house money effect</em> pentru a descrie tendința de a-ți asuma riscuri mai mari cu bani percepuți ca fiind câștiguri decât cu bani percepuți ca fiind ai tăi. Thaler și Johnson l-au demonstrat direct: participanții cărora li s-a spus că tocmai câștigaseră $30 erau mai dispuși să parieze o parte decât participanții cărora li s-au dat pur și simplu $30 și li s-a oferit exact același pariu. Aceeași valoare așteptată, aceleași sume, disponibilitate diferită — determinată exclusiv de sertarul mental în care fuseseră clasați banii.
       </P>
       <P>
-        Ăsta e un caz particular a ceea ce Thaler a numit <em>mental accounting</em>: banii sunt fungibili în teorie, dar oamenii îi sortează în sertare mentale separate și aplică reguli diferite fiecăruia. Capitalul tău depus stă într-un sertar marcat „banii mei". Profitul tău din trading stă în unul marcat mai degrabă „banii pieței, temporar la mine".
+        Ăsta e un caz particular al fenomenului pe care Thaler l-a numit <em>mental accounting</em>: banii sunt fungibili în teorie, dar oamenii îi sortează în sertare mentale separate și aplică reguli diferite fiecăruia. Capitalul tău depus stă într-un sertar marcat „banii mei". Profitul tău din trading stă în unul marcat mai degrabă „banii pieței, temporar la mine".
       </P>
       <P>
         Consecința pentru un trader profitabil e precisă și scumpă. Pe măsură ce profitul se acumulează în cont, o parte tot mai mare din soldul tău stă în sertarul păzit slab. Nu decizi conștient să-ți asumi mai mult risc. Îți aplici disciplina normală de risc pe capitalul inițial și o disciplină mult mai slabă pe tot ce e peste el — iar al doilea număr crește.
@@ -78,7 +78,7 @@ export default function WhenToWithdrawProfitsRo() {
 
       <H3>Închide bucla</H3>
       <P>
-        Trading-ul e neobișnuit printre activitățile care cer pricepere prin faptul că îl poți practica bine ani la rând fără să experimentezi vreodată un rezultat tangibil. Retragerea e momentul în care abstracțiunea se transformă în ceva real: o factură plătită, o cheltuială acoperită, bani care există în afara platformei. Fără momentul ăla, întreaga întreprindere rămâne ipotetică, iar în privința muncii ipotetice e greu să rămâi disciplinat la nesfârșit.
+        Trading-ul e neobișnuit între activitățile care cer pricepere: îl poți practica bine ani la rând fără să experimentezi vreodată un rezultat tangibil. Retragerea e momentul în care abstracțiunea se transformă în ceva real: o factură plătită, o cheltuială acoperită, bani care există în afara platformei. Fără momentul ăla, întreaga întreprindere rămâne ipotetică, iar într-o muncă ipotetică e greu să rămâi disciplinat la nesfârșit.
       </P>
 
       <H3>Transformă un istoric în dovadă</H3>
@@ -100,7 +100,7 @@ export default function WhenToWithdrawProfitsRo() {
 
       <H2>Trei Modele de Retragere</H2>
       <P>
-        Nu există o politică universal corectă, dar există trei coerente. Modul de eșec nu e alegerea modelului greșit — e să nu ai niciun model.
+        Nu există o politică universal corectă, dar există trei coerente. Greșeala nu e să alegi modelul nepotrivit — e să nu ai niciunul.
       </P>
 
       <Table
@@ -134,7 +134,7 @@ export default function WhenToWithdrawProfitsRo() {
       />
 
       <P>
-        Modelul cu prag merită mai multă atenție decât primește. Un trader care știe că execuția lui se degradează peste $500 risc per trade poate pur și simplu să-și țină contul la nivelul la care 1% înseamnă o mărime pe care o tranzacționează bine, și să retragă tot ce e peste. A schimbat conștient o parte din compunere pentru o execuție constant corectă — ceea ce, pentru un trader care operează lângă plafonul lui, e de obicei târgul mai bun.
+        Modelul cu prag merită mai multă atenție decât primește. Un trader care știe că execuția lui se degradează peste $500 risc per trade poate pur și simplu să-și țină contul la nivelul la care 1% înseamnă o mărime pe care o tranzacționează bine, și să retragă tot ce e peste. A schimbat conștient o parte din compunere pentru o execuție constant corectă — ceea ce, pentru un trader care operează lângă plafonul lui, e de obicei schimbul care merită.
       </P>
 
       <H2>Obiecția cu Compunerea</H2>
@@ -142,7 +142,7 @@ export default function WhenToWithdrawProfitsRo() {
         Argumentul standard împotriva retragerii e că fiecare dolar scos încetează să se compună, iar compunerea e locul unde se fac banii adevărați. Aritmetica e corectă. Presupunerea pe care se sprijină, însă, nu e.
       </P>
       <P>
-        Modelele de compunere presupun că performanța ta e independentă de mărimea contului — că un trader care produce 3% pe lună la $20.000 va produce 3% pe lună la $200.000. Pentru o minoritate de traderi, asta se confirmă. Pentru majoritatea, nu, fiindcă nivelul execuției se degradează pe măsură ce miza absolută crește, iar un randament mai mic pe un cont mai mare poate însemna lejer mai puțini bani decât un randament mai mare pe un cont mai mic.
+        Modelele de compunere presupun că performanța ta e independentă de mărimea contului — că un trader care produce 3% pe lună la $20.000 va produce 3% pe lună la $200.000. Pentru o minoritate de traderi, asta se confirmă. Pentru majoritatea, nu, fiindcă nivelul execuției se degradează pe măsură ce miza absolută crește, iar un randament mai mic pe un cont mai mare poate ajunge să însemne mai puțini bani decât un randament mai mare pe un cont mai mic.
       </P>
       <P>
         Mai e o omisiune. Modelele de compunere presupun că profitul persistă. În realitate, profitul neretras rămâne complet expus: un trader care e pe plus 60% și dă totul înapoi într-un trimestru prost n-a câștigat nimic, în timp ce un trader care a retras 30% pe parcurs a păstrat ceva, indiferent ce a urmat. Retragerea nu e doar venit — e singurul mecanism care face un câștig permanent.
@@ -154,8 +154,8 @@ export default function WhenToWithdrawProfitsRo() {
       <H2>Când Să NU Retragi</H2>
       <Ul items={[
         <>Contul tău e sub mărimea la care 1% risc înseamnă ceva. Să retragi dintr-un cont de $500 nu e disciplină, e demontare. Construiește întâi — vezi analiza noastră despre <Link to="/blog/ro/is-100-enough-to-start-forex" className="text-kmf-accent hover:underline">dacă $100 sunt suficienți pentru forex</Link>.</>,
-        'Retragi ca să scapi dintr-un drawdown. Să scoți bani fiindcă ești speriat e o decizie de mărime deghizată în retragere. Redu mărimea poziției în schimb, deliberat și consemnat.',
-        'Retragi în afara programului, după un câștig mare. Ăsta e efectul house money rulând invers, și antrenează exact impulsivitatea pe care programul există ca s-o elimine.',
+        'Retragi ca să scapi dintr-un drawdown. Să scoți bani fiindcă ești speriat e o decizie de mărime deghizată în retragere. Redu în schimb mărimea poziției, deliberat și consemnat.',
+        'Retragi în afara programului, după un câștig mare. Ăsta e efectul house money pe dos, și antrenează exact impulsivitatea pe care programul există ca s-o elimine.',
         'Conturile de prop firm urmează regulile de payout ale firmei, nu pe ale tale. Psihologia din articolul ăsta se aplică în continuare, dar mecanismul e ciclul firmei — planifică în jurul lui, nu împotriva lui.',
       ]} />
 
@@ -168,7 +168,7 @@ export default function WhenToWithdrawProfitsRo() {
         Retragerea e discutată de obicei ca o decizie financiară: cât iei, cât lași, cât costă în compunere. Încadrarea asta ratează ce contează cu adevărat.
       </P>
       <P>
-        Motivul pentru care retragi după un program e că asta te ține onest. Menține conexiunea dintre numerele pe care le riști și viața căreia îi aparțin numerele alea, iar conexiunea aia e fundația pe care e construită orice altă bucată de disciplină de risc. Un trader care n-a scos bani de trei ani nu face neapărat nimic greșit încă — dar a încetat discret să mai joace pentru bani și a început să joace pentru un număr, iar cele două produc decizii diferite exact în momentele în care deciziile contează cel mai mult.
+        Motivul pentru care retragi după un program e că asta te ține onest. Menține conexiunea dintre numerele pe care le riști și viața căreia îi aparțin numerele alea, iar conexiunea aia e fundația pe care e construită orice altă componentă a disciplinei de risc. Un trader care n-a scos bani de trei ani nu face neapărat nimic greșit încă — dar a încetat discret să mai joace pentru bani și a început să joace pentru un număr, iar cele două produc decizii diferite exact în momentele în care deciziile contează cel mai mult.
       </P>
 
       <Takeaways items={[
@@ -177,8 +177,8 @@ export default function WhenToWithdrawProfitsRo() {
         'Retragerea e singurul mecanism care face un câștig permanent. Profitul neretras e complet expus — pe plus 60% și apoi dat înapoi înseamnă că n-ai câștigat nimic.',
         'Modelele de compunere presupun că performanța e independentă de mărimea contului. Nu e, pentru majoritatea: un randament mai mic pe un cont mare pe care îl tranzacționezi prost poate însemna mai puțini bani decât un randament mai mare pe un cont mic pe care îl tranzacționezi bine.',
         'Retragerile regulate încetinesc deriva riscului tău absolut în dolari, ținând mărimea poziției în intervalul pe care execuția ta îl poate duce cu adevărat.',
-        'Alege un model — procent din profit, sumă fixă sau prag high-water — și stabilește programul la rece. Modul de eșec nu e alegerea modelului greșit; e să nu ai niciunul și să retragi după stare.',
-        'Nu retrage niciodată ca să scapi dintr-un drawdown. Aia e o decizie de mărime a poziției deghizată; redu mărimea deliberat în schimb.',
+        'Alege un model — procent din profit, sumă fixă sau prag high-water — și stabilește programul la rece. Greșeala nu e să alegi modelul nepotrivit; e să nu ai niciunul și să retragi după stare.',
+        'Nu retrage niciodată ca să scapi dintr-un drawdown. Aia e, de fapt, o decizie de mărime a poziției, deghizată; redu în schimb mărimea, deliberat.',
       ]} />
     </BlogArticleLayout>
   );

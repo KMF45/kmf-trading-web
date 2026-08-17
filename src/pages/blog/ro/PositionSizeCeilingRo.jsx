@@ -24,7 +24,7 @@ export default function PositionSizeCeilingRo() {
       faqItems={[
         { question: 'De ce îmi merge trading-ul mai prost când cresc mărimea poziției?', answer: 'Fiindcă procentul tău de risc și riscul pe care îl simți sunt două mărimi diferite. Creierul tău rațional înțelege că 1% e 1% la orice mărime de cont, dar răspunsul tău la stres reacționează la suma absolută pusă în joc. Să riști $500 produce o reacție fiziologică mai puternică decât să riști $100, chiar dacă ambele sunt 1%. Reacția aia degradează exact funcțiile de care trading-ul are nevoie: răbdare, respectarea regulilor și toleranță la profit deschis.' },
         { question: 'Ce este un plafon psihologic de mărime a poziției?', answer: 'E mărimea poziției peste care calitatea execuției tale se degradează constant, indiferent cât încerci să te obișnuiești. Sub plafon îți respecți planul; peste el tai câștigătorii devreme, sari peste setup-uri valide și muți stop-urile. Plafonul e personal, nu e o trăsătură fixă de personalitate și poate fi ridicat deliberat în timp.' },
-        { question: 'Cu cât ar trebui să cresc mărimea poziției o dată?', answer: 'O regulă folosită pe scară largă e maximum 25% pe pas — de la $100 risc per trade la $125, nu la $200. Apoi ții mărimea aia pentru un eșantion semnificativ, tipic minim 30 de trade-uri, și îți verifici respectarea planului înainte să urci din nou. Scopul e ca fiecare creștere să fie destul de mică încât sistemul tău nervos abia s-o observe.' },
+        { question: 'Cu cât ar trebui să cresc mărimea poziției dintr-o dată?', answer: 'O regulă folosită pe scară largă e maximum 25% pe pas — de la $100 risc per trade la $125, nu la $200. Apoi ții mărimea aia pentru un eșantion semnificativ, tipic minim 30 de trade-uri, și îți verifici respectarea planului înainte să urci din nou. Scopul e ca fiecare creștere să fie destul de mică încât sistemul tău nervos abia s-o observe.' },
         { question: 'Care e cel mai prost moment să cresc mărimea poziției?', answer: 'În timpul unei serii câștigătoare. Seria e momentul în care creșterea pare cel mai justificată și e cel mai probabil să fie o reacție la varianță, nu la dovezi. Crește mărimea într-o perioadă normală, mixtă — niște câștiguri, niște pierderi — când decizia e plictisitoare, nu palpitantă.' },
       ]}
       howToSteps={[
@@ -61,10 +61,10 @@ export default function PositionSizeCeilingRo() {
         Cortexul tău prefrontal se ocupă de procent. Înțelege rapoarte, normalizează între mărimi de cont și concluzionează corect că 1% la $50.000 e aceeași expunere relativă ca 1% la $10.000. Partea aia din tine își face treaba perfect.
       </P>
       <P>
-        Răspunsul tău la stres nu consultă procente. El reacționează la magnitudine — la ce înseamnă numărul în lumea în care chiar trăiești. $500 înseamnă cumpărăturile pe o săptămână, o factură la utilități, un bilet de avion spre casă. $100 nu înseamnă. Nicio cantitate de înțelegere a rapoartelor nu transformă una în cealaltă, fiindcă sistemul care face evaluarea nu procesează deloc rapoarte.
+        Răspunsul tău la stres nu consultă procente. El reacționează la magnitudine — la ce înseamnă numărul în lumea în care chiar trăiești. $500 înseamnă cumpărăturile pe o săptămână, o factură la utilități, un bilet de avion spre casă. $100 nu înseamnă nimic din toate astea. Nicio cantitate de înțelegere a rapoartelor nu transformă una în cealaltă, fiindcă sistemul care face evaluarea nu procesează deloc rapoarte.
       </P>
       <P>
-        Există dovezi directe pentru asta, obținute pe un floor de trading, nu într-un laborator. În 2008, John Coates și Joe Herbert au publicat în <em>PNAS</em> un studiu care a măsurat hormoni steroizi la 17 traderi bărbați din City of London, de-a lungul a opt zile de tranzacționare. Una dintre descoperirile centrale: cortizolul unui trader creștea odată cu varianța propriilor rezultate și cu volatilitatea pieței. Cortizolul urmărea mărimea oscilațiilor pe care le trăia — nu procentul lor raportat la capital.
+        Există dovezi directe pentru asta, obținute într-o sală reală de tranzacționare, nu într-un laborator. În 2008, John Coates și Joe Herbert au publicat în <em>PNAS</em> un studiu care a măsurat hormoni steroizi la 17 traderi bărbați din City of London, de-a lungul a opt zile de tranzacționare. Una dintre descoperirile centrale: cortizolul unui trader creștea odată cu varianța propriilor rezultate și cu volatilitatea pieței. Cortizolul urmărea mărimea oscilațiilor pe care le trăia — nu procentul lor raportat la capital.
       </P>
       <P>
         Eșantionul e mic și e un singur studiu, deci nu trebuie supralicitat. Dar indică ceva ce orice trader care și-a crescut mărimea recunoaște imediat: încărcătura fiziologică crește odată cu magnitudinea a ceea ce trăiești, iar când îți dublezi mărimea, dublezi acea magnitudine. Procentul tău de risc a rămas 1%, dar oscilațiile pe care corpul tău trebuie să le digere s-au dublat.
@@ -83,7 +83,7 @@ export default function PositionSizeCeilingRo() {
       </P>
       <Ul items={[
         'Iei profit devreme și numești asta „management de risc în contextul ăsta". Contextul nu s-a schimbat; suma în dolari de pe ecran s-a schimbat.',
-        'Sari peste setup-uri valide și ulterior nu poți articula ce le-a descalificat. Dacă criteriile sunt scrise și setup-ul le îndeplinea, săritura a fost fiziologică, nu analitică.',
+        'Sari peste setup-uri valide și ulterior nu poți articula ce le-a descalificat. Dacă criteriile sunt scrise și setup-ul le îndeplinea, decizia de a-l evita a fost fiziologică, nu analitică.',
         'Începi să urmărești pozițiile deschise tick cu tick, după luni în care puneai ordinele și plecai.',
         <>Muți stop-urile la breakeven mult mai devreme decât specifică planul — semnalul clasic, tratat în detaliu în <Link to="/blog/ro/breakeven-stop-too-early" className="text-kmf-accent hover:underline">de ce îți muți stop-ul la breakeven prea devreme</Link>.</>,
         'Pierderea ta medie depășește discret riscul planificat, fiindcă ieșirea la stop-ul real a devenit ceva ce negociezi.',
@@ -129,7 +129,7 @@ export default function PositionSizeCeilingRo() {
         Citește a treia coloană cu atenție, fiindcă ea e cea care costă bani. La $1.000 risc, traderul ăsta nu doar încalcă reguli — pierderile lui reale sunt de peste două ori mai mari decât riscul planificat. „Riscul lui de 1%" e ficțiune. În practică rulează cam 2% per trade și nu știe, fiindcă măsoară intenția în loc de rezultat.
       </P>
       <P>
-        Ăsta e adevăratul pericol al tranzacționării peste plafon. Nu e că te simți inconfortabil. E că managementul tău de risc încetează tăcut să mai fie real, în timp ce toate tabelele tale zic în continuare 1%.
+        Ăsta e adevăratul pericol al tranzacționării peste plafon. Nu e că te simți inconfortabil. E că managementul tău de risc încetează în tăcere să mai fie real, în timp ce toate tabelele tale zic în continuare 1%.
       </P>
 
       <Callout title="De ce auditul ăsta are nevoie de jurnal" color="#4FC3F7">
@@ -143,12 +143,12 @@ export default function PositionSizeCeilingRo() {
 
       <H3>Crește cu un sfert, nu cu un multiplu</H3>
       <P>
-        De la $100 la $125, nu de la $100 la $200. Un pas de 25% e destul de mic încât diferența de miză resimțită să fie marginală, și tocmai de asta funcționează. Traderii resping asta ca fiind prea lent, apoi petrec doi ani eșuând repetat la $500 — ceea ce e considerabil mai lent.
+        De la $100 la $125, nu de la $100 la $200. Un pas de 25% e destul de mic încât diferența de miză resimțită să fie marginală, și tocmai de asta funcționează. Traderii resping metoda asta ca fiind prea lentă, apoi petrec doi ani eșuând repetat la $500 — ceea ce e considerabil mai lent.
       </P>
 
       <H3>Ține fiecare nivel pentru un eșantion complet</H3>
       <P>
-        Minim 30 de trade-uri, ca noua mărime să fie trăită atât în secvențe câștigătoare, cât și pierzătoare. O mărime mai mare pare în regulă într-o săptămână bună. Ce contează e cum execuți la mărimea aia într-o serie de patru pierderi, și nu poți ști până nu se întâmplă una.
+        Minim 30 de trade-uri, ca noua mărime să fie trăită atât în secvențe câștigătoare, cât și pierzătoare. O mărime mai mare pare în regulă într-o săptămână bună. Ceea ce contează e cum execuți la mărimea aia într-o serie de patru pierderi, și nu poți ști până nu se întâmplă una.
       </P>
 
       <H3>Avansează pe execuție, niciodată pe profit</H3>

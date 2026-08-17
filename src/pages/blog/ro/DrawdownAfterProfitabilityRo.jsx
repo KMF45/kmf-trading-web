@@ -186,7 +186,7 @@ export default function DrawdownAfterProfitabilityRo() {
       <Takeaways items={[
         'Drawdown-ul unui începător costă bani. Drawdown-ul unui trader profitabil costă bani plus dovada că e competent — iar amenințările la identitate declanșează o reacție mult mai distructivă decât cele financiare.',
         'Comportamentele care alină cel mai repede durerea psihologică (optimizare, creștere de mărime, schimbat strategia) sunt exact cele care distrug cel mai repede un edge funcțional. Ușurarea e semnalul de alarmă, nu obiectivul.',
-        'O perioadă profitabilă e pricepere plus varianță favorabilă. Dacă atribui totul priceperii, garantat vei atribui drawdown-ul integral pierderii priceperii. Judecă motorul (speranța matematică), nu vremea (curba de capital).',
+        'O perioadă profitabilă e pricepere plus varianță favorabilă. Dacă atribui totul priceperii, garantat vei pune drawdown-ul integral pe seama pierderii priceperii. Judecă motorul (speranța matematică), nu vremea (curba de capital).',
         'Pune diagnosticul pe date de proces, niciodată pe P/L: respectarea planului peste 90%, pierderi plafonate în jur de −1R și criterii de intrare neschimbate înseamnă varianță, nu strategie stricată — indiferent cât de roșie arată luna.',
         'Când edge-ul unui trader profitabil chiar se strică, cauza e de obicei că traderul a încetat să-l execute ca reacție la drawdown. Drawdown-ul rareori strică edge-ul; reacția la el îl strică.',
         'Scrie un Dosar de Dovezi cât ești profitabil — statistici de referință plus două praguri de drawdown stabilite din timp. Limitele alese la rece sunt limite reale; cele alese pe minus 12% sunt negocieri pe care le vei pierde.',
