@@ -36,7 +36,7 @@ export default function DrawdownAfterProfitabilityRo() {
       ]}
     >
       <Intro>
-        Doi traderi sunt pe minus 8% luna asta. Primul e la șase luni de carieră și n-a avut niciodată o lună profitabilă. Al doilea tocmai a încheiat unsprezece luni profitabile la rând. Același instrument, același drawdown, aceeași mărime de cont. Întreabă pe oricine care trader e în pericol mai mare și va arăta spre începător. Ar greși. Începătorul va ridica din umeri, va numi asta taxă de școlarizare și va merge mai departe. Traderul profitabil nu va dormi, va petrece weekendul rescriind reguli care au funcționat un an întreg și are șanse reale să demonteze singurul edge pe care l-a construit vreodată. Drawdown-ul e identic. Ce amenință el, nu.
+        Doi traderi sunt pe minus 8% luna asta. Primul e la șase luni de carieră și n-a avut niciodată o lună profitabilă. Al doilea tocmai a încheiat unsprezece luni profitabile la rând. Același instrument, același drawdown, aceeași mărime de cont. Întreabă pe oricine care dintre ei e în pericol mai mare și îți va arăta începătorul. Ar greși. Începătorul va ridica din umeri, va numi asta taxă de școlarizare și va merge mai departe. Traderul profitabil nu va dormi, va petrece weekendul rescriind reguli care au funcționat un an întreg și are șanse reale să demonteze singurul edge pe care l-a construit vreodată. Pierderea din cont e aceeași pentru amândoi. Ce pune în joc fiecare, însă, e cu totul altceva.
       </Intro>
 
       <StatsStrip items={[
@@ -53,7 +53,7 @@ export default function DrawdownAfterProfitabilityRo() {
         Drawdown-ul traderului profitabil îl costă bani și ceva considerabil mai scump: dovada că e bun la asta. Unsprezece luni verzi nu erau doar venit. Erau probe. Justificau anii petrecuți în fața ecranelor, hobby-urile la care a renunțat, conversațiile în care se numea trader fără să ezite. Un drawdown nu-i reduce doar soldul. Îi redeschide o întrebare pe care o credea închisă definitiv.
       </P>
       <P>
-        De asta sfatul standard — „drawdown-urile sunt normale, ține-te de plan" — ricoșează din traderii profitabili. Ei știu că drawdown-urile sunt normale. Au statisticile memorate. Faptul că le știu nu ajută, fiindcă lucrul atacat n-a fost niciodată înțelegerea lor statistică. Era identitatea lor.
+        De asta sfatul standard — „drawdown-urile sunt normale, ține-te de plan" — nu are niciun efect asupra traderilor profitabili. Ei știu că drawdown-urile sunt normale. Au statisticile memorate. Faptul că le știu nu ajută, fiindcă lucrul atacat n-a fost niciodată înțelegerea lor statistică. Era identitatea lor.
       </P>
 
       <H2>Pierdere de Bani vs Amenințare la Identitate</H2>
@@ -68,7 +68,7 @@ export default function DrawdownAfterProfitabilityRo() {
       </P>
 
       <Callout title="Semnalul" color="#CE93D8">
-        Dacă o schimbare propusă la strategia ta te face să te simți mai bine <em>înainte</em> să ai vreo dată despre cât de bine funcționează, nu optimizezi. Te liniștești singur. Îmbunătățirile reale se simt a muncă; rareori se simt a ușurare.
+        Dacă o schimbare propusă la strategia ta te face să te simți mai bine <em>înainte</em> să ai vreun fel de date despre cât de bine funcționează, nu optimizezi. Te liniștești singur. Îmbunătățirile reale se simt a muncă; rareori se simt a ușurare.
       </Callout>
 
       <H2>Iluzia Regresiei</H2>
@@ -176,7 +176,7 @@ export default function DrawdownAfterProfitabilityRo() {
         'Nimeni nu te va felicita pentru o lună neutră petrecută executând corect. Validarea externă care venea cu seria câștigătoare dispare exact când disciplina cere cel mai mare efort.',
       ]} />
       <P>
-        Nimic din toate astea nu e un argument împotriva devenirii profitabile. E un argument împotriva tratării profitabilității ca sfârșit al muncii psihologice. Traderul care supraviețuiește anului trei nu e cel care a găsit o strategie mai bună decât traderul care a renunțat. De obicei e aceeași strategie. Diferența e că unul dintre ei a continuat s-o execute prin perioada în care părea stricată.
+        Nimic din toate astea nu e un argument împotriva faptului de a deveni profitabil. E un argument împotriva ideii că profitabilitatea încheie munca psihologică. Traderul care supraviețuiește anului trei nu e cel care a găsit o strategie mai bună decât traderul care a renunțat. De obicei e aceeași strategie. Diferența e că unul dintre ei a continuat s-o execute prin perioada în care părea stricată.
       </P>
 
       <Callout title="Ce presiune te lovește cel mai tare?" color="#FFB300">

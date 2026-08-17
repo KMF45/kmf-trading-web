@@ -139,7 +139,7 @@ export default function WhenToWithdrawProfitsRo() {
 
       <H2>Obiecția cu Compunerea</H2>
       <P>
-        Argumentul standard împotriva retragerii e că fiecare dolar scos încetează să se compună, iar compunerea e locul unde se fac banii adevărați. Aritmetica e corectă. Presupunerea de dedesubt, nu.
+        Argumentul standard împotriva retragerii e că fiecare dolar scos încetează să se compună, iar compunerea e locul unde se fac banii adevărați. Aritmetica e corectă. Presupunerea pe care se sprijină, însă, nu e.
       </P>
       <P>
         Modelele de compunere presupun că performanța ta e independentă de mărimea contului — că un trader care produce 3% pe lună la $20.000 va produce 3% pe lună la $200.000. Pentru o minoritate de traderi, asta se confirmă. Pentru majoritatea, nu, fiindcă nivelul execuției se degradează pe măsură ce miza absolută crește, iar un randament mai mic pe un cont mai mare poate însemna lejer mai puțini bani decât un randament mai mare pe un cont mai mic.

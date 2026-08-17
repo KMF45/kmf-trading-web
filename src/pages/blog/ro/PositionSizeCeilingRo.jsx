@@ -47,7 +47,7 @@ export default function PositionSizeCeilingRo() {
 
       <H2>Matematica Spune Că Nu S-a Schimbat Nimic</H2>
       <P>
-        Riscul procentual există tocmai ca mărimea să devină irelevantă. Riști 1% și strategia devine invariantă la scară: aceeași succesiune de trade-uri produce aceeași formă a curbei de capital fie că e un cont de $10.000 sau de $10.000.000. R-multiplii tăi nu se sinchisesc de mărimea contului. Speranța matematică nu se sinchisește. Win rate-ul nu se sinchisește.
+        Riscul procentual există tocmai ca mărimea să devină irelevantă. Riști 1% și strategia devine invariantă la scară: aceeași succesiune de trade-uri produce aceeași formă a curbei de capital fie că e un cont de $10.000 sau de $10.000.000. R-multiplii tăi rămân aceiași indiferent de mărimea contului. La fel și speranța matematică. La fel și win rate-ul.
       </P>
       <P>
         Asta e impecabil matematic, și e motivul pentru care majoritatea traderilor nu planifică niciodată tranziția. Dacă matematica spune că nu s-a schimbat nimic, atunci orice dificultate trebuie să fie o problemă de disciplină, o problemă de mentalitate, o slăbiciune personală. Așa că traderul care se prăbușește la $500 per trade concluzionează că pur și simplu nu e destul de serios, se străduiește mai tare și eșuează din nou — fiindcă voința nu a fost niciodată constrângerea.
@@ -67,7 +67,7 @@ export default function PositionSizeCeilingRo() {
         Există dovezi directe pentru asta, obținute pe un floor de trading, nu într-un laborator. În 2008, John Coates și Joe Herbert au publicat în <em>PNAS</em> un studiu care a măsurat hormoni steroizi la 17 traderi bărbați din City of London, de-a lungul a opt zile de tranzacționare. Una dintre descoperirile centrale: cortizolul unui trader creștea odată cu varianța propriilor rezultate și cu volatilitatea pieței. Cortizolul urmărea mărimea oscilațiilor pe care le trăia — nu procentul lor raportat la capital.
       </P>
       <P>
-        Eșantionul e mic și e un singur studiu, deci nu trebuie supralicitat. Dar indică ceva ce orice trader care și-a crescut mărimea recunoaște imediat: încărcătura fiziologică crește odată cu magnitudinea a ceea ce trăiești, iar când îți dublezi mărimea, dublezi acea magnitudine. Procentul tău de risc a rămas 1%. Oscilațiile pe care corpul tău le metabolizează, nu.
+        Eșantionul e mic și e un singur studiu, deci nu trebuie supralicitat. Dar indică ceva ce orice trader care și-a crescut mărimea recunoaște imediat: încărcătura fiziologică crește odată cu magnitudinea a ceea ce trăiești, iar când îți dublezi mărimea, dublezi acea magnitudine. Procentul tău de risc a rămas 1%, dar oscilațiile pe care corpul tău trebuie să le digere s-au dublat.
       </P>
       <P>
         Iar cortizolul ridicat nu degradează abilități la întâmplare. El îngustează specific orizonturile de timp, crește sensibilitatea la amenințare și împinge spre certitudine imediată în locul recompensei amânate — ceea ce e o descriere exactă a tăierii unui câștigător la +0.4R fiindcă ținerea până la +2R a devenit insuportabilă.
