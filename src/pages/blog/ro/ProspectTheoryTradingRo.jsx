@@ -74,7 +74,7 @@ export default function ProspectTheoryTradingRo() {
         '„M-aș înfuria așa de tare dacă asta se transformă în pierdere."',
       ]} />
       <P>
-        Așa că închizi la +20 pips în loc de +60. Sau mai rău, îți <Link to="/blog/breakeven-stop-too-early" className="text-kmf-accent hover:underline">muți stop-ul la breakeven</Link> și ești scos la zero înainte ca prețul să-ți atingă target-ul. Oricum, ai lăsat două treimi din recompensa așteptată pe masă. Înmulțește asta cu 100 de trade-uri și trade-ul tău câștigător mediu e 0.8R în loc de 2.5R. <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">Expectancy-ul</Link> strategiei tale trece de la pozitiv la negativ. Ești sistematic profitabil pe hârtie și sistematic falit în practică.
+        Așa că închizi la +20 pips în loc de +60. Sau mai rău, îți <Link to="/blog/ro/breakeven-stop-too-early" className="text-kmf-accent hover:underline">muți stop-ul la breakeven</Link> și ești scos la zero înainte ca prețul să-ți atingă target-ul. Oricum, ai lăsat două treimi din recompensa așteptată pe masă. Înmulțește asta cu 100 de trade-uri și trade-ul tău câștigător mediu e 0.8R în loc de 2.5R. <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent hover:underline">Expectancy-ul</Link> strategiei tale trece de la pozitiv la negativ. Ești sistematic profitabil pe hârtie și sistematic falit în practică.
       </P>
 
       <H3>Scenariul 2: Pierzătorul Pe Care Nu Îl Poți Omorî</H3>
@@ -115,7 +115,7 @@ export default function ProspectTheoryTradingRo() {
         Citește din nou. Traderul cu bias are un win rate mai mare — 55% vs 45%. „Câștigă" mai des. Se simte mai bine în legătură cu trading-ul lui. Le spune prietenilor despre win rate-ul lui. Și pierde bani. Win rate-ul a urcat fiindcă ia profituri rapide (câștiguri mici mai frecvente), dar câștigul mediu s-a micșorat atât de mult încât nu poate acoperi pierderea medie (care a crescut fiindcă ține pierzătorii).
       </P>
       <P>
-        De-asta <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">win rate-ul e o metrică groaznică izolat</Link>. Un win rate de 55% cu câștig mediu de 0.9R și pierdere medie de 1.8R e o strategie pe pierdere purtând masca unui câștigător.
+        De-asta <Link to="/blog/ro/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">win rate-ul e o metrică groaznică izolat</Link>. Un win rate de 55% cu câștig mediu de 0.9R și pierdere medie de 1.8R e o strategie pe pierdere purtând masca unui câștigător.
       </P>
 
       <H2>Soluția: Păcălește 2 Milioane de Ani de Evoluție</H2>
@@ -125,7 +125,7 @@ export default function ProspectTheoryTradingRo() {
 
       <H3>1. Stop-uri Hard, Target-uri Hard, Fără Excepții</H3>
       <P>
-        Plasează-ți <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss-ul</Link> și take profit-ul ca ordine limit pe platformă înainte de intrare. Nu „stop-uri mintale" — alea se evaporă în clipa în care prețul se apropie de ele. Ordine fizice care se execută fie că te uiți, fie că dormi. Piața nu negociază. Nici ordinele tale n-ar trebui.
+        Plasează-ți <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss-ul</Link> și take profit-ul ca ordine limit pe platformă înainte de intrare. Nu „stop-uri mintale" — alea se evaporă în clipa în care prețul se apropie de ele. Ordine fizice care se execută fie că te uiți, fie că dormi. Piața nu negociază. Nici ordinele tale n-ar trebui.
       </P>
 
       <Callout title="Stop-urile Mintale Sunt Minciuni Pe Care Ți Le Spui" color="#FF5252">
@@ -134,7 +134,7 @@ export default function ProspectTheoryTradingRo() {
 
       <H3>2. Gândește în R, Nu în Dolari</H3>
       <P>
-        Când display-ul tău de P/L spune „-$347", creierul tău procesează o amenințare. Când jurnalul tău spune „-1.0R", creierul tău procesează date. Aceeași pierdere, răspuns neurologic complet diferit. <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiplii</Link> scot emoția din evaluarea trade-urilor. K.M.F. calculează și urmărește R-multiple-ul tău pe fiecare trade automat — așa că sesiunea ta de review e despre calitatea procesului, nu despre durerea sumei în dolari.
+        Când display-ul tău de P/L spune „-$347", creierul tău procesează o amenințare. Când jurnalul tău spune „-1.0R", creierul tău procesează date. Aceeași pierdere, răspuns neurologic complet diferit. <Link to="/blog/ro/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiplii</Link> scot emoția din evaluarea trade-urilor. K.M.F. calculează și urmărește R-multiple-ul tău pe fiecare trade automat — așa că sesiunea ta de review e despre calitatea procesului, nu despre durerea sumei în dolari.
       </P>
 
       <H3>3. Regula „Nu Atinge"</H3>

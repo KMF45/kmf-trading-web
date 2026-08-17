@@ -48,7 +48,7 @@ export default function OnePercentRiskRuleFr() {
 
       <H2>Les maths de la ruine : pourquoi le % de risque compte plus que tu ne crois</H2>
       <P>
-        Les séries de pertes sont une certitude mathématique, même avec une stratégie rentable. La question n'est pas de savoir si tu affronteras une suite de pertes, mais si ton compte y survit assez longtemps pour atteindre la prochaine phase gagnante. Comprendre les stratégies pour <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">survivre aux séries de pertes</Link> est tout aussi important que d'avoir une bonne méthode d'entrée.
+        Les séries de pertes sont une certitude mathématique, même avec une stratégie rentable. La question n'est pas de savoir si tu affronteras une suite de pertes, mais si ton compte y survit assez longtemps pour atteindre la prochaine phase gagnante. Comprendre les stratégies pour <Link to="/blog/fr/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">survivre aux séries de pertes</Link> est tout aussi important que d'avoir une bonne méthode d'entrée.
       </P>
       <P>
         Regarde ce que des pertes consécutives font à ton compte selon différents niveaux de risque :
@@ -81,7 +81,7 @@ export default function OnePercentRiskRuleFr() {
         'Étape 2 — Calcule la taille de position : Taille de position = Montant de risque ÷ (Prix d\'entrée − Prix du stop loss)',
       ]} />
       <P>
-        Le <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">placement du stop loss</Link> vient en premier. Tu identifies le point d'invalidation logique de ton trade, tu mesures la distance jusqu'à ton entrée, puis tu utilises cette distance pour déterminer la taille de ta position. Tu ne places jamais un stop loss en fonction du <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">dimensionnement</Link> que tu veux prendre — ça marche dans l'autre sens.
+        Le <Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">placement du stop loss</Link> vient en premier. Tu identifies le point d'invalidation logique de ton trade, tu mesures la distance jusqu'à ton entrée, puis tu utilises cette distance pour déterminer la taille de ta position. Tu ne places jamais un stop loss en fonction du <Link to="/blog/fr/position-sizing-guide" className="text-kmf-accent hover:underline">dimensionnement</Link> que tu veux prendre — ça marche dans l'autre sens.
       </P>
 
       <H3>Exemple concret : forex</H3>

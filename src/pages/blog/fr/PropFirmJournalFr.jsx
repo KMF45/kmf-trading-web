@@ -54,12 +54,12 @@ export default function PropFirmJournalFr() {
 
       <H3>1. Le revenge trade surdimensionné</H3>
       <P>
-        Ça commence par une perte normale. −0,8 % sur la journée. Bon. Puis une autre : −0,5 %. Maintenant tu es à −1,3 % et tu sens la pression. Au lieu de t'arrêter, tu doubles ta prochaine position pour « te refaire vite ». Ce trade part contre toi. Soudain tu es à −3,5 % et à un stop loss du dépassement. C'est du <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> d'école — le tueur de compte numéro un en prop trading.
+        Ça commence par une perte normale. −0,8 % sur la journée. Bon. Puis une autre : −0,5 %. Maintenant tu es à −1,3 % et tu sens la pression. Au lieu de t'arrêter, tu doubles ta prochaine position pour « te refaire vite ». Ce trade part contre toi. Soudain tu es à −3,5 % et à un stop loss du dépassement. C'est du <Link to="/blog/fr/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> d'école — le tueur de compte numéro un en prop trading.
       </P>
 
       <H3>2. L'erreur de dimensionnement</H3>
       <P>
-        Sur un compte FTMO de 100 000 $ avec une limite de daily drawdown de 5 %, ta perte journalière maximale est de 5 000 $. Si tu prends trois trades, chacun peut risquer au maximum ~1 650 $. Mais la plupart des traders calculent la taille de lot selon « ce qui leur semble bien » plutôt que sur la vraie limite de drawdown. Ils risquent 2 500 $ par trade, prennent trois trades, et une mauvaise séance les efface. Les maths étaient fausses avant même le premier trade. Un vrai <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">système de dimensionnement</Link> évite ça entièrement.
+        Sur un compte FTMO de 100 000 $ avec une limite de daily drawdown de 5 %, ta perte journalière maximale est de 5 000 $. Si tu prends trois trades, chacun peut risquer au maximum ~1 650 $. Mais la plupart des traders calculent la taille de lot selon « ce qui leur semble bien » plutôt que sur la vraie limite de drawdown. Ils risquent 2 500 $ par trade, prennent trois trades, et une mauvaise séance les efface. Les maths étaient fausses avant même le premier trade. Un vrai <Link to="/blog/fr/position-sizing-guide" className="text-kmf-accent hover:underline">système de dimensionnement</Link> évite ça entièrement.
       </P>
 
       <H3>3. La spirale du « juste un trade de plus »</H3>
@@ -108,7 +108,7 @@ export default function PropFirmJournalFr() {
 
       <H3>Pendant la séance : la règle du hard stop</H3>
       <P>
-        Décide à l'avance : « Si j'atteins X % de perte journalière, je ferme la plateforme. Pas après le prochain trade. Maintenant. » Pour un détail complet de cette approche, vois notre <Link to="/blog/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">guide du daily drawdown</Link>. Pour la plupart des comptes prop firm, ça devrait être réglé à 60-70 % du daily drawdown autorisé. Si la limite est 5 %, ton hard stop est à 3 %. Ça te donne une zone tampon — parce qu'au moment où tu atteins ta limite auto-imposée et que tu pars, tu as encore 2 % de marge en cas de slippage ou de gap sur une position ouverte.
+        Décide à l'avance : « Si j'atteins X % de perte journalière, je ferme la plateforme. Pas après le prochain trade. Maintenant. » Pour un détail complet de cette approche, vois notre <Link to="/blog/fr/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">guide du daily drawdown</Link>. Pour la plupart des comptes prop firm, ça devrait être réglé à 60-70 % du daily drawdown autorisé. Si la limite est 5 %, ton hard stop est à 3 %. Ça te donne une zone tampon — parce qu'au moment où tu atteins ta limite auto-imposée et que tu pars, tu as encore 2 % de marge en cas de slippage ou de gap sur une position ouverte.
       </P>
       <P>
         Note cette règle dans ton journal. Après la séance, écris si tu l'as honorée. Sinon — si tu as continué à trader après avoir atteint ta limite — c'est le point de donnée le plus important de la journée. Pas le P/L. La transgression de discipline.

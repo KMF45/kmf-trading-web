@@ -59,7 +59,7 @@ export default function LottoTicketSyndromeDe() {
         ]}
       />
       <P>
-        Stufe 4 ist, wo der echte Schaden passiert — und es ist nicht der erste Verlust, der dich tötet. Es ist der Versuch, dich von diesem Verlust mit demselben aufgeblähten Risiko zu erholen, das ihn verursacht hat. Du hast einen 2,5-%-Treffer kassiert, also versuchst du, ihn mit einem 3,5-%-Trade zurückzuholen, dann einem 4-%-Trade. Das ist kein Trading mehr. Das ist <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading</Link> mit offenem Chart.
+        Stufe 4 ist, wo der echte Schaden passiert — und es ist nicht der erste Verlust, der dich tötet. Es ist der Versuch, dich von diesem Verlust mit demselben aufgeblähten Risiko zu erholen, das ihn verursacht hat. Du hast einen 2,5-%-Treffer kassiert, also versuchst du, ihn mit einem 3,5-%-Trade zurückzuholen, dann einem 4-%-Trade. Das ist kein Trading mehr. Das ist <Link to="/blog/de/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading</Link> mit offenem Chart.
       </P>
 
       <H2>Warum Gewinnserien statistisch bedeutungslos sind</H2>
@@ -67,7 +67,7 @@ export default function LottoTicketSyndromeDe() {
         Hier ist die Mathematik, die dein von Dopamin durchtränktes Gehirn zu verarbeiten verweigert: In einer Strategie mit 50 % Win Rate beträgt die Wahrscheinlichkeit, 4 Gewinner in Folge zu treffen, 6,25 %. Das bedeutet, in jeweils 100 Trades erlebst du etwa 6 Serien von 4+ Gewinnen. Jede wird sich wie „in der Zone sein" anfühlen. Jede ist reine Varianz.
       </P>
       <P>
-        Eine <Link to="/blog/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">Gewinnserie</Link> sagt dir nichts über den nächsten Trade. Der Markt hat kein Gedächtnis. Dass deine letzten drei Trades profitabel waren, ändert die Wahrscheinlichkeit des vierten Trades um keinen einzigen Prozentpunkt. Aber dein Gehirn — verdrahtet für Mustererkennung in einer Welt von Säbelzahntigern — kann das nicht akzeptieren. Es besteht darauf, dass es ein Muster gibt. Gibt es nicht.
+        Eine <Link to="/blog/de/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">Gewinnserie</Link> sagt dir nichts über den nächsten Trade. Der Markt hat kein Gedächtnis. Dass deine letzten drei Trades profitabel waren, ändert die Wahrscheinlichkeit des vierten Trades um keinen einzigen Prozentpunkt. Aber dein Gehirn — verdrahtet für Mustererkennung in einer Welt von Säbelzahntigern — kann das nicht akzeptieren. Es besteht darauf, dass es ein Muster gibt. Gibt es nicht.
       </P>
 
       <Callout title="Das Selbstvertrauen des Spielers" color="#FFB300">
@@ -79,7 +79,7 @@ export default function LottoTicketSyndromeDe() {
       <H2>Die Lösung: Wie du langweilig bleibst, während du Geld machst</H2>
       <H3>1. Die eiserne Risikoregel</H3>
       <P>
-        Dein Risiko pro Trade ist eine Konstante. Keine Richtlinie. Kein „meistens". Ein physikalisches Gesetz deines Tradings. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Ein Prozent bedeutet ein Prozent</Link> — ob du für die Woche $2.000 im Plus oder $500 im Minus bist. In dem Moment, in dem dein Risikoprozentsatz zu einer Variablen wird, die sich danach anpasst, „wie du dich fühlst", hast du dein Konto deinem limbischen System übergeben. Es wird es nicht zurückgeben.
+        Dein Risiko pro Trade ist eine Konstante. Keine Richtlinie. Kein „meistens". Ein physikalisches Gesetz deines Tradings. <Link to="/blog/de/1-percent-risk-rule" className="text-kmf-accent hover:underline">Ein Prozent bedeutet ein Prozent</Link> — ob du für die Woche $2.000 im Plus oder $500 im Minus bist. In dem Moment, in dem dein Risikoprozentsatz zu einer Variablen wird, die sich danach anpasst, „wie du dich fühlst", hast du dein Konto deinem limbischen System übergeben. Es wird es nicht zurückgeben.
       </P>
       <H3>2. Die 24-Stunden-Abkühlregel</H3>
       <P>

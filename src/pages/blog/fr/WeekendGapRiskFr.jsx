@@ -50,7 +50,7 @@ export default function WeekendGapRiskFr() {
 
       <H2>Pourquoi ton stop loss ne peut pas te sauver</H2>
       <P>
-        Un stop loss est un ordre conditionnel : « vends quand le prix atteint X ». Mais il ne peut s'exécuter que lorsque le marché est ouvert et trade activement à ce niveau de prix. Si le marché ferme à 1,0800 le vendredi et ouvre à 1,0720 le lundi, ton stop loss à 1,0770 n'a jamais été déclenché — le prix a sauté par-dessus. Ton ordre s'exécute à 1,0720, te donnant 50 pips de slippage au-delà de ton stop prévu. Sur une position dimensionnée pour un stop de 30 pips, c'est presque trois fois ta perte prévue. Un bon <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">placement de stop loss</Link> doit tenir compte de cette réalité.
+        Un stop loss est un ordre conditionnel : « vends quand le prix atteint X ». Mais il ne peut s'exécuter que lorsque le marché est ouvert et trade activement à ce niveau de prix. Si le marché ferme à 1,0800 le vendredi et ouvre à 1,0720 le lundi, ton stop loss à 1,0770 n'a jamais été déclenché — le prix a sauté par-dessus. Ton ordre s'exécute à 1,0720, te donnant 50 pips de slippage au-delà de ton stop prévu. Sur une position dimensionnée pour un stop de 30 pips, c'est presque trois fois ta perte prévue. Un bon <Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">placement de stop loss</Link> doit tenir compte de cette réalité.
       </P>
 
       <Callout title="Le risque invisible" color="#00C853">
@@ -86,7 +86,7 @@ export default function WeekendGapRiskFr() {
       </P>
       <H3>2. Réduire la taille de position pour les positions du week-end</H3>
       <P>
-        Si ta stratégie exige de garder des positions pendant des jours ou semaines, tu peux réduire ta <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">taille de position</Link> le vendredi pour tenir compte du risque de gap. Une approche courante : si ton risque normal est de 1 % par trade, réduis à 0,5 % pour toute position gardée pendant le week-end. Ainsi, même un gap qui double la distance de ton stop loss ne résulte qu'en une perte de 1 % du compte — toujours dans les paramètres normaux.
+        Si ta stratégie exige de garder des positions pendant des jours ou semaines, tu peux réduire ta <Link to="/blog/fr/position-sizing-guide" className="text-kmf-accent hover:underline">taille de position</Link> le vendredi pour tenir compte du risque de gap. Une approche courante : si ton risque normal est de 1 % par trade, réduis à 0,5 % pour toute position gardée pendant le week-end. Ainsi, même un gap qui double la distance de ton stop loss ne résulte qu'en une perte de 1 % du compte — toujours dans les paramètres normaux.
       </P>
       <H3>3. Couvrir avec des instruments corrélés</H3>
       <P>
@@ -98,7 +98,7 @@ export default function WeekendGapRiskFr() {
         Les maths sont simples. Si ton stop loss normal est de 30 pips et que tu acceptes qu'un gap de week-end puisse ajouter 30 pips de slippage supplémentaires, ta distance de risque effective est de 60 pips. Dimensionne ta position pour le pire scénario, pas le meilleur. Ça signifie couper ta taille de position en deux pour les positions du week-end — ou accepter que ton risque réel soit le double de ce que suggère ton stop loss.
       </P>
       <P>
-        Cet ajustement n'est pas optionnel. L'ignorer signifie que ta <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">règle des 1 %</Link> devient une règle de 2 % chaque week-end — et sur une année de 52 week-ends, ce risque non comptabilisé se compose dangereusement.
+        Cet ajustement n'est pas optionnel. L'ignorer signifie que ta <Link to="/blog/fr/1-percent-risk-rule" className="text-kmf-accent hover:underline">règle des 1 %</Link> devient une règle de 2 % chaque week-end — et sur une année de 52 week-ends, ce risque non comptabilisé se compose dangereusement.
       </P>
 
       <H2>Quand les gaps sont les plus dangereux</H2>

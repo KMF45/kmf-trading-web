@@ -48,7 +48,7 @@ export default function ConfidenceVsOverconfidenceRo() {
 
       <H2>Supraîncredere: Construită pe Sentimente</H2>
       <P>
-        Supraîncrederea arată identic din interior. Traderul se simte sigur, hotărât și limpede. Dar fundația e diferită. În loc de date, supraîncrederea e construită pe câștiguri recente, sentiment instinctiv, sau memorie selectivă. Traderul își amintește vivid ultimii cinci câștigători dar a uitat deja drawdown-ul de luna trecută. Ăsta e un exemplu de manual de <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">ce-i face pe traderi să-și încalce propriile reguli</Link> — starea emoțională anulează sistemul rațional.
+        Supraîncrederea arată identic din interior. Traderul se simte sigur, hotărât și limpede. Dar fundația e diferită. În loc de date, supraîncrederea e construită pe câștiguri recente, sentiment instinctiv, sau memorie selectivă. Traderul își amintește vivid ultimii cinci câștigători dar a uitat deja drawdown-ul de luna trecută. Ăsta e un exemplu de manual de <Link to="/blog/ro/why-traders-break-their-rules" className="text-kmf-accent hover:underline">ce-i face pe traderi să-și încalce propriile reguli</Link> — starea emoțională anulează sistemul rațional.
       </P>
 
       <Divider />
@@ -58,7 +58,7 @@ export default function ConfidenceVsOverconfidenceRo() {
         Efectul Dunning-Kruger descrie un bias cognitiv în care oamenii cu competență limitată într-un domeniu își supraestimează dramatic abilitatea. În trading, asta se manifestă cel mai periculos în două faze: începătorul care are o primă lună norocoasă și crede că a „descifrat piața", și traderul intermediar care a supraviețuit destul cât să se simtă experimentat dar nu a întâlnit încă o schimbare de regim sau un eveniment black swan.
       </P>
       <P>
-        Cea mai periculoasă perioadă nu e începutul — e punctul în care un trader a avut destul succes cât să se simtă priceput dar nu destul eșec cât să se simtă smerit. Atunci cresc position size-urile, <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">regulile de risc</Link> încep să pară opționale, iar o singură săptămână proastă poate șterge luni de câștiguri.
+        Cea mai periculoasă perioadă nu e începutul — e punctul în care un trader a avut destul succes cât să se simtă priceput dar nu destul eșec cât să se simtă smerit. Atunci cresc position size-urile, <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">regulile de risc</Link> încep să pară opționale, iar o singură săptămână proastă poate șterge luni de câștiguri.
       </P>
 
       <H2>Semnele de Avertizare ale Supraîncrederii</H2>
@@ -106,11 +106,11 @@ export default function ConfidenceVsOverconfidenceRo() {
       </P>
       <H3>2. Tratează seriile de câștiguri ca pe un avertisment, nu ca pe o recompensă</H3>
       <P>
-        Când atingi 5+ câștiguri consecutive, strânge-ți procesul în loc să-l lași lejer. E contraintuitiv dar esențial. Revenirea la medie vine — întrebarea e doar dacă vei fi dimensionat corect când o face. Noi numim asta <Link to="/blog/lotto-ticket-syndrome" className="text-kmf-accent hover:underline">Sindromul „Biletului de Loto"</Link> — dopamina câștigului face riscul invizibil.
+        Când atingi 5+ câștiguri consecutive, strânge-ți procesul în loc să-l lași lejer. E contraintuitiv dar esențial. Revenirea la medie vine — întrebarea e doar dacă vei fi dimensionat corect când o face. Noi numim asta <Link to="/blog/ro/lotto-ticket-syndrome" className="text-kmf-accent hover:underline">Sindromul „Biletului de Loto"</Link> — dopamina câștigului face riscul invizibil.
       </P>
       <H3>3. Menține un position sizing constant</H3>
       <P>
-        Până ai cel puțin 100 de trade-uri notate cu rezultate consistente, ține-ți procentul de risc fix. Fără ajustări „mă simt încrezător". <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Regula de 1%</Link> există tocmai fiindcă judecata umană despre position sizing e nesigură sub influență emoțională.
+        Până ai cel puțin 100 de trade-uri notate cu rezultate consistente, ține-ți procentul de risc fix. Fără ajustări „mă simt încrezător". <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">Regula de 1%</Link> există tocmai fiindcă judecata umană despre position sizing e nesigură sub influență emoțională.
       </P>
 
       <Takeaways items={[

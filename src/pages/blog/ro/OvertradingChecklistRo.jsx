@@ -46,7 +46,7 @@ export default function OvertradingChecklistRo() {
 
       <H3>2. Sari peste checklist-ul tău</H3>
       <P>
-        <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-trade checklist-ul</Link> există exact pentru momente ca acestea. Când începi să-ți spui „nu trebuie să verific, ăsta e evident" sau „îl loghez după", ești în teritoriul Sistemului 1 — rapid, emoțional, și nesigur. În clipa în care checklist-ul tău se simte ca un obstacol în loc de o unealtă, ești pe tilt. K.M.F. include o funcție de checklist încorporată cu template-uri implicite și custom care apare înainte de fiecare intrare în trade, făcând-o structural greu de sărit.
+        <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-trade checklist-ul</Link> există exact pentru momente ca acestea. Când începi să-ți spui „nu trebuie să verific, ăsta e evident" sau „îl loghez după", ești în teritoriul Sistemului 1 — rapid, emoțional, și nesigur. În clipa în care checklist-ul tău se simte ca un obstacol în loc de o unealtă, ești pe tilt. K.M.F. include o funcție de checklist încorporată cu template-uri implicite și custom care apare înainte de fiecare intrare în trade, făcând-o structural greu de sărit.
       </P>
 
       <H3>3. Cobori la timeframe-uri mai mici</H3>
@@ -61,7 +61,7 @@ export default function OvertradingChecklistRo() {
 
       <H3>5. Position size-ul tău crește încet</H3>
       <P>
-        Ăsta e unul dintre cele mai periculoase semne fiindcă compune fiecare altă greșeală. După o pierdere, instinctul de a mări mărimea ca să recuperezi mai repede e puternic și automat. Nu se simte ca o decizie conștientă — se simte ca o „ajustare". Dar dacă ultimele tale trei trade-uri au fost la 0.5 loturi și ăsta e la 1.2 loturi, n-ai ajustat. Ți-ai triplat riscul într-o perioadă de performanță slabă. Ăsta e mecanismul de bază din spatele <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading-ului</Link>.
+        Ăsta e unul dintre cele mai periculoase semne fiindcă compune fiecare altă greșeală. După o pierdere, instinctul de a mări mărimea ca să recuperezi mai repede e puternic și automat. Nu se simte ca o decizie conștientă — se simte ca o „ajustare". Dar dacă ultimele tale trei trade-uri au fost la 0.5 loturi și ăsta e la 1.2 loturi, n-ai ajustat. Ți-ai triplat riscul într-o perioadă de performanță slabă. Ăsta e mecanismul de bază din spatele <Link to="/blog/ro/revenge-trading" className="text-kmf-accent hover:underline">revenge trading-ului</Link>.
       </P>
 
       <H3>6. Iei setup-uri pe care nu le-ai testat niciodată</H3>
@@ -92,7 +92,7 @@ export default function OvertradingChecklistRo() {
 
       <H2>Ce Să Faci Când Te Prinzi</H2>
       <P>
-        Dacă te-ai recunoscut în două sau mai multe dintre semnele de mai sus, acțiunea e simplă dar nu ușoară: oprește-te din tranzacționat pentru restul sesiunii. Închide platforma. Fă ceva fizic — plimbă-te, fă mișcare, gătește. Cortizolul și adrenalina din sistemul tău au nevoie de 20 până la 30 de minute ca să se disipeze. Când revii mâine, revizuiește cinstit trade-urile de azi. Identifică pe care au fost pe bază de plan și care pe bază de emoție. Acel review e mai valoros decât orice trade ai fi putut lua. Citește mai multe despre <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">de ce traderii își încalcă regulile</Link> și cum să construiești sisteme care previn asta.
+        Dacă te-ai recunoscut în două sau mai multe dintre semnele de mai sus, acțiunea e simplă dar nu ușoară: oprește-te din tranzacționat pentru restul sesiunii. Închide platforma. Fă ceva fizic — plimbă-te, fă mișcare, gătește. Cortizolul și adrenalina din sistemul tău au nevoie de 20 până la 30 de minute ca să se disipeze. Când revii mâine, revizuiește cinstit trade-urile de azi. Identifică pe care au fost pe bază de plan și care pe bază de emoție. Acel review e mai valoros decât orice trade ai fi putut lua. Citește mai multe despre <Link to="/blog/ro/why-traders-break-their-rules" className="text-kmf-accent hover:underline">de ce traderii își încalcă regulile</Link> și cum să construiești sisteme care previn asta.
       </P>
 
       <Takeaways items={[

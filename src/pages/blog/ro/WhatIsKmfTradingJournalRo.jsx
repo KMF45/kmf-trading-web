@@ -95,7 +95,7 @@ export default function WhatIsKmfTradingJournalRo() {
         'Analiza duratei — tii winners destul? Tai losers suficient de repede?',
       ]} />
       <P>
-        Totul se actualizeaza automat pe masura ce loghezi trade-uri. Fara formule de construit, fara pivot table de intretinut, fara <Link to="/blog/excel-vs-trading-journal-app" className="text-kmf-accent hover:underline">erori de spreadsheet</Link> care iti corup datele in liniste.
+        Totul se actualizeaza automat pe masura ce loghezi trade-uri. Fara formule de construit, fara pivot table de intretinut, fara <Link to="/blog/ro/excel-vs-trading-journal-app" className="text-kmf-accent hover:underline">erori de spreadsheet</Link> care iti corup datele in liniste.
       </P>
 
       <H3>Lot Size Calculator</H3>
@@ -105,12 +105,12 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Pre-Trade Checklist</H3>
       <P>
-        Un <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pre-trade</Link> personalizabil pe care il parcurgi inainte de fiecare intrare. Tu definesti criteriile — directia trend-ului confirmata, stop loss la nivel de structura, riscul in limite, starea emotionala acceptabila. Daca o casuta nu este bifata, checklist-ul este incomplet. Este o bariera mecanica impotriva intrarilor impulsive.
+        Un <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pre-trade</Link> personalizabil pe care il parcurgi inainte de fiecare intrare. Tu definesti criteriile — directia trend-ului confirmata, stop loss la nivel de structura, riscul in limite, starea emotionala acceptabila. Daca o casuta nu este bifata, checklist-ul este incomplet. Este o bariera mecanica impotriva intrarilor impulsive.
       </P>
 
       <H3>Weekly Review</H3>
       <P>
-        In fiecare saptamana, K.M.F. te indeamna sa iti revizuiesti performanta pe cinci metrici de disciplina. Te autoevaluezi, scrii notite de reflectie, stabilesti obiective pentru saptamana urmatoare. Acesta este <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">feedback loop-ul</Link> care produce de fapt imbunatatiri — nu trade-ul individual, ci pattern-ul de-a lungul trade-urilor.
+        In fiecare saptamana, K.M.F. te indeamna sa iti revizuiesti performanta pe cinci metrici de disciplina. Te autoevaluezi, scrii notite de reflectie, stabilesti obiective pentru saptamana urmatoare. Acesta este <Link to="/blog/ro/weekly-trading-review-template" className="text-kmf-accent hover:underline">feedback loop-ul</Link> care produce de fapt imbunatatiri — nu trade-ul individual, ci pattern-ul de-a lungul trade-urilor.
       </P>
 
       <H3>Trading Diary</H3>
@@ -137,7 +137,7 @@ export default function WhatIsKmfTradingJournalRo() {
 
       <H3>Honesty Mirror (Premium)</H3>
       <P>
-        Honesty Mirror calculeaza corelatia dintre increderea auto-evaluata si P/L-ul tau real. Iti spune daca esti overconfident (te evaluezi bine pe trade-uri care pierd) sau underconfident (te indoiesti de trade-uri care de fapt castiga). Majoritatea traderilor sunt socati de ce le arata — <Link to="/blog/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">confidence vs overconfidence</Link> este una dintre cele mai prost intelese dinamici in trading.
+        Honesty Mirror calculeaza corelatia dintre increderea auto-evaluata si P/L-ul tau real. Iti spune daca esti overconfident (te evaluezi bine pe trade-uri care pierd) sau underconfident (te indoiesti de trade-uri care de fapt castiga). Majoritatea traderilor sunt socati de ce le arata — <Link to="/blog/ro/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">confidence vs overconfidence</Link> este una dintre cele mai prost intelese dinamici in trading.
       </P>
 
       <H3>Trader Personality Profile (Premium)</H3>
@@ -151,14 +151,14 @@ export default function WhatIsKmfTradingJournalRo() {
       </P>
 
       <Callout title="De ce conteaza psihologia atat de mult" color="#CE93D8">
-        Am construit Psychology Engine-ul pentru ca am invatat — pe pielea noastra — ca <Link to="/blog/strategy-is-not-enough" className="text-kmf-accent hover:underline">strategia reprezinta doar circa 20% din joc</Link>. Ceilalti 80% sunt executie, disciplina si managementul emotional. Poti avea cel mai bun setup din lume, si daca il sari pentru ca ti-e frica, sau iti dubli pozitia pentru ca esti furios, strategia devine irelevanta. K.M.F. face acei 80% vizibili si masurabili.
+        Am construit Psychology Engine-ul pentru ca am invatat — pe pielea noastra — ca <Link to="/blog/ro/strategy-is-not-enough" className="text-kmf-accent hover:underline">strategia reprezinta doar circa 20% din joc</Link>. Ceilalti 80% sunt executie, disciplina si managementul emotional. Poti avea cel mai bun setup din lume, si daca il sari pentru ca ti-e frica, sau iti dubli pozitia pentru ca esti furios, strategia devine irelevanta. K.M.F. face acei 80% vizibili si masurabili.
       </Callout>
 
       <Divider />
 
       <H2>Gamification: XP, Achievements si Trader Tiers</H2>
       <P>
-        Journaling-ul este plictisitor. Stim. De aceea <Link to="/blog/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">90% dintre traderi renunta in cateva saptamani</Link>. Asa ca am adaugat un strat de gamification — nu pentru a face aplicatia "distractiva" intr-un mod superficial, ci pentru a crea un ciclu de recompensa care intareste comportamentele corecte.
+        Journaling-ul este plictisitor. Stim. De aceea <Link to="/blog/ro/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">90% dintre traderi renunta in cateva saptamani</Link>. Asa ca am adaugat un strat de gamification — nu pentru a face aplicatia "distractiva" intr-un mod superficial, ci pentru a crea un ciclu de recompensa care intareste comportamentele corecte.
       </P>
       <Ul items={[
         'XP pentru fiecare trade loghat, fiecare checklist completat, fiecare weekly review terminat',

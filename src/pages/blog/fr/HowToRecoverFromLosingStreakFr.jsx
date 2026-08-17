@@ -61,7 +61,7 @@ export default function HowToRecoverFromLosingStreakFr() {
         Quelle que soit ton évaluation, au moment où tu identifies une série de pertes, réduis ta taille de position. Passe à 50 % de ton risque normal par trade. Si la série continue, envisage de descendre à 25 %.
       </P>
       <P>
-        C'est contre-intuitif — ça semble réduire ta capacité à récupérer. Mais ce n'est pas le cas. C'est protéger ton capital pendant une période où ton edge peut être temporairement réduit, soit par les conditions de marché, soit par une subtile détérioration d'exécution causée par la pression psychologique de la série elle-même. Suivre <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">la règle des 1 %</Link> devient encore plus crucial pendant les drawdowns. Tu ne peux pas penser clairement quand tu te bats pour récupérer des pertes avec des positions pleine taille.
+        C'est contre-intuitif — ça semble réduire ta capacité à récupérer. Mais ce n'est pas le cas. C'est protéger ton capital pendant une période où ton edge peut être temporairement réduit, soit par les conditions de marché, soit par une subtile détérioration d'exécution causée par la pression psychologique de la série elle-même. Suivre <Link to="/blog/fr/1-percent-risk-rule" className="text-kmf-accent hover:underline">la règle des 1 %</Link> devient encore plus crucial pendant les drawdowns. Tu ne peux pas penser clairement quand tu te bats pour récupérer des pertes avec des positions pleine taille.
       </P>
       <Table
         headers={['Risque normal %', 'Risque réduit (50 %)', 'Encore réduit (25 %)', 'Quand l\'appliquer']}

@@ -117,18 +117,18 @@ export default function ScalingInVsScalingOutFr() {
 
       <H2>L'idée clé</H2>
       <P>
-        Le scaling in sur les perdants tue les comptes. Ce n'est pas discutable — c'est une certitude mathématique avec assez de temps. Tu augmentes l'exposition à une thèse que le marché invalide activement. Chaque ajout augmente ton risque total pendant que la probabilité de récupération diminue. Et la raison pour laquelle les traders le font quand même n'est pas l'ignorance — c'est la <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">théorie des perspectives</Link> : ton cerveau est câblé pour prendre de plus gros risques afin d'éviter de sécuriser une perte.
+        Le scaling in sur les perdants tue les comptes. Ce n'est pas discutable — c'est une certitude mathématique avec assez de temps. Tu augmentes l'exposition à une thèse que le marché invalide activement. Chaque ajout augmente ton risque total pendant que la probabilité de récupération diminue. Et la raison pour laquelle les traders le font quand même n'est pas l'ignorance — c'est la <Link to="/blog/fr/prospect-theory-trading" className="text-kmf-accent hover:underline">théorie des perspectives</Link> : ton cerveau est câblé pour prendre de plus gros risques afin d'éviter de sécuriser une perte.
       </P>
       <P>
-        Le scaling in sur les gagnants peut marcher, mais seulement avec des règles strictes : un nombre maximum d'ajouts, des niveaux prédéfinis, et un plafond de risque cumulé qui ne dépasse jamais ta <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">limite de risque par trade</Link> standard. Sans ces règles, même ajouter aux gagnants devient une surexposition déguisée.
+        Le scaling in sur les gagnants peut marcher, mais seulement avec des règles strictes : un nombre maximum d'ajouts, des niveaux prédéfinis, et un plafond de risque cumulé qui ne dépasse jamais ta <Link to="/blog/fr/1-percent-risk-rule" className="text-kmf-accent hover:underline">limite de risque par trade</Link> standard. Sans ces règles, même ajouter aux gagnants devient une surexposition déguisée.
       </P>
       <P>
-        Le scaling out est un compromis, pas un repas gratuit. Il réduit la variance au prix de l'espérance. Que ce compromis en vaille la peine dépend du win rate de ta stratégie et de ton profil psychologique. Mesure-le avec les <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> — ne devine pas.
+        Le scaling out est un compromis, pas un repas gratuit. Il réduit la variance au prix de l'espérance. Que ce compromis en vaille la peine dépend du win rate de ta stratégie et de ton profil psychologique. Mesure-le avec les <Link to="/blog/fr/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> — ne devine pas.
       </P>
 
       <H2>La meilleure approche du débutant</H2>
       <P>
-        Si tu as moins de 100 trades enregistrés avec des données régulières, utilise un <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">dimensionnement</Link> fixe : entrée complète, sortie complète. Pas de scaling in, pas de scaling out. Ce n'est pas parce que ces techniques sont mauvaises — c'est parce que tu ne peux pas évaluer si elles aident ou nuisent avant d'avoir une base. Tu dois savoir ce que fait ta stratégie en exécution simple avant d'ajouter de la complexité. Ajouter des variables à un système non prouvé rend impossible de diagnostiquer ce qui marche et ce qui ne marche pas.
+        Si tu as moins de 100 trades enregistrés avec des données régulières, utilise un <Link to="/blog/fr/position-sizing-guide" className="text-kmf-accent hover:underline">dimensionnement</Link> fixe : entrée complète, sortie complète. Pas de scaling in, pas de scaling out. Ce n'est pas parce que ces techniques sont mauvaises — c'est parce que tu ne peux pas évaluer si elles aident ou nuisent avant d'avoir une base. Tu dois savoir ce que fait ta stratégie en exécution simple avant d'ajouter de la complexité. Ajouter des variables à un système non prouvé rend impossible de diagnostiquer ce qui marche et ce qui ne marche pas.
       </P>
 
       <Takeaways items={[

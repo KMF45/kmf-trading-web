@@ -47,7 +47,7 @@ export default function TiltRecoveryProtocolRo() {
 
       <H2>Minutul 0–5: Închide Tot și Resetează-te Fizic</H2>
       <P>
-        Primul și cel mai important pas e fizic: închide platforma de trading. Nu o minimiza. Închide-o. Deloghează-te dacă poți. Scopul e să creezi fricțiune maximă între tine și următorul trade impulsiv. Fiecare secundă în care rămâi pe ecran după o pierdere mare crește probabilitatea unui <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trade</Link> — iar revenge trade-urile de după pierderi semnificative tind să fie supradimensionate, neplanificate și devastatoare.
+        Primul și cel mai important pas e fizic: închide platforma de trading. Nu o minimiza. Închide-o. Deloghează-te dacă poți. Scopul e să creezi fricțiune maximă între tine și următorul trade impulsiv. Fiecare secundă în care rămâi pe ecran după o pierdere mare crește probabilitatea unui <Link to="/blog/ro/revenge-trading" className="text-kmf-accent hover:underline">revenge trade</Link> — iar revenge trade-urile de după pierderi semnificative tind să fie supradimensionate, neplanificate și devastatoare.
       </P>
       <P>
         Apoi fă ceva fizic. Ridică-te. Mergi în altă cameră. Ieși afară pentru 60 de secunde de aer proaspăt. Dacă știi box breathing, fă patru cicluri: inspiri 4 secunde, ții 4, expiri 4, ții 4. Ăsta nu e sfat de meditație — e neuroștiință. Respirația controlată activează sistemul nervos parasimpatic și începe să reducă cortizolul care îți inundă acum cortexul prefrontal și îți degradează capacitatea de decizie.
@@ -69,7 +69,7 @@ export default function TiltRecoveryProtocolRo() {
 
       <H2>Minutul 15–30: Review Obiectiv al Trade-ului</H2>
       <P>
-        Abia după ce starea ta emoțională a început să se stabilizeze ar trebui să te uiți la trade-ul în sine. Iar review-ul ar trebui să răspundă la o singură întrebare: a fost o <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">pierdere bună sau o pierdere proastă</Link>?
+        Abia după ce starea ta emoțională a început să se stabilizeze ar trebui să te uiți la trade-ul în sine. Iar review-ul ar trebui să răspundă la o singură întrebare: a fost o <Link to="/blog/ro/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">pierdere bună sau o pierdere proastă</Link>?
       </P>
 
       <H3>Dacă a fost o pierdere bună</H3>
@@ -102,7 +102,7 @@ export default function TiltRecoveryProtocolRo() {
         'Dacă continui, voi tranzacționa cu mărime redusă? Traderii profesioniști care continuă după o pierdere mare aproape mereu își taie position size-ul cu 50% sau mai mult pentru restul sesiunii.',
       ]} />
       <P>
-        Nu e nicio rușine în a te opri. Cei mai buni traderi din lume închei regulat sesiunile devreme după o pierdere semnificativă — nu fiindcă nu o pot gestiona, ci fiindcă știu că edge-ul lor cere o funcție cognitivă optimă, iar o pierdere mare o compromite temporar. Trade-urile vor fi acolo mâine. Capitalul tău nu va fi dacă forțezi lucrurile azi. Pentru un cadru mai amănunțit despre <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">revenirea dintr-o serie de pierderi</Link>, citește ghidul nostru complet.
+        Nu e nicio rușine în a te opri. Cei mai buni traderi din lume închei regulat sesiunile devreme după o pierdere semnificativă — nu fiindcă nu o pot gestiona, ci fiindcă știu că edge-ul lor cere o funcție cognitivă optimă, iar o pierdere mare o compromite temporar. Trade-urile vor fi acolo mâine. Capitalul tău nu va fi dacă forțezi lucrurile azi. Pentru un cadru mai amănunțit despre <Link to="/blog/ro/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">revenirea dintr-o serie de pierderi</Link>, citește ghidul nostru complet.
       </P>
 
       <Callout title="Detecția de Tilt K.M.F." color="#CE93D8">

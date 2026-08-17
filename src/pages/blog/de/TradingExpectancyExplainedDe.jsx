@@ -80,7 +80,7 @@ export default function TradingExpectancyExplainedDe() {
       </P>
       <H3>Negativer Erwartungswert</H3>
       <P>
-        Eine Strategie mit negativem Erwartungswert verliert über die Zeit Geld, garantiert. Es spielt keine Rolle, wie ausgefeilt das Money Management ist oder wie diszipliniert die Ausführung. Keine Technik zur Positionsgrößenbestimmung kann einen negativen Erwartungswert in ein profitables System verwandeln. Die einzigen Auswege sind, die Win Rate zu verbessern, den durchschnittlichen Gewinn zu vergrößern oder den durchschnittlichen Verlust zu verringern — und ein solides Fundament wie die <Link to="/blog/1-percent-risk-rule">1-%-Risikoregel</Link> sorgt dafür, dass du lange genug überlebst, um diese Auswege zu finden.
+        Eine Strategie mit negativem Erwartungswert verliert über die Zeit Geld, garantiert. Es spielt keine Rolle, wie ausgefeilt das Money Management ist oder wie diszipliniert die Ausführung. Keine Technik zur Positionsgrößenbestimmung kann einen negativen Erwartungswert in ein profitables System verwandeln. Die einzigen Auswege sind, die Win Rate zu verbessern, den durchschnittlichen Gewinn zu vergrößern oder den durchschnittlichen Verlust zu verringern — und ein solides Fundament wie die <Link to="/blog/de/1-percent-risk-rule">1-%-Risikoregel</Link> sorgt dafür, dass du lange genug überlebst, um diese Auswege zu finden.
       </P>
       <Callout title="Das Casino-Prinzip" color="#4FC3F7">
         Casinos verdienen nicht, weil jeder Spieler jede Wette verliert, sondern weil das Haus bei jedem Spiel einen leicht positiven Erwartungswert hat. Über Millionen Wetten ist die Mathematik unausweichlich. Trading funktioniert genauso — hast du einen positiven Erwartungswert und gehst genug Trades ein, ist Profitabilität eine mathematische Konsequenz, keine Glückssache.
@@ -102,7 +102,7 @@ export default function TradingExpectancyExplainedDe() {
       <ExpectancyComparisonChart />
 
       <P>
-        Beachte den Eintrag mit 70 % Win Rate: Obwohl 7 von 10 Trades gewonnen werden, verliert die Strategie Geld, weil die durchschnittlichen Verluste die durchschnittlichen Gewinne übersteigen. Das ist die klassische Illusion der Win Rate — und der Erwartungswert deckt sie sofort auf. Für einen tieferen Einblick, wie Win Rate und Profit Factor zusammenspielen, siehe unseren Leitfaden zu <Link to="/blog/profit-factor-vs-win-rate">Profit Factor vs Win Rate</Link>.
+        Beachte den Eintrag mit 70 % Win Rate: Obwohl 7 von 10 Trades gewonnen werden, verliert die Strategie Geld, weil die durchschnittlichen Verluste die durchschnittlichen Gewinne übersteigen. Das ist die klassische Illusion der Win Rate — und der Erwartungswert deckt sie sofort auf. Für einen tieferen Einblick, wie Win Rate und Profit Factor zusammenspielen, siehe unseren Leitfaden zu <Link to="/blog/de/profit-factor-vs-win-rate">Profit Factor vs Win Rate</Link>.
       </P>
 
       <H2>Erwartungswert in R-Vielfachen</H2>
@@ -113,7 +113,7 @@ export default function TradingExpectancyExplainedDe() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Erwartungswert (R) = (Win Rate × Ø-R-Gewinn) − (Verlustrate × 1)</strong>
       </P>
       <P>
-        Das vereinfacht sich, weil ein voller Verlust per Definition immer −1R ist. Beispiel: 50 % Win Rate, durchschnittlicher Gewinn ist +2R. Erwartungswert = (0,50 × 2) − (0,50 × 1) = 1,0 − 0,5 = <strong style={{ color: '#00E676' }}>+0,5R pro Trade</strong>. Das bedeutet, für jeden Dollar, den du riskierst, verdienst du im Mittel 50 Cent. Wenn R-Vielfache neu für dich sind, erklärt unser <Link to="/blog/r-multiple-explained">R-Vielfach-Leitfaden</Link> es Schritt für Schritt.
+        Das vereinfacht sich, weil ein voller Verlust per Definition immer −1R ist. Beispiel: 50 % Win Rate, durchschnittlicher Gewinn ist +2R. Erwartungswert = (0,50 × 2) − (0,50 × 1) = 1,0 − 0,5 = <strong style={{ color: '#00E676' }}>+0,5R pro Trade</strong>. Das bedeutet, für jeden Dollar, den du riskierst, verdienst du im Mittel 50 Cent. Wenn R-Vielfache neu für dich sind, erklärt unser <Link to="/blog/de/r-multiple-explained">R-Vielfach-Leitfaden</Link> es Schritt für Schritt.
       </P>
 
       <H2>Wie du deinen eigenen Erwartungswert berechnest</H2>

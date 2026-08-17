@@ -61,7 +61,7 @@ export default function HowToRecoverFromLosingStreakDe() {
         Unabhängig von deiner Bewertung: In dem Moment, in dem du eine Verlustserie erkennst, reduziere deine Positionsgröße. Geh auf 50 % deines normalen Risikos pro Trade. Setzt sich die Serie fort, erwäge, auf 25 % zu fallen.
       </P>
       <P>
-        Das ist kontraintuitiv — es fühlt sich an, als reduziertest du deine Fähigkeit, dich zu erholen. Aber das tust du nicht. Du schützt dein Kapital in einer Phase, in der dein Edge vorübergehend reduziert sein könnte, sei es durch Marktbedingungen oder durch subtile Ausführungsverschlechterung, verursacht durch den psychologischen Druck der Serie selbst. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Die 1-%-Risikoregel</Link> zu befolgen wird in Drawdowns noch entscheidender. Du kannst nicht klar denken, wenn du mit voller Positionsgröße darum kämpfst, Verluste zurückzuholen.
+        Das ist kontraintuitiv — es fühlt sich an, als reduziertest du deine Fähigkeit, dich zu erholen. Aber das tust du nicht. Du schützt dein Kapital in einer Phase, in der dein Edge vorübergehend reduziert sein könnte, sei es durch Marktbedingungen oder durch subtile Ausführungsverschlechterung, verursacht durch den psychologischen Druck der Serie selbst. <Link to="/blog/de/1-percent-risk-rule" className="text-kmf-accent hover:underline">Die 1-%-Risikoregel</Link> zu befolgen wird in Drawdowns noch entscheidender. Du kannst nicht klar denken, wenn du mit voller Positionsgröße darum kämpfst, Verluste zurückzuholen.
       </P>
       <Table
         headers={['Normales Risiko %', 'Reduziert (50 %)', 'Weiter reduziert (25 %)', 'Wann anwenden']}

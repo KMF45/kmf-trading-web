@@ -47,7 +47,7 @@ export default function WeeklyTradingReviewTemplateRo() {
 
       <H2>De Ce Săptămânal — Nu Zilnic</H2>
       <P>
-        Review-urile zilnice sunt utile pentru a jurnaliza trade-urile cât detaliile sunt proaspete — răspunzând la <Link to="/blog/10-questions-after-every-trade" className="text-kmf-accent hover:underline">întrebările de review post-trade</Link> — dar sunt prea aproape de acțiune pentru recunoașterea pattern-urilor. Într-o zi anume, poate ai avut două trade-uri. Nu sunt destule date cât să observi că supratranzacționezi constant marțea, sau că setup-urile tale de luni dimineața au o rată de pierdere semnificativ mai mare.
+        Review-urile zilnice sunt utile pentru a jurnaliza trade-urile cât detaliile sunt proaspete — răspunzând la <Link to="/blog/ro/10-questions-after-every-trade" className="text-kmf-accent hover:underline">întrebările de review post-trade</Link> — dar sunt prea aproape de acțiune pentru recunoașterea pattern-urilor. Într-o zi anume, poate ai avut două trade-uri. Nu sunt destule date cât să observi că supratranzacționezi constant marțea, sau că setup-urile tale de luni dimineața au o rată de pierdere semnificativ mai mare.
       </P>
       <P>
         Review-urile săptămânale oferă rezoluția potrivită. Ai destule trade-uri cât să prinzi pattern-uri pe termen scurt, a trecut destul timp cât să revizuiești deciziile cu distanță emoțională, iar cadența e destul de frecventă cât să-ți poți chiar schimba comportamentul ca răspuns la ce găsești.
@@ -82,7 +82,7 @@ export default function WeeklyTradingReviewTemplateRo() {
 
       <H3>3. Review-ul Procesului</H3>
       <P>
-        Separă calitatea procesului de calitatea rezultatului. Un trade care ți-a urmat regulile perfect dar a pierdut bani e un trade mai bun decât unul care ți-a încălcat regulile dar a făcut bani — înțelegerea diferenței dintre <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">pierderi bune și câștiguri proaste</Link> e esențială pentru asta. Review-ul de proces te antrenează să te evaluezi pe ce poți controla cu adevărat.
+        Separă calitatea procesului de calitatea rezultatului. Un trade care ți-a urmat regulile perfect dar a pierdut bani e un trade mai bun decât unul care ți-a încălcat regulile dar a făcut bani — înțelegerea diferenței dintre <Link to="/blog/ro/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">pierderi bune și câștiguri proaste</Link> e esențială pentru asta. Review-ul de proces te antrenează să te evaluezi pe ce poți controla cu adevărat.
       </P>
       <Ul items={[
         'S-au potrivit intrările mele cu criteriile setup-ului pe timeframe, structură și confirmare?',

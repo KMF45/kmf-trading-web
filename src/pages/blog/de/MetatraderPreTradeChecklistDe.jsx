@@ -36,7 +36,7 @@ export default function MetatraderPreTradeChecklistDe() {
       ]}
     >
       <Intro>
-        Du weißt bereits, dass du eine Pre-Trade-Checkliste haben solltest. Du hast wahrscheinlich sogar schon mal eine erstellt — vielleicht nach dem Lesen unseres <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">10-Punkte-Checklisten-Leitfadens</Link>. Sie hatte zwölf Punkte, sie war gründlich, sie war professionell. Du hast sie vier Tage lang genutzt und dann aufgehört, weil zwölf Dinge vor jedem Trade in MetaTrader zu prüfen sich anfühlte wie eine Steuererklärung auszufüllen, während der Markt ohne dich weiterzog. Klingt vertraut? Du bist nicht faul. Deine Checkliste war zu lang.
+        Du weißt bereits, dass du eine Pre-Trade-Checkliste haben solltest. Du hast wahrscheinlich sogar schon mal eine erstellt — vielleicht nach dem Lesen unseres <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">10-Punkte-Checklisten-Leitfadens</Link>. Sie hatte zwölf Punkte, sie war gründlich, sie war professionell. Du hast sie vier Tage lang genutzt und dann aufgehört, weil zwölf Dinge vor jedem Trade in MetaTrader zu prüfen sich anfühlte wie eine Steuererklärung auszufüllen, während der Markt ohne dich weiterzog. Klingt vertraut? Du bist nicht faul. Deine Checkliste war zu lang.
       </Intro>
 
       <P>
@@ -102,7 +102,7 @@ export default function MetatraderPreTradeChecklistDe() {
         <strong style={{ color: '#F0F4FF' }}>Auf MetaTrader:</strong> Nutze das Fadenkreuz-Tool (Strg+F), um die exakte Distanz von Entry zu Stop in Pips zu messen. Oder ziehe eine horizontale Linie zu deinem Stop-Niveau und nutze das „Data Window" (Strg+D), um den Preis abzulesen.
       </P>
       <P>
-        <strong style={{ color: '#F0F4FF' }}>Auf cTrader:</strong> Rechtsklick → „Measure" oder nutze das eingebaute <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop-Loss-Platzierungs-Tool</Link>, das Pips und Dollar-Betrag gleichzeitig zeigt.
+        <strong style={{ color: '#F0F4FF' }}>Auf cTrader:</strong> Rechtsklick → „Measure" oder nutze das eingebaute <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop-Loss-Platzierungs-Tool</Link>, das Pips und Dollar-Betrag gleichzeitig zeigt.
       </P>
       <P>
         Gängige Methoden der Stop-Platzierung:
@@ -124,7 +124,7 @@ export default function MetatraderPreTradeChecklistDe() {
         Lot-Size = (Kontostand × Risiko %) ÷ (Stop Loss in Pips × Pip-Wert)
       </Callout>
       <P>
-        <strong style={{ color: '#F0F4FF' }}>Auf MetaTrader:</strong> MT4/MT5 hat keinen eingebauten Risikorechner (ja, wirklich). Du brauchst entweder: einen externen Rechner, einen eigenen EA/Indikator, der die Berechnung macht, oder ein Trading-Journal mit einem <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">Lot-Size-Rechner</Link>. K.M.F. hat einen in die App eingebaut — gib deine Kontogröße, deinen Risikoprozentsatz und deine Stop-Distanz ein, und er gibt dir die exakte Lot-Size. Schneller, als jedes Mal manuell zu rechnen.
+        <strong style={{ color: '#F0F4FF' }}>Auf MetaTrader:</strong> MT4/MT5 hat keinen eingebauten Risikorechner (ja, wirklich). Du brauchst entweder: einen externen Rechner, einen eigenen EA/Indikator, der die Berechnung macht, oder ein Trading-Journal mit einem <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">Lot-Size-Rechner</Link>. K.M.F. hat einen in die App eingebaut — gib deine Kontogröße, deinen Risikoprozentsatz und deine Stop-Distanz ein, und er gibt dir die exakte Lot-Size. Schneller, als jedes Mal manuell zu rechnen.
       </P>
       <P>
         <strong style={{ color: '#F0F4FF' }}>Auf cTrader:</strong> cTrader hat einen eingebauten Positionsgrößen-Rechner (Rechtsklick auf das Trade-Ticket → „Risk %"). Stelle deinen Risikoprozentsatz ein, und er berechnet automatisch die korrekte Lot-Size basierend auf deiner Stop-Distanz. Das ist ein Bereich, in dem cTrader MetaTrader wirklich übertrifft.

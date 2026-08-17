@@ -96,7 +96,7 @@ export default function MarketOrderVsLimitOrderRo() {
         'Vrei ca ordinul în sine să impună disciplină — dacă prețul nu ajunge niciodată la nivelul tău, trade-ul pe care „trebuia să-l iei" pur și simplu nu se întâmplă niciodată.',
       ]} />
       <P>
-        Ultimul punct e subevaluat. Un limit order e un dispozitiv de angajament. Elimină impulsul de a urmări un preț în mișcare și te forțează să onorezi <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">nivelurile pe care le-ai definit înainte să înceapă emoția</Link>.
+        Ultimul punct e subevaluat. Un limit order e un dispozitiv de angajament. Elimină impulsul de a urmări un preț în mișcare și te forțează să onorezi <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">nivelurile pe care le-ai definit înainte să înceapă emoția</Link>.
       </P>
 
       <H2>Un Cuvânt Rapid Despre Stop Order-uri</H2>
@@ -106,7 +106,7 @@ export default function MarketOrderVsLimitOrderRo() {
 
       <H2>Cea Mai Bună Abordare a Începătorului</H2>
       <P>
-        Dacă încă îți construiești baseline-ul, mergi implicit pe limit order-uri pentru intrări și stop order-uri simple pentru ieșirile protectoare. Setează-ți intrarea unde spune planul tău că ar trebui să fie, și lasă piața fie să vină la tine, fie să meargă mai departe fără tine. Apoi urmărește ce se întâmplă de fapt: loghează fill-ul tău intenționat față de fill-ul tău real, și îți vei vedea costul de slippage în dolari în loc să-l ghicești. Odată ce poți <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">dimensiona poziții</Link> și măsura execuția cinstit, decizia market-versus-limit încetează să fie un reflex și devine o parte deliberată din <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">procesul tău de risc</Link>.
+        Dacă încă îți construiești baseline-ul, mergi implicit pe limit order-uri pentru intrări și stop order-uri simple pentru ieșirile protectoare. Setează-ți intrarea unde spune planul tău că ar trebui să fie, și lasă piața fie să vină la tine, fie să meargă mai departe fără tine. Apoi urmărește ce se întâmplă de fapt: loghează fill-ul tău intenționat față de fill-ul tău real, și îți vei vedea costul de slippage în dolari în loc să-l ghicești. Odată ce poți <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">dimensiona poziții</Link> și măsura execuția cinstit, decizia market-versus-limit încetează să fie un reflex și devine o parte deliberată din <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">procesul tău de risc</Link>.
       </P>
 
       <Takeaways items={[

@@ -50,7 +50,7 @@ export default function WorstTradingExcusesRo() {
         Asta e cea mai periculoasă scuză din trading fiindcă sună inteligent. Prețul a mers în cele din urmă în direcția ta — doar că ai intrat prea devreme și ai fost scos din trade întâi. Dar în piețele cu leverage, timing-ul e totul. A avea „dreptate" despre direcție în timp ce ești scos din trade e funcțional identic cu a greși. Contului tău nu-i pasă de teza ta. Îi pasă de execuția ta.
       </P>
       <P>
-        Ce arată jurnalul tău: un pattern de intrări premature, declanșate adesea de nerăbdare sau frica de a rata mișcarea. Soluția e un trigger de intrare mai strict — nu un stop loss mai larg. Un <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> te forțează să-ți verifici criteriile de intrare înainte să acționezi pe baza unui bias direcțional.
+        Ce arată jurnalul tău: un pattern de intrări premature, declanșate adesea de nerăbdare sau frica de a rata mișcarea. Soluția e un trigger de intrare mai strict — nu un stop loss mai larg. Un <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> te forțează să-ți verifici criteriile de intrare înainte să acționezi pe baza unui bias direcțional.
       </P>
 
       <Divider />
@@ -60,7 +60,7 @@ export default function WorstTradingExcusesRo() {
         Această propoziție a precedat mai multe conturi distruse decât orice eveniment individual de piață. În clipa în care tranzacționezi ca să recuperezi o pierdere în loc să tranzacționezi ca să execuți un setup valid, ai părăsit domeniul strategiei și ai intrat în domeniul gambling-ului. Fiecare trade e statistic independent. Piața nu-ți datorează nimic. „Următorul trade" nu are memorie a pierderii tale anterioare și nicio obligație să o repare.
       </P>
       <P>
-        Ce arată jurnalul tău: trade-urile luate imediat după pierderi au un win rate semnificativ mai mic și o pierdere medie mai mare. Urgența emoțională de a recupera duce la poziții supradimensionate, checklist-uri sărite, și intrări impulsive. Ăsta e motivul <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pentru care traderii își încalcă regulile</Link> — durerea pierderii anulează logica planului.
+        Ce arată jurnalul tău: trade-urile luate imediat după pierderi au un win rate semnificativ mai mic și o pierdere medie mai mare. Urgența emoțională de a recupera duce la poziții supradimensionate, checklist-uri sărite, și intrări impulsive. Ăsta e motivul <Link to="/blog/ro/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pentru care traderii își încalcă regulile</Link> — durerea pierderii anulează logica planului.
       </P>
 
       <H2>Scuza #4: „Stop-ul Meu A Fost Prea Strâns"</H2>
@@ -75,7 +75,7 @@ export default function WorstTradingExcusesRo() {
 
       <H2>Scuza #5: „Nu Mi-am Urmat Planul, Dar A Ieșit Bine"</H2>
       <P>
-        Ăsta e <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">câștigul prost</Link> în forma lui cea mai pură, deghizat într-o anecdotă inofensivă. Te-ai abătut de la regulile tale, ai făcut bani oricum, și îți spui povestea ca și cum ar dovedi ceva pozitiv. Dovedește opusul. Dovedește că ești dispus să-ți abandonezi sistemul când îți convine — iar faptul că s-a întâmplat să funcționeze de data asta te face mai probabil să o faci din nou.
+        Ăsta e <Link to="/blog/ro/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">câștigul prost</Link> în forma lui cea mai pură, deghizat într-o anecdotă inofensivă. Te-ai abătut de la regulile tale, ai făcut bani oricum, și îți spui povestea ca și cum ar dovedi ceva pozitiv. Dovedește opusul. Dovedește că ești dispus să-ți abandonezi sistemul când îți convine — iar faptul că s-a întâmplat să funcționeze de data asta te face mai probabil să o faci din nou.
       </P>
       <P>
         Ce arată jurnalul tău: trade-urile marcate ca „nu am urmat planul" pot arăta profituri ocazionale, dar R-multiple-ul lor mediu pe o serie de 30+ trade-uri e aproape mereu negativ. Câștigurile norocoase maschează dauna sistematică a abandonării edge-ului tău.

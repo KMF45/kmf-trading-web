@@ -51,7 +51,7 @@ export default function AiTradeReviewDe() {
       </P>
       <H3>Wöchentliche und monatliche Muster zusammenfassen</H3>
       <P>
-        Ein <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentliches Trading-Review</Link> ist essenziell, aber zeitaufwendig. KI kann es beschleunigen, indem sie deine Woche in strukturiertem Format zusammenfasst: bestes Setup, schlechtestes Setup, durchschnittliches R-Vielfaches, emotionale Muster, Regelverstöße und vorgeschlagene Schwerpunkte für nächste Woche. Was dich manuell 45 Minuten kostet, dauert mit KI 30 Sekunden.
+        Ein <Link to="/blog/de/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentliches Trading-Review</Link> ist essenziell, aber zeitaufwendig. KI kann es beschleunigen, indem sie deine Woche in strukturiertem Format zusammenfasst: bestes Setup, schlechtestes Setup, durchschnittliches R-Vielfaches, emotionale Muster, Regelverstöße und vorgeschlagene Schwerpunkte für nächste Woche. Was dich manuell 45 Minuten kostet, dauert mit KI 30 Sekunden.
       </P>
 
       <Divider />
@@ -110,7 +110,7 @@ export default function AiTradeReviewDe() {
         'Vierteljährlich: Bitte die KI, deine letzten drei Monate zu vergleichen und zu erkennen, ob deine Edge sich verbessert, stabil ist oder nachlässt.',
       ]} />
       <P>
-        Der entscheidende Punkt: KI-Analyse ist nur so gut wie deine Journal-Daten. Wenn deine Trade-Notizen „EUR/USD gekauft, Geld verloren" ohne Kontext sagen, hat die KI nichts, womit sie arbeiten kann. Wenn deine Notizen Setup-Typ, emotionalen Zustand, Checklisten-Einhaltung, Marktbedingungen und Begründung enthalten — kann die KI Muster finden, die dein Trading transformieren. Die Qualität des Inputs bestimmt die Qualität des Outputs. Während deine <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link>-Daten wachsen, werden die KI-Erkenntnisse zunehmend mächtiger.
+        Der entscheidende Punkt: KI-Analyse ist nur so gut wie deine Journal-Daten. Wenn deine Trade-Notizen „EUR/USD gekauft, Geld verloren" ohne Kontext sagen, hat die KI nichts, womit sie arbeiten kann. Wenn deine Notizen Setup-Typ, emotionalen Zustand, Checklisten-Einhaltung, Marktbedingungen und Begründung enthalten — kann die KI Muster finden, die dein Trading transformieren. Die Qualität des Inputs bestimmt die Qualität des Outputs. Während deine <Link to="/blog/de/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link>-Daten wachsen, werden die KI-Erkenntnisse zunehmend mächtiger.
       </P>
 
       <Takeaways items={[

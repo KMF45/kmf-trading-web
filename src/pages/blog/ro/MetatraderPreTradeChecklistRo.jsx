@@ -36,7 +36,7 @@ export default function MetatraderPreTradeChecklistRo() {
       ]}
     >
       <Intro>
-        Știi deja că ar trebui să ai un pre-trade checklist. Probabil ai și făcut unul înainte — poate după ce ai citit <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">ghidul nostru de checklist în 10 puncte</Link>. Avea douăsprezece puncte, era amănunțit, era profesionist. L-ai folosit patru zile și apoi te-ai oprit fiindcă a verifica douăsprezece lucruri înainte de fiecare trade pe MetaTrader se simțea ca a completa un formular fiscal în timp ce piața se mișca fără tine. Sună cunoscut? Nu ești leneș. Checklist-ul tău era prea lung.
+        Știi deja că ar trebui să ai un pre-trade checklist. Probabil ai și făcut unul înainte — poate după ce ai citit <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">ghidul nostru de checklist în 10 puncte</Link>. Avea douăsprezece puncte, era amănunțit, era profesionist. L-ai folosit patru zile și apoi te-ai oprit fiindcă a verifica douăsprezece lucruri înainte de fiecare trade pe MetaTrader se simțea ca a completa un formular fiscal în timp ce piața se mișca fără tine. Sună cunoscut? Nu ești leneș. Checklist-ul tău era prea lung.
       </Intro>
 
       <P>
@@ -102,7 +102,7 @@ export default function MetatraderPreTradeChecklistRo() {
         <strong style={{ color: '#F0F4FF' }}>Pe MetaTrader:</strong> Folosește unealta de crosshair (Ctrl+F) ca să măsori distanța exactă de la intrare la stop în pips. Sau trage o linie orizontală la nivelul tău de stop și folosește „Data Window" (Ctrl+D) ca să citești prețul.
       </P>
       <P>
-        <strong style={{ color: '#F0F4FF' }}>Pe cTrader:</strong> Click dreapta → „Measure" sau folosește unealta încorporată de <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">plasare a stop loss-ului</Link> care arată pips și sumă în dolari simultan.
+        <strong style={{ color: '#F0F4FF' }}>Pe cTrader:</strong> Click dreapta → „Measure" sau folosește unealta încorporată de <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">plasare a stop loss-ului</Link> care arată pips și sumă în dolari simultan.
       </P>
       <P>
         Metode comune de plasare a stop-ului:
@@ -124,7 +124,7 @@ export default function MetatraderPreTradeChecklistRo() {
         Lot Size = (Sold Cont × Risc %) ÷ (Stop Loss în Pips × Valoare Pip)
       </Callout>
       <P>
-        <strong style={{ color: '#F0F4FF' }}>Pe MetaTrader:</strong> MT4/MT5 nu are un calculator de risc încorporat (da, chiar). Ai nevoie fie de: un calculator extern, un EA/indicator custom care face calculul, sau un trading journal cu un <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">calculator de lot size</Link>. K.M.F. are unul încorporat în aplicație — introduci mărimea contului, procentul de risc, distanța stop-ului, și îți dă lot size-ul exact. Mai rapid decât să faci matematica manual de fiecare dată.
+        <strong style={{ color: '#F0F4FF' }}>Pe MetaTrader:</strong> MT4/MT5 nu are un calculator de risc încorporat (da, chiar). Ai nevoie fie de: un calculator extern, un EA/indicator custom care face calculul, sau un trading journal cu un <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">calculator de lot size</Link>. K.M.F. are unul încorporat în aplicație — introduci mărimea contului, procentul de risc, distanța stop-ului, și îți dă lot size-ul exact. Mai rapid decât să faci matematica manual de fiecare dată.
       </P>
       <P>
         <strong style={{ color: '#F0F4FF' }}>Pe cTrader:</strong> cTrader are un calculator de position size încorporat (click dreapta pe tichetul de trade → „Risk %"). Setezi procentul de risc și calculează automat lot size-ul corect pe baza distanței stop-ului tău. Asta e o zonă unde cTrader chiar depășește MetaTrader.

@@ -61,7 +61,7 @@ export default function WhyTradersFailAtJournalingDe() {
 
       <H3>5. Kein sofortiger Nutzen</H3>
       <P>
-        Die Vorteile des Journalings sind kumulativ und verzögert. Du siehst das Muster in deinen Revenge-Trades nicht, bevor du 50 Einträge hast. Du bemerkst die Korrelation zwischen deinen <Link to="/blog/10-questions-after-every-trade" className="text-kmf-accent hover:underline">Nach-Trade-Reflexionen</Link> und verbesserter Ausführung erst Monate später. Das menschliche Gehirn diskontiert verzögerte Belohnungen stark. Eine Gewohnheit ohne sichtbaren kurzfristigen Nutzen konkurriert schlecht gegen Aktivitäten, die sich gerade jetzt produktiv anfühlen.
+        Die Vorteile des Journalings sind kumulativ und verzögert. Du siehst das Muster in deinen Revenge-Trades nicht, bevor du 50 Einträge hast. Du bemerkst die Korrelation zwischen deinen <Link to="/blog/de/10-questions-after-every-trade" className="text-kmf-accent hover:underline">Nach-Trade-Reflexionen</Link> und verbesserter Ausführung erst Monate später. Das menschliche Gehirn diskontiert verzögerte Belohnungen stark. Eine Gewohnheit ohne sichtbaren kurzfristigen Nutzen konkurriert schlecht gegen Aktivitäten, die sich gerade jetzt produktiv anfühlen.
       </P>
 
       <Divider />
@@ -75,7 +75,7 @@ export default function WhyTradersFailAtJournalingDe() {
 
       <H3>Reviewe wöchentlich, nicht täglich</H3>
       <P>
-        Tägliches Durchsehen einzelner Trades erzeugt emotionales Rauschen. Ein einzelner Trade sagt dir statistisch nichts. Aber ein <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentliches Review von 10 bis 20 Trades</Link> offenbart echte Muster: welche Setups tatsächlich performen, welche emotionalen Zustände mit Verlusten korrelieren, wo du von deinem Plan abweichst. Plane jedes Wochenende 30 Minuten ein. Dann zahlt sich das Journal aus.
+        Tägliches Durchsehen einzelner Trades erzeugt emotionales Rauschen. Ein einzelner Trade sagt dir statistisch nichts. Aber ein <Link to="/blog/de/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentliches Review von 10 bis 20 Trades</Link> offenbart echte Muster: welche Setups tatsächlich performen, welche emotionalen Zustände mit Verlusten korrelieren, wo du von deinem Plan abweichst. Plane jedes Wochenende 30 Minuten ein. Dann zahlt sich das Journal aus.
       </P>
 
       <H3>Nutze Templates, um Reibung zu entfernen</H3>
@@ -89,7 +89,7 @@ export default function WhyTradersFailAtJournalingDe() {
 
       <H3>Deute Verluste als Daten um, nicht als Versagen</H3>
       <P>
-        Die Trader, die konstant journalen, haben einen kognitiven Wandel vollzogen: Ein Verlust-Trade ist kein Versagen — er ist ein Datenpunkt. Das Journal ist keine Aufzeichnung deiner Fehler. Es ist ein Datensatz, der deine Edge offenbart. Wenn du einen Verlust durchsiehst und entdeckst, dass es ein valides Setup war, das einfach nicht aufging, ist das ein guter Verlust. Wenn du die <Link to="/blog/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">Lücke zwischen deinem Backtest und der Live-Ausführung</Link> entdeckst, ist das umsetzbare Intelligenz. Das Journal verwandelt Schmerz in Fortschritt — aber nur, wenn du es nutzt.
+        Die Trader, die konstant journalen, haben einen kognitiven Wandel vollzogen: Ein Verlust-Trade ist kein Versagen — er ist ein Datenpunkt. Das Journal ist keine Aufzeichnung deiner Fehler. Es ist ein Datensatz, der deine Edge offenbart. Wenn du einen Verlust durchsiehst und entdeckst, dass es ein valides Setup war, das einfach nicht aufging, ist das ein guter Verlust. Wenn du die <Link to="/blog/de/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">Lücke zwischen deinem Backtest und der Live-Ausführung</Link> entdeckst, ist das umsetzbare Intelligenz. Das Journal verwandelt Schmerz in Fortschritt — aber nur, wenn du es nutzt.
       </P>
 
       <H3>Verfolge Serien, nicht Perfektion</H3>

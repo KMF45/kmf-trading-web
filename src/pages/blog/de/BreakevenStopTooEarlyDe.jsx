@@ -60,7 +60,7 @@ export default function BreakevenStopTooEarlyDe() {
 
       <H2>Die Mathematik, die dein Bauch ignoriert</H2>
       <P>
-        Rechnen wir die Zahlen für ein typisches Setup durch. Du hast eine Strategie mit 40 % Win Rate und einem 3:1-Reward-zu-Risk. Dein <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link> ist:
+        Rechnen wir die Zahlen für ein typisches Setup durch. Du hast eine Strategie mit 40 % Win Rate und einem 3:1-Reward-zu-Risk. Dein <Link to="/blog/de/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link> ist:
       </P>
       <P>
         0,40 x 3R − 0,60 x 1R = <strong>+0,60R pro Trade</strong>
@@ -102,7 +102,7 @@ export default function BreakevenStopTooEarlyDe() {
       </P>
 
       <Callout title="Die Angst vor dem Zurückgeben" color="#CE93D8">
-        Ein unrealisierter Gewinn von $200, der verschwindet, fühlt sich schlimmer an, als ihn nie gehabt zu haben. Das nennt man den „Endowment-Effekt" — in dem Moment, in dem dein Gewinn/Verlust grün zeigt, betrachtet dein Gehirn dieses Geld als deins. „Dein" Geld (selbst unrealisiert) zu verlieren löst eine Schmerzreaktion aus, die <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">2,25× stärker</Link> ist als die Freude, es zu gewinnen. Diese Asymmetrie ist der Motor hinter jedem vorzeitigen Break-even-Stop.
+        Ein unrealisierter Gewinn von $200, der verschwindet, fühlt sich schlimmer an, als ihn nie gehabt zu haben. Das nennt man den „Endowment-Effekt" — in dem Moment, in dem dein Gewinn/Verlust grün zeigt, betrachtet dein Gehirn dieses Geld als deins. „Dein" Geld (selbst unrealisiert) zu verlieren löst eine Schmerzreaktion aus, die <Link to="/blog/de/prospect-theory-trading" className="text-kmf-accent hover:underline">2,25× stärker</Link> ist als die Freude, es zu gewinnen. Diese Asymmetrie ist der Motor hinter jedem vorzeitigen Break-even-Stop.
       </Callout>
 
       <H2>Die echten Kosten: Trades, bei denen du recht hattest</H2>
@@ -116,7 +116,7 @@ export default function BreakevenStopTooEarlyDe() {
         'Und du hast genau $0 gemacht, weil du nicht stillsitzen konntest.',
       ]} />
       <P>
-        Nach genug von diesen bricht etwas. Du hörst auf, deiner Analyse zu vertrauen — nicht, weil sie falsch ist, sondern weil du sie immer wieder sabotierst. Dann setzt FOMO ein: Du beginnst, Trades zu jagen, um die verpassten Bewegungen „zurückzuholen". Und jetzt betreibst du <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link> gegen dich selbst.
+        Nach genug von diesen bricht etwas. Du hörst auf, deiner Analyse zu vertrauen — nicht, weil sie falsch ist, sondern weil du sie immer wieder sabotierst. Dann setzt FOMO ein: Du beginnst, Trades zu jagen, um die verpassten Bewegungen „zurückzuholen". Und jetzt betreibst du <Link to="/blog/de/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link> gegen dich selbst.
       </P>
 
       <Divider />
@@ -145,11 +145,11 @@ export default function BreakevenStopTooEarlyDe() {
       </P>
       <H3>Regel 2: Nutze strukturelle Stops, keine emotionalen</H3>
       <P>
-        Wenn du deinen Stop bewegst, bewege ihn auf ein <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">strukturelles Niveau</Link> — unter das letzte höhere Tief in einem Aufwärtstrend, über das letzte tiefere Hoch in einem Abwärtstrend. Nie speziell auf deinen Einstiegspreis.
+        Wenn du deinen Stop bewegst, bewege ihn auf ein <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">strukturelles Niveau</Link> — unter das letzte höhere Tief in einem Aufwärtstrend, über das letzte tiefere Hoch in einem Abwärtstrend. Nie speziell auf deinen Einstiegspreis.
       </P>
       <H3>Regel 3: Verfolge deine Break-even-Stops getrennt</H3>
       <P>
-        Hier geben die meisten Trader auf — und hier liegt der echte Edge. Tagge jeden Trade, bei dem du auf Break-even gezogen hast. Prüfe nach 30 Trades: Wie viele davon hätten dein ursprüngliches TP getroffen? Wenn du siehst, dass 12 von 30 Break-even-Stops 3R-Gewinner gewesen wären, werden die Daten unwiderlegbar. K.M.F. verfolgt deine <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfache</Link> automatisch — sodass du deine Break-even-Ausstiege filtern und genau sehen kannst, wie viel Erwartungswert sie dich kosten.
+        Hier geben die meisten Trader auf — und hier liegt der echte Edge. Tagge jeden Trade, bei dem du auf Break-even gezogen hast. Prüfe nach 30 Trades: Wie viele davon hätten dein ursprüngliches TP getroffen? Wenn du siehst, dass 12 von 30 Break-even-Stops 3R-Gewinner gewesen wären, werden die Daten unwiderlegbar. K.M.F. verfolgt deine <Link to="/blog/de/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfache</Link> automatisch — sodass du deine Break-even-Ausstiege filtern und genau sehen kannst, wie viel Erwartungswert sie dich kosten.
       </P>
       <H3>Regel 4: Schließe die Plattform nach dem Einstieg</H3>
       <P>
@@ -157,7 +157,7 @@ export default function BreakevenStopTooEarlyDe() {
       </P>
 
       <Callout title="Das echte Risikomanagement" color="#00C853">
-        Echtes Risikomanagement passiert vor dem Trade: richtige <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgröße</Link>, strukturelle Stop-Platzierung und ein Risk-Reward, das mathematisch Sinn ergibt. Deinen Stop nach dem Einstieg auf Break-even zu ziehen ist kein Risikomanagement — es ist Angstmanagement. Und Angst trifft schreckliche Trading-Entscheidungen.
+        Echtes Risikomanagement passiert vor dem Trade: richtige <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgröße</Link>, strukturelle Stop-Platzierung und ein Risk-Reward, das mathematisch Sinn ergibt. Deinen Stop nach dem Einstieg auf Break-even zu ziehen ist kein Risikomanagement — es ist Angstmanagement. Und Angst trifft schreckliche Trading-Entscheidungen.
       </Callout>
 
       <Takeaways items={[

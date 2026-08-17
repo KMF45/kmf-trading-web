@@ -96,7 +96,7 @@ export default function MarketOrderVsLimitOrderDe() {
         'Du willst, dass die Order selbst Disziplin erzwingt — erreicht der Preis nie dein Level, findet der Trade, den du „unbedingt nehmen musstest", einfach nie statt.',
       ]} />
       <P>
-        Der letzte Punkt wird unterschätzt. Eine Limit Order ist ein Selbstbindungsinstrument. Sie nimmt den Impuls, einem laufenden Preis nachzujagen, und zwingt dich, die <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Levels zu respektieren, die du vor der Emotion definiert hast</Link>.
+        Der letzte Punkt wird unterschätzt. Eine Limit Order ist ein Selbstbindungsinstrument. Sie nimmt den Impuls, einem laufenden Preis nachzujagen, und zwingt dich, die <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Levels zu respektieren, die du vor der Emotion definiert hast</Link>.
       </P>
 
       <H2>Ein kurzes Wort zu Stop Orders</H2>
@@ -106,7 +106,7 @@ export default function MarketOrderVsLimitOrderDe() {
 
       <H2>Der beste Ansatz für Anfänger</H2>
       <P>
-        Wenn du noch deine Basis aufbaust, nutze standardmäßig Limit Orders für Einstiege und einfache Stop Orders für schützende Ausstiege. Setze deinen Einstieg dorthin, wo dein Plan es vorsieht, und lass den Markt entweder zu dir kommen oder ohne dich weiterziehen. Verfolge dann, was tatsächlich passiert: protokolliere deine beabsichtigte Füllung gegen deine echte Füllung, und du siehst deine Slippage-Kosten in Dollar, statt sie zu schätzen. Sobald du <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">Positionen dimensionieren</Link> und die Ausführung ehrlich messen kannst, hört die Entscheidung Market-gegen-Limit auf, ein Reflex zu sein, und wird ein bewusster Teil deines <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Risikoprozesses</Link>.
+        Wenn du noch deine Basis aufbaust, nutze standardmäßig Limit Orders für Einstiege und einfache Stop Orders für schützende Ausstiege. Setze deinen Einstieg dorthin, wo dein Plan es vorsieht, und lass den Markt entweder zu dir kommen oder ohne dich weiterziehen. Verfolge dann, was tatsächlich passiert: protokolliere deine beabsichtigte Füllung gegen deine echte Füllung, und du siehst deine Slippage-Kosten in Dollar, statt sie zu schätzen. Sobald du <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">Positionen dimensionieren</Link> und die Ausführung ehrlich messen kannst, hört die Entscheidung Market-gegen-Limit auf, ein Reflex zu sein, und wird ein bewusster Teil deines <Link to="/blog/de/1-percent-risk-rule" className="text-kmf-accent hover:underline">Risikoprozesses</Link>.
       </P>
 
       <Takeaways items={[

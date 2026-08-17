@@ -180,7 +180,7 @@ export default function StaticVsTrailingDrawdownRo() {
         Pe trailing drawdown calculat pe equity, un trade care arată +$3,000 profit nerealizat și apoi se închide la +$500 te-a costat efectiv buffer. Limita a urcat cu $2,850 (de la vârful flotant), dar tu ai realizat doar $500. Buffer-ul tău net a scăzut cu $2,350 dintr-un trade câștigător.
       </P>
       <P>
-        Soluția: dacă ești semnificativ pe plus pe un trade, ori ia profitul complet, ori setează un <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">trailing stop strâns</Link>. Nu lăsa profituri flotante mari să se retragă aproape de breakeven. Pe conturile calculate pe equity, asta e mai rău decât să nu fi avut trade-ul deloc.
+        Soluția: dacă ești semnificativ pe plus pe un trade, ori ia profitul complet, ori setează un <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">trailing stop strâns</Link>. Nu lăsa profituri flotante mari să se retragă aproape de breakeven. Pe conturile calculate pe equity, asta e mai rău decât să nu fi avut trade-ul deloc.
       </P>
 
       <H3>4. Urmărește Tot</H3>
@@ -188,7 +188,7 @@ export default function StaticVsTrailingDrawdownRo() {
         Dashboard-ul prop firm-ului îți arată drawdown-ul curent. Nu îți arată pattern-uri. Nu îți arată că ultimele trei zile de marți au început bine și s-au terminat cu overtrading agresiv. Nu îți arată că dai înapoi profituri constant între 11 și 12.
       </P>
       <P>
-        Pentru asta există un <Link to="/blog/prop-firm-trading-journal" className="text-kmf-accent hover:underline">trading journal</Link>. K.M.F. urmărește drawdown-ul maxim de la vârful de balanță și îți arată graficul de evoluție a balanței — ca să vezi exact unde apar retragerile și dacă se înrăutățesc. Îți urmărește și <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple-urile</Link>, ca să știi dacă pierderile tale sunt în plan sau le lași să fugă prea departe. Aplicația nu poate calcula limita specifică de trailing drawdown a firmei tale (fiecare firmă are reguli diferite), dar îți dă datele brute ca să o calculezi singur în fiecare dimineață. Fă calculul. Scrie-l în intrarea de jurnal de dinaintea sesiunii. Durează 60 de secunde și s-ar putea să-ți salveze contul.
+        Pentru asta există un <Link to="/blog/ro/prop-firm-trading-journal" className="text-kmf-accent hover:underline">trading journal</Link>. K.M.F. urmărește drawdown-ul maxim de la vârful de balanță și îți arată graficul de evoluție a balanței — ca să vezi exact unde apar retragerile și dacă se înrăutățesc. Îți urmărește și <Link to="/blog/ro/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple-urile</Link>, ca să știi dacă pierderile tale sunt în plan sau le lași să fugă prea departe. Aplicația nu poate calcula limita specifică de trailing drawdown a firmei tale (fiecare firmă are reguli diferite), dar îți dă datele brute ca să o calculezi singur în fiecare dimineață. Fă calculul. Scrie-l în intrarea de jurnal de dinaintea sesiunii. Durează 60 de secunde și s-ar putea să-ți salveze contul.
       </P>
 
       <H3>5. Ia în Calcul Întâi Firmele cu Static Drawdown</H3>

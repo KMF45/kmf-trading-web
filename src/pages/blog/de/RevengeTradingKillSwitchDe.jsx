@@ -41,7 +41,7 @@ export default function RevengeTradingKillSwitchDe() {
       </Intro>
 
       <P>
-        Dieser Artikel unterscheidet sich von unserem <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">Überblick zur Revenge-Trading-Psychologie</Link> und unserem <Link to="/blog/tilt-recovery-protocol" className="text-kmf-accent hover:underline">Tilt-Recovery-Protokoll</Link>. Jene erklären das Warum. Dieser ist das Wie — ein konkreter, vorprogrammierter Satz von Regeln, den du im ruhigen, rationalen Zustand baust und dann mechanisch befolgst, wenn du es nicht bist. Sieh es als Notfallprozedur. Piloten überlegen nicht in Echtzeit, was bei einem Triebwerksbrand zu tun ist. Sie folgen einer Checkliste, die von Menschen geschrieben wurde, die gerade nicht in Panik waren.
+        Dieser Artikel unterscheidet sich von unserem <Link to="/blog/de/revenge-trading" className="text-kmf-accent hover:underline">Überblick zur Revenge-Trading-Psychologie</Link> und unserem <Link to="/blog/de/tilt-recovery-protocol" className="text-kmf-accent hover:underline">Tilt-Recovery-Protokoll</Link>. Jene erklären das Warum. Dieser ist das Wie — ein konkreter, vorprogrammierter Satz von Regeln, den du im ruhigen, rationalen Zustand baust und dann mechanisch befolgst, wenn du es nicht bist. Sieh es als Notfallprozedur. Piloten überlegen nicht in Echtzeit, was bei einem Triebwerksbrand zu tun ist. Sie folgen einer Checkliste, die von Menschen geschrieben wurde, die gerade nicht in Panik waren.
       </P>
 
       <StatsStrip items={[
@@ -107,7 +107,7 @@ export default function RevengeTradingKillSwitchDe() {
         Erreichen deine kombinierten Verluste des Tages 2 % deines Kontostands, ist der Tag vorbei. Das schließt offene Trades ein. Kein „lass mich nur sehen, ob sich dieser erholt".
       </P>
       <P>
-        Warum 2 %? Weil zwei Trades mit je 1 % Risiko genau 2 % sind. Verlieren beide, hast du dein Tageslimit erreicht, bevor der Revenge-Zyklus überhaupt beginnt. Auf einem <Link to="/blog/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">Prop-Firm-Konto mit einer 5-%-Daily-Drawdown-Regel</Link> gibt dir 2 % einen massiven Sicherheitspuffer. Auf einem privaten Konto bedeutet 2 %, dass selbst fünf schlechte Tage in Folge dich nur 10 % kosten.
+        Warum 2 %? Weil zwei Trades mit je 1 % Risiko genau 2 % sind. Verlieren beide, hast du dein Tageslimit erreicht, bevor der Revenge-Zyklus überhaupt beginnt. Auf einem <Link to="/blog/de/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">Prop-Firm-Konto mit einer 5-%-Daily-Drawdown-Regel</Link> gibt dir 2 % einen massiven Sicherheitspuffer. Auf einem privaten Konto bedeutet 2 %, dass selbst fünf schlechte Tage in Folge dich nur 10 % kosten.
       </P>
 
       <H3>Regel 3: Verpflichtende 4-Stunden-Abkühlphase</H3>
@@ -170,7 +170,7 @@ export default function RevengeTradingKillSwitchDe() {
         K.M.F. Trading Journal hat ein eingebautes Tilt-Erkennungssystem, das deine Trading-Muster überwacht — Verluste in Folge, steigende Positionsgrößen, negative Emotions-Logs — und kennzeichnet, wenn dein Verhalten zu Revenge-Trading-Mustern passt. Es zeigt eine 4-stufige Warnung (von „Pass auf dich auf" bis „Hör jetzt auf zu traden") basierend auf deinen tatsächlichen Daten, nicht auf deiner Selbsteinschätzung. Denn das ganze Problem mit Revenge Trading ist, dass du nicht merkst, dass du es tust, bis es zu spät ist. Ein System, das für dich aufpasst, ist verlässlicher als ein Versprechen an dich selbst.
       </P>
       <P>
-        Die App loggt außerdem deinen <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">emotionalen Zustand vor dem Trade</Link> — Ruhig, Selbstbewusst, Ängstlich, Frustriert, Furchtsam, Aufgeregt — vor und nach jedem Trade. Nach einem Monat kannst du genau sehen, welche emotionalen Zustände mit deinen schlechtesten Trades korrelieren. Die meisten Trader entdecken, dass „Frustriert"- oder „Ängstlich"-Emotionen vor dem Trade eine 15-25 % niedrigere Win Rate haben als „Ruhig"-Einstiege. Das ist kein Gefühl. Das sind Daten. Und Daten sind schwerer zu widerlegen als Vorsätze.
+        Die App loggt außerdem deinen <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">emotionalen Zustand vor dem Trade</Link> — Ruhig, Selbstbewusst, Ängstlich, Frustriert, Furchtsam, Aufgeregt — vor und nach jedem Trade. Nach einem Monat kannst du genau sehen, welche emotionalen Zustände mit deinen schlechtesten Trades korrelieren. Die meisten Trader entdecken, dass „Frustriert"- oder „Ängstlich"-Emotionen vor dem Trade eine 15-25 % niedrigere Win Rate haben als „Ruhig"-Einstiege. Das ist kein Gefühl. Das sind Daten. Und Daten sind schwerer zu widerlegen als Vorsätze.
       </P>
 
       <Divider />

@@ -74,7 +74,7 @@ export default function ProspectTheoryTradingDe() {
         '„Ich wäre so wütend, wenn das zu einem Verlust wird."',
       ]} />
       <P>
-        Also schließt du bei +20 Pips statt +60. Oder schlimmer, du <Link to="/blog/breakeven-stop-too-early" className="text-kmf-accent hover:underline">ziehst deinen Stop auf Break-even</Link> und wirst bei null ausgestoppt, bevor der Kurs dein Ziel erreicht. So oder so hast du zwei Drittel deiner erwarteten Belohnung liegen gelassen. Multipliziere das mit 100 Trades, und dein durchschnittlicher Gewinner ist 0,8R statt 2,5R. Der <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link> deiner Strategie kippt von positiv zu negativ. Du bist auf dem Papier systematisch profitabel und in der Praxis systematisch pleite.
+        Also schließt du bei +20 Pips statt +60. Oder schlimmer, du <Link to="/blog/de/breakeven-stop-too-early" className="text-kmf-accent hover:underline">ziehst deinen Stop auf Break-even</Link> und wirst bei null ausgestoppt, bevor der Kurs dein Ziel erreicht. So oder so hast du zwei Drittel deiner erwarteten Belohnung liegen gelassen. Multipliziere das mit 100 Trades, und dein durchschnittlicher Gewinner ist 0,8R statt 2,5R. Der <Link to="/blog/de/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link> deiner Strategie kippt von positiv zu negativ. Du bist auf dem Papier systematisch profitabel und in der Praxis systematisch pleite.
       </P>
 
       <H3>Szenario 2: Der Verlierer, den du nicht töten kannst</H3>
@@ -115,7 +115,7 @@ export default function ProspectTheoryTradingDe() {
         Lies das noch einmal. Der voreingenommene Trader hat eine höhere Win Rate — 55 % vs 45 %. Er „gewinnt" häufiger. Er fühlt sich besser bei seinem Trading. Er erzählt Freunden von seiner Win Rate. Und er verliert Geld. Die Win Rate stieg, weil er schnelle Gewinne nimmt (häufigere kleine Gewinne), aber der durchschnittliche Gewinn schrumpfte so stark, dass er den durchschnittlichen Verlust nicht decken kann (der wuchs, weil er Verlierer hält).
       </P>
       <P>
-        Genau deshalb ist die <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">Win Rate isoliert eine schlechte Kennzahl</Link>. Eine Win Rate von 55 % mit 0,9R durchschnittlichem Gewinn und 1,8R durchschnittlichem Verlust ist eine verlierende Strategie, die die Maske eines Gewinners trägt.
+        Genau deshalb ist die <Link to="/blog/de/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">Win Rate isoliert eine schlechte Kennzahl</Link>. Eine Win Rate von 55 % mit 0,9R durchschnittlichem Gewinn und 1,8R durchschnittlichem Verlust ist eine verlierende Strategie, die die Maske eines Gewinners trägt.
       </P>
 
       <H2>Die Lösung: Überliste 2 Millionen Jahre Evolution</H2>
@@ -125,7 +125,7 @@ export default function ProspectTheoryTradingDe() {
 
       <H3>1. Harte Stops, harte Ziele, keine Ausnahmen</H3>
       <P>
-        Platziere deinen <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop Loss</Link> und dein Take Profit als Limit-Orders auf der Plattform vor dem Einstieg. Keine „mentalen Stops" — die verdampfen in dem Moment, in dem der Kurs sich ihnen nähert. Physische Orders, die ausführen, ob du zuschaust oder schläfst. Der Markt verhandelt nicht. Deine Orders sollten es auch nicht.
+        Platziere deinen <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop Loss</Link> und dein Take Profit als Limit-Orders auf der Plattform vor dem Einstieg. Keine „mentalen Stops" — die verdampfen in dem Moment, in dem der Kurs sich ihnen nähert. Physische Orders, die ausführen, ob du zuschaust oder schläfst. Der Markt verhandelt nicht. Deine Orders sollten es auch nicht.
       </P>
 
       <Callout title="Mentale Stops sind Lügen, die du dir erzählst" color="#FF5252">
@@ -134,7 +134,7 @@ export default function ProspectTheoryTradingDe() {
 
       <H3>2. Denke in R, nicht in Dollar</H3>
       <P>
-        Wenn deine Gewinn/Verlust-Anzeige „−$347" sagt, verarbeitet dein Gehirn eine Bedrohung. Wenn dein Journal „−1,0R" sagt, verarbeitet dein Gehirn Daten. Derselbe Verlust, völlig andere neurologische Reaktion. <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfache</Link> nehmen die Emotion aus der Trade-Bewertung. K.M.F. berechnet und verfolgt dein R-Vielfaches bei jedem Trade automatisch — sodass deine Review-Session um Prozessqualität geht, nicht um Dollar-Trauer.
+        Wenn deine Gewinn/Verlust-Anzeige „−$347" sagt, verarbeitet dein Gehirn eine Bedrohung. Wenn dein Journal „−1,0R" sagt, verarbeitet dein Gehirn Daten. Derselbe Verlust, völlig andere neurologische Reaktion. <Link to="/blog/de/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfache</Link> nehmen die Emotion aus der Trade-Bewertung. K.M.F. berechnet und verfolgt dein R-Vielfaches bei jedem Trade automatisch — sodass deine Review-Session um Prozessqualität geht, nicht um Dollar-Trauer.
       </P>
 
       <H3>3. Die Nicht-Anfassen-Regel</H3>

@@ -50,7 +50,7 @@ export default function WeekendGapRiskRo() {
 
       <H2>De Ce Stop Loss-ul Tău Nu Te Poate Salva</H2>
       <P>
-        Un stop loss e un ordin condiționat: „vinde când prețul atinge X." Dar se poate executa doar când piața e deschisă și tranzacționează activ la acel nivel de preț. Dacă piața se închide la 1.0800 vineri și se deschide la 1.0720 luni, stop loss-ul tău de la 1.0770 nu a fost niciodată declanșat — prețul a sărit peste el. Ordinul tău se execută la 1.0720, dându-ți 50 de pips de slippage dincolo de stop-ul intenționat. Pe o poziție dimensionată pentru un stop de 30 pips, asta e aproape de trei ori pierderea ta planificată. <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Plasarea corectă a stop loss-ului</Link> trebuie să țină cont de această realitate.
+        Un stop loss e un ordin condiționat: „vinde când prețul atinge X." Dar se poate executa doar când piața e deschisă și tranzacționează activ la acel nivel de preț. Dacă piața se închide la 1.0800 vineri și se deschide la 1.0720 luni, stop loss-ul tău de la 1.0770 nu a fost niciodată declanșat — prețul a sărit peste el. Ordinul tău se execută la 1.0720, dându-ți 50 de pips de slippage dincolo de stop-ul intenționat. Pe o poziție dimensionată pentru un stop de 30 pips, asta e aproape de trei ori pierderea ta planificată. <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Plasarea corectă a stop loss-ului</Link> trebuie să țină cont de această realitate.
       </P>
 
       <Callout title="Riscul Invizibil" color="#00C853">
@@ -86,7 +86,7 @@ export default function WeekendGapRiskRo() {
       </P>
       <H3>2. Redu position size-ul pentru pozițiile peste weekend</H3>
       <P>
-        Dacă strategia ta cere să ții poziții zile sau săptămâni, poți reduce <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">position size-ul</Link> vineri ca să ții cont de riscul de gap. O abordare comună: dacă riscul tău normal e 1% per trade, redu-l la 0.5% pentru orice poziție ținută peste weekend. Așa, chiar și un gap care îți dublează distanța stop loss-ului duce doar la o pierdere de 1% din cont — încă în parametri normali.
+        Dacă strategia ta cere să ții poziții zile sau săptămâni, poți reduce <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">position size-ul</Link> vineri ca să ții cont de riscul de gap. O abordare comună: dacă riscul tău normal e 1% per trade, redu-l la 0.5% pentru orice poziție ținută peste weekend. Așa, chiar și un gap care îți dublează distanța stop loss-ului duce doar la o pierdere de 1% din cont — încă în parametri normali.
       </P>
       <H3>3. Hedge cu instrumente corelate</H3>
       <P>
@@ -98,7 +98,7 @@ export default function WeekendGapRiskRo() {
         Matematica e simplă. Dacă stop loss-ul tău normal e 30 pips și accepți că un gap de weekend ar putea adăuga încă 30 pips de slippage, distanța ta efectivă de risc e 60 pips. Dimensionează-ți poziția pentru scenariul cel mai prost, nu pentru cel mai bun. Asta înseamnă să-ți tai position size-ul la jumătate pentru pozițiile peste weekend — sau să accepți că riscul tău real e dublu față de cât sugerează stop loss-ul.
       </P>
       <P>
-        Această ajustare nu e opțională. Ignorarea ei înseamnă că <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">regula ta de 1% risc</Link> devine o regulă de 2% în fiecare weekend — iar pe un an de 52 de weekenduri, acel risc necontabilizat se acumulează periculos.
+        Această ajustare nu e opțională. Ignorarea ei înseamnă că <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">regula ta de 1% risc</Link> devine o regulă de 2% în fiecare weekend — iar pe un an de 52 de weekenduri, acel risc necontabilizat se acumulează periculos.
       </P>
 
       <H2>Când Sunt Gap-urile Cele Mai Periculoase</H2>

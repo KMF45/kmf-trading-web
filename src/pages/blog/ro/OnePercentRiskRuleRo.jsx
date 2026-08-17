@@ -48,7 +48,7 @@ export default function OnePercentRiskRuleRo() {
 
       <H2>Matematica Ruinei: De Ce Procentul de Risc Contează Mai Mult Decât Crezi</H2>
       <P>
-        Seriile de pierderi sunt o certitudine matematică, chiar și cu o strategie profitabilă. Întrebarea nu e dacă vei înfrunta o serie de pierderi, ci dacă contul tău o supraviețuiește destul cât să ajungă la următoarea fază câștigătoare. A înțelege strategii de <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">supraviețuire a seriilor de pierderi</Link> e la fel de important ca a avea o metodă bună de intrare.
+        Seriile de pierderi sunt o certitudine matematică, chiar și cu o strategie profitabilă. Întrebarea nu e dacă vei înfrunta o serie de pierderi, ci dacă contul tău o supraviețuiește destul cât să ajungă la următoarea fază câștigătoare. A înțelege strategii de <Link to="/blog/ro/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">supraviețuire a seriilor de pierderi</Link> e la fel de important ca a avea o metodă bună de intrare.
       </P>
       <P>
         Uită-te la ce fac pierderile consecutive contului tău la niveluri diferite de risc:
@@ -81,7 +81,7 @@ export default function OnePercentRiskRuleRo() {
         'Pasul 2 — Calculează position size-ul: Position Size = Sumă riscată ÷ (Entry Price − Preț Stop Loss)',
       ]} />
       <P>
-        <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Plasarea stop loss-ului</Link> vine prima. Identifici punctul logic de invalidare a trade-ului, măsori distanța până la intrarea ta, apoi folosești acea distanță ca să determini cât de mare ar trebui să fie poziția. Nu plasezi niciodată un stop loss în funcție de ce <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">position sizing</Link> vrei să iei — funcționează exact invers.
+        <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Plasarea stop loss-ului</Link> vine prima. Identifici punctul logic de invalidare a trade-ului, măsori distanța până la intrarea ta, apoi folosești acea distanță ca să determini cât de mare ar trebui să fie poziția. Nu plasezi niciodată un stop loss în funcție de ce <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">position sizing</Link> vrei să iei — funcționează exact invers.
       </P>
 
       <H3>Exemplu Lucrat: Forex</H3>

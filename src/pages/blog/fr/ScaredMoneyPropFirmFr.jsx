@@ -90,7 +90,7 @@ export default function ScaredMoneyPropFirmFr() {
       </P>
       <H3>Mensonge n°2 : « Prendre des profits rapides est malin »</H3>
       <P>
-        Clôturer à +0,5R « pour sécuriser le profit » ressemble à une victoire. Mais ta stratégie a été conçue pour des cibles de 2-3R. Quand tu coupes chaque gagnant en deux, ton <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> s'effondre. Un système à +0,60R d'espérance aux cibles complètes peut devenir −0,10R (net perdant) quand tu prends des profits partiels par peur. Tu ne « sécurises pas du profit ». Tu saignes lentement.
+        Clôturer à +0,5R « pour sécuriser le profit » ressemble à une victoire. Mais ta stratégie a été conçue pour des cibles de 2-3R. Quand tu coupes chaque gagnant en deux, ton <Link to="/blog/fr/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> s'effondre. Un système à +0,60R d'espérance aux cibles complètes peut devenir −0,10R (net perdant) quand tu prends des profits partiels par peur. Tu ne « sécurises pas du profit ». Tu saignes lentement.
       </P>
       <H3>Mensonge n°3 : « Je traderai ma taille normale après avoir bâti un buffer »</H3>
       <P>
@@ -110,7 +110,7 @@ export default function ScaredMoneyPropFirmFr() {
       </P>
       <H3>2. La règle du buffer de 50 %</H3>
       <P>
-        Si la prop firm autorise un <Link to="/blog/static-vs-trailing-drawdown" className="text-kmf-accent hover:underline">drawdown</Link> journalier de 5 %, fixe ta limite personnelle à 2,5 %. Ça te garde en permanence dans la « zone calme » — assez loin de la ligne de danger pour que ton amygdale ne s'active pas. Le but n'est pas de maximiser combien tu peux perdre par jour. C'est de garder ton cerveau fonctionnel correctement pendant que tu trades.
+        Si la prop firm autorise un <Link to="/blog/fr/static-vs-trailing-drawdown" className="text-kmf-accent hover:underline">drawdown</Link> journalier de 5 %, fixe ta limite personnelle à 2,5 %. Ça te garde en permanence dans la « zone calme » — assez loin de la ligne de danger pour que ton amygdale ne s'active pas. Le but n'est pas de maximiser combien tu peux perdre par jour. C'est de garder ton cerveau fonctionnel correctement pendant que tu trades.
       </P>
       <H3>3. Cache le P/L en dollars</H3>
       <P>
@@ -118,11 +118,11 @@ export default function ScaredMoneyPropFirmFr() {
       </P>
       <H3>4. La règle des 3 pertes</H3>
       <P>
-        Après 3 pertes consécutives dans une seule séance, ferme la plateforme. Pas « après le prochain setup ». Pas « après un essai de plus ». Maintenant. Tes niveaux de cortisol après 3 pertes sont trop élevés pour une analyse rationnelle. K.M.F. a un <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">système de détection de tilt intégré</Link> à 4 niveaux d'alerte — il attrape le schéma avant que tu ne spirales. Mais même sans appli pour te le dire, la règle est simple : 3 pertes = fini pour 4 heures minimum.
+        Après 3 pertes consécutives dans une seule séance, ferme la plateforme. Pas « après le prochain setup ». Pas « après un essai de plus ». Maintenant. Tes niveaux de cortisol après 3 pertes sont trop élevés pour une analyse rationnelle. K.M.F. a un <Link to="/blog/fr/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">système de détection de tilt intégré</Link> à 4 niveaux d'alerte — il attrape le schéma avant que tu ne spirales. Mais même sans appli pour te le dire, la règle est simple : 3 pertes = fini pour 4 heures minimum.
       </P>
       <H3>5. Trade le processus, mesure le processus</H3>
       <P>
-        Arrête de mesurer le succès par le P/L journalier. À la place, suis : ai-je suivi ma <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> ? Ai-je tenu jusqu'à la cible ? Ai-je respecté mon stop ? Si tu as exécuté 5 trades parfaitement et perdu 400 $, c'était une bonne journée. Si tu as gagné 600 $ avec 3 trades impulsifs sans stop loss, c'était une journée terrible — tu ne le sais juste pas encore.
+        Arrête de mesurer le succès par le P/L journalier. À la place, suis : ai-je suivi ma <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> ? Ai-je tenu jusqu'à la cible ? Ai-je respecté mon stop ? Si tu as exécuté 5 trades parfaitement et perdu 400 $, c'était une bonne journée. Si tu as gagné 600 $ avec 3 trades impulsifs sans stop loss, c'était une journée terrible — tu ne le sais juste pas encore.
       </P>
 
       <Callout title="Le test du détachement" color="#00C853">

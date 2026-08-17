@@ -407,7 +407,7 @@ export default function BestTradingJournalAndroid2026De() {
                 { slug: 'r-multiple-explained', title: 'R-Multiple Explained: How to Measure Trade Quality (Not Just Profit)', category: 'Statistics' },
               ].map((a) => (
                 <li key={a.slug}>
-                  <Link to={`/blog/${a.slug}`} className="group flex items-start gap-3">
+                  <Link to={`/blog/de/${a.slug}`} className="group flex items-start gap-3">
                     <span className="text-kmf-accent mt-0.5 flex-shrink-0">&rarr;</span>
                     <span>
                       <span className="text-sm font-medium text-kmf-text-primary group-hover:text-kmf-accent transition-colors">{a.title}</span>

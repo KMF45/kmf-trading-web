@@ -54,12 +54,12 @@ export default function PropFirmJournalRo() {
 
       <H3>1. Revenge Trade-ul Supradimensionat</H3>
       <P>
-        Începe cu o pierdere normală. -0.8% pe zi. În regulă. Apoi încă una: -0.5%. Acum ești pe minus 1.3% și simți presiunea. În loc să te oprești, îți dublezi următoarea poziție ca să „recuperezi rapid". Trade-ul ăla merge împotriva ta. Dintr-odată ești la -3.5% și la un stop loss distanță de încălcarea limitei. Ăsta e <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> ca la carte — cel mai comun ucigaș de conturi din trading-ul la prop firm-uri.
+        Începe cu o pierdere normală. -0.8% pe zi. În regulă. Apoi încă una: -0.5%. Acum ești pe minus 1.3% și simți presiunea. În loc să te oprești, îți dublezi următoarea poziție ca să „recuperezi rapid". Trade-ul ăla merge împotriva ta. Dintr-odată ești la -3.5% și la un stop loss distanță de încălcarea limitei. Ăsta e <Link to="/blog/ro/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> ca la carte — cel mai comun ucigaș de conturi din trading-ul la prop firm-uri.
       </P>
 
       <H3>2. Greșeala de Position Sizing</H3>
       <P>
-        Pe un cont FTMO de $100,000 cu limită de daily drawdown de 5%, pierderea ta zilnică maximă e $5,000. Dacă iei trei trade-uri, fiecare poate risca maximum ~$1,650. Dar majoritatea traderilor calculează lot size-ul după „cum simt", nu după limita reală de drawdown. Riscă $2,500 per trade, iau trei trade-uri, și o sesiune proastă îi șterge. Matematica era greșită înainte ca primul trade să fie măcar plasat. Un <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">sistem corect de position sizing</Link> previne asta complet.
+        Pe un cont FTMO de $100,000 cu limită de daily drawdown de 5%, pierderea ta zilnică maximă e $5,000. Dacă iei trei trade-uri, fiecare poate risca maximum ~$1,650. Dar majoritatea traderilor calculează lot size-ul după „cum simt", nu după limita reală de drawdown. Riscă $2,500 per trade, iau trei trade-uri, și o sesiune proastă îi șterge. Matematica era greșită înainte ca primul trade să fie măcar plasat. Un <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">sistem corect de position sizing</Link> previne asta complet.
       </P>
 
       <H3>3. Spirala „Doar Încă un Trade"</H3>
@@ -108,7 +108,7 @@ export default function PropFirmJournalRo() {
 
       <H3>În Timpul Sesiunii: Regula Stopului Absolut</H3>
       <P>
-        Decide dinainte: „Dacă ating X% pierdere zilnică, închid platforma. Nu după următorul trade. Acum." Pentru o detaliere a acestei abordări, vezi <Link to="/blog/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">ghidul nostru de daily drawdown</Link>. Pentru majoritatea conturilor de prop firm, pragul ăsta trebuie setat la 60-70% din daily drawdown-ul permis. Dacă limita e 5%, stopul tău absolut e la 3%. Asta îți dă o zonă-tampon — pentru că în momentul în care îți atingi limita autoimpusă și pleci, mai ai 2% spațiu de respirat în caz de slippage sau de gap pe o poziție deschisă.
+        Decide dinainte: „Dacă ating X% pierdere zilnică, închid platforma. Nu după următorul trade. Acum." Pentru o detaliere a acestei abordări, vezi <Link to="/blog/ro/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">ghidul nostru de daily drawdown</Link>. Pentru majoritatea conturilor de prop firm, pragul ăsta trebuie setat la 60-70% din daily drawdown-ul permis. Dacă limita e 5%, stopul tău absolut e la 3%. Asta îți dă o zonă-tampon — pentru că în momentul în care îți atingi limita autoimpusă și pleci, mai ai 2% spațiu de respirat în caz de slippage sau de gap pe o poziție deschisă.
       </P>
       <P>
         Loghează regula asta în jurnal. După sesiune, scrie dacă ai respectat-o. Dacă nu — dacă ai continuat să tranzacționezi după ce ți-ai atins limita — ăla e cel mai important punct de date al zilei. Nu P/L-ul. Încălcarea de disciplină.

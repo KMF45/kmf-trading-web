@@ -64,7 +64,7 @@ export default function HowToSetStopLossDe() {
         'Gar keinen Stop setzen, weil „ich beobachte es manuell"',
       ]} />
       <Callout title="Entscheidendes Prinzip" color="#00C853">
-        Der korrekte Prozess ist: Identifiziere zuerst dein logisches Stop-Loss-Niveau anhand der Marktstruktur, dann berechne deine Positionsgröße mit der <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgrößen-Formel</Link> aus diesem Abstand. Beginne nie mit einer Positionsgröße und platziere einen Stop, der dazu passt. Das kehrt die Logik komplett um und garantiert schlechte Stop-Platzierung.
+        Der korrekte Prozess ist: Identifiziere zuerst dein logisches Stop-Loss-Niveau anhand der Marktstruktur, dann berechne deine Positionsgröße mit der <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgrößen-Formel</Link> aus diesem Abstand. Beginne nie mit einer Positionsgröße und platziere einen Stop, der dazu passt. Das kehrt die Logik komplett um und garantiert schlechte Stop-Platzierung.
       </Callout>
 
       <Divider />

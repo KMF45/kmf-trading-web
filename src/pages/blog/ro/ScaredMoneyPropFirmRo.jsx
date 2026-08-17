@@ -90,7 +90,7 @@ export default function ScaredMoneyPropFirmRo() {
       </P>
       <H3>Minciuna #2: „Să Iei Profituri Rapide E Inteligent"</H3>
       <P>
-        Să închizi la +0.5R „ca să securizezi profitul" se simte ca o victorie. Dar strategia ta a fost construită pentru ținte de 2-3R. Când tai fiecare câștigător pe jumătate, <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy-ul</Link> tău se prăbușește. Un sistem cu expectancy de +0.60R la ținte complete poate deveni -0.10R (net pierzător) când iei profituri parțiale de frică. Nu „securizezi profitul". Sângerezi încet.
+        Să închizi la +0.5R „ca să securizezi profitul" se simte ca o victorie. Dar strategia ta a fost construită pentru ținte de 2-3R. Când tai fiecare câștigător pe jumătate, <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy-ul</Link> tău se prăbușește. Un sistem cu expectancy de +0.60R la ținte complete poate deveni -0.10R (net pierzător) când iei profituri parțiale de frică. Nu „securizezi profitul". Sângerezi încet.
       </P>
       <H3>Minciuna #3: „Tranzacționez la Size-ul Normal După Ce Îmi Construiesc un Buffer"</H3>
       <P>
@@ -110,7 +110,7 @@ export default function ScaredMoneyPropFirmRo() {
       </P>
       <H3>2. Regula Tamponului de 50%</H3>
       <P>
-        Dacă prop firm-ul permite un <Link to="/blog/static-vs-trailing-drawdown" className="text-kmf-accent hover:underline">drawdown</Link> zilnic de 5%, setează-ți limita personală la 2.5%. Asta te ține permanent în „zona calmă" — destul de departe de linia de pericol încât amigdala ta să nu se activeze. Scopul nu e să maximizezi cât poți pierde pe zi. E să-ți ții creierul funcțional în timp ce tranzacționezi.
+        Dacă prop firm-ul permite un <Link to="/blog/ro/static-vs-trailing-drawdown" className="text-kmf-accent hover:underline">drawdown</Link> zilnic de 5%, setează-ți limita personală la 2.5%. Asta te ține permanent în „zona calmă" — destul de departe de linia de pericol încât amigdala ta să nu se activeze. Scopul nu e să maximizezi cât poți pierde pe zi. E să-ți ții creierul funcțional în timp ce tranzacționezi.
       </P>
       <H3>3. Ascunde P/L-ul în Dolari</H3>
       <P>
@@ -118,11 +118,11 @@ export default function ScaredMoneyPropFirmRo() {
       </P>
       <H3>4. Regula Celor 3 Pierderi</H3>
       <P>
-        După 3 pierderi consecutive într-o singură sesiune, închide platforma. Nu „după următorul setup". Nu „după încă o încercare". Acum. Nivelurile tale de cortizol după 3 pierderi sunt prea mari pentru analiză rațională. K.M.F. are un <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">sistem integrat de detecție a tilt-ului</Link> cu 4 niveluri de avertizare — prinde pattern-ul înainte să intri în spirală. Dar chiar și fără o aplicație care să-ți spună, regula e simplă: 3 pierderi = gata pentru minimum 4 ore.
+        După 3 pierderi consecutive într-o singură sesiune, închide platforma. Nu „după următorul setup". Nu „după încă o încercare". Acum. Nivelurile tale de cortizol după 3 pierderi sunt prea mari pentru analiză rațională. K.M.F. are un <Link to="/blog/ro/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">sistem integrat de detecție a tilt-ului</Link> cu 4 niveluri de avertizare — prinde pattern-ul înainte să intri în spirală. Dar chiar și fără o aplicație care să-ți spună, regula e simplă: 3 pierderi = gata pentru minimum 4 ore.
       </P>
       <H3>5. Tranzacționează Procesul, Măsoară Procesul</H3>
       <P>
-        Nu mai măsura succesul după P/L-ul zilnic. În schimb, urmărește: Mi-am urmat <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist-ul pre-trade</Link>? Am ținut până la țintă? Mi-am respectat stopul? Dacă ai executat 5 trade-uri perfect și ai pierdut $400, a fost o zi bună. Dacă ai făcut $600 din 3 trade-uri impulsive fără stop loss, a fost o zi groaznică — doar că încă nu știi asta.
+        Nu mai măsura succesul după P/L-ul zilnic. În schimb, urmărește: Mi-am urmat <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist-ul pre-trade</Link>? Am ținut până la țintă? Mi-am respectat stopul? Dacă ai executat 5 trade-uri perfect și ai pierdut $400, a fost o zi bună. Dacă ai făcut $600 din 3 trade-uri impulsive fără stop loss, a fost o zi groaznică — doar că încă nu știi asta.
       </P>
 
       <Callout title="Testul Detașării" color="#00C853">

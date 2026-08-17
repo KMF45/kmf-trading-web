@@ -42,7 +42,7 @@ export default function GoodLossVsBadWinDe() {
         Das menschliche Gehirn ist darauf verdrahtet, Ergebnisse zu bewerten, nicht Prozesse. Grüne Zahl = gut. Rote Zahl = schlecht. Dieser Instinkt dient uns in den meisten Lebensbereichen gut. Im Trading ist er eine Falle, die fast jeden angehenden Trader vom Besserwerden abhält.
       </P>
       <P>
-        Wenn du jeden Trade nach seinem Ergebnis beurteilst, verstärkst du das Verhalten, das dieses Ergebnis erzeugte — selbst wenn das Verhalten leichtsinnig war. Das ist einer der Hauptgründe, <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre eigenen Regeln brechen</Link>. Der zufällige AUD/USD-Gewinn lehrt dein Gehirn: „Siehst du? Regeln ignorieren funktioniert." Währenddessen lehrt der disziplinierte USD/CAD-Verlust: „Regeln befolgen führt zu Schmerz." Über Hunderte Trades erodiert diese Konditionierung langsam deine Disziplin, bis du komplett impulsiv tradest und es „Intuition" nennst.
+        Wenn du jeden Trade nach seinem Ergebnis beurteilst, verstärkst du das Verhalten, das dieses Ergebnis erzeugte — selbst wenn das Verhalten leichtsinnig war. Das ist einer der Hauptgründe, <Link to="/blog/de/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre eigenen Regeln brechen</Link>. Der zufällige AUD/USD-Gewinn lehrt dein Gehirn: „Siehst du? Regeln ignorieren funktioniert." Währenddessen lehrt der disziplinierte USD/CAD-Verlust: „Regeln befolgen führt zu Schmerz." Über Hunderte Trades erodiert diese Konditionierung langsam deine Disziplin, bis du komplett impulsiv tradest und es „Intuition" nennst.
       </P>
 
       <Divider />
@@ -63,7 +63,7 @@ export default function GoodLossVsBadWinDe() {
 
       <H2>Wie ein „schlechter Gewinn" tatsächlich aussieht</H2>
       <P>
-        Ein schlechter Gewinn ist ein Trade, der deine Regeln brach und trotzdem zufällig Geld machte. Kein echtes Setup. Keine abgeschlossene <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link>. Stop Loss zu eng, zu weit oder nicht vorhanden. Positionsgröße nach „Gefühl" statt Berechnung. Du bist aus FOMO, Langeweile oder einem Tipp aus einem Discord-Kanal eingestiegen. Und du hast gewonnen.
+        Ein schlechter Gewinn ist ein Trade, der deine Regeln brach und trotzdem zufällig Geld machte. Kein echtes Setup. Keine abgeschlossene <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link>. Stop Loss zu eng, zu weit oder nicht vorhanden. Positionsgröße nach „Gefühl" statt Berechnung. Du bist aus FOMO, Langeweile oder einem Tipp aus einem Discord-Kanal eingestiegen. Und du hast gewonnen.
       </P>
       <P>
         Das ist das gefährlichste Ergebnis im Trading. Nicht wegen des Geldes — das Geld ist real, der Gewinn ist real. Es ist gefährlich, weil es deinem Gehirn beibringt, dass die Regeln egal sind. Jeder schlechte Gewinn erodiert deine Disziplin um genau eine Stufe. Nach genug schlechten Gewinnen hast du kein Trading-System mehr. Du hast eine Spielsucht mit gelegentlichem Glück.
@@ -101,7 +101,7 @@ export default function GoodLossVsBadWinDe() {
 
       <H3>Deine Trades von 1–5 bewerten</H3>
       <P>
-        Bewerte nach jedem Trade auf einer 1–5-Skala basierend auf der Prozessqualität — nicht dem Gewinn. Kombiniere das mit der Berechnung deines <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfachen</Link> pro Trade, und du hast zwei Kennzahlen, die weit mehr zählen als der reine Gewinn/Verlust:
+        Bewerte nach jedem Trade auf einer 1–5-Skala basierend auf der Prozessqualität — nicht dem Gewinn. Kombiniere das mit der Berechnung deines <Link to="/blog/de/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfachen</Link> pro Trade, und du hast zwei Kennzahlen, die weit mehr zählen als der reine Gewinn/Verlust:
       </P>
       <Ul items={[
         '5 — Perfekte Ausführung. Setup, Einstieg, Stop, Größe, Management folgten alle dem Plan.',

@@ -50,7 +50,7 @@ export default function WorstTradingExcusesDe() {
         Das ist die gefährlichste Ausrede im Trading, weil sie intelligent klingt. Der Preis ging schließlich in deine Richtung — du bist nur zu früh eingestiegen und wurdest zuerst ausgestoppt. Aber in gehebelten Märkten ist Timing alles. „Richtig" über die Richtung zu liegen, während man ausgestoppt wird, ist funktional identisch damit, falsch zu liegen. Dein Konto interessiert sich nicht für deine These. Es interessiert sich für deine Ausführung.
       </P>
       <P>
-        Was dein Journal zeigt: ein Muster vorzeitiger Einstiege, oft ausgelöst durch Ungeduld oder Angst, die Bewegung zu verpassen. Die Lösung ist ein strengerer Entry-Trigger — nicht ein breiterer Stop Loss. Eine <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link> zwingt dich, deine Einstiegskriterien zu prüfen, bevor du auf eine Richtungs-Bias handelst.
+        Was dein Journal zeigt: ein Muster vorzeitiger Einstiege, oft ausgelöst durch Ungeduld oder Angst, die Bewegung zu verpassen. Die Lösung ist ein strengerer Entry-Trigger — nicht ein breiterer Stop Loss. Eine <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link> zwingt dich, deine Einstiegskriterien zu prüfen, bevor du auf eine Richtungs-Bias handelst.
       </P>
 
       <Divider />
@@ -60,7 +60,7 @@ export default function WorstTradingExcusesDe() {
         Dieser Satz ging mehr gesprengten Konten voraus als irgendein einzelnes Markt-Ereignis. In dem Moment, in dem du tradest, um einen Verlust auszugleichen, statt ein valides Setup auszuführen, hast du die Domäne der Strategie verlassen und die Domäne des Glücksspiels betreten. Jeder Trade ist statistisch unabhängig. Der Markt schuldet dir nichts. Der „nächste Trade" hat keine Erinnerung an deinen vorherigen Verlust und keine Verpflichtung, ihn zu reparieren.
       </P>
       <P>
-        Was dein Journal zeigt: Trades, die unmittelbar nach Verlusten genommen werden, haben eine deutlich niedrigere Win Rate und einen höheren durchschnittlichen Verlust. Die emotionale Dringlichkeit zur Erholung führt zu übergroßen Positionen, übersprungenen Checklisten und impulsiven Einstiegen. Das ist, <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre Regeln brechen</Link> — der Schmerz des Verlusts überschreibt die Logik des Plans.
+        Was dein Journal zeigt: Trades, die unmittelbar nach Verlusten genommen werden, haben eine deutlich niedrigere Win Rate und einen höheren durchschnittlichen Verlust. Die emotionale Dringlichkeit zur Erholung führt zu übergroßen Positionen, übersprungenen Checklisten und impulsiven Einstiegen. Das ist, <Link to="/blog/de/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre Regeln brechen</Link> — der Schmerz des Verlusts überschreibt die Logik des Plans.
       </P>
 
       <H2>Ausrede Nr. 4: „Mein Stop war zu eng"</H2>
@@ -75,7 +75,7 @@ export default function WorstTradingExcusesDe() {
 
       <H2>Ausrede Nr. 5: „Ich bin nicht meinem Plan gefolgt, aber es hat geklappt"</H2>
       <P>
-        Das ist der <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">Bad Win</Link> in seiner reinsten Form, verkleidet als harmlose Anekdote. Du bist von deinen Regeln abgewichen, hast trotzdem Geld verdient und erzählst dir die Geschichte, als würde sie etwas Positives beweisen. Sie beweist das Gegenteil. Sie beweist, dass du bereit bist, dein System aufzugeben, wenn es dir passt — und die Tatsache, dass es diesmal zufällig funktioniert hat, macht es wahrscheinlicher, dass du es wieder tust.
+        Das ist der <Link to="/blog/de/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">Bad Win</Link> in seiner reinsten Form, verkleidet als harmlose Anekdote. Du bist von deinen Regeln abgewichen, hast trotzdem Geld verdient und erzählst dir die Geschichte, als würde sie etwas Positives beweisen. Sie beweist das Gegenteil. Sie beweist, dass du bereit bist, dein System aufzugeben, wenn es dir passt — und die Tatsache, dass es diesmal zufällig funktioniert hat, macht es wahrscheinlicher, dass du es wieder tust.
       </P>
       <P>
         Was dein Journal zeigt: Trades, die als „Plan nicht befolgt" markiert sind, mögen gelegentlich Gewinne zeigen, aber ihr durchschnittliches R-Vielfaches über eine Serie von 30+ Trades ist fast immer negativ. Die Glückstreffer verschleiern den systematischen Schaden, deine Edge aufzugeben.

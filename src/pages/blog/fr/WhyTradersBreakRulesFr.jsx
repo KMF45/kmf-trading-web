@@ -95,7 +95,7 @@ export default function WhyTradersBreakRulesFr() {
       <H2>Solutions concrètes</H2>
       <H3>1. Checklist pré-trade</H3>
       <P>
-        Une <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> écrite que tu dois physiquement vérifier avant de toucher un ordre force le Système 2 dans la boucle. Elle crée une pause obligatoire entre l'impulsion et l'action. La checklist devrait couvrir les critères du setup, le niveau du stop loss, la taille de position et l'état émotionnel. Si une case n'est pas cochée, aucun trade n'est pris.
+        Une <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> écrite que tu dois physiquement vérifier avant de toucher un ordre force le Système 2 dans la boucle. Elle crée une pause obligatoire entre l'impulsion et l'action. La checklist devrait couvrir les critères du setup, le niveau du stop loss, la taille de position et l'état émotionnel. Si une case n'est pas cochée, aucun trade n'est pris.
       </P>
       <H3>2. Réduis la friction pour le bon comportement</H3>
       <P>
@@ -111,7 +111,7 @@ export default function WhyTradersBreakRulesFr() {
       </P>
       <H3>5. Revue hebdomadaire pour identifier les schémas</H3>
       <P>
-        La transgression des règles n'est pas aléatoire. Tu enfreins probablement les mêmes règles, dans les mêmes circonstances, aux mêmes moments de la journée. Une <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">revue hebdomadaire</Link> disciplinée révèle ces schémas pour que tu traites la cause profonde plutôt que de juste te résoudre à « faire mieux ». Sans cette boucle de feedback, tu es coincé dans <Link to="/blog/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">l'écart d'exécution</Link> — savoir quoi faire mais incapable de le faire régulièrement.
+        La transgression des règles n'est pas aléatoire. Tu enfreins probablement les mêmes règles, dans les mêmes circonstances, aux mêmes moments de la journée. Une <Link to="/blog/fr/weekly-trading-review-template" className="text-kmf-accent hover:underline">revue hebdomadaire</Link> disciplinée révèle ces schémas pour que tu traites la cause profonde plutôt que de juste te résoudre à « faire mieux ». Sans cette boucle de feedback, tu es coincé dans <Link to="/blog/fr/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">l'écart d'exécution</Link> — savoir quoi faire mais incapable de le faire régulièrement.
       </P>
 
       <Takeaways items={[

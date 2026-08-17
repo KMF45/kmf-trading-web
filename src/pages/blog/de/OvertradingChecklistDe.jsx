@@ -46,7 +46,7 @@ export default function OvertradingChecklistDe() {
 
       <H3>2. Du überspringst deine Checkliste</H3>
       <P>
-        Die <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link> existiert genau für solche Momente. Wenn du dir zu sagen beginnst „Ich muss nicht prüfen, der hier ist offensichtlich" oder „Ich logge es danach", bist du im System-1-Territorium — schnell, emotional und unzuverlässig. In dem Moment, in dem sich deine Checkliste eher wie ein Hindernis als ein Werkzeug anfühlt, bist du auf Tilt. K.M.F. enthält eine eingebaute Checklisten-Funktion mit Standard- und eigenen Vorlagen, die vor jedem Trade-Einstieg erscheint und es strukturell schwer macht, sie zu überspringen.
+        Die <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link> existiert genau für solche Momente. Wenn du dir zu sagen beginnst „Ich muss nicht prüfen, der hier ist offensichtlich" oder „Ich logge es danach", bist du im System-1-Territorium — schnell, emotional und unzuverlässig. In dem Moment, in dem sich deine Checkliste eher wie ein Hindernis als ein Werkzeug anfühlt, bist du auf Tilt. K.M.F. enthält eine eingebaute Checklisten-Funktion mit Standard- und eigenen Vorlagen, die vor jedem Trade-Einstieg erscheint und es strukturell schwer macht, sie zu überspringen.
       </P>
 
       <H3>3. Du wechselst auf kleinere Zeitrahmen</H3>
@@ -61,7 +61,7 @@ export default function OvertradingChecklistDe() {
 
       <H3>5. Deine Positionsgröße kriecht nach oben</H3>
       <P>
-        Das ist eines der gefährlichsten Zeichen, weil es jeden anderen Fehler verstärkt. Nach einem Verlust ist der Instinkt, die Größe zu erhöhen, um schneller zurückzuholen, mächtig und automatisch. Es fühlt sich nicht wie eine bewusste Entscheidung an — es fühlt sich wie „anpassen" an. Aber waren deine letzten drei Trades bei 0,5 Lots und dieser bei 1,2 Lots, hast du nicht angepasst. Du hast dein Risiko in einer Phase schlechter Performance verdreifacht. Das ist der Kernmechanismus hinter <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link>.
+        Das ist eines der gefährlichsten Zeichen, weil es jeden anderen Fehler verstärkt. Nach einem Verlust ist der Instinkt, die Größe zu erhöhen, um schneller zurückzuholen, mächtig und automatisch. Es fühlt sich nicht wie eine bewusste Entscheidung an — es fühlt sich wie „anpassen" an. Aber waren deine letzten drei Trades bei 0,5 Lots und dieser bei 1,2 Lots, hast du nicht angepasst. Du hast dein Risiko in einer Phase schlechter Performance verdreifacht. Das ist der Kernmechanismus hinter <Link to="/blog/de/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link>.
       </P>
 
       <H3>6. Du nimmst Setups, die du nie getestet hast</H3>
@@ -92,7 +92,7 @@ export default function OvertradingChecklistDe() {
 
       <H2>Was tun, wenn du dich erwischst</H2>
       <P>
-        Wenn du dich in zwei oder mehr der obigen Zeichen wiedererkannt hast, ist die Handlung einfach, aber nicht leicht: Hör für den Rest der Session auf zu traden. Schließe die Plattform. Tu etwas Körperliches — gehen, Sport, kochen. Das Cortisol und Adrenalin in deinem System brauchen 20 bis 30 Minuten, um abzuklingen. Wenn du morgen zurückkehrst, überprüfe die heutigen Trades ehrlich. Identifiziere, welche planbasiert und welche emotionsbasiert waren. Dieses Review ist wertvoller als jeder Trade, den du hättest machen können. Lies mehr darüber, <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre Regeln brechen</Link> und wie man Systeme baut, die es verhindern.
+        Wenn du dich in zwei oder mehr der obigen Zeichen wiedererkannt hast, ist die Handlung einfach, aber nicht leicht: Hör für den Rest der Session auf zu traden. Schließe die Plattform. Tu etwas Körperliches — gehen, Sport, kochen. Das Cortisol und Adrenalin in deinem System brauchen 20 bis 30 Minuten, um abzuklingen. Wenn du morgen zurückkehrst, überprüfe die heutigen Trades ehrlich. Identifiziere, welche planbasiert und welche emotionsbasiert waren. Dieses Review ist wertvoller als jeder Trade, den du hättest machen können. Lies mehr darüber, <Link to="/blog/de/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre Regeln brechen</Link> und wie man Systeme baut, die es verhindern.
       </P>
 
       <Takeaways items={[

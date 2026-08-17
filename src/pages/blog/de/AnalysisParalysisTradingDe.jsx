@@ -126,12 +126,12 @@ export default function AnalysisParalysisTradingDe() {
 
       <H3>Entscheide, bevor die Kerze entsteht, nicht währenddessen</H3>
       <P>
-        Bau eine kurze <Link to="/blog/pre-trade-checklist" className="text-kmf-accent underline hover:text-white transition-colors">Pre-Trade-Checkliste</Link> — fünf oder sechs Ja/Nein-Fragen, die ein valides Setup für dich definieren. Wenn der Kurs ankommt, <em>beurteilst</em> du den Trade nicht mehr; du <em>hakst Kästchen ab</em>. Alle angehakt? Du steigst ein. Es verwandelt eine quälende offene Entscheidung in eine mechanische, und mechanische Entscheidungen erstarren nicht.
+        Bau eine kurze <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent underline hover:text-white transition-colors">Pre-Trade-Checkliste</Link> — fünf oder sechs Ja/Nein-Fragen, die ein valides Setup für dich definieren. Wenn der Kurs ankommt, <em>beurteilst</em> du den Trade nicht mehr; du <em>hakst Kästchen ab</em>. Alle angehakt? Du steigst ein. Es verwandelt eine quälende offene Entscheidung in eine mechanische, und mechanische Entscheidungen erstarren nicht.
       </P>
 
       <H3>Schließe Frieden mit der Mathematik des Verlierens</H3>
       <P>
-        Verinnerliche das, bis es langweilig ist: Mit einer 1:2-Reward-zu-Risk-Strategie kannst du bei <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>der Mehrheit deiner Trades falschliegen und dein Konto trotzdem wachsen lassen.</strong> Kein einzelner Einstieg ist ein Referendum über deinen Wert — er ist ein Datenpunkt in einer Stichprobe von Hunderten. Bist du dir nicht sicher, ob dein Edge echt ist, ist das kein Grund zu erstarren; es ist ein Grund, ihn zu messen. Schick deine Zahlen durch <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent underline hover:text-white transition-colors">einen Erwartungswert-Check</Link> und lass die Daten dir die Erlaubnis geben, die dein Bauch nicht gibt.
+        Verinnerliche das, bis es langweilig ist: Mit einer 1:2-Reward-zu-Risk-Strategie kannst du bei <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>der Mehrheit deiner Trades falschliegen und dein Konto trotzdem wachsen lassen.</strong> Kein einzelner Einstieg ist ein Referendum über deinen Wert — er ist ein Datenpunkt in einer Stichprobe von Hunderten. Bist du dir nicht sicher, ob dein Edge echt ist, ist das kein Grund zu erstarren; es ist ein Grund, ihn zu messen. Schick deine Zahlen durch <Link to="/blog/de/trading-expectancy-explained" className="text-kmf-accent underline hover:text-white transition-colors">einen Erwartungswert-Check</Link> und lass die Daten dir die Erlaubnis geben, die dein Bauch nicht gibt.
       </P>
 
       <Callout title="Die Zwei-Sekunden-Regel" color="#4FC3F7">

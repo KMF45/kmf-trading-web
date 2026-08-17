@@ -45,7 +45,7 @@ export default function ExcelVsTradingJournalRo() {
         Luna de miere durează cam două săptămâni.
       </P>
       <P>
-        Apoi vrei să-ți calculezi win rate-ul. Destul de ușor — COUNTIF pentru câștiguri împărțit la total. Apoi vrei <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">profit factor</Link>. Ok, SUMIF pentru profit brut, SUMIF pentru pierdere brută, împarte... stai, ține formula aia cont de trade-urile pe breakeven? Hai să verific. Apoi vrei să-ți vezi performanța pe sesiune de trading. Acum ai nevoie de o coloană nouă pentru ora sesiunii, un VLOOKUP ca să o categorisești, și un pivot table. Apoi vrei R-multiple per trade. Altă formulă. Apoi R-ul tău mediu pe tip de setup. Alt pivot table. Apoi cineva pe Reddit menționează analiza de drawdown și îți dai seama că trebuie să calculezi equity-ul cumulat pentru fiecare rând.
+        Apoi vrei să-ți calculezi win rate-ul. Destul de ușor — COUNTIF pentru câștiguri împărțit la total. Apoi vrei <Link to="/blog/ro/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">profit factor</Link>. Ok, SUMIF pentru profit brut, SUMIF pentru pierdere brută, împarte... stai, ține formula aia cont de trade-urile pe breakeven? Hai să verific. Apoi vrei să-ți vezi performanța pe sesiune de trading. Acum ai nevoie de o coloană nouă pentru ora sesiunii, un VLOOKUP ca să o categorisești, și un pivot table. Apoi vrei R-multiple per trade. Altă formulă. Apoi R-ul tău mediu pe tip de setup. Alt pivot table. Apoi cineva pe Reddit menționează analiza de drawdown și îți dai seama că trebuie să calculezi equity-ul cumulat pentru fiecare rând.
       </P>
       <P>
         Felicitări — acum petreci mai mult timp întreținându-ți spreadsheet-ul decât revizuindu-ți de fapt trade-urile. Unealta care trebuia să te ajute să tranzacționezi mai bine a devenit un al doilea job.
@@ -103,7 +103,7 @@ export default function ExcelVsTradingJournalRo() {
         Și de fiecare dată când adaugi o funcție nouă, introduci posibilitatea de a strica una existentă. E un castel de cărți de joc construit pe referințe de celule, și devine mai fragil pe măsură ce devine mai complex.
       </P>
       <P>
-        O aplicație de journal calculează tot asta instant din momentul în care îți loghezi primul trade. Win rate, profit factor, <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy</Link>, medii de <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple</Link>, P/L pe sesiune, P/L pe instrument, drawdown, scoruri de disciplină, corelație cu emoția — toate automate. Adaugi un trade, statisticile se actualizează. Nu construiești nimic. Doar tranzacționezi și revizuiești.
+        O aplicație de journal calculează tot asta instant din momentul în care îți loghezi primul trade. Win rate, profit factor, <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy</Link>, medii de <Link to="/blog/ro/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple</Link>, P/L pe sesiune, P/L pe instrument, drawdown, scoruri de disciplină, corelație cu emoția — toate automate. Adaugi un trade, statisticile se actualizează. Nu construiești nimic. Doar tranzacționezi și revizuiești.
       </P>
 
       <H3>5. Fără Tracking Psihologic</H3>
@@ -111,7 +111,7 @@ export default function ExcelVsTradingJournalRo() {
         Aici Excel se prăbușește complet. Cele mai valoroase date dintr-un trading journal nu sunt cifrele — e psihologia. Cum te-ai simțit înainte de trade? Erai anxios, încrezător, plictisit? Ți-ai urmat planul? A fost ăsta un revenge trade?
       </P>
       <P>
-        Poți adăuga coloane pentru asta în Excel. Dar nu există structură, nicio opțiune predefinită, nicio analiză deasupra. Vei scrie „ok" în coloana de emoții două săptămâni, apoi te oprești din a o completa fiindcă pare inutil. Exact ăsta e motivul <Link to="/blog/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">pentru care majoritatea traderilor eșuează la jurnalizare</Link> de la bun început. O aplicație dedicată de journal îți dă tracking emoțional structurat, îl corelează cu P/L-ul tău, îți arată pattern-uri („Pierzi bani 73% din timp când intri în trade-uri simțindu-te anxios"), și chiar te avertizează când detectează tilt.
+        Poți adăuga coloane pentru asta în Excel. Dar nu există structură, nicio opțiune predefinită, nicio analiză deasupra. Vei scrie „ok" în coloana de emoții două săptămâni, apoi te oprești din a o completa fiindcă pare inutil. Exact ăsta e motivul <Link to="/blog/ro/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">pentru care majoritatea traderilor eșuează la jurnalizare</Link> de la bun început. O aplicație dedicată de journal îți dă tracking emoțional structurat, îl corelează cu P/L-ul tău, îți arată pattern-uri („Pierzi bani 73% din timp când intri în trade-uri simțindu-te anxios"), și chiar te avertizează când detectează tilt.
       </P>
       <P>
         Încearcă să obții asta dintr-un VLOOKUP.

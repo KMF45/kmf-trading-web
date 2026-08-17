@@ -181,7 +181,7 @@ export default function StaticVsTrailingDrawdownDe() {
         Beim equity-basierten Trailing Drawdown hat ein Trade, der +$3.000 unrealisierten Gewinn zeigt und dann bei +$500 schließt, dich effektiv Puffer gekostet. Das Limit stieg um $2.850 (vom schwebenden Hoch), aber du hast nur $500 realisiert. Dein Netto-Puffer sank um $2.350 durch einen gewinnenden Trade.
       </P>
       <P>
-        Lösung: Bist du auf einem Trade deutlich im Plus, nimm entweder vollen Gewinn oder setze einen <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">engen Trailing Stop</Link>. Lass große schwebende Gewinne nicht auf nahe Break-even zurückkommen. Auf equity-basierten Konten ist das schlimmer, als den Trade gar nicht zu haben.
+        Lösung: Bist du auf einem Trade deutlich im Plus, nimm entweder vollen Gewinn oder setze einen <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">engen Trailing Stop</Link>. Lass große schwebende Gewinne nicht auf nahe Break-even zurückkommen. Auf equity-basierten Konten ist das schlimmer, als den Trade gar nicht zu haben.
       </P>
 
       <H3>4. Verfolge alles</H3>
@@ -189,7 +189,7 @@ export default function StaticVsTrailingDrawdownDe() {
         Das Dashboard deiner Prop Firm zeigt deinen aktuellen Drawdown. Es zeigt dir keine Muster. Es zeigt dir nicht, dass deine letzten drei Dienstage alle gut begannen und mit aggressivem Overtrading endeten. Es zeigt dir nicht, dass du konstant zwischen 11 Uhr und Mittag Gewinne zurückgibst.
       </P>
       <P>
-        Dafür ist ein <Link to="/blog/prop-firm-trading-journal" className="text-kmf-accent hover:underline">Trading-Journal</Link> da. K.M.F. verfolgt den Max-Drawdown vom Höchstkontostand und zeigt deine Saldo-Verlaufsgrafik — sodass du genau siehst, wo die Pullbacks passieren und ob sie schlimmer werden. Es verfolgt auch deine <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfache</Link>, sodass du weißt, ob deine Verlust-Trades im Plan liegen oder ob du sie zu weit laufen lässt. Die App kann das spezifische Trailing-Drawdown-Limit deiner Firma nicht berechnen (jede Firma hat andere Regeln), aber sie gibt dir die Rohdaten, um es jeden Morgen selbst zu berechnen. Mach die Mathematik. Schreib sie in deinen Vor-Session-Journal-Eintrag. Es dauert 60 Sekunden und könnte dein Konto retten.
+        Dafür ist ein <Link to="/blog/de/prop-firm-trading-journal" className="text-kmf-accent hover:underline">Trading-Journal</Link> da. K.M.F. verfolgt den Max-Drawdown vom Höchstkontostand und zeigt deine Saldo-Verlaufsgrafik — sodass du genau siehst, wo die Pullbacks passieren und ob sie schlimmer werden. Es verfolgt auch deine <Link to="/blog/de/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfache</Link>, sodass du weißt, ob deine Verlust-Trades im Plan liegen oder ob du sie zu weit laufen lässt. Die App kann das spezifische Trailing-Drawdown-Limit deiner Firma nicht berechnen (jede Firma hat andere Regeln), aber sie gibt dir die Rohdaten, um es jeden Morgen selbst zu berechnen. Mach die Mathematik. Schreib sie in deinen Vor-Session-Journal-Eintrag. Es dauert 60 Sekunden und könnte dein Konto retten.
       </P>
 
       <H3>5. Erwäge zuerst Static-Drawdown-Firmen</H3>

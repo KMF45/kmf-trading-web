@@ -48,7 +48,7 @@ export default function ConfidenceVsOverconfidenceDe() {
 
       <H2>Selbstüberschätzung: Auf Gefühlen gebaut</H2>
       <P>
-        Selbstüberschätzung sieht von innen identisch aus. Der Trader fühlt sich sicher, entschlossen und klar. Aber das Fundament ist ein anderes. Statt auf Daten ist Selbstüberschätzung auf jüngsten Gewinnen, Bauchgefühl oder selektiver Erinnerung gebaut. Der Trader erinnert sich lebhaft an die letzten fünf Gewinner, hat aber den Drawdown des letzten Monats bereits vergessen. Das ist ein Musterbeispiel dafür, <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre eigenen Regeln brechen</Link> — der emotionale Zustand übersteuert das rationale System.
+        Selbstüberschätzung sieht von innen identisch aus. Der Trader fühlt sich sicher, entschlossen und klar. Aber das Fundament ist ein anderes. Statt auf Daten ist Selbstüberschätzung auf jüngsten Gewinnen, Bauchgefühl oder selektiver Erinnerung gebaut. Der Trader erinnert sich lebhaft an die letzten fünf Gewinner, hat aber den Drawdown des letzten Monats bereits vergessen. Das ist ein Musterbeispiel dafür, <Link to="/blog/de/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre eigenen Regeln brechen</Link> — der emotionale Zustand übersteuert das rationale System.
       </P>
 
       <Divider />
@@ -58,7 +58,7 @@ export default function ConfidenceVsOverconfidenceDe() {
         Der Dunning-Kruger-Effekt beschreibt einen kognitiven Bias, bei dem Menschen mit begrenzter Kompetenz in einem Bereich ihre Fähigkeit dramatisch überschätzen. Im Trading zeigt sich das am gefährlichsten in zwei Phasen: dem Anfänger, der einen glücklichen ersten Monat hat und glaubt, „den Markt durchschaut zu haben", und dem fortgeschrittenen Trader, der lange genug überlebt hat, um sich erfahren zu fühlen, aber noch keinen Regimewechsel oder ein Schwarzer-Schwan-Ereignis erlebt hat.
       </P>
       <P>
-        Die gefährlichste Phase ist nicht der Anfang — es ist der Punkt, an dem ein Trader genug Erfolg hatte, um sich fähig zu fühlen, aber nicht genug Misserfolg, um sich demütig zu fühlen. Das ist, wenn die Positionsgrößen wachsen, <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Risikoregeln</Link> sich optional anzufühlen beginnen und eine einzige schlechte Woche Monate an Gewinnen rückgängig machen kann.
+        Die gefährlichste Phase ist nicht der Anfang — es ist der Punkt, an dem ein Trader genug Erfolg hatte, um sich fähig zu fühlen, aber nicht genug Misserfolg, um sich demütig zu fühlen. Das ist, wenn die Positionsgrößen wachsen, <Link to="/blog/de/1-percent-risk-rule" className="text-kmf-accent hover:underline">Risikoregeln</Link> sich optional anzufühlen beginnen und eine einzige schlechte Woche Monate an Gewinnen rückgängig machen kann.
       </P>
 
       <H2>Warnzeichen der Selbstüberschätzung</H2>
@@ -106,11 +106,11 @@ export default function ConfidenceVsOverconfidenceDe() {
       </P>
       <H3>2. Behandle Gewinnserien als Warnung, nicht als Belohnung</H3>
       <P>
-        Wenn du 5+ Gewinne in Folge erreichst, straffe deinen Prozess, statt ihn zu lockern. Das ist kontraintuitiv, aber essenziell. Die Rückkehr zum Mittelwert kommt — die einzige Frage ist, ob du richtig dimensioniert sein wirst, wenn sie es tut. Wir nennen das das <Link to="/blog/lotto-ticket-syndrome" className="text-kmf-accent hover:underline">„Lotto-Ticket"-Syndrom</Link> — das Dopamin vom Gewinnen macht Risiko unsichtbar.
+        Wenn du 5+ Gewinne in Folge erreichst, straffe deinen Prozess, statt ihn zu lockern. Das ist kontraintuitiv, aber essenziell. Die Rückkehr zum Mittelwert kommt — die einzige Frage ist, ob du richtig dimensioniert sein wirst, wenn sie es tut. Wir nennen das das <Link to="/blog/de/lotto-ticket-syndrome" className="text-kmf-accent hover:underline">„Lotto-Ticket"-Syndrom</Link> — das Dopamin vom Gewinnen macht Risiko unsichtbar.
       </P>
       <H3>3. Halte konstante Positionsgrößen</H3>
       <P>
-        Bis du mindestens 100 Trades mit beständigen Ergebnissen protokolliert hast, halte deinen Risikoprozentsatz fest. Keine „ich fühle mich sicher"-Anpassungen. Die <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">1-%-Regel</Link> existiert genau deshalb, weil menschliches Urteil über Positionsgrößen unter emotionalem Einfluss unzuverlässig ist.
+        Bis du mindestens 100 Trades mit beständigen Ergebnissen protokolliert hast, halte deinen Risikoprozentsatz fest. Keine „ich fühle mich sicher"-Anpassungen. Die <Link to="/blog/de/1-percent-risk-rule" className="text-kmf-accent hover:underline">1-%-Regel</Link> existiert genau deshalb, weil menschliches Urteil über Positionsgrößen unter emotionalem Einfluss unzuverlässig ist.
       </P>
 
       <Takeaways items={[

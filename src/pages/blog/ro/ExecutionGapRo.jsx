@@ -72,7 +72,7 @@ export default function ExecutionGapRo() {
         Dar contul lui live spunea o altă poveste. După trei luni de trading live, win rate-ul lui real era 41%. Câștigătorul lui mediu era doar 1.1R fiindcă închidea trade-urile prea devreme. Și luase doar 47% din setup-urile pe care strategia lui chiar le-a generat — sărise peste mai mult de jumătate.
       </P>
       <P>
-        Andrei nu avea o problemă de strategie. Avea o problemă de execuție. Iar partea frustrantă era că nu putea s-o vadă până când a început să jurnalizeze fiecare trade — inclusiv cele pe care nu le-a luat. Acele setup-uri neluate — ce numim <Link to="/blog/ghost-trades-journaling-missed-opportunities" className="text-kmf-accent hover:underline">ghost trades</Link> — s-au dovedit a fi cele mai valoroase date ale lui.
+        Andrei nu avea o problemă de strategie. Avea o problemă de execuție. Iar partea frustrantă era că nu putea s-o vadă până când a început să jurnalizeze fiecare trade — inclusiv cele pe care nu le-a luat. Acele setup-uri neluate — ce numim <Link to="/blog/ro/ghost-trades-journaling-missed-opportunities" className="text-kmf-accent hover:underline">ghost trades</Link> — s-au dovedit a fi cele mai valoroase date ale lui.
       </P>
 
       <Callout title="Adevărul incomod" color="#CE93D8">
@@ -111,7 +111,7 @@ export default function ExecutionGapRo() {
 
       <H3>1. Regula de 5 Secunde</H3>
       <P>
-        Când setup-ul tău se declanșează, dă-ți cinci secunde. Dacă îndeplinește criteriile tale — toate — intră. Nu zece secunde. Nu „lasă-mă să mai văd o lumânare". Cinci secunde. Un <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> face asta binar: dacă fiecare căsuță e bifată, execuți. Ezitarea e o buclă de feedback: cu cât aștepți mai mult, cu atât creierul tău inventează mai multe motive să nu acționezi. Întrerupe bucla din scurt.
+        Când setup-ul tău se declanșează, dă-ți cinci secunde. Dacă îndeplinește criteriile tale — toate — intră. Nu zece secunde. Nu „lasă-mă să mai văd o lumânare". Cinci secunde. Un <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> face asta binar: dacă fiecare căsuță e bifată, execuți. Ezitarea e o buclă de feedback: cu cât aștepți mai mult, cu atât creierul tău inventează mai multe motive să nu acționezi. Întrerupe bucla din scurt.
       </P>
 
       <H3>2. Pre-Angajează-te la Setup-urile Tale</H3>
@@ -126,7 +126,7 @@ export default function ExecutionGapRo() {
 
       <H3>4. Revizuiește Trade-urile Sărite Săptămânal</H3>
       <P>
-        În <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">review-ul tău săptămânal</Link>, dedică o secțiune trade-urilor pe care nu le-ai luat. Care a fost rezultatul? De ce ai sărit? Există un pattern? Această confruntare săptămânală cu propria ezitare e inconfortabilă — dar e cea mai rapidă cale de a-ți construi încrederea în execuție.
+        În <Link to="/blog/ro/weekly-trading-review-template" className="text-kmf-accent hover:underline">review-ul tău săptămânal</Link>, dedică o secțiune trade-urilor pe care nu le-ai luat. Care a fost rezultatul? De ce ai sărit? Există un pattern? Această confruntare săptămânală cu propria ezitare e inconfortabilă — dar e cea mai rapidă cale de a-ți construi încrederea în execuție.
       </P>
 
       <Divider />

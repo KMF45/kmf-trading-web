@@ -64,7 +64,7 @@ export default function HowToSetStopLossRo() {
         'Să nu setezi deloc un stop fiindcă „îl urmăresc manual"',
       ]} />
       <Callout title="Principiu Critic" color="#00C853">
-        Procesul corect e: identifică-ți întâi nivelul logic de stop loss pe baza structurii pieței, apoi calculează position size-ul folosind <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">formula de position sizing</Link> din acea distanță. Niciodată nu porni de la un position size și să plasezi un stop ca să i se potrivească. Asta inversează complet logica și garantează o plasare proastă a stop-ului.
+        Procesul corect e: identifică-ți întâi nivelul logic de stop loss pe baza structurii pieței, apoi calculează position size-ul folosind <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">formula de position sizing</Link> din acea distanță. Niciodată nu porni de la un position size și să plasezi un stop ca să i se potrivească. Asta inversează complet logica și garantează o plasare proastă a stop-ului.
       </Callout>
 
       <Divider />

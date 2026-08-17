@@ -42,7 +42,7 @@ export default function GoodLossVsBadWinFr() {
         Le cerveau humain est câblé pour évaluer les résultats, pas les processus. Nombre vert = bien. Nombre rouge = mal. Cet instinct nous sert bien dans la plupart des situations de la vie. En trading, c'est un piège qui empêche presque tous les traders en développement de progresser.
       </P>
       <P>
-        Quand tu juges chaque trade par son résultat, tu renforces le comportement qui a produit ce résultat — même s'il était imprudent. C'est l'une des raisons fondamentales pour lesquelles <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">les traders continuent d'enfreindre leurs propres règles</Link>. Le gain aléatoire sur AUD/USD apprend à ton cerveau : « Tu vois ? Ignorer les règles marche. » Pendant ce temps, la perte disciplinée sur USD/CAD enseigne : « Suivre les règles mène à la douleur. » Sur des centaines de trades, ce conditionnement érode lentement ta discipline jusqu'à ce que tu trades entièrement à l'impulsion en appelant ça de « l'intuition ».
+        Quand tu juges chaque trade par son résultat, tu renforces le comportement qui a produit ce résultat — même s'il était imprudent. C'est l'une des raisons fondamentales pour lesquelles <Link to="/blog/fr/why-traders-break-their-rules" className="text-kmf-accent hover:underline">les traders continuent d'enfreindre leurs propres règles</Link>. Le gain aléatoire sur AUD/USD apprend à ton cerveau : « Tu vois ? Ignorer les règles marche. » Pendant ce temps, la perte disciplinée sur USD/CAD enseigne : « Suivre les règles mène à la douleur. » Sur des centaines de trades, ce conditionnement érode lentement ta discipline jusqu'à ce que tu trades entièrement à l'impulsion en appelant ça de « l'intuition ».
       </P>
 
       <Divider />
@@ -63,7 +63,7 @@ export default function GoodLossVsBadWinFr() {
 
       <H2>À quoi ressemble vraiment un « mauvais gain »</H2>
       <P>
-        Un mauvais gain est un trade qui a enfreint tes règles et qui a quand même gagné de l'argent. Pas de vrai setup. Aucune <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> complétée. Stop loss trop serré, trop large ou inexistant. Taille de position basée sur le « ressenti » plutôt que sur le calcul. Tu es entré à cause de la FOMO, de l'ennui ou d'un tuyau d'un canal Discord. Et tu as gagné.
+        Un mauvais gain est un trade qui a enfreint tes règles et qui a quand même gagné de l'argent. Pas de vrai setup. Aucune <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> complétée. Stop loss trop serré, trop large ou inexistant. Taille de position basée sur le « ressenti » plutôt que sur le calcul. Tu es entré à cause de la FOMO, de l'ennui ou d'un tuyau d'un canal Discord. Et tu as gagné.
       </P>
       <P>
         C'est le résultat le plus dangereux du trading. Pas à cause de l'argent — l'argent est réel, le profit est réel. C'est dangereux parce que ça apprend à ton cerveau que les règles n'ont pas d'importance. Chaque mauvais gain érode ta discipline d'exactement un cran. Après assez de mauvais gains, tu n'as plus de système de trading. Tu as une habitude de pari avec un peu de chance de temps en temps.
@@ -101,7 +101,7 @@ export default function GoodLossVsBadWinFr() {
 
       <H3>Noter tes trades de 1 à 5</H3>
       <P>
-        Après chaque trade, note-le sur une échelle de 1 à 5 selon la qualité du processus — pas le profit. Combine ça au calcul de ton <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple</Link> par trade et tu as deux métriques qui comptent bien plus que le P/L brut :
+        Après chaque trade, note-le sur une échelle de 1 à 5 selon la qualité du processus — pas le profit. Combine ça au calcul de ton <Link to="/blog/fr/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple</Link> par trade et tu as deux métriques qui comptent bien plus que le P/L brut :
       </P>
       <Ul items={[
         '5 — Exécution parfaite. Setup, entrée, stop, taille, gestion : tout a suivi le plan.',

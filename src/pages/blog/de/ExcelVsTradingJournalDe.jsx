@@ -45,7 +45,7 @@ export default function ExcelVsTradingJournalDe() {
         Die Flitterwochen dauern etwa zwei Wochen.
       </P>
       <P>
-        Dann willst du deine Win Rate berechnen. Einfach genug — COUNTIF für Gewinne geteilt durch gesamt. Dann willst du den <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">Profit Factor</Link>. Okay, SUMIF für Bruttogewinn, SUMIF für Bruttoverlust, teilen... Moment, berücksichtigt diese Formel Break-even-Trades? Lass mich prüfen. Dann willst du deine Performance nach Trading-Session sehen. Jetzt brauchst du eine neue Spalte für die Session-Zeit, ein VLOOKUP zum Kategorisieren und eine Pivot-Tabelle. Dann willst du R-Vielfaches pro Trade. Noch eine Formel. Dann dein durchschnittliches R nach Setup-Typ. Noch eine Pivot-Tabelle. Dann erwähnt jemand auf Reddit Drawdown-Analyse, und dir wird klar, dass du das laufende Equity für jede Zeile berechnen musst.
+        Dann willst du deine Win Rate berechnen. Einfach genug — COUNTIF für Gewinne geteilt durch gesamt. Dann willst du den <Link to="/blog/de/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">Profit Factor</Link>. Okay, SUMIF für Bruttogewinn, SUMIF für Bruttoverlust, teilen... Moment, berücksichtigt diese Formel Break-even-Trades? Lass mich prüfen. Dann willst du deine Performance nach Trading-Session sehen. Jetzt brauchst du eine neue Spalte für die Session-Zeit, ein VLOOKUP zum Kategorisieren und eine Pivot-Tabelle. Dann willst du R-Vielfaches pro Trade. Noch eine Formel. Dann dein durchschnittliches R nach Setup-Typ. Noch eine Pivot-Tabelle. Dann erwähnt jemand auf Reddit Drawdown-Analyse, und dir wird klar, dass du das laufende Equity für jede Zeile berechnen musst.
       </P>
       <P>
         Glückwunsch — du verbringst jetzt mehr Zeit mit der Pflege deines Spreadsheets als mit dem tatsächlichen Durchsehen deiner Trades. Das Werkzeug, das dir helfen sollte, besser zu traden, ist zu einem zweiten Job geworden.
@@ -103,7 +103,7 @@ export default function ExcelVsTradingJournalDe() {
         Und jedes Mal, wenn du eine neue Funktion hinzufügst, schaffst du die Möglichkeit, eine bestehende zu brechen. Es ist ein Kartenhaus aus Zellbezügen, und es wird fragiler, je komplexer es wird.
       </P>
       <P>
-        Eine Journal-App berechnet all das sofort ab dem Moment, in dem du deinen ersten Trade loggst. Win Rate, Profit Factor, <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link>, <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfaches</Link>-Durchschnitte, P/L nach Session, P/L nach Instrument, Drawdown, Disziplin-Scores, Emotions-Korrelation — alles automatisch. Du fügst einen Trade hinzu, die Statistiken aktualisieren sich. Du baust nichts. Du tradest nur und reviewst.
+        Eine Journal-App berechnet all das sofort ab dem Moment, in dem du deinen ersten Trade loggst. Win Rate, Profit Factor, <Link to="/blog/de/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link>, <Link to="/blog/de/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfaches</Link>-Durchschnitte, P/L nach Session, P/L nach Instrument, Drawdown, Disziplin-Scores, Emotions-Korrelation — alles automatisch. Du fügst einen Trade hinzu, die Statistiken aktualisieren sich. Du baust nichts. Du tradest nur und reviewst.
       </P>
 
       <H3>5. Kein psychologisches Tracking</H3>
@@ -111,7 +111,7 @@ export default function ExcelVsTradingJournalDe() {
         Hier fällt Excel völlig auseinander. Die wertvollsten Daten in einem Trading-Journal sind nicht die Zahlen — es ist die Psychologie. Wie hast du dich vor dem Trade gefühlt? Warst du ängstlich, selbstbewusst, gelangweilt? Bist du deinem Plan gefolgt? War das ein Revenge-Trade?
       </P>
       <P>
-        Du kannst dafür Spalten in Excel hinzufügen. Aber es gibt keine Struktur, keine vordefinierten Optionen, keine Analyse darauf. Du wirst zwei Wochen lang „ok gefühlt" in die Emotions-Spalte tippen und dann aufhören, weil es sinnlos erscheint. Genau das ist der Grund, <Link to="/blog/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">warum die meisten Trader am Journaling scheitern</Link>. Eine dedizierte Journal-App gibt dir strukturiertes Emotions-Tracking, korreliert es mit deinem P/L, zeigt dir Muster („Du verlierst zu 73 % Geld, wenn du Trades ängstlich eingehst") und warnt dich sogar, wenn sie Tilt erkennt.
+        Du kannst dafür Spalten in Excel hinzufügen. Aber es gibt keine Struktur, keine vordefinierten Optionen, keine Analyse darauf. Du wirst zwei Wochen lang „ok gefühlt" in die Emotions-Spalte tippen und dann aufhören, weil es sinnlos erscheint. Genau das ist der Grund, <Link to="/blog/de/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">warum die meisten Trader am Journaling scheitern</Link>. Eine dedizierte Journal-App gibt dir strukturiertes Emotions-Tracking, korreliert es mit deinem P/L, zeigt dir Muster („Du verlierst zu 73 % Geld, wenn du Trades ängstlich eingehst") und warnt dich sogar, wenn sie Tilt erkennt.
       </P>
       <P>
         Versuch das mal mit einem VLOOKUP zu bekommen.

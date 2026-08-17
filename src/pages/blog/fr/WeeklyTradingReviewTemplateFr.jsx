@@ -47,7 +47,7 @@ export default function WeeklyTradingReviewTemplateFr() {
 
       <H2>Pourquoi hebdomadaire — pas quotidien</H2>
       <P>
-        Les revues quotidiennes sont utiles pour enregistrer les trades tant que les détails sont frais — en répondant à tes <Link to="/blog/10-questions-after-every-trade" className="text-kmf-accent hover:underline">questions de revue post-trade</Link> — mais elles sont trop proches de l'action pour la reconnaissance de schémas. Un jour donné, tu as peut-être eu deux trades. Ce n'est pas assez de données pour remarquer que tu fais régulièrement de l'overtrading le mardi, ou que tes setups du lundi matin ont un taux de perte nettement plus élevé.
+        Les revues quotidiennes sont utiles pour enregistrer les trades tant que les détails sont frais — en répondant à tes <Link to="/blog/fr/10-questions-after-every-trade" className="text-kmf-accent hover:underline">questions de revue post-trade</Link> — mais elles sont trop proches de l'action pour la reconnaissance de schémas. Un jour donné, tu as peut-être eu deux trades. Ce n'est pas assez de données pour remarquer que tu fais régulièrement de l'overtrading le mardi, ou que tes setups du lundi matin ont un taux de perte nettement plus élevé.
       </P>
       <P>
         Les revues hebdomadaires offrent la bonne résolution. Tu as assez de trades pour repérer des schémas à court terme, assez de temps a passé pour revoir les décisions avec une distance émotionnelle, et la cadence est assez fréquente pour que tu puisses réellement changer ton comportement en réponse à ce que tu trouves.
@@ -82,7 +82,7 @@ export default function WeeklyTradingReviewTemplateFr() {
 
       <H3>3. Revue du processus</H3>
       <P>
-        Sépare la qualité de ton processus de la qualité du résultat. Un trade qui a parfaitement suivi tes règles mais a perdu de l'argent est un meilleur trade qu'un qui a enfreint tes règles mais a gagné — comprendre les <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">bonnes pertes vs mauvais gains</Link> est essentiel pour ça. La revue du processus t'entraîne à t'évaluer sur ce que tu peux réellement contrôler.
+        Sépare la qualité de ton processus de la qualité du résultat. Un trade qui a parfaitement suivi tes règles mais a perdu de l'argent est un meilleur trade qu'un qui a enfreint tes règles mais a gagné — comprendre les <Link to="/blog/fr/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">bonnes pertes vs mauvais gains</Link> est essentiel pour ça. La revue du processus t'entraîne à t'évaluer sur ce que tu peux réellement contrôler.
       </P>
       <Ul items={[
         'Mes entrées correspondaient-elles à mes critères de setup pour l\'unité de temps, la structure et la confirmation ?',

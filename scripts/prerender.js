@@ -98,6 +98,9 @@ const routes = [
   '/blog/ro/scared-money-prop-firm',
   '/blog/ro/best-free-trading-journal-app-android-2026',
   '/blog/ro/swing-trading-vs-day-trading',
+  '/blog/ro/drawdown-after-profitability',
+  '/blog/ro/position-size-psychological-ceiling',
+  '/blog/ro/when-to-withdraw-trading-profits',
   // German blog articles
   '/blog/de/profit-factor-vs-win-rate',
   '/blog/de/market-order-vs-limit-order',

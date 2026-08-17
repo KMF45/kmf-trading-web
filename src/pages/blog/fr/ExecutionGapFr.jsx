@@ -72,7 +72,7 @@ export default function ExecutionGapFr() {
         Mais son compte réel racontait une autre histoire. Après trois mois de trading réel, son win rate réel était de 41 %. Son gagnant moyen n'était que de 1,1R parce qu'il clôturait sans cesse trop tôt. Et il n'avait pris que 47 % des setups que sa stratégie générait réellement — il en avait sauté plus de la moitié.
       </P>
       <P>
-        Andrei n'avait pas un problème de stratégie. Il avait un problème d'exécution. Et le frustrant, c'est qu'il ne pouvait pas le voir avant de commencer à journaliser chaque trade — y compris ceux qu'il ne prenait pas. Ces setups non pris — ce qu'on appelle des <Link to="/blog/ghost-trades-journaling-missed-opportunities" className="text-kmf-accent hover:underline">ghost trades</Link> — se sont révélés être sa donnée la plus précieuse.
+        Andrei n'avait pas un problème de stratégie. Il avait un problème d'exécution. Et le frustrant, c'est qu'il ne pouvait pas le voir avant de commencer à journaliser chaque trade — y compris ceux qu'il ne prenait pas. Ces setups non pris — ce qu'on appelle des <Link to="/blog/fr/ghost-trades-journaling-missed-opportunities" className="text-kmf-accent hover:underline">ghost trades</Link> — se sont révélés être sa donnée la plus précieuse.
       </P>
 
       <Callout title="La vérité inconfortable" color="#CE93D8">
@@ -111,7 +111,7 @@ export default function ExecutionGapFr() {
 
       <H3>1. La règle des 5 secondes</H3>
       <P>
-        Quand ton setup se déclenche, donne-toi cinq secondes. S'il remplit tes critères — tous — entre. Pas dix secondes. Pas « laisse-moi regarder une bougie de plus ». Cinq secondes. Une <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> rend ça binaire : si chaque case est cochée, tu exécutes. L'hésitation est une boucle de feedback : plus tu attends, plus ton cerveau invente de raisons de ne pas agir. Coupe la boucle court.
+        Quand ton setup se déclenche, donne-toi cinq secondes. S'il remplit tes critères — tous — entre. Pas dix secondes. Pas « laisse-moi regarder une bougie de plus ». Cinq secondes. Une <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> rend ça binaire : si chaque case est cochée, tu exécutes. L'hésitation est une boucle de feedback : plus tu attends, plus ton cerveau invente de raisons de ne pas agir. Coupe la boucle court.
       </P>
 
       <H3>2. Pré-engage-toi sur tes setups</H3>
@@ -126,7 +126,7 @@ export default function ExecutionGapFr() {
 
       <H3>4. Revois les trades sautés chaque semaine</H3>
       <P>
-        Dans ta <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">revue hebdomadaire</Link>, consacre une section aux trades que tu n'as pas pris. Quel était le résultat ? Pourquoi as-tu sauté ? Y a-t-il un schéma ? Cette confrontation hebdomadaire avec ta propre hésitation est inconfortable — mais c'est le moyen le plus rapide de bâtir la confiance d'exécution.
+        Dans ta <Link to="/blog/fr/weekly-trading-review-template" className="text-kmf-accent hover:underline">revue hebdomadaire</Link>, consacre une section aux trades que tu n'as pas pris. Quel était le résultat ? Pourquoi as-tu sauté ? Y a-t-il un schéma ? Cette confrontation hebdomadaire avec ta propre hésitation est inconfortable — mais c'est le moyen le plus rapide de bâtir la confiance d'exécution.
       </P>
 
       <Divider />

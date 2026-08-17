@@ -40,7 +40,7 @@ export default function RMultipleExplainedDe() {
 
       <H2>Was ist R?</H2>
       <P>
-        R steht für „Risiko" — konkret den genauen Geldbetrag, den du beim Einstieg in den Trade riskiert hast. R wird durch deinen <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop Loss</Link> definiert: es ist der Abstand von deinem Einstieg zu deinem Stop Loss, multipliziert mit deiner Positionsgröße.
+        R steht für „Risiko" — konkret den genauen Geldbetrag, den du beim Einstieg in den Trade riskiert hast. R wird durch deinen <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop Loss</Link> definiert: es ist der Abstand von deinem Einstieg zu deinem Stop Loss, multipliziert mit deiner Positionsgröße.
       </P>
       <P>
         Bist du mit einem $150-Stop in einen Trade eingestiegen (das heißt, wenn der Trade vollständig gegen dich läuft und den Stop trifft, verlierst du $150), dann ist R = $150 für diesen Trade. Alles andere wird relativ zu dieser Zahl gemessen.
@@ -118,7 +118,7 @@ export default function RMultipleExplainedDe() {
 
       <H3>Die Verbindung zum Erwartungswert</H3>
       <P>
-        Das R-Vielfache pro Trade, gemittelt über deine Trade-Historie, ist die Grundlage der <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert-Berechnung</Link> deiner Strategie. Der Erwartungswert sagt dir den erwarteten Wert jedes Trades, den du eingehst. Das R-Vielfach-Denken zu meistern ist der erste Schritt, den Erwartungswert tief zu verstehen. Kombiniert mit dem <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">Profit Factor</Link> geben dir diese Kennzahlen das vollständige Bild der Tragfähigkeit deiner Strategie.
+        Das R-Vielfache pro Trade, gemittelt über deine Trade-Historie, ist die Grundlage der <Link to="/blog/de/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert-Berechnung</Link> deiner Strategie. Der Erwartungswert sagt dir den erwarteten Wert jedes Trades, den du eingehst. Das R-Vielfach-Denken zu meistern ist der erste Schritt, den Erwartungswert tief zu verstehen. Kombiniert mit dem <Link to="/blog/de/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">Profit Factor</Link> geben dir diese Kennzahlen das vollständige Bild der Tragfähigkeit deiner Strategie.
       </P>
 
       <Takeaways items={[

@@ -53,14 +53,14 @@ export default function PositionSizingGuideRo() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Position Size = Suma Riscată ÷ Distanța Stop Loss-ului (în termeni de preț)</strong>
       </P>
       <P>
-        Fiecare variantă a calculului de position sizing — fie pentru loturi forex, acțiuni, sau unități de crypto — e o variație a acestei formule de bază. Inputurile se schimbă de la piață la piață, dar logica e identică. De reținut că există <Link to="/blog/crypto-vs-forex-journaling" className="text-kmf-accent hover:underline">reguli diferite pentru crypto vs forex</Link> când vine vorba de jurnalizare și risc.
+        Fiecare variantă a calculului de position sizing — fie pentru loturi forex, acțiuni, sau unități de crypto — e o variație a acestei formule de bază. Inputurile se schimbă de la piață la piață, dar logica e identică. De reținut că există <Link to="/blog/ro/crypto-vs-forex-journaling" className="text-kmf-accent hover:underline">reguli diferite pentru crypto vs forex</Link> când vine vorba de jurnalizare și risc.
       </P>
 
       <H2>Proces Pas cu Pas</H2>
       <Ul items={[
         'Pasul 1: Decide procentul de risc (de obicei 1% din cont pentru traderii consacrați, 0.5% pentru începători)',
         'Pasul 2: Calculează suma riscată în dolari: Suma Riscată = Soldul Contului × Risc %',
-        'Pasul 3: Identifică nivelul de stop loss pe baza structurii pieței — află mai multe despre <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">cum să-ți setezi corect stop loss-ul</Link> (nu pe comoditate)',
+        'Pasul 3: Identifică nivelul de stop loss pe baza structurii pieței — află mai multe despre <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">cum să-ți setezi corect stop loss-ul</Link> (nu pe comoditate)',
         'Pasul 4: Calculează distanța stop loss-ului în termeni de preț (Prețul de Intrare − Prețul Stop Loss-ului)',
         'Pasul 5: Calculează position size-ul: Position Size = Suma Riscată ÷ Distanța Stop Loss-ului',
       ]} />
@@ -145,7 +145,7 @@ export default function PositionSizingGuideRo() {
         Mulți traderi — mai ales cei care vin dintr-un fundal de urmărit piețele fără să tranzacționeze — dezvoltă obiceiul de a-și dimensiona pozițiile în funcție de cât de încrezători se simt în legătură cu un setup. „Ăsta arată foarte bine, bag mai mult." Ăsta e anti-pattern-ul.
       </P>
       <P>
-        Niciun trade nu e atât de bun încât să justifice încălcarea regulilor tale de risc. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Regula de 1% risc</Link> se aplică fiecărui trade, inclusiv celui care pare o certitudine. Piețele sunt incerte prin definiție, iar dimensionarea bazată pe certitudine e un bias, nu un edge. Dimensionarea după formulă, constant, e ce transformă traderii inconsistenți în traderi consistenți.
+        Niciun trade nu e atât de bun încât să justifice încălcarea regulilor tale de risc. <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">Regula de 1% risc</Link> se aplică fiecărui trade, inclusiv celui care pare o certitudine. Piețele sunt incerte prin definiție, iar dimensionarea bazată pe certitudine e un bias, nu un edge. Dimensionarea după formulă, constant, e ce transformă traderii inconsistenți în traderi consistenți.
       </P>
 
       <Takeaways items={[

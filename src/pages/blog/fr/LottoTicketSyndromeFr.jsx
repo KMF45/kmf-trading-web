@@ -77,7 +77,7 @@ export default function LottoTicketSyndromeFr() {
         ]}
       />
       <P>
-        L'étape 4 est où les vrais dégâts arrivent — et ce n'est pas la première perte qui te tue. C'est la tentative de récupérer de cette perte en utilisant le même risque gonflé qui l'a causée. Tu as pris un coup de 2,5 %, alors tu essaies de te refaire avec un trade de 3,5 %, puis de 4 %. Ce n'est plus du trading. C'est du <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">revenge trading</Link> avec un graphique ouvert.
+        L'étape 4 est où les vrais dégâts arrivent — et ce n'est pas la première perte qui te tue. C'est la tentative de récupérer de cette perte en utilisant le même risque gonflé qui l'a causée. Tu as pris un coup de 2,5 %, alors tu essaies de te refaire avec un trade de 3,5 %, puis de 4 %. Ce n'est plus du trading. C'est du <Link to="/blog/fr/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">revenge trading</Link> avec un graphique ouvert.
       </P>
 
       <H2>Pourquoi les séries gagnantes sont statistiquement insignifiantes</H2>
@@ -85,7 +85,7 @@ export default function LottoTicketSyndromeFr() {
         Voici les maths que ton cerveau gorgé de dopamine refuse de traiter : dans une stratégie à 50 % de win rate, la probabilité d'atteindre 4 gagnants consécutifs est de 6,25 %. Ça signifie que sur chaque 100 trades, tu vivras environ 6 séries de 4+ gains. Chacune ressemblera à « être dans la zone ». Chacune est de la pure variance.
       </P>
       <P>
-        Une <Link to="/blog/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">série gagnante</Link> ne te dit rien sur le prochain trade. Le marché n'a pas de mémoire. Tes trois derniers trades rentables ne changent pas la probabilité du quatrième d'un seul point de pourcentage. Mais ton cerveau — câblé pour la reconnaissance de schémas dans un monde de tigres à dents de sabre — ne peut pas l'accepter. Il insiste qu'il y a un schéma. Il n'y en a pas.
+        Une <Link to="/blog/fr/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">série gagnante</Link> ne te dit rien sur le prochain trade. Le marché n'a pas de mémoire. Tes trois derniers trades rentables ne changent pas la probabilité du quatrième d'un seul point de pourcentage. Mais ton cerveau — câblé pour la reconnaissance de schémas dans un monde de tigres à dents de sabre — ne peut pas l'accepter. Il insiste qu'il y a un schéma. Il n'y en a pas.
       </P>
 
       <Callout title="La confiance du parieur" color="#FFB300">
@@ -97,7 +97,7 @@ export default function LottoTicketSyndromeFr() {
       <H2>La solution : comment rester ennuyeux tout en gagnant de l'argent</H2>
       <H3>1. La règle de risque de fer</H3>
       <P>
-        Ton risque par trade est une constante. Pas une recommandation. Pas un « d'habitude ». Une loi physique de ton trading. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Un pour cent signifie un pour cent</Link> — que tu sois en hausse de 2 000 $ pour la semaine ou en baisse de 500 $. Au moment où ton pourcentage de risque devient une variable qui s'ajuste selon « comment tu te sens », tu as remis ton compte à ton système limbique. Il ne te le rendra pas.
+        Ton risque par trade est une constante. Pas une recommandation. Pas un « d'habitude ». Une loi physique de ton trading. <Link to="/blog/fr/1-percent-risk-rule" className="text-kmf-accent hover:underline">Un pour cent signifie un pour cent</Link> — que tu sois en hausse de 2 000 $ pour la semaine ou en baisse de 500 $. Au moment où ton pourcentage de risque devient une variable qui s'ajuste selon « comment tu te sens », tu as remis ton compte à ton système limbique. Il ne te le rendra pas.
       </P>
       <H3>2. La règle de refroidissement de 24 heures</H3>
       <P>

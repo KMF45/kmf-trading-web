@@ -95,7 +95,7 @@ export default function WhyTradersBreakRulesRo() {
       <H2>Soluții Practice</H2>
       <H3>1. Pre-trade checklist</H3>
       <P>
-        Un <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> scris, pe care trebuie să-l verifici fizic înainte să atingi un ordin, forțează Sistemul 2 în buclă. Creează o pauză obligatorie între impuls și acțiune. Checklist-ul ar trebui să acopere criteriile setup-ului, nivelul de stop loss, position size-ul și starea emoțională. Dacă vreo căsuță e nebifată, nu se ia niciun trade.
+        Un <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> scris, pe care trebuie să-l verifici fizic înainte să atingi un ordin, forțează Sistemul 2 în buclă. Creează o pauză obligatorie între impuls și acțiune. Checklist-ul ar trebui să acopere criteriile setup-ului, nivelul de stop loss, position size-ul și starea emoțională. Dacă vreo căsuță e nebifată, nu se ia niciun trade.
       </P>
       <H3>2. Redu fricțiunea pentru comportamentul bun</H3>
       <P>
@@ -111,7 +111,7 @@ export default function WhyTradersBreakRulesRo() {
       </P>
       <H3>5. Review săptămânal ca să identifici pattern-uri</H3>
       <P>
-        Încălcarea regulilor nu e întâmplătoare. Probabil încalci aceleași reguli, în aceleași circumstanțe, la aceleași ore din zi. Un <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">review săptămânal</Link> disciplinat dezvăluie aceste pattern-uri ca să poți adresa cauza de la rădăcină în loc să te hotărăști doar să „te descurci mai bine". Fără această buclă de feedback, ești blocat în <Link to="/blog/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">execution gap</Link> — știi ce ai de făcut dar nu reușești să o faci constant.
+        Încălcarea regulilor nu e întâmplătoare. Probabil încalci aceleași reguli, în aceleași circumstanțe, la aceleași ore din zi. Un <Link to="/blog/ro/weekly-trading-review-template" className="text-kmf-accent hover:underline">review săptămânal</Link> disciplinat dezvăluie aceste pattern-uri ca să poți adresa cauza de la rădăcină în loc să te hotărăști doar să „te descurci mai bine". Fără această buclă de feedback, ești blocat în <Link to="/blog/ro/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">execution gap</Link> — știi ce ai de făcut dar nu reușești să o faci constant.
       </P>
 
       <Takeaways items={[

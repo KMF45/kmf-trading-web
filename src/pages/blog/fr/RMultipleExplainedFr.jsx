@@ -40,7 +40,7 @@ export default function RMultipleExplainedFr() {
 
       <H2>Qu'est-ce que R ?</H2>
       <P>
-        R signifie « Risque » — précisément, le montant exact que tu as mis en jeu en entrant dans le trade. R est défini par ton <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss</Link> : c'est la distance de ton entrée à ton stop loss, multipliée par ta taille de position.
+        R signifie « Risque » — précisément, le montant exact que tu as mis en jeu en entrant dans le trade. R est défini par ton <Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss</Link> : c'est la distance de ton entrée à ton stop loss, multipliée par ta taille de position.
       </P>
       <P>
         Si tu es entré dans un trade avec un stop de 150 $ (c'est-à-dire que si le trade tourne entièrement contre toi et touche le stop, tu perds 150 $), alors R = 150 $ pour ce trade. Tout le reste se mesure par rapport à ce nombre.
@@ -118,7 +118,7 @@ export default function RMultipleExplainedFr() {
 
       <H3>Le lien avec l'espérance</H3>
       <P>
-        Le R-multiple par trade, moyenné sur ton historique, est la base du calcul de l'<Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> de ta stratégie. L'espérance te dit la valeur attendue de chaque trade que tu prends. Maîtriser la pensée en R-multiple est la première étape pour comprendre l'espérance en profondeur. Combinées au <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">profit factor</Link>, ces métriques te donnent l'image complète de la viabilité de ta stratégie.
+        Le R-multiple par trade, moyenné sur ton historique, est la base du calcul de l'<Link to="/blog/fr/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> de ta stratégie. L'espérance te dit la valeur attendue de chaque trade que tu prends. Maîtriser la pensée en R-multiple est la première étape pour comprendre l'espérance en profondeur. Combinées au <Link to="/blog/fr/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">profit factor</Link>, ces métriques te donnent l'image complète de la viabilité de ta stratégie.
       </P>
 
       <Takeaways items={[

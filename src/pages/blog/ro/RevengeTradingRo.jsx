@@ -45,11 +45,11 @@ export default function RevengeTradingRo() {
       </P>
       <H3>Loss Aversion</H3>
       <P>
-        Cercetările lui Daniel Kahneman și Amos Tversky au stabilit că durerea psihologică de a pierde $100 e aproximativ de două ori mai intensă decât plăcerea de a câștiga $100. În trading, asta înseamnă că pierderile dor disproporționat de tare, iar creierul vrea urgent să elimine acea durere — nu procesând-o, ci ștergând-o. Cea mai rapidă cale de a șterge o pierdere de $200, insistă creierul emoțional, e să faci la loc $200 imediat. Asimetria asta e nucleul <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">prospect theory</Link> — și îți rescrie pe tăcute deciziile după fiecare trade pierdut.
+        Cercetările lui Daniel Kahneman și Amos Tversky au stabilit că durerea psihologică de a pierde $100 e aproximativ de două ori mai intensă decât plăcerea de a câștiga $100. În trading, asta înseamnă că pierderile dor disproporționat de tare, iar creierul vrea urgent să elimine acea durere — nu procesând-o, ci ștergând-o. Cea mai rapidă cale de a șterge o pierdere de $200, insistă creierul emoțional, e să faci la loc $200 imediat. Asimetria asta e nucleul <Link to="/blog/ro/prospect-theory-trading" className="text-kmf-accent hover:underline">prospect theory</Link> — și îți rescrie pe tăcute deciziile după fiecare trade pierdut.
       </P>
       <H3>Ego-ul și Nevoia de a Avea Dreptate</H3>
       <P>
-        Mulți traderi — mai ales cei noi pe piețe — își leagă inconștient valoarea de sine de rezultatele trade-urilor. Ăsta e unul dintre motivele de bază <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pentru care traderii își încalcă propriile reguli</Link>. O pierdere nu e doar un eveniment financiar; se simte ca un eșec personal. Trade-ul de revenge e parțial o încercare de a dovedi că piața a greșit, sau că traderul nu e incompetent. E periculos fiindcă piețelor nu le pasă de ego-ul tău.
+        Mulți traderi — mai ales cei noi pe piețe — își leagă inconștient valoarea de sine de rezultatele trade-urilor. Ăsta e unul dintre motivele de bază <Link to="/blog/ro/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pentru care traderii își încalcă propriile reguli</Link>. O pierdere nu e doar un eveniment financiar; se simte ca un eșec personal. Trade-ul de revenge e parțial o încercare de a dovedi că piața a greșit, sau că traderul nu e incompetent. E periculos fiindcă piețelor nu le pasă de ego-ul tău.
       </P>
       <H3>Recency Bias</H3>
       <P>
@@ -108,11 +108,11 @@ export default function RevengeTradingRo() {
       </P>
       <H3>3. Redu mărimea după pierderi</H3>
       <P>
-        Mulți traderi profesioniști își reduc position size-ul după un trade pe pierdere — uneori la 50% din normal. E opusul instinctului de revenge. Logica e solidă: când performezi sub edge-ul tău, pariurile mai mici limitează dauna. Când revii la performanța normală, restaurează treptat mărimea normală. Pentru o privire mai amănunțită pe acest subiect, vezi ghidul nostru despre <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">revenirea dintr-o serie de pierderi</Link>.
+        Mulți traderi profesioniști își reduc position size-ul după un trade pe pierdere — uneori la 50% din normal. E opusul instinctului de revenge. Logica e solidă: când performezi sub edge-ul tău, pariurile mai mici limitează dauna. Când revii la performanța normală, restaurează treptat mărimea normală. Pentru o privire mai amănunțită pe acest subiect, vezi ghidul nostru despre <Link to="/blog/ro/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">revenirea dintr-o serie de pierderi</Link>.
       </P>
       <H3>4. Scrie înainte să reintri</H3>
       <P>
-        Înainte să intri în orice trade după o pierdere, notează: numele setup-ului, motivul intrării, nivelul de stop loss, target-ul și starea ta emoțională pe o scară de la 1 la 10 (10 fiind complet calm). Dacă nu poți articula un setup clar, sau dacă starea ta emoțională e peste 6, nu intra. Un <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> structurat poate automatiza acest proces.
+        Înainte să intri în orice trade după o pierdere, notează: numele setup-ului, motivul intrării, nivelul de stop loss, target-ul și starea ta emoțională pe o scară de la 1 la 10 (10 fiind complet calm). Dacă nu poți articula un setup clar, sau dacă starea ta emoțională e peste 6, nu intra. Un <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> structurat poate automatiza acest proces.
       </P>
       <H3>5. Închide platforma</H3>
       <P>
@@ -127,7 +127,7 @@ export default function RevengeTradingRo() {
         Când internalizezi asta cu adevărat, nu doar intelectual, revenge trading-ul își pierde strânsoarea. Nu e nimic de recuperat. E doar următorul setup valid, luat la mărimea corectă, cu stop-ul corect.
       </P>
       <P>
-        Dacă vrei un protocol concret, pas cu pas, pe care să-l urmezi mecanic când ești pe tilt, citește <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading Kill Switch</Link> — cinci reguli pre-programate bazate pe cercetarea despre cortizol, pe care le setezi când ești calm și le urmezi când nu ești.
+        Dacă vrei un protocol concret, pas cu pas, pe care să-l urmezi mecanic când ești pe tilt, citește <Link to="/blog/ro/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading Kill Switch</Link> — cinci reguli pre-programate bazate pe cercetarea despre cortizol, pe care le setezi când ești calm și le urmezi când nu ești.
       </P>
 
       <Takeaways items={[

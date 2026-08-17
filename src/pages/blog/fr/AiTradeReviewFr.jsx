@@ -51,7 +51,7 @@ export default function AiTradeReviewFr() {
       </P>
       <H3>Résumer les schémas hebdomadaires et mensuels</H3>
       <P>
-        Une <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">revue de trading hebdomadaire</Link> est essentielle mais chronophage. L'IA peut l'accélérer en résumant ta semaine en format structuré : meilleur setup, pire setup, R-multiple moyen, schémas émotionnels, violations de règles et axes de focus suggérés pour la semaine prochaine. Ce qui te prend 45 minutes à la main prend 30 secondes à l'IA.
+        Une <Link to="/blog/fr/weekly-trading-review-template" className="text-kmf-accent hover:underline">revue de trading hebdomadaire</Link> est essentielle mais chronophage. L'IA peut l'accélérer en résumant ta semaine en format structuré : meilleur setup, pire setup, R-multiple moyen, schémas émotionnels, violations de règles et axes de focus suggérés pour la semaine prochaine. Ce qui te prend 45 minutes à la main prend 30 secondes à l'IA.
       </P>
 
       <Divider />
@@ -110,7 +110,7 @@ export default function AiTradeReviewFr() {
         'Trimestriel : demande à l\'IA de comparer tes trois derniers mois et d\'identifier si ton edge s\'améliore, est stable, ou se dégrade.',
       ]} />
       <P>
-        Le point crucial : l'analyse IA ne vaut que ce que valent les données de ton journal. Si tes notes de trade disent « acheté EUR/USD, perdu de l'argent » sans contexte, l'IA n'a rien à exploiter. Si tes notes incluent le type de setup, l'état émotionnel, le respect de la checklist, les conditions de marché et le raisonnement — l'IA peut trouver des schémas qui transforment ton trading. La qualité de l'entrée détermine la qualité de la sortie. À mesure que tes données d'<Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> grandissent, les insights de l'IA deviennent de plus en plus puissants.
+        Le point crucial : l'analyse IA ne vaut que ce que valent les données de ton journal. Si tes notes de trade disent « acheté EUR/USD, perdu de l'argent » sans contexte, l'IA n'a rien à exploiter. Si tes notes incluent le type de setup, l'état émotionnel, le respect de la checklist, les conditions de marché et le raisonnement — l'IA peut trouver des schémas qui transforment ton trading. La qualité de l'entrée détermine la qualité de la sortie. À mesure que tes données d'<Link to="/blog/fr/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> grandissent, les insights de l'IA deviennent de plus en plus puissants.
       </P>
 
       <Takeaways items={[

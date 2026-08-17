@@ -80,7 +80,7 @@ export default function TradingExpectancyExplainedFr() {
       </P>
       <H3>Espérance négative</H3>
       <P>
-        Une stratégie à espérance négative perdra de l'argent dans le temps, c'est garanti. Peu importe la sophistication de la gestion de capital, ou la discipline de l'exécution. Aucune technique de dimensionnement ne peut convertir une espérance négative en système rentable. Les seules solutions sont d'améliorer le win rate, d'augmenter la taille du gain moyen ou de réduire la perte moyenne — et une base solide comme la <Link to="/blog/1-percent-risk-rule">règle des 1 %</Link> garantit que tu survis assez longtemps pour trouver ces solutions.
+        Une stratégie à espérance négative perdra de l'argent dans le temps, c'est garanti. Peu importe la sophistication de la gestion de capital, ou la discipline de l'exécution. Aucune technique de dimensionnement ne peut convertir une espérance négative en système rentable. Les seules solutions sont d'améliorer le win rate, d'augmenter la taille du gain moyen ou de réduire la perte moyenne — et une base solide comme la <Link to="/blog/fr/1-percent-risk-rule">règle des 1 %</Link> garantit que tu survis assez longtemps pour trouver ces solutions.
       </P>
       <Callout title="Le principe du casino" color="#4FC3F7">
         Les casinos gagnent de l'argent non pas parce que chaque joueur perd chaque pari, mais parce que la maison a une légère espérance positive sur chaque jeu. Sur des millions de paris, les maths sont inévitables. Le trading fonctionne pareil — si tu as une espérance positive et que tu prends assez de trades, la rentabilité est une conséquence mathématique, pas une question de chance.
@@ -102,7 +102,7 @@ export default function TradingExpectancyExplainedFr() {
       <ExpectancyComparisonChart />
 
       <P>
-        Remarque la ligne à 70 % de win rate : malgré 7 trades gagnants sur 10, la stratégie perd de l'argent parce que les pertes moyennes dépassent les gains moyens. C'est l'illusion classique du win rate — et l'espérance la révèle immédiatement. Pour creuser comment win rate et profit factor interagissent, vois notre guide sur le <Link to="/blog/profit-factor-vs-win-rate">profit factor vs win rate</Link>.
+        Remarque la ligne à 70 % de win rate : malgré 7 trades gagnants sur 10, la stratégie perd de l'argent parce que les pertes moyennes dépassent les gains moyens. C'est l'illusion classique du win rate — et l'espérance la révèle immédiatement. Pour creuser comment win rate et profit factor interagissent, vois notre guide sur le <Link to="/blog/fr/profit-factor-vs-win-rate">profit factor vs win rate</Link>.
       </P>
 
       <H2>L'espérance en termes de R-multiple</H2>
@@ -113,7 +113,7 @@ export default function TradingExpectancyExplainedFr() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Espérance (R) = (Win Rate × Gain moyen en R) − (Taux de perte × 1)</strong>
       </P>
       <P>
-        Ça se simplifie parce qu'une perte complète est toujours −1R par définition. Exemple : 50 % de win rate, gain moyen de +2R. Espérance = (0,50 × 2) − (0,50 × 1) = 1,0 − 0,5 = <strong style={{ color: '#00E676' }}>+0,5R par trade</strong>. Cela signifie que pour chaque dollar risqué, tu gagnes en moyenne 50 cents. Si les R-multiples sont nouveaux pour toi, notre <Link to="/blog/r-multiple-explained">guide du R-multiple</Link> le décompose étape par étape.
+        Ça se simplifie parce qu'une perte complète est toujours −1R par définition. Exemple : 50 % de win rate, gain moyen de +2R. Espérance = (0,50 × 2) − (0,50 × 1) = 1,0 − 0,5 = <strong style={{ color: '#00E676' }}>+0,5R par trade</strong>. Cela signifie que pour chaque dollar risqué, tu gagnes en moyenne 50 cents. Si les R-multiples sont nouveaux pour toi, notre <Link to="/blog/fr/r-multiple-explained">guide du R-multiple</Link> le décompose étape par étape.
       </P>
 
       <H2>Comment calculer ta propre espérance</H2>

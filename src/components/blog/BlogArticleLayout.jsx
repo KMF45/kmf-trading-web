@@ -27,6 +27,12 @@ function setMeta(name, content, attr = 'name') {
 
 export default function BlogArticleLayout({ title, metaTitle, metaDescription, slug, lang = 'en', date, dateISO, dateModified, readTime, category, categoryColor = '#4FC3F7', relatedArticles = [], faqItems = [], howToSteps = [], children }) {
   const langPath = lang !== 'en' ? `${lang}/` : '';
+  // Related-article cards must stay in the reader's language when a translation
+  // exists; fall back to the EN version when it doesn't.
+  const relatedHref = (slug) =>
+    (lang !== 'en' && blogTranslations[slug] && blogTranslations[slug][lang])
+      ? blogTranslations[slug][lang]
+      : `/blog/${slug}`;
   const pageUrl = `${SITE}/blog/${langPath}${slug}`;
   const ogImage = `${SITE}/blog/og/${lang !== 'en' ? `${lang}-` : ''}${slug}.png`;
 
@@ -316,7 +322,7 @@ export default function BlogArticleLayout({ title, metaTitle, metaDescription, s
               <ul className="space-y-3">
                 {relatedArticles.map((a) => (
                   <li key={a.slug}>
-                    <Link to={`/blog/${a.slug}`} className="group flex items-start gap-3">
+                    <Link to={relatedHref(a.slug)} className="group flex items-start gap-3">
                       <span className="text-kmf-accent mt-0.5 flex-shrink-0">→</span>
                       <span>
                         <span className="text-sm font-medium text-kmf-text-primary group-hover:text-kmf-accent transition-colors">{a.title}</span>

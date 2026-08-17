@@ -117,18 +117,18 @@ export default function ScalingInVsScalingOutRo() {
 
       <H2>Ideea Cheie</H2>
       <P>
-        Scaling in pe pierzători omoară conturi. Asta nu e de dezbătut — e o certitudine matematică dat fiind destul timp. Îți crești expunerea la o teză pe care piața o invalidează activ. Fiecare adăugare îți crește riscul total în timp ce probabilitatea de revenire scade. Iar motivul pentru care traderii o fac oricum nu e prostia — e <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">prospect theory</Link>: creierul tău e construit să-și asume riscuri mai mari ca să evite să bată în cuie o pierdere.
+        Scaling in pe pierzători omoară conturi. Asta nu e de dezbătut — e o certitudine matematică dat fiind destul timp. Îți crești expunerea la o teză pe care piața o invalidează activ. Fiecare adăugare îți crește riscul total în timp ce probabilitatea de revenire scade. Iar motivul pentru care traderii o fac oricum nu e prostia — e <Link to="/blog/ro/prospect-theory-trading" className="text-kmf-accent hover:underline">prospect theory</Link>: creierul tău e construit să-și asume riscuri mai mari ca să evite să bată în cuie o pierdere.
       </P>
       <P>
-        Scaling in pe câștigători poate funcționa, dar doar cu reguli stricte: un număr maxim de adăugări, niveluri pre-definite, și un plafon de risc cumulat care nu depășește niciodată <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">limita ta standard de risc per trade</Link>. Fără aceste reguli, până și adăugarea la câștigători devine supraexpunere deghizată.
+        Scaling in pe câștigători poate funcționa, dar doar cu reguli stricte: un număr maxim de adăugări, niveluri pre-definite, și un plafon de risc cumulat care nu depășește niciodată <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">limita ta standard de risc per trade</Link>. Fără aceste reguli, până și adăugarea la câștigători devine supraexpunere deghizată.
       </P>
       <P>
-        Scaling out e un compromis, nu o masă gratis. Reduce varianța în detrimentul expectancy-ului. Dacă acel compromis merită depinde de win rate-ul strategiei tale și de profilul tău psihologic. Măsoară-l cu <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multipli</Link> — nu ghici.
+        Scaling out e un compromis, nu o masă gratis. Reduce varianța în detrimentul expectancy-ului. Dacă acel compromis merită depinde de win rate-ul strategiei tale și de profilul tău psihologic. Măsoară-l cu <Link to="/blog/ro/r-multiple-explained" className="text-kmf-accent hover:underline">R-multipli</Link> — nu ghici.
       </P>
 
       <H2>Cea Mai Bună Abordare a Începătorului</H2>
       <P>
-        Dacă ai mai puțin de 100 de trade-uri logate cu date consistente, folosește <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">position sizing</Link> fix: intrare completă, ieșire completă. Niciun scaling in, niciun scaling out. Asta nu e fiindcă aceste tehnici sunt proaste — e fiindcă nu poți evalua dacă ajută sau dăunează până nu ai un baseline. Trebuie să știi ce face strategia ta cu execuție simplă înainte să adaugi complexitate. Adăugarea de variabile la un sistem nedovedit face imposibil să diagnostichezi ce funcționează și ce nu.
+        Dacă ai mai puțin de 100 de trade-uri logate cu date consistente, folosește <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">position sizing</Link> fix: intrare completă, ieșire completă. Niciun scaling in, niciun scaling out. Asta nu e fiindcă aceste tehnici sunt proaste — e fiindcă nu poți evalua dacă ajută sau dăunează până nu ai un baseline. Trebuie să știi ce face strategia ta cu execuție simplă înainte să adaugi complexitate. Adăugarea de variabile la un sistem nedovedit face imposibil să diagnostichezi ce funcționează și ce nu.
       </P>
 
       <Takeaways items={[

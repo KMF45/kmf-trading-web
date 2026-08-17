@@ -79,7 +79,7 @@ export default function TradingViewKmfWorkflowRo() {
         'Orice condiții care ar anula trade-ul (ex. „nu mai e valid dacă prețul rupe peste X înainte să ajungă la intrarea mea")',
       ]} />
       <P>
-        Acest plan ia 2 minute de scris și te scapă de 90% din intrările impulsive. Dacă nu poți articula planul clar, setup-ul nu e destul de clar cât să-l tranzacționezi. Pentru o abordare structurată, folosește <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist-ul nostru în 10 puncte</Link>.
+        Acest plan ia 2 minute de scris și te scapă de 90% din intrările impulsive. Dacă nu poți articula planul clar, setup-ul nu e destul de clar cât să-l tranzacționezi. Pentru o abordare structurată, folosește <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist-ul nostru în 10 puncte</Link>.
       </P>
 
       <Divider />
@@ -134,7 +134,7 @@ export default function TradingViewKmfWorkflowRo() {
       ]} />
 
       <Callout title={'Puterea Întrebării „Mi-am Urmat Planul?"'} color="#00C853">
-        Această singură întrebare, urmărită pe 100 de trade-uri, îți va arăta ceva puternic: win rate-ul și R-multiple-ul tău când îți urmezi planul față de când nu o faci. Cei mai mulți traderi descoperă un decalaj masiv — gen 55% win rate când sunt disciplinați vs 30% când improvizează. Ăsta e felul de insight care schimbă cariere. (Explorăm acest concept în profunzime în <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">Pierderi Bune, Câștiguri Proaste</Link>.)
+        Această singură întrebare, urmărită pe 100 de trade-uri, îți va arăta ceva puternic: win rate-ul și R-multiple-ul tău când îți urmezi planul față de când nu o faci. Cei mai mulți traderi descoperă un decalaj masiv — gen 55% win rate când sunt disciplinați vs 30% când improvizează. Ăsta e felul de insight care schimbă cariere. (Explorăm acest concept în profunzime în <Link to="/blog/ro/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">Pierderi Bune, Câștiguri Proaste</Link>.)
       </Callout>
 
       <Divider />
@@ -152,7 +152,7 @@ export default function TradingViewKmfWorkflowRo() {
         'Care e un lucru pe care te vei concentra să-l îmbunătățești săptămâna viitoare?',
       ]} />
       <P>
-        Review-ul închide bucla. Analiză → Execuție → Jurnal → Review → Analiză Mai Bună. Fără pasul de review, doar colectezi date. Cu el, construiești un sistem de feedback care se acumulează în timp — ca dobânda, dar pentru pricepere. Ai nevoie de un template? <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">Ghidul nostru de review săptămânal</Link> te ghidează pas cu pas.
+        Review-ul închide bucla. Analiză → Execuție → Jurnal → Review → Analiză Mai Bună. Fără pasul de review, doar colectezi date. Cu el, construiești un sistem de feedback care se acumulează în timp — ca dobânda, dar pentru pricepere. Ai nevoie de un template? <Link to="/blog/ro/weekly-trading-review-template" className="text-kmf-accent hover:underline">Ghidul nostru de review săptămânal</Link> te ghidează pas cu pas.
       </P>
 
       <Divider />

@@ -47,7 +47,7 @@ export default function TiltRecoveryProtocolDe() {
 
       <H2>Minute 0–5: Schließe alles und setze dich körperlich zurück</H2>
       <P>
-        Der erste und wichtigste Schritt ist körperlich: Schließe deine Trading-Plattform. Nicht minimieren. Schließen. Logge dich wenn möglich aus. Das Ziel ist, maximale Reibung zwischen dir und dem nächsten impulsiven Trade zu erzeugen. Jede Sekunde, die du nach einem großen Verlust am Bildschirm bleibst, erhöht die Wahrscheinlichkeit eines <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">Revenge-Trades</Link> — und Revenge-Trades nach bedeutenden Verlusten neigen dazu, überdimensioniert, ungeplant und verheerend zu sein.
+        Der erste und wichtigste Schritt ist körperlich: Schließe deine Trading-Plattform. Nicht minimieren. Schließen. Logge dich wenn möglich aus. Das Ziel ist, maximale Reibung zwischen dir und dem nächsten impulsiven Trade zu erzeugen. Jede Sekunde, die du nach einem großen Verlust am Bildschirm bleibst, erhöht die Wahrscheinlichkeit eines <Link to="/blog/de/revenge-trading" className="text-kmf-accent hover:underline">Revenge-Trades</Link> — und Revenge-Trades nach bedeutenden Verlusten neigen dazu, überdimensioniert, ungeplant und verheerend zu sein.
       </P>
       <P>
         Dann tu etwas Körperliches. Steh auf. Geh in einen anderen Raum. Geh für 60 Sekunden frische Luft nach draußen. Wenn du Box-Atmung kennst, mach vier Zyklen: 4 Sekunden einatmen, 4 halten, 4 ausatmen, 4 halten. Das ist kein Meditationstipp — es ist Neurowissenschaft. Kontrollierte Atmung aktiviert das parasympathische Nervensystem und beginnt, das Cortisol zu reduzieren, das gerade deinen präfrontalen Kortex flutet und deine Entscheidungsfähigkeit verschlechtert.
@@ -69,7 +69,7 @@ export default function TiltRecoveryProtocolDe() {
 
       <H2>Minute 15–30: Objektives Trade-Review</H2>
       <P>
-        Erst nachdem dein emotionaler Zustand begonnen hat, sich zu stabilisieren, solltest du den Trade selbst ansehen. Und das Review sollte nur eine Frage beantworten: War das ein <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">guter Verlust oder ein schlechter Verlust</Link>?
+        Erst nachdem dein emotionaler Zustand begonnen hat, sich zu stabilisieren, solltest du den Trade selbst ansehen. Und das Review sollte nur eine Frage beantworten: War das ein <Link to="/blog/de/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">guter Verlust oder ein schlechter Verlust</Link>?
       </P>
 
       <H3>Wenn es ein guter Verlust war</H3>
@@ -102,7 +102,7 @@ export default function TiltRecoveryProtocolDe() {
         'Wenn ich weitermache, werde ich mit reduzierter Größe traden? Professionelle Trader, die nach einem großen Verlust weitermachen, kürzen ihre Positionsgröße für den Rest der Session fast immer um 50 % oder mehr.',
       ]} />
       <P>
-        Es ist keine Schande aufzuhören. Die besten Trader der Welt beenden Sessions regelmäßig früh nach einem bedeutenden Verlust — nicht, weil sie es nicht aushalten, sondern weil sie wissen, dass ihr Edge optimale kognitive Funktion erfordert und ein großer Verlust sie vorübergehend kompromittiert. Die Trades sind morgen noch da. Dein Kapital nicht, wenn du es heute erzwingst. Für einen tieferen Rahmen zur <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">Erholung von einer Verlustserie</Link> lies unseren kompletten Leitfaden.
+        Es ist keine Schande aufzuhören. Die besten Trader der Welt beenden Sessions regelmäßig früh nach einem bedeutenden Verlust — nicht, weil sie es nicht aushalten, sondern weil sie wissen, dass ihr Edge optimale kognitive Funktion erfordert und ein großer Verlust sie vorübergehend kompromittiert. Die Trades sind morgen noch da. Dein Kapital nicht, wenn du es heute erzwingst. Für einen tieferen Rahmen zur <Link to="/blog/de/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">Erholung von einer Verlustserie</Link> lies unseren kompletten Leitfaden.
       </P>
 
       <Callout title="K.M.F. Tilt-Erkennung" color="#CE93D8">

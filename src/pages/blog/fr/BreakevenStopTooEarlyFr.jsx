@@ -60,7 +60,7 @@ export default function BreakevenStopTooEarlyFr() {
 
       <H2>Les maths que ton intuition ignore</H2>
       <P>
-        Faisons tourner les chiffres sur un setup typique. Tu as une stratégie à 40 % de win rate et un ratio risque/rendement de 3:1. Ton <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> est :
+        Faisons tourner les chiffres sur un setup typique. Tu as une stratégie à 40 % de win rate et un ratio risque/rendement de 3:1. Ton <Link to="/blog/fr/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> est :
       </P>
       <P>
         0,40 × 3R − 0,60 × 1R = <strong>+0,60R par trade</strong>
@@ -102,7 +102,7 @@ export default function BreakevenStopTooEarlyFr() {
       </P>
 
       <Callout title="La peur de rendre" color="#CE93D8">
-        Un gain non réalisé de 200 $ qui disparaît fait plus mal que de ne jamais l'avoir eu. Ça s'appelle « l'effet de dotation » — au moment où ton P/L affiche du vert, ton cerveau considère cet argent comme le tien. Perdre « ton » argent (même non réalisé) déclenche une réponse de douleur <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">2,25× plus forte</Link> que le plaisir de le gagner. Cette asymétrie est le moteur derrière chaque stop breakeven prématuré.
+        Un gain non réalisé de 200 $ qui disparaît fait plus mal que de ne jamais l'avoir eu. Ça s'appelle « l'effet de dotation » — au moment où ton P/L affiche du vert, ton cerveau considère cet argent comme le tien. Perdre « ton » argent (même non réalisé) déclenche une réponse de douleur <Link to="/blog/fr/prospect-theory-trading" className="text-kmf-accent hover:underline">2,25× plus forte</Link> que le plaisir de le gagner. Cette asymétrie est le moteur derrière chaque stop breakeven prématuré.
       </Callout>
 
       <H2>Le vrai coût : les trades sur lesquels tu avais raison</H2>
@@ -116,7 +116,7 @@ export default function BreakevenStopTooEarlyFr() {
         'Et tu as fait exactement 0 $ parce que tu ne pouvais pas rester immobile.',
       ]} />
       <P>
-        Après assez de ces épisodes, quelque chose casse. Tu cesses de faire confiance à ton analyse — non parce qu'elle est fausse, mais parce que tu continues de la saboter. Puis la FOMO entre en jeu : tu commences à courir après les trades pour « récupérer » les mouvements ratés. Et maintenant tu fais du <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> contre toi-même.
+        Après assez de ces épisodes, quelque chose casse. Tu cesses de faire confiance à ton analyse — non parce qu'elle est fausse, mais parce que tu continues de la saboter. Puis la FOMO entre en jeu : tu commences à courir après les trades pour « récupérer » les mouvements ratés. Et maintenant tu fais du <Link to="/blog/fr/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> contre toi-même.
       </P>
 
       <Divider />
@@ -145,11 +145,11 @@ export default function BreakevenStopTooEarlyFr() {
       </P>
       <H3>Règle 2 : utilise des stops structurels, pas émotionnels</H3>
       <P>
-        Quand tu déplaces ton stop, déplace-le vers un <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">niveau structurel</Link> — sous le dernier plus haut bas dans une tendance haussière, au-dessus du dernier plus bas haut dans une tendance baissière. Jamais à ton prix d'entrée spécifiquement.
+        Quand tu déplaces ton stop, déplace-le vers un <Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">niveau structurel</Link> — sous le dernier plus haut bas dans une tendance haussière, au-dessus du dernier plus bas haut dans une tendance baissière. Jamais à ton prix d'entrée spécifiquement.
       </P>
       <H3>Règle 3 : suis tes stops breakeven séparément</H3>
       <P>
-        C'est là que la plupart des traders abandonnent — et là où vit le vrai edge. Tague chaque trade où tu es passé au breakeven. Après 30 trades, vérifie : combien de ceux-là auraient atteint ton TP initial ? Quand tu vois que 12 sur 30 stops breakeven auraient été des gagnants de 3R, les données deviennent impossibles à contester. K.M.F. suit tes <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> automatiquement — pour que tu puisses filtrer tes sorties breakeven et voir exactement combien d'espérance elles te coûtent.
+        C'est là que la plupart des traders abandonnent — et là où vit le vrai edge. Tague chaque trade où tu es passé au breakeven. Après 30 trades, vérifie : combien de ceux-là auraient atteint ton TP initial ? Quand tu vois que 12 sur 30 stops breakeven auraient été des gagnants de 3R, les données deviennent impossibles à contester. K.M.F. suit tes <Link to="/blog/fr/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> automatiquement — pour que tu puisses filtrer tes sorties breakeven et voir exactement combien d'espérance elles te coûtent.
       </P>
       <H3>Règle 4 : ferme la plateforme après l'entrée</H3>
       <P>
@@ -157,7 +157,7 @@ export default function BreakevenStopTooEarlyFr() {
       </P>
 
       <Callout title="La vraie gestion du risque" color="#00C853">
-        La vraie gestion du risque se passe avant le trade : un bon <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">dimensionnement</Link>, un placement de stop structurel, et un ratio risque/rendement qui a un sens mathématique. Déplacer ton stop au breakeven après l'entrée n'est pas de la gestion du risque — c'est de la gestion de l'anxiété. Et l'anxiété prend de terribles décisions de trading.
+        La vraie gestion du risque se passe avant le trade : un bon <Link to="/blog/fr/position-sizing-guide" className="text-kmf-accent hover:underline">dimensionnement</Link>, un placement de stop structurel, et un ratio risque/rendement qui a un sens mathématique. Déplacer ton stop au breakeven après l'entrée n'est pas de la gestion du risque — c'est de la gestion de l'anxiété. Et l'anxiété prend de terribles décisions de trading.
       </Callout>
 
       <Takeaways items={[

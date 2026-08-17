@@ -48,7 +48,7 @@ export default function ConfidenceVsOverconfidenceFr() {
 
       <H2>La surconfiance : bâtie sur des sensations</H2>
       <P>
-        La surconfiance paraît identique de l'intérieur. Le trader se sent sûr, décisif et clair. Mais la fondation est différente. Au lieu de données, la surconfiance est bâtie sur les gains récents, l'intuition ou la mémoire sélective. Le trader se souvient vivement des cinq derniers gagnants mais a déjà oublié le drawdown du mois dernier. C'est un exemple classique de <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pourquoi les traders enfreignent leurs propres règles</Link> — l'état émotionnel prend le dessus sur le système rationnel.
+        La surconfiance paraît identique de l'intérieur. Le trader se sent sûr, décisif et clair. Mais la fondation est différente. Au lieu de données, la surconfiance est bâtie sur les gains récents, l'intuition ou la mémoire sélective. Le trader se souvient vivement des cinq derniers gagnants mais a déjà oublié le drawdown du mois dernier. C'est un exemple classique de <Link to="/blog/fr/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pourquoi les traders enfreignent leurs propres règles</Link> — l'état émotionnel prend le dessus sur le système rationnel.
       </P>
 
       <Divider />
@@ -58,7 +58,7 @@ export default function ConfidenceVsOverconfidenceFr() {
         L'effet Dunning-Kruger décrit un biais cognitif où les personnes ayant une compétence limitée dans un domaine surestiment dramatiquement leur capacité. En trading, ça se manifeste le plus dangereusement en deux phases : le débutant qui a un premier mois chanceux et croit avoir « compris le marché », et le trader intermédiaire qui a survécu assez longtemps pour se sentir expérimenté mais n'a pas encore rencontré de changement de régime ou de cygne noir.
       </P>
       <P>
-        La période la plus dangereuse n'est pas le début — c'est le moment où un trader a eu assez de succès pour se sentir compétent mais pas assez d'échecs pour se sentir humble. C'est là que les tailles de position grandissent, que les <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">règles de risque</Link> commencent à sembler optionnelles, et qu'une seule mauvaise semaine peut défaire des mois de gains.
+        La période la plus dangereuse n'est pas le début — c'est le moment où un trader a eu assez de succès pour se sentir compétent mais pas assez d'échecs pour se sentir humble. C'est là que les tailles de position grandissent, que les <Link to="/blog/fr/1-percent-risk-rule" className="text-kmf-accent hover:underline">règles de risque</Link> commencent à sembler optionnelles, et qu'une seule mauvaise semaine peut défaire des mois de gains.
       </P>
 
       <H2>Les signes d'alerte de la surconfiance</H2>
@@ -106,11 +106,11 @@ export default function ConfidenceVsOverconfidenceFr() {
       </P>
       <H3>2. Traite les séries gagnantes comme une alerte, pas une récompense</H3>
       <P>
-        Quand tu atteins 5+ gains consécutifs, resserre ton processus au lieu de le relâcher. C'est contre-intuitif mais essentiel. Le retour à la moyenne arrive — la seule question est de savoir si tu seras correctement dimensionné quand ça arrivera. On appelle ça le <Link to="/blog/lotto-ticket-syndrome" className="text-kmf-accent hover:underline">syndrome du « ticket de loto »</Link> — la dopamine du gain rend le risque invisible.
+        Quand tu atteins 5+ gains consécutifs, resserre ton processus au lieu de le relâcher. C'est contre-intuitif mais essentiel. Le retour à la moyenne arrive — la seule question est de savoir si tu seras correctement dimensionné quand ça arrivera. On appelle ça le <Link to="/blog/fr/lotto-ticket-syndrome" className="text-kmf-accent hover:underline">syndrome du « ticket de loto »</Link> — la dopamine du gain rend le risque invisible.
       </P>
       <H3>3. Maintiens un dimensionnement constant</H3>
       <P>
-        Tant que tu n'as pas au moins 100 trades enregistrés avec des résultats réguliers, garde ton pourcentage de risque fixe. Aucun ajustement « je me sens confiant ». La <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">règle des 1 %</Link> existe précisément parce que le jugement humain sur le dimensionnement est peu fiable sous influence émotionnelle.
+        Tant que tu n'as pas au moins 100 trades enregistrés avec des résultats réguliers, garde ton pourcentage de risque fixe. Aucun ajustement « je me sens confiant ». La <Link to="/blog/fr/1-percent-risk-rule" className="text-kmf-accent hover:underline">règle des 1 %</Link> existe précisément parce que le jugement humain sur le dimensionnement est peu fiable sous influence émotionnelle.
       </P>
 
       <Takeaways items={[

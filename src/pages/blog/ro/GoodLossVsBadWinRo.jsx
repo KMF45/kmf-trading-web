@@ -42,7 +42,7 @@ export default function GoodLossVsBadWinRo() {
         Creierul uman e construit să evalueze rezultate, nu procese. Cifră verde = bun. Cifră roșie = rău. Acest instinct ne ajută în mai toată viața. În trading, e o capcană care împiedică aproape orice trader în formare să se îmbunătățească.
       </P>
       <P>
-        Când judeci fiecare trade după rezultatul lui, întărești orice comportament a produs acel rezultat — chiar dacă comportamentul a fost nesăbuit. Ăsta e unul dintre motivele de bază <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pentru care traderii își încalcă propriile reguli</Link>. Câștigul aleatoriu pe AUD/USD îți învață creierul: „Vezi? Să ignori regulile funcționează." Între timp, pierderea disciplinată pe USD/CAD îți spune: „Să urmezi regulile aduce durere." Pe sute de trade-uri, acest condiționament îți erodează lent disciplina până ajungi să tranzacționezi complet pe impuls și să-i spui „intuiție".
+        Când judeci fiecare trade după rezultatul lui, întărești orice comportament a produs acel rezultat — chiar dacă comportamentul a fost nesăbuit. Ăsta e unul dintre motivele de bază <Link to="/blog/ro/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pentru care traderii își încalcă propriile reguli</Link>. Câștigul aleatoriu pe AUD/USD îți învață creierul: „Vezi? Să ignori regulile funcționează." Între timp, pierderea disciplinată pe USD/CAD îți spune: „Să urmezi regulile aduce durere." Pe sute de trade-uri, acest condiționament îți erodează lent disciplina până ajungi să tranzacționezi complet pe impuls și să-i spui „intuiție".
       </P>
 
       <Divider />
@@ -63,7 +63,7 @@ export default function GoodLossVsBadWinRo() {
 
       <H2>Cum Arată de Fapt un „Câștig Prost"</H2>
       <P>
-        Un câștig prost e un trade care ți-a încălcat regulile și a făcut bani oricum. Niciun setup real. Niciun <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> completat. Stop loss prea strâns, prea larg, sau inexistent. Position size pe bază de „feeling" în loc de calcul. Ai intrat din cauza FOMO, plictiseală, sau un pont de pe un canal de Discord. Și ai câștigat.
+        Un câștig prost e un trade care ți-a încălcat regulile și a făcut bani oricum. Niciun setup real. Niciun <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">pre-trade checklist</Link> completat. Stop loss prea strâns, prea larg, sau inexistent. Position size pe bază de „feeling" în loc de calcul. Ai intrat din cauza FOMO, plictiseală, sau un pont de pe un canal de Discord. Și ai câștigat.
       </P>
       <P>
         Ăsta e cel mai periculos rezultat din trading. Nu din cauza banilor — banii sunt reali, profitul e real. E periculos fiindcă îți învață creierul că regulile nu contează. Fiecare câștig prost îți erodează disciplina cu exact o crestătură. După destule câștiguri proaste, nu mai ai un sistem de trading. Ai un obicei de gambling cu noroc ocazional.
@@ -101,7 +101,7 @@ export default function GoodLossVsBadWinRo() {
 
       <H3>Punctează-ți Trade-urile de la 1 la 5</H3>
       <P>
-        După fiecare trade, punctează-l pe o scară de la 1 la 5 pe baza calității procesului — nu a profitului. Combină asta cu calcularea <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple-ului</Link> per trade și ai două metrici care contează mult mai mult decât P/L-ul brut:
+        După fiecare trade, punctează-l pe o scară de la 1 la 5 pe baza calității procesului — nu a profitului. Combină asta cu calcularea <Link to="/blog/ro/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiple-ului</Link> per trade și ai două metrici care contează mult mai mult decât P/L-ul brut:
       </P>
       <Ul items={[
         '5 — Execuție perfectă. Setup, intrare, stop, mărime, gestionare — toate au urmat planul.',

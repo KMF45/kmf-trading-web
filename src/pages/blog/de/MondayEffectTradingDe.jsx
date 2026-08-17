@@ -71,7 +71,7 @@ export default function MondayEffectTradingDe() {
       </P>
       <H3>Druck, „stark in die Woche zu starten"</H3>
       <P>
-        Es gibt ein irrationales, aber mächtiges psychologisches Verlangen, jede Woche mit einem Gewinn zu beginnen. Montags P/L fühlt sich unverhältnismäßig wichtig an, weil es den emotionalen Ton für den Rest der Woche setzt. Dieser Druck führt zu niedrigeren Einstiegs-Standards, vorzeitigen Einstiegen und einer Unwilligkeit, auszusitzen und zu warten — genau die Bedingungen, die <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">regelbrechendes Verhalten</Link> produzieren.
+        Es gibt ein irrationales, aber mächtiges psychologisches Verlangen, jede Woche mit einem Gewinn zu beginnen. Montags P/L fühlt sich unverhältnismäßig wichtig an, weil es den emotionalen Ton für den Rest der Woche setzt. Dieser Druck führt zu niedrigeren Einstiegs-Standards, vorzeitigen Einstiegen und einer Unwilligkeit, auszusitzen und zu warten — genau die Bedingungen, die <Link to="/blog/de/why-traders-break-their-rules" className="text-kmf-accent hover:underline">regelbrechendes Verhalten</Link> produzieren.
       </P>
 
       <Callout title="Die Montags-Falle" color="#CE93D8">
@@ -123,7 +123,7 @@ export default function MondayEffectTradingDe() {
       </P>
 
       <P>
-        Die besten Trader verstehen, dass Nicht-Traden selbst eine Trading-Entscheidung ist. Montag ist oft der Tag, an dem der Zug mit der höchsten Edge darin besteht, nichts zu tun — den Markt sich setzen zu lassen, die Liquidität zurückkehren zu lassen und die Wochenend-Emotionen sich auflösen zu lassen. Die Setups werden am Dienstag immer noch da sein. Dein Kapital wird intakt sein. Und du wirst die Woche nicht in einem Loch beginnen und dich per <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link> herausgraben.
+        Die besten Trader verstehen, dass Nicht-Traden selbst eine Trading-Entscheidung ist. Montag ist oft der Tag, an dem der Zug mit der höchsten Edge darin besteht, nichts zu tun — den Markt sich setzen zu lassen, die Liquidität zurückkehren zu lassen und die Wochenend-Emotionen sich auflösen zu lassen. Die Setups werden am Dienstag immer noch da sein. Dein Kapital wird intakt sein. Und du wirst die Woche nicht in einem Loch beginnen und dich per <Link to="/blog/de/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link> herausgraben.
       </P>
 
       <Takeaways items={[

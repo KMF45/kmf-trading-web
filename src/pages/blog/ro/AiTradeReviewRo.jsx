@@ -51,7 +51,7 @@ export default function AiTradeReviewRo() {
       </P>
       <H3>Sumarizarea Pattern-urilor Săptămânale și Lunare</H3>
       <P>
-        Un <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">review săptămânal de trading</Link> e esențial dar consumă timp. AI îl poate accelera sumarizându-ți săptămâna în format structurat: cel mai bun setup, cel mai prost setup, R-multiple mediu, pattern-uri emoționale, încălcări de reguli, și zone de focus sugerate pentru săptămâna viitoare. Ce îți ia 45 de minute manual îi ia AI-ului 30 de secunde.
+        Un <Link to="/blog/ro/weekly-trading-review-template" className="text-kmf-accent hover:underline">review săptămânal de trading</Link> e esențial dar consumă timp. AI îl poate accelera sumarizându-ți săptămâna în format structurat: cel mai bun setup, cel mai prost setup, R-multiple mediu, pattern-uri emoționale, încălcări de reguli, și zone de focus sugerate pentru săptămâna viitoare. Ce îți ia 45 de minute manual îi ia AI-ului 30 de secunde.
       </P>
 
       <Divider />
@@ -110,7 +110,7 @@ export default function AiTradeReviewRo() {
         'Trimestrial: cere AI-ului să compare ultimele trei luni și să identifice dacă edge-ul tău se îmbunătățește, e stabil, sau se degradează.',
       ]} />
       <P>
-        Punctul critic: analiza AI e la fel de bună ca datele din jurnalul tău. Dacă notițele tale de trade spun „am cumpărat EUR/USD, am pierdut bani" fără context, AI nu are cu ce să lucreze. Dacă notițele tale includ tipul setup-ului, starea emoțională, conformitatea cu checklist-ul, condițiile de piață, și raționamentul — AI poate găsi pattern-uri care îți transformă trading-ul. Calitatea input-ului determină calitatea output-ului. Pe măsură ce datele tale de <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy</Link> cresc, insight-urile AI devin tot mai puternice.
+        Punctul critic: analiza AI e la fel de bună ca datele din jurnalul tău. Dacă notițele tale de trade spun „am cumpărat EUR/USD, am pierdut bani" fără context, AI nu are cu ce să lucreze. Dacă notițele tale includ tipul setup-ului, starea emoțională, conformitatea cu checklist-ul, condițiile de piață, și raționamentul — AI poate găsi pattern-uri care îți transformă trading-ul. Calitatea input-ului determină calitatea output-ului. Pe măsură ce datele tale de <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent hover:underline">expectancy</Link> cresc, insight-urile AI devin tot mai puternice.
       </P>
 
       <Takeaways items={[

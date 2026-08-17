@@ -126,12 +126,12 @@ export default function AnalysisParalysisTradingRo() {
 
       <H3>Decide înainte să se formeze lumânarea, nu în timpul ei</H3>
       <P>
-        Construiește un <Link to="/blog/pre-trade-checklist" className="text-kmf-accent underline hover:text-white transition-colors">pre-trade checklist</Link> scurt — cinci sau șase întrebări da/nu care definesc un setup valid pentru tine. Când prețul ajunge, nu mai <em>judeci</em> trade-ul; doar <em>bifezi căsuțe</em>. Toate bifate? Intri. Transformă o decizie chinuitoare cu răspuns deschis într-una mecanică, iar deciziile mecanice nu îngheață.
+        Construiește un <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent underline hover:text-white transition-colors">pre-trade checklist</Link> scurt — cinci sau șase întrebări da/nu care definesc un setup valid pentru tine. Când prețul ajunge, nu mai <em>judeci</em> trade-ul; doar <em>bifezi căsuțe</em>. Toate bifate? Intri. Transformă o decizie chinuitoare cu răspuns deschis într-una mecanică, iar deciziile mecanice nu îngheață.
       </P>
 
       <H3>Împacă-te cu matematica pierderii</H3>
       <P>
-        Internalizează asta până devine plictisitoare: cu o strategie 1:2 reward-to-risk, poți <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>greși pe majoritatea trade-urilor și tot să-ți crești contul.</strong> Niciun click nu e un referendum despre valoarea ta — e un singur punct de date dintr-un eșantion de sute. Dacă nu ești sigur că edge-ul tău e real, ăsta nu e un motiv să îngheți; e un motiv să-l măsori. Trece-ți cifrele printr-o <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent underline hover:text-white transition-colors">verificare de expectancy</Link> și lasă datele să-ți dea permisiunea pe care intuiția nu ți-o dă.
+        Internalizează asta până devine plictisitoare: cu o strategie 1:2 reward-to-risk, poți <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>greși pe majoritatea trade-urilor și tot să-ți crești contul.</strong> Niciun click nu e un referendum despre valoarea ta — e un singur punct de date dintr-un eșantion de sute. Dacă nu ești sigur că edge-ul tău e real, ăsta nu e un motiv să îngheți; e un motiv să-l măsori. Trece-ți cifrele printr-o <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent underline hover:text-white transition-colors">verificare de expectancy</Link> și lasă datele să-ți dea permisiunea pe care intuiția nu ți-o dă.
       </P>
 
       <Callout title="Regula celor două secunde" color="#4FC3F7">

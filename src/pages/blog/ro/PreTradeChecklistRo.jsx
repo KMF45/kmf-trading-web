@@ -55,7 +55,7 @@ export default function PreTradeChecklistRo() {
         Cercetarea despre luarea deciziilor sub presiune arată constant că oamenii sunt slabi la a face evaluări în mai mulți pași în timp real — mai ales sub stres sau presiune de timp. Sărim peste pași, dăm prea multă greutate informației recente, și lăsăm starea emoțională să contamineze judecata analitică.
       </P>
       <P>
-        Un checklist externalizează criteriile de decizie. În loc să te bazezi pe gândirea ta de moment, Sistemul 1 (rapid, emoțional), ca să evaluezi corect un trade, un checklist forțează angajarea sistematică a Sistemului 2 (lent, deliberat). Creează o pauză obligatorie între impuls și acțiune — iar în acea pauză trăiește disciplina. Ăsta e și motivul <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pentru care traderii își încalcă propriile reguli</Link> — fără un checklist, Sistemul 1 câștigă de fiecare dată.
+        Un checklist externalizează criteriile de decizie. În loc să te bazezi pe gândirea ta de moment, Sistemul 1 (rapid, emoțional), ca să evaluezi corect un trade, un checklist forțează angajarea sistematică a Sistemului 2 (lent, deliberat). Creează o pauză obligatorie între impuls și acțiune — iar în acea pauză trăiește disciplina. Ăsta e și motivul <Link to="/blog/ro/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pentru care traderii își încalcă propriile reguli</Link> — fără un checklist, Sistemul 1 câștigă de fiecare dată.
       </P>
       <Callout title="Ideea Cheie" color="#FFB300">
         Un checklist nu te face un analist mai bun. Se asigură că analiza pe care deja știi să o faci e chiar efectuată înainte de fiecare trade — nu doar uneori, nu doar când îți amintești, ci de fiecare dată.
@@ -87,7 +87,7 @@ export default function PreTradeChecklistRo() {
 
       <H3>5. Mi-am calculat position size-ul pe baza a 1% risc?</H3>
       <P>
-        Nu estima. Calculează. Suma Riscată = Cont × 0.01. Position Size = Suma Riscată ÷ Distanța Stop-ului. Asta durează 20 de secunde și asigură că cel mai prost rezultat posibil pe acest trade — o pierdere completă — costă exact 1% din contul tău, nu aproximativ 1% pe bază de feeling. Vezi <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">ghidul nostru complet de position sizing</Link> pentru formula exactă pe forex, acțiuni și crypto.
+        Nu estima. Calculează. Suma Riscată = Cont × 0.01. Position Size = Suma Riscată ÷ Distanța Stop-ului. Asta durează 20 de secunde și asigură că cel mai prost rezultat posibil pe acest trade — o pierdere completă — costă exact 1% din contul tău, nu aproximativ 1% pe bază de feeling. Vezi <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">ghidul nostru complet de position sizing</Link> pentru formula exactă pe forex, acțiuni și crypto.
       </P>
 
       <H3>6. E vreun eveniment major de știri în următoarea oră?</H3>
@@ -97,7 +97,7 @@ export default function PreTradeChecklistRo() {
 
       <H3>7. Tranzacționez din plictiseală sau FOMO?</H3>
       <P>
-        Fii cinstit. Întreabă-te: intru în acest trade fiindcă există un setup real, sau fiindcă stau în fața ecranului și simt că ar trebui să fac ceva? Trade-urile de FOMO — luate fiindcă o mișcare se întâmplă deja și nu vrei să o ratezi — și trade-urile de plictiseală sunt printre cele mai sigure categorii pe pierdere. Dacă răspunsul cinstit e da, închide chart-ul și așteaptă. Acest fel de intrare impulsivă e primul pas spre <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link>.
+        Fii cinstit. Întreabă-te: intru în acest trade fiindcă există un setup real, sau fiindcă stau în fața ecranului și simt că ar trebui să fac ceva? Trade-urile de FOMO — luate fiindcă o mișcare se întâmplă deja și nu vrei să o ratezi — și trade-urile de plictiseală sunt printre cele mai sigure categorii pe pierdere. Dacă răspunsul cinstit e da, închide chart-ul și așteaptă. Acest fel de intrare impulsivă e primul pas spre <Link to="/blog/ro/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link>.
       </P>
 
       <H3>8. Sunt pregătit emoțional să gestionez acest trade dacă merge împotriva mea?</H3>

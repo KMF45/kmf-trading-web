@@ -48,7 +48,7 @@ export default function OnePercentRiskRuleDe() {
 
       <H2>Die Mathematik des Ruins: Warum das Risiko-% wichtiger ist, als du denkst</H2>
       <P>
-        Verlustserien sind eine mathematische Gewissheit, selbst bei einer profitablen Strategie. Die Frage ist nicht, ob du eine Serie von Verlusten erlebst, sondern ob dein Konto sie lange genug übersteht, um die nächste Gewinnphase zu erreichen. Strategien zum <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">Überstehen von Verlustserien</Link> zu verstehen ist genauso wichtig wie eine gute Einstiegsmethode.
+        Verlustserien sind eine mathematische Gewissheit, selbst bei einer profitablen Strategie. Die Frage ist nicht, ob du eine Serie von Verlusten erlebst, sondern ob dein Konto sie lange genug übersteht, um die nächste Gewinnphase zu erreichen. Strategien zum <Link to="/blog/de/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">Überstehen von Verlustserien</Link> zu verstehen ist genauso wichtig wie eine gute Einstiegsmethode.
       </P>
       <P>
         Sieh dir an, was aufeinanderfolgende Verluste bei verschiedenen Risikoniveaus mit deinem Konto machen:
@@ -81,7 +81,7 @@ export default function OnePercentRiskRuleDe() {
         'Schritt 2 — Berechne die Positionsgröße: Positionsgröße = Risikobetrag ÷ (Einstiegspreis − Stop-Loss-Preis)',
       ]} />
       <P>
-        Die <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop-Loss-Platzierung</Link> kommt zuerst. Du identifizierst den logischen Invalidierungspunkt für deinen Trade, misst den Abstand zu deinem Einstieg und nutzt dann diesen Abstand, um zu bestimmen, wie groß deine Position sein sollte. Du platzierst einen Stop Loss nie nach der gewünschten <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgröße</Link> — es funktioniert genau andersherum.
+        Die <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop-Loss-Platzierung</Link> kommt zuerst. Du identifizierst den logischen Invalidierungspunkt für deinen Trade, misst den Abstand zu deinem Einstieg und nutzt dann diesen Abstand, um zu bestimmen, wie groß deine Position sein sollte. Du platzierst einen Stop Loss nie nach der gewünschten <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgröße</Link> — es funktioniert genau andersherum.
       </P>
 
       <H3>Durchgerechnetes Beispiel: Forex</H3>

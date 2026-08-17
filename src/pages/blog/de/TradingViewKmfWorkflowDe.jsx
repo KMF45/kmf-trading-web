@@ -79,7 +79,7 @@ export default function TradingViewKmfWorkflowDe() {
         'Alle Bedingungen, die den Trade abbrechen würden (z. B. „nicht valide, wenn der Preis über X bricht, bevor er meinen Einstieg erreicht")',
       ]} />
       <P>
-        Dieser Plan dauert 2 Minuten zu schreiben und bewahrt dich vor 90 % der impulsiven Einstiege. Wenn du den Plan nicht klar artikulieren kannst, ist das Setup nicht klar genug zum Traden. Für einen strukturierten Ansatz nutze unsere <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">10-Punkte-Pre-Trade-Checkliste</Link>.
+        Dieser Plan dauert 2 Minuten zu schreiben und bewahrt dich vor 90 % der impulsiven Einstiege. Wenn du den Plan nicht klar artikulieren kannst, ist das Setup nicht klar genug zum Traden. Für einen strukturierten Ansatz nutze unsere <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">10-Punkte-Pre-Trade-Checkliste</Link>.
       </P>
 
       <Divider />
@@ -134,7 +134,7 @@ export default function TradingViewKmfWorkflowDe() {
       ]} />
 
       <Callout title="Die Kraft von ‚Bin ich meinem Plan gefolgt?'" color="#00C853">
-        Diese eine Frage, über 100 Trades verfolgt, zeigt dir etwas Mächtiges: deine Win Rate und dein R-Vielfaches, wenn du deinem Plan folgst, versus wenn nicht. Die meisten Trader entdecken eine massive Lücke — wie 55 % Win Rate diszipliniert vs 30 % beim Improvisieren. Das ist die Art Erkenntnis, die Karrieren verändert. (Wir vertiefen dieses Konzept in <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">Good Losses, Bad Wins</Link>.)
+        Diese eine Frage, über 100 Trades verfolgt, zeigt dir etwas Mächtiges: deine Win Rate und dein R-Vielfaches, wenn du deinem Plan folgst, versus wenn nicht. Die meisten Trader entdecken eine massive Lücke — wie 55 % Win Rate diszipliniert vs 30 % beim Improvisieren. Das ist die Art Erkenntnis, die Karrieren verändert. (Wir vertiefen dieses Konzept in <Link to="/blog/de/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">Good Losses, Bad Wins</Link>.)
       </Callout>
 
       <Divider />
@@ -152,7 +152,7 @@ export default function TradingViewKmfWorkflowDe() {
         'Was ist eine Sache, auf deren Verbesserung du dich nächste Woche fokussierst?',
       ]} />
       <P>
-        Das Review schließt die Schleife. Analyse → Ausführung → Journal → Review → Bessere Analyse. Ohne den Review-Schritt sammelst du nur Daten. Mit ihm baust du ein Feedback-System, das sich über die Zeit summiert — wie Zinsen, aber für Können. Brauchst du ein Template? Unser <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">Leitfaden zum wöchentlichen Trading-Review</Link> führt dich Schritt für Schritt durch.
+        Das Review schließt die Schleife. Analyse → Ausführung → Journal → Review → Bessere Analyse. Ohne den Review-Schritt sammelst du nur Daten. Mit ihm baust du ein Feedback-System, das sich über die Zeit summiert — wie Zinsen, aber für Können. Brauchst du ein Template? Unser <Link to="/blog/de/weekly-trading-review-template" className="text-kmf-accent hover:underline">Leitfaden zum wöchentlichen Trading-Review</Link> führt dich Schritt für Schritt durch.
       </P>
 
       <Divider />

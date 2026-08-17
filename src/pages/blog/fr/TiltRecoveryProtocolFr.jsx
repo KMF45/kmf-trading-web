@@ -47,7 +47,7 @@ export default function TiltRecoveryProtocolFr() {
 
       <H2>Minute 0-5 : ferme tout et réinitialise physiquement</H2>
       <P>
-        La première et plus importante étape est physique : ferme ta plateforme de trading. Pas la minimiser. La fermer. Déconnecte-toi si possible. Le but est de créer un maximum de friction entre toi et le prochain trade impulsif. Chaque seconde où tu restes sur l'écran après une grosse perte augmente la probabilité d'un <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trade</Link> — et les revenge trades après des pertes significatives ont tendance à être surdimensionnés, non planifiés et dévastateurs.
+        La première et plus importante étape est physique : ferme ta plateforme de trading. Pas la minimiser. La fermer. Déconnecte-toi si possible. Le but est de créer un maximum de friction entre toi et le prochain trade impulsif. Chaque seconde où tu restes sur l'écran après une grosse perte augmente la probabilité d'un <Link to="/blog/fr/revenge-trading" className="text-kmf-accent hover:underline">revenge trade</Link> — et les revenge trades après des pertes significatives ont tendance à être surdimensionnés, non planifiés et dévastateurs.
       </P>
       <P>
         Puis fais quelque chose de physique. Lève-toi. Marche jusqu'à une autre pièce. Sors prendre 60 secondes d'air frais. Si tu connais la respiration carrée, fais quatre cycles : inspire 4 secondes, retiens 4, expire 4, retiens 4. Ce n'est pas un conseil de méditation — c'est des neurosciences. La respiration contrôlée active le système nerveux parasympathique et commence à réduire le cortisol qui inonde actuellement ton cortex préfrontal et dégrade ta capacité de décision.
@@ -69,7 +69,7 @@ export default function TiltRecoveryProtocolFr() {
 
       <H2>Minute 15-30 : revue objective du trade</H2>
       <P>
-        C'est seulement après que ton état émotionnel a commencé à se stabiliser que tu devrais regarder le trade lui-même. Et la revue ne devrait répondre qu'à une seule question : était-ce une <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">bonne perte ou une mauvaise perte</Link> ?
+        C'est seulement après que ton état émotionnel a commencé à se stabiliser que tu devrais regarder le trade lui-même. Et la revue ne devrait répondre qu'à une seule question : était-ce une <Link to="/blog/fr/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">bonne perte ou une mauvaise perte</Link> ?
       </P>
 
       <H3>Si c'était une bonne perte</H3>
@@ -102,7 +102,7 @@ export default function TiltRecoveryProtocolFr() {
         'Si je continue, vais-je trader en taille réduite ? Les traders pros qui continuent après une grosse perte coupent presque toujours leur taille de position de 50 % ou plus pour le reste de la séance.',
       ]} />
       <P>
-        Il n'y a aucune honte à s'arrêter. Les meilleurs traders du monde finissent régulièrement leurs séances tôt après une perte significative — non parce qu'ils ne peuvent pas la gérer, mais parce qu'ils savent que leur edge exige une fonction cognitive optimale, et qu'une grosse perte la compromet temporairement. Les trades seront là demain. Ton capital, non, si tu forces aujourd'hui. Pour un cadre plus complet sur <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">la récupération d'une série de pertes</Link>, lis notre guide complet.
+        Il n'y a aucune honte à s'arrêter. Les meilleurs traders du monde finissent régulièrement leurs séances tôt après une perte significative — non parce qu'ils ne peuvent pas la gérer, mais parce qu'ils savent que leur edge exige une fonction cognitive optimale, et qu'une grosse perte la compromet temporairement. Les trades seront là demain. Ton capital, non, si tu forces aujourd'hui. Pour un cadre plus complet sur <Link to="/blog/fr/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">la récupération d'une série de pertes</Link>, lis notre guide complet.
       </P>
 
       <Callout title="Détection de tilt K.M.F." color="#CE93D8">

@@ -36,7 +36,7 @@ export default function MetatraderPreTradeChecklistFr() {
       ]}
     >
       <Intro>
-        Tu sais déjà que tu devrais avoir une checklist pré-trade. Tu en as probablement même fait une — peut-être après avoir lu notre <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">guide de checklist en 10 points</Link>. Elle avait douze éléments, elle était complète, elle était professionnelle. Tu l'as utilisée quatre jours puis tu as arrêté parce que vérifier douze choses avant chaque trade sur MetaTrader, c'était comme remplir une déclaration d'impôts pendant que le marché bougeait sans toi. Ça te parle ? Tu n'es pas paresseux. Ta checklist était trop longue.
+        Tu sais déjà que tu devrais avoir une checklist pré-trade. Tu en as probablement même fait une — peut-être après avoir lu notre <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">guide de checklist en 10 points</Link>. Elle avait douze éléments, elle était complète, elle était professionnelle. Tu l'as utilisée quatre jours puis tu as arrêté parce que vérifier douze choses avant chaque trade sur MetaTrader, c'était comme remplir une déclaration d'impôts pendant que le marché bougeait sans toi. Ça te parle ? Tu n'es pas paresseux. Ta checklist était trop longue.
       </Intro>
 
       <P>
@@ -102,7 +102,7 @@ export default function MetatraderPreTradeChecklistFr() {
         <strong style={{ color: '#F0F4FF' }}>Sur MetaTrader :</strong> Utilise l'outil croix (Ctrl+F) pour mesurer la distance exacte de l'entrée au stop en pips. Ou fais glisser une ligne horizontale à ton niveau de stop et utilise la « Fenêtre de données » (Ctrl+D) pour lire le prix.
       </P>
       <P>
-        <strong style={{ color: '#F0F4FF' }}>Sur cTrader :</strong> Clic droit → « Measure » ou utilise l'<Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">outil de placement de stop loss</Link> intégré qui montre les pips et le montant en dollars simultanément.
+        <strong style={{ color: '#F0F4FF' }}>Sur cTrader :</strong> Clic droit → « Measure » ou utilise l'<Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">outil de placement de stop loss</Link> intégré qui montre les pips et le montant en dollars simultanément.
       </P>
       <P>
         Méthodes de placement de stop courantes :
@@ -124,7 +124,7 @@ export default function MetatraderPreTradeChecklistFr() {
         Taille de lot = (Solde du compte × % de risque) ÷ (Stop loss en pips × Valeur du pip)
       </Callout>
       <P>
-        <strong style={{ color: '#F0F4FF' }}>Sur MetaTrader :</strong> MT4/MT5 n'a pas de calculateur de risque intégré (oui, vraiment). Il te faut soit : un calculateur externe, un EA/indicateur custom qui fait le calcul, ou un journal de trading avec un <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">calculateur de taille de lot</Link>. K.M.F. en a un intégré dans l'app — saisis ta taille de compte, ton pourcentage de risque, ta distance de stop, et il te donne la taille de lot exacte. Plus rapide que de faire les maths à la main à chaque fois.
+        <strong style={{ color: '#F0F4FF' }}>Sur MetaTrader :</strong> MT4/MT5 n'a pas de calculateur de risque intégré (oui, vraiment). Il te faut soit : un calculateur externe, un EA/indicateur custom qui fait le calcul, ou un journal de trading avec un <Link to="/blog/fr/position-sizing-guide" className="text-kmf-accent hover:underline">calculateur de taille de lot</Link>. K.M.F. en a un intégré dans l'app — saisis ta taille de compte, ton pourcentage de risque, ta distance de stop, et il te donne la taille de lot exacte. Plus rapide que de faire les maths à la main à chaque fois.
       </P>
       <P>
         <strong style={{ color: '#F0F4FF' }}>Sur cTrader :</strong> cTrader a un calculateur de taille de position intégré (clic droit sur le ticket de trade → « Risk % »). Règle ton pourcentage de risque et il calcule automatiquement la taille de lot correcte selon ta distance de stop. C'est un domaine où cTrader surpasse vraiment MetaTrader.

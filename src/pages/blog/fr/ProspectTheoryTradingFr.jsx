@@ -74,7 +74,7 @@ export default function ProspectTheoryTradingFr() {
         '« Je serais tellement en colère si ça se transformait en perte. »',
       ]} />
       <P>
-        Alors tu clôtures à +20 pips au lieu de +60. Ou pire, tu <Link to="/blog/breakeven-stop-too-early" className="text-kmf-accent hover:underline">déplaces ton stop au breakeven</Link> et tu te fais stopper à zéro avant que le prix atteigne ta cible. Dans les deux cas, tu as laissé deux tiers de ta récompense attendue sur la table. Multiplie ça par 100 trades et ton trade gagnant moyen est de 0,8R au lieu de 2,5R. L'<Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> de ta stratégie passe de positive à négative. Tu es systématiquement rentable sur le papier et systématiquement fauché en pratique.
+        Alors tu clôtures à +20 pips au lieu de +60. Ou pire, tu <Link to="/blog/fr/breakeven-stop-too-early" className="text-kmf-accent hover:underline">déplaces ton stop au breakeven</Link> et tu te fais stopper à zéro avant que le prix atteigne ta cible. Dans les deux cas, tu as laissé deux tiers de ta récompense attendue sur la table. Multiplie ça par 100 trades et ton trade gagnant moyen est de 0,8R au lieu de 2,5R. L'<Link to="/blog/fr/trading-expectancy-explained" className="text-kmf-accent hover:underline">espérance</Link> de ta stratégie passe de positive à négative. Tu es systématiquement rentable sur le papier et systématiquement fauché en pratique.
       </P>
 
       <H3>Scénario 2 : le perdant que tu ne peux pas tuer</H3>
@@ -115,7 +115,7 @@ export default function ProspectTheoryTradingFr() {
         Relis ça. Le trader biaisé a un win rate plus élevé — 55 % contre 45 %. Il « gagne » plus souvent. Il se sent mieux dans son trading. Il parle de son win rate à ses amis. Et il perd de l'argent. Le win rate a monté parce qu'il prend des profits rapides (plus de petits gains fréquents), mais le gain moyen a tellement rétréci qu'il ne peut pas couvrir la perte moyenne (qui a grandi parce qu'il garde ses perdants).
       </P>
       <P>
-        C'est pourquoi le <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">win rate est une métrique terrible isolée</Link>. Un win rate de 55 % avec 0,9R de gain moyen et 1,8R de perte moyenne est une stratégie perdante portant le masque d'un gagnant.
+        C'est pourquoi le <Link to="/blog/fr/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">win rate est une métrique terrible isolée</Link>. Un win rate de 55 % avec 0,9R de gain moyen et 1,8R de perte moyenne est une stratégie perdante portant le masque d'un gagnant.
       </P>
 
       <H2>La solution : déjouer 2 millions d'années d'évolution</H2>
@@ -125,7 +125,7 @@ export default function ProspectTheoryTradingFr() {
 
       <H3>1. Stops durs, cibles dures, aucune exception</H3>
       <P>
-        Place ton <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss</Link> et ton take profit comme des ordres limites sur la plateforme avant l'entrée. Pas des « stops mentaux » — ceux-là s'évaporent au moment où le prix les approche. Des ordres physiques qui s'exécutent que tu regardes ou que tu dormes. Le marché ne négocie pas. Tes ordres non plus.
+        Place ton <Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss</Link> et ton take profit comme des ordres limites sur la plateforme avant l'entrée. Pas des « stops mentaux » — ceux-là s'évaporent au moment où le prix les approche. Des ordres physiques qui s'exécutent que tu regardes ou que tu dormes. Le marché ne négocie pas. Tes ordres non plus.
       </P>
 
       <Callout title="Les stops mentaux sont des mensonges que tu te racontes" color="#FF5252">
@@ -134,7 +134,7 @@ export default function ProspectTheoryTradingFr() {
 
       <H3>2. Pense en R, pas en dollars</H3>
       <P>
-        Quand ton affichage de P/L dit « −347 $ », ton cerveau traite une menace. Quand ton journal dit « −1,0R », ton cerveau traite une donnée. Même perte, réponse neurologique entièrement différente. Les <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> retirent l'émotion de l'évaluation des trades. K.M.F. calcule et suit ton R-multiple sur chaque trade automatiquement — pour que ta séance de revue porte sur la qualité du processus, pas sur le chagrin du montant en dollars.
+        Quand ton affichage de P/L dit « −347 $ », ton cerveau traite une menace. Quand ton journal dit « −1,0R », ton cerveau traite une donnée. Même perte, réponse neurologique entièrement différente. Les <Link to="/blog/fr/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> retirent l'émotion de l'évaluation des trades. K.M.F. calcule et suit ton R-multiple sur chaque trade automatiquement — pour que ta séance de revue porte sur la qualité du processus, pas sur le chagrin du montant en dollars.
       </P>
 
       <H3>3. La règle « ne pas toucher »</H3>

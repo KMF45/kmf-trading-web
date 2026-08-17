@@ -45,11 +45,11 @@ export default function RevengeTradingFr() {
       </P>
       <H3>L'aversion à la perte</H3>
       <P>
-        Les recherches de Daniel Kahneman et Amos Tversky ont établi que la douleur psychologique de perdre 100 $ est environ deux fois plus intense que le plaisir de gagner 100 $. En trading, ça signifie que les pertes font un mal disproportionné, et le cerveau veut éliminer cette douleur de toute urgence — non pas en la digérant, mais en l'effaçant. Le moyen le plus rapide d'effacer une perte de 200 $, insiste le cerveau émotionnel, c'est de récupérer 200 $ immédiatement. Cette asymétrie est le cœur de la <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">théorie des perspectives</Link> — et elle réécrit discrètement tes décisions après chaque trade perdant.
+        Les recherches de Daniel Kahneman et Amos Tversky ont établi que la douleur psychologique de perdre 100 $ est environ deux fois plus intense que le plaisir de gagner 100 $. En trading, ça signifie que les pertes font un mal disproportionné, et le cerveau veut éliminer cette douleur de toute urgence — non pas en la digérant, mais en l'effaçant. Le moyen le plus rapide d'effacer une perte de 200 $, insiste le cerveau émotionnel, c'est de récupérer 200 $ immédiatement. Cette asymétrie est le cœur de la <Link to="/blog/fr/prospect-theory-trading" className="text-kmf-accent hover:underline">théorie des perspectives</Link> — et elle réécrit discrètement tes décisions après chaque trade perdant.
       </P>
       <H3>L'ego et le besoin d'avoir raison</H3>
       <P>
-        Beaucoup de traders — surtout les débutants — lient inconsciemment leur estime de soi aux résultats de leurs trades. C'est l'une des raisons fondamentales <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pour lesquelles les traders enfreignent leurs propres règles</Link>. Une perte n'est pas qu'un événement financier ; elle ressemble à un échec personnel. Le revenge trade est en partie une tentative de prouver que le marché avait tort, ou que le trader n'est pas incompétent. C'est dangereux parce que les marchés sont indifférents à ton ego.
+        Beaucoup de traders — surtout les débutants — lient inconsciemment leur estime de soi aux résultats de leurs trades. C'est l'une des raisons fondamentales <Link to="/blog/fr/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pour lesquelles les traders enfreignent leurs propres règles</Link>. Une perte n'est pas qu'un événement financier ; elle ressemble à un échec personnel. Le revenge trade est en partie une tentative de prouver que le marché avait tort, ou que le trader n'est pas incompétent. C'est dangereux parce que les marchés sont indifférents à ton ego.
       </P>
       <H3>Le biais de récence</H3>
       <P>
@@ -108,11 +108,11 @@ export default function RevengeTradingFr() {
       </P>
       <H3>3. Réduis la taille après les pertes</H3>
       <P>
-        Beaucoup de traders professionnels réduisent leur taille de position après un trade perdant — parfois à 50 % de la normale. C'est l'inverse de l'instinct de revanche. La logique est solide : quand tu tournes en dessous de ton edge, des paris plus petits limitent les dégâts. Quand tu retrouves une performance normale, restaure progressivement la taille normale. Pour creuser ce sujet, vois notre guide sur <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">comment se remettre d'une série de pertes</Link>.
+        Beaucoup de traders professionnels réduisent leur taille de position après un trade perdant — parfois à 50 % de la normale. C'est l'inverse de l'instinct de revanche. La logique est solide : quand tu tournes en dessous de ton edge, des paris plus petits limitent les dégâts. Quand tu retrouves une performance normale, restaure progressivement la taille normale. Pour creuser ce sujet, vois notre guide sur <Link to="/blog/fr/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">comment se remettre d'une série de pertes</Link>.
       </P>
       <H3>4. Écris avant de re-rentrer</H3>
       <P>
-        Avant d'entrer dans tout trade après une perte, écris : le nom du setup, la raison d'entrée, le niveau de stop loss, la cible et ton état émotionnel sur une échelle de 1 à 10 (10 étant complètement calme). Si tu ne peux pas articuler un setup clair, ou si ton état émotionnel est au-dessus de 6, n'entre pas. Une <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> structurée peut automatiser ce processus.
+        Avant d'entrer dans tout trade après une perte, écris : le nom du setup, la raison d'entrée, le niveau de stop loss, la cible et ton état émotionnel sur une échelle de 1 à 10 (10 étant complètement calme). Si tu ne peux pas articuler un setup clair, ou si ton état émotionnel est au-dessus de 6, n'entre pas. Une <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> structurée peut automatiser ce processus.
       </P>
       <H3>5. Ferme la plateforme</H3>
       <P>
@@ -127,7 +127,7 @@ export default function RevengeTradingFr() {
         Quand tu intériorises ça sincèrement, pas seulement intellectuellement, le revenge trading perd sa prise. Il n'y a rien à récupérer. Il n'y a que le prochain setup valide, pris à la bonne taille, avec le bon stop.
       </P>
       <P>
-        Si tu veux un protocole concret, étape par étape, que tu peux suivre mécaniquement quand tu es en tilt, lis notre <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading Kill Switch</Link> — cinq règles pré-programmées basées sur la recherche sur le cortisol, que tu fixes quand tu es calme et suis quand tu ne l'es pas.
+        Si tu veux un protocole concret, étape par étape, que tu peux suivre mécaniquement quand tu es en tilt, lis notre <Link to="/blog/fr/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading Kill Switch</Link> — cinq règles pré-programmées basées sur la recherche sur le cortisol, que tu fixes quand tu es calme et suis quand tu ne l'es pas.
       </P>
 
       <Takeaways items={[

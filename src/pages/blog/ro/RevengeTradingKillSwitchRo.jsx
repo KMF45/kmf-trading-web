@@ -41,7 +41,7 @@ export default function RevengeTradingKillSwitchRo() {
       </Intro>
 
       <P>
-        Acest articol e diferit de <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">prezentarea noastră a psihologiei revenge trading-ului</Link> și de <Link to="/blog/tilt-recovery-protocol" className="text-kmf-accent hover:underline">protocolul nostru de recuperare din tilt</Link>. Acelea explică de ce-ul. Ăsta e cum-ul — un set concret, pre-programat de reguli pe care le construiești când ești calm și rațional, și apoi le urmezi mecanic când nu ești. Gândește-te la el ca la o procedură de urgență. Piloții nu își dau seama ce să facă în timpul unui incendiu de motor în timp real. Urmează un checklist scris de oameni care nu erau în panică în acel moment.
+        Acest articol e diferit de <Link to="/blog/ro/revenge-trading" className="text-kmf-accent hover:underline">prezentarea noastră a psihologiei revenge trading-ului</Link> și de <Link to="/blog/ro/tilt-recovery-protocol" className="text-kmf-accent hover:underline">protocolul nostru de recuperare din tilt</Link>. Acelea explică de ce-ul. Ăsta e cum-ul — un set concret, pre-programat de reguli pe care le construiești când ești calm și rațional, și apoi le urmezi mecanic când nu ești. Gândește-te la el ca la o procedură de urgență. Piloții nu își dau seama ce să facă în timpul unui incendiu de motor în timp real. Urmează un checklist scris de oameni care nu erau în panică în acel moment.
       </P>
 
       <StatsStrip items={[
@@ -107,7 +107,7 @@ export default function RevengeTradingKillSwitchRo() {
         Dacă pierderile tale combinate pe zi ajung la 2% din soldul contului, ziua s-a terminat. Asta include trade-urile deschise. Niciun „hai să văd doar dacă ăsta își revine".
       </P>
       <P>
-        De ce 2%? Fiindcă două trade-uri la 1% risc fiecare sunt exact 2%. Dacă amândouă pierd, ți-ai atins limita zilnică înainte ca ciclul de revenge să înceapă măcar. Pe un <Link to="/blog/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">cont de prop firm cu o regulă de drawdown zilnic de 5%</Link>, 2% îți dă un buffer de siguranță masiv. Pe un cont personal, 2% înseamnă că până și cinci zile proaste consecutive te costă doar 10%.
+        De ce 2%? Fiindcă două trade-uri la 1% risc fiecare sunt exact 2%. Dacă amândouă pierd, ți-ai atins limita zilnică înainte ca ciclul de revenge să înceapă măcar. Pe un <Link to="/blog/ro/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">cont de prop firm cu o regulă de drawdown zilnic de 5%</Link>, 2% îți dă un buffer de siguranță masiv. Pe un cont personal, 2% înseamnă că până și cinci zile proaste consecutive te costă doar 10%.
       </P>
 
       <H3>Regula 3: Perioadă Obligatorie de Răcire de 4 Ore</H3>
@@ -170,7 +170,7 @@ export default function RevengeTradingKillSwitchRo() {
         K.M.F. Trading Journal are un sistem de detecție de tilt încorporat care îți monitorizează pattern-urile de tranzacționare — pierderi consecutive, position size-uri în creștere, log-uri de emoție negativă — și marchează când comportamentul tău se potrivește cu pattern-urile de revenge trading. Afișează o avertizare pe 4 niveluri (de la „Ai grijă" la „Oprește-te din tranzacționat acum") pe baza datelor tale reale, nu a auto-evaluării tale. Fiindcă toată problema cu revenge trading-ul e că nu-ți dai seama că o faci până e prea târziu. Un sistem care veghează pentru tine e mai sigur decât o promisiune făcută ție însuți.
       </P>
       <P>
-        Aplicația îți loghează și <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">starea emoțională pre-trade</Link> — Calm, Încrezător, Anxios, Frustrat, Speriat, Entuziasmat — înainte și după fiecare trade. După o lună, poți vedea exact ce stări emoționale se corelează cu cele mai proaste trade-uri ale tale. Cei mai mulți traderi descoperă că emoțiile pre-trade „Frustrat" sau „Anxios" au un win rate cu 15-25% mai mic decât intrările „Calm". Aia nu e o senzație. Aia e dată. Iar datele sunt mai greu de contrazis decât intențiile.
+        Aplicația îți loghează și <Link to="/blog/ro/pre-trade-checklist" className="text-kmf-accent hover:underline">starea emoțională pre-trade</Link> — Calm, Încrezător, Anxios, Frustrat, Speriat, Entuziasmat — înainte și după fiecare trade. După o lună, poți vedea exact ce stări emoționale se corelează cu cele mai proaste trade-uri ale tale. Cei mai mulți traderi descoperă că emoțiile pre-trade „Frustrat" sau „Anxios" au un win rate cu 15-25% mai mic decât intrările „Calm". Aia nu e o senzație. Aia e dată. Iar datele sunt mai greu de contrazis decât intențiile.
       </P>
 
       <Divider />

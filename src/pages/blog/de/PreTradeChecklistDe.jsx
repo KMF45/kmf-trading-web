@@ -55,7 +55,7 @@ export default function PreTradeChecklistDe() {
         Forschung zur Entscheidungsfindung unter Druck zeigt konstant, dass Menschen schlecht darin sind, mehrstufige Bewertungen in Echtzeit durchzuführen — besonders unter Stress oder Zeitdruck. Wir überspringen Schritte, gewichten jüngste Informationen zu stark und lassen den emotionalen Zustand das analytische Urteil verunreinigen.
       </P>
       <P>
-        Eine Checkliste externalisiert die Entscheidungskriterien. Statt sich auf dein In-the-Moment-System-1-Denken (schnell, emotional) zu verlassen, um einen Trade richtig zu bewerten, erzwingt eine Checkliste das systematische Einschalten des System-2-Denkens (langsam, überlegt). Sie erzeugt eine verpflichtende Lücke zwischen Impuls und Handlung — und in dieser Lücke wohnt die Disziplin. Das ist auch der Grund, <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre eigenen Regeln brechen</Link> — ohne Checkliste gewinnt System 1 jedes Mal.
+        Eine Checkliste externalisiert die Entscheidungskriterien. Statt sich auf dein In-the-Moment-System-1-Denken (schnell, emotional) zu verlassen, um einen Trade richtig zu bewerten, erzwingt eine Checkliste das systematische Einschalten des System-2-Denkens (langsam, überlegt). Sie erzeugt eine verpflichtende Lücke zwischen Impuls und Handlung — und in dieser Lücke wohnt die Disziplin. Das ist auch der Grund, <Link to="/blog/de/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre eigenen Regeln brechen</Link> — ohne Checkliste gewinnt System 1 jedes Mal.
       </P>
       <Callout title="Die zentrale Erkenntnis" color="#FFB300">
         Eine Checkliste macht dich nicht zu einem besseren Analysten. Sie stellt sicher, dass die Analyse, die du bereits beherrschst, vor jedem Trade tatsächlich durchgeführt wird — nicht nur manchmal, nicht nur wenn du daran denkst, sondern jedes einzelne Mal.
@@ -87,7 +87,7 @@ export default function PreTradeChecklistDe() {
 
       <H3>5. Habe ich meine Positionsgröße basierend auf 1 % Risiko berechnet?</H3>
       <P>
-        Schätze nicht. Berechne. Risikobetrag = Konto × 0,01. Positionsgröße = Risikobetrag ÷ Stop-Abstand. Das dauert 20 Sekunden und stellt sicher, dass das schlechtest­mögliche Ergebnis dieses Trades — ein Vollverlust — genau 1 % deines Kontos kostet, nicht ungefähr 1 % nach Gefühl. Siehe unseren <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">kompletten Positionsgrößen-Leitfaden</Link> für die genaue Formel über Forex, Aktien und Krypto.
+        Schätze nicht. Berechne. Risikobetrag = Konto × 0,01. Positionsgröße = Risikobetrag ÷ Stop-Abstand. Das dauert 20 Sekunden und stellt sicher, dass das schlechtest­mögliche Ergebnis dieses Trades — ein Vollverlust — genau 1 % deines Kontos kostet, nicht ungefähr 1 % nach Gefühl. Siehe unseren <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">kompletten Positionsgrößen-Leitfaden</Link> für die genaue Formel über Forex, Aktien und Krypto.
       </P>
 
       <H3>6. Steht in der nächsten Stunde ein großes Nachrichtenereignis an?</H3>
@@ -97,7 +97,7 @@ export default function PreTradeChecklistDe() {
 
       <H3>7. Trade ich aus Langeweile oder FOMO?</H3>
       <P>
-        Sei ehrlich. Frage dich: Gehe ich diesen Trade ein, weil es ein echtes Setup gibt, oder weil ich vor dem Bildschirm sitze und das Gefühl habe, etwas tun zu müssen? FOMO-Trades — eingegangen, weil eine Bewegung bereits passiert und du sie nicht verpassen willst — und Langeweile-Trades gehören zu den zuverlässigsten Verlustkategorien. Ist die ehrliche Antwort ja, schließe den Chart und warte. Diese Art impulsiven Einstiegs ist der erste Schritt zum <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link>.
+        Sei ehrlich. Frage dich: Gehe ich diesen Trade ein, weil es ein echtes Setup gibt, oder weil ich vor dem Bildschirm sitze und das Gefühl habe, etwas tun zu müssen? FOMO-Trades — eingegangen, weil eine Bewegung bereits passiert und du sie nicht verpassen willst — und Langeweile-Trades gehören zu den zuverlässigsten Verlustkategorien. Ist die ehrliche Antwort ja, schließe den Chart und warte. Diese Art impulsiven Einstiegs ist der erste Schritt zum <Link to="/blog/de/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link>.
       </P>
 
       <H3>8. Bin ich emotional bereit, mit diesem Trade gegen mich umzugehen?</H3>

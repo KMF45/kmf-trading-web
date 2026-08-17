@@ -103,6 +103,9 @@ const PropFirmDailyDrawdownRo = lazy(() => import('./pages/blog/ro/PropFirmDaily
 const ScaredMoneyPropFirmRo = lazy(() => import('./pages/blog/ro/ScaredMoneyPropFirmRo'));
 const BestTradingJournalAndroid2026Ro = lazy(() => import('./pages/blog/ro/BestTradingJournalAndroid2026Ro'));
 const SwingVsDayTradingRo = lazy(() => import('./pages/blog/ro/SwingVsDayTradingRo'));
+const DrawdownAfterProfitabilityRo = lazy(() => import('./pages/blog/ro/DrawdownAfterProfitabilityRo'));
+const PositionSizeCeilingRo = lazy(() => import('./pages/blog/ro/PositionSizeCeilingRo'));
+const WhenToWithdrawProfitsRo = lazy(() => import('./pages/blog/ro/WhenToWithdrawProfitsRo'));
 const BestTradingJournalAndroid2026De = lazy(() => import('./pages/blog/de/BestTradingJournalAndroid2026De'));
 // German blog articles
 const ProfitFactorVsWinRateDe = lazy(() => import('./pages/blog/de/ProfitFactorVsWinRateDe'));
@@ -344,6 +347,9 @@ function App() {
           <Route path="/blog/ro/scared-money-prop-firm" element={<ScaredMoneyPropFirmRo />} />
           <Route path="/blog/ro/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026Ro />} />
           <Route path="/blog/ro/swing-trading-vs-day-trading" element={<SwingVsDayTradingRo />} />
+          <Route path="/blog/ro/drawdown-after-profitability" element={<DrawdownAfterProfitabilityRo />} />
+          <Route path="/blog/ro/position-size-psychological-ceiling" element={<PositionSizeCeilingRo />} />
+          <Route path="/blog/ro/when-to-withdraw-trading-profits" element={<WhenToWithdrawProfitsRo />} />
           <Route path="/blog/de/best-free-trading-journal-app-android-2026" element={<BestTradingJournalAndroid2026De />} />
           {/* German blog articles */}
           <Route path="/blog/de/profit-factor-vs-win-rate" element={<ProfitFactorVsWinRateDe />} />

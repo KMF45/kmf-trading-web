@@ -47,7 +47,7 @@ export default function WeeklyTradingReviewTemplateDe() {
 
       <H2>Warum wöchentlich — nicht täglich</H2>
       <P>
-        Tägliche Reviews sind nützlich, um Trades zu loggen, solange die Details frisch sind — also deine <Link to="/blog/10-questions-after-every-trade" className="text-kmf-accent hover:underline">Fragen nach dem Trade</Link> zu beantworten — aber sie sind zu nah am Geschehen für Mustererkennung. An einem beliebigen Tag hattest du vielleicht zwei Trades. Das sind nicht genug Daten, um zu bemerken, dass du dienstags konstant überhandelst oder dass deine Montagmorgen-Setups eine deutlich höhere Verlustrate haben.
+        Tägliche Reviews sind nützlich, um Trades zu loggen, solange die Details frisch sind — also deine <Link to="/blog/de/10-questions-after-every-trade" className="text-kmf-accent hover:underline">Fragen nach dem Trade</Link> zu beantworten — aber sie sind zu nah am Geschehen für Mustererkennung. An einem beliebigen Tag hattest du vielleicht zwei Trades. Das sind nicht genug Daten, um zu bemerken, dass du dienstags konstant überhandelst oder dass deine Montagmorgen-Setups eine deutlich höhere Verlustrate haben.
       </P>
       <P>
         Wöchentliche Reviews bieten die richtige Auflösung. Du hast genug Trades, um kurzfristige Muster zu erkennen, genug Zeit ist vergangen, um Entscheidungen mit emotionalem Abstand zu prüfen, und die Frequenz ist hoch genug, dass du dein Verhalten als Reaktion auf das Gefundene tatsächlich ändern kannst.
@@ -82,7 +82,7 @@ export default function WeeklyTradingReviewTemplateDe() {
 
       <H3>3. Prozess-Review</H3>
       <P>
-        Trenne die Qualität deines Prozesses von der Qualität des Ergebnisses. Ein Trade, der deinen Regeln perfekt folgte, aber Geld verlor, ist ein besserer Trade als einer, der deine Regeln brach, aber Geld machte — <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">gute Verluste vs schlechte Gewinne</Link> zu verstehen ist hierfür essenziell. Das Prozess-Review trainiert dich, dich an dem zu messen, was du tatsächlich kontrollieren kannst.
+        Trenne die Qualität deines Prozesses von der Qualität des Ergebnisses. Ein Trade, der deinen Regeln perfekt folgte, aber Geld verlor, ist ein besserer Trade als einer, der deine Regeln brach, aber Geld machte — <Link to="/blog/de/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">gute Verluste vs schlechte Gewinne</Link> zu verstehen ist hierfür essenziell. Das Prozess-Review trainiert dich, dich an dem zu messen, was du tatsächlich kontrollieren kannst.
       </P>
       <Ul items={[
         'Entsprachen meine Einstiege meinen Setup-Kriterien für Zeitrahmen, Struktur und Bestätigung?',

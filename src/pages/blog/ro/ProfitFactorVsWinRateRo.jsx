@@ -120,7 +120,7 @@ export default function ProfitFactorVsWinRateRo() {
       <H2>Cum Îți Îmbunătățești Profit Factor-ul</H2>
       <H3>Taie pierzătorii mai repede</H3>
       <P>
-        Cea mai directă pârghie pe profit factor e numitorul: pierderea ta brută. De fiecare dată când muți un stop loss mai departe ca să eviți să fii scos din trade, îți mărești pierderea medie și îți tragi în jos profit factor-ul. Respectă <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">plasarea inițială a stop loss-ului</Link>. O pierdere medie mai mică are un efect uriaș de compounding pe profit factor în timp.
+        Cea mai directă pârghie pe profit factor e numitorul: pierderea ta brută. De fiecare dată când muți un stop loss mai departe ca să eviți să fii scos din trade, îți mărești pierderea medie și îți tragi în jos profit factor-ul. Respectă <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">plasarea inițială a stop loss-ului</Link>. O pierdere medie mai mică are un efect uriaș de compounding pe profit factor în timp.
       </P>
       <H3>Lasă câștigătorii să curgă</H3>
       <P>
@@ -128,7 +128,7 @@ export default function ProfitFactorVsWinRateRo() {
       </P>
       <H3>Verifică-ți R:R-ul înainte de fiecare trade</H3>
       <P>
-        Înainte să intri în orice trade, calculează distanța de la intrare la stop loss și de la intrare la target. Dacă raportul nu e cel puțin 1.5:1, trade-ul are nevoie de o probabilitate mai mare ca să justifice luarea lui. Doar filtrând setup-urile cu R:R mic poți îmbunătăți semnificativ profit factor-ul fără să-ți schimbi deloc strategia. Măsurarea fiecărui trade în <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multipli</Link> face evaluarea asta automată.
+        Înainte să intri în orice trade, calculează distanța de la intrare la stop loss și de la intrare la target. Dacă raportul nu e cel puțin 1.5:1, trade-ul are nevoie de o probabilitate mai mare ca să justifice luarea lui. Doar filtrând setup-urile cu R:R mic poți îmbunătăți semnificativ profit factor-ul fără să-ți schimbi deloc strategia. Măsurarea fiecărui trade în <Link to="/blog/ro/r-multiple-explained" className="text-kmf-accent hover:underline">R-multipli</Link> face evaluarea asta automată.
       </P>
 
       <Divider />

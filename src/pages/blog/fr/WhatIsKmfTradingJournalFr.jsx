@@ -101,7 +101,7 @@ export default function WhatIsKmfTradingJournalFr() {
         'Analyse de durée — gardes-tu tes gagnants assez longtemps ? Coupes-tu tes perdants assez vite ?',
       ]} />
       <P>
-        Tout cela se met à jour automatiquement à mesure que tu enregistres tes trades. Aucune formule à construire, aucun tableau croisé dynamique à maintenir, aucune <Link to="/blog/excel-vs-trading-journal-app" className="text-kmf-accent hover:underline">erreur de tableur</Link> qui corrompt silencieusement tes données.
+        Tout cela se met à jour automatiquement à mesure que tu enregistres tes trades. Aucune formule à construire, aucun tableau croisé dynamique à maintenir, aucune <Link to="/blog/fr/excel-vs-trading-journal-app" className="text-kmf-accent hover:underline">erreur de tableur</Link> qui corrompt silencieusement tes données.
       </P>
 
       <H3>Calculateur de taille de lot</H3>
@@ -111,12 +111,12 @@ export default function WhatIsKmfTradingJournalFr() {
 
       <H3>Checklist pré-trade</H3>
       <P>
-        Une <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> personnalisable que tu parcours avant chaque entrée. Tu définis les critères — direction de tendance confirmée, stop loss à un niveau de structure, risque dans les limites, état émotionnel acceptable. Si une case n'est pas cochée, la checklist est incomplète. C'est un garde-fou mécanique contre les entrées impulsives.
+        Une <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> personnalisable que tu parcours avant chaque entrée. Tu définis les critères — direction de tendance confirmée, stop loss à un niveau de structure, risque dans les limites, état émotionnel acceptable. Si une case n'est pas cochée, la checklist est incomplète. C'est un garde-fou mécanique contre les entrées impulsives.
       </P>
 
       <H3>Revue hebdomadaire</H3>
       <P>
-        Chaque semaine, K.M.F. t'invite à examiner ta performance selon cinq indicateurs de discipline. Tu t'auto-évalues, tu écris des notes de réflexion, tu fixes des objectifs pour la semaine suivante. C'est la <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">boucle de feedback</Link> qui fait réellement progresser — pas le trade isolé, mais le schéma à travers les trades.
+        Chaque semaine, K.M.F. t'invite à examiner ta performance selon cinq indicateurs de discipline. Tu t'auto-évalues, tu écris des notes de réflexion, tu fixes des objectifs pour la semaine suivante. C'est la <Link to="/blog/fr/weekly-trading-review-template" className="text-kmf-accent hover:underline">boucle de feedback</Link> qui fait réellement progresser — pas le trade isolé, mais le schéma à travers les trades.
       </P>
 
       <H3>Journal de trading</H3>
@@ -143,7 +143,7 @@ export default function WhatIsKmfTradingJournalFr() {
 
       <H3>Miroir d'honnêteté (Premium)</H3>
       <P>
-        Le Miroir d'honnêteté calcule la corrélation entre ta confiance auto-évaluée et ton P/L réel. Il te dit si tu es en surconfiance (tu te notes très haut sur des trades qui perdent) ou en sous-confiance (tu doutes de trades qui gagnent en réalité). La plupart des traders sont choqués par ce que ça révèle — <Link to="/blog/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">confiance contre surconfiance</Link> est l'une des dynamiques les plus mal comprises du trading.
+        Le Miroir d'honnêteté calcule la corrélation entre ta confiance auto-évaluée et ton P/L réel. Il te dit si tu es en surconfiance (tu te notes très haut sur des trades qui perdent) ou en sous-confiance (tu doutes de trades qui gagnent en réalité). La plupart des traders sont choqués par ce que ça révèle — <Link to="/blog/fr/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">confiance contre surconfiance</Link> est l'une des dynamiques les plus mal comprises du trading.
       </P>
 
       <H3>Profil de personnalité de trader (Premium)</H3>
@@ -157,14 +157,14 @@ export default function WhatIsKmfTradingJournalFr() {
       </P>
 
       <Callout title="Pourquoi la psychologie compte autant" color="#CE93D8">
-        Nous avons construit le moteur psychologique parce que nous avons appris — à la dure — que <Link to="/blog/strategy-is-not-enough" className="text-kmf-accent hover:underline">la stratégie ne représente qu'environ 20 % du jeu</Link>. Les 80 % restants, c'est l'exécution, la discipline et la gestion émotionnelle. Tu peux avoir le meilleur setup du monde, si tu le sautes parce que tu as peur, ou si tu doubles ta taille parce que tu es en colère, la stratégie n'a plus d'importance. K.M.F. rend ces 80 % visibles et mesurables.
+        Nous avons construit le moteur psychologique parce que nous avons appris — à la dure — que <Link to="/blog/fr/strategy-is-not-enough" className="text-kmf-accent hover:underline">la stratégie ne représente qu'environ 20 % du jeu</Link>. Les 80 % restants, c'est l'exécution, la discipline et la gestion émotionnelle. Tu peux avoir le meilleur setup du monde, si tu le sautes parce que tu as peur, ou si tu doubles ta taille parce que tu es en colère, la stratégie n'a plus d'importance. K.M.F. rend ces 80 % visibles et mesurables.
       </Callout>
 
       <Divider />
 
       <H2>Gamification : XP, succès et paliers de trader</H2>
       <P>
-        Tenir un journal, c'est ennuyeux. On le sait. C'est <Link to="/blog/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">pourquoi 90 % des traders abandonnent en quelques semaines</Link>. Alors nous avons ajouté une couche de gamification — pas pour rendre l'app « fun » de façon superficielle, mais pour créer une boucle de récompense qui renforce les bons comportements.
+        Tenir un journal, c'est ennuyeux. On le sait. C'est <Link to="/blog/fr/why-traders-fail-at-journaling" className="text-kmf-accent hover:underline">pourquoi 90 % des traders abandonnent en quelques semaines</Link>. Alors nous avons ajouté une couche de gamification — pas pour rendre l'app « fun » de façon superficielle, mais pour créer une boucle de récompense qui renforce les bons comportements.
       </P>
       <Ul items={[
         'De l\'XP pour chaque trade enregistré, chaque checklist complétée, chaque revue hebdomadaire terminée',

@@ -71,7 +71,7 @@ export default function MondayEffectTradingFr() {
       </P>
       <H3>La pression de « bien commencer la semaine »</H3>
       <P>
-        Il y a un désir psychologique irrationnel mais puissant de commencer chaque semaine par un gain. Le P/L du lundi semble disproportionnellement important parce qu'il donne le ton émotionnel pour le reste de la semaine. Cette pression mène à des standards d'entrée plus bas, des entrées prématurées et une réticence à rester à l'écart et attendre — exactement les conditions qui produisent un <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">comportement de transgression des règles</Link>.
+        Il y a un désir psychologique irrationnel mais puissant de commencer chaque semaine par un gain. Le P/L du lundi semble disproportionnellement important parce qu'il donne le ton émotionnel pour le reste de la semaine. Cette pression mène à des standards d'entrée plus bas, des entrées prématurées et une réticence à rester à l'écart et attendre — exactement les conditions qui produisent un <Link to="/blog/fr/why-traders-break-their-rules" className="text-kmf-accent hover:underline">comportement de transgression des règles</Link>.
       </P>
 
       <Callout title="Le piège du lundi" color="#CE93D8">
@@ -123,7 +123,7 @@ export default function MondayEffectTradingFr() {
       </P>
 
       <P>
-        Les meilleurs traders comprennent que ne pas trader est en soi une décision de trading. Le lundi est souvent le jour où le coup à plus haut edge est de ne rien faire — laisser le marché se stabiliser, laisser la liquidité revenir, et laisser les émotions du week-end se dissiper. Les setups seront encore là le mardi. Ton capital sera intact. Et tu ne commenceras pas la semaine dans un trou, à faire du <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> pour t'en sortir.
+        Les meilleurs traders comprennent que ne pas trader est en soi une décision de trading. Le lundi est souvent le jour où le coup à plus haut edge est de ne rien faire — laisser le marché se stabiliser, laisser la liquidité revenir, et laisser les émotions du week-end se dissiper. Les setups seront encore là le mardi. Ton capital sera intact. Et tu ne commenceras pas la semaine dans un trou, à faire du <Link to="/blog/fr/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> pour t'en sortir.
       </P>
 
       <Takeaways items={[

@@ -72,7 +72,7 @@ export default function ExecutionGapDe() {
         Aber sein Live-Konto erzählte eine andere Geschichte. Nach drei Monaten Live-Trading lag seine tatsächliche Win Rate bei 41 %. Sein durchschnittlicher Gewinner war nur 1,1R, weil er Trades immer wieder früh schloss. Und er hatte nur 47 % der Setups genommen, die seine Strategie tatsächlich erzeugte — er hatte mehr als die Hälfte übersprungen.
       </P>
       <P>
-        Andrei hatte kein Strategie-Problem. Er hatte ein Ausführungsproblem. Und das Frustrierende war, dass er es nicht sehen konnte, bis er begann, jeden einzelnen Trade zu journalen — auch die, die er nicht nahm. Diese nicht genommenen Setups — was wir <Link to="/blog/ghost-trades-journaling-missed-opportunities" className="text-kmf-accent hover:underline">Ghost Trades</Link> nennen — erwiesen sich als seine wertvollsten Daten.
+        Andrei hatte kein Strategie-Problem. Er hatte ein Ausführungsproblem. Und das Frustrierende war, dass er es nicht sehen konnte, bis er begann, jeden einzelnen Trade zu journalen — auch die, die er nicht nahm. Diese nicht genommenen Setups — was wir <Link to="/blog/de/ghost-trades-journaling-missed-opportunities" className="text-kmf-accent hover:underline">Ghost Trades</Link> nennen — erwiesen sich als seine wertvollsten Daten.
       </P>
 
       <Callout title="Die unbequeme Wahrheit" color="#CE93D8">
@@ -111,7 +111,7 @@ export default function ExecutionGapDe() {
 
       <H3>1. Die 5-Sekunden-Regel</H3>
       <P>
-        Wenn dein Setup auslöst, gib dir fünf Sekunden. Erfüllt es deine Kriterien — alle — steig ein. Nicht zehn Sekunden. Nicht „lass mich noch eine Kerze beobachten". Fünf Sekunden. Eine <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link> macht das binär: ist jedes Kästchen angehakt, führst du aus. Zögern ist eine Rückkopplungsschleife: Je länger du wartest, desto mehr Gründe erfindet dein Gehirn, nicht zu handeln. Brich die Schleife ab.
+        Wenn dein Setup auslöst, gib dir fünf Sekunden. Erfüllt es deine Kriterien — alle — steig ein. Nicht zehn Sekunden. Nicht „lass mich noch eine Kerze beobachten". Fünf Sekunden. Eine <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link> macht das binär: ist jedes Kästchen angehakt, führst du aus. Zögern ist eine Rückkopplungsschleife: Je länger du wartest, desto mehr Gründe erfindet dein Gehirn, nicht zu handeln. Brich die Schleife ab.
       </P>
 
       <H3>2. Lege dich auf deine Setups im Voraus fest</H3>
@@ -126,7 +126,7 @@ export default function ExecutionGapDe() {
 
       <H3>4. Überprüfe übersprungene Trades wöchentlich</H3>
       <P>
-        Widme in deinem <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentlichen Review</Link> einen Abschnitt den Trades, die du nicht genommen hast. Was war das Ergebnis? Warum hast du übersprungen? Gibt es ein Muster? Diese wöchentliche Konfrontation mit deinem eigenen Zögern ist unangenehm — aber sie ist der schnellste Weg, Ausführungsvertrauen aufzubauen.
+        Widme in deinem <Link to="/blog/de/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentlichen Review</Link> einen Abschnitt den Trades, die du nicht genommen hast. Was war das Ergebnis? Warum hast du übersprungen? Gibt es ein Muster? Diese wöchentliche Konfrontation mit deinem eigenen Zögern ist unangenehm — aber sie ist der schnellste Weg, Ausführungsvertrauen aufzubauen.
       </P>
 
       <Divider />

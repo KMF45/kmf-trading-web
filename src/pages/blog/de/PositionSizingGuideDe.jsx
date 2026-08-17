@@ -53,7 +53,7 @@ export default function PositionSizingGuideDe() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Positionsgröße = Risikobetrag ÷ Stop-Loss-Abstand (in Preiseinheiten)</strong>
       </P>
       <P>
-        Jede Variante der Positionsgrößenberechnung — ob für Forex-Lots, Aktien-Stücke oder Krypto-Einheiten — ist eine Abwandlung dieser Kernformel. Die Eingaben ändern sich je nach Markt, aber die Logik ist identisch. Beachte, dass es <Link to="/blog/crypto-vs-forex-journaling" className="text-kmf-accent hover:underline">unterschiedliche Regeln für Krypto vs Forex</Link> gibt, wenn es um Journaling und Risiko geht.
+        Jede Variante der Positionsgrößenberechnung — ob für Forex-Lots, Aktien-Stücke oder Krypto-Einheiten — ist eine Abwandlung dieser Kernformel. Die Eingaben ändern sich je nach Markt, aber die Logik ist identisch. Beachte, dass es <Link to="/blog/de/crypto-vs-forex-journaling" className="text-kmf-accent hover:underline">unterschiedliche Regeln für Krypto vs Forex</Link> gibt, wenn es um Journaling und Risiko geht.
       </P>
 
       <H2>Schritt-für-Schritt-Prozess</H2>
@@ -145,7 +145,7 @@ export default function PositionSizingGuideDe() {
         Viele Trader — besonders die, die aus einem Hintergrund des Marktbeobachtens ohne Traden kommen — entwickeln die Gewohnheit, Positionen danach zu dimensionieren, wie überzeugt sie von einem Setup sind. „Das sieht richtig gut aus, ich setze mehr ein." Das ist das Anti-Muster.
       </P>
       <P>
-        Kein Trade ist so gut, dass er rechtfertigt, deine Risikoregeln zu verletzen. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Die 1-%-Risikoregel</Link> gilt für jeden Trade, auch für den, der wie eine sichere Sache aussieht. Märkte sind per Definition ungewiss, und überzeugungsbasierte Positionsgrößen sind ein Bias, kein Edge. Konstant nach Formel zu dimensionieren ist das, was inkonstante Trader in konstante verwandelt.
+        Kein Trade ist so gut, dass er rechtfertigt, deine Risikoregeln zu verletzen. <Link to="/blog/de/1-percent-risk-rule" className="text-kmf-accent hover:underline">Die 1-%-Risikoregel</Link> gilt für jeden Trade, auch für den, der wie eine sichere Sache aussieht. Märkte sind per Definition ungewiss, und überzeugungsbasierte Positionsgrößen sind ein Bias, kein Edge. Konstant nach Formel zu dimensionieren ist das, was inkonstante Trader in konstante verwandelt.
       </P>
 
       <Takeaways items={[

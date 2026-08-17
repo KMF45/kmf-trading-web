@@ -117,18 +117,18 @@ export default function ScalingInVsScalingOutDe() {
 
       <H2>Die zentrale Erkenntnis</H2>
       <P>
-        Scaling In in Verlierer tötet Konten. Das ist nicht diskutabel — es ist bei genug Zeit eine mathematische Gewissheit. Du erhöhst das Exposure zu einer These, die der Markt aktiv widerlegt. Jede Aufstockung erhöht dein Gesamtrisiko, während die Erholungswahrscheinlichkeit sinkt. Und der Grund, warum Trader es trotzdem immer wieder tun, ist nicht Unwissenheit — es ist die <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">Prospect Theory</Link>: dein Gehirn ist darauf programmiert, größere Risiken einzugehen, um das Festschreiben eines Verlusts zu vermeiden.
+        Scaling In in Verlierer tötet Konten. Das ist nicht diskutabel — es ist bei genug Zeit eine mathematische Gewissheit. Du erhöhst das Exposure zu einer These, die der Markt aktiv widerlegt. Jede Aufstockung erhöht dein Gesamtrisiko, während die Erholungswahrscheinlichkeit sinkt. Und der Grund, warum Trader es trotzdem immer wieder tun, ist nicht Unwissenheit — es ist die <Link to="/blog/de/prospect-theory-trading" className="text-kmf-accent hover:underline">Prospect Theory</Link>: dein Gehirn ist darauf programmiert, größere Risiken einzugehen, um das Festschreiben eines Verlusts zu vermeiden.
       </P>
       <P>
-        Scaling In in Gewinner kann funktionieren, aber nur mit strengen Regeln: einer maximalen Anzahl von Aufstockungen, vordefinierten Levels und einer kumulativen Risikoobergrenze, die nie deine übliche <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Risikogrenze pro Trade</Link> überschreitet. Ohne diese Regeln wird selbst das Aufstocken von Gewinnern zu getarntem Über-Exposure.
+        Scaling In in Gewinner kann funktionieren, aber nur mit strengen Regeln: einer maximalen Anzahl von Aufstockungen, vordefinierten Levels und einer kumulativen Risikoobergrenze, die nie deine übliche <Link to="/blog/de/1-percent-risk-rule" className="text-kmf-accent hover:underline">Risikogrenze pro Trade</Link> überschreitet. Ohne diese Regeln wird selbst das Aufstocken von Gewinnern zu getarntem Über-Exposure.
       </P>
       <P>
-        Scaling Out ist ein Kompromiss, kein Gratis-Mittagessen. Es reduziert Varianz auf Kosten des Erwartungswerts. Ob dieser Kompromiss sich lohnt, hängt von der Win Rate deiner Strategie und deinem psychologischen Profil ab. Miss es mit <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfachen</Link> — rate nicht.
+        Scaling Out ist ein Kompromiss, kein Gratis-Mittagessen. Es reduziert Varianz auf Kosten des Erwartungswerts. Ob dieser Kompromiss sich lohnt, hängt von der Win Rate deiner Strategie und deinem psychologischen Profil ab. Miss es mit <Link to="/blog/de/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfachen</Link> — rate nicht.
       </P>
 
       <H2>Der beste Ansatz für Anfänger</H2>
       <P>
-        Wenn du weniger als 100 Trades mit konsistenten Daten protokolliert hast, nutze feste <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgrößen</Link>: voller Einstieg, voller Ausstieg. Kein Scaling In, kein Scaling Out. Das liegt nicht daran, dass diese Techniken schlecht sind — sondern daran, dass du nicht beurteilen kannst, ob sie helfen oder schaden, bevor du eine Basis hast. Du musst wissen, was deine Strategie mit einfacher Ausführung tut, bevor du Komplexität hinzufügst. Variablen zu einem unbewiesenen System hinzuzufügen macht es unmöglich zu diagnostizieren, was funktioniert und was nicht.
+        Wenn du weniger als 100 Trades mit konsistenten Daten protokolliert hast, nutze feste <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgrößen</Link>: voller Einstieg, voller Ausstieg. Kein Scaling In, kein Scaling Out. Das liegt nicht daran, dass diese Techniken schlecht sind — sondern daran, dass du nicht beurteilen kannst, ob sie helfen oder schaden, bevor du eine Basis hast. Du musst wissen, was deine Strategie mit einfacher Ausführung tut, bevor du Komplexität hinzufügst. Variablen zu einem unbewiesenen System hinzuzufügen macht es unmöglich zu diagnostizieren, was funktioniert und was nicht.
       </P>
 
       <Takeaways items={[

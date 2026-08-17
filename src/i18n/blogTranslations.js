@@ -1,6 +1,18 @@
 // Maps article slug → available language versions
 // Used by BlogArticleLayout to show LanguageSwitcher and inject hreflang tags
 const blogTranslations = {
+  'drawdown-after-profitability': {
+    en: '/blog/drawdown-after-profitability',
+    ro: '/blog/ro/drawdown-after-profitability',
+  },
+  'position-size-psychological-ceiling': {
+    en: '/blog/position-size-psychological-ceiling',
+    ro: '/blog/ro/position-size-psychological-ceiling',
+  },
+  'when-to-withdraw-trading-profits': {
+    en: '/blog/when-to-withdraw-trading-profits',
+    ro: '/blog/ro/when-to-withdraw-trading-profits',
+  },
   'what-is-kmf-trading-journal': {
     en: '/blog/what-is-kmf-trading-journal',
     ro: '/blog/ro/what-is-kmf-trading-journal',

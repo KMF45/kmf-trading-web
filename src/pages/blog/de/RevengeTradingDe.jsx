@@ -45,11 +45,11 @@ export default function RevengeTradingDe() {
       </P>
       <H3>Verlustaversion</H3>
       <P>
-        Forschung von Daniel Kahneman und Amos Tversky hat gezeigt, dass der psychische Schmerz, $100 zu verlieren, etwa doppelt so intensiv ist wie die Freude, $100 zu gewinnen. Im Trading bedeutet das: Verluste fühlen sich unverhältnismäßig schlecht an, und das Gehirn will diesen Schmerz dringend beseitigen — nicht, indem es ihn verarbeitet, sondern indem es ihn auslöscht. Der schnellste Weg, einen $200-Verlust auszulöschen, beharrt das emotionale Gehirn, sei, sofort $200 zurückzuverdienen. Diese Asymmetrie ist der Kern der <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">Prospect Theory</Link> — und sie schreibt deine Entscheidungen nach jedem Verlust-Trade leise um.
+        Forschung von Daniel Kahneman und Amos Tversky hat gezeigt, dass der psychische Schmerz, $100 zu verlieren, etwa doppelt so intensiv ist wie die Freude, $100 zu gewinnen. Im Trading bedeutet das: Verluste fühlen sich unverhältnismäßig schlecht an, und das Gehirn will diesen Schmerz dringend beseitigen — nicht, indem es ihn verarbeitet, sondern indem es ihn auslöscht. Der schnellste Weg, einen $200-Verlust auszulöschen, beharrt das emotionale Gehirn, sei, sofort $200 zurückzuverdienen. Diese Asymmetrie ist der Kern der <Link to="/blog/de/prospect-theory-trading" className="text-kmf-accent hover:underline">Prospect Theory</Link> — und sie schreibt deine Entscheidungen nach jedem Verlust-Trade leise um.
       </P>
       <H3>Ego und das Bedürfnis, recht zu haben</H3>
       <P>
-        Viele Trader — besonders Markteinsteiger — verknüpfen unbewusst ihren Selbstwert mit ihren Trade-Ergebnissen. Das ist einer der Hauptgründe, <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre eigenen Regeln brechen</Link>. Ein Verlust ist nicht nur ein finanzielles Ereignis; er fühlt sich wie ein persönliches Versagen an. Der Revenge-Trade ist teils ein Versuch zu beweisen, dass der Markt falsch lag oder dass der Trader nicht inkompetent ist. Das ist gefährlich, weil Märkte deinem Ego gegenüber gleichgültig sind.
+        Viele Trader — besonders Markteinsteiger — verknüpfen unbewusst ihren Selbstwert mit ihren Trade-Ergebnissen. Das ist einer der Hauptgründe, <Link to="/blog/de/why-traders-break-their-rules" className="text-kmf-accent hover:underline">warum Trader ihre eigenen Regeln brechen</Link>. Ein Verlust ist nicht nur ein finanzielles Ereignis; er fühlt sich wie ein persönliches Versagen an. Der Revenge-Trade ist teils ein Versuch zu beweisen, dass der Markt falsch lag oder dass der Trader nicht inkompetent ist. Das ist gefährlich, weil Märkte deinem Ego gegenüber gleichgültig sind.
       </P>
       <H3>Recency Bias</H3>
       <P>
@@ -108,11 +108,11 @@ export default function RevengeTradingDe() {
       </P>
       <H3>3. Reduziere die Größe nach Verlusten</H3>
       <P>
-        Viele professionelle Trader reduzieren ihre Positionsgröße nach einem Verlust-Trade — manchmal auf 50 % des Normalen. Das ist das Gegenteil des Revenge-Instinkts. Die Logik ist stichhaltig: Wenn du unter deinem Edge läufst, begrenzen kleinere Einsätze den Schaden. Kehrst du zur normalen Leistung zurück, stelle die normale Größe schrittweise wieder her. Für einen tieferen Einblick siehe unseren Leitfaden zur <Link to="/blog/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">Erholung von einer Verlustserie</Link>.
+        Viele professionelle Trader reduzieren ihre Positionsgröße nach einem Verlust-Trade — manchmal auf 50 % des Normalen. Das ist das Gegenteil des Revenge-Instinkts. Die Logik ist stichhaltig: Wenn du unter deinem Edge läufst, begrenzen kleinere Einsätze den Schaden. Kehrst du zur normalen Leistung zurück, stelle die normale Größe schrittweise wieder her. Für einen tieferen Einblick siehe unseren Leitfaden zur <Link to="/blog/de/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">Erholung von einer Verlustserie</Link>.
       </P>
       <H3>4. Schreibe, bevor du wieder einsteigst</H3>
       <P>
-        Bevor du nach einem Verlust einen Trade eingehst, notiere: den Setup-Namen, den Einstiegsgrund, das Stop-Loss-Level, das Ziel und deinen aktuellen emotionalen Zustand auf einer Skala von 1–10 (10 ist völlig ruhig). Kannst du kein klares Setup formulieren, oder liegt dein emotionaler Zustand über 6, steig nicht ein. Eine strukturierte <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link> kann diesen Prozess automatisieren.
+        Bevor du nach einem Verlust einen Trade eingehst, notiere: den Setup-Namen, den Einstiegsgrund, das Stop-Loss-Level, das Ziel und deinen aktuellen emotionalen Zustand auf einer Skala von 1–10 (10 ist völlig ruhig). Kannst du kein klares Setup formulieren, oder liegt dein emotionaler Zustand über 6, steig nicht ein. Eine strukturierte <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link> kann diesen Prozess automatisieren.
       </P>
       <H3>5. Schließe die Plattform</H3>
       <P>
@@ -127,7 +127,7 @@ export default function RevengeTradingDe() {
         Wenn du das wirklich verinnerlichst, nicht nur intellektuell, verliert Revenge Trading seinen Griff. Es gibt nichts zurückzuholen. Es gibt nur das nächste valide Setup, in der richtigen Größe eingegangen, mit dem richtigen Stop.
       </P>
       <P>
-        Wenn du ein konkretes, schrittweises Protokoll willst, dem du mechanisch folgen kannst, wenn du auf Tilt bist, lies unseren <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading Kill Switch</Link> — fünf vorprogrammierte Regeln auf Basis von Cortisol-Forschung, die du im ruhigen Zustand festlegst und im unruhigen befolgst.
+        Wenn du ein konkretes, schrittweises Protokoll willst, dem du mechanisch folgen kannst, wenn du auf Tilt bist, lies unseren <Link to="/blog/de/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">Revenge Trading Kill Switch</Link> — fünf vorprogrammierte Regeln auf Basis von Cortisol-Forschung, die du im ruhigen Zustand festlegst und im unruhigen befolgst.
       </P>
 
       <Takeaways items={[

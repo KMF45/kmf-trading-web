@@ -80,7 +80,7 @@ export default function TradingExpectancyExplainedRo() {
       </P>
       <H3>Expectancy Negativ</H3>
       <P>
-        O strategie cu expectancy negativ va pierde bani în timp, garantat. Nu contează cât de sofisticat e money management-ul, sau cât de disciplinată e execuția. Nicio tehnică de position sizing nu poate transforma un expectancy negativ într-un sistem profitabil. Singurele fix-uri sunt să îmbunătățești win rate-ul, să îmbunătățești mărimea câștigului mediu sau să reduci mărimea pierderii medii — iar o fundație solidă ca <Link to="/blog/1-percent-risk-rule">regula de 1% risc</Link> te asigură că supraviețuiești destul cât să găsești acele fix-uri.
+        O strategie cu expectancy negativ va pierde bani în timp, garantat. Nu contează cât de sofisticat e money management-ul, sau cât de disciplinată e execuția. Nicio tehnică de position sizing nu poate transforma un expectancy negativ într-un sistem profitabil. Singurele fix-uri sunt să îmbunătățești win rate-ul, să îmbunătățești mărimea câștigului mediu sau să reduci mărimea pierderii medii — iar o fundație solidă ca <Link to="/blog/ro/1-percent-risk-rule">regula de 1% risc</Link> te asigură că supraviețuiești destul cât să găsești acele fix-uri.
       </P>
       <Callout title="Principiul Cazinoului" color="#4FC3F7">
         Cazinourile fac bani nu fiindcă fiecare jucător pierde fiecare pariu, ci fiindcă casa are un expectancy ușor pozitiv la fiecare joc. Pe milioane de pariuri, matematica e inevitabilă. Trading-ul funcționează la fel — dacă ai expectancy pozitiv și iei destule trade-uri, profitabilitatea e o consecință matematică, nu o chestiune de noroc.
@@ -102,7 +102,7 @@ export default function TradingExpectancyExplainedRo() {
       <ExpectancyComparisonChart />
 
       <P>
-        Observă rândul cu 70% win rate: deși câștigă 7 din 10 trade-uri, strategia pierde bani fiindcă pierderile medii depășesc câștigurile medii. Asta e iluzia clasică a win rate-ului — iar expectancy o dezvăluie imediat. Pentru o privire mai amănunțită asupra felului în care interacționează win rate-ul și profit factor-ul, vezi ghidul nostru despre <Link to="/blog/profit-factor-vs-win-rate">profit factor vs win rate</Link>.
+        Observă rândul cu 70% win rate: deși câștigă 7 din 10 trade-uri, strategia pierde bani fiindcă pierderile medii depășesc câștigurile medii. Asta e iluzia clasică a win rate-ului — iar expectancy o dezvăluie imediat. Pentru o privire mai amănunțită asupra felului în care interacționează win rate-ul și profit factor-ul, vezi ghidul nostru despre <Link to="/blog/ro/profit-factor-vs-win-rate">profit factor vs win rate</Link>.
       </P>
 
       <H2>Expectancy în Termeni de R-Multiple</H2>
@@ -113,7 +113,7 @@ export default function TradingExpectancyExplainedRo() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Expectancy (R) = (Win Rate × Câștig Mediu R) − (Loss Rate × 1)</strong>
       </P>
       <P>
-        Asta se simplifică fiindcă o pierdere completă e mereu −1R prin definiție. Exemplu: 50% win rate, câștigul mediu e +2R. Expectancy = (0.50 × 2) − (0.50 × 1) = 1.0 − 0.5 = <strong style={{ color: '#00E676' }}>+0.5R per trade</strong>. Asta înseamnă că pentru fiecare dolar riscat, câștigi în medie 50 de cenți. Dacă R-multiple-urile sunt noi pentru tine, <Link to="/blog/r-multiple-explained">ghidul nostru R-multiple</Link> le explică pas cu pas.
+        Asta se simplifică fiindcă o pierdere completă e mereu −1R prin definiție. Exemplu: 50% win rate, câștigul mediu e +2R. Expectancy = (0.50 × 2) − (0.50 × 1) = 1.0 − 0.5 = <strong style={{ color: '#00E676' }}>+0.5R per trade</strong>. Asta înseamnă că pentru fiecare dolar riscat, câștigi în medie 50 de cenți. Dacă R-multiple-urile sunt noi pentru tine, <Link to="/blog/ro/r-multiple-explained">ghidul nostru R-multiple</Link> le explică pas cu pas.
       </P>
 
       <H2>Cum Îți Calculezi Propriul Expectancy</H2>

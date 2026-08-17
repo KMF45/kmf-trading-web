@@ -61,7 +61,7 @@ export default function WhyTradersFailAtJournalingRo() {
 
       <H3>5. Niciun beneficiu imediat</H3>
       <P>
-        Beneficiile jurnalizării sunt cumulative și întârziate. Nu vezi pattern-ul din revenge trade-urile tale până nu ai 50 de înregistrări. Nu observi corelația dintre <Link to="/blog/10-questions-after-every-trade" className="text-kmf-accent hover:underline">reflecțiile tale post-trade</Link> și execuția îmbunătățită până luni mai târziu. Creierul uman desconsideră puternic recompensele întârziate. Un obicei fără beneficiu vizibil pe termen scurt concurează prost cu activitățile care se simt productive chiar acum.
+        Beneficiile jurnalizării sunt cumulative și întârziate. Nu vezi pattern-ul din revenge trade-urile tale până nu ai 50 de înregistrări. Nu observi corelația dintre <Link to="/blog/ro/10-questions-after-every-trade" className="text-kmf-accent hover:underline">reflecțiile tale post-trade</Link> și execuția îmbunătățită până luni mai târziu. Creierul uman desconsideră puternic recompensele întârziate. Un obicei fără beneficiu vizibil pe termen scurt concurează prost cu activitățile care se simt productive chiar acum.
       </P>
 
       <Divider />
@@ -75,7 +75,7 @@ export default function WhyTradersFailAtJournalingRo() {
 
       <H3>Revizuiește săptămânal, nu zilnic</H3>
       <P>
-        Revizuirea zilnică a trade-urilor individuale creează zgomot emoțional. Un singur trade nu-ți spune nimic statistic. Dar un <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">review săptămânal a 10 până la 20 de trade-uri</Link> dezvăluie pattern-uri reale: ce setup-uri chiar performează, ce stări emoționale se corelează cu pierderile, unde te abați de la plan. Programează 30 de minute în fiecare weekend. Atunci dă jurnalul roade.
+        Revizuirea zilnică a trade-urilor individuale creează zgomot emoțional. Un singur trade nu-ți spune nimic statistic. Dar un <Link to="/blog/ro/weekly-trading-review-template" className="text-kmf-accent hover:underline">review săptămânal a 10 până la 20 de trade-uri</Link> dezvăluie pattern-uri reale: ce setup-uri chiar performează, ce stări emoționale se corelează cu pierderile, unde te abați de la plan. Programează 30 de minute în fiecare weekend. Atunci dă jurnalul roade.
       </P>
 
       <H3>Folosește template-uri ca să elimini fricțiunea</H3>
@@ -89,7 +89,7 @@ export default function WhyTradersFailAtJournalingRo() {
 
       <H3>Reîncadrează pierderile ca date, nu ca eșecuri</H3>
       <P>
-        Traderii care jurnalizează consistent au făcut o schimbare cognitivă: un trade pe pierdere nu e un eșec — e un punct de date. Jurnalul nu e o evidență a greșelilor tale. E un set de date care îți dezvăluie edge-ul. Când revizuiești o pierdere și descoperi că a fost un setup valid care pur și simplu nu a funcționat, aia e o pierdere bună. Când descoperi <Link to="/blog/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">decalajul dintre backtest-ul tău și execuția live</Link>, aia e informație pe care poți acționa. Jurnalul transformă durerea în progres — dar doar dacă îl folosești.
+        Traderii care jurnalizează consistent au făcut o schimbare cognitivă: un trade pe pierdere nu e un eșec — e un punct de date. Jurnalul nu e o evidență a greșelilor tale. E un set de date care îți dezvăluie edge-ul. Când revizuiești o pierdere și descoperi că a fost un setup valid care pur și simplu nu a funcționat, aia e o pierdere bună. Când descoperi <Link to="/blog/ro/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">decalajul dintre backtest-ul tău și execuția live</Link>, aia e informație pe care poți acționa. Jurnalul transformă durerea în progres — dar doar dacă îl folosești.
       </P>
 
       <H3>Urmărește serii, nu perfecțiune</H3>

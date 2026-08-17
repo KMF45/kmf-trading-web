@@ -77,7 +77,7 @@ export default function LottoTicketSyndromeRo() {
         ]}
       />
       <P>
-        Etapa 4 e unde se produce dauna reală — și nu prima pierdere te omoară. E încercarea de a-ți reveni din acea pierdere folosind același risc umflat care a cauzat-o. Ai luat o lovitură de 2.5%, așa că încerci să recuperezi cu un trade de 3.5%, apoi unul de 4%. Ăsta nu mai e trading. Ăsta e <Link to="/blog/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">revenge trading</Link> cu un chart deschis.
+        Etapa 4 e unde se produce dauna reală — și nu prima pierdere te omoară. E încercarea de a-ți reveni din acea pierdere folosind același risc umflat care a cauzat-o. Ai luat o lovitură de 2.5%, așa că încerci să recuperezi cu un trade de 3.5%, apoi unul de 4%. Ăsta nu mai e trading. Ăsta e <Link to="/blog/ro/revenge-trading-kill-switch" className="text-kmf-accent hover:underline">revenge trading</Link> cu un chart deschis.
       </P>
 
       <H2>De Ce Seriile de Câștiguri Sunt Statistic Lipsite de Sens</H2>
@@ -85,7 +85,7 @@ export default function LottoTicketSyndromeRo() {
         Iată matematica pe care creierul tău îmbibat în dopamină refuză să o proceseze: într-o strategie cu un win rate de 50%, probabilitatea de a atinge 4 câștiguri consecutive e 6.25%. Asta înseamnă că la fiecare 100 de trade-uri, vei experimenta cam 6 serii de 4+ câștiguri. Fiecare se va simți ca „a fi în zonă". Fiecare e varianță pură.
       </P>
       <P>
-        O <Link to="/blog/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">serie de câștiguri</Link> nu îți spune nimic despre următorul trade. Piața nu are memorie. Ultimele tale trei trade-uri fiind profitabile nu schimbă probabilitatea celui de-al patrulea cu nici măcar un punct procentual. Dar creierul tău — construit pentru recunoașterea pattern-urilor într-o lume de tigri cu colți-sabie — nu poate accepta asta. Insistă că există un pattern. Nu există.
+        O <Link to="/blog/ro/confidence-vs-overconfidence" className="text-kmf-accent hover:underline">serie de câștiguri</Link> nu îți spune nimic despre următorul trade. Piața nu are memorie. Ultimele tale trei trade-uri fiind profitabile nu schimbă probabilitatea celui de-al patrulea cu nici măcar un punct procentual. Dar creierul tău — construit pentru recunoașterea pattern-urilor într-o lume de tigri cu colți-sabie — nu poate accepta asta. Insistă că există un pattern. Nu există.
       </P>
 
       <Callout title="Încrederea Jucătorului" color="#FFB300">
@@ -97,7 +97,7 @@ export default function LottoTicketSyndromeRo() {
       <H2>Soluția: Cum Rămâi Plictisitor Cât Faci Bani</H2>
       <H3>1. Regula de Fier a Riscului</H3>
       <P>
-        Riscul tău per trade e o constantă. Nu un ghid. Nu un „de obicei". O lege fizică a trading-ului tău. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Un procent înseamnă un procent</Link> — fie că ești pe plus $2,000 pe săptămână, fie pe minus $500. În clipa în care procentul tău de risc devine o variabilă care se ajustează în funcție de „cum te simți", ți-ai predat contul sistemului limbic. Nu ți-l va da înapoi.
+        Riscul tău per trade e o constantă. Nu un ghid. Nu un „de obicei". O lege fizică a trading-ului tău. <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">Un procent înseamnă un procent</Link> — fie că ești pe plus $2,000 pe săptămână, fie pe minus $500. În clipa în care procentul tău de risc devine o variabilă care se ajustează în funcție de „cum te simți", ți-ai predat contul sistemului limbic. Nu ți-l va da înapoi.
       </P>
       <H3>2. Regula de Răcire de 24 de Ore</H3>
       <P>

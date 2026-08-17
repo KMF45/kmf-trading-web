@@ -46,7 +46,7 @@ export default function OvertradingChecklistFr() {
 
       <H3>2. Tu sautes ta checklist</H3>
       <P>
-        La <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> existe précisément pour des moments comme ceux-ci. Quand tu commences à te dire « je n'ai pas besoin de vérifier, celui-là est évident » ou « je le noterai après », tu es en territoire Système 1 — rapide, émotionnel et peu fiable. Au moment où ta checklist ressemble à un obstacle plutôt qu'à un outil, tu es en tilt. K.M.F. inclut une fonction checklist intégrée avec modèles par défaut et personnalisés qui apparaît avant chaque entrée, rendant structurellement difficile de la sauter.
+        La <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> existe précisément pour des moments comme ceux-ci. Quand tu commences à te dire « je n'ai pas besoin de vérifier, celui-là est évident » ou « je le noterai après », tu es en territoire Système 1 — rapide, émotionnel et peu fiable. Au moment où ta checklist ressemble à un obstacle plutôt qu'à un outil, tu es en tilt. K.M.F. inclut une fonction checklist intégrée avec modèles par défaut et personnalisés qui apparaît avant chaque entrée, rendant structurellement difficile de la sauter.
       </P>
 
       <H3>3. Tu descends sur des unités de temps plus petites</H3>
@@ -61,7 +61,7 @@ export default function OvertradingChecklistFr() {
 
       <H3>5. Ta taille de position grimpe doucement</H3>
       <P>
-        C'est l'un des signes les plus dangereux parce qu'il aggrave chaque autre erreur. Après une perte, l'instinct d'augmenter la taille pour récupérer plus vite est puissant et automatique. Ça ne ressemble pas à une décision consciente — ça ressemble à « ajuster ». Mais si tes trois derniers trades étaient à 0,5 lot et celui-ci à 1,2 lot, tu n'as pas ajusté. Tu as triplé ton risque pendant une période de mauvaise performance. C'est le mécanisme central derrière le <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link>.
+        C'est l'un des signes les plus dangereux parce qu'il aggrave chaque autre erreur. Après une perte, l'instinct d'augmenter la taille pour récupérer plus vite est puissant et automatique. Ça ne ressemble pas à une décision consciente — ça ressemble à « ajuster ». Mais si tes trois derniers trades étaient à 0,5 lot et celui-ci à 1,2 lot, tu n'as pas ajusté. Tu as triplé ton risque pendant une période de mauvaise performance. C'est le mécanisme central derrière le <Link to="/blog/fr/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link>.
       </P>
 
       <H3>6. Tu prends des setups que tu n'as jamais testés</H3>
@@ -92,7 +92,7 @@ export default function OvertradingChecklistFr() {
 
       <H2>Quoi faire quand tu te rattrapes</H2>
       <P>
-        Si tu t'es reconnu dans deux signes ou plus ci-dessus, l'action est simple mais pas facile : arrête de trader pour le reste de la séance. Ferme la plateforme. Fais quelque chose de physique — marche, sport, cuisine. Le cortisol et l'adrénaline dans ton système ont besoin de 20 à 30 minutes pour se dissiper. Quand tu reviens demain, revois honnêtement les trades d'aujourd'hui. Identifie lesquels étaient basés sur le plan et lesquels étaient basés sur l'émotion. Cette revue vaut plus que n'importe quel trade que tu aurais pu prendre. Lis-en plus sur <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pourquoi les traders enfreignent leurs règles</Link> et comment bâtir des systèmes qui l'empêchent.
+        Si tu t'es reconnu dans deux signes ou plus ci-dessus, l'action est simple mais pas facile : arrête de trader pour le reste de la séance. Ferme la plateforme. Fais quelque chose de physique — marche, sport, cuisine. Le cortisol et l'adrénaline dans ton système ont besoin de 20 à 30 minutes pour se dissiper. Quand tu reviens demain, revois honnêtement les trades d'aujourd'hui. Identifie lesquels étaient basés sur le plan et lesquels étaient basés sur l'émotion. Cette revue vaut plus que n'importe quel trade que tu aurais pu prendre. Lis-en plus sur <Link to="/blog/fr/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pourquoi les traders enfreignent leurs règles</Link> et comment bâtir des systèmes qui l'empêchent.
       </P>
 
       <Takeaways items={[

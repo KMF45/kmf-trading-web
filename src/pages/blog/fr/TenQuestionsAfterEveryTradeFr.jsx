@@ -59,7 +59,7 @@ export default function TenQuestionsAfterEveryTradeFr() {
 
       <H3>2. Mon placement de stop loss était-il basé sur la structure ou arbitraire ?</H3>
       <P>
-        Un stop loss devrait être placé à un niveau de prix qui invalide définitivement la thèse de ton trade — sous un support, au-dessus d'une résistance, au-delà d'un point de swing. Un stop arbitraire placé parce que « 50 $ semble une perte raisonnable » n'est pas un stop loss. C'est une prière. Cette question vérifie que ton risque était défini par la logique du marché, pas par la commodité. Pour un cadre complet là-dessus, lis notre guide sur <Link to="/blog/how-to-set-stop-loss">comment placer un stop loss correctement</Link>.
+        Un stop loss devrait être placé à un niveau de prix qui invalide définitivement la thèse de ton trade — sous un support, au-dessus d'une résistance, au-delà d'un point de swing. Un stop arbitraire placé parce que « 50 $ semble une perte raisonnable » n'est pas un stop loss. C'est une prière. Cette question vérifie que ton risque était défini par la logique du marché, pas par la commodité. Pour un cadre complet là-dessus, lis notre guide sur <Link to="/blog/fr/how-to-set-stop-loss">comment placer un stop loss correctement</Link>.
       </P>
 
       <H3>3. Ai-je dimensionné la position correctement pour mes règles de risque ?</H3>
@@ -99,7 +99,7 @@ export default function TenQuestionsAfterEveryTradeFr() {
 
       <H3>10. Quel est mon R-multiple sur ce trade ?</H3>
       <P>
-        Calcule le <Link to="/blog/r-multiple-explained">R-multiple</Link> : P/L réel divisé par ton risque initial. Note ce nombre pour chaque trade. Avec le temps, ton R-multiple moyen révèle si ta stratégie a une <Link to="/blog/trading-expectancy-explained">espérance</Link> positive et te dit bien plus sur ta performance que le P/L en dollars.
+        Calcule le <Link to="/blog/fr/r-multiple-explained">R-multiple</Link> : P/L réel divisé par ton risque initial. Note ce nombre pour chaque trade. Avec le temps, ton R-multiple moyen révèle si ta stratégie a une <Link to="/blog/fr/trading-expectancy-explained">espérance</Link> positive et te dit bien plus sur ta performance que le P/L en dollars.
       </P>
 
       <Divider />
@@ -124,7 +124,7 @@ export default function TenQuestionsAfterEveryTradeFr() {
         ]}
       />
       <P>
-        Temps total : environ 2 minutes par trade. Sur une carrière de trading, ces 2 minutes par trade sont la différence entre la stagnation et l'amélioration systématique. Associe ces questions à une <Link to="/blog/weekly-trading-review-template">revue hebdomadaire</Link> structurée et l'effet de composition sur ton trading est énorme.
+        Temps total : environ 2 minutes par trade. Sur une carrière de trading, ces 2 minutes par trade sont la différence entre la stagnation et l'amélioration systématique. Associe ces questions à une <Link to="/blog/fr/weekly-trading-review-template">revue hebdomadaire</Link> structurée et l'effet de composition sur ton trading est énorme.
       </P>
 
       <Takeaways items={[

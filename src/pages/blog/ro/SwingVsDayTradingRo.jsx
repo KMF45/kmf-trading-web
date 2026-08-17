@@ -66,7 +66,7 @@ export default function SwingVsDayTradingRo() {
         Fă calculul pe un cont de 5.000$. Un day trader care ia 15 trade-uri pe săptămână pe o pereche forex majoră, plătind aproximativ un pip de spread per dus-întors la 10$ per pip pe un lot standard — scalează la mărimea lui, să zicem 1$ per trade pe 0,1 loturi. Asta e 15$ pe săptămână, aproximativ 780$ pe an, doar în spread. Pe un cont de 5.000$, strategia trebuie să producă 15,6% pe an înainte ca traderul să iasă pe zero. Un swing trader care ia 3 trade-uri pe săptămână cu aceeași mărime plătește aproximativ 156$ pe an — un obstacol de 3,1%. Același cont, aceeași piață, același spread: un trader începe anul cu 15% în urmă, celălalt cu 3%.
       </P>
       <P>
-        Ăsta e motivul tăcut pentru care atât de mulți day traderi cu un edge real tot pierd: edge-ul e real, dar e mai mic decât costul de a-l exprima. Dacă vrei să vezi cum interacționează matematic edge-ul și frecvența, <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">formula de expectancy</Link> o face dureros de clar.
+        Ăsta e motivul tăcut pentru care atât de mulți day traderi cu un edge real tot pierd: edge-ul e real, dar e mai mic decât costul de a-l exprima. Dacă vrei să vezi cum interacționează matematic edge-ul și frecvența, <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent hover:underline">formula de expectancy</Link> o face dureros de clar.
       </P>
 
       <H2>Psihologie: Care Stil Te Frânge Primul</H2>
@@ -74,7 +74,7 @@ export default function SwingVsDayTradingRo() {
         Iată ce nu-ți spune nimeni despre day trading: setup-urile sunt partea ușoară. Partea grea e să iei a 14-a decizie a zilei cu aceeași claritate ca prima. Oboseala decizională e reală și se acumulează — o dimineață pierzătoare se scurge într-o după-amiază neglijentă, o după-amiază neglijentă devine un revenge trade la 15:50, și dintr-o dată profitul săptămânii a dispărut în douăzeci de minute.
       </P>
       <P>
-        Swing trading-ul are propriii demoni, dar sunt unii mai lenți. Testul principal e să stai pe mâini: să privești o poziție cum merge împotriva ta două zile fără să atingi stop-ul, sau să privești profitul cum crește fără să-l încasezi devreme. Incomod, da. Dar dai testul ăsta de trei ori pe săptămână, nu de cincisprezece ori pe zi — și îl dai după o noapte întreagă de somn, nu în mijlocul unei serii de pierderi. Mai puține decizii sub presiune înseamnă mai puține ocazii ca <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">spirala de revenge trading</Link> să pornească, și mai puține căsuțe bifate pe <Link to="/blog/overtrading-checklist" className="text-kmf-accent hover:underline">checklist-ul de overtrading</Link>.
+        Swing trading-ul are propriii demoni, dar sunt unii mai lenți. Testul principal e să stai pe mâini: să privești o poziție cum merge împotriva ta două zile fără să atingi stop-ul, sau să privești profitul cum crește fără să-l încasezi devreme. Incomod, da. Dar dai testul ăsta de trei ori pe săptămână, nu de cincisprezece ori pe zi — și îl dai după o noapte întreagă de somn, nu în mijlocul unei serii de pierderi. Mai puține decizii sub presiune înseamnă mai puține ocazii ca <Link to="/blog/ro/revenge-trading" className="text-kmf-accent hover:underline">spirala de revenge trading</Link> să pornească, și mai puține căsuțe bifate pe <Link to="/blog/ro/overtrading-checklist" className="text-kmf-accent hover:underline">checklist-ul de overtrading</Link>.
       </P>
 
       <H2>Capital: Regula Pe Care Nimeni N-o Menționează Până Nu Te Blochează</H2>
@@ -82,7 +82,7 @@ export default function SwingVsDayTradingRo() {
         Dacă plănuiești să faci day trading pe acțiuni SUA, există un zid de reglementare: regula Pattern Day Trader. Ia mai mult de trei day trade-uri în cinci zile lucrătoare pe un cont de margin sub 25.000$, iar brokerul te restricționează. Numărul ăla nu e o sugestie — e politică FINRA, și există exact pentru că reglementatorii au privit conturile mici cum se autodistrug la viteză intraday.
       </P>
       <P>
-        Forex-ul și crypto nu au regulă PDT, ceea ce sună a libertate dar funcționează mai degrabă ca o capcană: le permite traderilor subcapitalizați să-și asume o frecvență de trade-uri pe care contul lor nu o poate supraviețui. Un cont mic care pierde 15$ pe săptămână în spread nu tranzacționează, ci donează încet. Dacă ai un capital de start modest, matematica onestă — aceeași matematică din <Link to="/blog/is-100-enough-to-start-forex" className="text-kmf-accent hover:underline">întrebarea cu cei 100$ pe forex</Link> — favorizează trade-uri mai puține, pe timeframe mai mare, de fiecare dată.
+        Forex-ul și crypto nu au regulă PDT, ceea ce sună a libertate dar funcționează mai degrabă ca o capcană: le permite traderilor subcapitalizați să-și asume o frecvență de trade-uri pe care contul lor nu o poate supraviețui. Un cont mic care pierde 15$ pe săptămână în spread nu tranzacționează, ci donează încet. Dacă ai un capital de start modest, matematica onestă — aceeași matematică din <Link to="/blog/ro/is-100-enough-to-start-forex" className="text-kmf-accent hover:underline">întrebarea cu cei 100$ pe forex</Link> — favorizează trade-uri mai puține, pe timeframe mai mare, de fiecare dată.
       </P>
 
       <Table

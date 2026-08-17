@@ -74,7 +74,7 @@ export default function CryptoVsForexJournalingRo() {
         Aici se decide totul. Pe un cont de forex de $10,000 care tranzacționează EUR/USD cu 1% risc și un stop loss de 30 pips, position size-ul tău e cam 0.33 loturi. Matematica e curată și familiară. Acum aplică 1% risc pe Bitcoin cu un stop de $3,000. Position size-ul tău maxim e $100 ÷ $3,000 per monedă = 0.033 BTC. La un preț de $60,000 pe BTC, asta e o poziție de $2,000 — doar 20% din contul tău.
       </P>
       <P>
-        Mulți traderi de forex văd acea poziție de 20% și cred că sunt prea conservatori. Pe forex, sunt obișnuiți să controleze valută de $33,000 (0.33 loturi) cu un cont de $10,000 — leverage de 3.3×. Așa că își măresc poziția de crypto ca să „se simtă normal". Așa se distrug conturile. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">Regula de 1% risc</Link> nu se schimbă de la o piață la alta, dar <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">position size-ul</Link> pe care îl produce se schimbă — dramatic. Ai încredere în matematică, nu în feeling.
+        Mulți traderi de forex văd acea poziție de 20% și cred că sunt prea conservatori. Pe forex, sunt obișnuiți să controleze valută de $33,000 (0.33 loturi) cu un cont de $10,000 — leverage de 3.3×. Așa că își măresc poziția de crypto ca să „se simtă normal". Așa se distrug conturile. <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">Regula de 1% risc</Link> nu se schimbă de la o piață la alta, dar <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">position size-ul</Link> pe care îl produce se schimbă — dramatic. Ai încredere în matematică, nu în feeling.
       </P>
 
       <H3>Diferențe de Leverage</H3>
@@ -92,7 +92,7 @@ export default function CryptoVsForexJournalingRo() {
         Forex-ul are sesiuni. London se deschide, New York se suprapune, Tokyo preia. Sunt ore liniștite și ore active. Poți lăsa o poziție peste noapte și să te aștepți rezonabil că prețul nu va face gap de 10% cât dormi — fiindcă, chiar și în sesiunea asiatică, perechile majore au destulă lichiditate cât să se miște lin.
       </P>
       <P>
-        Crypto nu se închide niciodată. Nu există „after hours". Bitcoin se poate mișca 8% într-o duminică dimineața cât ești la brunch. Ethereum poate face gap într-o marți la 3 noaptea fiindcă un whale a aruncat $50 de milioane pe un order book subțire. Dacă ții poziții de crypto peste noapte — sau peste weekend — riscul tău e fundamental diferit de o poziție de forex ținută peste noapte. Ghidul nostru despre <Link to="/blog/weekend-gap-risk" className="text-kmf-accent hover:underline">riscul de gap în weekend</Link> acoperă cum să-ți protejezi contul de aceste scenarii.
+        Crypto nu se închide niciodată. Nu există „after hours". Bitcoin se poate mișca 8% într-o duminică dimineața cât ești la brunch. Ethereum poate face gap într-o marți la 3 noaptea fiindcă un whale a aruncat $50 de milioane pe un order book subțire. Dacă ții poziții de crypto peste noapte — sau peste weekend — riscul tău e fundamental diferit de o poziție de forex ținută peste noapte. Ghidul nostru despre <Link to="/blog/ro/weekend-gap-risk" className="text-kmf-accent hover:underline">riscul de gap în weekend</Link> acoperă cum să-ți protejezi contul de aceste scenarii.
       </P>
 
       <H3>Implicații pentru Jurnal</H3>

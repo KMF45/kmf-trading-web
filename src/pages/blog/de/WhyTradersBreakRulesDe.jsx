@@ -95,7 +95,7 @@ export default function WhyTradersBreakRulesDe() {
       <H2>Praktische Lösungen</H2>
       <H3>1. Pre-Trade-Checkliste</H3>
       <P>
-        Eine schriftliche <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link>, die du physisch verifizieren musst, bevor du eine Order anrührst, zwingt System 2 in die Schleife. Sie erzeugt eine verpflichtende Pause zwischen Impuls und Handlung. Die Checkliste sollte Setup-Kriterien, Stop-Loss-Level, Positionsgröße und emotionalen Zustand abdecken. Ist ein Kästchen nicht angehakt, wird kein Trade eingegangen.
+        Eine schriftliche <Link to="/blog/de/pre-trade-checklist" className="text-kmf-accent hover:underline">Pre-Trade-Checkliste</Link>, die du physisch verifizieren musst, bevor du eine Order anrührst, zwingt System 2 in die Schleife. Sie erzeugt eine verpflichtende Pause zwischen Impuls und Handlung. Die Checkliste sollte Setup-Kriterien, Stop-Loss-Level, Positionsgröße und emotionalen Zustand abdecken. Ist ein Kästchen nicht angehakt, wird kein Trade eingegangen.
       </P>
       <H3>2. Reduziere Reibung für gutes Verhalten</H3>
       <P>
@@ -111,7 +111,7 @@ export default function WhyTradersBreakRulesDe() {
       </P>
       <H3>5. Wöchentliches Review, um Muster zu erkennen</H3>
       <P>
-        Regelbruch ist nicht zufällig. Du brichst wahrscheinlich dieselben Regeln, unter denselben Umständen, zu denselben Tageszeiten. Ein diszipliniertes <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentliches Review</Link> deckt diese Muster auf, sodass du die Ursache angehen kannst, statt nur zu beschließen, „es besser zu machen". Ohne diese Feedback-Schleife steckst du in der <Link to="/blog/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">Ausführungslücke</Link> — du weißt, was zu tun ist, kannst es aber nicht konstant tun.
+        Regelbruch ist nicht zufällig. Du brichst wahrscheinlich dieselben Regeln, unter denselben Umständen, zu denselben Tageszeiten. Ein diszipliniertes <Link to="/blog/de/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentliches Review</Link> deckt diese Muster auf, sodass du die Ursache angehen kannst, statt nur zu beschließen, „es besser zu machen". Ohne diese Feedback-Schleife steckst du in der <Link to="/blog/de/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">Ausführungslücke</Link> — du weißt, was zu tun ist, kannst es aber nicht konstant tun.
       </P>
 
       <Takeaways items={[

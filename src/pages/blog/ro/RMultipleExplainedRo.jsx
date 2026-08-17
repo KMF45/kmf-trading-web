@@ -40,7 +40,7 @@ export default function RMultipleExplainedRo() {
 
       <H2>Ce Este R?</H2>
       <P>
-        R vine de la „Risc" — mai exact, suma exactă de bani pe care ai pus-o la risc când ai intrat în trade. R e definit de <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss-ul</Link> tău: e distanța de la intrarea ta la stop loss, înmulțită cu position size-ul.
+        R vine de la „Risc" — mai exact, suma exactă de bani pe care ai pus-o la risc când ai intrat în trade. R e definit de <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">stop loss-ul</Link> tău: e distanța de la intrarea ta la stop loss, înmulțită cu position size-ul.
       </P>
       <P>
         Dacă ai intrat într-un trade cu un stop de $150 (adică dacă trade-ul merge complet împotriva ta și atinge stop-ul, pierzi $150), atunci R = $150 pentru acel trade. Tot restul e măsurat raportat la acea cifră.
@@ -118,7 +118,7 @@ export default function RMultipleExplainedRo() {
 
       <H3>Legătura cu Expectancy</H3>
       <P>
-        R-multiple per trade, mediat pe istoricul tău de trade-uri, e fundamentul <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">calculului de expectancy</Link> al strategiei tale. Expectancy îți spune valoarea așteptată a fiecărui trade pe care îl iei. Stăpânirea gândirii în R-multiple e primul pas spre înțelegerea profundă a expectancy-ului. Combinat cu <Link to="/blog/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">profit factor</Link>, aceste metrici îți dau imaginea completă a viabilității strategiei tale.
+        R-multiple per trade, mediat pe istoricul tău de trade-uri, e fundamentul <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent hover:underline">calculului de expectancy</Link> al strategiei tale. Expectancy îți spune valoarea așteptată a fiecărui trade pe care îl iei. Stăpânirea gândirii în R-multiple e primul pas spre înțelegerea profundă a expectancy-ului. Combinat cu <Link to="/blog/ro/profit-factor-vs-win-rate" className="text-kmf-accent hover:underline">profit factor</Link>, aceste metrici îți dau imaginea completă a viabilității strategiei tale.
       </P>
 
       <Takeaways items={[

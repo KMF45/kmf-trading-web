@@ -120,7 +120,7 @@ export default function ProfitFactorVsWinRateDe() {
       <H2>Wie du deinen Profit Factor verbesserst</H2>
       <H3>Verlierer schneller schneiden</H3>
       <P>
-        Der direkteste Hebel auf den Profit Factor ist der Nenner: dein Bruttoverlust. Jedes Mal, wenn du einen Stop Loss weiter wegschiebst, um nicht ausgestoppt zu werden, erhöhst du deinen durchschnittlichen Verlust und drückst deinen Profit Factor. Respektiere deine ursprüngliche <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop-Loss-Platzierung</Link>. Ein kleinerer durchschnittlicher Verlust hat über die Zeit einen enormen Zinseszinseffekt auf den Profit Factor.
+        Der direkteste Hebel auf den Profit Factor ist der Nenner: dein Bruttoverlust. Jedes Mal, wenn du einen Stop Loss weiter wegschiebst, um nicht ausgestoppt zu werden, erhöhst du deinen durchschnittlichen Verlust und drückst deinen Profit Factor. Respektiere deine ursprüngliche <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop-Loss-Platzierung</Link>. Ein kleinerer durchschnittlicher Verlust hat über die Zeit einen enormen Zinseszinseffekt auf den Profit Factor.
       </P>
       <H3>Gewinner laufen lassen</H3>
       <P>
@@ -128,7 +128,7 @@ export default function ProfitFactorVsWinRateDe() {
       </P>
       <H3>Prüfe dein R:R vor jedem Trade</H3>
       <P>
-        Bevor du in einen Trade einsteigst, berechne den Abstand von Einstieg zu Stop Loss und von Einstieg zu Ziel. Liegt das Verhältnis nicht bei mindestens 1,5:1, braucht der Trade eine höhere Wahrscheinlichkeit, um das Eingehen zu rechtfertigen. Allein das Herausfiltern von Setups mit niedrigem R:R kann den Profit Factor spürbar verbessern, ohne deine Strategie überhaupt zu ändern. Jeden Trade in <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfachen</Link> zu messen, macht diese Bewertung automatisch.
+        Bevor du in einen Trade einsteigst, berechne den Abstand von Einstieg zu Stop Loss und von Einstieg zu Ziel. Liegt das Verhältnis nicht bei mindestens 1,5:1, braucht der Trade eine höhere Wahrscheinlichkeit, um das Eingehen zu rechtfertigen. Allein das Herausfiltern von Setups mit niedrigem R:R kann den Profit Factor spürbar verbessern, ohne deine Strategie überhaupt zu ändern. Jeden Trade in <Link to="/blog/de/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfachen</Link> zu messen, macht diese Bewertung automatisch.
       </P>
 
       <Divider />

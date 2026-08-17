@@ -1919,9 +1919,28 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://kmfjournal.com/blog/ro/position-size-psychological-ceiling</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/position-size-psychological-ceiling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/position-size-psychological-ceiling"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/position-size-psychological-ceiling"/>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://kmfjournal.com/blog/position-size-psychological-ceiling</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/position-size-psychological-ceiling"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/position-size-psychological-ceiling"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/position-size-psychological-ceiling"/>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/when-to-withdraw-trading-profits</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/when-to-withdraw-trading-profits"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/when-to-withdraw-trading-profits"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/when-to-withdraw-trading-profits"/>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1929,7 +1948,17 @@
   <url>
     <loc>https://kmfjournal.com/blog/when-to-withdraw-trading-profits</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/when-to-withdraw-trading-profits"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/when-to-withdraw-trading-profits"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/when-to-withdraw-trading-profits"/>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kmfjournal.com/blog/ro/drawdown-after-profitability</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/drawdown-after-profitability"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/drawdown-after-profitability"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/drawdown-after-profitability"/>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1937,6 +1966,7 @@
   <url>
     <loc>https://kmfjournal.com/blog/drawdown-after-profitability</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://kmfjournal.com/blog/drawdown-after-profitability"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://kmfjournal.com/blog/ro/drawdown-after-profitability"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://kmfjournal.com/blog/drawdown-after-profitability"/>
     <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>

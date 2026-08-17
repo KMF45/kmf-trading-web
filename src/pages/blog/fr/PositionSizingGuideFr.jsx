@@ -53,7 +53,7 @@ export default function PositionSizingGuideFr() {
         <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>Taille de position = Montant de risque ÷ Distance du stop loss (en termes de prix)</strong>
       </P>
       <P>
-        Chaque version du calcul de dimensionnement — que ce soit pour des lots forex, des actions ou des unités de crypto — est une variation de cette formule de base. Les entrées changent selon le marché, mais la logique est identique. Note qu'il y a <Link to="/blog/crypto-vs-forex-journaling" className="text-kmf-accent hover:underline">des règles différentes pour la crypto et le forex</Link> en matière de journal et de risque.
+        Chaque version du calcul de dimensionnement — que ce soit pour des lots forex, des actions ou des unités de crypto — est une variation de cette formule de base. Les entrées changent selon le marché, mais la logique est identique. Note qu'il y a <Link to="/blog/fr/crypto-vs-forex-journaling" className="text-kmf-accent hover:underline">des règles différentes pour la crypto et le forex</Link> en matière de journal et de risque.
       </P>
 
       <H2>Processus étape par étape</H2>
@@ -145,7 +145,7 @@ export default function PositionSizingGuideFr() {
         Beaucoup de traders — surtout ceux qui viennent d'un passé d'observation des marchés sans trader — prennent l'habitude de dimensionner leurs positions selon leur degré de confiance dans un setup. « Celui-là a l'air vraiment bon, je vais en mettre plus. » C'est l'anti-pattern.
       </P>
       <P>
-        Aucun trade n'est assez bon pour justifier de violer tes règles de risque. <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">La règle des 1 %</Link> s'applique à chaque trade, y compris celui qui ressemble à une certitude. Les marchés sont incertains par définition, et dimensionner selon la certitude est un biais, pas un edge. Dimensionner par formule, de façon régulière, c'est ce qui transforme les traders irréguliers en traders réguliers.
+        Aucun trade n'est assez bon pour justifier de violer tes règles de risque. <Link to="/blog/fr/1-percent-risk-rule" className="text-kmf-accent hover:underline">La règle des 1 %</Link> s'applique à chaque trade, y compris celui qui ressemble à une certitude. Les marchés sont incertains par définition, et dimensionner selon la certitude est un biais, pas un edge. Dimensionner par formule, de façon régulière, c'est ce qui transforme les traders irréguliers en traders réguliers.
       </P>
 
       <Takeaways items={[

@@ -60,7 +60,7 @@ export default function BreakevenStopTooEarlyRo() {
 
       <H2>Matematica Pe Care Instinctul Tău O Ignoră</H2>
       <P>
-        Să facem cifrele pe un setup tipic. Ai o strategie cu un win rate de 40% și un raport reward-to-risk de 3:1. <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">Expectancy-ul</Link> tău e:
+        Să facem cifrele pe un setup tipic. Ai o strategie cu un win rate de 40% și un raport reward-to-risk de 3:1. <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent hover:underline">Expectancy-ul</Link> tău e:
       </P>
       <P>
         0.40 x 3R - 0.60 x 1R = <strong>+0.60R per trade</strong>
@@ -102,7 +102,7 @@ export default function BreakevenStopTooEarlyRo() {
       </P>
 
       <Callout title="Frica de a Da Înapoi" color="#CE93D8">
-        Un câștig nerealizat de $200 care dispare se simte mai rău decât să nu-l fi avut niciodată. Asta se numește „endowment effect" — în clipa în care P/L-ul tău arată verde, creierul tău consideră acei bani ai tăi. Pierderea banilor „tăi" (chiar nerealizați) declanșează un răspuns de durere <Link to="/blog/prospect-theory-trading" className="text-kmf-accent hover:underline">de 2.25x mai puternic</Link> decât plăcerea de a-i câștiga. Acea asimetrie e motorul din spatele fiecărui stop prematur la breakeven.
+        Un câștig nerealizat de $200 care dispare se simte mai rău decât să nu-l fi avut niciodată. Asta se numește „endowment effect" — în clipa în care P/L-ul tău arată verde, creierul tău consideră acei bani ai tăi. Pierderea banilor „tăi" (chiar nerealizați) declanșează un răspuns de durere <Link to="/blog/ro/prospect-theory-trading" className="text-kmf-accent hover:underline">de 2.25x mai puternic</Link> decât plăcerea de a-i câștiga. Acea asimetrie e motorul din spatele fiecărui stop prematur la breakeven.
       </Callout>
 
       <H2>Costul Real: Trade-uri Pe Care Le-ai Nimerit</H2>
@@ -116,7 +116,7 @@ export default function BreakevenStopTooEarlyRo() {
         'Și ai făcut exact $0 fiindcă nu ai putut sta locului.',
       ]} />
       <P>
-        După destule dintre astea, ceva se rupe. Încetezi să-ți mai crezi analiza — nu fiindcă e greșită, ci fiindcă o tot sabotezi. Apoi intervine FOMO: începi să fugi după trade-uri ca să „recuperezi" mișcările ratate. Și acum faci <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> împotriva ta însuți.
+        După destule dintre astea, ceva se rupe. Încetezi să-ți mai crezi analiza — nu fiindcă e greșită, ci fiindcă o tot sabotezi. Apoi intervine FOMO: începi să fugi după trade-uri ca să „recuperezi" mișcările ratate. Și acum faci <Link to="/blog/ro/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> împotriva ta însuți.
       </P>
 
       <Divider />
@@ -145,11 +145,11 @@ export default function BreakevenStopTooEarlyRo() {
       </P>
       <H3>Regula 2: Folosește Stop-uri Structurale, Nu Emoționale</H3>
       <P>
-        Când chiar îți muți stop-ul, mută-l la un <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">nivel structural</Link> — sub ultimul higher low într-un uptrend, peste ultimul lower high într-un downtrend. Niciodată la prețul tău de intrare specific.
+        Când chiar îți muți stop-ul, mută-l la un <Link to="/blog/ro/how-to-set-stop-loss" className="text-kmf-accent hover:underline">nivel structural</Link> — sub ultimul higher low într-un uptrend, peste ultimul lower high într-un downtrend. Niciodată la prețul tău de intrare specific.
       </P>
       <H3>Regula 3: Urmărește-ți Stop-urile la Breakeven Separat</H3>
       <P>
-        Aici renunță majoritatea traderilor — și aici trăiește edge-ul real. Etichetează fiecare trade unde ai mutat la breakeven. După 30 de trade-uri, verifică: câte dintre ele ar fi atins TP-ul tău inițial? Când vezi că 12 din 30 de stop-uri la breakeven ar fi fost câștigători de 3R, datele devin imposibil de contestat. K.M.F. îți urmărește <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiplii</Link> automat — așa că poți filtra ieșirile la breakeven și vedea exact cât expectancy te costă.
+        Aici renunță majoritatea traderilor — și aici trăiește edge-ul real. Etichetează fiecare trade unde ai mutat la breakeven. După 30 de trade-uri, verifică: câte dintre ele ar fi atins TP-ul tău inițial? Când vezi că 12 din 30 de stop-uri la breakeven ar fi fost câștigători de 3R, datele devin imposibil de contestat. K.M.F. îți urmărește <Link to="/blog/ro/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiplii</Link> automat — așa că poți filtra ieșirile la breakeven și vedea exact cât expectancy te costă.
       </P>
       <H3>Regula 4: Închide Platforma După Intrare</H3>
       <P>
@@ -157,7 +157,7 @@ export default function BreakevenStopTooEarlyRo() {
       </P>
 
       <Callout title="Risk Management-ul Adevărat" color="#00C853">
-        Risk management-ul real se întâmplă înainte de trade: <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">position sizing</Link> corect, plasare structurală a stop-ului, și un raport risk-reward care are sens matematic. Mutarea stop-ului la breakeven după intrare nu e risk management — e management al anxietății. Iar anxietatea ia decizii groaznice de trading.
+        Risk management-ul real se întâmplă înainte de trade: <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">position sizing</Link> corect, plasare structurală a stop-ului, și un raport risk-reward care are sens matematic. Mutarea stop-ului la breakeven după intrare nu e risk management — e management al anxietății. Iar anxietatea ia decizii groaznice de trading.
       </Callout>
 
       <Takeaways items={[

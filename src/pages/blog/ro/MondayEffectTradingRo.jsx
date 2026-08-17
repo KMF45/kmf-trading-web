@@ -71,7 +71,7 @@ export default function MondayEffectTradingRo() {
       </P>
       <H3>Presiunea de a „Începe Săptămâna Puternic"</H3>
       <P>
-        Există o dorință psihologică irațională dar puternică de a începe fiecare săptămână cu o victorie. P/L-ul de luni se simte disproporționat de important fiindcă setează tonul emoțional pentru restul săptămânii. Această presiune duce la standarde de intrare mai joase, intrări premature, și o nedispoziție de a sta pe margine și a aștepta — exact condițiile care produc <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">comportament de încălcare a regulilor</Link>.
+        Există o dorință psihologică irațională dar puternică de a începe fiecare săptămână cu o victorie. P/L-ul de luni se simte disproporționat de important fiindcă setează tonul emoțional pentru restul săptămânii. Această presiune duce la standarde de intrare mai joase, intrări premature, și o nedispoziție de a sta pe margine și a aștepta — exact condițiile care produc <Link to="/blog/ro/why-traders-break-their-rules" className="text-kmf-accent hover:underline">comportament de încălcare a regulilor</Link>.
       </P>
 
       <Callout title="Capcana de Luni" color="#CE93D8">
@@ -123,7 +123,7 @@ export default function MondayEffectTradingRo() {
       </P>
 
       <P>
-        Cei mai buni traderi înțeleg că a nu tranzacționa e în sine o decizie de trading. Luni e adesea ziua în care mutarea cu cel mai mare edge e să nu faci nimic — să lași piața să se așeze, să lași lichiditatea să revină, și să lași emoțiile de weekend să se disipeze. Setup-urile vor fi tot acolo marți. Capitalul tău va fi intact. Și nu vei începe săptămâna într-o groapă, făcând <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> ca să ieși săpând.
+        Cei mai buni traderi înțeleg că a nu tranzacționa e în sine o decizie de trading. Luni e adesea ziua în care mutarea cu cel mai mare edge e să nu faci nimic — să lași piața să se așeze, să lași lichiditatea să revină, și să lași emoțiile de weekend să se disipeze. Setup-urile vor fi tot acolo marți. Capitalul tău va fi intact. Și nu vei începe săptămâna într-o groapă, făcând <Link to="/blog/ro/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link> ca să ieși săpând.
       </P>
 
       <Takeaways items={[

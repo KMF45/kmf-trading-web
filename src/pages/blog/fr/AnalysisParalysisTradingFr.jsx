@@ -126,12 +126,12 @@ export default function AnalysisParalysisTradingFr() {
 
       <H3>Décide avant que la bougie ne se forme, pas pendant</H3>
       <P>
-        Construis une courte <Link to="/blog/pre-trade-checklist" className="text-kmf-accent underline hover:text-white transition-colors">checklist pré-trade</Link> — cinq ou six questions oui/non qui définissent un setup valide pour toi. Quand le prix arrive, tu ne <em>juges</em> plus le trade ; tu <em>coches des cases</em>. Toutes cochées ? Tu entres. Ça transforme une décision ouverte et torturante en une décision mécanique, et les décisions mécaniques ne se figent pas.
+        Construis une courte <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent underline hover:text-white transition-colors">checklist pré-trade</Link> — cinq ou six questions oui/non qui définissent un setup valide pour toi. Quand le prix arrive, tu ne <em>juges</em> plus le trade ; tu <em>coches des cases</em>. Toutes cochées ? Tu entres. Ça transforme une décision ouverte et torturante en une décision mécanique, et les décisions mécaniques ne se figent pas.
       </P>
 
       <H3>Fais la paix avec les maths de la perte</H3>
       <P>
-        Intériorise ceci jusqu'à ce que ce soit ennuyeux : avec une stratégie 1:2 risque/rendement, tu peux avoir <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>tort sur la majorité de tes trades et faire quand même croître ton compte.</strong> Aucune entrée seule n'est un référendum sur ta valeur — c'est un point de donnée dans un échantillon de centaines. Si tu n'es pas sûr que ton edge est réel, ce n'est pas une raison de te figer ; c'est une raison de le mesurer. Fais passer tes chiffres par <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent underline hover:text-white transition-colors">un contrôle d'espérance</Link> et laisse les données te donner la permission que ton intuition ne donne pas.
+        Intériorise ceci jusqu'à ce que ce soit ennuyeux : avec une stratégie 1:2 risque/rendement, tu peux avoir <strong style={{ color: 'var(--kmf-text-primary, #F0F4FF)' }}>tort sur la majorité de tes trades et faire quand même croître ton compte.</strong> Aucune entrée seule n'est un référendum sur ta valeur — c'est un point de donnée dans un échantillon de centaines. Si tu n'es pas sûr que ton edge est réel, ce n'est pas une raison de te figer ; c'est une raison de le mesurer. Fais passer tes chiffres par <Link to="/blog/fr/trading-expectancy-explained" className="text-kmf-accent underline hover:text-white transition-colors">un contrôle d'espérance</Link> et laisse les données te donner la permission que ton intuition ne donne pas.
       </P>
 
       <Callout title="La règle des deux secondes" color="#4FC3F7">

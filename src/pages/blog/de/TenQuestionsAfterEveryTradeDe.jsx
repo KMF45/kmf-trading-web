@@ -59,7 +59,7 @@ export default function TenQuestionsAfterEveryTradeDe() {
 
       <H3>2. War meine Stop-Loss-Platzierung strukturbasiert oder willkürlich?</H3>
       <P>
-        Ein Stop Loss sollte auf einem Preisniveau platziert werden, das deine Trade-These definitiv invalidiert — unter einem Support, über einem Resistance, jenseits eines Swing-Punkts. Ein willkürlicher Stop, gesetzt weil „50 $ sich nach einem vernünftigen Verlust anfühlen", ist kein Stop Loss. Es ist ein Gebet. Diese Frage verifiziert, dass dein Risiko durch Marktlogik definiert war, nicht durch Bequemlichkeit. Für ein komplettes Framework lies unseren Leitfaden zum <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">richtigen Setzen eines Stop Loss</Link>.
+        Ein Stop Loss sollte auf einem Preisniveau platziert werden, das deine Trade-These definitiv invalidiert — unter einem Support, über einem Resistance, jenseits eines Swing-Punkts. Ein willkürlicher Stop, gesetzt weil „50 $ sich nach einem vernünftigen Verlust anfühlen", ist kein Stop Loss. Es ist ein Gebet. Diese Frage verifiziert, dass dein Risiko durch Marktlogik definiert war, nicht durch Bequemlichkeit. Für ein komplettes Framework lies unseren Leitfaden zum <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">richtigen Setzen eines Stop Loss</Link>.
       </P>
 
       <H3>3. Habe ich die Position korrekt für meine Risikoregeln dimensioniert?</H3>
@@ -99,7 +99,7 @@ export default function TenQuestionsAfterEveryTradeDe() {
 
       <H3>10. Was ist mein R-Vielfaches bei diesem Trade?</H3>
       <P>
-        Berechne das <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfache</Link>: tatsächlicher P/L geteilt durch dein anfängliches Risiko. Halte diese Zahl für jeden Trade fest. Über die Zeit offenbart dein durchschnittliches R-Vielfaches, ob deine Strategie positiven <Link to="/blog/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link> hat, und sagt dir weit mehr über deine Performance als der Dollar-P/L.
+        Berechne das <Link to="/blog/de/r-multiple-explained" className="text-kmf-accent hover:underline">R-Vielfache</Link>: tatsächlicher P/L geteilt durch dein anfängliches Risiko. Halte diese Zahl für jeden Trade fest. Über die Zeit offenbart dein durchschnittliches R-Vielfaches, ob deine Strategie positiven <Link to="/blog/de/trading-expectancy-explained" className="text-kmf-accent hover:underline">Erwartungswert</Link> hat, und sagt dir weit mehr über deine Performance als der Dollar-P/L.
       </P>
 
       <Divider />
@@ -124,7 +124,7 @@ export default function TenQuestionsAfterEveryTradeDe() {
         ]}
       />
       <P>
-        Gesamtzeit: etwa 2 Minuten pro Trade. Über eine Trading-Karriere sind diese 2 Minuten pro Trade der Unterschied zwischen Stagnation und systematischer Verbesserung. Kombiniere diese Fragen mit einem strukturierten <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentlichen Review</Link>, und der Zinseszinseffekt auf dein Trading ist enorm.
+        Gesamtzeit: etwa 2 Minuten pro Trade. Über eine Trading-Karriere sind diese 2 Minuten pro Trade der Unterschied zwischen Stagnation und systematischer Verbesserung. Kombiniere diese Fragen mit einem strukturierten <Link to="/blog/de/weekly-trading-review-template" className="text-kmf-accent hover:underline">wöchentlichen Review</Link>, und der Zinseszinseffekt auf dein Trading ist enorm.
       </P>
 
       <Takeaways items={[

@@ -50,7 +50,7 @@ export default function WeekendGapRiskDe() {
 
       <H2>Warum dein Stop Loss dich nicht retten kann</H2>
       <P>
-        Ein Stop Loss ist eine bedingte Order: „verkaufe, wenn der Preis X erreicht." Aber sie kann nur ausgeführt werden, wenn der Markt offen ist und aktiv auf diesem Preisniveau handelt. Wenn der Markt am Freitag bei 1,0800 schließt und am Montag bei 1,0720 öffnet, wurde dein Stop Loss bei 1,0770 nie ausgelöst — der Preis ist darüber gesprungen. Deine Order wird bei 1,0720 gefüllt, was dir 50 Pips Slippage über deinen beabsichtigten Stop hinaus gibt. Bei einer Position, die für einen 30-Pip-Stop dimensioniert ist, ist das fast das Dreifache deines geplanten Verlusts. Eine korrekte <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop-Loss-Platzierung</Link> muss diese Realität berücksichtigen.
+        Ein Stop Loss ist eine bedingte Order: „verkaufe, wenn der Preis X erreicht." Aber sie kann nur ausgeführt werden, wenn der Markt offen ist und aktiv auf diesem Preisniveau handelt. Wenn der Markt am Freitag bei 1,0800 schließt und am Montag bei 1,0720 öffnet, wurde dein Stop Loss bei 1,0770 nie ausgelöst — der Preis ist darüber gesprungen. Deine Order wird bei 1,0720 gefüllt, was dir 50 Pips Slippage über deinen beabsichtigten Stop hinaus gibt. Bei einer Position, die für einen 30-Pip-Stop dimensioniert ist, ist das fast das Dreifache deines geplanten Verlusts. Eine korrekte <Link to="/blog/de/how-to-set-stop-loss" className="text-kmf-accent hover:underline">Stop-Loss-Platzierung</Link> muss diese Realität berücksichtigen.
       </P>
 
       <Callout title="Das unsichtbare Risiko" color="#00C853">
@@ -86,7 +86,7 @@ export default function WeekendGapRiskDe() {
       </P>
       <H3>2. Positionsgröße für Wochenend-Halten reduzieren</H3>
       <P>
-        Wenn deine Strategie erfordert, Positionen über Tage oder Wochen zu halten, kannst du deine <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgröße</Link> am Freitag reduzieren, um Gap-Risiko zu berücksichtigen. Ein gängiger Ansatz: Wenn dein normales Risiko 1 % pro Trade beträgt, reduziere auf 0,5 % für jede übers Wochenende gehaltene Position. So führt selbst ein Gap, das deine Stop-Loss-Distanz verdoppelt, nur zu 1 % Kontoverlust — immer noch im normalen Rahmen.
+        Wenn deine Strategie erfordert, Positionen über Tage oder Wochen zu halten, kannst du deine <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgröße</Link> am Freitag reduzieren, um Gap-Risiko zu berücksichtigen. Ein gängiger Ansatz: Wenn dein normales Risiko 1 % pro Trade beträgt, reduziere auf 0,5 % für jede übers Wochenende gehaltene Position. So führt selbst ein Gap, das deine Stop-Loss-Distanz verdoppelt, nur zu 1 % Kontoverlust — immer noch im normalen Rahmen.
       </P>
       <H3>3. Mit korrelierten Instrumenten hedgen</H3>
       <P>
@@ -98,7 +98,7 @@ export default function WeekendGapRiskDe() {
         Die Mathematik ist unkompliziert. Wenn dein normaler Stop Loss 30 Pips beträgt und du akzeptierst, dass ein Weekend-Gap 30 zusätzliche Pips Slippage hinzufügen könnte, beträgt deine effektive Risikodistanz 60 Pips. Dimensioniere deine Position für das Worst-Case-Szenario, nicht den besten Fall. Das bedeutet, deine Positionsgröße für Wochenend-Halten zu halbieren — oder zu akzeptieren, dass dein tatsächliches Risiko doppelt so hoch ist, wie dein Stop Loss vermuten lässt.
       </P>
       <P>
-        Diese Anpassung ist nicht optional. Sie zu ignorieren bedeutet, dass deine <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">1-%-Risikoregel</Link> jedes Wochenende zu einer 2-%-Regel wird — und über ein Jahr mit 52 Wochenenden verzinst sich dieses nicht eingerechnete Risiko gefährlich.
+        Diese Anpassung ist nicht optional. Sie zu ignorieren bedeutet, dass deine <Link to="/blog/de/1-percent-risk-rule" className="text-kmf-accent hover:underline">1-%-Risikoregel</Link> jedes Wochenende zu einer 2-%-Regel wird — und über ein Jahr mit 52 Wochenenden verzinst sich dieses nicht eingerechnete Risiko gefährlich.
       </P>
 
       <H2>Wann Gaps am gefährlichsten sind</H2>

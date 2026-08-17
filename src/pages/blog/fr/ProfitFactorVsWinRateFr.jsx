@@ -120,7 +120,7 @@ export default function ProfitFactorVsWinRateFr() {
       <H2>Comment améliorer ton profit factor</H2>
       <H3>Coupe les perdants plus vite</H3>
       <P>
-        Le levier le plus direct sur le profit factor est le dénominateur : ta perte brute. Chaque fois que tu déplaces un stop loss plus loin pour éviter d'être stoppé, tu augmentes ta perte moyenne et tu tires ton profit factor vers le bas. Respecte ton <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">placement de stop loss</Link> initial. Une perte moyenne plus petite a un énorme effet de composition sur le profit factor dans le temps.
+        Le levier le plus direct sur le profit factor est le dénominateur : ta perte brute. Chaque fois que tu déplaces un stop loss plus loin pour éviter d'être stoppé, tu augmentes ta perte moyenne et tu tires ton profit factor vers le bas. Respecte ton <Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">placement de stop loss</Link> initial. Une perte moyenne plus petite a un énorme effet de composition sur le profit factor dans le temps.
       </P>
       <H3>Laisse courir les gagnants</H3>
       <P>
@@ -128,7 +128,7 @@ export default function ProfitFactorVsWinRateFr() {
       </P>
       <H3>Revois ton R:R avant chaque trade</H3>
       <P>
-        Avant d'entrer dans tout trade, calcule la distance de l'entrée au stop loss et de l'entrée à la cible. Si le ratio n'est pas d'au moins 1,5:1, le trade a besoin d'une probabilité plus haute pour justifier de le prendre. Filtrer les setups à faible R:R à lui seul peut améliorer significativement le profit factor sans rien changer à ta stratégie. Mesurer chaque trade en <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> rend cette évaluation automatique.
+        Avant d'entrer dans tout trade, calcule la distance de l'entrée au stop loss et de l'entrée à la cible. Si le ratio n'est pas d'au moins 1,5:1, le trade a besoin d'une probabilité plus haute pour justifier de le prendre. Filtrer les setups à faible R:R à lui seul peut améliorer significativement le profit factor sans rien changer à ta stratégie. Mesurer chaque trade en <Link to="/blog/fr/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link> rend cette évaluation automatique.
       </P>
 
       <Divider />

@@ -96,7 +96,7 @@ export default function MarketOrderVsLimitOrderFr() {
         'Tu veux que l\'ordre lui-même impose la discipline — si le prix n\'atteint jamais ton niveau, le trade que tu « devais prendre » n\'arrive simplement jamais.',
       ]} />
       <P>
-        Ce dernier point est sous-estimé. Un ordre limite est un dispositif d'engagement. Il retire l'impulsion de chasser un prix qui bouge et te force à honorer les <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">niveaux que tu as définis avant que l'émotion commence</Link>.
+        Ce dernier point est sous-estimé. Un ordre limite est un dispositif d'engagement. Il retire l'impulsion de chasser un prix qui bouge et te force à honorer les <Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">niveaux que tu as définis avant que l'émotion commence</Link>.
       </P>
 
       <H2>Un mot rapide sur les ordres stop</H2>
@@ -106,7 +106,7 @@ export default function MarketOrderVsLimitOrderFr() {
 
       <H2>La meilleure approche du débutant</H2>
       <P>
-        Si tu construis encore ta base, mets par défaut des ordres limites pour les entrées et des ordres stop simples pour les sorties protectrices. Place ton entrée là où ton plan le dit, et laisse le marché soit venir à toi soit avancer sans toi. Puis suis ce qui se passe réellement : enregistre ton exécution prévue contre ton exécution réelle, et tu verras ton coût de slippage en dollars au lieu de le deviner. Une fois que tu sais <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">dimensionner les positions</Link> et mesurer l'exécution honnêtement, la décision marché-contre-limite cesse d'être un réflexe et devient une part délibérée de ton <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">processus de risque</Link>.
+        Si tu construis encore ta base, mets par défaut des ordres limites pour les entrées et des ordres stop simples pour les sorties protectrices. Place ton entrée là où ton plan le dit, et laisse le marché soit venir à toi soit avancer sans toi. Puis suis ce qui se passe réellement : enregistre ton exécution prévue contre ton exécution réelle, et tu verras ton coût de slippage en dollars au lieu de le deviner. Une fois que tu sais <Link to="/blog/fr/position-sizing-guide" className="text-kmf-accent hover:underline">dimensionner les positions</Link> et mesurer l'exécution honnêtement, la décision marché-contre-limite cesse d'être un réflexe et devient une part délibérée de ton <Link to="/blog/fr/1-percent-risk-rule" className="text-kmf-accent hover:underline">processus de risque</Link>.
       </P>
 
       <Takeaways items={[

@@ -54,12 +54,12 @@ export default function PropFirmJournalDe() {
 
       <H3>1. Der überdimensionierte Revenge-Trade</H3>
       <P>
-        Es beginnt mit einem normalen Verlust. −0,8 % am Tag. In Ordnung. Dann ein weiterer: −0,5 %. Jetzt bist du 1,3 % im Minus und spürst den Druck. Statt aufzuhören, verdoppelst du deine nächste Position, um „es schnell zurückzuholen". Dieser Trade läuft gegen dich. Plötzlich bist du bei −3,5 % und einen Stop Loss vom Verstoß entfernt. Das ist lehrbuchmäßiges <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link> — der mit Abstand häufigste Konto-Killer im Prop-Trading.
+        Es beginnt mit einem normalen Verlust. −0,8 % am Tag. In Ordnung. Dann ein weiterer: −0,5 %. Jetzt bist du 1,3 % im Minus und spürst den Druck. Statt aufzuhören, verdoppelst du deine nächste Position, um „es schnell zurückzuholen". Dieser Trade läuft gegen dich. Plötzlich bist du bei −3,5 % und einen Stop Loss vom Verstoß entfernt. Das ist lehrbuchmäßiges <Link to="/blog/de/revenge-trading" className="text-kmf-accent hover:underline">Revenge Trading</Link> — der mit Abstand häufigste Konto-Killer im Prop-Trading.
       </P>
 
       <H3>2. Der Positionsgrößen-Fehler</H3>
       <P>
-        Auf einem $100.000-FTMO-Konto mit einem 5-%-Daily-Drawdown-Limit beträgt dein maximaler Tagesverlust $5.000. Machst du drei Trades, kann jeder maximal ~$1.650 riskieren. Aber die meisten Trader berechnen die Lot-Size danach, „was sich richtig anfühlt", statt nach dem tatsächlichen Drawdown-Limit. Sie riskieren $2.500 pro Trade, machen drei Trades, und eine schlechte Session löscht sie aus. Die Mathematik war falsch, bevor der erste Trade überhaupt platziert war. Ein richtiges <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgrößen-System</Link> verhindert das vollständig.
+        Auf einem $100.000-FTMO-Konto mit einem 5-%-Daily-Drawdown-Limit beträgt dein maximaler Tagesverlust $5.000. Machst du drei Trades, kann jeder maximal ~$1.650 riskieren. Aber die meisten Trader berechnen die Lot-Size danach, „was sich richtig anfühlt", statt nach dem tatsächlichen Drawdown-Limit. Sie riskieren $2.500 pro Trade, machen drei Trades, und eine schlechte Session löscht sie aus. Die Mathematik war falsch, bevor der erste Trade überhaupt platziert war. Ein richtiges <Link to="/blog/de/position-sizing-guide" className="text-kmf-accent hover:underline">Positionsgrößen-System</Link> verhindert das vollständig.
       </P>
 
       <H3>3. Die „Nur noch ein Trade"-Spirale</H3>
@@ -108,7 +108,7 @@ export default function PropFirmJournalDe() {
 
       <H3>Während der Session: Die Hard-Stop-Regel</H3>
       <P>
-        Entscheide im Voraus: „Wenn ich X % Tagesverlust erreiche, schließe ich die Plattform. Nicht nach dem nächsten Trade. Jetzt." Für eine detaillierte Aufschlüsselung dieses Ansatzes siehe unseren <Link to="/blog/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">Daily-Drawdown-Leitfaden</Link>. Für die meisten Prop-Firm-Konten sollte das bei 60-70 % des erlaubten Daily Drawdown gesetzt sein. Ist das Limit 5 %, liegt dein Hard Stop bei 3 %. Das gibt dir eine Pufferzone — denn in dem Moment, in dem du dein selbst gesetztes Limit erreichst und weggehst, hast du noch 2 % Atemraum für den Fall von Slippage oder einem Gap auf einer offenen Position.
+        Entscheide im Voraus: „Wenn ich X % Tagesverlust erreiche, schließe ich die Plattform. Nicht nach dem nächsten Trade. Jetzt." Für eine detaillierte Aufschlüsselung dieses Ansatzes siehe unseren <Link to="/blog/de/prop-firm-daily-drawdown-guide" className="text-kmf-accent hover:underline">Daily-Drawdown-Leitfaden</Link>. Für die meisten Prop-Firm-Konten sollte das bei 60-70 % des erlaubten Daily Drawdown gesetzt sein. Ist das Limit 5 %, liegt dein Hard Stop bei 3 %. Das gibt dir eine Pufferzone — denn in dem Moment, in dem du dein selbst gesetztes Limit erreichst und weggehst, hast du noch 2 % Atemraum für den Fall von Slippage oder einem Gap auf einer offenen Position.
       </P>
       <P>
         Logge diese Regel in dein Journal. Schreib nach der Session auf, ob du sie eingehalten hast. Wenn nicht — wenn du nach Erreichen deines Limits weitergetradet hast — ist das der wichtigste Datenpunkt des Tages. Nicht der Gewinn/Verlust. Der Disziplin-Verstoß.

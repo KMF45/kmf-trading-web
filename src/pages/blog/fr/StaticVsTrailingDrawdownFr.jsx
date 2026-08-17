@@ -180,7 +180,7 @@ export default function StaticVsTrailingDrawdownFr() {
         Sur un trailing basé sur l'équité, un trade qui montre +3 000 $ de profit non réalisé puis clôture à +500 $ t'a effectivement coûté du buffer. La limite a monté de 2 850 $ (depuis le plus haut flottant), mais tu n'as réalisé que 500 $. Ton buffer net a diminué de 2 350 $ sur un trade gagnant.
       </P>
       <P>
-        Solution : si tu es largement en profit sur un trade, soit prends le profit complet, soit place un <Link to="/blog/how-to-set-stop-loss" className="text-kmf-accent hover:underline">trailing stop serré</Link>. Ne laisse pas de gros profits flottants reculer vers le breakeven. Sur les comptes basés sur l'équité, c'est pire que de ne pas avoir pris le trade du tout.
+        Solution : si tu es largement en profit sur un trade, soit prends le profit complet, soit place un <Link to="/blog/fr/how-to-set-stop-loss" className="text-kmf-accent hover:underline">trailing stop serré</Link>. Ne laisse pas de gros profits flottants reculer vers le breakeven. Sur les comptes basés sur l'équité, c'est pire que de ne pas avoir pris le trade du tout.
       </P>
 
       <H3>4. Suis tout</H3>
@@ -188,7 +188,7 @@ export default function StaticVsTrailingDrawdownFr() {
         Le dashboard de ta prop firm montre ton drawdown actuel. Il ne te montre pas les schémas. Il ne te montre pas que tes trois derniers mardis ont tous bien commencé et fini en overtrading agressif. Il ne te montre pas que tu rends régulièrement tes profits entre 11h et midi.
       </P>
       <P>
-        C'est à ça que sert un <Link to="/blog/prop-firm-trading-journal" className="text-kmf-accent hover:underline">journal de trading</Link>. K.M.F. suit le max drawdown depuis le solde de pic et montre ta courbe d'évolution du solde — pour que tu voies exactement où les pullbacks arrivent et s'ils s'aggravent. Il suit aussi tes <Link to="/blog/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link>, pour que tu saches si tes trades perdants sont dans le plan ou si tu les laisses courir trop loin. L'app ne peut pas calculer la limite trailing spécifique de ta firme (chaque firme a des règles différentes), mais elle te donne les données brutes pour la calculer toi-même chaque matin. Fais les maths. Écris-les dans ton entrée de journal pré-séance. Ça prend 60 secondes et ça peut sauver ton compte.
+        C'est à ça que sert un <Link to="/blog/fr/prop-firm-trading-journal" className="text-kmf-accent hover:underline">journal de trading</Link>. K.M.F. suit le max drawdown depuis le solde de pic et montre ta courbe d'évolution du solde — pour que tu voies exactement où les pullbacks arrivent et s'ils s'aggravent. Il suit aussi tes <Link to="/blog/fr/r-multiple-explained" className="text-kmf-accent hover:underline">R-multiples</Link>, pour que tu saches si tes trades perdants sont dans le plan ou si tu les laisses courir trop loin. L'app ne peut pas calculer la limite trailing spécifique de ta firme (chaque firme a des règles différentes), mais elle te donne les données brutes pour la calculer toi-même chaque matin. Fais les maths. Écris-les dans ton entrée de journal pré-séance. Ça prend 60 secondes et ça peut sauver ton compte.
       </P>
 
       <H3>5. Envisage d'abord les firmes à static drawdown</H3>

@@ -50,7 +50,7 @@ export default function WorstTradingExcusesFr() {
         C'est l'excuse la plus dangereuse du trading parce qu'elle sonne intelligente. Le prix a fini par aller dans ta direction — tu es juste entré trop tôt et t'es fait stopper avant. Mais sur les marchés à effet de levier, le timing est tout. Avoir « raison » sur la direction tout en se faisant stopper est fonctionnellement identique à avoir tort. Ton compte se moque de ta thèse. Il se soucie de ton exécution.
       </P>
       <P>
-        Ce que ton journal montre : un schéma d'entrées prématurées, souvent déclenchées par l'impatience ou la peur de rater le mouvement. La solution est un déclencheur d'entrée plus strict — pas un stop loss plus large. Une <Link to="/blog/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> te force à vérifier tes critères d'entrée avant d'agir sur un biais directionnel.
+        Ce que ton journal montre : un schéma d'entrées prématurées, souvent déclenchées par l'impatience ou la peur de rater le mouvement. La solution est un déclencheur d'entrée plus strict — pas un stop loss plus large. Une <Link to="/blog/fr/pre-trade-checklist" className="text-kmf-accent hover:underline">checklist pré-trade</Link> te force à vérifier tes critères d'entrée avant d'agir sur un biais directionnel.
       </P>
 
       <Divider />
@@ -60,7 +60,7 @@ export default function WorstTradingExcusesFr() {
         Cette phrase a précédé plus de comptes cramés que n'importe quel événement de marché. Au moment où tu trades pour récupérer une perte au lieu de trader pour exécuter un setup valide, tu as quitté le domaine de la stratégie et tu es entré dans celui du pari. Chaque trade est statistiquement indépendant. Le marché ne te doit rien. Le « prochain trade » n'a aucune mémoire de ta perte précédente et aucune obligation de la réparer.
       </P>
       <P>
-        Ce que ton journal montre : les trades pris immédiatement après des pertes ont un win rate nettement plus bas et une perte moyenne plus élevée. L'urgence émotionnelle de récupérer mène à des positions surdimensionnées, des checklists sautées et des entrées impulsives. C'est <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pourquoi les traders enfreignent leurs règles</Link> — la douleur de la perte prend le dessus sur la logique du plan.
+        Ce que ton journal montre : les trades pris immédiatement après des pertes ont un win rate nettement plus bas et une perte moyenne plus élevée. L'urgence émotionnelle de récupérer mène à des positions surdimensionnées, des checklists sautées et des entrées impulsives. C'est <Link to="/blog/fr/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pourquoi les traders enfreignent leurs règles</Link> — la douleur de la perte prend le dessus sur la logique du plan.
       </P>
 
       <H2>Excuse n°4 : « Mon stop était trop serré »</H2>
@@ -75,7 +75,7 @@ export default function WorstTradingExcusesFr() {
 
       <H2>Excuse n°5 : « Je n'ai pas suivi mon plan, mais ça a marché »</H2>
       <P>
-        C'est le <Link to="/blog/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">mauvais gain</Link> dans sa forme la plus pure, déguisé en anecdote inoffensive. Tu as dévié de tes règles, tu as gagné de l'argent quand même, et tu te racontes l'histoire comme si ça prouvait quelque chose de positif. Ça prouve l'inverse. Ça prouve que tu es prêt à abandonner ton système quand ça t'arrange — et le fait que ça ait marché cette fois rend plus probable que tu le refasses.
+        C'est le <Link to="/blog/fr/good-loss-vs-bad-win" className="text-kmf-accent hover:underline">mauvais gain</Link> dans sa forme la plus pure, déguisé en anecdote inoffensive. Tu as dévié de tes règles, tu as gagné de l'argent quand même, et tu te racontes l'histoire comme si ça prouvait quelque chose de positif. Ça prouve l'inverse. Ça prouve que tu es prêt à abandonner ton système quand ça t'arrange — et le fait que ça ait marché cette fois rend plus probable que tu le refasses.
       </P>
       <P>
         Ce que ton journal montre : les trades marqués « plan non suivi » peuvent montrer des profits occasionnels, mais leur R-multiple moyen sur une série de 30+ trades est presque toujours négatif. Les gains chanceux masquent les dégâts systématiques de l'abandon de ton edge.

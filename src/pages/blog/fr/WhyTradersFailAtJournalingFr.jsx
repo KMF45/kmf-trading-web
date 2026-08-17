@@ -61,7 +61,7 @@ export default function WhyTradersFailAtJournalingFr() {
 
       <H3>5. Pas de gain immédiat</H3>
       <P>
-        Les bénéfices du journal sont cumulatifs et différés. Tu ne vois pas le schéma de tes revenge trades avant d'avoir 50 entrées. Tu ne remarques pas la corrélation entre tes <Link to="/blog/10-questions-after-every-trade" className="text-kmf-accent hover:underline">réflexions post-trade</Link> et une meilleure exécution avant des mois. Le cerveau humain dévalorise fortement les récompenses différées. Une habitude sans bénéfice visible à court terme rivalise mal avec des activités qui semblent productives tout de suite.
+        Les bénéfices du journal sont cumulatifs et différés. Tu ne vois pas le schéma de tes revenge trades avant d'avoir 50 entrées. Tu ne remarques pas la corrélation entre tes <Link to="/blog/fr/10-questions-after-every-trade" className="text-kmf-accent hover:underline">réflexions post-trade</Link> et une meilleure exécution avant des mois. Le cerveau humain dévalorise fortement les récompenses différées. Une habitude sans bénéfice visible à court terme rivalise mal avec des activités qui semblent productives tout de suite.
       </P>
 
       <Divider />
@@ -75,7 +75,7 @@ export default function WhyTradersFailAtJournalingFr() {
 
       <H3>Revois chaque semaine, pas chaque jour</H3>
       <P>
-        Revoir les trades individuels chaque jour crée du bruit émotionnel. Un seul trade ne te dit rien statistiquement. Mais une <Link to="/blog/weekly-trading-review-template" className="text-kmf-accent hover:underline">revue hebdomadaire de 10 à 20 trades</Link> révèle de vrais schémas : quels setups performent réellement, quels états émotionnels corrèlent avec les pertes, où tu dévies de ton plan. Bloque 30 minutes chaque week-end. C'est là que le journal paie.
+        Revoir les trades individuels chaque jour crée du bruit émotionnel. Un seul trade ne te dit rien statistiquement. Mais une <Link to="/blog/fr/weekly-trading-review-template" className="text-kmf-accent hover:underline">revue hebdomadaire de 10 à 20 trades</Link> révèle de vrais schémas : quels setups performent réellement, quels états émotionnels corrèlent avec les pertes, où tu dévies de ton plan. Bloque 30 minutes chaque week-end. C'est là que le journal paie.
       </P>
 
       <H3>Utilise des modèles pour supprimer la friction</H3>
@@ -89,7 +89,7 @@ export default function WhyTradersFailAtJournalingFr() {
 
       <H3>Recadre les pertes comme des données, pas des échecs</H3>
       <P>
-        Les traders qui journalisent régulièrement ont fait un basculement cognitif : un trade perdant n'est pas un échec — c'est un point de donnée. Le journal n'est pas un registre de tes erreurs. C'est un jeu de données qui révèle ton edge. Quand tu revois une perte et découvres que c'était un setup valide qui simplement n'a pas marché, c'est une bonne perte. Quand tu découvres l'<Link to="/blog/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">écart entre ton backtest et ton exécution réelle</Link>, c'est du renseignement exploitable. Le journal transforme la douleur en progrès — mais seulement si tu t'en sers.
+        Les traders qui journalisent régulièrement ont fait un basculement cognitif : un trade perdant n'est pas un échec — c'est un point de donnée. Le journal n'est pas un registre de tes erreurs. C'est un jeu de données qui révèle ton edge. Quand tu revois une perte et découvres que c'était un setup valide qui simplement n'a pas marché, c'est une bonne perte. Quand tu découvres l'<Link to="/blog/fr/execution-gap-backtest-vs-live-trading" className="text-kmf-accent hover:underline">écart entre ton backtest et ton exécution réelle</Link>, c'est du renseignement exploitable. Le journal transforme la douleur en progrès — mais seulement si tu t'en sers.
       </P>
 
       <H3>Suis les séries, pas la perfection</H3>

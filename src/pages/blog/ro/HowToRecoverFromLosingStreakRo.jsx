@@ -61,7 +61,7 @@ export default function HowToRecoverFromLosingStreakRo() {
         Indiferent de evaluarea ta, în momentul în care identifici o serie de pierderi, redu-ți position size-ul. Mergi la 50% din riscul tău normal per trade. Dacă seria continuă, ia în calcul să cobori la 25%.
       </P>
       <P>
-        E contraintuitiv — pare că-ți reduci capacitatea de a recupera. Dar nu e așa. Îți protejezi capitalul într-o perioadă în care edge-ul tău poate fi temporar redus, fie de condițiile de piață, fie de o deteriorare subtilă a execuției cauzată de presiunea psihologică a seriei în sine. A urma <Link to="/blog/1-percent-risk-rule" className="text-kmf-accent hover:underline">regula de 1% risc</Link> devine și mai critic în timpul drawdown-urilor. Nu poți gândi limpede când te lupți să recuperezi pierderi cu poziții de mărime întreagă.
+        E contraintuitiv — pare că-ți reduci capacitatea de a recupera. Dar nu e așa. Îți protejezi capitalul într-o perioadă în care edge-ul tău poate fi temporar redus, fie de condițiile de piață, fie de o deteriorare subtilă a execuției cauzată de presiunea psihologică a seriei în sine. A urma <Link to="/blog/ro/1-percent-risk-rule" className="text-kmf-accent hover:underline">regula de 1% risc</Link> devine și mai critic în timpul drawdown-urilor. Nu poți gândi limpede când te lupți să recuperezi pierderi cu poziții de mărime întreagă.
       </P>
       <Table
         headers={['Risc normal %', 'Risc redus (50%)', 'Redus mai mult (25%)', 'Când aplici']}

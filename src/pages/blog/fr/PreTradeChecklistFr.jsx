@@ -55,7 +55,7 @@ export default function PreTradeChecklistFr() {
         La recherche sur la prise de décision sous pression montre régulièrement que les humains sont mauvais pour réaliser des évaluations en plusieurs étapes en temps réel — surtout sous stress ou pression du temps. On saute des étapes, on pondère trop fortement l'information récente, et on laisse l'état émotionnel contaminer le jugement analytique.
       </P>
       <P>
-        Une checklist externalise les critères de décision. Plutôt que de compter sur ta pensée Système 1 (rapide, émotionnelle) du moment pour évaluer un trade correctement, une checklist force l'engagement systématique de la pensée Système 2 (lente, délibérée). Elle crée un écart obligatoire entre l'impulsion et l'action — et c'est dans cet écart que vit la discipline. C'est aussi <Link to="/blog/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pourquoi les traders enfreignent leurs propres règles</Link> — sans checklist, le Système 1 gagne à chaque fois.
+        Une checklist externalise les critères de décision. Plutôt que de compter sur ta pensée Système 1 (rapide, émotionnelle) du moment pour évaluer un trade correctement, une checklist force l'engagement systématique de la pensée Système 2 (lente, délibérée). Elle crée un écart obligatoire entre l'impulsion et l'action — et c'est dans cet écart que vit la discipline. C'est aussi <Link to="/blog/fr/why-traders-break-their-rules" className="text-kmf-accent hover:underline">pourquoi les traders enfreignent leurs propres règles</Link> — sans checklist, le Système 1 gagne à chaque fois.
       </P>
       <Callout title="L'idée clé" color="#FFB300">
         Une checklist ne fait pas de toi un meilleur analyste. Elle garantit que l'analyse que tu sais déjà faire est réellement effectuée avant chaque trade — pas seulement parfois, pas seulement quand tu y penses, mais chaque fois.
@@ -87,7 +87,7 @@ export default function PreTradeChecklistFr() {
 
       <H3>5. Ai-je calculé ma taille de position sur la base de 1 % de risque ?</H3>
       <P>
-        N'estime pas. Calcule. Montant de risque = Compte × 0,01. Taille de position = Montant de risque ÷ Distance du stop. Ça prend 20 secondes et garantit que le pire résultat possible sur ce trade — une perte complète — coûte exactement 1 % de ton compte, pas environ 1 % au feeling. Vois notre <Link to="/blog/position-sizing-guide" className="text-kmf-accent hover:underline">guide complet du dimensionnement</Link> pour la formule exacte en forex, actions et crypto.
+        N'estime pas. Calcule. Montant de risque = Compte × 0,01. Taille de position = Montant de risque ÷ Distance du stop. Ça prend 20 secondes et garantit que le pire résultat possible sur ce trade — une perte complète — coûte exactement 1 % de ton compte, pas environ 1 % au feeling. Vois notre <Link to="/blog/fr/position-sizing-guide" className="text-kmf-accent hover:underline">guide complet du dimensionnement</Link> pour la formule exacte en forex, actions et crypto.
       </P>
 
       <H3>6. Y a-t-il un événement de news majeur dans l'heure qui vient ?</H3>
@@ -97,7 +97,7 @@ export default function PreTradeChecklistFr() {
 
       <H3>7. Est-ce que je trade par ennui ou par FOMO ?</H3>
       <P>
-        Sois honnête. Demande-toi : est-ce que j'entre dans ce trade parce qu'il y a un vrai setup, ou parce que je suis assis devant l'écran et que j'ai l'impression de devoir faire quelque chose ? Les trades de FOMO — pris parce qu'un mouvement a déjà lieu et que tu ne veux pas le rater — et les trades d'ennui sont parmi les catégories de trade les plus fiablement perdantes. Si la réponse honnête est oui, ferme le graphique et attends. Ce genre d'entrée impulsive est le premier pas vers le <Link to="/blog/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link>.
+        Sois honnête. Demande-toi : est-ce que j'entre dans ce trade parce qu'il y a un vrai setup, ou parce que je suis assis devant l'écran et que j'ai l'impression de devoir faire quelque chose ? Les trades de FOMO — pris parce qu'un mouvement a déjà lieu et que tu ne veux pas le rater — et les trades d'ennui sont parmi les catégories de trade les plus fiablement perdantes. Si la réponse honnête est oui, ferme le graphique et attends. Ce genre d'entrée impulsive est le premier pas vers le <Link to="/blog/fr/revenge-trading" className="text-kmf-accent hover:underline">revenge trading</Link>.
       </P>
 
       <H3>8. Suis-je émotionnellement prêt à gérer ce trade s'il part contre moi ?</H3>

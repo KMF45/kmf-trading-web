@@ -59,7 +59,7 @@ export default function TenQuestionsAfterEveryTradeRo() {
 
       <H3>2. Plasarea stop loss-ului a fost pe bază de structură sau arbitrară?</H3>
       <P>
-        Un stop loss ar trebui plasat la un nivel de preț care îți invalidează categoric teza trade-ului — sub un nivel de support, peste un nivel de resistance, dincolo de un swing point. Un stop arbitrar plasat fiindcă „$50 pare o pierdere rezonabilă" nu e un stop loss. E o rugăciune. Această întrebare verifică dacă riscul tău a fost definit de logica pieței, nu de comoditate. Pentru un cadru complet pe asta, citește ghidul nostru despre <Link to="/blog/how-to-set-stop-loss">cum să setezi corect un stop loss</Link>.
+        Un stop loss ar trebui plasat la un nivel de preț care îți invalidează categoric teza trade-ului — sub un nivel de support, peste un nivel de resistance, dincolo de un swing point. Un stop arbitrar plasat fiindcă „$50 pare o pierdere rezonabilă" nu e un stop loss. E o rugăciune. Această întrebare verifică dacă riscul tău a fost definit de logica pieței, nu de comoditate. Pentru un cadru complet pe asta, citește ghidul nostru despre <Link to="/blog/ro/how-to-set-stop-loss">cum să setezi corect un stop loss</Link>.
       </P>
 
       <H3>3. Am dimensionat poziția corect pentru regulile mele de risc?</H3>
@@ -99,7 +99,7 @@ export default function TenQuestionsAfterEveryTradeRo() {
 
       <H3>10. Care e R-multiple-ul meu pe acest trade?</H3>
       <P>
-        Calculează <Link to="/blog/r-multiple-explained">R-multiple-ul</Link>: P/L-ul real împărțit la riscul tău inițial. Notează acest număr pentru fiecare trade. În timp, R-multiple-ul tău mediu dezvăluie dacă strategia ta are <Link to="/blog/trading-expectancy-explained">expectancy</Link> pozitiv și îți spune mult mai multe despre performanța ta decât P/L-ul în dolari.
+        Calculează <Link to="/blog/ro/r-multiple-explained">R-multiple-ul</Link>: P/L-ul real împărțit la riscul tău inițial. Notează acest număr pentru fiecare trade. În timp, R-multiple-ul tău mediu dezvăluie dacă strategia ta are <Link to="/blog/ro/trading-expectancy-explained">expectancy</Link> pozitiv și îți spune mult mai multe despre performanța ta decât P/L-ul în dolari.
       </P>
 
       <Divider />
@@ -124,7 +124,7 @@ export default function TenQuestionsAfterEveryTradeRo() {
         ]}
       />
       <P>
-        Timp total: aproximativ 2 minute per trade. Pe parcursul unei cariere de trading, acele 2 minute per trade sunt diferența dintre stagnare și îmbunătățire sistematică. Combină aceste întrebări cu un <Link to="/blog/weekly-trading-review-template">review săptămânal</Link> structurat și efectul de compounding pe trading-ul tău e enorm.
+        Timp total: aproximativ 2 minute per trade. Pe parcursul unei cariere de trading, acele 2 minute per trade sunt diferența dintre stagnare și îmbunătățire sistematică. Combină aceste întrebări cu un <Link to="/blog/ro/weekly-trading-review-template">review săptămânal</Link> structurat și efectul de compounding pe trading-ul tău e enorm.
       </P>
 
       <Takeaways items={[
