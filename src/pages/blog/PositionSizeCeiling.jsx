@@ -69,7 +69,7 @@ export default function PositionSizeCeiling() {
         The sample is small and it is one study, so it should not be oversold. But it points at something every trader who has scaled up recognises immediately: the physiological load rises with the magnitude of what you are experiencing, and when you double your size you double that magnitude. Your risk percentage stayed at 1%. The swings your body is metabolising did not.
       </P>
       <P>
-        And elevated cortisol does not degrade random abilities. It specifically narrows time horizons, increases threat sensitivity, and pushes toward immediate certainty over delayed reward — which is a precise description of cutting a winner at +0.4R because holding to +2R has become unbearable.
+        Cortisol and stress can affect cognitive and behavioural processes, and a persistent stress response can change how you evaluate risk and uncertainty. The study does not demonstrate a link to any specific trading behaviour, but the mechanism is consistent with what traders report: at a larger size, holding a winner to target becomes harder to tolerate.
       </P>
 
       <Callout title="This is not a character flaw" color="#CE93D8">
@@ -179,7 +179,7 @@ export default function PositionSizeCeiling() {
 
       <Takeaways items={[
         'Your risk percentage is scale-invariant. Your nervous system is not. It responds to absolute magnitude, which is why 1% at $500 a trade feels nothing like 1% at $100 a trade.',
-        'Coates & Herbert (PNAS, 2008) found traders\' cortisol rose with the variance of their results and with market volatility — tracking the size of swings, not their percentage of capital. Doubling your size doubles that load.',
+        'Coates & Herbert (PNAS, 2008) found traders\' cortisol rose with the variance of their results and with market volatility — tracking the size of swings, not their percentage of capital. Doubling your size doubles the absolute amount your body and mind have to process, even though the risk percentage is unchanged.',
         'The ceiling does not arrive as fear. It arrives as reasonable-sounding caution: taking profit early, skipping valid setups, moving stops. Feeling relief when a winner closes is the clearest single signal.',
         'The real cost is not discomfort. Above your ceiling your average loss quietly exceeds planned risk, so your "1% risk" becomes fiction while your spreadsheet still claims 1%.',
         'Never size up during a winning streak — that is the moment skill and luck are least separable. Increase during a boring, mixed stretch, on a written rule.',

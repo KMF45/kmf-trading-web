@@ -8,7 +8,7 @@ export default function DrawdownAfterProfitabilityRo() {
     <BlogArticleLayout
       slug="drawdown-after-profitability"
       lang="ro"
-      title="Drawdown-ul Traderului Profitabil: De Ce Doare Mai Tare Să Pierzi După Ce Ai Câștigat"
+      title="Drawdown-ul traderului profitabil: de ce doare mai tare să pierzi după ce ai câștigat"
       metaTitle="Drawdown După Ce Devii Profitabil: Capcana Identității | K.M.F."
       metaDescription="Un drawdown când ești începător e o problemă de bani. Un drawdown după unsprezece luni profitabile e o problemă de identitate. De ce traderii profitabili distrug sisteme care funcționează — și cum deosebești varianța normală de un edge stricat."
       date="17 august 2026"
@@ -36,7 +36,7 @@ export default function DrawdownAfterProfitabilityRo() {
       ]}
     >
       <Intro>
-        Doi traderi sunt pe minus 8% luna asta. Primul e la șase luni de carieră și n-a avut niciodată o lună profitabilă. Al doilea tocmai a încheiat unsprezece luni profitabile la rând. Același instrument, același drawdown, aceeași mărime de cont. Întreabă pe oricine care dintre ei e în pericol mai mare și îți va arăta începătorul. Ar greși. Începătorul va ridica din umeri, va numi asta taxă de școlarizare și va merge mai departe. Traderul profitabil nu va dormi, va petrece weekendul rescriind reguli care au funcționat un an întreg și are șanse reale să demonteze singurul edge pe care l-a construit vreodată. Pierderea din cont e aceeași pentru amândoi. Ce pune în joc fiecare, însă, e cu totul altceva.
+        Doi traderi sunt pe minus 8% luna asta. Primul e la șase luni de carieră și n-a avut niciodată o lună profitabilă. Al doilea tocmai a încheiat unsprezece luni profitabile la rând. Același instrument, același drawdown, aceeași mărime de cont. Întreabă pe oricine care dintre cei doi e în pericol mai mare și îți va arăta începătorul. Ar greși. Începătorul va ridica din umeri, va considera pierderea o taxă de școlarizare și va merge mai departe. Traderul profitabil nu va dormi, va petrece weekendul rescriind reguli care au funcționat un an întreg și are șanse reale să demonteze singurul edge (avantaj statistic) pe care l-a construit vreodată. Pierderea din cont e aceeași pentru amândoi. Ceea ce riscă fiecare, însă, e cu totul diferit.
       </Intro>
 
       <StatsStrip items={[
@@ -45,9 +45,9 @@ export default function DrawdownAfterProfitabilityRo() {
         { value: 30, decimals: 0, suffix: '+', label: <>trade-uri minim înainte ca un drawdown<br />să spună ceva despre edge-ul tău</> },
       ]} />
 
-      <H2>Doi Traderi, Același −8%</H2>
+      <H2>Doi traderi, același −8%</H2>
       <P>
-        Drawdown-ul începătorului îl costă bani. Atât. Nu are niciun istoric de contrazis, nicio imagine de sine construită pe competența în trading, nicio poveste despre el însuși pe care luna roșie s-o întrerupă. Se aștepta să piardă. Pierderea confirmă ce credea deja, iar confirmarea — chiar și a ceva neplăcut — e ieftină din punct de vedere psihologic.
+        Drawdown-ul începătorului îl costă bani. Atât. Nu are niciun istoric de contrazis, nicio imagine de sine construită în jurul faptului că e un trader competent, nicio poveste despre el însuși pe care luna roșie s-o întrerupă. Se aștepta să piardă. Pierderea confirmă ce credea deja, iar confirmarea — chiar și a ceva neplăcut — e ieftină din punct de vedere psihologic.
       </P>
       <P>
         Drawdown-ul traderului profitabil îl costă bani și ceva considerabil mai scump: dovada că e bun la asta. Unsprezece luni verzi nu erau doar venit. Erau probe. Justificau anii petrecuți în fața ecranelor, hobby-urile la care a renunțat, conversațiile în care se numea trader fără să ezite. Un drawdown nu-i reduce doar soldul. Îi redeschide o întrebare pe care o credea închisă definitiv.
@@ -56,12 +56,12 @@ export default function DrawdownAfterProfitabilityRo() {
         De asta sfatul standard — „drawdown-urile sunt normale, ține-te de plan" — nu are niciun efect asupra traderilor profitabili. Ei știu că drawdown-urile sunt normale. Au statisticile memorate. Faptul că le știu nu ajută, fiindcă lucrul atacat n-a fost niciodată înțelegerea lor statistică. Era identitatea lor.
       </P>
 
-      <H2>Pierdere de Bani vs Amenințare la Identitate</H2>
+      <H2>Pierdere de bani vs. amenințare la identitate</H2>
       <P>
-        Oamenii apără o imagine de sine amenințată mult mai agresiv decât un sold amenințat. O pierdere financiară produce un calcul: cât, cum recuperez, în cât timp. O amenințare la identitate produce ceva mai vechi și mult mai puțin util — nevoia urgentă ca amenințarea să înceteze, imediat, prin orice mijloc disponibil.
+        Oamenii își apără imaginea de sine mult mai agresiv atunci când e amenințată decât atunci când le e amenințat soldul contului. O pierdere financiară produce un calcul: cât, cum recuperez, în cât timp. O amenințare la identitate produce ceva mai vechi și mult mai puțin util — nevoia urgentă de a elimina disconfortul imediat, prin orice mijloc disponibil.
       </P>
       <P>
-        Observă cum arată „fă să înceteze" la un birou de trading. Nu arată a panică. Arată a productivitate. Arată ca un trader care își deschide backtest-ul duminică la 11 seara, adaugă un filtru și își spune că e riguros. Arată ca o creștere de mărime la următorul setup cu convingere mare, fiindcă un câștig decisiv ar încheia disconfortul dintr-o singură mișcare. Arată ca cineva care citește despre o strategie nouă și simte, pentru prima dată în luni, o urmă de ușurare.
+        Observă cum arată „fă să înceteze" la un birou de trading. Nu seamănă cu panica. Din exterior, pare chiar productivitate. Arată ca un trader care își deschide backtest-ul duminică la 11 seara, adaugă un filtru și își spune că e riguros. Arată ca o creștere de mărime la următorul setup cu convingere mare, fiindcă un câștig decisiv ar încheia disconfortul dintr-o singură mișcare. Arată ca cineva care citește despre o strategie nouă și simte, pentru prima dată în luni, o urmă de ușurare.
       </P>
       <P>
         Fiecare dintre acțiunile astea restaurează senzația de competență în câteva minute. Niciuna nu restaurează edge-ul, fiindcă edge-ul n-a fost stricat niciodată. Asta e capcana: comportamentele care alină cel mai eficient durerea psihologică sunt exact aceleași care distrug cel mai eficient un sistem funcțional.
@@ -71,7 +71,7 @@ export default function DrawdownAfterProfitabilityRo() {
         Dacă o schimbare propusă la strategia ta te face să te simți mai bine <em>înainte</em> să ai vreun fel de date despre cât de bine funcționează, nu optimizezi. Te liniștești singur. Îmbunătățirile reale se simt a muncă; rareori se simt a ușurare.
       </Callout>
 
-      <H2>Iluzia Regresiei</H2>
+      <H2>Iluzia regresiei</H2>
       <P>
         Mai există un al doilea mecanism care rulează sub primul, și e mai degrabă aritmetic decât emoțional.
       </P>
@@ -85,29 +85,29 @@ export default function DrawdownAfterProfitabilityRo() {
         De asta <Link to="/blog/ro/trading-expectancy-explained" className="text-kmf-accent hover:underline">speranța matematică</Link> contează mai mult decât orice curbă de capital. Speranța matematică descrie motorul. Curba descrie motorul plus vremea de afară. Traderii care se uită doar la curbă vor confunda la nesfârșit vremea cu o defecțiune de motor.
       </P>
 
-      <H2>Cele Patru Moduri în Care Traderii Profitabili Distrug un Edge Funcțional</H2>
+      <H2>Cele patru moduri în care traderii profitabili distrug un edge funcțional</H2>
       <P>
         Sunt ordonate după cât de multă pagubă fac, nu după cât de frecvente sunt. Cel mai distructiv e și cel care arată cel mai respectabil.
       </P>
 
       <H3>1. Optimizarea din mijlocul drawdown-ului</H3>
       <P>
-        Adaugi un filtru, strângi o condiție de intrare sau introduci o regulă de confirmare — în mijlocul drawdown-ului, folosind trade-urile din drawdown drept dovezi. Problema e că optimizezi pe cel mai mic și mai nereprezentativ eșantion pe care îl vei avea vreodată, selectat tocmai fiindcă a mers prost. Nu elimini un defect. Faci curve-fitting pe zgomot, și o faci pe un sistem care a durat ani să fie validat. Dacă o schimbare chiar se justifică, se va justifica și peste 30 de trade-uri, când o poți testa pe un eșantion complet în loc de cel mai prost eșantion al tău.
+        Adaugi un filtru, faci o condiție de intrare mai strictă sau introduci o regulă de confirmare — în mijlocul drawdown-ului, folosind trade-urile din drawdown drept dovezi. Problema e că optimizezi pe cel mai mic și mai nereprezentativ eșantion pe care îl vei avea vreodată, selectat tocmai fiindcă a mers prost. Nu elimini un defect real. Doar supra-optimizezi strategia pe un eșantion nereprezentativ — și o faci pe un sistem care a durat ani să fie validat. Dacă o schimbare chiar se justifică, se va justifica și peste 30 de trade-uri, când o poți testa pe un eșantion complet în loc de cel mai prost eșantion al tău.
       </P>
 
       <H3>2. Creșterea mărimii ca să scurtezi recuperarea</H3>
       <P>
-        Aritmetica e seducătoare și falsă. Un drawdown de 20% are nevoie de un câștig de 25% pentru recuperare; la mărime dublă, are nevoie de doar 12,5% din progresul „normal". Ce omite calculul e că dublarea mărimii dublează și adâncimea următoarei perioade adverse, iar tu propui să faci asta exact în momentul în care calitatea deciziilor tale e cel mai compromisă. Viteza de recuperare e obiectivul complet greșit — vezi analiza completă despre <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">mărimea poziției</Link> pentru de ce mărimea trebuie să urmeze capitalul contului, niciodată urgența emoțională.
+        Aritmetica e seducătoare și falsă. Un drawdown de 20% are nevoie de un câștig de 25% pentru recuperare, iar dacă dublezi mărimea poziției pare că ajungi acolo în jumătate din timp. Ce omite calculul e că dublezi și pierderea atunci când următoarele trade-uri merg împotriva ta, iar tu propui să faci asta exact în momentul în care calitatea deciziilor tale e cel mai compromisă. Viteza de recuperare e obiectivul complet greșit — vezi analiza completă despre <Link to="/blog/ro/position-sizing-guide" className="text-kmf-accent hover:underline">mărimea poziției</Link> pentru de ce mărimea trebuie să urmeze capitalul contului, niciodată urgența emoțională.
       </P>
 
       <H3>3. Schimbatul strategiei în cel mai prost moment posibil</H3>
       <P>
-        Să abandonezi un sistem în timpul drawdown-ului lui înseamnă că vinzi sistematic fiecare strategie la minimul ei. Adopți una nouă, prinzi perioada ei favorabilă, o abandonezi când intră inevitabil în drawdown, repeți. Executat consecvent, procedeul ăsta transformă un portofoliu de edge-uri profitabile într-o pierdere garantată, fiindcă prinzi perioada proastă a fiecărui sistem și niciuna dintre reveniri.
+        Să abandonezi un sistem exact în timpul propriului său drawdown înseamnă că vinzi sistematic fiecare strategie la minimul ei. Adopți una nouă, prinzi perioada ei favorabilă, o abandonezi când intră inevitabil în drawdown, repeți. Executat consecvent, procedeul ăsta transformă un portofoliu de edge-uri profitabile într-o pierdere garantată, fiindcă prinzi perioada proastă a fiecărui sistem și niciuna dintre reveniri.
       </P>
 
-      <H3>4. Pana de jurnal</H3>
+      <H3>4. Lipsa jurnalului</H3>
       <P>
-        Ăsta e cel tăcut, și el le face pe celelalte trei imposibil de reparat. Să notezi trade-urile e plăcut când intrările sunt verzi și neplăcut când nu sunt, așa că jurnalele majorității traderilor dezvoltă o gaură vizibilă exact peste cea mai proastă perioadă a lor. Rezultatul e că singura perioadă capabilă să-ți spună dacă edge-ul s-a stricat e chiar perioada fără date. Peste șase luni nu mai poți reconstitui ce s-a întâmplat, așa că rămâi cu povestea pe care ți-ai spus-o atunci — scrisă de partea din creierul tău care încerca să facă disconfortul să înceteze.
+        Ăsta e cel tăcut, și el le face pe celelalte trei imposibil de reparat. Să notezi trade-urile e plăcut când intrările sunt verzi și neplăcut când nu sunt, așa că în jurnalele majorității traderilor apare o lacună exact în cea mai proastă perioadă a lor. Rezultatul e că singura perioadă capabilă să-ți spună dacă edge-ul s-a stricat e chiar perioada fără date. Peste șase luni nu mai poți reconstitui ce s-a întâmplat, așa că rămâi cu povestea pe care ți-ai spus-o atunci — scrisă de partea din creierul tău care încerca să facă disconfortul să înceteze.
       </P>
 
       <Callout title="De ce e scumpă gaura asta" color="#FF5252">
@@ -116,9 +116,9 @@ export default function DrawdownAfterProfitabilityRo() {
 
       <Divider />
 
-      <H2>Drawdown Normal vs Edge Stricat: Diagnosticul</H2>
+      <H2>Drawdown normal vs. edge stricat: diagnosticul</H2>
       <P>
-        Întrebarea „mai funcționează strategia mea?" nu poate primi răspuns uitându-te la P/L, fiindcă P/L-ul e chiar lucrul pus sub semnul întrebării. Răspunsul vine din proces. Iată ce separă cele două cazuri.
+        Întrebarea „mai funcționează strategia mea?" nu poate primi răspuns uitându-te la P/L, fiindcă tocmai rezultatele sunt cele pe care încerci să le înțelegi. Răspunsul vine din proces. Iată ce separă cele două cazuri.
       </P>
 
       <Table
@@ -128,31 +128,31 @@ export default function DrawdownAfterProfitabilityRo() {
           ['Criterii de intrare', { value: 'Neschimbate față de regulile scrise', color: 'green' }, { value: 'Relaxate discret ca să găsești trade-uri', color: 'red' }],
           ['Pierdere medie', { value: 'Tot plafonată în jur de −1R', color: 'green' }, { value: 'Depășește regulat −1.5R', color: 'red' }],
           ['Erori de execuție', { value: 'Rare, și notate când apar', color: 'green' }, { value: 'Frecvente, și nenotate', color: 'red' }],
-          ['Mărimea eșantionului', { value: 'Sub 30 de trade-uri — încă nesemnificativ', color: 'cyan' }, { value: '50+ trade-uri și tot pe minus', color: 'gold' }],
+          ['Mărimea eșantionului', { value: 'Sub 30 de trade-uri — eșantion prea mic pentru concluzii', color: 'cyan' }, { value: '50+ trade-uri și tot pe minus', color: 'gold' }],
           ['Frecvența setup-urilor', { value: 'Mai puține setup-uri — s-au schimbat condițiile', color: 'cyan' }, { value: 'Mai multe trade-uri ca de obicei, calitate mai slabă', color: 'red' }],
           ['Justificarea trade-ului', { value: 'Fiecare intrare se leagă de o regulă', color: 'green' }, { value: 'Intrări pe care nu le poți justifica în scris', color: 'red' }],
         ]}
       />
 
       <P>
-        Citește coloana din mijloc cu atenție. Dacă majoritatea semnalelor tale stau acolo, nu ai o problemă de strategie — ai o problemă de varianță, iar reacția corectă e să nu schimbi absolut nimic la strategie. Redu mărimea dacă încărcătura emoțională îți afectează execuția, dar lasă regulile în pace.
+        Citește coloana din mijloc cu atenție. Dacă majoritatea semnalelor tale stau acolo, nu ai o problemă de strategie — ai o problemă de varianță, iar reacția corectă e să nu schimbi absolut nimic la strategie. Redu mărimea dacă presiunea emoțională îți afectează execuția, dar lasă regulile în pace.
       </P>
       <P>
         Coloana din dreapta descrie altceva, și observă că aproape fiecare rând din ea descrie <em>comportamentul tău</em>, nu al pieței. Asta e concluzia incomodă ascunsă în tabel: când edge-ul unui trader profitabil chiar încetează să funcționeze, cauza e de obicei că traderul a încetat să-l execute — adesea ca reacție la drawdown-ul însuși. Drawdown-ul nu strică edge-ul. Reacția la drawdown îl strică.
       </P>
       <P>
-        După ce ai stabilit în ce situație ești, succesiunea practică — oprire, reducere de mărime, întoarcere la bază, creștere treptată înapoi — e descrisă pas cu pas în ghidul nostru despre <Link to="/blog/ro/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">recuperarea dintr-o serie de pierderi</Link>. Articolul ăsta e diagnosticul; acela e tratamentul.
+        După ce ai stabilit în ce situație ești, succesiunea practică — oprire, reducere de mărime, întoarcere la bază, creștere treptată înapoi — e descrisă pas cu pas în ghidul nostru despre <Link to="/blog/ro/how-to-recover-from-losing-streak" className="text-kmf-accent hover:underline">recuperarea dintr-o serie de pierderi</Link>. Articolul de față pune diagnosticul; celălalt explică ce ai de făcut.
       </P>
 
-      <H2>Dosarul de Dovezi</H2>
+      <H2>Dosarul de dovezi</H2>
       <P>
-        Problema de fond e că traderul care ar trebui să evalueze drawdown-ul la rece nu e disponibil în timpul drawdown-ului. Așa că delegi treaba versiunii tale care e disponibilă acum, cât timp lucrurile merg bine.
+        Problema de fond e că traderul care ar trebui să evalueze drawdown-ul la rece nu e disponibil în timpul drawdown-ului. Altfel spus, lași omul care ești în timpul drawdown-ului să interpreteze datele, deși tocmai atunci judecata îi e cel mai afectată. Soluția e să scrii concluziile din timp, cât lucrurile merg bine.
       </P>
       <P>
         Un Dosar de Dovezi e un document scurt pe care îl scrii cât ești profitabil și îl citești când nu mai ești. Conține valorile tale de referință — win rate, profit factor, R mediu, cea mai lungă serie de pierderi de până acum, cel mai adânc drawdown de până acum — și două praguri decise din timp: adâncimea de drawdown la care reduci mărimea și adâncimea la care te oprești și analizezi. Ăsta e tot documentul. O pagină.
       </P>
       <P>
-        Valoarea lui nu e informațională. Cifrele astea le știi deja. Valoarea lui e că a fost scris de cineva în care ai încredere, într-un moment în care nu avea niciun motiv să te mintă, și spune cu scrisul tău că un drawdown de 15% s-a mai întâmplat și s-a rezolvat. În timpul unui drawdown vei genera un argument extrem de convingător că de data asta e altfel. Dosarul de Dovezi e singurul lucru pe care îl vei avea care contraargumentează cu date în loc de încurajări.
+        Valoarea lui nu e informațională. Cifrele astea le știi deja. Valoarea lui e că a fost scris de tine într-un moment în care erai profitabil și puteai privi situația fără presiune, și spune cu scrisul tău că un drawdown de 15% s-a mai întâmplat și s-a rezolvat. În timpul unui drawdown vei genera un argument extrem de convingător că de data asta e altfel. Dosarul de Dovezi e singurul lucru pe care îl vei avea care contraargumentează cu date în loc de încurajări.
       </P>
       <P>
         Pragurile contează din același motiv. O limită aleasă la rece e o limită reală. O limită aleasă când ești pe minus 12% e o negociere, și o vei pierde.
@@ -164,15 +164,15 @@ export default function DrawdownAfterProfitabilityRo() {
 
       <Divider />
 
-      <H2>Ce Se Schimbă De Fapt Când Devii Profitabil</H2>
+      <H2>Ce se schimbă de fapt când devii profitabil</H2>
       <P>
-        Majoritatea traderilor presupun că profitabilitatea e o linie de sosire: o atingi și dificultatea psihologică se termină. E mai degrabă o tranziție. Presiunile specifice se schimbă, și nimeni nu te avertizează despre setul nou.
+        Majoritatea traderilor presupun că profitabilitatea e o linie de sosire: o atingi și dificultatea psihologică se termină. E mai degrabă o tranziție. Presiunile specifice se schimbă, și nimeni nu te avertizează despre noile provocări.
       </P>
       <Ul items={[
-        'Miza crește. Să pierzi bani pe care nu i-ai avut cu adevărat e suportabil. Să pierzi un istoric construit în ani e o greutate diferită, iar piața nu se ajustează pentru asta.',
-        'Erorile tale devin mai subtile. Începătorii încalcă reguli evidente. Traderii profitabili încalcă reguli sofisticate — o intrare ușor prematură, un filtru relaxat marginal — care sunt mult mai greu de observat într-un jurnal și mult mai ușor de raționalizat.',
+        'Miza crește. Să pierzi bani pe care încă nu îi considerai cu adevărat ai tăi e mai ușor de suportat. Să pierzi un istoric construit în ani e o greutate diferită, iar piața nu se ajustează pentru asta.',
+        'Erorile tale devin mai subtile. Începătorii încalcă reguli evidente. Traderii profitabili tind să încalce reguli mai subtile — o intrare ușor prematură, un filtru relaxat marginal — care sunt mult mai greu de observat într-un jurnal și mult mai ușor de raționalizat.',
         'Plictiseala devine un risc real. Un sistem funcțional e repetitiv. Traderii care aveau nevoie de adrenalină ca să rămână implicați o vor reintroduce inconștient, de obicei prin mărime sau frecvență.',
-        'Aritmetica recuperării devine mai dură. Pe un cont mai mare, același drawdown procentual e un număr absolut mult mai mare, iar sistemul tău nervos reacționează la numere absolute indiferent ce spune procentul.',
+        'Aritmetica recuperării devine mai dură. Pe un cont mai mare, același drawdown procentual e un număr absolut mult mai mare, iar sistemul tău nervos reacționează la suma efectivă, indiferent ce spune procentul.',
         'Nimeni nu te va felicita pentru o lună neutră petrecută executând corect. Validarea externă care venea cu seria câștigătoare dispare exact când disciplina cere cel mai mare efort.',
       ]} />
       <P>

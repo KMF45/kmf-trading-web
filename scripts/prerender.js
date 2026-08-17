@@ -295,6 +295,20 @@ async function prerender() {
       // Wait a bit for React to settle and useEffect to fire
       await new Promise(r => setTimeout(r, 1500));
 
+      // Scroll the whole page so every IntersectionObserver fires. Without this,
+      // count-up components (StatsStrip) are snapshotted at their initial 0 and
+      // Google indexes "0%" instead of the real figure.
+      await page.evaluate(async () => {
+        const step = window.innerHeight;
+        for (let y = 0; y < document.body.scrollHeight; y += step) {
+          window.scrollTo(0, y);
+          await new Promise(r => setTimeout(r, 120));
+        }
+        window.scrollTo(0, 0);
+      });
+      // Let the count-up animations (1200ms + stagger) run to completion.
+      await new Promise(r => setTimeout(r, 1800));
+
       var html = await page.content();
 
     // Remove homepage-only JSON-LD from non-homepage routes
