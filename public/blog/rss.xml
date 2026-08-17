@@ -5,13 +5,22 @@
     <link>https://kmfjournal.com/blog</link>
     <description>Trading insights, app guides, and tips for serious traders. The K.M.F. Trading Journal blog.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kmfjournal.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://kmfjournal.com/logo.png</url>
       <title>K.M.F. Trading Journal Blog</title>
       <link>https://kmfjournal.com/blog</link>
     </image>
+
+    <item>
+      <title>The Profitable Trader's Drawdown: Why Losing Hurts More After You've Won</title>
+      <link>https://kmfjournal.com/blog/drawdown-after-profitability</link>
+      <guid isPermaLink="true">https://kmfjournal.com/blog/drawdown-after-profitability</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Psychology</category>
+      <description>Two traders are down 8%. One is a beginner, one has had eleven green months. The beginner shrugs; the profitable trader rewrites a system that took years to build. Why a drawdown after success is an identity problem, not a money problem — and how to tell normal variance from a broken edge.</description>
+    </item>
 
     <item>
       <title>Swing Trading vs Day Trading: Why the Slower Style Usually Wins</title>

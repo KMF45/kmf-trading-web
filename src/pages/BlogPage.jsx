@@ -8,6 +8,15 @@ import blogTranslations from '../i18n/blogTranslations';
 
 export const posts = [
   {
+    slug: 'drawdown-after-profitability',
+    title: "The Profitable Trader's Drawdown: Why Losing Hurts More After You've Won",
+    excerpt: "Two traders are down 8%. One is a beginner, one has had eleven green months. The beginner shrugs; the profitable trader rewrites a system that took years to build. Why a drawdown after success is an identity problem, not a money problem — and how to tell normal variance from a broken edge.",
+    category: 'Psychology',
+    date: 'August 17, 2026',
+    readTime: '11 min read',
+    categoryColor: '#CE93D8',
+  },
+  {
     slug: 'swing-trading-vs-day-trading',
     title: 'Swing Trading vs Day Trading: Why the Slower Style Usually Wins',
     excerpt: 'Day trading has the better marketing — fast money, no overnight risk. But the 15-year data, the cost math, and the psychology all point the other way. An honest comparison, and how to pick the style your life can actually sustain.',

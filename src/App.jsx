@@ -56,6 +56,7 @@ const LottoTicketSyndrome = lazy(() => import('./pages/blog/LottoTicketSyndrome'
 const ProspectTheoryTrading = lazy(() => import('./pages/blog/ProspectTheoryTrading'));
 const IsHundredDollarsEnoughForex = lazy(() => import('./pages/blog/IsHundredDollarsEnoughForex'));
 const TradingVsGambling = lazy(() => import('./pages/blog/TradingVsGambling'));
+const DrawdownAfterProfitability = lazy(() => import('./pages/blog/DrawdownAfterProfitability'));
 const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTradingJournalRo'));
 const TradingVsGamblingRo = lazy(() => import('./pages/blog/ro/TradingVsGamblingRo'));
 const AnalysisParalysisTradingRo = lazy(() => import('./pages/blog/ro/AnalysisParalysisTradingRo'));
@@ -282,6 +283,7 @@ function App() {
           <Route path="/blog/prospect-theory-trading" element={<ProspectTheoryTrading />} />
           <Route path="/blog/is-100-enough-to-start-forex" element={<IsHundredDollarsEnoughForex />} />
           <Route path="/blog/trading-vs-gambling" element={<TradingVsGambling />} />
+          <Route path="/blog/drawdown-after-profitability" element={<DrawdownAfterProfitability />} />
 
           {/* Tools */}
           <Route path="/tools" element={<ToolsPage />} />

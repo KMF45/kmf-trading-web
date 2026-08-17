@@ -233,6 +233,7 @@ const routes = [
   '/blog/prospect-theory-trading',
   '/blog/is-100-enough-to-start-forex',
   '/blog/trading-vs-gambling',
+  '/blog/drawdown-after-profitability',
 ];
 
 // Simple static file server that falls back to index.html (SPA)
