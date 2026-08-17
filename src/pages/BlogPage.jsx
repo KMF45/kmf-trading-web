@@ -8,6 +8,24 @@ import blogTranslations from '../i18n/blogTranslations';
 
 export const posts = [
   {
+    slug: 'position-size-psychological-ceiling',
+    title: 'The Size Ceiling: Why You Trade 1% Perfectly at $10k and Fall Apart at $100k',
+    excerpt: "Same strategy, same 1% risk — but $100 a trade became $500, and your execution collapsed. Your risk percentage is scale-invariant; your nervous system is not. Where your personal size ceiling is, how to find it in your journal, and how to raise it without blowing up.",
+    category: 'Psychology',
+    date: 'August 17, 2026',
+    readTime: '11 min read',
+    categoryColor: '#CE93D8',
+  },
+  {
+    slug: 'when-to-withdraw-trading-profits',
+    title: 'When to Withdraw Trading Profits (And Why Never Withdrawing Quietly Ruins Your Discipline)',
+    excerpt: "Money you never touch stops feeling like money. It becomes a score — and people take risks with scores they would never take with cash. The house money effect, three withdrawal models, and why withdrawing makes you a better trader, not just a richer one.",
+    category: 'Discipline',
+    date: 'August 17, 2026',
+    readTime: '10 min read',
+    categoryColor: '#FFB300',
+  },
+  {
     slug: 'drawdown-after-profitability',
     title: "The Profitable Trader's Drawdown: Why Losing Hurts More After You've Won",
     excerpt: "Two traders are down 8%. One is a beginner, one has had eleven green months. The beginner shrugs; the profitable trader rewrites a system that took years to build. Why a drawdown after success is an identity problem, not a money problem — and how to tell normal variance from a broken edge.",

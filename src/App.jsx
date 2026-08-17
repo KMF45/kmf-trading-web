@@ -57,6 +57,8 @@ const ProspectTheoryTrading = lazy(() => import('./pages/blog/ProspectTheoryTrad
 const IsHundredDollarsEnoughForex = lazy(() => import('./pages/blog/IsHundredDollarsEnoughForex'));
 const TradingVsGambling = lazy(() => import('./pages/blog/TradingVsGambling'));
 const DrawdownAfterProfitability = lazy(() => import('./pages/blog/DrawdownAfterProfitability'));
+const PositionSizeCeiling = lazy(() => import('./pages/blog/PositionSizeCeiling'));
+const WhenToWithdrawProfits = lazy(() => import('./pages/blog/WhenToWithdrawProfits'));
 const WhatIsKmfTradingJournalRo = lazy(() => import('./pages/blog/ro/WhatIsKmfTradingJournalRo'));
 const TradingVsGamblingRo = lazy(() => import('./pages/blog/ro/TradingVsGamblingRo'));
 const AnalysisParalysisTradingRo = lazy(() => import('./pages/blog/ro/AnalysisParalysisTradingRo'));
@@ -284,6 +286,8 @@ function App() {
           <Route path="/blog/is-100-enough-to-start-forex" element={<IsHundredDollarsEnoughForex />} />
           <Route path="/blog/trading-vs-gambling" element={<TradingVsGambling />} />
           <Route path="/blog/drawdown-after-profitability" element={<DrawdownAfterProfitability />} />
+          <Route path="/blog/position-size-psychological-ceiling" element={<PositionSizeCeiling />} />
+          <Route path="/blog/when-to-withdraw-trading-profits" element={<WhenToWithdrawProfits />} />
 
           {/* Tools */}
           <Route path="/tools" element={<ToolsPage />} />
